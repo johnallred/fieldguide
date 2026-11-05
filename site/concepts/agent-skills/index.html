@@ -1,0 +1,1700 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Packaging the conventions an agent needs before it writes anything, so it does not have to infer them from the code.">
+      
+      
+      
+        <link rel="canonical" href="https://johnallred.github.io/fieldguide/concepts/agent-skills/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Agent skills and context kits - The Field Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#agent-skills-and-context-kits" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="The Field Guide" class="md-header__button md-logo" aria-label="The Field Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Field Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Agent skills and context kits
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/johnallred/fieldguide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="The Field Guide" class="md-nav__button md-logo" aria-label="The Field Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Field Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/johnallred/fieldguide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coverage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coverage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../study-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Everything in order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../demonstrated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demonstrated
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../paths/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning paths
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learning paths
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/first-week/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The first week
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/content-architect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The content architect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/docs-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The documentation engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/knowledgeops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The KnowledgeOps path
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/developer-educator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The developer educator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/writer-who-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The writer who builds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/prove-it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prove it in a weekend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About this guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About this guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/why-a-registry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why the curriculum is a data file
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/the-page-contract/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The page contract
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/provenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Provenance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-the-job-asks-for-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the job asks for it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-golden-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The golden path
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kits-skills-and-what-goes-where" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kits, skills, and what goes where
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-belongs-in-an-always-on-kit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What belongs in an always-on kit
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prohibitions-are-the-part-people-forget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prohibitions are the part people forget
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-for-an-agent-against-writing-for-a-person" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Writing for an agent, against writing for a person
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-honest-status-of-this-area" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The honest status of this area
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-talk-about-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to talk about it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-prove-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to prove it
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to prove it">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-this-would-be-demonstrated-elsewhere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How this would be demonstrated elsewhere
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/johnallred/fieldguide/edit/main/docs/concepts/agent-skills.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="agent-skills-and-context-kits">Agent skills and context kits<a class="headerlink" href="#agent-skills-and-context-kits" title="Permanent link">&para;</a></h1>
+<p><em>Packaging the conventions an agent needs before it writes anything, so it does not have to infer them from the code.</em></p>
+<p><code>core</code> · difficulty 2 · 4h</p>
+<blockquote>
+<p>including llms.txt, MCP-accessible sources, agent skills and context kits, and evaluation sets for answer accuracy</p>
+<p>Source: nvidia posting, verbatim</p>
+</blockquote>
+<p><strong>Prerequisites:</strong> <a href="../mcp/">Model Context Protocol</a>, <a href="../templates-scaffolding/">Templates and scaffolding</a></p>
+<p><strong>Leads to:</strong> <a href="../agentic-workflows/">Agentic workflows</a></p>
+<h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Permanent link">&para;</a></h2>
+<p>Instructions written for an agent rather than for a person: the conventions,
+the commands, the things it must not do, loaded before it starts work. A
+<strong>context kit</strong> is the bundle of files an agent reads to orient itself in a
+repository. An <strong>agent skill</strong> is a narrower thing: instructions for one kind of
+task, loaded when that task comes up.</p>
+<p>The distinction that matters is not the naming. It is that <strong>this content is
+read by something that will act on it immediately and cannot ask a follow-up
+question.</strong></p>
+<h2 id="why-the-job-asks-for-it">Why the job asks for it<a class="headerlink" href="#why-the-job-asks-for-it" title="Permanent link">&para;</a></h2>
+<p>NVIDIA names both in the same breath as llms.txt and MCP: "agent skills and
+context kits". Under ways to stand out, "agent skill and context libraries
+backed by documentation".</p>
+<p>This is the newest concept in the guide and the one with the least settled
+practice, which is exactly why it is worth having an opinion about. The
+underlying need is old and the tooling is three years old at most.</p>
+<p>What makes it <code>core</code>: it is the only AI-ready artifact aimed at an agent that
+<strong>writes</strong> rather than one that answers. An assistant that gets something wrong
+produces a bad answer. An agent that gets your conventions wrong produces a
+pull request that looks plausible and violates six rules nobody wrote down,
+and a reviewer spends longer fixing it than writing it would have taken.</p>
+<p>On a Tuesday it is a recurring cost you can see in review comments. Every agent
+pull request against the docs repo gets the same four notes: the page is missing
+front matter, it uses "repo" instead of "repository", it was put in <code>guides/</code>
+instead of by Diátaxis type, and the code sample is not runnable so CI fails.
+Those four notes are <strong>tribal knowledge about a repository</strong>, they are the same
+four every time, and they are a context kit that nobody has written.</p>
+<h2 id="the-golden-path">The golden path<a class="headerlink" href="#the-golden-path" title="Permanent link">&para;</a></h2>
+<p>Write a context kit for a real repository, then test it the only way that
+works: by checking whether the conventions in it are the ones CI enforces.
+Thirty-five minutes.</p>
+<p><strong>Step 1: find the conventions by looking at what CI rejects</strong></p>
+<p>Do not write the kit from memory. Derive it from the gates, because a
+convention that is not enforced is a preference and a gate that is not
+documented is a trap.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>skills-drill<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>skills-drill
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>docs/how-to<span class="w"> </span>.github/workflows<span class="w"> </span>styles
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>.github/workflows/docs.yml<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s">name: docs</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s">on: [pull_request]</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s">jobs:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s">  quality:</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s">    runs-on: ubuntu-latest</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s">    steps:</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="s">      - run: python validate_frontmatter.py docs/</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="s">      - run: vale docs/</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="s">      - run: python -m pytest tests/test_doc_samples.py</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="s">EOF</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>validate_frontmatter.py<span class="w"> </span><span class="s">&lt;&lt;'PY'</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="s">"""The real content model. Five required fields, two closed vocabularies."""</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="s">import sys</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="s">from pathlib import Path</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="s">import yaml</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="s">REQUIRED = ("title", "summary", "diataxis", "audience", "updated")</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="s">DIATAXIS = ("tutorial", "how-to", "reference", "explanation")</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="s">AUDIENCES = ("new-user", "developer", "operator", "contributor")</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="s">DIRECTORIES = {"tutorial": "tutorials", "how-to": "how-to",</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="s">               "reference": "reference", "explanation": "explanation"}</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="s">def main(root: Path) -&gt; int:</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="s">    failures = []</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="s">    for page in sorted(root.rglob("*.md")):</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="s">        text = page.read_text(encoding="utf-8")</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="s">        if not text.startswith("---"):</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="s">            failures.append(f"{page}: no front matter")</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="s">            continue</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="s">        meta = yaml.safe_load(text.split("---")[1]) or {}</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="s">        for field in REQUIRED:</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="s">            if field not in meta:</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="s">                failures.append(f"{page}: missing {field!r}")</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="s">        if meta.get("diataxis") not in DIATAXIS:</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="s">            failures.append(f"{page}: diataxis must be one of {list(DIATAXIS)}")</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="s">        elif page.parent.name != DIRECTORIES[meta["diataxis"]]:</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="s">            failures.append(</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="s">                f"{page}: a {meta['diataxis']} page belongs in "</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="s">                f"{DIRECTORIES[meta['diataxis']]}/"</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="s">            )</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="s">        if meta.get("audience") not in AUDIENCES:</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="s">            failures.append(f"{page}: audience must be one of {list(AUDIENCES)}")</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="s">    for failure in failures:</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="s">        print(f"CONTENT MODEL  {failure}", file=sys.stderr)</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="s">    print(f"{'FAIL' if failures else 'ok'}: {len(failures)} violation(s)")</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="s">    return 1 if failures else 0</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="s">if __name__ == "__main__":</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="s">    sys.exit(main(Path(sys.argv[1])))</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="s">PY</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>styles/Terms.yml<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="s">extends: substitution</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="s">level: error</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="s">message: "Use '%s' instead of '%s'."</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="s">swap:</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="s">  repo: repository</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="s">  PR: pull request</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="s">  docs site: documentation site</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="s">EOF</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>ls<span class="w"> </span>-R<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-20
+</code></pre></div>
+<p><strong>Step 2: write the kit, derived from those gates</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>AGENTS.md<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="s"># Working in this repository</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="s">You are editing a documentation corpus with a validated content model. The</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s">checks below run on every pull request and will reject work that ignores</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="s">them. Read this before creating or editing any page.</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="s">## Before you write a page</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="s">Run `python validate_frontmatter.py docs/` to see the current state. It must</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="s">pass before and after your change.</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="s">## Required front matter</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="s">Every page needs exactly these five fields:</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="s">```yaml</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="s">---</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="s">title: Rotate an API key</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="s">summary: Replace a key without downtime.</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="s">diataxis: how-to</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="s">audience: operator</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="s">updated: 2026-10-26</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="s">---</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="s">```</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="s">- `diataxis` must be one of: `tutorial`, `how-to`, `reference`, `explanation`.</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="s">- `audience` must be one of: `new-user`, `developer`, `operator`, `contributor`.</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="s">- Do not invent values for either. Adding one is a change to</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="s">  `validate_frontmatter.py` and needs a human.</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="s">## Where a page goes</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="s">The directory is determined by `diataxis`, not by topic:</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="s">| `diataxis` | directory |</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="s">|---|---|</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="s">| `tutorial` | `docs/tutorials/` |</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="s">| `how-to` | `docs/how-to/` |</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="s">| `reference` | `docs/reference/` |</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="s">| `explanation` | `docs/explanation/` |</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="s">There is no `guides/` directory. A page about a task is a `how-to`.</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="s">## Terminology</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="s">`vale docs/` fails the build on these. Use the right-hand column:</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="s">| Do not write | Write |</span>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="s">|---|---|</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="s">| repo | repository |</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="s">| PR | pull request |</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="s">| docs site | documentation site |</span>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="s">## Code samples</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="s">Every fenced `python` block in `docs/` is extracted and executed by</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="s">`tests/test_doc_samples.py`. A sample that cannot run standalone must be</span>
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="s">marked:</span>
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="s">```python</span>
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="s"># docpack: skip</span>
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="s">client.connect(SECRET_TOKEN)</span>
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="s">```</span>
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="s">Prefer making the sample runnable over skipping it.</span>
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="s">## What to do when you are unsure</span>
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="s">Stop and say so. Specifically:</span>
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="s">- **Do not add a value** to `diataxis` or `audience`.</span>
+<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a><span class="s">- **Do not create a new top-level directory.**</span>
+<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a><span class="s">- **Do not edit `validate_frontmatter.py` or `styles/`** to make your page</span>
+<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a><span class="s">  pass. If a rule is wrong, say which rule and why, and leave it alone.</span>
+<a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a><span class="s">- **Do not mark a sample `skip`** just because it fails. Find out why first.</span>
+<a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>
+<a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a><span class="s">The last one matters most: the escape hatches in this repository are load</span>
+<a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a><span class="s">bearing, and widening one to get a green build defeats the gate for everyone.</span>
+<a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a><span class="s">EOF</span>
+<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>wc<span class="w"> </span>-l<span class="w"> </span>AGENTS.md
+</code></pre></div>
+<p><strong>Step 3: test the kit against the gates</strong></p>
+<p>A context kit is documentation, so it rots like documentation. The test that
+matters is whether it still describes what CI enforces.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>test_kit.py<span class="w"> </span><span class="s">&lt;&lt;'PY'</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="s">"""Check the context kit against the checks it claims to describe.</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="s">This is the only test of a context kit that catches the failure that</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="s">matters. A kit is read by something that cannot ask a follow-up question, so</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="s">a stale instruction in it is not a confusing sentence, it is a wrong action</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="s">taken confidently.</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="s">Three checks:</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="s">  VOCABULARY  every value the kit lists must be in the validator</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="s">  COMPLETE    every value the validator accepts must be in the kit</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="s">  COMMANDS    every command the kit tells an agent to run must exist</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="s">"""</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="s">import re</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="s">import sys</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="s">from pathlib import Path</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="s">import validate_frontmatter as validator</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="s">kit = Path("AGENTS.md").read_text(encoding="utf-8")</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="s">failures = []</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="s"># 1. Values the kit lists are real.</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="s">for field, allowed in (("diataxis", validator.DIATAXIS),</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="s">                       ("audience", validator.AUDIENCES)):</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="s">    match = re.search(rf"`{field}` must be one of: (.+?)\.", kit)</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="s">    if not match:</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="s">        failures.append(f"the kit does not state the allowed values for {field!r}")</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="s">        continue</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="s">    listed = set(re.findall(r"`([a-z-]+)`", match.group(1)))</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="s">    unreal = listed - set(allowed)</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="s">    if unreal:</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="s">        failures.append(f"{field}: kit lists {sorted(unreal)}, validator rejects them")</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="s">    # 2. Values the validator accepts are all in the kit.</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="s">    undocumented = set(allowed) - listed</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="s">    if undocumented:</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="s">        failures.append(</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="s">            f"{field}: validator accepts {sorted(undocumented)}, kit omits them"</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="s">        )</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="s"># 3. Required fields match.</span>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="s">listed_fields = set(re.findall(r"^- `(\w+)`", kit, re.M)) | set(</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="s">    re.findall(r"^(\w+):", kit.split("```yaml")[1].split("```")[0], re.M)</span>
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="s">)</span>
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="s">missing = set(validator.REQUIRED) - listed_fields</span>
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="s">if missing:</span>
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="s">    failures.append(f"required fields {sorted(missing)} are not shown in the kit")</span>
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a><span class="s"># 4. Directory mapping matches.</span>
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="s">for kind, directory in validator.DIRECTORIES.items():</span>
+<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a><span class="s">    if f"docs/{directory}/" not in kit:</span>
+<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a><span class="s">        failures.append(f"the kit does not mention docs/{directory}/ for {kind}")</span>
+<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>
+<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a><span class="s"># 5. Every command the kit tells an agent to run exists.</span>
+<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a><span class="s">for command in re.findall(r"`(python [\w./]+\.py[^`]*|vale [^`]+)`", kit):</span>
+<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a><span class="s">    target = command.split()[1]</span>
+<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a><span class="s">    if target.endswith(".py") and not Path(target).exists():</span>
+<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a><span class="s">        failures.append(f"the kit says to run {command!r} but {target} does not exist")</span>
+<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>
+<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a><span class="s">for failure in failures:</span>
+<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a><span class="s">    print(f"KIT DRIFT  {failure}", file=sys.stderr)</span>
+<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a><span class="s">print(f"{'FAIL' if failures else 'ok'}: context kit matches the gates "</span>
+<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a><span class="s">      f"({len(failures)} problem(s))")</span>
+<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a><span class="s">sys.exit(1 if failures else 0)</span>
+<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a><span class="s">PY</span>
+<a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>python3<span class="w"> </span>test_kit.py<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"exit=</span><span class="nv">$?</span><span class="s2">"</span>
+</code></pre></div>
+<p><strong>Step 4: break the gate and watch the test catch the drift</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"--- someone adds a new audience to the validator and forgets the kit ---"</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>python3<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;'PY'</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="s">import pathlib</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="s">p = pathlib.Path("validate_frontmatter.py")</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="s">p.write_text(p.read_text().replace(</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="s">    'AUDIENCES = ("new-user", "developer", "operator", "contributor")',</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="s">    'AUDIENCES = ("new-user", "developer", "operator", "contributor", "partner")'))</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="s">PY</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>python3<span class="w"> </span>test_kit.py<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"exit=</span><span class="nv">$?</span><span class="s2">"</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nb">echo</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"--- and the reverse: the kit promises a command that was deleted ---"</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>python3<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;'PY'</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="s">import pathlib</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="s">p = pathlib.Path("validate_frontmatter.py")</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="s">p.write_text(p.read_text().replace(</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="s">    'AUDIENCES = ("new-user", "developer", "operator", "contributor", "partner")',</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="s">    'AUDIENCES = ("new-user", "developer", "operator", "contributor")'))</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="s">PY</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>mv<span class="w"> </span>validate_frontmatter.py<span class="w"> </span>check_model.py
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>python3<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;'PY'</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="s"># The test imports the validator, so point it at the new name to isolate the</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="s"># one thing being tested: the kit's command reference is now wrong.</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="s">import pathlib</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="s">p = pathlib.Path("test_kit.py")</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="s">p.write_text(p.read_text().replace("import validate_frontmatter as validator",</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="s">                                   "import check_model as validator"))</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="s">PY</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>python3<span class="w"> </span>test_kit.py<span class="p">;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">"exit=</span><span class="nv">$?</span><span class="s2">"</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>mv<span class="w"> </span>check_model.py<span class="w"> </span>validate_frontmatter.py
+</code></pre></div>
+<p><strong>What you built.</strong> A context kit derived from the gates rather than from
+memory, and a test that fails when the two disagree in either direction.</p>
+<p>That test is the contribution. <strong>A context kit is read by something that cannot
+ask you a follow-up question</strong>, so a stale instruction is not a confusing
+sentence, it is a wrong action taken confidently and then reviewed by a human
+who assumes the agent was told correctly.</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<h3 id="kits-skills-and-what-goes-where">Kits, skills, and what goes where<a class="headerlink" href="#kits-skills-and-what-goes-where" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Loaded</th>
+<th>Contains</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Context kit</strong> (<code>AGENTS.md</code>, <code>CLAUDE.md</code>)</td>
+<td>Always, at the start</td>
+<td>Conventions, commands, directory rules, prohibitions</td>
+</tr>
+<tr>
+<td><strong>Agent skill</strong></td>
+<td>When a matching task comes up</td>
+<td>How to do one kind of work well</td>
+</tr>
+<tr>
+<td><a href="../mcp/">MCP server</a></td>
+<td>On demand, as tool calls</td>
+<td>Content the agent queries</td>
+</tr>
+<tr>
+<td><a href="../llms-txt/">llms.txt</a></td>
+<td>By a model that fetches URLs</td>
+<td>A map of the published corpus</td>
+</tr>
+</tbody>
+</table>
+<p>The division is about <strong>when it is read</strong>. A kit is always-on and therefore has
+to be short. A skill is loaded on demand and can be long. Putting a thousand
+words about release notes into the always-on kit spends context on every task
+that has nothing to do with release notes.</p>
+<h3 id="what-belongs-in-an-always-on-kit">What belongs in an always-on kit<a class="headerlink" href="#what-belongs-in-an-always-on-kit" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Include</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The closed vocabularies, listed in full</td>
+<td>Otherwise it invents a value</td>
+</tr>
+<tr>
+<td>Where files go, as a rule not examples</td>
+<td>A rule generalises; examples get pattern-matched</td>
+</tr>
+<tr>
+<td>The commands CI runs</td>
+<td>So it can check its own work before opening a pull request</td>
+</tr>
+<tr>
+<td>Terminology the linter enforces</td>
+<td>Cheapest possible review-comment elimination</td>
+</tr>
+<tr>
+<td>Explicit prohibitions</td>
+<td>The highest-value section. See below</td>
+</tr>
+<tr>
+<td>What to do when unsure</td>
+<td>"Stop and say so" needs saying</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Leave out</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Anything a tool can answer</td>
+<td>Put it behind <a href="../mcp/">MCP</a> instead</td>
+</tr>
+<tr>
+<td>Long rationale</td>
+<td>A kit is instructions; link the explanation</td>
+</tr>
+<tr>
+<td>Content that duplicates the corpus</td>
+<td>It will drift from the corpus</td>
+</tr>
+<tr>
+<td>Style advice with no gate behind it</td>
+<td>Unenforced advice is noise competing with rules</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prohibitions-are-the-part-people-forget">Prohibitions are the part people forget<a class="headerlink" href="#prohibitions-are-the-part-people-forget" title="Permanent link">&para;</a></h3>
+<p>A kit full of positive instructions tells an agent what good work looks like.
+It does not stop the specific failures that cost the most, which are all of the
+form <em>widening a constraint to make a failure go away</em>:</p>
+<table>
+<thead>
+<tr>
+<th>Prohibition</th>
+<th>What it prevents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Do not add a value to a closed vocabulary</td>
+<td>Silent corruption of a facet everything filters on</td>
+</tr>
+<tr>
+<td>Do not edit the validator or the lint rules</td>
+<td>A green build that proves nothing</td>
+</tr>
+<tr>
+<td>Do not mark a sample <code>skip</code> to pass CI</td>
+<td>Defeating <a href="../code-sample-validation/">sample validation</a> for everyone</td>
+</tr>
+<tr>
+<td>Do not create a new top-level directory</td>
+<td>Structure drift that is expensive to undo</td>
+</tr>
+<tr>
+<td>Do not invent a flag or version</td>
+<td><a href="../hallucination-guardrails/">Fabrication</a> in a committed file</td>
+</tr>
+</tbody>
+</table>
+<p>Every one of those is a <em>rational</em> move for something trying to get a green
+build. They have to be named.</p>
+<h3 id="writing-for-an-agent-against-writing-for-a-person">Writing for an agent, against writing for a person<a class="headerlink" href="#writing-for-an-agent-against-writing-for-a-person" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>A person</th>
+<th>An agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Can ask a follow-up</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Infers from surrounding code</td>
+<td>reliably</td>
+<td>plausibly, which is worse</td>
+</tr>
+<tr>
+<td>Reads the whole thing</td>
+<td>rarely</td>
+<td>yes, every time</td>
+</tr>
+<tr>
+<td>Skips a rule they disagree with</td>
+<td>sometimes</td>
+<td>only if ambiguous</td>
+</tr>
+<tr>
+<td>Cost of ambiguity</td>
+<td>a question</td>
+<td>a confident wrong action</td>
+</tr>
+</tbody>
+</table>
+<p>The third row is why brevity matters more here. Every word in an always-on kit
+is read on every task, and a kit that grows past a page or two is paid for
+continuously.</p>
+<h3 id="the-honest-status-of-this-area">The honest status of this area<a class="headerlink" href="#the-honest-status-of-this-area" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Reality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"<code>AGENTS.md</code> is a standard"</td>
+<td>A convention, and a recent one. Filenames vary by tool</td>
+</tr>
+<tr>
+<td>"Skills are portable between tools"</td>
+<td>Partly. The formats differ</td>
+</tr>
+<tr>
+<td>"A kit replaces a contributing guide"</td>
+<td>No. A human guide explains why; a kit instructs</td>
+</tr>
+<tr>
+<td>"More context is better"</td>
+<td>No. Always-on context is a recurring cost</td>
+</tr>
+</tbody>
+</table>
+<p>Present this internally as a cheap, high-return convention rather than as
+settled practice, because it is moving fast and a claim of standardisation will
+be challenged by someone who read a different blog post last week.</p>
+<h2 id="how-to-talk-about-it">How to talk about it<a class="headerlink" href="#how-to-talk-about-it" title="Permanent link">&para;</a></h2>
+<p><strong>What a competent answer sounds like.</strong> Lead with derivation and with
+prohibitions, because both signal you have shipped one. "I derive the kit from
+what CI enforces rather than writing it from memory, so every rule in it has a
+gate behind it and every gate is documented. Then I test the kit against the
+validators in both directions: a value the kit lists that the validator rejects,
+and a value the validator accepts that the kit omits. And the section that
+earns the most is the prohibitions, because the costly failures are all an agent
+widening a constraint to get a green build: adding an audience value, marking a
+sample skip, editing the lint rules."</p>
+<p><strong>The follow-up is "how do you know the kit is working",</strong> and the honest answer
+is review comments. Count the repeated notes on agent pull requests before and
+after. If the same four comments keep appearing, those four things are either
+missing from the kit or stated ambiguously in it, and that count is the only
+real feedback signal available. There is no eval set for a context kit yet,
+which is worth admitting.</p>
+<p><strong>The tradeoff to volunteer.</strong> An always-on kit is a recurring cost paid on every
+task, so it competes directly with the work. A thorough kit that covers every
+convention crowds out the actual problem, and the failure mode is subtle: the
+agent follows all your conventions and does the task badly. That tension is why
+the split between always-on kits and on-demand skills exists, and why a kit
+should be ruthlessly short. There is also a real risk of a kit becoming a
+second source of truth that drifts from the validators, which is what step 3
+exists to prevent and what nobody builds.</p>
+<p><strong>One sharper point.</strong> The strongest observation is that <strong>a context kit is the
+tribal-knowledge extraction problem with a new consumer.</strong> The four repeated
+review comments are exactly what
+<a href="../sme-interviews/">extracting tribal knowledge</a> is about, and the output form
+happens to be a file an agent reads rather than a decision guide a person reads.
+The skill is the same: notice what recurs, find the decision behind it, and
+write the thing that stops the question. Framing it that way makes it
+continuous with the documentation craft rather than a new AI discipline, which
+is both more accurate and more reassuring to a documentation lead.</p>
+<h2 id="how-to-prove-it">How to prove it<a class="headerlink" href="#how-to-prove-it" title="Permanent link">&para;</a></h2>
+<p><strong>The artifact.</strong> A kit with a prohibitions section, and the test that checks it
+against the validators in both directions.</p>
+<p><strong>Three things to do, in order:</strong></p>
+<ol>
+<li><strong>Run the golden path, including step 4.</strong> The bidirectional drift test is
+   the part nobody builds: an undocumented validator value and a kit promising a
+   deleted command both fail it.</li>
+<li><strong>Write a kit for a repository you know, derived from its CI.</strong> Read the
+   workflow file first. Any rule you cannot point at a gate for either needs a
+   gate or does not belong.</li>
+<li><strong>Count the repeated review comments</strong> on the last ten pull requests in any
+   repository. The ones that recur are your kit's contents, and the count is
+   your before number. If no comment recurs across ten pull requests, either
+   the reviews are not about conventions or nobody is reviewing: both are
+   findings, and neither produces a kit.</li>
+</ol>
+<p><strong>What makes it credible rather than decorative.</strong> An <code>AGENTS.md</code> file proves you read about the
+convention. One derived from the CI gates, with explicit prohibitions against
+widening constraints, and a test that fails when a validator and the kit
+disagree, demonstrates that you treated it as documentation with a consumer
+that cannot ask questions.</p>
+<h3 id="how-this-would-be-demonstrated-elsewhere">How this would be demonstrated elsewhere<a class="headerlink" href="#how-this-would-be-demonstrated-elsewhere" title="Permanent link">&para;</a></h3>
+<p>No agent ran here. This page describes packaging instructions so an agent
+behaves consistently, and the demonstration needs an agent that loads such
+packages, which this environment cannot provide.</p>
+<p><strong>What you need.</strong> An agent runtime that supports loading instruction bundles
+from a directory, plus a repetitive task with a checkable result. The task
+matters more than the runtime: the claim being tested is that a written-down
+procedure makes an agent's behaviour repeatable, so you need something whose
+output you can compare run to run.</p>
+<p><strong>What you would run.</strong> Choose a task your team does by hand, such as adding a
+conforming page or preparing a release note, and run it three ways: with no
+instructions, with instructions written as prose, and with instructions written
+as a skill package including the validator the task has to satisfy. Ten runs of
+each.</p>
+<p><strong>What you would see.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Observation</th>
+<th>Rough magnitude</th>
+<th>What it tells you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Runs passing the validator, no instructions</td>
+<td>low and highly variable</td>
+<td>The baseline</td>
+</tr>
+<tr>
+<td>Same, with prose instructions</td>
+<td>better, still variable</td>
+<td>Instructions help and do not bind</td>
+</tr>
+<tr>
+<td>Same, with the validator named in the package</td>
+<td>high and stable</td>
+<td>The gain is the <em>check</em>, not the prose</td>
+</tr>
+<tr>
+<td>Variance across runs</td>
+<td>falls sharply with the package</td>
+<td>Repeatability is the actual product</td>
+</tr>
+<tr>
+<td>Behaviour on a case the package does not cover</td>
+<td>reverts to baseline</td>
+<td>The edges are where packages end</td>
+</tr>
+</tbody>
+</table>
+<p>The third row is the finding. Most of the improvement comes from telling the
+agent what will be checked rather than from telling it what to do, which is the
+same result the <a href="../templates-scaffolding/">templates and scaffolding</a> page
+reached for human authors and for the same reason.</p>
+<p><strong>How you would know it had failed.</strong> No variance at the baseline means the
+task is too easy to discriminate between conditions. A package that improves
+results on tasks it does not mention means something else changed, usually
+context length. And if the package's own instructions are not reflected in the
+output at all, check that the runtime loaded it, which is the commonest and
+least interesting failure.</p>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../mcp/">Model Context Protocol</a>, the on-demand half</li>
+<li><a href="../agentic-workflows/">Agentic workflows</a>, what agents do once oriented</li>
+<li><a href="../templates-scaffolding/">Templates and scaffolding</a>, the same conventions as a generator</li>
+<li><a href="../sme-interviews/">Extracting tribal knowledge</a>, where the kit's contents come from</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "content.code.copy", "content.action.edit", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

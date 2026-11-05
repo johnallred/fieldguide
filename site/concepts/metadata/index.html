@@ -1,0 +1,1363 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Two audiences read your front matter, they want different fields, and a field with no reader is already wrong.">
+      
+      
+      
+        <link rel="canonical" href="https://johnallred.github.io/fieldguide/concepts/metadata/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Metadata for navigation and retrieval - The Field Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#metadata-for-navigation-and-retrieval" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="The Field Guide" class="md-header__button md-logo" aria-label="The Field Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Field Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Metadata for navigation and retrieval
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/johnallred/fieldguide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="The Field Guide" class="md-nav__button md-logo" aria-label="The Field Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Field Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/johnallred/fieldguide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coverage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coverage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../study-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Everything in order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../demonstrated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demonstrated
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../paths/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning paths
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learning paths
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/first-week/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The first week
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/content-architect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The content architect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/docs-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The documentation engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/knowledgeops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The KnowledgeOps path
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/developer-educator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The developer educator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/writer-who-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The writer who builds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/prove-it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prove it in a weekend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About this guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About this guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/why-a-registry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why the curriculum is a data file
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/the-page-contract/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The page contract
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/provenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Provenance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-the-job-asks-for-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the job asks for it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-golden-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The golden path
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-two-audiences-and-what-each-wants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The two audiences, and what each wants
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-a-chunk-needs-that-a-page-does-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What a chunk needs that a page does not
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-many-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How many fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-metadata-lives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where metadata lives
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-talk-about-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to talk about it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-prove-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to prove it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/johnallred/fieldguide/edit/main/docs/concepts/metadata.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="metadata-for-navigation-and-retrieval">Metadata for navigation and retrieval<a class="headerlink" href="#metadata-for-navigation-and-retrieval" title="Permanent link">&para;</a></h1>
+<p><em>Two audiences read your front matter, they want different fields, and a field with no reader is already wrong.</em></p>
+<p><code>core</code> · difficulty 2 · 3h</p>
+<div class="admonition quote">
+<p class="admonition-title">Asked for by name</p>
+<p>NVIDIA: "content modeling, taxonomy, and metadata for both navigation and machine retrieval"</p>
+</div>
+<p><strong>Prerequisites:</strong> <a href="../content-model/">Content models</a></p>
+<p><strong>Leads to:</strong> <a href="../findability/">Findability and search design</a>, <a href="../agent-ready-content/">Agent-ready content</a></p>
+<h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Permanent link">&para;</a></h2>
+<p>The structured data attached to each page, usually in front matter. NVIDIA's
+phrasing is unusually precise and worth taking literally: metadata <strong>for both
+navigation and machine retrieval</strong>. Those are two audiences with different
+needs, and a single field set rarely serves both well.</p>
+<p>Navigation metadata answers "where does this page belong and what do I call
+it in a sidebar". Retrieval metadata answers "which subset of the corpus
+should a query search". They overlap and they are not the same, and the
+mistake is designing one and assuming it covers the other.</p>
+<h2 id="why-the-job-asks-for-it">Why the job asks for it<a class="headerlink" href="#why-the-job-asks-for-it" title="Permanent link">&para;</a></h2>
+<p>Because the retrieval half is new and most corpora do not have it.</p>
+<p>Navigation metadata is well understood: a title, a position, a section. It has
+existed as long as documentation sites have. Retrieval metadata is what makes a
+filtered search possible, what lets a chunk carry its context into a vector
+store, and what an assistant uses to decide where to look. NVIDIA asking for
+both in one phrase is a signal that they know the second is a separate design
+problem.</p>
+<p>The uncomfortable part, and the subject of the golden path, is that adding
+fields is easy and keeping them true is not. A field written by a generator and
+read by nothing will be wrong within weeks, and nothing will report it.</p>
+<h2 id="the-golden-path">The golden path<a class="headerlink" href="#the-golden-path" title="Permanent link">&para;</a></h2>
+<p>Audit a real corpus's metadata, find the field that is lying, and work out why
+nobody noticed. About thirty minutes.</p>
+<p><strong>Step 1: measure coverage, not existence</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>121 pages
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>field        pages  coverage
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>title          121      100%
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>summary        121      100%
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>diataxis       121      100%
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>audience       121      100%
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>concept         64       52%
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>tags           64       52%
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>generated      53       43%
+</code></pre></div>
+<p>Coverage is the first question because an optional field cannot be built on. A
+filter on <code>tags</code> here would silently exclude 48 per cent of the corpus, and the
+result would look like a retrieval problem rather than a metadata problem.</p>
+<p><strong>Step 2: check that the populated fields are true</strong></p>
+<p>Full coverage is necessary and not sufficient. Split each field's values by
+whether the page was generated:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>generated pages by diataxis: {'reference': 53}
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>hand-written by diataxis:    {'how-to': 22, 'explanation': 46}
+</code></pre></div>
+<p><code>diataxis</code> had 100 per cent coverage, three legal values, and was <strong>wrong on 53
+pages</strong>. The placeholder generator hardcoded <code>reference</code>, so that value meant
+"not written yet" while no real page used it.</p>
+<p>A filter for reference documentation would have returned exclusively stubs.</p>
+<p><strong>Step 3: count the readers</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>grep<span class="w"> </span>-rn<span class="w"> </span><span class="s2">"diataxis"</span><span class="w"> </span>src/fieldguide/*.py<span class="w"> </span>hooks/*.py<span class="w"> </span>mkdocs.yml
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>src/fieldguide/generate.py:144:        "diataxis": "reference",
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>src/fieldguide/scaffold.py:102:        "diataxis: explanation",
+</code></pre></div>
+<p>Two writers, zero readers. That is the explanation for step 2: nothing
+consumed the field, so nothing could notice it was wrong.</p>
+<p><strong>The reader count is the diagnostic.</strong> Write it down for every field you have.
+A field with more writers than readers is decoration, and decoration rots.</p>
+<p><strong>Step 4: check the field is even parseable</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">m</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="sa">r</span><span class="s2">"^---\n(.*?)\n---\n"</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">read_text</span><span class="p">(),</span> <span class="n">re</span><span class="o">.</span><span class="n">S</span><span class="p">)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">except</span> <span class="n">yaml</span><span class="o">.</span><span class="n">YAMLError</span><span class="p">:</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">bad</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>front matter parses: 75 pages
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>front matter INVALID: 46 pages
+</code></pre></div>
+<p>Forty-six pages whose front matter no YAML parser could read, because a
+generated summary contained an unquoted colon. MkDocs' own metadata parser is
+more forgiving than YAML, so the build was green and the pages looked fine.</p>
+<p>The visible symptom was in the wrong place entirely:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>meta description: A validated curriculum for documentation engineering, ...
+</code></pre></div>
+<p>Every one of those 46 pages fell back to the site description, because its own
+<code>summary</code> was unreadable. A navigation-and-SEO symptom caused by a
+serialisation bug, which is why this check belongs next to the metadata work
+rather than in the SEO work.</p>
+<p><strong>Step 5: fix all three classes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unparseable front matter</td>
+<td>Serialise with <code>yaml.safe_dump</code>, never f-strings</td>
+</tr>
+<tr>
+<td>A field that lies</td>
+<td>Add the honest value: <code>diataxis: placeholder</code></td>
+</tr>
+<tr>
+<td>A field with no reader</td>
+<td>Give it one, so drift fails a build</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ok: every page's front matter parses as YAML
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>all pages by diataxis: {'how-to': 22, 'explanation': 46, 'placeholder': 53}
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>  FIRES: diataxis is 'refrence', which is not one of [...]
+</code></pre></div>
+<p><strong>What you learned.</strong> Metadata health has three questions and most audits ask
+only the first: is it present, is it true, and does anything read it.</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<h3 id="the-two-audiences-and-what-each-wants">The two audiences, and what each wants<a class="headerlink" href="#the-two-audiences-and-what-each-wants" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Navigation</th>
+<th>Retrieval</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>Essential, it is the label</td>
+<td>Useful, it is high-signal text</td>
+</tr>
+<tr>
+<td><code>summary</code></td>
+<td>Sidebar hints, meta description</td>
+<td>Essential, it is what a map lists</td>
+</tr>
+<tr>
+<td><code>diataxis</code> or page type</td>
+<td>Section grouping</td>
+<td>Essential filter: "how-to only"</td>
+</tr>
+<tr>
+<td><code>audience</code></td>
+<td>Sometimes a separate route</td>
+<td>Essential filter</td>
+</tr>
+<tr>
+<td><code>position</code> or <code>order</code></td>
+<td>Essential</td>
+<td>Useless</td>
+</tr>
+<tr>
+<td><code>product_version</code></td>
+<td>A version switcher</td>
+<td>Essential filter</td>
+</tr>
+<tr>
+<td><code>component</code> or area</td>
+<td>Grouping</td>
+<td>Essential filter</td>
+</tr>
+<tr>
+<td><code>updated</code> or <code>reviewed</code></td>
+<td>A date in the footer, with caveats</td>
+<td>Staleness filter</td>
+</tr>
+<tr>
+<td><code>tags</code></td>
+<td>Weak; a tag index few people use</td>
+<td>Weak unless closed and required</td>
+</tr>
+<tr>
+<td><code>canonical</code></td>
+<td>Not used</td>
+<td>Deduplication across versions</td>
+</tr>
+</tbody>
+</table>
+<p>The asymmetry in the <code>position</code> row is the clearest illustration of the two
+audiences. Navigation needs ordering and retrieval does not care. Retrieval
+needs filters and navigation can live without most of them.</p>
+<h3 id="what-a-chunk-needs-that-a-page-does-not">What a chunk needs that a page does not<a class="headerlink" href="#what-a-chunk-needs-that-a-page-does-not" title="Permanent link">&para;</a></h3>
+<p>When a page is <a href="../chunking/">chunked</a> for retrieval, each chunk leaves home
+without its context. The metadata a chunk has to carry:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Why the chunk needs it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Source page and anchor</td>
+<td>So an answer can cite a link a reader can follow</td>
+</tr>
+<tr>
+<td>Page title</td>
+<td>A chunk from the middle of a page has no title of its own</td>
+</tr>
+<tr>
+<td>Heading trail</td>
+<td>Which section this is, so the chunk is placeable</td>
+</tr>
+<tr>
+<td>Page type and audience</td>
+<td>So a filtered query still works at chunk level</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>So a 2.3 chunk is not returned to a 2.4 reader</td>
+</tr>
+</tbody>
+</table>
+<p>Page-level metadata that is not copied onto chunks is metadata that stops
+existing the moment retrieval starts, which is the most common reason filtered
+search works in a prototype and not in production.</p>
+<h3 id="how-many-fields">How many fields<a class="headerlink" href="#how-many-fields" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Count</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Three or four, required, all consumed</td>
+<td>Reliable, and the common good answer</td>
+</tr>
+<tr>
+<td>Eight or more, half optional</td>
+<td>Half-populated, nothing depends on it</td>
+</tr>
+<tr>
+<td>Any number with no consumers</td>
+<td>Decorative, and already wrong</td>
+</tr>
+</tbody>
+</table>
+<p>Start from the filter you want and add the field that makes it possible. Fields
+added because they seem like good practice are the ones that end up lying.</p>
+<h3 id="where-metadata-lives">Where metadata lives<a class="headerlink" href="#where-metadata-lives" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Location</th>
+<th>Good for</th>
+<th>Watch out</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Front matter</td>
+<td>Per-page facts authors control</td>
+<td>Must be valid YAML; see step 4</td>
+</tr>
+<tr>
+<td>A registry or data file</td>
+<td>Relationships, ordering, cross-page rules</td>
+<td>Must not disagree with the pages</td>
+</tr>
+<tr>
+<td>Derived at build time</td>
+<td>Word count, last modified, heading trail</td>
+<td>Cheap, and invisible to source consumers</td>
+</tr>
+<tr>
+<td>The file path</td>
+<td>Section, product area</td>
+<td>Encoded in a URL, so expensive to change</td>
+</tr>
+</tbody>
+</table>
+<p>Deriving is underrated. A heading trail, a word count or a reading time
+computed at build time cannot drift, because nothing stores it.</p>
+<h2 id="how-to-talk-about-it">How to talk about it<a class="headerlink" href="#how-to-talk-about-it" title="Permanent link">&para;</a></h2>
+<p><strong>Take NVIDIA's phrasing literally.</strong> "Navigation metadata and retrieval
+metadata are different field sets. Navigation needs ordering and a label;
+retrieval needs filters, and it needs them copied onto every chunk, because a
+chunk leaves the page without its context. A corpus with good navigation
+metadata and no retrieval metadata looks fine until you put a search in front
+of it."</p>
+<p><strong>The follow-up is how you keep it honest</strong>, and the answer is reader count. A
+field with more writers than readers will be wrong and nothing will report it.
+I had a fully populated, closed-vocabulary field that was wrong on 44 per cent
+of pages for exactly that reason.</p>
+<p><strong>The tradeoff to volunteer.</strong> Every required field is a tax on contribution
+and a thing reviewers have to check, so the right number is small. The pressure
+runs the other way, because each new filter suggests a new field, and the way
+to resist it is to require a named consumer before adding one.</p>
+<p><strong>One sharper point.</strong> Check that your front matter is valid YAML. MkDocs'
+metadata parser is more forgiving than YAML, so an unquoted colon builds
+cleanly and is invisible to every tool using a real parser. I shipped 46 such
+pages, and the only visible symptom was their meta descriptions falling back to
+the site default. Four lines of check, and it is the cheapest
+<a href="../agent-ready-content/">AI-readiness</a> work available.</p>
+<h2 id="how-to-prove-it">How to prove it<a class="headerlink" href="#how-to-prove-it" title="Permanent link">&para;</a></h2>
+<p><strong>The artifact.</strong> A metadata audit of a corpus you own: coverage per field,
+value distribution per field, and reader count per field.</p>
+<p><strong>Three things to do, in order:</strong></p>
+<ol>
+<li>Print coverage and value distribution for every field in your corpus. Heavy
+   skew toward one value usually means a default is being written somewhere.</li>
+<li>Count readers for each field. Anything with none is either removable or
+   needs a consumer.</li>
+<li>Parse all your front matter with a real YAML parser. This takes four lines
+   and finds something more often than it should.</li>
+</ol>
+<p><strong>What makes it credible rather than decorative.</strong> <code>docpack</code> carries metadata
+through into its retrieval artifacts, so each chunk keeps its source, heading
+trail and page type, and <code>summary</code> is indexed for search after an evaluation
+showed it was being ignored. The more useful story is the audit above: a field
+at 100 per cent coverage, legal values, zero readers, wrong on 44 per cent of
+pages, and the serialisation bug underneath it.</p>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../taxonomy/">Taxonomy and controlled vocabularies</a>, which constrains the values</li>
+<li><a href="../content-model/">Content models</a>, which declares the fields</li>
+<li><a href="../chunking/">Chunking</a>, where retrieval metadata has to be carried</li>
+<li><a href="../findability/">Findability and search design</a>, what the filters are for</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "content.code.copy", "content.action.edit", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

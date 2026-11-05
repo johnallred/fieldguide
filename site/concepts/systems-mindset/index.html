@@ -1,0 +1,1398 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Fixing the condition that produced a defect rather than the defect, and knowing when not to.">
+      
+      
+      
+        <link rel="canonical" href="https://johnallred.github.io/fieldguide/concepts/systems-mindset/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>A systems mindset - The Field Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-systems-mindset" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="The Field Guide" class="md-header__button md-logo" aria-label="The Field Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Field Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              A systems mindset
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/johnallred/fieldguide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="The Field Guide" class="md-nav__button md-logo" aria-label="The Field Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Field Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/johnallred/fieldguide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coverage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coverage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../study-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Everything in order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../demonstrated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demonstrated
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../paths/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning paths
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learning paths
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/first-week/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The first week
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/content-architect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The content architect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/docs-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The documentation engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/knowledgeops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The KnowledgeOps path
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/developer-educator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The developer educator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/writer-who-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The writer who builds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/prove-it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prove it in a weekend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About this guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About this guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/why-a-registry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why the curriculum is a data file
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/the-page-contract/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The page contract
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/provenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Provenance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-the-job-asks-for-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the job asks for it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-golden-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The golden path
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-four-questions-in-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The four questions, in order
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-and-class-worked-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instance and class, worked examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-the-instance-fix-is-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When the instance fix is correct
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-strongest-version-of-the-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The strongest version of the idea
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-talk-about-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to talk about it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-prove-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to prove it
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to prove it">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-this-would-be-demonstrated-elsewhere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How this would be demonstrated elsewhere
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/johnallred/fieldguide/edit/main/docs/concepts/systems-mindset.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="a-systems-mindset">A systems mindset<a class="headerlink" href="#a-systems-mindset" title="Permanent link">&para;</a></h1>
+<p><em>Fixing the condition that produced a defect rather than the defect, and knowing when not to.</em></p>
+<p><code>core</code> · difficulty 2 · 2h</p>
+<blockquote>
+<p>A systems mindset: you fix the class of problem, not just the instance</p>
+<p>Source: nvidia posting, verbatim</p>
+</blockquote>
+<p><strong>Leads to:</strong> <a href="../implementation-feedback/">Giving architecture owners implementation feedback</a>, <a href="../docs-prioritization/">Prioritizing documentation work</a></p>
+<h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Permanent link">&para;</a></h2>
+<p>Treating a defect as evidence about the process that produced it. You fix the
+broken link, and then you ask what allowed a broken link to reach a reader, and
+you change that.</p>
+<p>The second half is what makes it a mindset rather than a slogan: it includes
+knowing when the answer is "nothing, this was genuinely a one-off", because
+building a system for every instance is its own failure.</p>
+<h2 id="why-the-job-asks-for-it">Why the job asks for it<a class="headerlink" href="#why-the-job-asks-for-it" title="Permanent link">&para;</a></h2>
+<p>NVIDIA names it as a required trait and spells it out, which is unusual for a
+soft requirement. The surrounding language explains why: "We build systems where
+the right way is easier than the wrong way", and "turning documentation,
+standards, and tribal knowledge into tooling, templates, and self-service paths,
+so fewer people have to ask how do I".</p>
+<p>Read those together and the role becomes clear. This is not a documentation job
+with some automation attached. <strong>It is a job whose output is mechanisms</strong>, and
+pages are one kind of mechanism among several.</p>
+<p>On a Tuesday it is a fork in the road, several times a day. Someone reports that
+a code sample in the quickstart no longer runs. The instance fix is five
+minutes. The class fix is
+<a href="../code-sample-validation/">a test that executes every sample</a>, which is an
+afternoon and which means that specific report never happens again. Doing the
+instance fix feels responsive and leaves you doing it again next quarter.</p>
+<p>The reason it is tagged <code>core</code> rather than filed as attitude: it is the thing
+that determines whether your backlog shrinks. A documentation team that only
+does instance fixes has a backlog that grows with the product. A team that
+converts recurring instances into gates has a backlog that grows with the
+<em>novelty</em> of the product, which is much slower.</p>
+<h2 id="the-golden-path">The golden path<a class="headerlink" href="#the-golden-path" title="Permanent link">&para;</a></h2>
+<p>Take one instance, find its class, and build the smallest gate that closes it.
+About thirty minutes.</p>
+<p><strong>Step 1: the instance</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>systems-drill<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>systems-drill
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>docs
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>docs/install.md<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s"># Install</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s">Run `pip install widget`.</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s">EOF</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>docs/configure.md<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s"># Configure</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="s">First, [install the widget](install.md). Then see the</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="s">[tuning guide](tuning.md) for performance options.</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="s">EOF</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>ls<span class="w"> </span>docs/
+</code></pre></div>
+<p><code>tuning.md</code> does not exist. That is the instance. The instance fix is obvious:
+create the page or remove the link.</p>
+<p><strong>Step 2: ask the question that turns it into a class</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>analysis.md<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="s">INSTANCE   A link in configure.md points to a page that does not exist.</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="s">Q: What allowed this to reach a reader?</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s">A: Nothing checks whether internal links resolve.</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="s">CLASS      Any link to a nonexistent page, in any page, ever.</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="s">Q: What is the smallest thing that makes the class impossible?</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="s">A: A check that resolves every internal link, run before merge.</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="s">Q: What does the gate NOT cover?  (Ask this, always.)</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="s">A: External links. Anchors within a page. Links in generated output.</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="s">   Images. Redirects that resolve but go somewhere wrong.</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="s">EOF</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>cat<span class="w"> </span>analysis.md
+</code></pre></div>
+<p>That last question is the one people skip, and it is what separates a gate from
+a false sense of security. A link checker that silently ignores anchors will
+convince a team that links are handled.</p>
+<p><strong>Step 3: build the gate</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>check_links.py<span class="w"> </span><span class="s">&lt;&lt;'PY'</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="s">"""Fail if any internal Markdown link points at a file that does not exist."""</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="s">import re</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="s">import sys</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="s">from pathlib import Path</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="s">LINK = re.compile(r"\[[^\]]*\]\((?!https?://|mailto:)([^)#]+)(?:#[^)]*)?\)")</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="s">def main(root: Path) -&gt; int:</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="s">    broken = []</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="s">    for page in sorted(root.rglob("*.md")):</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="s">        for target in LINK.findall(page.read_text(encoding="utf-8")):</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="s">            if not (page.parent / target).resolve().exists():</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="s">                broken.append(f"{page}: {target}")</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="s">    for item in broken:</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="s">        print(f"broken link  {item}", file=sys.stderr)</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="s">    print(f"{'FAIL' if broken else 'ok'}: {len(broken)} broken internal link(s)")</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="s">    return 1 if broken else 0</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="s">if __name__ == "__main__":</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="s">    sys.exit(main(Path(sys.argv[1] if len(sys.argv) &gt; 1 else "docs")))</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="s">PY</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>python3<span class="w"> </span>check_links.py<span class="w"> </span>docs
+</code></pre></div>
+<p>It fails, naming the file and the target.</p>
+<p><strong>Step 4: confirm the gate works in both directions</strong></p>
+<p>A gate you have only seen fail is half-tested. The dangerous failure is a gate
+that passes when it should not.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">printf</span><span class="w"> </span><span class="s1">'# Tuning\n\nSet the batch size.\n'</span><span class="w"> </span>&gt;<span class="w"> </span>docs/tuning.md
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>python3<span class="w"> </span>check_links.py<span class="w"> </span>docs
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># And now the case the gate does NOT cover, which you wrote down in step 2.</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>cat<span class="w"> </span>&gt;&gt;<span class="w"> </span>docs/configure.md<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="s">See [the batch size section](tuning.md#batch-size).</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="s">EOF</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>python3<span class="w"> </span>check_links.py<span class="w"> </span>docs
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">"^ passed, but #batch-size does not exist. Known gap, not a surprise."</span>
+</code></pre></div>
+<p><strong>What you built.</strong> A gate that makes one class of defect impossible, plus a
+written record of what it does not cover. The record is the deliverable that
+distinguishes this from enthusiasm: you now know that anchors are unchecked, so
+when an anchor breaks nobody concludes the link checker is broken, and the next
+increment is obvious.</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<h3 id="the-four-questions-in-order">The four questions, in order<a class="headerlink" href="#the-four-questions-in-order" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What allowed this to reach a reader?</td>
+<td>Finds the missing gate rather than the bad actor</td>
+</tr>
+<tr>
+<td>What is the smallest thing that closes the class?</td>
+<td>Prevents building a platform to fix a typo</td>
+</tr>
+<tr>
+<td>What does the gate not cover?</td>
+<td>Stops false confidence, names the next increment</td>
+</tr>
+<tr>
+<td>Is this class worth a gate at all?</td>
+<td>The brake. Some instances are genuinely singular</td>
+</tr>
+</tbody>
+</table>
+<h3 id="instance-and-class-worked-examples">Instance and class, worked examples<a class="headerlink" href="#instance-and-class-worked-examples" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Instance</th>
+<th>Class</th>
+<th>The gate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A broken link</td>
+<td>Any unresolvable internal link</td>
+<td><a href="../link-checking/">Link checking</a></td>
+</tr>
+<tr>
+<td>A sample that no longer runs</td>
+<td>Any sample drifting from the API</td>
+<td><a href="../code-sample-validation/">Code-sample validation</a></td>
+</tr>
+<tr>
+<td>A quickstart that fails on a clean machine</td>
+<td>Any undeclared dependency</td>
+<td><a href="../coldstart-testing/">Cold-start testing</a></td>
+</tr>
+<tr>
+<td>A page using "repo" where the glossary says "repository"</td>
+<td>Terminology drift</td>
+<td><a href="../prose-linting/">Prose linting</a></td>
+</tr>
+<tr>
+<td>A page with no owner and no review date</td>
+<td>Unmaintainable content</td>
+<td><a href="../content-model/">Content model</a> with a required <code>updated</code></td>
+</tr>
+<tr>
+<td>A page nobody can find</td>
+<td>Structure invisible to search</td>
+<td><a href="../metadata/">Metadata</a> and <a href="../findability/">findability</a></td>
+</tr>
+<tr>
+<td>The same question in support three times</td>
+<td>Missing self-service path</td>
+<td><a href="../repeat-questions/">Repeat-question analysis</a></td>
+</tr>
+<tr>
+<td>A release shipped undocumented</td>
+<td>Docs outside the definition of done</td>
+<td><a href="../release-readiness/">Release readiness</a></td>
+</tr>
+</tbody>
+</table>
+<p>That table is most of what both postings are asking for, which is why this page
+is short and the others are long.</p>
+<h3 id="when-the-instance-fix-is-correct">When the instance fix is correct<a class="headerlink" href="#when-the-instance-fix-is-correct" title="Permanent link">&para;</a></h3>
+<p>Worth stating plainly, because this mindset has a failure mode:</p>
+<ul>
+<li><strong>The class has one member.</strong> A typo in a page title is a typo.</li>
+<li><strong>The gate would cost more than the defects.</strong> A linter for a three-page site.</li>
+<li><strong>You do not understand the class yet.</strong> Two instances is not a pattern;
+  building a gate on a guess produces a gate people route around.</li>
+<li><strong>The gate would be unreliable.</strong> A check that fails spuriously trains people
+  to ignore red builds, which is worse than no check. This is the big one.</li>
+<li><strong>The real fix belongs to someone else.</strong> If the class is "the API changes
+  without warning", a documentation gate is a workaround and the conversation
+  belongs with engineering.</li>
+</ul>
+<h3 id="the-strongest-version-of-the-idea">The strongest version of the idea<a class="headerlink" href="#the-strongest-version-of-the-idea" title="Permanent link">&para;</a></h3>
+<p>A gate catches a defect after someone makes it. The better move, where it is
+available, is to make the defect <strong>unrepresentable</strong>: a
+<a href="../taxonomy/">closed vocabulary</a> means an invalid page type cannot be written
+down, not merely that it is caught. A <a href="../templates-scaffolding/">generator</a>
+means a conforming page is the path of least resistance.</p>
+<p>NVIDIA's phrase for this is "systems where the right way is easier than the
+wrong way", and it is a stronger claim than validation. Validation makes the
+right way mandatory, which is a different and more annoying thing.</p>
+<h2 id="how-to-talk-about-it">How to talk about it<a class="headerlink" href="#how-to-talk-about-it" title="Permanent link">&para;</a></h2>
+<p><strong>What a competent answer sounds like.</strong> Tell a two-level story with a number.
+"A reader reported a broken sample. I fixed it, then wrote a test that extracts
+and executes every Python block in the docs. It found four more that day.
+Then I added a skip marker with an assertion that skips stay under a quarter of
+the samples, because an escape hatch with no limit becomes the default."</p>
+<p>That third sentence is the signal. It shows you expect your own mechanism to be
+worked around and designed for it.</p>
+<p><strong>The follow-up is "when have you over-engineered this",</strong> and an interviewer
+who asks it is testing for judgement rather than enthusiasm. Have a real answer.
+The most common honest one in this field is a linter rule too aggressive for its
+corpus, producing dozens of warnings everyone learned to ignore, which left the
+corpus worse than before because now there was a check that meant nothing.</p>
+<p><strong>The tradeoff to volunteer.</strong> Every gate is permanent friction on everyone who
+contributes afterwards, and the people who pay it are not the people who
+benefited from it. A check that saves you an hour a quarter and costs eleven
+contributors thirty seconds a day is a net loss that will never show up in any
+metric you look at. Gates need the same scrutiny as features, including the
+question of what to remove, which is why
+<a href="../content-retirement/">retiring content</a> and retiring checks are the same
+discipline.</p>
+<p><strong>One sharper point.</strong> The highest-leverage version of this mindset is applied to
+<strong>social</strong> problems, not technical ones. "An engineer rewrote a page badly" has
+a class, and the class fix is usually a template or a review checklist rather
+than a conversation. Most documentation people apply systems thinking to
+pipelines and instance thinking to humans. Saying that out loud is unusual and
+it is the thing NVIDIA's "collaborative style" bullet is circling.</p>
+<h2 id="how-to-prove-it">How to prove it<a class="headerlink" href="#how-to-prove-it" title="Permanent link">&para;</a></h2>
+<p><strong>The artifact.</strong> A commit pair: the instance fix, and the gate that closes its
+class. In the same history, visible as two commits.</p>
+<p><strong>Three things to do, in order:</strong></p>
+<ol>
+<li><strong>Run the golden path, then find a real instance.</strong> Any project. Fix it,
+   then write the smallest gate. Twenty lines is fine; the point is not the
+   sophistication.</li>
+<li><strong>Write down what the gate does not cover, in the gate.</strong> A comment or a
+   README line. This is the cheapest credibility available on this page,
+   because almost nobody does it and it is immediately recognisable as the work
+   of someone who has been burned.</li>
+<li><strong>Find one gate to remove.</strong> A check that has never caught anything, or
+   whose warnings everyone ignores. Removing it is the same skill pointed the
+   other way, and it is the harder half to demonstrate. If you cannot find a
+   check that has never caught anything, you have either a young pipeline or
+   no record of what your gates catch, and the second is the more common
+   answer.</li>
+</ol>
+<p><strong>What makes it credible rather than decorative.</strong> "I think in systems" is a claim anyone can make. A
+repository where you can point at the red build, the fix, and the gate that
+followed is not. The strongest version includes a gate you later deleted.</p>
+<h3 id="how-this-would-be-demonstrated-elsewhere">How this would be demonstrated elsewhere<a class="headerlink" href="#how-this-would-be-demonstrated-elsewhere" title="Permanent link">&para;</a></h3>
+<p>A repository can hold the output of this thinking and not the thinking. What
+would demonstrate it is a record of decisions and their consequences, which is
+a thing you accumulate rather than build.</p>
+<p><strong>Where the skill is exercised.</strong> In the choice to fix a class rather than an
+instance. In noticing that two unrelated-looking failures share a cause. In
+declining to add a check because the check would be ignored.</p>
+<p><strong>What a learner would do.</strong> Take the last five defects you fixed, in anything,
+and for each write down the instance you fixed and the class it belonged to.
+Then ask which of the five you closed at the class level. Most people find one.
+That ratio is the measurement, and it is available today without any tooling.</p>
+<p>Then do the inverse on something you own: find a check that fires often and ask
+what it is really telling you. A link checker that reports twenty dead links a
+month is not a link problem, it is a publishing problem, and the systems answer
+is to find out what keeps breaking them.</p>
+<p><strong>What competence looks like.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Evidence</th>
+<th>Why it carries weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A fix whose commit message names the class</td>
+<td>The class was seen, not just the bug</td>
+</tr>
+<tr>
+<td>A check added after a defect, in the same change</td>
+<td>The instinct is present, not retrofitted</td>
+</tr>
+<tr>
+<td>A check <em>removed</em> because it was noise</td>
+<td>Harder than adding, and rarer</td>
+</tr>
+<tr>
+<td>Two problems diagnosed as one cause</td>
+<td>The actual skill</td>
+</tr>
+<tr>
+<td>A deliberate decision not to automate</td>
+<td>Judgment rather than reflex</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What this guide can point at instead.</strong> The closest thing to evidence here is
+the pattern in its own history. A prerequisite label was standardised and
+asserted in a test rather than corrected on one page. A word-count gate was
+re-derived after a generator was added. A fence parser was written after three
+naive versions returned plausible wrong numbers. A <code>Related</code> section was
+promoted from convention to contract once one page was found without it. Each
+of those is an instance closed as a class, and the record of them is the
+nearest a repository gets.</p>
+<p><strong>Why it is still not a demonstration.</strong> Those decisions are visible in
+hindsight and the reasoning is not. A reader cannot tell from the commit whether
+the class was seen at the time or found later during an audit, and in at least
+two of those four cases it was found later. Saying so is the only honest version
+of this page.</p>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../implementation-feedback/">Giving architecture owners implementation feedback</a>, this applied upward</li>
+<li><a href="../templates-scaffolding/">Templates and scaffolding</a>, making the right way easier</li>
+<li><a href="../docs-prioritization/">Prioritizing documentation work</a>, choosing which class to close</li>
+<li><a href="../documentation-ci/">Documentation CI</a>, where the gates live</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "content.code.copy", "content.action.edit", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

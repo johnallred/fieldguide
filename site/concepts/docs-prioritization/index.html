@@ -1,0 +1,1426 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Deciding what to build, fix and retire from evidence rather than from whoever asked most recently.">
+      
+      
+      
+        <link rel="canonical" href="https://johnallred.github.io/fieldguide/concepts/docs-prioritization/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Prioritizing documentation work - The Field Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#prioritizing-documentation-work" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="The Field Guide" class="md-header__button md-logo" aria-label="The Field Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Field Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Prioritizing documentation work
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/johnallred/fieldguide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="The Field Guide" class="md-nav__button md-logo" aria-label="The Field Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Field Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/johnallred/fieldguide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coverage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coverage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../study-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Everything in order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../demonstrated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demonstrated
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../paths/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning paths
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learning paths
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/first-week/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The first week
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/content-architect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The content architect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/docs-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The documentation engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/knowledgeops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The KnowledgeOps path
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/developer-educator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The developer educator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/writer-who-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The writer who builds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/prove-it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prove it in a weekend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About this guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About this guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/why-a-registry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why the curriculum is a data file
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/the-page-contract/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The page contract
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/provenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Provenance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-the-job-asks-for-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the job asks for it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-golden-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The golden path
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-three-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The three actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-retire-is-load-bearing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why retire is load-bearing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-each-input-is-good-and-bad-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What each input is good and bad for
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#honest-limits-of-scoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Honest limits of scoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-talk-about-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to talk about it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-prove-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to prove it
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to prove it">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-this-would-be-demonstrated-elsewhere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How this would be demonstrated elsewhere
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/johnallred/fieldguide/edit/main/docs/concepts/docs-prioritization.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="prioritizing-documentation-work">Prioritizing documentation work<a class="headerlink" href="#prioritizing-documentation-work" title="Permanent link">&para;</a></h1>
+<p><em>Deciding what to build, fix and retire from evidence rather than from whoever asked most recently.</em></p>
+<p><code>core</code> · difficulty 2 · 3h</p>
+<blockquote>
+<p>use the data to decide what to build, fix, or retire</p>
+<p>Source: nvidia posting, verbatim</p>
+</blockquote>
+<p><strong>Prerequisites:</strong> <a href="../repeat-questions/">Repeat-question analysis</a>, <a href="../systems-mindset/">A systems mindset</a></p>
+<h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Permanent link">&para;</a></h2>
+<p>Choosing which documentation work to do from evidence rather than from whoever
+asked most recently. The output is a ranked list with a stated basis, and
+crucially a <strong>retire</strong> column, which most documentation backlogs do not have.</p>
+<h2 id="why-the-job-asks-for-it">Why the job asks for it<a class="headerlink" href="#why-the-job-asks-for-it" title="Permanent link">&para;</a></h2>
+<p>NVIDIA's phrasing is one clause at the end of the measurement bullet: "Measure
+outcomes such as time-to-first-success, support deflection, repeat questions,
+and AI answer quality, and use the data to decide what to build, fix, or
+retire."</p>
+<p>The three verbs are the content. Most documentation prioritisation has two
+options, build and fix, and a backlog that therefore only grows. <strong>Retire is the
+one that makes the other two sustainable</strong>, and it is in the posting explicitly.</p>
+<p>On a Tuesday this is the thing that decides whether you are useful. A
+documentation backlog at a company this size has a few hundred items: requests
+from engineers, gaps you found, support escalations, a migration somebody
+promised, and forty pages marked for review. You can do maybe three things this
+week. Without a basis, the three you do are whichever came with the most senior
+request attached, which is a reasonable heuristic and an expensive one.</p>
+<p>The reason it is <code>core</code>: the backlog in this field is unbounded. The product
+ships continuously, every release creates potential gaps, and the corpus ages
+whether you touch it or not. Prioritisation is not an occasional planning
+activity, it is the mechanism that converts an infinite queue into a finite week.</p>
+<h2 id="the-golden-path">The golden path<a class="headerlink" href="#the-golden-path" title="Permanent link">&para;</a></h2>
+<p>Build a ranking from evidence you can actually get, and see it disagree with
+your instinct. Thirty minutes.</p>
+<p><strong>Step 1: get the inputs that are cheap and the ones that are not</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>prio-drill<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>prio-drill
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>inputs.md<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s">| Input                        | Cost to get        | What it tells you |</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s">|------------------------------|--------------------|-------------------|</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="s">| Support ticket topics        | cheap (export)     | what fails in the field |</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s">| Repeat questions in channels | cheap (search)     | what docs failed to answer |</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s">| Page views                   | cheap (analytics)  | demand, not satisfaction |</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s">| Search queries with no click | cheap, underused   | a gap, stated in the reader's words |</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s">| Time to first success        | expensive (study)  | whether the golden path works |</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s">| Staleness by review date     | free (front matter)| risk, not impact |</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="s">| Requests from engineers      | free (they arrive) | what a colleague noticed |</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="s">The fourth row is the best value in the list and almost nobody uses it.</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="s">A query with no click is a reader telling you, in their own words, that</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="s">the answer is not there.</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="s">EOF</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>cat<span class="w"> </span>inputs.md
+</code></pre></div>
+<p><strong>Step 2: score on impact and cost, and write down the basis</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>backlog.csv<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="s">item,action,evidence,affected_per_month,effort_hours,basis</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="s">Batch size guidance,build,"12 support tickets, 3 repeat asks",40,4,tickets</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="s">Rewrite install page,fix,"search: 'install fails' 60/mo no click",300,6,search</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s">Migrate 40 pages to new model,fix,"migration commitment",0,30,commitment</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="s">USD schema reference,build,"2 engineer requests",8,20,request</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="s">Retire 2.x upgrade guides,retire,"0 views in 6 months, 11 pages",0,2,analytics</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="s">Fix 7 stale pages flagged by CI,fix,"review date &gt;365d",25,5,staleness</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="s">Tutorial for the agentic toolkit,build,"product launch in 3 weeks",200,16,launch</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="s">EOF</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>column<span class="w"> </span>-s,<span class="w"> </span>-t<span class="w"> </span>backlog.csv
+</code></pre></div>
+<p><strong>Step 3: rank it mechanically, then look at what moved</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python3<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;'PY'</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="s">import csv</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="s">rows = list(csv.DictReader(open("backlog.csv")))</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="s">for row in rows:</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="s">    affected = float(row["affected_per_month"])</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="s">    effort = float(row["effort_hours"])</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="s">    # Deliberately crude: people helped per hour of work. The number is not</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="s">    # the decision, it is a way to notice when your instinct disagrees with</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="s">    # the evidence and to make yourself say why.</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="s">    row["score"] = affected / effort if effort else 0.0</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="s">rows.sort(key=lambda r: -r["score"])</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="s">print(f"{'item':&lt;34} {'action':&lt;8} {'per mo':&gt;7} {'hrs':&gt;5} {'score':&gt;7}  basis")</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="s">print("-" * 86)</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="s">for row in rows:</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="s">    print(f"{row['item']:&lt;34} {row['action']:&lt;8} "</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="s">          f"{row['affected_per_month']:&gt;7} {row['effort_hours']:&gt;5} "</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="s">          f"{row['score']:&gt;7.1f}  {row['basis']}")</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="s">PY</span>
+</code></pre></div>
+<p><strong>Step 4: argue with the ranking, in writing</strong></p>
+<p>The ranking is an input, not a decision. This step is the actual skill.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>decisions.md<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="s"># This week</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="s">DO  Rewrite install page            (50.0)  highest score, and it is the</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="s">                                            first thing every developer touches</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="s">DO  Retire 2.x upgrade guides       ( 0.0)  scored zero and I am doing it anyway:</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="s">                                            2 hours, removes 11 pages from every</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="s">                                            future migration, audit and review</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="s">                                            cycle. The score cannot see avoided</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="s">                                            future cost.</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="s">DO  Batch size guidance             (10.0)  12 tickets is a real number and the</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="s">                                            fix is a decision guide, not a page</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="s">DEFER  Agentic toolkit tutorial     (12.5)  scored well, but the 200/month is a</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="s">                                            forecast rather than a measurement.</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="s">                                            Revisit when the launch date is firm.</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="s">DEFER  Migrate 40 pages             ( 0.0)  a commitment with no measured impact.</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="s">                                            Renegotiate the deadline rather than</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="s">                                            spending 30 hours on it this month.</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="s">DEFER  USD schema reference         ( 0.4)  20 hours for 8 people. Ask the two</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="s">                                            requesters whether a 2-hour decision</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="s">                                            guide would do instead.</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="s">NOTE  Staleness items scored 5.0 and are genuinely ambiguous: a stale page is</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="s">      a risk, not a measured harm. Doing them when they are cheap.</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="s">EOF</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>cat<span class="w"> </span>decisions.md
+</code></pre></div>
+<p><strong>What you built.</strong> A ranking, and a written record of the three places you
+overrode it. The overrides are the deliverable. A score nobody argues with is a
+score nobody is using; <strong>the point of making it explicit is to make the
+disagreements explicit too</strong>, so that next quarter you can tell whether your
+instincts were better than the number.</p>
+<p>Note the retire item: it scored zero and was done anyway, because the scoring
+function cannot see avoided future cost. That is a known limitation written down
+rather than a flaw in the method.</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<h3 id="the-three-actions">The three actions<a class="headerlink" href="#the-three-actions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>When</th>
+<th>Common mistake</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Build</strong></td>
+<td>A gap with measured demand</td>
+<td>Building for forecast demand</td>
+</tr>
+<tr>
+<td><strong>Fix</strong></td>
+<td>Existing content failing readers</td>
+<td>Fixing by staleness date rather than by harm</td>
+</tr>
+<tr>
+<td><strong>Retire</strong></td>
+<td>Content with no readers, or superseded</td>
+<td>Never doing it, so the corpus only grows</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-retire-is-load-bearing">Why retire is load-bearing<a class="headerlink" href="#why-retire-is-load-bearing" title="Permanent link">&para;</a></h3>
+<p>Every page you keep costs something forever, and the costs are invisible
+individually:</p>
+<table>
+<thead>
+<tr>
+<th>Cost of a page nobody reads</th>
+<th>Paid by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>It appears in search results and in retrieval</td>
+<td>Every reader who gets it instead of the right page</td>
+</tr>
+<tr>
+<td>It is included in every audit and migration</td>
+<td>You, repeatedly</td>
+</tr>
+<tr>
+<td>It must be reviewed to stay in compliance with the model</td>
+<td>The review cycle</td>
+</tr>
+<tr>
+<td>It dilutes <a href="../llms-txt/">llms.txt</a> and the chunk corpus</td>
+<td>Every assistant answer</td>
+</tr>
+<tr>
+<td>It can be found and followed, and be wrong</td>
+<td>A reader, expensively</td>
+</tr>
+</tbody>
+</table>
+<p>The fourth row is new and is the one worth raising in an interview. In a corpus
+packaged for retrieval, <strong>a stale page is not merely unread, it is competing</strong>.
+That is a materially stronger argument for retirement than it was five years
+ago.</p>
+<h3 id="what-each-input-is-good-and-bad-for">What each input is good and bad for<a class="headerlink" href="#what-each-input-is-good-and-bad-for" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Good for</th>
+<th>Misleads about</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Page views</td>
+<td>Demand</td>
+<td>Satisfaction. A heavily viewed page may be heavily re-read because it is bad</td>
+</tr>
+<tr>
+<td>Support tickets</td>
+<td>Real failures</td>
+<td>Only covers people who asked. Most do not</td>
+</tr>
+<tr>
+<td>Repeat questions</td>
+<td>Documentation gaps</td>
+<td>Biased toward whoever is loudest in a channel</td>
+</tr>
+<tr>
+<td>Zero-click searches</td>
+<td>Gaps in the reader's words</td>
+<td>Volume is low, so weak on frequency</td>
+</tr>
+<tr>
+<td>Staleness</td>
+<td>Risk</td>
+<td>Harm. An old page about something stable is fine</td>
+</tr>
+<tr>
+<td>Engineer requests</td>
+<td>What a colleague noticed</td>
+<td>Impact. Usually reflects their week</td>
+</tr>
+</tbody>
+</table>
+<h3 id="honest-limits-of-scoring">Honest limits of scoring<a class="headerlink" href="#honest-limits-of-scoring" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Limit</th>
+<th>Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Affected-per-month is usually a guess</td>
+<td>The ranking is precise about imprecise inputs</td>
+</tr>
+<tr>
+<td>It cannot see avoided future cost</td>
+<td>Retirement and tooling always score badly</td>
+</tr>
+<tr>
+<td>It cannot see strategic commitments</td>
+<td>A launch has value a ticket count does not capture</td>
+</tr>
+<tr>
+<td>It optimises for the readers you have</td>
+<td>Not the readers a new capability might attract</td>
+</tr>
+<tr>
+<td>Effort estimates are wrong</td>
+<td>And wrong in the optimistic direction</td>
+</tr>
+</tbody>
+</table>
+<p>A scoring function that is treated as a decision is worse than no scoring
+function, because it launders judgement as arithmetic. Treated as a prompt for
+disagreement, it is useful.</p>
+<h2 id="how-to-talk-about-it">How to talk about it<a class="headerlink" href="#how-to-talk-about-it" title="Permanent link">&para;</a></h2>
+<p><strong>What a competent answer sounds like.</strong> Lead with an override and with retire.
+"I score the backlog on people affected per hour of work, and then I write down
+where I disagree with the score. Last quarter the highest-value thing I did
+scored zero: retiring eleven pages about a version nobody runs. Two hours, and
+it removed them from every future audit and from the retrieval corpus, where
+they were competing with the current pages."</p>
+<p><strong>The follow-up is "how do you say no to a senior person",</strong> and it is the real
+question. The answer that works is to make the comparison explicit rather than
+the refusal. You do not say no; you show the two items and what each is based
+on, and ask which they want. "This is 20 hours for 8 people, and this is 6 hours
+for 300 based on search data. I can do the first if it matters more for a reason
+the data cannot see." That reframes it from your judgement against theirs to a
+choice they are making with information.</p>
+<p><strong>The tradeoff to volunteer.</strong> Evidence-based prioritisation systematically
+underweights new things. Every input you can cheaply measure is about the
+readers you already have and the content that already exists, so a strict
+reading of the data never builds documentation for a capability that has not
+shipped. That is exactly backwards for
+<a href="../release-readiness/">release readiness</a>, where the whole point is being ready
+before demand exists. The resolution is to carve out capacity for launch work
+<em>outside</em> the scored backlog, rather than trying to score a forecast, because a
+forecast dressed as a measurement corrupts the whole exercise.</p>
+<p><strong>One sharper point.</strong> The most valuable prioritisation move in this field is
+usually not choosing between backlog items at all, it is noticing that several
+items share a cause and that the cause is fixable once. Four tickets about four
+pages being out of date is not four fix items; it is one
+<a href="../freshness-monitoring/">freshness monitoring</a> item. That is
+<a href="../systems-mindset/">the systems mindset</a> as a prioritisation technique, and it
+is how a backlog starts shrinking instead of being triaged forever.</p>
+<h2 id="how-to-prove-it">How to prove it<a class="headerlink" href="#how-to-prove-it" title="Permanent link">&para;</a></h2>
+<p><strong>The artifact.</strong> A ranked backlog with a basis column and a written record of
+the overrides. One page, and it is unusual enough to be memorable.</p>
+<p><strong>Three things to do, in order:</strong></p>
+<ol>
+<li><strong>Export your zero-click search queries</strong> for any documentation site you can
+   access. It takes ten minutes, almost nobody does it, and the list is readers
+   telling you the gaps in their own words.</li>
+<li><strong>Find something to retire.</strong> Pages with no views in six months, or
+   documentation for a version out of support. Propose it with the costs from
+   the table above, including the retrieval-competition argument.</li>
+<li><strong>Score a real backlog and write down your three overrides.</strong> The overrides
+   are the artifact. A ranking is arithmetic; knowing when to ignore it is the
+   job.</li>
+</ol>
+<p><strong>What makes it credible rather than decorative.</strong> Anyone can say they are data-driven. A backlog with
+a basis column, and a documented case where you did the thing that scored zero
+and said why, demonstrates that you use evidence without hiding behind it.</p>
+<h3 id="how-this-would-be-demonstrated-elsewhere">How this would be demonstrated elsewhere<a class="headerlink" href="#how-this-would-be-demonstrated-elsewhere" title="Permanent link">&para;</a></h3>
+<p>Prioritisation needs a backlog with competing claims on it and someone who can
+be overruled. A repository with one author has neither, so what is here is the
+reasoning and not the decisions.</p>
+<p><strong>What you need.</strong> A real backlog, a source of demand data, and at least one
+stakeholder who wants something different from what the data says.</p>
+<p><strong>What a learner would do.</strong> Take your next ten documentation tasks and give
+each a basis column: the ticket count, the search volume, the failing check, or
+"someone asked". Then rank by basis and compare with the order you would have
+chosen anyway.</p>
+<p><strong>What you would see.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Observation</th>
+<th>Typical</th>
+<th>What it tells you</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tasks with a measurable basis</td>
+<td>Fewer than half</td>
+<td>The honest starting point</td>
+</tr>
+<tr>
+<td>Tasks whose basis is "someone asked"</td>
+<td>The largest group</td>
+<td>Not illegitimate, but it should be labelled</td>
+</tr>
+<tr>
+<td>Agreement between the data order and your instinct</td>
+<td>Partial</td>
+<td>Where it disagrees is the interesting part</td>
+</tr>
+<tr>
+<td>Tasks you did anyway, against the data</td>
+<td>Some, and that is fine</td>
+<td>Say why, in the column</td>
+</tr>
+</tbody>
+</table>
+<p>The fourth row is the demonstration. Anyone can claim to be data-driven; the
+specific, unfakeable artifact is a backlog where one item scored zero, was done
+anyway, and carries the reason.</p>
+<p><strong>Why it does not commit.</strong> A ranked backlog is a snapshot of an argument. The
+evidence of skill is in having held the argument and recorded the exception,
+and that is a document in someone else's planning tool.</p>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../repeat-questions/">Repeat-question analysis</a>, the highest-signal input</li>
+<li><a href="../content-retirement/">Retiring content</a>, the mechanics of the third verb</li>
+<li><a href="../docs-analytics/">Documentation analytics</a>, where most inputs come from</li>
+<li><a href="../systems-mindset/">A systems mindset</a>, finding the shared cause behind several items</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "content.code.copy", "content.action.edit", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

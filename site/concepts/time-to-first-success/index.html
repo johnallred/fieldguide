@@ -1,0 +1,1472 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The best metric in this field, and worth exactly as much as the path you instrumented: a cold-start test passed in nine seconds while a real reader never succeeded at all.">
+      
+      
+      
+        <link rel="canonical" href="https://johnallred.github.io/fieldguide/concepts/time-to-first-success/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Time to first success - The Field Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#time-to-first-success" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="The Field Guide" class="md-header__button md-logo" aria-label="The Field Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Field Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Time to first success
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/johnallred/fieldguide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="The Field Guide" class="md-nav__button md-logo" aria-label="The Field Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    The Field Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/johnallred/fieldguide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start here
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../coverage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coverage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../study-plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Everything in order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../demonstrated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demonstrated
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../paths/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Learning paths
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Learning paths
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/first-week/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The first week
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/content-architect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The content architect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/docs-engineer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The documentation engineer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/knowledgeops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The KnowledgeOps path
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/developer-educator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The developer educator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/writer-who-builds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The writer who builds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paths/prove-it/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prove it in a weekend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About this guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    About this guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/why-a-registry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Why the curriculum is a data file
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/the-page-contract/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The page contract
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../explanation/provenance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Provenance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-it-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it is
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-the-job-asks-for-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the job asks for it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-golden-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The golden path
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defining-the-two-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defining the two endpoints
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-metric-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the metric fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reducing-it-in-order-of-effect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reducing it, in order of effect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-it-does-not-tell-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What it does not tell you
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-talk-about-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to talk about it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-prove-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to prove it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/johnallred/fieldguide/edit/main/docs/concepts/time-to-first-success.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="time-to-first-success">Time to first success<a class="headerlink" href="#time-to-first-success" title="Permanent link">&para;</a></h1>
+<p><em>The best metric in this field, and worth exactly as much as the path you instrumented: a cold-start test passed in nine seconds while a real reader never succeeded at all.</em></p>
+<p><code>core</code> · difficulty 2 · 3h</p>
+<div class="admonition quote">
+<p class="admonition-title">Asked for by name</p>
+<p>NVIDIA: "measure time-to-first-success, support deflection, repeat questions, and AI answer quality"</p>
+</div>
+<p><strong>Prerequisites:</strong> <a href="../docs-analytics/">Documentation analytics</a>, <a href="../golden-paths/">Golden paths</a></p>
+<h2 id="what-it-is">What it is<a class="headerlink" href="#what-it-is" title="Permanent link">&para;</a></h2>
+<p>The elapsed time between a developer deciding to try something and that
+developer having it work. Intel writes the same idea as a design goal, "from a
+clean environment to a working result", and NVIDIA writes it as a metric. It is
+the same quantity from two sides.</p>
+<p>It is the best single number in developer documentation, because it is the only
+one that cannot be satisfied by a well-written page. Prose quality, link
+health, sample correctness and search ranking are all inputs to it, and none of
+them substitutes for it.</p>
+<p>Defining it requires two decisions, and both are where the metric usually goes
+wrong: when the clock starts, and what counts as success.</p>
+<h2 id="why-the-job-asks-for-it">Why the job asks for it<a class="headerlink" href="#why-the-job-asks-for-it" title="Permanent link">&para;</a></h2>
+<p>Because every other documentation metric can be green while nobody can get
+started.</p>
+<p>A corpus can be complete, correct, linked, linted, searchable, fully tested,
+and still leave a competent developer with nothing working after twenty
+minutes. Time to first success is the metric that refuses to be fooled by that,
+which is precisely why it is uncomfortable to adopt: it is the one number that
+can make a quarter of good work look insufficient.</p>
+<p>NVIDIA lists it first of four, ahead of deflection and answer quality, and that
+ordering is defensible. Deflection measures the load you removed from someone
+else. First success measures whether the thing works for the person in front of
+you.</p>
+<h2 id="the-golden-path">The golden path<a class="headerlink" href="#the-golden-path" title="Permanent link">&para;</a></h2>
+<p>Measure it on a real repository, discover the measurement passed while a real
+reader failed, and work out why. About thirty minutes, and the finding is the
+most useful thing in this category.</p>
+<p><strong>Step 1: instrument it properly</strong></p>
+<p>A cold-start test is time to first success, automated. The companion repository
+has one: it creates an empty directory, builds a fresh virtual environment,
+installs the package the way a reader would, and runs the tutorial's commands
+in order, asserting the output the tutorial promises.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>bash<span class="w"> </span>scripts/coldstart.sh
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>==&gt; Cold environment at /tmp/tmp.7SDBOfrJoQ
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>==&gt; Tutorial step 1: create a virtual environment and install
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>==&gt; Tutorial step 1: verify the CLI is on PATH
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>docpack --help works
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>==&gt; Tutorial step 3: pack it
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>packed 2 pages into 4 chunks -&gt; dist
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>output matches what the tutorial promises
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>==&gt; Tutorial step 4: inspect the artifacts
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>dist/llms.txt present
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>dist/chunks.jsonl present
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>dist/llms-full.txt present
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>chunks.jsonl has the documented shape
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>==&gt; COLD START PASSED: a reader following the tutorial reaches the documented result
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>EXIT=0  ELAPSED_S=9
+</code></pre></div>
+<p><strong>Nine seconds, exit zero.</strong> A reader goes from an empty directory to three
+artifacts whose shape is asserted. By any reasonable reading, time to first
+success is nine seconds and the metric is excellent.</p>
+<p>Time the steps individually, though, and the nine seconds turns out to be
+almost entirely one step. A second run on a different machine, with each
+<code>==&gt;</code> banner timestamped:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  [+   0.0s  step  0.0s]  Cold environment at /tmp/tmp.XqTcyx6tJH
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  [+   0.0s  step  0.0s]  Tutorial step 1: create a venv and install
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  [+  11.6s  step 11.6s]  Tutorial step 1: verify the CLI is on PATH
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  [+  11.7s  step  0.1s]  Tutorial step 2: create the documentation tree
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  [+  11.7s  step  0.0s]  Tutorial step 3: pack it
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  [+  11.8s  step  0.1s]  Tutorial step 4: inspect the artifacts
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  [+  11.8s  step  0.0s]  Tutorial step 5: break it on purpose
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  [+  12.6s  step  0.7s]  COLD START PASSED
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>TOTAL 12.7s
+</code></pre></div>
+<p><strong>Of 12.7 seconds, 11.6 are <code>pip install</code>: 91 per cent.</strong> Everything the
+tutorial actually teaches, creating a tree, packing it, inspecting the
+artifacts and breaking it on purpose, takes 0.4 seconds in total.</p>
+<p>Two things follow, and the second is the one worth keeping. The headline figure
+is machine-dependent, nine seconds here and 12.7 there, so quoting it to two
+significant figures is false precision; the composition is stable and the total
+is not. And the only lever on this number is the dependency install, because
+rewriting every word of the tutorial could not move four tenths of a second.
+A metric whose single component you cannot influence by doing your own job well
+is a metric about somebody else's work.</p>
+<p><strong>Step 2: a real reader arrives</strong></p>
+<p>The same day, the project's first real reader worked through the repository.
+Every command he ran exited zero. He then reported that he had no idea what the
+library did or what he should be looking at.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>commands run:        9
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>commands failing:    0
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>first success:       never reached
+</code></pre></div>
+<p>Both measurements are correct. The cold-start test is not lying, and neither is
+the reader.</p>
+<p><strong>Step 3: find out why the instrument missed it</strong></p>
+<p>The cold-start script runs <strong>the tutorial's</strong> command sequence. The reader
+followed <strong>the README's quick start</strong>, which is a different sequence entirely:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>quick start, in the order a reader meets it:
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>   1. docpack docs --check                   report
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>   2. python -m pytest -q                    report
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>   3. python scripts/check_links.py          report
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>   4. vale docs/                             report
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>   5. mkdocs build --strict                  artifact: site/
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>   6. docpack eval evals/golden.yaml         report
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>   7. bash scripts/coldstart.sh              report
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>   8. docpack new how-to --title ...         artifact: a page
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>   9. docpack docs --out dist                artifact: 3 files
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>  10. python mcp_server/server.py            artifact: a running server
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>commands that produce something: 4/10, at positions 5, 8, 9, 10
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>the first four, consecutively, produce nothing but reports
+</code></pre></div>
+<p>The command that makes the library's actual output is <strong>ninth of ten</strong>. The
+first four are validators that print "ok". A reader working down that list in
+order spends their entire first impression watching a corpus check itself.</p>
+<p>So the repository had two front doors, instrumented one of them, and the metric
+was silently absent on the other. Not wrong: absent. There was no number for
+the README path at all, and nothing to notice.</p>
+<p><strong>Step 4: instrument the other door</strong></p>
+<p>The README's quick start cannot be executed end to end (one step needs a
+separately installed prose linter), but the property that failed is checkable
+without running anything:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">#: Commands that leave the reader holding something.</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">PRODUCES_SOMETHING</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"docpack docs --out"</span><span class="p">,</span> <span class="s2">"docpack search"</span><span class="p">,</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>                      <span class="s2">"docpack new"</span><span class="p">,</span> <span class="s2">"mcp_server/server.py"</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">first</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">commands</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">c</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"pip install"</span><span class="p">)][</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">assert</span> <span class="nb">any</span><span class="p">(</span><span class="n">first</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="ow">or</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">first</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">PRODUCES_SOMETHING</span><span class="p">),</span> <span class="p">(</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="sa">f</span><span class="s2">"the first quick-start command after install is </span><span class="si">{</span><span class="n">first</span><span class="si">!r}</span><span class="s2">, which only "</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="s2">"reports. Lead with a command that leaves the reader holding something."</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">)</span>
+</code></pre></div>
+<p>Run against the README as the reader found it:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>old README first command: 'docpack docs --check'
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>would the gate pass? False
+</code></pre></div>
+<p>And against the rewritten one, where the quick start is split into commands
+that make something and commands that check something:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>6 passed
+</code></pre></div>
+<p>A test that would have caught the failure before a human had to. Cheap, and it
+exists only because somebody said something.</p>
+<p><strong>Step 5: what the two numbers mean together</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>instrumented path:    9 seconds
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>unmeasured path:      never
+</code></pre></div>
+<p>Time to first success is not a property of a product. It is a property of a
+<strong>route through</strong> a product, and a product has as many of those as it has entry
+points: the README, the tutorial, the package registry page, the <code>--help</code>
+output, the first search result, whatever an assistant says when asked.</p>
+<p>Reporting a single number means having chosen a route, usually the one you
+wrote the test for, which is the route you understand best and therefore the
+one least likely to fail.</p>
+<p><strong>Step 6: the definitions that decide the number</strong></p>
+<p>Two choices do most of the work, and defaults tend to flatter.</p>
+<table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Flattering default</th>
+<th>Honest version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Clock starts</td>
+<td>First command of the tutorial</td>
+<td>Arrival at the front door</td>
+</tr>
+<tr>
+<td>Success means</td>
+<td>The command exits zero</td>
+<td>The reader has a result they recognise</td>
+</tr>
+</tbody>
+</table>
+<p>The second row is this whole page. Nine of nine commands exited zero, and the
+reader had no result he recognised, because exit codes are a property of
+programs and recognition is a property of people.</p>
+<p><strong>What you built.</strong> An automated cold-start measurement at nine seconds, a
+documented case of that measurement passing while a real reader never
+succeeded, a diagnosis naming the uninstrumented entry point, and a test that
+closes it.</p>
+<h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
+<h3 id="defining-the-two-endpoints">Defining the two endpoints<a class="headerlink" href="#defining-the-two-endpoints" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Clock starts at</th>
+<th>Measures</th>
+<th>Use when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arrival at the docs</td>
+<td>The whole funnel, including navigation</td>
+<td>The honest default</td>
+</tr>
+<tr>
+<td>First command of a quickstart</td>
+<td>Quickstart quality alone</td>
+<td>Comparing quickstarts</td>
+</tr>
+<tr>
+<td>After install</td>
+<td>The API's own learnability</td>
+<td>Install is somebody else's problem</td>
+</tr>
+<tr>
+<td>Account creation</td>
+<td>Onboarding including provisioning</td>
+<td>There is a signup</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Success means</th>
+<th>Strength</th>
+<th>Weakness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A result the reader recognises</td>
+<td>The real thing</td>
+<td>Needs a judgment per task</td>
+</tr>
+<tr>
+<td>An asserted output</td>
+<td>Automatable</td>
+<td>Can pass with no comprehension</td>
+</tr>
+<tr>
+<td>Exit code zero</td>
+<td>Trivial to measure</td>
+<td>See step 2</td>
+</tr>
+<tr>
+<td>The reader says they are done</td>
+<td>Honest</td>
+<td>Needs a reader</td>
+</tr>
+<tr>
+<td>A telemetry event</td>
+<td>Scales</td>
+<td>Instruments one surface only</td>
+</tr>
+</tbody>
+</table>
+<h3 id="how-the-metric-fails">How the metric fails<a class="headerlink" href="#how-the-metric-fails" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Failure</th>
+<th>What it looks like</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>One route instrumented</td>
+<td>A good number and unhappy readers</td>
+<td>Instrument every entry point</td>
+</tr>
+<tr>
+<td>Success defined as exit zero</td>
+<td>Green runs, confused people</td>
+<td>Define success as a recognised result</td>
+</tr>
+<tr>
+<td>Measured only on the author's machine</td>
+<td>Passes forever</td>
+<td>A clean environment per run</td>
+</tr>
+<tr>
+<td>Measured once</td>
+<td>Passes forever</td>
+<td>In CI, on every change</td>
+</tr>
+<tr>
+<td>Averaged across audiences</td>
+<td>Nothing actionable</td>
+<td>Segment, or pick one</td>
+</tr>
+<tr>
+<td>Measured and not acted on</td>
+<td>A dashboard</td>
+<td>Cut steps before first success</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reducing-it-in-order-of-effect">Reducing it, in order of effect<a class="headerlink" href="#reducing-it-in-order-of-effect" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Change</th>
+<th>Why it works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete a step before first success</td>
+<td>The only reliable lever</td>
+</tr>
+<tr>
+<td>Remove a choice before first success</td>
+<td>A decision costs more than a command</td>
+</tr>
+<tr>
+<td>Show expected output after each command</td>
+<td>Removes "did that work?"</td>
+</tr>
+<tr>
+<td>Lead with the command that produces something</td>
+<td>See step 4</td>
+</tr>
+<tr>
+<td>Defer configuration until after first success</td>
+<td>Most of it is not needed yet</td>
+</tr>
+<tr>
+<td>Supply a working default</td>
+<td>A placeholder the reader must replace is a step</td>
+</tr>
+<tr>
+<td>Shorten the install</td>
+<td>Usually the largest single block</td>
+</tr>
+</tbody>
+</table>
+<p>The first two are the whole list in practice. Prose improvements move this
+number much less than people expect, which is unwelcome news for a writing
+team and the reason the metric belongs next to the tooling.</p>
+<h3 id="what-it-does-not-tell-you">What it does not tell you<a class="headerlink" href="#what-it-does-not-tell-you" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Not measured</th>
+<th>Needs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Whether they understood it</td>
+<td><a href="../assessment/">Assessment</a></td>
+</tr>
+<tr>
+<td>Whether they came back</td>
+<td>Retention</td>
+</tr>
+<tr>
+<td>Whether the second task was easy</td>
+<td>A second measurement</td>
+</tr>
+<tr>
+<td>Whether they needed help</td>
+<td><a href="../support-deflection/">Support deflection</a></td>
+</tr>
+<tr>
+<td>Why they gave up</td>
+<td>A person, or a session recording</td>
+</tr>
+</tbody>
+</table>
+<p>A fast first success followed by a wall is a real pattern, and this metric
+reports the good half of it.</p>
+<h2 id="how-to-talk-about-it">How to talk about it<a class="headerlink" href="#how-to-talk-about-it" title="Permanent link">&para;</a></h2>
+<p><strong>Lead with why it is the best metric and what it costs.</strong> "It is the only
+documentation number that cannot be satisfied by a well-written page. Prose
+quality, link health, sample correctness and search ranking are all inputs; none
+substitutes. Which is also why it is uncomfortable: it can make a quarter of
+good work look insufficient."</p>
+<p><strong>Then the story, because it is the strongest thing I have in measurement.</strong> I
+automated it as a cold-start test: empty directory, fresh environment, install
+the way a reader would, run the tutorial's commands, assert the promised
+output. Nine seconds, exit zero. The same day, the first real reader ran nine
+commands, had every one exit zero, and told me he could not tell what the
+library did. Both measurements were correct.</p>
+<p><strong>The diagnosis is the part worth remembering.</strong> The cold-start test ran the
+tutorial's sequence; he followed the README's quick start, where the first four
+commands are validators that print "ok" and the command producing the library's
+actual output is ninth of ten. The repository had two front doors and I had
+instrumented one, so on the other the metric was not wrong, it was absent. An
+uninstrumented entry point is where this number silently does not exist, and
+that is the general lesson: time to first success is a property of a route
+through a product, not of the product, and a product has as many routes as
+entry points.</p>
+<p><strong>The fix, and the tradeoff.</strong> I added a test that reads the README's quick
+start and fails unless the first command after install produces something; it
+fails on the old README and passes on the rewritten one. The tradeoff is that
+this is a proxy. It checks the ordering of a list, not whether a human
+recognises the result, and the only instrument that checks the second one is a
+human. So the proxy goes in CI and the human channel stays open, because the
+proxy exists only because a person spoke up first.</p>
+<h2 id="how-to-prove-it">How to prove it<a class="headerlink" href="#how-to-prove-it" title="Permanent link">&para;</a></h2>
+<p><strong>The artifact.</strong> A cold-start script in CI that runs from an empty
+environment and asserts a promised output, plus a check on whichever entry
+point it does not cover.</p>
+<p><strong>Three things to do, in order:</strong></p>
+<ol>
+<li>Run your quickstart in a fresh container, timing it, and write the number
+   down. Predict it first. The gap between your prediction and the measurement
+   is the finding, not the measurement.</li>
+<li>List your entry points: README, tutorial, registry page, <code>--help</code>, first
+   search result. Mark which ones have ever been tested. One of five is the
+   usual answer, and the untested four are where the metric is absent rather
+   than bad.</li>
+<li>Count how many commands a reader runs before anything they can look at
+   appears. If the answer is more than one, reorder the list; it is the cheapest
+   improvement available in this entire category.</li>
+</ol>
+<p><strong>What makes it credible rather than decorative.</strong> <code>scripts/coldstart.sh</code> is in
+the companion repository, runs in CI, and passed in nine seconds with exit zero
+on the run quoted above. The reader failure is equally real, reported by the
+first person to follow the README, and the test added in step 4 is in
+<code>tests/test_doc_samples.py</code> and verified to fail against the previous README.
+What is missing is any measurement over more than one reader: n is one, so
+nothing here supports a claim about distributions, medians or trends, and the
+<a href="../../demonstrated/">demonstrated</a> page records the cold-start half as
+demonstrated and the reader-side half as not.</p>
+<h2 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../docs-analytics/">Documentation analytics</a>, where this metric sits among the others</li>
+<li><a href="../golden-paths/">Golden paths</a>, the route being measured</li>
+<li><a href="../coldstart-testing/">Cold-start testing</a>, the automated form of this measurement</li>
+<li><a href="../developer-feedback-loops/">Turning developer feedback into changes</a>, the channel that caught what the metric missed</li>
+<li><a href="../cognitive-load/">Cognitive load in technical content</a>, the mechanism behind a slow first success</li>
+<li><a href="../assessment/">Assessment and checks for understanding</a>, the question this metric cannot answer</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "content.code.copy", "content.action.edit", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>
