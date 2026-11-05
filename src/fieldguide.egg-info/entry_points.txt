@@ -1,0 +1,2 @@
+[console_scripts]
+fieldguide = fieldguide.cli:main

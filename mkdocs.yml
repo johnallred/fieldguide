@@ -71,6 +71,8 @@ nav:
       - The developer educator: paths/developer-educator.md
       - The writer who builds: paths/writer-who-builds.md
       - Prove it in a weekend: paths/prove-it.md
+      - The domain context: paths/domain-context.md
+      - Prove the outcomes: paths/prove-the-outcomes.md
   - About this guide:
       - explanation/why-a-registry.md
       - explanation/the-page-contract.md

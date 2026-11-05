@@ -384,8 +384,9 @@ weights, nothing downloaded.
       64     4000     1.000      0.44    0.4x
 ```
 
-The recall and `scanned` columns are the same on every run. The milliseconds
-are one run on one machine, and the speedup column with them.
+The table is one run's output. Its exact measurements can vary across
+numerical environments; the stable result is the shape of the curve and the
+full-probe recall. Milliseconds and speedup also vary by machine.
 
 Three things in that table are worth more than the headline.
 

@@ -1,0 +1,9 @@
+PyYAML>=6.0
+
+[dev]
+numpy>=1.26
+pytest>=8.0
+
+[docs]
+mkdocs>=1.6
+mkdocs-material>=9.5

@@ -49,7 +49,7 @@ three concepts that had prose. It should have been reporting 42.
 ## Quick start
 
 ```bash
-pip install -e ".[dev,docs]"
+python3 -m pip install -e '.[dev,docs]'
 
 fieldguide status                  # what is written, what is left, what is unblocked
 fieldguide check                   # registry integrity and the page contract
@@ -59,7 +59,7 @@ fieldguide new diataxis            # scaffold a page that satisfies the contract
 fieldguide render site             # every fenced sample reaches the built HTML as code
 fieldguide audit                   # every figure the pages quote about the corpus
 fieldguide release-check           # the release workflow, one named step at a time
-python -m pytest -q                # 207 tests
+python3 -m pytest -q                # 207 tests
 mkdocs serve                       # read it
 
 python3 scripts/prepublication.py .   # before publishing, not in CI; see below
