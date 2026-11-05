@@ -14,9 +14,9 @@ Relations that asks for golden paths, curriculum, documentation CI, cold-start
 testing, and content optimized for SEO and GEO. One from NVIDIA, for something
 it calls KnowledgeOps, which asks for content modeling, taxonomy, metadata for
 machine retrieval, RAG packaging, agent skills, and evaluation sets for answer
-accuracy. One from Anthropic, for a role called Developer Education Lead, Claude Platform that asks for a demos, labs, quick-reference guides, technical currciulum, self-service resources, experimental tools, content-freshness automation, etc. that let the go-to-market teams showcase the Claude Developer Platform.
+accuracy. One from Anthropic, for a role called Developer Education Lead that asks for demos, labs, quick-reference guides, technical currciulum, self-service resources, experimental tools, content-freshness automation, etc.
 
-The titles are different. The work is the same work, and it is a real
+The titles are different. The work is essentially same work, and it is a real
 discipline with no agreed curriculum, no textbook, and almost no one
 deliberately trained for it. This guide is an attempt at the curriculum.
 
