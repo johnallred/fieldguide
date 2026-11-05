@@ -10,11 +10,6 @@ generated: true
 
 # The whole thing, in order
 
-!!! warning "Generated page"
-    This page is generated from `concepts.yaml` by `fieldguide build`.
-    Edits here are overwritten. Change the registry instead.
-
-
 The [learning paths](paths/index.md) are curated and opinionated. This page is
 the mechanical alternative: a topological sort of the prerequisite graph, so no
 concept appears before something it depends on.

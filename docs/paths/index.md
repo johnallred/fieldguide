@@ -10,11 +10,6 @@ generated: true
 
 # Learning paths
 
-!!! warning "Generated page"
-    This page is generated from `concepts.yaml` by `fieldguide build`.
-    Edits here are overwritten. Change the registry instead.
-
-
 The [coverage matrix](../coverage.md) is a reference: it lists everything and
 assumes you know what you need. A path is the other thing a learner wants, which
 is somebody else's opinion about the order.

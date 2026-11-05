@@ -9,11 +9,6 @@ generated: true
 
 # Prove it in a weekend
 
-!!! warning "Generated page"
-    This page is generated from `concepts.yaml` by `fieldguide build`.
-    Edits here are overwritten. Change the registry instead.
-
-
 **Who this is for.** Someone who needs a portfolio artifact before Monday.
 
 The shortest path through the concepts that produce something reviewable.

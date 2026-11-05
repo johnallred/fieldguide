@@ -9,11 +9,6 @@ generated: true
 
 # The developer educator
 
-!!! warning "Generated page"
-    This page is generated from `concepts.yaml` by `fieldguide build`.
-    Edits here are overwritten. Change the registry instead.
-
-
 **Who this is for.** The Intel posting's curriculum half.
 
 Taking a developer from a clean environment to a working result, repeatably.

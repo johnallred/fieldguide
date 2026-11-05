@@ -10,11 +10,6 @@ generated: true
 
 # Prove the outcomes
 
-!!! warning "Generated page"
-    This page is generated from `concepts.yaml` by `fieldguide build`.
-    Edits here are overwritten. Change the registry instead.
-
-
 **Who this is for.** Someone whose documentation work is real and who has been asked, probably in a review, to show what it achieved.
 
 Write the programs that measure a corpus, then measure the four outcomes the postings actually name.

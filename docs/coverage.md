@@ -10,11 +10,6 @@ generated: true
 
 # Coverage
 
-!!! warning "Generated page"
-    This page is generated from `concepts.yaml` by `fieldguide build`.
-    Edits here are overwritten. Change the registry instead.
-
-
 **106 of 106 concepts written.** 0 drafted, 0 planned.
 
 Each row names the concept, the posting line that put it on this list, and how

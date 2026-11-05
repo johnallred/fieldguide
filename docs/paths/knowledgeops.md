@@ -9,11 +9,6 @@ generated: true
 
 # The KnowledgeOps path
 
-!!! warning "Generated page"
-    This page is generated from `concepts.yaml` by `fieldguide build`.
-    Edits here are overwritten. Change the registry instead.
-
-
 **Who this is for.** The NVIDIA posting, more or less exactly.
 
 Making a corpus answerable by machines, and knowing whether it worked.

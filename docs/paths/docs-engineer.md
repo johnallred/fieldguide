@@ -10,11 +10,6 @@ generated: true
 
 # The documentation engineer
 
-!!! warning "Generated page"
-    This page is generated from `concepts.yaml` by `fieldguide build`.
-    Edits here are overwritten. Change the registry instead.
-
-
 **Who this is for.** Someone building the pipeline rather than writing the pages.
 
 Every automated gate that stops documentation rotting, in the order worth adding them.

@@ -7,10 +7,6 @@ The reason is the same reason the API reference is generated rather than typed.
 A hand-maintained index of forty pages is accurate for about a week. It is
 also the page a reader trusts most, because an index looks authoritative, so
 its decay is more expensive than the decay of any single page it points at.
-
-Generated pages carry a banner saying so, because a contributor who edits one
-by hand will lose their work on the next build and deserves to be warned
-before that happens rather than after.
 """
 
 from __future__ import annotations
@@ -19,12 +15,6 @@ import yaml
 
 from .demos import CEILING_REASONS, TRIAGE_REASONS
 from .registry import PROVENANCE, REQUIRED_SECTIONS, Registry, topological_order
-
-BANNER = (
-    "!!! warning \"Generated page\"\n"
-    "    This page is generated from `concepts.yaml` by `fieldguide build`.\n"
-    "    Edits here are overwritten. Change the registry instead.\n"
-)
 
 TIER_BLURB = {
     "core": "You cannot do this job without it.",
@@ -71,8 +61,6 @@ def placeholder_page(registry: Registry, concept_id: str) -> str:
         ),
         f"# {concept.name}\n",
         f"`{concept.tier}` · {DIFFICULTY_LABEL[concept.difficulty]} · {concept.time}\n",
-        BANNER,
-        "",
         "!!! info \"Outline only\"",
         "    This concept is on the curriculum and the prose is not written yet.",
         "    Everything below comes from the registry, so it is accurate as far as it",
@@ -171,8 +159,6 @@ def coverage_page(registry: Registry) -> str:
             "Every concept this guide covers, where it came from, and whether it is written yet.",
         ),
         "# Coverage\n",
-        BANNER,
-        "",
         f"**{done} of {total} concepts written.** "
         f"{counts['drafted']} drafted, {counts['planned']} planned.\n",
         "Each row names the concept, the posting line that put it on this list, and how",
@@ -243,8 +229,6 @@ def paths_index_page(registry: Registry) -> str:
             "Ordered routes through the concepts, for readers who want a curriculum rather than a reference.",
         ),
         "# Learning paths\n",
-        BANNER,
-        "",
         "The [coverage matrix](../coverage.md) is a reference: it lists everything and",
         "assumes you know what you need. A path is the other thing a learner wants, which",
         "is somebody else's opinion about the order.\n",
@@ -289,8 +273,6 @@ def path_page(registry: Registry, path_id: str) -> str:
     out = [
         _front_matter(learning_path.name, learning_path.summary),
         f"# {learning_path.name}\n",
-        BANNER,
-        "",
         f"**Who this is for.** {learning_path.audience}\n",
         f"{learning_path.summary}\n",
         f"**{len(learning_path.concepts)} concepts, roughly "
@@ -356,8 +338,6 @@ def study_plan_page(registry: Registry) -> str:
             "Every concept in a dependency-respecting order, for readers who want the complete route.",
         ),
         "# The whole thing, in order\n",
-        BANNER,
-        "",
         "The [learning paths](paths/index.md) are curated and opinionated. This page is",
         "the mechanical alternative: a topological sort of the prerequisite graph, so no",
         "concept appears before something it depends on.\n",
@@ -430,15 +410,6 @@ def demonstrated_page(registry: Registry, demonstrations) -> str:
             "Which concepts have working code behind them, which file does the work, and which have none.",
         ),
         "# Demonstrated\n",
-        # This page has two sources, so it gets its own banner rather than the
-        # shared one, which names only the registry.
-        (
-            "!!! warning \"Generated page\"\n"
-            "    This page is generated from `concepts.yaml` and\n"
-            "    `demonstrations.yaml` by `fieldguide build`. Edits here are\n"
-            "    overwritten. Change those files instead.\n"
-        ),
-        "",
         "This guide is prose about how to do a job, and prose is cheap. This page",
         "records which concepts are also *implemented* somewhere you can open, down to",
         "the file that does the work.\n",

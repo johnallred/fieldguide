@@ -10,12 +10,6 @@ generated: true
 
 # Demonstrated
 
-!!! warning "Generated page"
-    This page is generated from `concepts.yaml` and
-    `demonstrations.yaml` by `fieldguide build`. Edits here are
-    overwritten. Change those files instead.
-
-
 This guide is prose about how to do a job, and prose is cheap. This page
 records which concepts are also *implemented* somewhere you can open, down to
 the file that does the work.

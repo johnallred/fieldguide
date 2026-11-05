@@ -75,6 +75,36 @@ index, and that file was not in the set the check reads. The
 reasoning, because scoping a check by a file's role is right and is only as
 complete as your list of the files that carry it.
 
+## Changing the curriculum
+
+[`concepts.yaml`](concepts.yaml) is the source of truth for the concept list,
+their metadata and prerequisites, and the ordered learning paths. Generated
+pages such as the coverage matrix, study plan and path pages are rebuilt from
+it; edit the registry rather than those generated files.
+
+To change an existing concept, find its `id` in `concepts.yaml` and edit the
+relevant fields. Keep its `id` stable because it is used in page URLs and links.
+The comments at the top of the file describe the fields and allowed values.
+Concept prose lives separately in `docs/concepts/<id>.md`; edit that file for
+writing changes, not for registry metadata.
+
+To add a concept, add an entry under `concepts:` with a unique kebab-case `id`,
+its required metadata and a `status`. Add its page with
+`fieldguide new <id>`, then write the seven sections described below. To change
+a learning path, edit the ordered `concepts` list for that path under `paths:`.
+Prerequisites must come before the concepts that depend on them.
+
+After editing, run:
+
+```bash
+fieldguide check
+fieldguide build
+python3 -m pytest -q
+```
+
+Commit the regenerated files with your registry change. `fieldguide build --check`
+verifies generated pages are current without rewriting them; CI runs that check.
+
 ## How it is organised
 
 ```
