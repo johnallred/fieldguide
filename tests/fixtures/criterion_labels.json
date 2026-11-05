@@ -1,0 +1,250 @@
+{
+  "definition": "A proof task states a success criterion when it tells the learner something falsifiable about the result: a value to compare theirs against, a conditional test, or an instruction to predict before looking. A statement of why the task matters, or of what its output means whatever the output is, does not count.",
+  "method": "Two independent random samples of proof tasks, labelled by hand against the definition above before any classifier was written. Sample A was used to design the patterns; sample B was labelled first and then used once, as a held-out check. The task text is frozen here on purpose: this is the known answer the classifier is scored against, so it must not move when the corpus does.",
+  "samples": {
+    "A-tuned-on": [
+      {
+        "task": "Run the golden path, especially step 3. A conflict over non-overlapping edits is the most persuasive thing in this category.",
+        "criterion": false
+      },
+      {
+        "task": "Count the interruptions before and after. Ask the expert, a month later, whether the question stopped. That number is the whole argument, and it is what NVIDIA means by \"measurable reductions in support load\".",
+        "criterion": false
+      },
+      {
+        "task": "Write the owner table. Four rows is enough, and a page that cannot be traced to a person has no lifecycle.",
+        "criterion": false
+      },
+      {
+        "task": "Take your last ten support tickets and label each as content gap, retrieval gap, or not a documentation problem. Ten is enough to discover which of the three you have been assuming.",
+        "criterion": false
+      },
+      {
+        "task": "Run the golden path. Step 3 is the part worth your time: watch the canonical term match inside its own variants.",
+        "criterion": true
+      },
+      {
+        "task": "Run the golden path. Step 3 is the whole point, and seeing your own build fail on a rename is more persuasive than any description of it.",
+        "criterion": true
+      },
+      {
+        "task": "Find an exercise that never says what it produced, and write that sentence. It is the fastest way to discover an exercise that produces nothing.",
+        "criterion": false
+      },
+      {
+        "task": "Generate your ground truth in CI. Parse --help, read git tags, export the glossary. The audit is only as good as the facts, and hand-maintained facts are the first thing to rot.",
+        "criterion": false
+      },
+      {
+        "task": "Point the extractor at a docs site you own and just execute the blocks. Whatever fails first is a page currently lying to readers.",
+        "criterion": false
+      },
+      {
+        "task": "Find something to retire. Pages with no views in six months, or documentation for a version out of support. Propose it with the costs from the table above, including the retrieval-competition argument.",
+        "criterion": false
+      },
+      {
+        "task": "Name the artifacts on the route whose owners' CI excludes the route. That list is a risk register nobody has written, and presenting it is a stronger demonstration of product ownership than any page.",
+        "criterion": false
+      },
+      {
+        "task": "Time the first request after a restart against the hundredth. The ratio decides whether autoscaling is viable, and it is rarely documented.",
+        "criterion": false
+      },
+      {
+        "task": "Run the one-line check against a real documentation site. curl it and count words without JavaScript. On a client-rendered site the number is near zero, and that is a two-minute finding.",
+        "criterion": true
+      },
+      {
+        "task": "Put it in CI on a golden set. The checker plus twenty question-and-expected-source pairs, failing the build when the grounded rate drops. That is the step from a script to a gate.",
+        "criterion": false
+      },
+      {
+        "task": "Take any latency claim in your own documentation and work out whether it could be true while the system fails a third of the time. If the claim is a mean or a median, it can.",
+        "criterion": true
+      },
+      {
+        "task": "Check whether a sample that times anything reads the simulation clock or the system clock. Under a simulator that can pause, the difference is not subtle.",
+        "criterion": true
+      },
+      {
+        "task": "Open your own docs workflow and count the definitions of \"the checks\". If the answer is two, you have the drift.",
+        "criterion": true
+      },
+      {
+        "task": "Convert the five most important of those to [text][symbol] form and turn on --strict. Whatever fails was already broken.",
+        "criterion": false
+      },
+      {
+        "task": "Pin the model version and write down why. One line in a README about a model update invalidating a stored index demonstrates operational understanding that most candidates lack.",
+        "criterion": false
+      },
+      {
+        "task": "Write down why your quickstart is or is not pinned. The written reason is the deliverable; most projects have the state without the decision.",
+        "criterion": false
+      },
+      {
+        "task": "Grep a Markdown corpus for <!--. That count is the size of your MDX migration's first obstacle.",
+        "criterion": false
+      },
+      {
+        "task": "Compute grounded@k for k of 1, 3, 5 and 10 on a corpus you own. Predict where it plateaus. The plateau tells you whether to buy a reranker or write two sentences, and that is a budget decision.",
+        "criterion": true
+      },
+      {
+        "task": "Count how many of those routes your CI actually tests. The answer is one.",
+        "criterion": true
+      },
+      {
+        "task": "Build the proposal pipeline from the golden path against a real corpus, with a real term list. Measure how many proposals a reviewer accepts; if it is above 95 percent your filter is too loose and the review is theatre.",
+        "criterion": true
+      },
+      {
+        "task": "Add the scheduling or framework overhead to one published cost figure. On an idle machine it was a third again here, and readers budget with the number you give them.",
+        "criterion": true
+      },
+      {
+        "task": "Write the two-column table above for a product you know. The disagreements about which column a page belongs in are the valuable part.",
+        "criterion": false
+      },
+      {
+        "task": "Take your most confident claim about your documentation and work out which half of analytics could test it. If it is neither, it is an assertion.",
+        "criterion": true
+      },
+      {
+        "task": "Print coverage and value distribution for every field in your corpus. Heavy skew toward one value usually means a default is being written somewhere.",
+        "criterion": true
+      },
+      {
+        "task": "Measure the per-page maximum sentence length on your docs, then read the three worst sentences out loud. The measurement takes five minutes and the reading is what convinces anybody.",
+        "criterion": false
+      },
+      {
+        "task": "Grep your corpus for ~~ and - [ ] outside code fences. If you find any, they are shipping as literal characters right now.",
+        "criterion": true
+      },
+      {
+        "task": "Write one substitution rule for a term your own project gets wrong, and run it over your existing docs. The first real finding is your evidence.",
+        "criterion": false
+      },
+      {
+        "task": "Take the thing colleagues ask you most often and write its branches. Not the procedure, the questions.",
+        "criterion": false
+      },
+      {
+        "task": "Run the golden path. Step 3 is the point, and the trap generalises past Vale.",
+        "criterion": false
+      },
+      {
+        "task": "Tag your existing samples with what they teach, then rank your support topics by volume. The gap is your backlog, and it will not look like your roadmap.",
+        "criterion": false
+      },
+      {
+        "task": "Run the golden path, including both failure cases. The typo case is the demonstration: same input, opposite outcome depending on the direction of the logic.",
+        "criterion": true
+      },
+      {
+        "task": "Take the cases still failing at k=10 and look for the reader's word on the page. In mine, both were synonyms the corpus never used.",
+        "criterion": true
+      },
+      {
+        "task": "Follow your own tutorial in a fresh environment and note the first point at which you could tell it was working. That number is the one readers feel.",
+        "criterion": false
+      },
+      {
+        "task": "Time your build with your theme and again with the default theme. The ratio tells you where your build minutes actually go.",
+        "criterion": false
+      },
+      {
+        "task": "Run the route count over your own quickstart. If it is above about 4, you have found your next piece of work.",
+        "criterion": true
+      },
+      {
+        "task": "Add a documents: field to twenty pages in a repository you own and run the comparison. Whatever it flags has been wrong for a while.",
+        "criterion": false
+      }
+    ],
+    "B-held-out": [
+      {
+        "task": "Run the golden path. The valuable part is step 5, where a reasonable structure turns out to hide failures.",
+        "criterion": false
+      },
+      {
+        "task": "Run the golden path. Steps 2 and 3 are both surprises, and step 3 is the one to remember.",
+        "criterion": false
+      },
+      {
+        "task": "Label twenty real pages for one defect type. One type, by hand, with notes. An hour, and it is the only artifact on this page that cannot be faked.",
+        "criterion": false
+      },
+      {
+        "task": "Grep for readers of your most important metadata field. If writers outnumber readers, that field is already wrong.",
+        "criterion": true
+      },
+      {
+        "task": "Open your quickstart and count the choices it presents before the reader's first success. Each one is extraneous load at the worst possible moment.",
+        "criterion": false
+      },
+      {
+        "task": "Point it at a real library's documentation. Yours, or an open-source project's. Count the unmarked fragments; in most corpora it is most of the samples, and that count is the finding.",
+        "criterion": true
+      },
+      {
+        "task": "Find a published per-request latency for a service you use and work out whether it is compute-only. If the batch size is not stated next to it, it is.",
+        "criterion": true
+      },
+      {
+        "task": "Check your README's claims against reality. Mine said 72 tests and there were 119, and nothing had ever checked, which is the cheapest class of defect there is.",
+        "criterion": true
+      },
+      {
+        "task": "Point the linter at a quickstart you own. Pipe-to-shell and credential literals are both common enough that you will probably find one.",
+        "criterion": true
+      },
+      {
+        "task": "Run the golden path. The before-and-after on one page, measured at the chunk level, is the demonstration and it takes five minutes to show.",
+        "criterion": false
+      },
+      {
+        "task": "Write the paragraph that states the resolution order and names the intuition it violates. It is the page that does not exist.",
+        "criterion": false
+      },
+      {
+        "task": "Write the tool descriptions twice. Once as \"filter by kind\", once as the guidance version, and connect it to a real client to see whether the filter choices change. That is a small experiment nobody does.",
+        "criterion": true
+      },
+      {
+        "task": "Classify twenty real content tasks on the two axes. An hour. The output is a table you can show, and the \"never\" rows are the interesting part.",
+        "criterion": false
+      },
+      {
+        "task": "Write a ten-term glossary for a corpus you already have, and run the measurement. The first number is almost always worse than the team's estimate, which is the point.",
+        "criterion": true
+      },
+      {
+        "task": "Run the vocabulary check and list the pages whose surface lacks their own readers' words. That list is a prioritised backlog nobody else has.",
+        "criterion": false
+      },
+      {
+        "task": "Measure your refusal rate. If you have any assistant over documentation, count what fraction of answers are refusals. A rate near zero is the finding, and almost nobody has the number.",
+        "criterion": true
+      },
+      {
+        "task": "Run the golden path. Step 4 is the one to remember, because it contradicts the common warning about MDX.",
+        "criterion": false
+      },
+      {
+        "task": "Run the golden path. The docutils-versus-Sphinx comparison is the part nobody has actually executed.",
+        "criterion": false
+      },
+      {
+        "task": "Measure your own agreement with yourself. Label ten pages, wait a week, label them again blind, and count the disagreements. That number is your ceiling, and reporting it alongside a precision figure is unusual enough to be memorable.",
+        "criterion": false
+      },
+      {
+        "task": "Find the fact in your corpus that is copied the most times and single-source that one. Start with a version number or a prerequisite, not an explanation.",
+        "criterion": false
+      }
+    ]
+  }
+}

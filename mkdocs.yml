@@ -1,0 +1,84 @@
+site_name: The Field Guide
+site_description: >-
+  A validated curriculum for documentation engineering, developer experience,
+  and KnowledgeOps roles: every concept two real job postings ask for, with a
+  golden path through each one.
+site_url: https://johnallred.github.io/fieldguide/
+repo_url: https://github.com/johnallred/fieldguide
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle: {icon: material/weather-night, name: Dark mode}
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle: {icon: material/weather-sunny, name: Light mode}
+
+plugins:
+  - search
+
+hooks:
+  - hooks/summary.py
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - toc: {permalink: true}
+  - pymdownx.highlight: {anchor_linenums: true}
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed: {alternate_style: true}
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# The navigation is deliberately shallow at the top: three ways in, matching
+# the three things a reader arrives wanting. Browse by route (paths), look
+# something up (coverage), or understand how the guide itself is built.
+#
+# Concept pages are NOT listed individually here. There are 106 of
+# them, and a sidebar with a hundred leaves is a worse index than the
+# generated coverage matrix. They are reachable from coverage, from the paths,
+# and from each other's prerequisite links.
+nav:
+  - Start here: index.md
+  - Coverage: coverage.md
+  - Everything in order: study-plan.md
+  - Demonstrated: demonstrated.md
+  - Learning paths:
+      - paths/index.md
+      - The first week: paths/first-week.md
+      - The content architect: paths/content-architect.md
+      - The documentation engineer: paths/docs-engineer.md
+      - The KnowledgeOps path: paths/knowledgeops.md
+      - The developer educator: paths/developer-educator.md
+      - The writer who builds: paths/writer-who-builds.md
+      - Prove it in a weekend: paths/prove-it.md
+  - About this guide:
+      - explanation/why-a-registry.md
+      - explanation/the-page-contract.md
+      - explanation/provenance.md
+
+not_in_nav: |
+  concepts/*.md
+
+watch:
+  - concepts.yaml
+  - src/fieldguide
