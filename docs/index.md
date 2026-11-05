@@ -5,7 +5,7 @@ diataxis: explanation
 audience: new-user
 ---
 
-# The Field Guide
+# Start here
 
 **A curriculum for a job category that does not have a settled name yet.**
 
