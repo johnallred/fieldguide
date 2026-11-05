@@ -1,0 +1,676 @@
+# Which concepts have a working demonstration, and in which file.
+#
+# This guide is 106 concepts of prose about how to do a job. Prose is cheap.
+# `docpack` is a companion repository that actually does a chunk of the work,
+# and this file records exactly which chunk, down to the file that does it.
+#
+# It exists for two reasons, and the second one is the honest one.
+#
+# The first: a reader who wants to see a concept working rather than described
+# can go straight to the code. "Heading-aware chunking" is a paragraph here and
+# ninety lines of tested Python there.
+#
+# The second: it makes the gaps visible. Fifteen `core` concepts have no
+# demonstration anywhere, and one whole category, ways of working, has none at
+# all. That count moves as entries are added, and has already been wrong twice
+# in this file, so treat `fieldguide audit` as the figure and this sentence as
+# a summary of it.
+#
+# Technical writing as a craft cannot be proven by a repository. Measurement
+# and curriculum design are demonstrated only as far as a corpus with no
+# audience allows, which is why most of their entries are `partial`. Publishing
+# the overlap without publishing the absence would be the more flattering half
+# of the truth.
+#
+# There are three states here, not two, and the third is the one this file
+# took longest to say out loud:
+#
+#   demonstrated   an entry in `demonstrates`, `full` or `partial`
+#   undecided      nothing, which the loader refuses
+#   triaged        a reason in `triage`: a gap, which closes when somebody
+#                  does the work
+#   ceilinged      a reason in `ceilings`: demonstrated as far as it can be
+#                  here, and no amount of further code changes that
+#
+# A gap and a ceiling look identical in a coverage percentage and are
+# completely different things to say in an interview. "Nobody has built it
+# yet" invites the question of why not. "The corpus-side half is built,
+# measured and gated, and the reader-side half needs readers I do not have"
+# is a statement about the limits of the evidence, which is the more
+# defensible sentence and the harder one to write.
+#
+# ---------------------------------------------------------------------------
+# Fields
+# ---------------------------------------------------------------------------
+#
+#   concept   a concept id from concepts.yaml. Validated: a typo fails the build.
+#   project   a key from `projects` below.
+#   artifact  the file or feature that does the work. Be specific: a path
+#             a reader can open, not a hand-wave at the repository.
+#   extent    full     the concept is demonstrated as this guide describes it
+#             partial  something real is there and the page asks for more
+#   note      what the artifact actually does, in one line.
+#
+# `partial` is used honestly and not as a hedge. `rag` is partial because
+# chunks.jsonl is retrieval-ready and nothing embeds it. `freshness-monitoring`
+# is partial because a staleness property is not a monitor.
+
+projects:
+  docpack:
+    name: docpack
+    tagline: Turns a documentation tree into retrieval-ready, agent-readable artifacts.
+    summary: >-
+      A Python library and the documentation site that documents it, where the
+      site is also the test corpus. Ten CI gates, 142 tests, a 20-case
+      retrieval evaluation, an MCP server, and a cold-start harness that
+      follows the quickstart from an empty virtual environment.
+    url: https://github.com/johnallred/docpack
+
+  fieldguide:
+    name: fieldguide
+    tagline: This guide, which validates its own curriculum and its own pages.
+    summary: >-
+      The repository you are reading. It earns entries here only where it does
+      the work rather than describing it: a two-part fence gate that compares
+      fenced source against the rendered code blocks of the built HTML, and an
+      accessibility property test over generated pages. The fence gate found
+      127 defects across seven pages that every other check had passed.
+    url: https://github.com/johnallred/fieldguide
+
+demonstrates:
+
+  # ------------------------------------------- information and knowledge architecture
+  - concept: content-model
+    project: docpack
+    artifact: src/docpack/frontmatter.py
+    extent: full
+    note: Five required front-matter fields, two of them closed vocabularies, rejected in CI by `docpack docs --check`.
+
+  - concept: taxonomy
+    project: docpack
+    artifact: src/docpack/frontmatter.py
+    extent: full
+    note: "`DIATAXIS_TYPES` and `AUDIENCES` as frozensets: adding a term is a code change and a review."
+
+  - concept: metadata
+    project: docpack
+    artifact: src/docpack/pack.py
+    extent: full
+    note: Every chunk record carries the page's type, audience, summary, tags and review date, so a retriever can filter before ranking.
+
+  - concept: diataxis
+    project: docpack
+    artifact: docs/
+    extent: full
+    note: Four directories, one declared type per page, enforced rather than conventional.
+
+  - concept: single-sourcing
+    project: docpack
+    artifact: hooks/seo.py
+    extent: partial
+    note: One `summary` field feeds the meta description, Open Graph, JSON-LD, llms.txt and the retrieval snippet. Field-level reuse, not topic-level.
+
+  - concept: findability
+    project: docpack
+    artifact: mcp_server/server.py
+    extent: partial
+    note: "`list_pages` and `search_docs` filterable by type and audience. No faceted human navigation."
+
+  # ------------------------------------------------------- docs-as-code toolchain
+  - concept: docs-as-code
+    project: docpack
+    artifact: .github/workflows/docs.yml
+    extent: full
+    note: "The whole repository is the demonstration: page source, style rules, content model and pipeline all under review."
+
+  - concept: git-authoring
+    project: docpack
+    artifact: .github/workflows/docs.yml
+    extent: full
+    note: Eight gates on every pull request, each failing independently so one problem does not mask another.
+
+  - concept: markdown
+    project: docpack
+    artifact: docs/
+    extent: full
+    note: Twelve pages of Markdown with YAML front matter, parsed by the library rather than only rendered.
+
+  - concept: static-site-generators
+    project: docpack
+    artifact: README.md
+    extent: partial
+    note: Makes and backs the argument that the generator is the most replaceable part; the docs build unchanged against the stock theme.
+
+  - concept: mkdocs
+    project: docpack
+    artifact: mkdocs.yml
+    extent: full
+    note: Material plus mkdocstrings, built with `--strict` from the first commit.
+
+  - concept: api-reference-generation
+    project: docpack
+    artifact: docs/reference/api.md
+    extent: full
+    note: mkdocstrings over the package, so the reference cannot drift from the signatures.
+
+  # ------------------------------------------- quality automation and documentation CI
+  - concept: documentation-ci
+    project: docpack
+    artifact: .github/workflows/docs.yml
+    extent: full
+    note: Content model, links, tests, doc samples, retrieval quality, prose, strict build, and a generated-page wiring check.
+
+  - concept: github-actions
+    project: docpack
+    artifact: .github/workflows/docs.yml
+    extent: full
+    note: Three jobs, with the slow cold-start check separated so it does not gate fast feedback.
+
+  - concept: prose-linting
+    project: docpack
+    artifact: .vale.ini
+    extent: full
+    note: Vale with terminology errors blocking the build and style warnings advisory, because a build that fails on a hedge word teaches people to skip CI.
+
+  - concept: custom-linters
+    project: docpack
+    artifact: styles/Showcase/
+    extent: full
+    note: Four hand-written Vale rules (Hedging, Terms, HeadingCase, FutureTense), one of which caught the author's own hedge word in the README.
+
+  - concept: custom-linters
+    project: fieldguide
+    artifact: src/fieldguide/fences.py
+    extent: full
+    note: A rule no pattern matcher can express, because it models shell heredocs to decide which fence markers are markup and which are data.
+
+  - concept: doc-test-harness
+    project: fieldguide
+    artifact: src/fieldguide/fences.py
+    extent: full
+    note: Two halves on purpose. The static half reads source and can be fooled by it; `fieldguide render` compares fenced source against the built HTML and found 127 defects the static checks had passed.
+
+  - concept: accessibility
+    project: fieldguide
+    artifact: tests/test_generate.py
+    extent: partial
+    note: An audit of the built site found all seven path pages skipping h1 to h3; the generator was fixed and a property test now asserts no generated page skips a level. Five checks, not a compliance claim.
+
+  - concept: markdown
+    project: fieldguide
+    artifact: src/fieldguide/dialect.py
+    extent: partial
+    note: "A gate for the dialect failure mode. A construct used in prose whose markers survive into the built HTML did not render; covers two constructs, not every dialect."
+
+  - concept: findability
+    project: fieldguide
+    artifact: hooks/summary.py
+    extent: full
+    note: "An audit of the search index found 72 of 73 page summaries absent from it; this hook gives the field three readers (page body, search index, meta description) and a CI step asserts the wiring, because the hook's unit tests pass either way."
+
+  - concept: knowledge-architecture
+    project: fieldguide
+    artifact: concepts.yaml
+    extent: full
+    note: "106 concepts and 115 prerequisite edges, acyclic and enforced, with a topological order driving the writing sequence. The audit found four supporting concepts carrying more of the graph than the average core concept, and three core concepts correctly isolated because craft skills are not prerequisites."
+
+  - concept: metadata
+    project: fieldguide
+    artifact: src/fieldguide/dialect.py
+    extent: partial
+    note: "Front matter must parse as YAML and `diataxis` must be in a closed vocabulary. Added after 46 pages shipped unparseable front matter and 53 claimed a page type a generator had hardcoded."
+
+  - concept: templates-scaffolding
+    project: fieldguide
+    artifact: src/fieldguide/scaffold.py
+    extent: full
+    note: "`fieldguide new` computes tags, the posting quote and both sets of graph links, and names a failure mode in every section prompt. CI asserts its output satisfies the validator for all planned concepts; a measurement showed the prompt comments were supplying 84 per cent of the 450-word gate, so word counts now exclude them."
+
+  - concept: style-guide
+    project: docpack
+    artifact: styles/Showcase/Terms.yml
+    extent: partial
+    note: The style guide exists only as enforced rules. There is no prose document for a human to read.
+
+  - concept: link-checking
+    project: docpack
+    artifact: scripts/check_links.py
+    extent: full
+    note: Internal links and heading anchors, so a renamed heading fails the build rather than silently breaking a deep link.
+
+  - concept: code-sample-validation
+    project: docpack
+    artifact: tests/test_doc_samples.py
+    extent: full
+    note: "Extracts every Python block from the docs and executes it; `# docpack: skip` makes an exception visible and countable. That is the easier half, and for a while it was the only half: executing a sample proves it runs and says nothing about whether the output printed beside it is still what it prints. `tests/test_published_figures.py` closes that, re-deriving every figure the README and the retrieval page quote from live runs rather than duplicating them as constants, which is the same contract this guide's own drills are held to."
+
+  - concept: doc-test-harness
+    project: docpack
+    artifact: tests/test_doc_samples.py
+    extent: full
+    note: The extractor, the skip convention, and an assertion that the skip ratio stays under 25 percent.
+
+  - concept: doctests
+    project: docpack
+    artifact: pyproject.toml
+    extent: full
+    note: "`--doctest-modules` across the package, so every docstring example is executed. One broke a strict build and had to be rewritten."
+
+  - concept: coldstart-testing
+    project: docpack
+    artifact: scripts/coldstart.sh
+    extent: full
+    note: Fresh venv, installs the way a reader would, follows the tutorial literally, and asserts the exact output string the tutorial promises.
+
+  - concept: preview-deployments
+    project: docpack
+    artifact: .github/workflows/docs.yml
+    extent: partial
+    note: Publishes to GitHub Pages on main, and regenerates the retrieval artifacts alongside the site. No per-pull-request preview.
+
+  - concept: freshness-monitoring
+    project: docpack
+    artifact: src/docpack/frontmatter.py
+    extent: partial
+    note: "`PageMeta.is_stale` at 365 days, surfaced as a warning and as an `## Optional` section in llms.txt. A property, not a monitor."
+
+  # --------------------------------------------- golden paths and developer onboarding
+  - concept: golden-paths
+    project: docpack
+    artifact: docs/tutorials/getting-started.md
+    extent: full
+    note: Clean environment to four generated artifacts, with a deliberate failure step, verified by the cold-start harness on every push.
+
+  - concept: quickstarts
+    project: docpack
+    artifact: scripts/coldstart.sh
+    extent: full
+    note: The quickstart is tested rather than hoped about, including the promise that an invalid content model is rejected.
+
+  - concept: templates-scaffolding
+    project: docpack
+    artifact: src/docpack/scaffold.py
+    extent: full
+    note: "`docpack new how-to --title ...` writes a conforming page; CI generates one of each type and validates it, so the generator cannot drift from the validator."
+
+  # ----------------------------------------------------- AI-ready content and agents
+  - concept: agent-ready-content
+    project: docpack
+    artifact: src/docpack/pack.py
+    extent: full
+    note: Three outputs for three consumers, with the argument for why one file serves none of them.
+
+  - concept: llms-txt
+    project: docpack
+    artifact: src/docpack/pack.py
+    extent: full
+    note: "`to_llms_txt` and `to_llms_full_txt`, generated from front matter and grouped by Diátaxis type, so the index cannot go stale."
+
+  - concept: chunking
+    project: docpack
+    artifact: src/docpack/chunk.py
+    extent: full
+    note: Heading-aware, fence-state tracking so a `#` comment inside a bash block is not a heading, and content-derived stable ids.
+
+  - concept: rag
+    project: docpack
+    artifact: src/docpack/pack.py
+    extent: partial
+    note: Emits chunks with stable ids and filterable metadata. No embedding, no vector store, no retrieval loop; the README argues that is the replaceable part.
+
+  - concept: retrieval-evaluation
+    project: docpack
+    artifact: evals/golden.yaml
+    extent: full
+    note: Twenty cases scored on hit@1, hit@3, MRR, routing accuracy and grounding, with a floor enforced in CI and the unflattering scores published.
+
+  - concept: grounding
+    project: docpack
+    artifact: src/docpack/evaluate.py
+    extent: partial
+    note: "`grounded@1` checks the top chunk contains the terms an answer must cite. A floor on groundedness, not a citation mechanism."
+
+  - concept: mcp
+    project: docpack
+    artifact: mcp_server/server.py
+    extent: full
+    note: JSON-RPC over stdio, dependency-free, three tools, sharing the same retriever the evaluation scores so the eval measures what ships.
+
+  - concept: seo-for-docs
+    project: docpack
+    artifact: hooks/seo.py
+    extent: full
+    note: Per-page meta description from the content model's `summary`, plus a CI step that fails if the hook is ever unregistered.
+
+  - concept: geo
+    project: docpack
+    artifact: hooks/seo.py
+    extent: full
+    note: JSON-LD `TechArticle` carrying the Diátaxis type, so a crawler learns what kind of question the page can answer, not only its subject.
+
+  - concept: structured-data
+    project: docpack
+    artifact: hooks/seo.py
+    extent: full
+    note: Open Graph, Twitter cards and JSON-LD, all derived from one required field rather than hand-written per page.
+
+  # --------------------------------------------------------- automation with Python
+  - concept: python-for-content
+    project: docpack
+    artifact: src/docpack/
+    extent: full
+    note: Seven modules, 134 tests, operating on a documentation tree as data.
+
+  - concept: content-data-transformation
+    project: docpack
+    artifact: src/docpack/pack.py
+    extent: full
+    note: A Markdown tree to JSONL, llms.txt and llms-full.txt, deterministically, so diffs stay small. Keeps 89, 5 and 99 per cent of source; the seven per cent round-trip gap resolves into relocated headings and blank lines.
+
+  - concept: learning-paths
+    project: fieldguide
+    artifact: src/fieldguide/generate.py
+    extent: partial
+    note: Seven paths generated from the registry, ordering enforced in CI, entry state computed; no reader has walked one.
+
+  - concept: developer-advocacy
+    project: fieldguide
+    artifact: tests/test_registry.py
+    extent: partial
+    note: A docs gate at capability granularity, enumerating subcommands from the parser; the partnership half is undemonstrable in a one-person repository.
+
+  - concept: publishing-in-public
+    project: fieldguide
+    artifact: scripts/prepublication.py
+    extent: partial
+    note: A pre-publication gate at full precision on two repositories; neither is published, so there is no audience yet.
+
+  - concept: docs-analytics
+    project: docpack
+    artifact: src/docpack/evaluate.py
+    extent: partial
+    note: Corpus-side instrumentation only. Every reader-side metric needs an audience this project does not have.
+
+  - concept: ai-answer-quality
+    project: docpack
+    artifact: evals/golden.yaml
+    extent: partial
+    note: grounded@1 and grounded@k over 20 cases, enforced in CI; the model half of answer quality is unmeasured.
+
+  - concept: time-to-first-success
+    project: docpack
+    artifact: scripts/coldstart.sh
+    extent: partial
+    note: Machine time from empty directory to asserted artifacts, 12.7s of which 11.6s is pip install; reader-side time is not instrumented.
+
+  - concept: search-log-analysis
+    project: docpack
+    artifact: src/docpack/retrieve.py
+    extent: partial
+    note: Structural findability measured against a hand-written golden set. No query log exists, which is the input the method actually wants.
+
+  - concept: support-deflection
+    project: docpack
+    artifact: evals/golden.yaml
+    extent: partial
+    note: Deflection capability computed as answerable against findable, 20/20 and 13/20. Deflection achieved needs a ticket queue and a baseline, and has neither.
+
+  - concept: repeat-questions
+    project: docpack
+    artifact: docs/explanation/evaluating-retrieval.md
+    extent: partial
+    note: Two repeat failures diagnosed as vocabulary gaps and fixed in one sentence each, with the score movement recorded; frequency data is absent, so these are candidates rather than a ranked backlog.
+
+  - concept: developer-feedback-loops
+    project: docpack
+    artifact: src/docpack/cli.py
+    extent: partial
+    note: "`docpack search` and the reordered README exist because the first real reader could not tell what the library did while ten CI gates were green. Two events, not a practice."
+
+  - concept: api-integration
+    project: docpack
+    artifact: tests/test_mcp_server.py
+    extent: partial
+    note: A client driven against the MCP server found two defects where failure bypassed the isError flag, now fixed and covered by 14 tests; no networked, authenticated or rate-limited service is involved.
+
+  - concept: sphinx
+    project: fieldguide
+    artifact: drills/sphinx_autodoc.py
+    extent: partial
+    note: "Autodoc and napoleon pull a typed signature and its parameter docs out of real source, then the function is renamed and nitpicky plus -W turns the unresolvable cross-reference into exit 1. The mechanism is demonstrated; owning a Sphinx corpus is not, and the page says so: no custom extension, no theme fork, no intersphinx across teams. Needs sphinx and myst-parser, which this guide does not depend on."
+
+  - concept: static-site-generators
+    project: fieldguide
+    artifact: drills/generator_build.py
+    extent: partial
+    note: "An identical corpus built under bare MkDocs and bare Sphinx at three sizes, cold and warm. It found that the build-time figure quoted on two pages described CI rather than authoring and inverted above about 120 pages, since MkDocs rebuilds everything and Sphinx rebuilds what changed. Docusaurus is not in the comparison; re-measuring it needs an npm install this environment will not do."
+
+  - concept: playbooks
+    project: fieldguide
+    artifact: drills/playbook.py
+    extent: full
+    note: "A decision guide validated as a graph: dangling targets, dead-end options, orphaned outcomes, unreachable nodes and cycles reported as the looping path. Each class is injected and caught. Committing it found the page's step 4 had been trimmed to one line per class, hiding that two of the four injections cascade, so four defects produce six findings and a findings count is not a repair list."
+
+  - concept: vector-stores
+    project: fieldguide
+    artifact: drills/vector_store.py
+    extent: partial
+    note: "An IVF index over 4000 hashed vectors in 64 dimensions, measuring what an approximate search costs: 0.548 recall@10 probing one cluster of 64, 0.988 probing eight while scanning 13% of the corpus, and slower than brute force past the knee. The vectors are hashed rather than learned, which preserves the recall and latency geometry exactly and preserves nothing about semantics, so the drill also measures what it cannot show and the page tabulates the boundary."
+
+  - concept: guided-workflows
+    project: fieldguide
+    artifact: src/fieldguide/release.py
+    extent: full
+    note: "`fieldguide release-check`: seven named steps over this corpus, each returning a detail on success and a specific remedy on failure, with an explicit GATES set of exactly one, the registry parse every other step depends on. `drills/release_rounds.py` reproduces the round-trip measurement against the real command: four runs against two for the same three independent defects."
+
+  - concept: release-readiness
+    project: fieldguide
+    artifact: src/fieldguide/release.py
+    extent: partial
+    note: "The gate exists, blocks, runs in CI and carries --report-only for the run-it-before-you-enforce-it advice. What it cannot demonstrate is the political half: the only author here is also the only reviewer, so no one else ever accepted the constraint, and the page says so rather than implying otherwise."
+
+  - concept: sample-walkthroughs
+    project: fieldguide
+    artifact: drills/walkthrough_transclusion.py
+    extent: partial
+    note: "Five states with a real MkDocs build behind three of them: a copied block caught drifting, the same block transcluded by line range, the sample edited and the page following it, two lines inserted so the transclusion renders the wrong line while the build exits zero, and a named anchor surviving the same insertion. The silent failure is the finding; a string check cannot catch it, because nothing is quoted any more."
+
+  - concept: sample-apps
+    project: fieldguide
+    artifact: drills/gallery_audit.py
+    extent: partial
+    note: "A four-entry gallery verified against its manifest, two entries failing in two different ways, plus a coverage table crossing what the samples teach against what readers ask. Committing it found the page's golden path was unreachable: it quoted a checker's output without printing the checker or the samples it ran. The ticket distribution is invented and the page says so; the arithmetic over it is real."
+
+  - concept: hallucination-guardrails
+    project: fieldguide
+    artifact: drills/guardrails.py
+    extent: partial
+    note: "Four guardrail layers run against eight fluent answers, six of them wrong, producing the matrix of which layer catches which failure. The result worth having is a negative one: grounding passes a fabricated flag name as soon as real text surrounds it, so only a known-identifier list catches the convincing fabrications. No model, no retrieval and no live pipeline; the answers are written by hand to isolate the failure modes."
+
+  - concept: crawlability
+    project: fieldguide
+    artifact: drills/crawlability.py
+    extent: partial
+    note: "A six-check audit over a site with five planted defects, run by writing the page's own crawl.py to a temp directory, so the demonstration and the published code are one artifact. Committing it found the page had quoted no output at all, that five defects yield ten findings, and that the word-count check false-positives on a sixteen-word static page. No real site, no crawler, no search engine."
+
+  - concept: terminology-drift
+    project: fieldguide
+    artifact: drills/terminology_drift.py
+    extent: partial
+    note: "Conformance measured against a glossary two ways, to show that the obvious way flatters: a word-boundary search for the canonical term matches inside its own deprecated variants, scoring drift as conformance, so widget reads 60% when the true figure is 33%. Masking variants before counting fixes it. Three pages, not a corpus, and no team or review process is involved."
+
+  - concept: workshops
+    project: fieldguide
+    artifact: drills/workshop_arithmetic.py
+    extent: partial
+    note: "The arithmetic that decides what a workshop can cover, computed from the registry rather than quoted: a ten-concept path's hours, the share of it two hands-on hours buys, and how many concepts are short enough for one sitting. It found the page calling a thirty-four-hour path the shortest when a twenty-four-hour one existed. No room, no attendees, and the setup timings on that page remain one unverified run."
+
+  - concept: screencasts
+    project: fieldguide
+    artifact: drills/screencast_script.py
+    extent: partial
+    note: "A screencast script treated as a testable artifact: a beat that was never true, a clean pass once the tool gains the flag the narration promised, and the same script going stale when upstream rewords one line. Reports drift by timestamp, which is what makes a stale recording actionable. No camera, no voice, no edit."
+
+  - concept: security-documentation
+    project: fieldguide
+    artifact: drills/security_lint.py
+    extent: partial
+    note: "A five-rule linter over a quickstart with six planted problems, which finds five. The miss is the demonstration: the credential rule was case-sensitive and environment variables are uppercase, so it missed the commonest shape a secret takes in a shell sample. Tests pin both the findings and the samples to the page. No threat model, no review process, no real product."
+
+  - concept: usd-omniverse
+    project: fieldguide
+    artifact: drills/usd_composition.py
+    extent: partial
+    note: "Real USD composition with usd-core: an override leaving its base file untouched, the resolution order printed from the API, and the first-sublayer-wins ordering most newcomers get backwards. No Omniverse, Kit or production pipeline."
+
+  - concept: inference-serving
+    project: fieldguide
+    artifact: drills/inference_sweep.py
+    extent: partial
+    note: A latency-throughput sweep on ONNX Runtime including queue wait, showing 14x throughput for 21x latency and a saturation knee past which batching is pure loss. CPU only, no server, no real traffic.
+
+  - concept: ai-stack
+    project: fieldguide
+    artifact: drills/onnx_compat.py
+    extent: partial
+    note: "The newest onnx writes IR 14 and the newest onnxruntime refuses it; four outcomes from one Relu across two version axes. The accelerator layers are read about, not run."
+
+  - concept: realtime-systems
+    project: fieldguide
+    artifact: drills/deadline_sweep.py
+    extent: partial
+    note: "A deadline sweep where the median improves while a quarter of deadlines are missed, plus a variance measurement showing the miss count ranges 67 to 205 of 250 across runs. The statistics, not the systems work: no real-time kernel and no graphics pipeline."
+
+  - concept: robotics-sim
+    project: fieldguide
+    artifact: drills/frames.py
+    extent: partial
+    note: REP 105's two frame guarantees simulated, showing odom drifting smoothly while map jumps 120 mm and invents 1.2 m/s of velocity. Not ROS, no simulator, no robot.
+
+  - concept: tutorial-design
+    project: docpack
+    artifact: docs/tutorials/getting-started.md
+    extent: full
+    note: Five steps, nine code blocks, one route, no choices before first success; scripts/coldstart.sh runs it from an empty virtual environment and asserts the exact output it promises.
+
+  - concept: information-architecture
+    project: fieldguide
+    artifact: concepts.yaml
+    extent: full
+    note: "All three decisions made and enforced: 106 units with a closed vocabulary for category, tier and Diataxis type, a prerequisite DAG with a cycle check, and generated routes (nine paths, coverage, a topological study plan). No audience, so findability itself is unevidenced."
+
+  - concept: instructional-design
+    project: fieldguide
+    artifact: src/fieldguide/audit.py
+    extent: partial
+    note: "`fieldguide audit` prints the four structural commitments on demand: 89/89 prerequisite lines, 106/106 durations, results and proof sections. Since then the commitments became enforceable rather than measurable: STRUCTURAL_LABELS declares the wording of all fourteen labelled elements, the scaffold emits them so a new page cannot invent a fifteenth, and the audit reports every repeated label nobody declared. That last check is the one that matters, because this page's own fix had standardised the label that surfaced and asserted that one string, which could not have found the three other variant pairs in use at the time. Ceiling: no-audience."
+
+  - concept: cognitive-load
+    project: fieldguide
+    artifact: src/fieldguide/audit.py
+    extent: partial
+    note: "Sentence distribution, per-page maxima and the backward/forward/off-path link census, committed as a subcommand with a test fixture for each of the three fence-parsing bugs that preceded it. The loop is now closed rather than open: the corpus was measured, 59 pages carried a sentence over 45 words and six over 60, the worst were edited, and a test holds the ceiling at 55 so it cannot drift back. Two defects fell out of acting on it. The splitter did not treat a sentence ending in bold as a sentence ending, which accounted for as much of the improvement as the editing did, and the metric excluded list items, so a long sentence became compliant the moment somebody bulleted it; both are fixed and both are published beside the result. The effect on a reader is still unmeasured. Ceiling: no-audience."
+
+  - concept: reproducible-environments
+    project: docpack
+    artifact: scripts/coldstart.sh
+    extent: partial
+    note: A fresh virtual environment installed the way a reader would, which is level 2 of the five in the page's own table and the right level for a pure-Python project. It would not catch a system library or a platform difference.
+
+  - concept: gpu-computing
+    project: fieldguide
+    artifact: drills/arithmetic_intensity.py
+    extent: partial
+    note: Arithmetic intensity measured on a CPU, where the elementwise operations sit at the memory ceiling and a matmul reaches a hundred times the compute. The ratio argument transfers to a GPU and none of the numbers do; there is no GPU, CUDA, kernel or profiler here.
+
+  - concept: assessment
+    project: fieldguide
+    artifact: src/fieldguide/audit.py
+    extent: partial
+    note: "318 proof tasks measured across 106 pages, 95 per cent imperative and 40 per cent stating a success criterion. That second figure was published as 17 per cent for months and the classifier was wrong: it matched the preposition in \"run it against a corpus you own\" and recognised no conditional, predicted value or author comparison, so the guide's self-declared weakest number was about half the real one. It is now scored against sixty tasks hand-labelled before it was written, held in tests/fixtures/criterion_labels.json. The 40 is after a pass that added a criterion to every core page that had none; the correction was worth more than the pass. It establishes that the instrument is well formed and nothing about whether anyone learns. Ceiling: no-audience."
+
+#: Why every other concept has no demonstration. Validated: an unknown id, an
+#: unknown reason, a concept that is both demonstrated and triaged, or a concept
+#: that is neither, all fail the build. That last rule is the point. A new
+#: concept cannot join the curriculum and sit unexamined.
+ceilings:
+  # Why a demonstration can never reach `full` here, as opposed to not having
+  # reached it yet. A gap closes when somebody does the work; a ceiling does
+  # not, and recording the difference is the point of this block.
+  #
+  # It exists because `instructional-design` and `cognitive-load` were twice
+  # proposed for promotion as the mechanisms behind them improved. They did
+  # improve, twice, and both promotions were still wrong, because what is
+  # missing is not a mechanism. Arguing that per concept meant re-deriving the
+  # same reasoning every time, and it turned out not to be two concepts: a
+  # dozen entries have the same ceiling for the same reason.
+  #
+  # Validated on load: every concept here must have a demonstration (a
+  # concept with none has a gap, not a ceiling) and must not be recorded
+  # `full` anywhere, which would contradict the claim.
+  #
+  # `findability` is deliberately absent and was rejected by that second
+  # rule when first listed here. Its docpack entry is `partial` and says so,
+  # but the fieldguide entry is `full`: every page carries its own
+  # description with a gate proving it, which is the whole corpus-side half.
+  # A ceiling belongs to a concept, not to one project's entry, and a
+  # concept with any `full` entry does not have one.
+  no-audience:
+    - instructional-design
+    - cognitive-load
+    - assessment
+    - learning-paths
+    - docs-analytics
+    - time-to-first-success
+    - developer-feedback-loops
+    - reproducible-environments
+    - sample-apps
+  not-published:
+    - publishing-in-public
+    - release-readiness
+
+triage:
+  # Demonstrable, and on the backlog to build.
+
+  # Demonstrating these would mean adopting a second generator, a second markup
+  # language, a release train or a translation pipeline in a twelve-page
+  # single-author project. The measurements on those pages were executed; the
+  # adoption would be theatre, and each page says so.
+  mdx: declined
+  restructuredtext: declined
+  docusaurus: declined
+  antora: declined
+  openapi: declined
+  versioning: declined
+  localization: declined
+
+  # The evidence is a process, a conversation, or a decision in someone else's
+  # repository. These pages carry an account of how the skill would be shown
+  # instead, under "How this would be demonstrated elsewhere".
+  content-lifecycle: needs-organisation
+  content-retirement: needs-organisation
+  docs-review: needs-organisation
+  docs-prioritization: needs-organisation
+  working-with-engineers: needs-organisation
+  user-stories: needs-organisation
+  partner-documentation: needs-organisation
+
+  # Needs a model, weights or hardware this environment does not have. Each of
+  # these pages carries "How this would be demonstrated elsewhere".
+  embeddings: blocked
+  output-evaluation: blocked
+  prompting: blocked
+  llm-content-lifecycle: blocked
+  agent-skills: blocked
+  ai-assistants: blocked
+  agentic-workflows: blocked
+  coding-agents: blocked
+  ai-trust-judgment: blocked
+
+  # A repository cannot evidence these at all. Same subsection.
+  technical-writing: needs-organisation
+  systems-mindset: needs-organisation
+  docs-as-product: needs-organisation
+  sme-interviews: needs-organisation
+  reading-code-to-verify: needs-organisation
+  implementation-feedback: needs-organisation
