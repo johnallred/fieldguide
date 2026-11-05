@@ -24,7 +24,7 @@ reading.
 
 A Python library and the documentation site that documents it, where the site is also the test corpus. Ten CI gates, 142 tests, a 20-case retrieval evaluation, an MCP server, and a cold-start harness that follows the quickstart from an empty virtual environment.
 
-[https://johnallred.github.io/docpack/](https://johnallred.github.io/docpack/) · demonstrates 49 concepts
+[https://github.com/johnallred/docpack](https://github.com/johnallred/docpack) · demonstrates 49 concepts
 
 ## fieldguide
 
@@ -32,7 +32,7 @@ A Python library and the documentation site that documents it, where the site is
 
 The repository you are reading. It earns entries here only where it does the work rather than describing it: a two-part fence gate that compares fenced source against the rendered code blocks of the built HTML, and an accessibility property test over generated pages. The fence gate found 127 defects across seven pages that every other check had passed.
 
-[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 35 concepts
+[https://github.com/johnallred/fieldguide](https://github.com/johnallred/fieldguide) · demonstrates 35 concepts
 
 ## What is demonstrated
 
