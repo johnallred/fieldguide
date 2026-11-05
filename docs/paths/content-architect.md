@@ -9,11 +9,6 @@ generated: true
 
 # The content architect
 
-!!! warning "Generated page"
-    This page is generated from `concepts.yaml` by `fieldguide build`.
-    Edits here are overwritten. Change the registry instead.
-
-
 **Who this is for.** A writer or engineer who owns structure across a growing corpus.
 
 From a folder of Markdown to a modeled, governed, machine-readable corpus.

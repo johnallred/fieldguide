@@ -9,12 +9,12 @@ audience: new-user
 
 **A curriculum for a job category that does not have a settled name yet.**
 
-Two job postings started this. One from Intel, for a role in Developer
+Three job postings started this. One from Intel, for a role in Developer
 Relations that asks for golden paths, curriculum, documentation CI, cold-start
 testing, and content optimized for SEO and GEO. One from NVIDIA, for something
 it calls KnowledgeOps, which asks for content modeling, taxonomy, metadata for
 machine retrieval, RAG packaging, agent skills, and evaluation sets for answer
-accuracy.
+accuracy. One from Anthropic, for a role called Developer Education Lead, Claude Platform that asks for a demos, labs, quick-reference guides, technical currciulum, self-service resources, experimental tools, content-freshness automation, etc. that let the go-to-market teams showcase the Claude Developer Platform.
 
 The titles are different. The work is the same work, and it is a real
 discipline with no agreed curriculum, no textbook, and almost no one

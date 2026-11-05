@@ -9,11 +9,6 @@ generated: true
 
 # The first week
 
-!!! warning "Generated page"
-    This page is generated from `concepts.yaml` by `fieldguide build`.
-    Edits here are overwritten. Change the registry instead.
-
-
 **Who this is for.** Someone who has just taken one of these roles and needs to be useful by Friday.
 
 The shortest route to shipping a documentation change with confidence.

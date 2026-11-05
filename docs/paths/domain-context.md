@@ -10,11 +10,6 @@ generated: true
 
 # Enough domain to not be lost
 
-!!! warning "Generated page"
-    This page is generated from `concepts.yaml` by `fieldguide build`.
-    Edits here are overwritten. Change the registry instead.
-
-
 **Who this is for.** Someone interviewing for, or newly inside, a documentation role at a company whose product is graphics, simulation, robotics or AI infrastructure.
 
 The six domains these postings name, at the depth where you can follow an engineer and know which questions are not yours to answer.

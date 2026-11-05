@@ -106,18 +106,17 @@ def all_generated(registry) -> dict[str, str]:
     return pages
 
 
-# --------------------------------------------------------------- the banner
+# ------------------------------------------------------- generated-page notice
 
 
 @pytest.mark.parametrize("page", ["coverage.md", "study-plan.md", "paths/index.md"])
-def test_generated_pages_warn_that_they_are_generated(registry, page):
-    """A contributor who edits one by hand loses the work, so they get told first."""
-    assert "Generated page" in all_generated(registry)[page]
+def test_generated_pages_do_not_show_a_generated_page_notice(registry, page):
+    assert "Generated page" not in all_generated(registry)[page]
 
 
-def test_every_generated_page_carries_the_banner(registry):
+def test_no_generated_page_carries_a_generated_page_notice(registry):
     for name, text in all_generated(registry).items():
-        assert "Generated page" in text, f"{name} has no generated-page banner"
+        assert "Generated page" not in text, f"{name} contains a generated-page notice"
 
 
 # ---------------------------------------------------------------- the links
@@ -581,9 +580,8 @@ def test_demonstration_counts_never_exceed_the_concepts_they_describe(
 
 
 def test_the_demonstrated_page_names_its_actual_sources(registry, demos):
-    """Its banner must not claim a single source when it has two."""
+    """The generated page no longer shows a banner naming its sources."""
     from fieldguide.generate import demonstrated_page
 
     text = demonstrated_page(registry, demos)
-    assert "demonstrations.yaml" in text
-    assert "concepts.yaml" in text
+    assert "Generated page" not in text
