@@ -9,9 +9,9 @@ audience: new-user
 
 **A curriculum for a job category that does not have a settled name yet.**
 
-Three job postings started this. One from Intel, for a role in Developer
-Relations that asks for golden paths, curriculum, documentation CI, cold-start
-testing, and content optimized for SEO and GEO. One from NVIDIA, for something
+Three job postings started this. One from Intel, for a Docs and Learning Experience role in Developer
+Relations, that asks for golden paths, curriculum, documentation CI, cold-start
+testing, and content optimized for SEO and GEO. One from NVIDIA, a Senior Content Engineer in something
 it calls KnowledgeOps, which asks for content modeling, taxonomy, metadata for
 machine retrieval, RAG packaging, agent skills, and evaluation sets for answer
 accuracy. One from Anthropic, for a role called Developer Education Lead that asks for demos, labs, quick-reference guides, technical currciulum, self-service resources, experimental tools, content-freshness automation, etc.
