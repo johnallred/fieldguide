@@ -14,6 +14,9 @@ import numpy as np
 import onnx
 import onnxruntime as ort
 from onnx import TensorProto, helper
+import contextlib
+import os
+import tempfile
 
 
 def model(path: str, opset: int, ir: int | None = None) -> int:
@@ -57,5 +60,31 @@ def main() -> None:
     print("not in any of those messages.")
 
 
+def _scratch():
+    """Run the drill in a temporary directory.
+
+    This drill writes its fixtures with bare relative names, so running it the
+    way its page tells you to left them in whatever directory you happened to
+    be in, which for a reader following the page is the repository root.
+    Sixteen of the nineteen drills already build their fixtures under
+    `tempfile`; this was one of the three exceptions.
+
+    `contextlib.chdir` would be one line, but the guide supports Python 3.10.
+    """
+
+    @contextlib.contextmanager
+    def run_in_temp():
+        previous = os.getcwd()
+        with tempfile.TemporaryDirectory() as directory:
+            os.chdir(directory)
+            try:
+                yield
+            finally:
+                os.chdir(previous)
+
+    return run_in_temp()
+
+
 if __name__ == "__main__":
-    main()
+    with _scratch():
+        main()

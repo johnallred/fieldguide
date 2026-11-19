@@ -81,6 +81,9 @@ nav:
 not_in_nav: |
   concepts/*.md
 
+exclude_docs: |
+  agents/
+
 watch:
   - concepts.yaml
   - src/fieldguide

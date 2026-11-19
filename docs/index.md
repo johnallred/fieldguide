@@ -9,12 +9,7 @@ audience: new-user
 
 **A curriculum for a job category that does not have a settled name yet.**
 
-Three job postings started this. One from Intel, for a Docs and Learning Experience role in Developer
-Relations, that asks for golden paths, curriculum, documentation CI, cold-start
-testing, and content optimized for SEO and GEO. One from NVIDIA, a Senior Content Engineer in something
-it calls KnowledgeOps, which asks for content modeling, taxonomy, metadata for
-machine retrieval, RAG packaging, agent skills, and evaluation sets for answer
-accuracy. One from Anthropic, for a role called Developer Education Lead that asks for demos, labs, quick-reference guides, technical currciulum, self-service resources, experimental tools, content-freshness automation, etc.
+A few job postings started this. One for a Docs and Learning Experience role in Developer Relations, that asks for golden paths, curriculum, documentation CI, cold-start testing, and content optimized for SEO and GEO. One for a Senior Content Engineer in something called KnowledgeOps, which asks for content modeling, taxonomy, metadata for machine retrieval, RAG packaging, agent skills, and evaluation sets for answer accuracy. One for a role called Developer Education Lead that asks for demos, labs, quick-reference guides, technical currciulum, self-service resources, experimental tools, content-freshness automation, etc. One for a Lab Development Engineer on a Cloud Training Team that asks for automated lab publishing process, automation of the curriculum publication process, automation of lab environment monitoring, design and develop new labs to ensure consistency and quality, perform the testing of new labs prior to release, ensure that all new and existing labs can be created in a reliable, repeatable, and scalable manner.
 
 The titles are different. The work is essentially same work, and it is a real
 discipline with no agreed curriculum, no textbook, and almost no one
