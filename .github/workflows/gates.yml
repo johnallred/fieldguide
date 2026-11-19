@@ -1,0 +1,176 @@
+name: Gates and deploy
+
+# The checks that have to pass before a change lands, and the deploy that runs
+# only once they have.
+#
+# These were two workflows. `pages.yml` ran `build --check`, `pytest` and
+# `mkdocs build` before deploying, duplicating three of the gates below, and
+# both workflows triggered on push to main, so they raced: a deploy could
+# publish a commit whose gates were still running, or already red. `needs:`
+# removes the duplication and the race together.
+#
+# A gate is a step with a `name`. Setup steps are deliberately left unnamed so
+# that counting gates needs no heuristic about which labels mean what, and
+# `tests/test_readme_claims.py` asserts the README's count against this file.
+# The deploy job is excluded by name, because a check that runs after a change
+# has landed is not a gate whatever it checks.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  curriculum:
+    name: Curriculum
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m pip install -e '.[dev,docs]'
+
+      - name: The registry and the docs tree agree
+        run: fieldguide check
+
+      - name: Generated pages are up to date
+        run: fieldguide build --check
+
+      - name: Every test passes
+        run: python -m pytest -q
+
+  site:
+    name: Site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m pip install -e '.[dev,docs]'
+
+      - name: The site builds with warnings as errors
+        run: mkdocs build --strict
+
+      # Runs after the build because it reads the built HTML, not the source.
+      - name: Every fenced sample renders as code
+        run: fieldguide render site
+
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m pip install -e '.[dev,docs]'
+
+      - name: The release workflow passes every step
+        run: fieldguide release-check
+
+  coldstart:
+    name: Cold start
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      # No install step on purpose. The script builds its own environment, and
+      # a dependency installed here would be one the reader does not have.
+      - name: The README quick start runs from an empty environment
+        run: python3 scripts/coldstart.py
+
+  drills:
+    name: Domain drills
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m pip install -e '.[dev,docs]'
+      # Not in the project's extras on purpose: the guide does not depend on
+      # these, and the pages that need them say so and name the install.
+      - run: python -m pip install sphinx myst-parser onnx onnxruntime usd-core
+
+      # The suite covers fourteen of the nineteen drills. These five were
+      # excluded from `test_a_drill_runs_at_all` because they need the
+      # dependencies installed above, so until now nothing ever executed them.
+      # That is how `usd_composition.py` came to be broken: a chained
+      # `Usd.Stage.Open()` left no reference to the stage, Python collected it,
+      # and the prim expired before it was read. The page had been right the
+      # whole time; the drill had rotted, and no test could see it.
+      #
+      # Three of them used to write their fixtures into whatever directory
+      # they were run from, which for a reader following the page is the
+      # repository root. They build under `tempfile` now, like the other
+      # sixteen, so the scratch directory below is no longer a workaround: it
+      # is the assertion. Each drill gets an empty directory and has to leave
+      # it empty.
+      - name: The domain drills run on their real dependencies
+        run: |
+          set -euo pipefail
+          for drill in inference_sweep onnx_compat sphinx_autodoc usd_composition; do
+            echo "::group::$drill"
+            work=$(mktemp -d)
+            ( cd "$work" && python "$GITHUB_WORKSPACE/drills/$drill.py" )
+            left=$(ls -A "$work" | wc -l)
+            if [ "$left" -ne 0 ]; then
+              echo "$drill left $left file(s) in its working directory:"
+              ls -A "$work"
+              exit 1
+            fi
+            rm -rf "$work"
+            echo "::endgroup::"
+          done
+
+      # `generator_build.py` is the fifth, and its verdict is a timing
+      # comparison, not a fact. Its smallest size sits at the crossover its own
+      # page describes, so the inequality flips under load: three consecutive
+      # runs on one machine gave exit 1, 0, 1. Asserting it here would be a
+      # gate that cries wolf, and a gate that cries wolf gets switched off.
+      # What is stable, and what actually rotted elsewhere, is whether the
+      # drill still runs and still produces its table. That is what is checked.
+      - name: The build-time drill still produces its table
+        run: |
+          set -euo pipefail
+          work=$(mktemp -d)
+          ( cd "$work" && python "$GITHUB_WORKSPACE/drills/generator_build.py" > out.txt 2>&1 || true
+            grep -q "pages: mkdocs" out.txt || { echo "the drill printed no table:"; cat out.txt; exit 1; }
+            cat out.txt )
+
+  deploy:
+    name: Deploy
+    needs: [curriculum, site, release, coldstart, drills]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python -m pip install -e '.[dev,docs]'
+      - run: mkdocs build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4

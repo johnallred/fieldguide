@@ -9,6 +9,9 @@ Run in an empty directory; it writes .usda files beside itself.
 from __future__ import annotations
 
 from pxr import Sdf, Usd, UsdGeom
+import contextlib
+import os
+import tempfile
 
 
 def override_leaves_the_base_untouched() -> None:
@@ -55,7 +58,13 @@ def the_first_sublayer_wins() -> None:
         root = Usd.Stage.CreateNew(root_name)
         root.GetRootLayer().subLayerPaths = order
         root.GetRootLayer().Save()
-        attr = Usd.Stage.Open(root_name).GetPrimAtPath("/Robot").GetAttribute("speed")
+        # The stage has to outlive the prim handle. Chaining off
+        # Usd.Stage.Open() leaves no reference to the stage, Python collects
+        # it, and the prim expires before the attribute is read:
+        # "Accessed invalid expired 'Xform' prim </Robot>". Line 27 already
+        # binds its stage; this one did not.
+        opened = Usd.Stage.Open(root_name)
+        attr = opened.GetPrimAtPath("/Robot").GetAttribute("speed")
         print("\nsubLayerPaths = %s   a sets 10, b sets 20" % order)
         print("  resolved speed = %.0f" % attr.Get())
         for spec in attr.GetPropertyStack(Usd.TimeCode.Default()):
@@ -78,7 +87,33 @@ def local_beats_a_reference() -> None:
           % inst.GetPrim().GetAttribute("mass").Get())
 
 
+def _scratch():
+    """Run the drill in a temporary directory.
+
+    This drill writes its fixtures with bare relative names, so running it the
+    way its page tells you to left them in whatever directory you happened to
+    be in, which for a reader following the page is the repository root.
+    Sixteen of the nineteen drills already build their fixtures under
+    `tempfile`; this was one of the three exceptions.
+
+    `contextlib.chdir` would be one line, but the guide supports Python 3.10.
+    """
+
+    @contextlib.contextmanager
+    def run_in_temp():
+        previous = os.getcwd()
+        with tempfile.TemporaryDirectory() as directory:
+            os.chdir(directory)
+            try:
+                yield
+            finally:
+                os.chdir(previous)
+
+    return run_in_temp()
+
+
 if __name__ == "__main__":
-    override_leaves_the_base_untouched()
-    the_first_sublayer_wins()
-    local_beats_a_reference()
+    with _scratch():
+        override_leaves_the_base_untouched()
+        the_first_sublayer_wins()
+        local_beats_a_reference()

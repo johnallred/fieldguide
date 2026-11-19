@@ -3,12 +3,7 @@
 **A curriculum for documentation engineering, developer experience and
 KnowledgeOps, built as an example of its own subject.**
 
-Two job postings started this. One from Intel, for a Developer Relations role
-asking for golden paths, curriculum, documentation CI, cold-start testing of
-quickstarts, and content optimized for SEO and GEO. One from NVIDIA, for
-something it calls KnowledgeOps, asking for content modeling, taxonomy,
-metadata for machine retrieval, RAG packaging, agent skills, and evaluation
-sets for answer accuracy.
+A few job postings started this. One for a Docs and Learning Experience role in Developer Relations, that asks for golden paths, curriculum, documentation CI, cold-start testing, and content optimized for SEO and GEO. One for a Senior Content Engineer in something called KnowledgeOps, which asks for content modeling, taxonomy, metadata for machine retrieval, RAG packaging, agent skills, and evaluation sets for answer accuracy. One for a role called Developer Education Lead that asks for demos, labs, quick-reference guides, technical currciulum, self-service resources, experimental tools, content-freshness automation, etc. One for a Lab Development Engineer on a Cloud Training Team that asks for automated lab publishing process, automation of the curriculum publication process, automation of lab environment monitoring, design and develop new labs to ensure consistency and quality, perform the testing of new labs prior to release, ensure that all new and existing labs can be created in a reliable, repeatable, and scalable manner.
 
 Different titles, the same discipline, and no settled curriculum for it
 anywhere. This is an attempt at one: **106 concepts, each with a golden path,
@@ -55,12 +50,13 @@ fieldguide status                  # what is written, what is left, what is unbl
 fieldguide check                   # registry integrity and the page contract
 fieldguide build                   # regenerate coverage, paths, placeholders
 fieldguide build --check           # fail instead, for CI
-fieldguide new diataxis            # scaffold a page that satisfies the contract
+fieldguide new diataxis            # exits 2: every concept already has a page
+mkdocs build                       # the built site the next line reads
 fieldguide render site             # every fenced sample reaches the built HTML as code
 fieldguide audit                   # every figure the pages quote about the corpus
 fieldguide release-check           # the release workflow, one named step at a time
-python3 -m pytest -q                # 207 tests
-mkdocs serve                       # read it
+python3 -m pytest -q                # 217 tests
+mkdocs serve                       # read it; not run by the cold start, it never exits
 
 python3 scripts/prepublication.py .   # before publishing, not in CI; see below
 ```
@@ -122,9 +118,9 @@ docs/
   concepts/                106 pages, all written
   explanation/             why a registry, the page contract, provenance
 drills/                  nineteen runnable scripts behind figures the pages quote
-tests/                   200 tests, including tests against the real registry
-                         (207 with the src/ doctests pytest also collects)
-.github/workflows/       nine gates, including the drills and release-check
+tests/                   210 tests, including tests against the real registry
+                         (217 with the src/ doctests pytest also collects)
+.github/workflows/       nine gates on every pull request, plus the deploy
 ```
 
 ## The page contract
