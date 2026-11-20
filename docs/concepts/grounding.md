@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > Practical experience applying LLMs to content workflows (prompting, retrieval and grounding, output evaluation)
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [RAG pipelines](rag.md)
 
@@ -31,7 +30,7 @@ model will happily attach `[c3]` to a sentence `c3` does not support.
 
 ## Why the job asks for it
 
-NVIDIA lists it in the middle of the three-part requirement: "prompting,
+The KnowledgeOps posting lists it in the middle of the three-part requirement: "prompting,
 retrieval and grounding, output evaluation". The ordering is the pipeline, and
 grounding is the stage that makes the other two auditable.
 

@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > Optimize documentation for search (SEO and GEO) and for AI assistants and coding agents through agentready, LLMdigestible content
 
-> Source: intel posting, verbatim
 
 **Prerequisites:** [Agent-ready content](agent-ready-content.md)
 
@@ -29,7 +28,7 @@ cannot ask whether one was meant to be complete.**
 
 ## Why the job asks for it
 
-Intel names this audience explicitly and separately from AI assistants:
+The Developer Relations posting names this audience explicitly and separately from AI assistants:
 "optimize documentation ... for AI assistants and coding agents". The
 separation is correct and worth preserving, because the two want different
 things from the same page.
@@ -394,7 +393,7 @@ and inconsistent markers are worse than none.
 
 ### "LLM-digestible", unpacked
 
-Intel's phrase. It decomposes into things that are checkable:
+The Developer Relations posting's phrase. It decomposes into things that are checkable:
 
 | Property | Mechanism |
 |---|---|
@@ -526,4 +525,4 @@ measuring the model and has to be re-run with that held fixed.
 - [Agent-ready content](agent-ready-content.md), the framing above this
 - [Code-sample validation](code-sample-validation.md), what keeps the canonical example true
 - [Crawlability and the agent-ready front door](crawlability.md), being reachable
-- [Generative engine optimization](geo.md), the other half of Intel's bullet
+- [Generative engine optimization](geo.md), the other half of the Developer Relations posting's bullet

@@ -11,8 +11,8 @@ tags: [dac, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    Intel: "Write and maintain reference documentation, tutorials, and sample walkthroughs that assume no prior context"
+!!! quote "Why it is on the curriculum"
+    "Write and maintain reference documentation, tutorials, and sample walkthroughs that assume no prior context"
 
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 
@@ -32,7 +32,7 @@ the reference unless you use the right reference syntax.
 
 ## Why the job asks for it
 
-Intel asks for reference documentation that assumes no prior context, alongside
+The Developer Relations posting asks for reference documentation that assumes no prior context, alongside
 tutorials and sample walkthroughs. Reference is the layer where hand-authoring
 fails first and worst: a corpus with two hundred functions cannot be
 hand-maintained through a refactor, and the failure is silent.

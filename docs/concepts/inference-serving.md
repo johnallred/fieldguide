@@ -11,8 +11,8 @@ tags: [dom, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    Intel: "including inference microservices and the agentic toolkit"
+!!! quote "Why it is on the curriculum"
+    "including inference microservices and the agentic toolkit"
 
 **Leads to:** [Reading an AI software stack](ai-stack.md)
 
@@ -22,7 +22,7 @@ Putting a trained model behind a network interface so other services can use
 it. The model is fixed; everything interesting is the serving layer: batching,
 queueing, concurrency, warm-up, and which number you promise.
 
-Intel's phrase is "inference microservices", which is the current packaging:
+The Developer Relations posting's phrase is "inference microservices", which is the current packaging:
 the model, a runtime, a server and a health check shipped as a container with
 an endpoint. The documentation obligations follow from that being an operable
 service rather than a library.

@@ -11,10 +11,10 @@ tags: [gp, core]
 
 `core` · difficulty 3 · 5h
 
-!!! quote "Asked for by name"
-    Intel: "Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result"
+!!! quote "Why it is on the curriculum"
+    "Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result"
 
-    Intel: "Treats setup, runnable samples, and docs as one product, engineering docs-as-code with cold-start and link CI so a developer reaches first success in minutes with zero help"
+    "Treats setup, runnable samples, and docs as one product, engineering docs-as-code with cold-start and link CI so a developer reaches first success in minutes with zero help"
 
 **Prerequisites:** [Diátaxis](diataxis.md)
 
@@ -26,13 +26,13 @@ tags: [gp, core]
 for every reader, not every supported configuration: one route, chosen,
 written down, and tested end to end.
 
-The word that does the work in Intel's phrasing is *a*. A golden path is
+The word that does the work in the Developer Relations posting's phrasing is *a*. A golden path is
 singular. The moment there are two, neither is golden, because you can no
 longer say "this is the route we test and support".
 
 ## Why the job asks for it
 
-Intel asks for it twice, and the second quote gives the acceptance criterion:
+The Developer Relations posting asks for it twice, and the second quote gives the acceptance criterion:
 first success in minutes, with zero help. That is a measurable claim about a
 specific artifact, which is unusual and worth taking seriously.
 
@@ -198,7 +198,7 @@ from an opinion into a finding, plus the testing argument that makes it matter.
 | Every command copy-pasteable | No placeholders the reader must resolve |
 | No decisions | A decision is a branch, and a branch is untested surface |
 | Tested in CI | [Cold-start testing](coldstart-testing.md) |
-| Minutes, and the number is known | Intel's own criterion |
+| Minutes, and the number is known | the Developer Relations posting's own criterion |
 
 ### Where the alternatives go
 
@@ -297,4 +297,4 @@ nightly build walks.
 - [Quickstarts that survive contact](quickstarts.md), the page that implements this
 - [Cold-start testing](coldstart-testing.md), what makes the single route verifiable
 - [Reproducible environments](reproducible-environments.md), the "clean environment" half
-- [Time to first success](time-to-first-success.md), the metric Intel names
+- [Time to first success](time-to-first-success.md), the metric the Developer Relations posting names

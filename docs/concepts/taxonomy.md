@@ -11,8 +11,8 @@ tags: [ia, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Information architecture skills: content modeling, taxonomy, and metadata for both navigation and machine retrieval"
+!!! quote "Why it is on the curriculum"
+    "Information architecture skills: content modeling, taxonomy, and metadata for both navigation and machine retrieval"
 
 **Prerequisites:** [Content models](content-model.md)
 
@@ -31,7 +31,7 @@ built on.
 
 ## Why the job asks for it
 
-NVIDIA names taxonomy between content modeling and metadata, which is where it
+The KnowledgeOps posting names taxonomy between content modeling and metadata, which is where it
 belongs: the model says a field exists, the taxonomy says what may go in it,
 and metadata is the result.
 

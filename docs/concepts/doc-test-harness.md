@@ -11,8 +11,8 @@ tags: [qa, core]
 
 `core` · difficulty 3 · 6h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
+!!! quote "Why it is on the curriculum"
+    "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
 
 **Prerequisites:** [Code-sample validation](code-sample-validation.md)
 
@@ -30,7 +30,7 @@ built on parsing source can be fooled by the source.
 
 ## Why the job asks for it
 
-NVIDIA lists doc test harnesses as a thing you have built. The word is doing
+The KnowledgeOps posting lists doc test harnesses as a thing you have built. The word is doing
 work: a harness, not a test. The difference is everything in this page.
 
 A script that executes Python blocks is a weekend. A real harness is not: it

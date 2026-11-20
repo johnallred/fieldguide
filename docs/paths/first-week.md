@@ -40,7 +40,7 @@ Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link
 
 `core` · read it · 2h
 
-Markdown/RST (NVIDIA); Git, Markdown or MDX, and doc build pipelines (Intel)
+Markdown/RST; Git, Markdown or MDX, and doc build pipelines
 
 Builds on, earlier in this path: Docs-as-code.
 

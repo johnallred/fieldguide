@@ -43,7 +43,7 @@ Every automated gate that stops documentation rotting, in the order worth adding
 
 ## [The KnowledgeOps path](knowledgeops.md)
 
-*The NVIDIA posting, more or less exactly.*
+*The KnowledgeOps posting, more or less exactly.*
 
 Making a corpus answerable by machines, and knowing whether it worked.
 
@@ -51,7 +51,7 @@ Making a corpus answerable by machines, and knowing whether it worked.
 
 ## [The developer educator](developer-educator.md)
 
-*The Intel posting's curriculum half.*
+*The Developer Relations posting's curriculum half.*
 
 Taking a developer from a clean environment to a working result, repeatably.
 
@@ -59,7 +59,7 @@ Taking a developer from a clean environment to a working result, repeatably.
 
 ## [The writer who builds](writer-who-builds.md)
 
-*NVIDIA's own description of the person they want. The half of the job that is judgement and collaboration rather than tooling.*
+*The KnowledgeOps posting's own description of the person it wants. The half that is judgement and collaboration rather than tooling.*
 
 The craft and the working relationships, which no pipeline substitutes for.
 

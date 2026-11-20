@@ -11,8 +11,8 @@ tags: [gp, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents"
+!!! quote "Why it is on the curriculum"
+    "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents"
 
 **Prerequisites:** [Content models](content-model.md)
 
@@ -32,13 +32,13 @@ in what it knows, which on a corpus with a
 
 ## Why the job asks for it
 
-NVIDIA's bullet says templates **rather than static documents**, which is the
+The KnowledgeOps posting's bullet says templates **rather than static documents**, which is the
 whole argument. A style guide tells an author what a page should contain, and
 is read once. A scaffold hands them a page that already contains it, and is
 used every time.
 
 The deeper reason is that it makes the standard the path of least resistance,
-which is NVIDIA's other phrase: build systems where the right way is easier
+which is the KnowledgeOps posting's other phrase: build systems where the right way is easier
 than the wrong way. An author who runs `fieldguide new` gets the contract for
 free. An author who copies a neighbouring page gets whatever that page had.
 
@@ -74,7 +74,6 @@ tags: [meas, core]
 > Instrument documentation analytics and convert findings into improvements to
 > docs, samples, and tooling
 
-> Source: intel posting, verbatim
 
 **Prerequisites:** [Documentation CI](documentation-ci.md)
 

@@ -13,7 +13,6 @@ tags: [craft, core]
 
 > Treats setup, runnable samples, and docs as one product
 
-> Source: intel posting, verbatim
 
 ## What it is
 
@@ -24,7 +23,7 @@ criterion, even when three different teams maintain them.
 
 ## Why the job asks for it
 
-Intel states it in one sentence and the rest of the posting follows from it:
+The Developer Relations posting states it in one sentence and the rest of the posting follows from it:
 "Treats setup, runnable samples, and docs as one product", and then "so a
 developer reaches first success in minutes with zero help".
 
@@ -297,7 +296,7 @@ product's actual API for new users**, and it is the only part of a platform that
 every single user touches in the same order. Teams instrument their services
 heavily and instrument that route not at all. Pointing out that the
 highest-traffic, least-monitored path in the product is the first ten minutes is
-a good way to get resources, and it is exactly the argument Intel's posting is
+a good way to get resources, and it is exactly the argument the Developer Relations posting is
 making with "setup, runnable samples, and docs as one product".
 
 ## How to prove it

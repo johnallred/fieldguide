@@ -11,8 +11,8 @@ tags: [ia, core]
 
 `core` · difficulty 3 · 6h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Collaborate with documentation leads on knowledge architecture, sharing implementation feedback (what works, breaks, and scales) to refine content models, information architecture, and AI-readiness patterns"
+!!! quote "Why it is on the curriculum"
+    "Collaborate with documentation leads on knowledge architecture, sharing implementation feedback (what works, breaks, and scales) to refine content models, information architecture, and AI-readiness patterns"
 
 **Prerequisites:** [Information architecture](information-architecture.md)
 
@@ -30,7 +30,7 @@ A dependency graph will.
 
 ## Why the job asks for it
 
-NVIDIA names it directly, and names the relationship precisely: you
+The KnowledgeOps posting names it directly, and names the relationship precisely: you
 **collaborate** with documentation leads on it, and your contribution is
 **implementation feedback**, what works, breaks and scales. The architecture is
 owned jointly; what you bring is evidence from having built it.
@@ -192,7 +192,7 @@ looked like a defect and was a property of the domain.
 | Question it answers | Where does this page go? | What must a reader already know? |
 | Failure | A reader cannot find the page | A reader finds it and cannot follow it |
 | Validated by | Card sorting, tree testing, search logs | Graph properties, and reader drop-off |
-| Who owns it | Often the docs team alone | Jointly, per NVIDIA's bullet |
+| Who owns it | Often the docs team alone | Jointly, per the KnowledgeOps posting's bullet |
 
 ### What a knowledge graph lets you compute
 
@@ -245,7 +245,7 @@ knowledge architecture organises what is known. They can disagree: a page can
 be in the obvious place while depending on four concepts the reader has not
 met. The second one is a graph, which means you can compute over it."
 
-**Match NVIDIA's framing on ownership.** The bullet says collaborate with
+**Match the KnowledgeOps posting's framing on ownership.** The bullet says collaborate with
 documentation leads and bring implementation feedback. So the answer is not
 "I would design the architecture", it is "I would implement it, measure it, and
 tell the leads what breaks". Then give an example of a measurement: depth of

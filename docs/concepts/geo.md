@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > Optimize documentation for search (SEO and GEO) and for AI assistants and coding agents through agentready, LLMdigestible content
 
-> Source: intel posting, verbatim
 
 **Prerequisites:** [SEO for documentation](seo-for-docs.md), [Agent-ready content](agent-ready-content.md)
 
@@ -28,7 +27,7 @@ passages.** Everything that differs follows from that.
 
 ## Why the job asks for it
 
-Intel names it twice, in a responsibility and in minimum qualifications, and
+The Developer Relations posting names it twice, in a responsibility and in minimum qualifications, and
 pairs it with SEO both times. That pairing is the instruction: the same work
 serves both, and the parts that differ are worth knowing.
 
@@ -398,7 +397,7 @@ and saying so plainly is better than pretending there is no tension.
 
 Present it internally as "making passages extract correctly", which is
 checkable, rather than as GEO, which invites a debate about whether the term
-means anything. Intel used the word, so use it on your résumé and describe the
+means anything. The Developer Relations posting used the word, so use it on your résumé and describe the
 mechanism in the interview.
 
 ### How to measure it, since the usual metrics do not exist

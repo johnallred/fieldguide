@@ -86,12 +86,12 @@ minutes of being written, which is the honest argument for all of it. See
 
 ## Where to be sceptical
 
-**The postings are not reproduced here.** Verbatim quotes were recorded while
-reading them and are marked `quoted`. Everything marked `derived` is a
-reconstruction of a requirement, and `adjacent` means neither posting mentions
-it and this author thinks the named work is impossible without it. 90 of the 106 concepts are `quoted`. The [provenance page](explanation/provenance.md)
-explains why that distinction is printed on every row rather than quietly
-averaged away.
+**The postings are not reproduced here.** The line recorded against each
+concept is a phrase taken down while reading them, so it is near-verbatim
+rather than certified. Where a concept is here because the work a posting names
+is impossible without it, the line says so rather than pretending to be a
+quotation. The [provenance page](explanation/provenance.md) explains why that
+line is printed on every row rather than quietly averaged away.
 
 **One person wrote this.** The golden paths have been run; the career advice
 is opinion. Where a page recommends a tool over an alternative, it says what

@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > Ways to stand out: experience building RAG pipelines, AI assistants, MCP servers, or agent skill and context libraries backed by documentation
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Agent-ready content](agent-ready-content.md)
 
@@ -31,7 +30,7 @@ to decide what it needs, and to ask twice.
 
 ## Why the job asks for it
 
-NVIDIA names it twice. Once in the AI-ready list, "MCP-accessible sources", and
+The KnowledgeOps posting names it twice. Once in the AI-ready list, "MCP-accessible sources", and
 once under ways to stand out, "MCP servers ... backed by documentation". That
 repetition is a signal: they want the interface, not just the content.
 
@@ -470,7 +469,7 @@ monitored, versioned and secured, and it only helps clients that speak MCP.
 `llms.txt` is a file on a web server that works with anything that can fetch a
 URL. For a corpus where most consumption is a model fetching pages, the file is
 the better investment. MCP earns its cost when agents are doing multi-step work
-against your docs, which is exactly NVIDIA's "agentic workflows" and is not
+against your docs, which is exactly the KnowledgeOps posting's "agentic workflows" and is not
 every situation.
 
 **One sharper point.** The strongest observation is that **MCP makes your content

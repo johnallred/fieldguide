@@ -11,10 +11,10 @@ tags: [gp, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    Intel: "documentation CI, including link checking and coldstart testing of quickstarts"
+!!! quote "Why it is on the curriculum"
+    "documentation CI, including link checking and coldstart testing of quickstarts"
 
-    Intel: "so a developer reaches first success in minutes with zero help"
+    "so a developer reaches first success in minutes with zero help"
 
 **Prerequisites:** [Golden paths](golden-paths.md)
 
@@ -31,7 +31,7 @@ machine already has everything.
 
 ## Why the job asks for it
 
-Intel names cold-start testing *of quickstarts* specifically, out of everything
+The Developer Relations posting names cold-start testing *of quickstarts* specifically, out of everything
 it could have named. That phrasing tells you they have been burned by a
 quickstart that worked for its author.
 
@@ -204,7 +204,7 @@ automating this page's verification rather than reviewing it.
 
 ### Time to first success
 
-Intel's criterion is minutes. To claim it you have to measure it, which means
+The Developer Relations posting's criterion is minutes. To claim it you have to measure it, which means
 timing the cold-start run and publishing the number:
 
 | What to time | Why |
@@ -281,4 +281,4 @@ of the three claims.
 - [Golden paths](golden-paths.md), the single route this implements
 - [Cold-start testing](coldstart-testing.md), how the first claim is checked
 - [Reproducible environments](reproducible-environments.md), where pinning is decided
-- [Time to first success](time-to-first-success.md), the number Intel asks for
+- [Time to first success](time-to-first-success.md), the number the Developer Relations posting asks for

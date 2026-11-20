@@ -11,8 +11,8 @@ tags: [qa, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
+!!! quote "Why it is on the curriculum"
+    "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
 
 **Prerequisites:** [GitHub Actions for docs](github-actions.md)
 
@@ -30,7 +30,7 @@ rather than about building.
 
 ## Why the job asks for it
 
-NVIDIA lists publishing as part of the pipeline. The reason it belongs in a
+The KnowledgeOps posting lists publishing as part of the pipeline. The reason it belongs in a
 quality category rather than an infrastructure one is that previews are the
 single most effective fix for the biggest objection to
 [docs-as-code](docs-as-code.md): that non-engineer contributors and reviewers

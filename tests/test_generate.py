@@ -57,9 +57,7 @@ concepts:
     time: 1h
     prerequisites: []
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "we need alpha for the thing"
+      - "we need alpha for the thing"
     status: planned
   - id: beta
     name: Beta
@@ -69,9 +67,7 @@ concepts:
     time: 2h
     prerequisites: [alpha]
     demanded_by:
-      - source: intel
-        provenance: derived
-        quote: "beta follows from alpha"
+      - "beta follows from alpha"
     status: planned
 paths:
   - id: short
@@ -180,12 +176,12 @@ def test_coverage_lists_every_category_that_has_concepts(registry):
             assert f"## {label}" in text
 
 
-def test_coverage_prints_the_provenance_of_every_row(registry):
+def test_coverage_prints_the_line_behind_every_row(registry):
     """The guide's credibility rests on this being visible, not aggregated away."""
     text = coverage_page(registry)
     for concept in registry.concepts:
-        demand = concept.demanded_by[0]
-        assert f"*{demand.source}, {demand.provenance}:*" in text
+        quote = concept.demanded_by[0].quote
+        assert quote[:60] in text, f"{concept.id} has no line in the coverage table"
 
 
 def test_coverage_escapes_pipes_so_the_table_survives(registry):
@@ -398,16 +394,10 @@ def test_the_scaffold_will_not_overwrite_an_existing_page(registry):
         new_concept_page(registry, REPO / "docs", written.id)
 
 
-def test_the_scaffold_marks_a_derived_claim_as_not_a_quotation(registry):
-    concept = next(c for c in registry.concepts if not c.has_evidence)
-    text = render_concept_page(registry, concept.id)
-    assert "Not a quotation" in text
-
-
-def test_the_scaffold_quotes_verbatim_claims_as_blockquotes(registry):
+def test_the_scaffold_prints_the_line_as_a_blockquote(registry):
     concept = next(c for c in registry.concepts if c.has_evidence)
     text = render_concept_page(registry, concept.id)
-    assert "posting, verbatim" in text
+    assert f"> {concept.demanded_by[0].quote}" in text
 
 
 # ------------------------------------------------------- the demonstration map

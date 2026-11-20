@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > including llms.txt, MCP-accessible sources, agent skills and context kits, and evaluation sets for answer accuracy
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Agent-ready content](agent-ready-content.md)
 
@@ -30,7 +29,7 @@ present it internally.
 
 ## Why the job asks for it
 
-NVIDIA names the file explicitly, in a list of four AI-ready outputs. That is
+The KnowledgeOps posting names the file explicitly, in a list of four AI-ready outputs. That is
 the whole justification, and it is a `core` concept for a cheaper reason than
 most: it takes an afternoon and it is the single most visible signal that a
 documentation team has thought about machine consumers at all.

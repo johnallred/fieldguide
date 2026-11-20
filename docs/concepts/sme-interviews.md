@@ -13,7 +13,6 @@ tags: [craft, core]
 
 > Turning documentation, standards, and tribal knowledge into tooling, templates, and self-service paths
 
-> Source: nvidia posting, verbatim
 
 **Leads to:** [Playbooks and decision guides](playbooks.md), [Working with engineers as sources](working-with-engineers.md)
 
@@ -29,7 +28,7 @@ should take, and the second part is where most of the value is.
 
 ## Why the job asks for it
 
-NVIDIA names it twice. Once in the framing: "turning documentation, standards,
+The KnowledgeOps posting names it twice. Once in the framing: "turning documentation, standards,
 and tribal knowledge into tooling, templates, and self-service paths, so fewer
 people have to ask how do I". Once as a responsibility: "Capture tribal
 knowledge from engineering, product, and operations, and turn it into playbooks,
@@ -322,7 +321,7 @@ that genuinely recurred. Not an overview.
    the knowledge is not a fact.
 2. **Count the interruptions before and after.** Ask the expert, a month later,
    whether the question stopped. That number is the whole argument, and it is
-   what NVIDIA means by "measurable reductions in support load".
+   what the KnowledgeOps posting means by "measurable reductions in support load".
 3. **Find one case where the answer was code.** A judgement that could be a
    default, a warning, or a validator. Propose it. Being the documentation person
    who argues for changing a default rather than documenting it is memorable.

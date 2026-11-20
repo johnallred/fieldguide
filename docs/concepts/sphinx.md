@@ -11,8 +11,8 @@ tags: [dac, core]
 
 `core` · difficulty 3 · 6h
 
-!!! quote "Asked for by name"
-    NVIDIA: "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+!!! quote "Why it is on the curriculum"
+    "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
 
 **Prerequisites:** [Choosing a static site generator](static-site-generators.md), [reStructuredText](restructuredtext.md)
 

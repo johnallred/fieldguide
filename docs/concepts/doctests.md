@@ -11,8 +11,8 @@ tags: [qa, supporting]
 
 `supporting` · difficulty 2 · 2h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
+!!! quote "Why it is on the curriculum"
+    "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
 
 **Prerequisites:** [Code-sample validation](code-sample-validation.md)
 
@@ -29,7 +29,7 @@ edited separately.
 
 ## Why the job asks for it
 
-NVIDIA asks for doc test harnesses. Doctests are the version of that which
+The KnowledgeOps posting asks for doc test harnesses. Doctests are the version of that which
 costs nothing to adopt: one flag in `pyproject.toml` and every docstring
 example is executed on every run.
 

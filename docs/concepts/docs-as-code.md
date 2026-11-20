@@ -29,8 +29,8 @@ long chain of tooling decisions afterwards.
 ## Why the job asks for it
 
 Neither posting uses the phrase. Both describe its consequences, which is more
-telling: Intel asks for Git authoring, CI/CD builds, linting, link validation
-and publishing as separate bullets, and NVIDIA asks for standards encoded into
+telling: the Developer Relations posting asks for Git authoring, CI/CD builds, linting, link validation
+and publishing as separate bullets, and the KnowledgeOps posting asks for standards encoded into
 validators. Those are all things you can only do to documentation that lives in
 a repository.
 

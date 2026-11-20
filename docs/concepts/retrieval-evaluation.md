@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > including llms.txt, MCP-accessible sources, agent skills and context kits, and evaluation sets for answer accuracy
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [RAG pipelines](rag.md)
 
@@ -31,7 +30,7 @@ is **useful** rather than whether it is **correct**.
 
 ## Why the job asks for it
 
-NVIDIA names it directly: "evaluation sets for answer accuracy", listed
+The KnowledgeOps posting names it directly: "evaluation sets for answer accuracy", listed
 alongside llms.txt and MCP as a required AI-ready output. It is the rarest of
 the four in practice and the most diagnostic of whether a team is serious.
 

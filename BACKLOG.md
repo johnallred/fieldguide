@@ -22,7 +22,7 @@ missing demonstrations and applies equally here.
   dom     Domain context                0/6
 ```
 
-Measurement and automation are the two categories the NVIDIA posting leans on
+Measurement and automation are the two categories the KnowledgeOps posting leans on
 hardest, "measurable reductions in support load" and "Python proficiency to
 automate content tasks, transform data, and integrate with APIs", and a reader
 who arrives wanting exactly that has no curated route through either.

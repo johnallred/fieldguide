@@ -13,7 +13,6 @@ tags: [craft, core]
 
 > Enough technical depth to read code and APIs, verify accuracy, and write working examples
 
-> Source: nvidia posting, verbatim
 
 ## What it is
 
@@ -26,7 +25,7 @@ an unfamiliar codebase well enough to answer one factual question, then get out.
 
 ## Why the job asks for it
 
-NVIDIA puts this in minimum qualifications, and the phrasing is precise: "enough
+The KnowledgeOps posting puts this in minimum qualifications, and the phrasing is precise: "enough
 technical depth to read code and APIs, verify accuracy, and write working
 examples." The word doing the work is **enough**. They are not asking you to
 contribute to the simulation engine. They are asking you to stop being dependent
@@ -244,7 +243,7 @@ That last clause is the one that gets remembered, because it is
 
 **The follow-up is "what do you do when you cannot read the code",** meaning a
 compiled component, a service you have no access to, a C++ simulation kernel.
-This is a real situation at NVIDIA in particular. The honest answer has three
+This is a real situation at the KnowledgeOps posting in particular. The honest answer has three
 parts. Read the public API surface and the tests, which are usually available
 even when the implementation is not. Verify behaviour by running it and
 observing, which is slower but authoritative. And when neither is possible,

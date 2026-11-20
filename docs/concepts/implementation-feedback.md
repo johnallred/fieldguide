@@ -13,7 +13,6 @@ tags: [craft, core]
 
 > sharing implementation feedback (what works, breaks, and scales) to refine content models, information architecture, and AI-readiness patterns
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [A systems mindset](systems-mindset.md)
 
@@ -28,7 +27,7 @@ failure, this proposal.
 
 ## Why the job asks for it
 
-This is the most distinctive thing in the NVIDIA posting and the easiest to skim
+This is the most distinctive thing in the KnowledgeOps posting and the easiest to skim
 past. Read the two bullets together:
 
 "Collaborate with documentation leads on knowledge architecture, sharing
@@ -267,7 +266,7 @@ pages is worth an hour; a rule you personally find annoying is not.
 sees things the architect cannot.** A content model is a hypothesis about a
 corpus, and the corpus is the only thing that can falsify it. Saying that out
 loud reframes the feedback obligation from politeness to epistemics, which is
-much closer to how NVIDIA's posting describes it, and it explains why they
+much closer to how the KnowledgeOps posting describes it, and it explains why they
 wanted this as a named requirement rather than assuming it.
 
 ## How to prove it

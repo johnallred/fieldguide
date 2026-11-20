@@ -11,15 +11,15 @@ tags: [meas, core]
 
 `core` · difficulty 3 · 5h
 
-!!! quote "Asked for by name"
-    NVIDIA: "AI answer quality"
+!!! quote "Why it is on the curriculum"
+    "AI answer quality"
 
 **Prerequisites:** [Output evaluation](output-evaluation.md), [Documentation analytics](docs-analytics.md)
 
 ## What it is
 
 Measuring whether an assistant answering from your corpus answers correctly.
-NVIDIA lists it as a metric the role owns, which makes documentation partly
+The KnowledgeOps posting lists it as a metric the role owns, which makes documentation partly
 responsible for a system it does not control: the model is someone else's, the
 prompt is often someone else's, and the only input the documentation team owns
 is the corpus.
@@ -160,7 +160,7 @@ what the measurement does not cover.
 | Answer correctness | Was it built correctly | The system | A model call per case |
 | Answer usefulness | Did it help the reader | The product | A human per case |
 
-NVIDIA's bullet names the second and a documentation role can only move the
+The KnowledgeOps posting's bullet names the second and a documentation role can only move the
 first, which is a reasonable division: the first is a ceiling on the second.
 
 ### Metrics worth running, in order of cost

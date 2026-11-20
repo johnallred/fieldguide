@@ -13,7 +13,6 @@ tags: [craft, context]
 
 > deliver Simulation Technology knowledge to developers, partners, internal teams, and the AI agents that increasingly sit between them and our documentation
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Metadata for navigation and retrieval](metadata.md)
 
@@ -27,7 +26,7 @@ publishes something it should not.
 
 ## Why the job asks for it
 
-It is the first sentence of the NVIDIA posting, and the list is deliberate:
+It is the first sentence of the KnowledgeOps posting, and the list is deliberate:
 developers, partners, internal teams, and AI agents. Later, among the partner
 functions, "Partner Programs".
 

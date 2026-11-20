@@ -11,14 +11,14 @@ tags: [gp, core]
 
 `core` · difficulty 3 · 5h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents"
+!!! quote "Why it is on the curriculum"
+    "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents"
 
 **Prerequisites:** [Templates and scaffolding](templates-scaffolding.md)
 
 ## What it is
 
-The third thing on NVIDIA's list, and the most ambitious. A
+The third thing on the KnowledgeOps posting's list, and the most ambitious. A
 [template](templates-scaffolding.md) gives you a correctly shaped artifact. A
 validator tells you whether an artifact is correct. A guided workflow **walks
 you through a process**, checking as it goes, so that completing it is the same
@@ -39,7 +39,7 @@ that means "I did not look". A guided workflow answers the question instead of
 asking it, and the difference is not convenience: it is whether the record is
 true.
 
-NVIDIA's phrase is again **rather than static documents**. The standard that
+The KnowledgeOps posting's phrase is again **rather than static documents**. The standard that
 exists as a page is a standard whose compliance is self-reported.
 
 ## The golden path
@@ -160,7 +160,7 @@ trips.
 
 ## Reference
 
-### The three forms NVIDIA names
+### The three forms the KnowledgeOps posting names
 
 | Form | Gives you | Tells you | Walks you |
 |---|---|---|---|
@@ -235,7 +235,7 @@ function can serve both, and the presentation is the difference.
 **Lead with the self-report problem.** "A checklist asks the reader to decide
 whether an item is done, which means checking 121 pages or guessing, and under
 deadline it is a guess. A guided workflow answers the question instead of
-asking it, so the record means something. That is why NVIDIA says workflows
+asking it, so the record means something. That is why the KnowledgeOps posting says workflows
 rather than static documents."
 
 **The follow-up is sequencing, and it is the measurement worth bringing.** The

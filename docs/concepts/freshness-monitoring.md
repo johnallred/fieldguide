@@ -11,8 +11,8 @@ tags: [qa, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Automate the content lifecycle with LLMs and scripting, from drafting and updating to auditing, with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters"
+!!! quote "Why it is on the curriculum"
+    "Automate the content lifecycle with LLMs and scripting, from drafting and updating to auditing, with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters"
 
 **Prerequisites:** [Content lifecycle](content-lifecycle.md), [Documentation CI](documentation-ci.md)
 
@@ -25,7 +25,7 @@ staleness and the two are only loosely correlated.
 
 ## Why the job asks for it
 
-NVIDIA groups freshness with code accuracy and terminology drift as the three
+The KnowledgeOps posting groups freshness with code accuracy and terminology drift as the three
 things content auditing should cover. They share a shape: correct when written,
 falsified by something that happened elsewhere.
 

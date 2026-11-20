@@ -13,7 +13,6 @@ tags: [craft, core]
 
 > Strong technical writing and information architecture skills for developer documentation
 
-> Source: intel posting, verbatim
 
 **Leads to:** [Giving architecture owners implementation feedback](implementation-feedback.md)
 
@@ -28,8 +27,8 @@ feedback, and that people who are good at it can say *why* a sentence is wrong.
 
 ## Why the job asks for it
 
-Both postings list it as a minimum qualification. Intel asks for "strong
-technical writing" in the same breath as information architecture; NVIDIA opens
+Both postings list it as a minimum qualification. The Developer Relations posting asks for "strong
+technical writing" in the same breath as information architecture; the KnowledgeOps posting opens
 with "You're a writer who builds" and wants eight years in technical writing or
 developer documentation.
 

@@ -11,7 +11,7 @@ tags: [meas, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Adjacent, not quoted"
+!!! quote "Why it is on the curriculum"
     Not named in either posting. The input that turns a hand-written evaluation set into a representative one.
 
 **Prerequisites:** [Findability and search design](findability.md), [Documentation analytics](docs-analytics.md)
@@ -228,7 +228,7 @@ collection; it is a reason to collect the aggregate rather than the transcript.
 ### Why this concept is adjacent rather than quoted
 
 Neither posting names search logs, and both ask for measurement that depends on
-them. NVIDIA's "AI answer quality" and "repeat questions" are each evaluation
+them. The KnowledgeOps posting's "AI answer quality" and "repeat questions" are each evaluation
 over a question set, and a question set without query data is the author's
 guess about readers, which is exactly the gap step 4 measures.
 

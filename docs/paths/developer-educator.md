@@ -9,7 +9,7 @@ generated: true
 
 # The developer educator
 
-**Who this is for.** The Intel posting's curriculum half.
+**Who this is for.** The Developer Relations posting's curriculum half.
 
 Taking a developer from a clean environment to a working result, repeatably.
 

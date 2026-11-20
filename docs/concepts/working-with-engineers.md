@@ -13,7 +13,6 @@ tags: [craft, supporting]
 
 > Partner with Engineering, Product, Security, Developer Relations, and Partner Programs so every release ships documented, discoverable, and supportable
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Extracting tribal knowledge](sme-interviews.md), [Reviewing documentation](docs-review.md)
 
@@ -28,9 +27,9 @@ the cheapest thing they can give is worth more than being well liked.
 
 ## Why the job asks for it
 
-NVIDIA lists five partner functions by name and attaches an outcome to the
+The KnowledgeOps posting lists five partner functions by name and attaches an outcome to the
 partnership: "so every release ships documented, discoverable, and
-supportable". Intel's version is "Partner with engineering, product, and
+supportable". The Developer Relations posting's version is "Partner with engineering, product, and
 developer advocates so each new capability ships with tested documentation."
 
 Both are asking for the same thing, which is that documentation stops being a
@@ -235,7 +234,7 @@ this relationship sustainable over years.
 | Reporting their mistake to their manager | Never recoverable |
 | Asking the same thing twice because you did not write it down | Signals their time is cheap |
 
-### The partner functions NVIDIA names, and what each wants
+### The partner functions the KnowledgeOps posting names, and what each wants
 
 | Function | What they need from docs | What they can give you |
 |---|---|---|
@@ -279,7 +278,7 @@ engineers care about documentation.** That is the trap, and it is where most
 documentation advocacy goes. You are trying to make the correct thing cost them
 nothing: a field in a template they already fill in, a check that fails without
 anyone's attention, a question answerable in ten seconds. Caring is not a
-mechanism. Saying that plainly is unusual and it is exactly what NVIDIA's
+mechanism. Saying that plainly is unusual and it is exactly what the KnowledgeOps posting's
 "systems where the right way is easier than the wrong way" means when applied
 to people.
 

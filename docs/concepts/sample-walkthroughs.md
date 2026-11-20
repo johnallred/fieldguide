@@ -11,8 +11,8 @@ tags: [gp, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    Intel: "Write and maintain reference documentation, tutorials, and sample walkthroughs that assume no prior context"
+!!! quote "Why it is on the curriculum"
+    "Write and maintain reference documentation, tutorials, and sample walkthroughs that assume no prior context"
 
 **Prerequisites:** [Designing tutorials](tutorial-design.md)
 
@@ -32,11 +32,11 @@ lives somewhere else.
 
 ## Why the job asks for it
 
-Intel lists walkthroughs alongside reference and tutorials, which is the right
+The Developer Relations posting lists walkthroughs alongside reference and tutorials, which is the right
 company: all three are the explain-this-thing layer rather than the get-started
 layer.
 
-Walkthroughs matter disproportionately for a sample gallery, which Intel also
+Walkthroughs matter disproportionately for a sample gallery, which the Developer Relations posting also
 names. A gallery of twenty samples with no walkthroughs is twenty repositories
 a reader has to reverse-engineer. The walkthrough is what converts a sample
 from a thing you can run into a thing you can learn from.

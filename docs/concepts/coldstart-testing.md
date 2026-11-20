@@ -11,10 +11,10 @@ tags: [qa, core]
 
 `core` · difficulty 3 · 5h
 
-!!! quote "Asked for by name"
-    Intel: "Build and maintain docsascode pipelines and documentation CI, including link checking and coldstart testing of quickstarts"
+!!! quote "Why it is on the curriculum"
+    "Build and maintain docsascode pipelines and documentation CI, including link checking and coldstart testing of quickstarts"
 
-    Intel: "Treats setup, runnable samples, and docs as one product ... so a developer reaches first success in minutes with zero help"
+    "Treats setup, runnable samples, and docs as one product ... so a developer reaches first success in minutes with zero help"
 
 **Prerequisites:** [Code-sample validation](code-sample-validation.md), [Reproducible environments](reproducible-environments.md)
 
@@ -25,7 +25,7 @@ environment, a clean container, no caches, no credentials the instructions did
 not mention. The test is not whether the commands work. It is whether the
 *document* is complete.
 
-Intel names it explicitly, which is unusual and tells you something about what
+The Developer Relations posting names it explicitly, which is unusual and tells you something about what
 they have been burned by.
 
 ## Why the job asks for it
@@ -40,7 +40,7 @@ Then a developer who has none of that follows it and hits `ModuleNotFoundError`
 on step two. That developer is now evaluating your product on the basis of a
 document that was never true for anyone but its author.
 
-Intel's phrasing is "first success in minutes with zero help." Cold-start
+The Developer Relations posting's phrasing is "first success in minutes with zero help." Cold-start
 testing is the only mechanism that measures whether that claim holds, and it is
 why they list setup, samples and docs as one product. A quickstart is not prose
 with code in it. It is an executable artifact that happens to be readable.

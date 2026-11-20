@@ -12,7 +12,7 @@ tags: [dac, context]
 `context` · difficulty 2 · 3h
 
 !!! note "Not a quotation (adjacent)"
-    Covered only by "or similar" in NVIDIA's list of generators. Worth
+    Covered only by "or similar" in the KnowledgeOps posting's list of generators. Worth
     recognising, rarely worth choosing for a new project, and the one answer to
     a problem the others cannot solve.
 

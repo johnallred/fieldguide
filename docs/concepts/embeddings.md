@@ -12,7 +12,7 @@ tags: [ai, core]
 `core` · difficulty 2 · 4h
 
 !!! note "Not a quotation (derived)"
-    Required by any RAG pipeline, and NVIDIA names RAG pipelines twice.
+    Required by any RAG pipeline, and the KnowledgeOps posting names RAG pipelines twice.
 
 **Prerequisites:** [Chunking strategies](chunking.md)
 
@@ -30,7 +30,7 @@ turns out to mean in practice, which is not always what you want.
 ## Why the job asks for it
 
 Neither posting says "embeddings", which is why this is tagged `derived`.
-NVIDIA asks for RAG pipelines twice, and there is no RAG pipeline without an
+The KnowledgeOps posting asks for RAG pipelines twice, and there is no RAG pipeline without an
 embedding step, so the inference is safe.
 
 What makes this `core` rather than a detail is that embeddings are where

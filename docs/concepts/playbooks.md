@@ -11,8 +11,8 @@ tags: [ia, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Capture tribal knowledge from engineering, product, and operations, and turn it into playbooks, decision guides, and self-service paths"
+!!! quote "Why it is on the curriculum"
+    "Capture tribal knowledge from engineering, product, and operations, and turn it into playbooks, decision guides, and self-service paths"
 
 **Prerequisites:** [Interviewing subject-matter experts](sme-interviews.md)
 
@@ -30,7 +30,7 @@ page with a lot of nested bullets.
 
 ## Why the job asks for it
 
-NVIDIA's bullet is the clearest statement of leverage anywhere in either
+The KnowledgeOps posting's bullet is the clearest statement of leverage anywhere in either
 posting: capture what individuals know and turn it into self-service paths, so
 fewer people have to ask "how do I…?".
 

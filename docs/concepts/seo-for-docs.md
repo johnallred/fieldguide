@@ -13,7 +13,6 @@ tags: [ai, supporting]
 
 > Optimize documentation for search (SEO and GEO) and for AI assistants and coding agents through agentready, LLMdigestible content
 
-> Source: intel posting, verbatim
 
 **Prerequisites:** [Metadata for navigation and retrieval](metadata.md)
 
@@ -32,10 +31,10 @@ rather than hand-tuned per page.
 
 ## Why the job asks for it
 
-Intel names it in a responsibility and again in minimum qualifications:
+The Developer Relations posting names it in a responsibility and again in minimum qualifications:
 "Experience optimizing technical content for search (SEO and GEO) and for AI
 assistants." That is unusual for an engineering-adjacent role and it tells you
-something about how Intel sees the job: the front door is a search result page
+something about how the Developer Relations posting sees the job: the front door is a search result page
 they do not own.
 
 On a Tuesday it is a specific recurring decision. An engineer titles a page
@@ -381,7 +380,7 @@ vocabulary-matching problems between a reader's phrasing and an author's. A
 summary written in the reader's words improves the search snippet, the retrieval
 snippet, the [llms.txt](llms-txt.md) annotation and the embedding, all at once,
 from one edit. That is why the content model's `summary` field is load-bearing
-far out of proportion to its size, and why "optimise for SEO and GEO" in Intel's
+far out of proportion to its size, and why "optimise for SEO and GEO" in the Developer Relations posting's
 posting is one task rather than two.
 
 ## How to prove it

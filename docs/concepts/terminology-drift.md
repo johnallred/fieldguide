@@ -11,8 +11,8 @@ tags: [qa, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Automate the content lifecycle with LLMs and scripting, from drafting and updating to auditing, with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters"
+!!! quote "Why it is on the curriculum"
+    "Automate the content lifecycle with LLMs and scripting, from drafting and updating to auditing, with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters"
 
 **Prerequisites:** [Taxonomy](taxonomy.md), [Prose linting with Vale](prose-linting.md)
 
@@ -30,7 +30,7 @@ the glossary, or accept that the term you chose lost.
 
 ## Why the job asks for it
 
-NVIDIA names it alongside freshness and code accuracy as one of three things
+The KnowledgeOps posting names it alongside freshness and code accuracy as one of three things
 the content lifecycle should be audited for. All three share a shape: the
 individual page was correct when written, and the world moved.
 

@@ -13,7 +13,6 @@ tags: [craft, supporting]
 
 > Encode standards (user stories, release readiness, onboarding, security guidance) into templates
 
-> Source: nvidia posting, verbatim
 
 ## What it is
 
@@ -23,10 +22,10 @@ page that cannot be stated as one story is usually more than one page.
 
 ## Why the job asks for it
 
-NVIDIA lists it first among the standards to encode "into templates, validators,
+The KnowledgeOps posting lists it first among the standards to encode "into templates, validators,
 and guided workflows rather than static documents". That placement is the
 interesting part. User stories are normally a product-planning artifact, and
-NVIDIA is asking for them as something a *template* enforces.
+The KnowledgeOps posting is asking for them as something a *template* enforces.
 
 Read that way, the requirement makes sense. The story format is a cheap test for
 the most common documentation defect, which is a page with no single reader in
@@ -248,7 +247,7 @@ bureaucracy?" Agree partly. The honest position: the value is in the ninety
 seconds of thought at authoring time, and the stored field is mostly a way to
 make that thinking non-optional. If a team already scopes pages well, the field
 is overhead. It earns its place on a corpus with many authors of varying
-experience, which is exactly the NVIDIA situation.
+experience, which is exactly the KnowledgeOps posting's situation.
 
 **The tradeoff to volunteer.** This is a required field, and every required
 field is friction on every contributor forever. On a corpus of twenty pages with

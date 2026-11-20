@@ -13,7 +13,6 @@ tags: [craft, core]
 
 > A systems mindset: you fix the class of problem, not just the instance
 
-> Source: nvidia posting, verbatim
 
 **Leads to:** [Giving architecture owners implementation feedback](implementation-feedback.md), [Prioritizing documentation work](docs-prioritization.md)
 
@@ -29,7 +28,7 @@ building a system for every instance is its own failure.
 
 ## Why the job asks for it
 
-NVIDIA names it as a required trait and spells it out, which is unusual for a
+The KnowledgeOps posting names it as a required trait and spells it out, which is unusual for a
 soft requirement. The surrounding language explains why: "We build systems where
 the right way is easier than the wrong way", and "turning documentation,
 standards, and tribal knowledge into tooling, templates, and self-service paths,
@@ -207,7 +206,7 @@ available, is to make the defect **unrepresentable**: a
 down, not merely that it is caught. A [generator](templates-scaffolding.md)
 means a conforming page is the path of least resistance.
 
-NVIDIA's phrase for this is "systems where the right way is easier than the
+The KnowledgeOps posting's phrase for this is "systems where the right way is easier than the
 wrong way", and it is a stronger claim than validation. Validation makes the
 right way mandatory, which is a different and more annoying thing.
 
@@ -242,7 +241,7 @@ discipline.
 a class, and the class fix is usually a template or a review checklist rather
 than a conversation. Most documentation people apply systems thinking to
 pipelines and instance thinking to humans. Saying that out loud is unusual and
-it is the thing NVIDIA's "collaborative style" bullet is circling.
+it is the thing the KnowledgeOps posting's "collaborative style" bullet is circling.
 
 ## How to prove it
 

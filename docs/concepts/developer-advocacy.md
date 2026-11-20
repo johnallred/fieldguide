@@ -11,13 +11,13 @@ tags: [edu, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    Intel: "Partner with engineering, product, and developer advocates so each new capability ships with tested documentation"
+!!! quote "Why it is on the curriculum"
+    "Partner with engineering, product, and developer advocates so each new capability ships with tested documentation"
 
 ## What it is
 
 The part of this job that happens in other people's meetings. Advocacy in the
-sense Intel's bullet means is not conference talks and not evangelism: it is
+sense the Developer Relations posting's bullet means is not conference talks and not evangelism: it is
 arranging that documentation is produced as part of shipping, by the people who
 built the thing, rather than reconstructed afterwards by someone who did not.
 
@@ -194,7 +194,7 @@ right version found on its first run.
 | Every capability is named where readers look | `render` missing from the quick start | Usable |
 | Every capability has a *tested* example | The honest target | Expensive, and correct |
 
-The last row is what Intel's sentence actually asks for, and it needs
+The last row is what the Developer Relations posting's sentence actually asks for, and it needs
 [code-sample validation](code-sample-validation.md) underneath it to mean
 anything.
 

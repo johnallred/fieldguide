@@ -11,8 +11,8 @@ tags: [ia, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Automate the content lifecycle with LLMs and scripting, from drafting and updating to auditing, with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters"
+!!! quote "Why it is on the curriculum"
+    "Automate the content lifecycle with LLMs and scripting, from drafting and updating to auditing, with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters"
 
 **Prerequisites:** [Content models](content-model.md)
 
@@ -24,7 +24,7 @@ The states a page moves through from proposal to retirement, who owns it in
 each state, and what has to be true before it moves. Governance is the part
 that says who decides.
 
-NVIDIA's phrasing names four activities: drafting, updating, auditing, and
+The KnowledgeOps posting's phrasing names four activities: drafting, updating, auditing, and
 human review where judgment matters. That last clause is the governance
 question, and it is the one that determines whether the first three are worth
 automating.
@@ -36,7 +36,7 @@ Because a corpus without a lifecycle has exactly one state, which is
 be a draft, cannot be flagged for review, and cannot be retired, so the corpus
 only ever grows.
 
-The automation NVIDIA asks for is downstream of the states. You cannot automate
+The automation the KnowledgeOps posting asks for is downstream of the states. You cannot automate
 auditing without a definition of what is due for audit, and that definition is
 a lifecycle state plus a date. Teams that try to add the automation first end
 up with a script producing a list nobody owns.
@@ -152,7 +152,7 @@ something different happens because a page is in it.
 
 ### What to automate and what not to
 
-NVIDIA's list, with the honest division:
+The KnowledgeOps posting's list, with the honest division:
 
 | Activity | Automatable | What stays human |
 |---|---|---|
@@ -163,7 +163,7 @@ NVIDIA's list, with the honest division:
 | Retiring | The mechanics | The decision |
 
 The pattern across every row: **measurement automates, judgment does not.**
-That is also NVIDIA's own framing, "human review where judgment matters", and
+That is also the KnowledgeOps posting's own framing, "human review where judgment matters", and
 echoing it back with this division is a strong answer.
 
 ### Making a state real
@@ -197,7 +197,7 @@ checks it. In my own registry, `complete` claims seven required sections and a
 minimum length, and all of those fail a build if they are not true. Before the
 checks existed, `complete` was an opinion."
 
-**The follow-up is NVIDIA's own clause**, human review where judgment matters,
+**The follow-up is the KnowledgeOps posting's own clause**, human review where judgment matters,
 and the division to offer is that measurement automates and judgment does not.
 Freshness, terminology drift and code accuracy are all measurable; whether a
 page should exist, and whether a proposed correction is right, are not.

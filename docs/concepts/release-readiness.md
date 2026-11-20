@@ -13,7 +13,6 @@ tags: [craft, core]
 
 > Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Documentation CI](documentation-ci.md)
 
@@ -25,14 +24,14 @@ gate in the release pipeline, not a policy document.
 
 ## Why the job asks for it
 
-NVIDIA names it inside a list of standards to encode, and the phrasing is the
+The KnowledgeOps posting names it inside a list of standards to encode, and the phrasing is the
 important part: "into templates, validators, and guided workflows **rather than
 static documents**". They are explicitly ruling out the usual artifact, which is
 a wiki page titled "Definition of Done" that everyone agreed to in a meeting two
 years ago.
 
 The outcome they attach to it is "so every release ships documented,
-discoverable, and supportable". Intel's version: "so each new capability ships
+discoverable, and supportable". The Developer Relations posting's version: "so each new capability ships
 with tested documentation".
 
 On a Tuesday this is the recurring unpleasant conversation. A capability shipped

@@ -20,18 +20,14 @@
 #   difficulty    1 read it  2 practise it  3 build something non-trivial
 #   time          honest estimate to working competence, not to familiarity
 #   prerequisites concept ids that should come first. Validated as a DAG.
-#   demanded_by   which posting asks for it, and how.
-#                   provenance: quoted   verbatim from the posting text
-#                               derived  the posting requires it, paraphrased
-#                               adjacent neither posting names it, and the
-#                                        named work is impossible without it
+#   demanded_by   the posting language that puts this concept on the list
 #   status        planned | drafted | complete
 #
 # ---------------------------------------------------------------------------
 # On provenance, and a limitation worth stating plainly
 # ---------------------------------------------------------------------------
 #
-# The Intel Developer Relations and NVIDIA KnowledgeOps postings were read in
+# A Developer Relations posting and a KnowledgeOps posting were read in
 # full when this registry was built, and the `quoted` entries are verbatim
 # phrases recorded at that time. The posting text itself is no longer on hand,
 # so entries marked `derived` are reconstructions of requirements rather than
@@ -67,9 +63,7 @@ concepts:
     time: 4h
     prerequisites: []
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Information architecture skills: content modeling, taxonomy, and metadata for both navigation and machine retrieval"
+      - "Information architecture skills: content modeling, taxonomy, and metadata for both navigation and machine retrieval"
     status: complete
 
   - id: knowledge-architecture
@@ -80,9 +74,7 @@ concepts:
     time: 6h
     prerequisites: [information-architecture]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Collaborate with documentation leads on knowledge architecture"
+      - "Collaborate with documentation leads on knowledge architecture"
     status: complete
 
   - id: diataxis
@@ -93,9 +85,7 @@ concepts:
     time: 2h
     prerequisites: [information-architecture]
     demanded_by:
-      - source: both
-        provenance: adjacent
-        quote: "The dominant framework for documentation structure. Neither posting names it; both describe the problem it solves."
+      - "The dominant framework for documentation structure. Neither posting names it; both describe the problem it solves."
     status: complete
 
   - id: content-model
@@ -106,9 +96,7 @@ concepts:
     time: 4h
     prerequisites: [information-architecture]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "content modeling, taxonomy, and metadata"
+      - "content modeling, taxonomy, and metadata"
     status: complete
 
   - id: taxonomy
@@ -119,9 +107,7 @@ concepts:
     time: 3h
     prerequisites: [content-model]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "content modeling, taxonomy, and metadata"
+      - "content modeling, taxonomy, and metadata"
     status: complete
 
   - id: metadata
@@ -132,9 +118,7 @@ concepts:
     time: 3h
     prerequisites: [content-model]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "metadata for both navigation and machine retrieval"
+      - "metadata for both navigation and machine retrieval"
     status: complete
 
   - id: content-lifecycle
@@ -145,9 +129,7 @@ concepts:
     time: 3h
     prerequisites: [content-model]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "automate the content lifecycle with LLMs: drafting, updating, auditing"
+      - "automate the content lifecycle with LLMs: drafting, updating, auditing"
     status: complete
 
   - id: single-sourcing
@@ -158,9 +140,7 @@ concepts:
     time: 3h
     prerequisites: [content-model]
     demanded_by:
-      - source: both
-        provenance: adjacent
-        quote: "Neither posting mentions single-sourcing. The mechanism behind every claim about scaling documentation across products."
+      - "Neither posting mentions single-sourcing. The mechanism behind every claim about scaling documentation across products."
     status: complete
 
   - id: style-guide
@@ -171,9 +151,7 @@ concepts:
     time: 2h
     prerequisites: [taxonomy]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "as comfortable in Git, CI, or Python as in a style guide"
+      - "as comfortable in Git, CI, or Python as in a style guide"
     status: complete
 
   - id: findability
@@ -184,9 +162,7 @@ concepts:
     time: 3h
     prerequisites: [metadata]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "makes documentation discoverable and usable by both developers and AI assistants"
+      - "makes documentation discoverable and usable by both developers and AI assistants"
     status: complete
 
   # =========================================================================
@@ -201,9 +177,7 @@ concepts:
     time: 2h
     prerequisites: []
     demanded_by:
-      - source: both
-        provenance: quoted
-        quote: "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
+      - "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
     status: complete
 
   - id: git-authoring
@@ -214,9 +188,7 @@ concepts:
     time: 4h
     prerequisites: [docs-as-code]
     demanded_by:
-      - source: both
-        provenance: quoted
-        quote: "Hands-on docs-as-code experience: Git, pull request review, Markdown/RST, static site generators"
+      - "Hands-on docs-as-code experience: Git, pull request review, Markdown/RST, static site generators"
     status: complete
 
   - id: markdown
@@ -227,9 +199,7 @@ concepts:
     time: 2h
     prerequisites: [docs-as-code]
     demanded_by:
-      - source: both
-        provenance: quoted
-        quote: "Markdown/RST (NVIDIA); Git, Markdown or MDX, and doc build pipelines (Intel)"
+      - "Markdown/RST; Git, Markdown or MDX, and doc build pipelines"
     status: complete
 
   - id: mdx
@@ -240,9 +210,7 @@ concepts:
     time: 3h
     prerequisites: [markdown]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "Hands on experience with docs-as-code workflows and documentation CI, including Git, Markdown or MDX"
+      - "Hands on experience with docs-as-code workflows and documentation CI, including Git, Markdown or MDX"
     status: complete
 
   - id: restructuredtext
@@ -253,9 +221,7 @@ concepts:
     time: 3h
     prerequisites: [markdown]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Markdown/RST"
+      - "Markdown/RST"
     status: complete
 
   - id: static-site-generators
@@ -266,9 +232,7 @@ concepts:
     time: 3h
     prerequisites: [markdown]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+      - "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
     status: complete
 
   - id: mkdocs
@@ -279,9 +243,7 @@ concepts:
     time: 4h
     prerequisites: [static-site-generators]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+      - "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
     status: complete
 
   - id: sphinx
@@ -292,9 +254,7 @@ concepts:
     time: 6h
     prerequisites: [static-site-generators, restructuredtext]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+      - "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
     status: complete
 
   - id: docusaurus
@@ -305,9 +265,7 @@ concepts:
     time: 5h
     prerequisites: [static-site-generators, mdx]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+      - "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
     status: complete
 
   - id: antora
@@ -318,9 +276,7 @@ concepts:
     time: 3h
     prerequisites: [static-site-generators]
     demanded_by:
-      - source: nvidia
-        provenance: adjacent
-        quote: "Covered only by 'or similar' in NVIDIA's list of generators. Worth recognising, rarely worth choosing new."
+      - "Covered only by 'or similar' in one posting's list of generators. Worth recognising, rarely worth choosing new."
     status: complete
 
   - id: api-reference-generation
@@ -331,9 +287,7 @@ concepts:
     time: 4h
     prerequisites: [docs-as-code]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "Write and maintain reference documentation, tutorials, and sample walkthroughs that assume no prior context"
+      - "Write and maintain reference documentation, tutorials, and sample walkthroughs that assume no prior context"
     status: complete
 
   - id: openapi
@@ -344,9 +298,7 @@ concepts:
     time: 4h
     prerequisites: [api-reference-generation]
     demanded_by:
-      - source: both
-        provenance: adjacent
-        quote: "Neither posting mentions OpenAPI. The standard contract format for any HTTP surface you will document."
+      - "Neither posting mentions OpenAPI. The standard contract format for any HTTP surface you will document."
     status: complete
 
   - id: versioning
@@ -357,9 +309,7 @@ concepts:
     time: 3h
     prerequisites: [static-site-generators]
     demanded_by:
-      - source: both
-        provenance: adjacent
-        quote: "Neither posting mentions versioned docs. Unavoidable for any platform that ships releases, which is both of these."
+      - "Neither posting mentions versioned docs. Unavoidable for any platform that ships releases, which is both of these."
     status: complete
 
   - id: localization
@@ -370,9 +320,7 @@ concepts:
     time: 4h
     prerequisites: [content-model, single-sourcing]
     demanded_by:
-      - source: both
-        provenance: adjacent
-        quote: "Neither posting mentions localization. Included because a platform documentation role at Intel or NVIDIA scale eventually meets it."
+      - "Neither posting mentions localization. Included because a platform documentation role at that scale eventually meets it."
     status: complete
 
   # =========================================================================
@@ -387,9 +335,7 @@ concepts:
     time: 4h
     prerequisites: [docs-as-code, git-authoring]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "documentation CI"
+      - "documentation CI"
     status: complete
 
   - id: github-actions
@@ -400,9 +346,7 @@ concepts:
     time: 4h
     prerequisites: [documentation-ci]
     demanded_by:
-      - source: both
-        provenance: derived
-        quote: "CI/CD is named by both; GitHub Actions is the most common implementation of it."
+      - "CI/CD is named by both; GitHub Actions is the most common implementation of it."
     status: complete
 
   - id: prose-linting
@@ -413,9 +357,7 @@ concepts:
     time: 3h
     prerequisites: [style-guide]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
+      - "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
     status: complete
 
   # The individual checks come before the practice of automating them. You run
@@ -430,9 +372,7 @@ concepts:
     time: 2h
     prerequisites: [docs-as-code]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "link checking"
+      - "link checking"
     status: complete
 
   - id: code-sample-validation
@@ -443,9 +383,7 @@ concepts:
     time: 5h
     prerequisites: [docs-as-code]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "link and code-sample validation"
+      - "link and code-sample validation"
     status: complete
 
   - id: coldstart-testing
@@ -456,9 +394,7 @@ concepts:
     time: 5h
     prerequisites: [code-sample-validation, reproducible-environments]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "coldstart testing of quickstarts"
+      - "coldstart testing of quickstarts"
     status: complete
 
   - id: doctests
@@ -469,9 +405,7 @@ concepts:
     time: 2h
     prerequisites: [code-sample-validation]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "doc test harnesses"
+      - "doc test harnesses"
     status: complete
 
   - id: accessibility
@@ -482,9 +416,7 @@ concepts:
     time: 3h
     prerequisites: [documentation-ci]
     demanded_by:
-      - source: both
-        provenance: adjacent
-        quote: "Neither posting mentions accessibility. Included because published content at either company is subject to it regardless."
+      - "Neither posting mentions accessibility. Included because published content at either company is subject to it regardless."
     status: complete
 
   - id: preview-deployments
@@ -495,9 +427,7 @@ concepts:
     time: 3h
     prerequisites: [github-actions]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "and publishing"
+      - "and publishing"
     status: complete
 
   - id: docs-review
@@ -508,9 +438,7 @@ concepts:
     time: 3h
     prerequisites: [git-authoring, style-guide]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Git, pull request review, Markdown/RST"
+      - "Git, pull request review, Markdown/RST"
     status: complete
 
   # =========================================================================
@@ -525,9 +453,7 @@ concepts:
     time: 5h
     prerequisites: [diataxis]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result"
+      - "Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result"
     status: complete
 
   - id: quickstarts
@@ -538,9 +464,7 @@ concepts:
     time: 3h
     prerequisites: [golden-paths]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "coldstart testing of quickstarts"
+      - "coldstart testing of quickstarts"
     status: complete
 
   - id: tutorial-design
@@ -551,9 +475,7 @@ concepts:
     time: 4h
     prerequisites: [diataxis]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "tutorial"
+      - "tutorial"
     status: complete
 
   - id: sample-walkthroughs
@@ -564,9 +486,7 @@ concepts:
     time: 3h
     prerequisites: [tutorial-design]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "sample walkthrough"
+      - "sample walkthrough"
     status: complete
 
   - id: sample-apps
@@ -577,9 +497,7 @@ concepts:
     time: 6h
     prerequisites: [sample-walkthroughs, code-sample-validation]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "the sample-app gallery"
+      - "the sample-app gallery"
     status: complete
 
   - id: templates-scaffolding
@@ -590,9 +508,7 @@ concepts:
     time: 3h
     prerequisites: [content-model]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "encode standards into templates, validators, and guided workflows"
+      - "encode standards into templates, validators, and guided workflows"
     status: complete
 
   - id: reproducible-environments
@@ -603,9 +519,7 @@ concepts:
     time: 4h
     prerequisites: [golden-paths]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "take a developer from a clean environment to a working result"
+      - "take a developer from a clean environment to a working result"
     status: complete
 
   # =========================================================================
@@ -620,9 +534,7 @@ concepts:
     time: 4h
     prerequisites: [content-model, metadata]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Make knowledge AI-ready"
+      - "Make knowledge AI-ready"
     status: complete
 
   - id: llms-txt
@@ -633,9 +545,7 @@ concepts:
     time: 2h
     prerequisites: [agent-ready-content]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "including llms.txt, MCP-accessible sources, agent skills and context kits, and evaluation sets for answer accuracy"
+      - "including llms.txt, MCP-accessible sources, agent skills and context kits, and evaluation sets for answer accuracy"
     status: complete
 
   - id: chunking
@@ -646,9 +556,7 @@ concepts:
     time: 5h
     prerequisites: [agent-ready-content]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "structure and package content for RAG, internal assistants, and agentic workflows"
+      - "structure and package content for RAG, internal assistants, and agentic workflows"
     status: complete
 
   - id: embeddings
@@ -659,9 +567,7 @@ concepts:
     time: 4h
     prerequisites: [chunking]
     demanded_by:
-      - source: nvidia
-        provenance: derived
-        quote: "Required by any RAG pipeline, and NVIDIA names RAG pipelines twice."
+      - "Required by any RAG pipeline, and one posting names RAG pipelines twice."
     status: complete
 
   - id: vector-stores
@@ -672,9 +578,7 @@ concepts:
     time: 5h
     prerequisites: [embeddings]
     demanded_by:
-      - source: nvidia
-        provenance: derived
-        quote: "The retrieval half of a RAG pipeline, which NVIDIA names as a way to stand out."
+      - "The retrieval half of a RAG pipeline, named as a way to stand out."
     status: complete
 
   - id: rag
@@ -685,9 +589,7 @@ concepts:
     time: 8h
     prerequisites: [chunking, vector-stores]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Ways to stand out: experience building RAG pipelines, AI assistants, MCP servers"
+      - "Ways to stand out: experience building RAG pipelines, AI assistants, MCP servers"
     status: complete
 
   - id: retrieval-evaluation
@@ -698,9 +600,7 @@ concepts:
     time: 6h
     prerequisites: [rag]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "evaluation sets for answer accuracy"
+      - "evaluation sets for answer accuracy"
     status: complete
 
   - id: grounding
@@ -711,9 +611,7 @@ concepts:
     time: 4h
     prerequisites: [rag]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "prompting, retrieval and grounding, output evaluation"
+      - "prompting, retrieval and grounding, output evaluation"
     status: complete
 
   - id: output-evaluation
@@ -724,9 +622,7 @@ concepts:
     time: 6h
     prerequisites: [grounding, retrieval-evaluation]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "prompting, retrieval and grounding, output evaluation"
+      - "prompting, retrieval and grounding, output evaluation"
     status: complete
 
   - id: prompting
@@ -737,9 +633,7 @@ concepts:
     time: 3h
     prerequisites: []
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Practical experience applying LLMs to content workflows (prompting, retrieval and grounding, output evaluation)"
+      - "Practical experience applying LLMs to content workflows (prompting, retrieval and grounding, output evaluation)"
     status: complete
 
   - id: llm-content-lifecycle
@@ -750,9 +644,7 @@ concepts:
     time: 6h
     prerequisites: [prompting, content-lifecycle]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "automate the content lifecycle with LLMs: drafting, updating, auditing"
+      - "automate the content lifecycle with LLMs: drafting, updating, auditing"
     status: complete
 
   - id: mcp
@@ -763,9 +655,7 @@ concepts:
     time: 5h
     prerequisites: [agent-ready-content]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Ways to stand out: experience building RAG pipelines, AI assistants, MCP servers"
+      - "Ways to stand out: experience building RAG pipelines, AI assistants, MCP servers"
     status: complete
 
   - id: agent-skills
@@ -776,9 +666,7 @@ concepts:
     time: 4h
     prerequisites: [mcp, templates-scaffolding]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "agent skills and context kits"
+      - "agent skills and context kits"
     status: complete
 
   - id: structured-data
@@ -789,9 +677,7 @@ concepts:
     time: 3h
     prerequisites: [metadata]
     demanded_by:
-      - source: intel
-        provenance: derived
-        quote: "Required by 'a crawlable, agent-ready front door': the machine-readable half of SEO and GEO."
+      - "Required by 'a crawlable, agent-ready front door': the machine-readable half of SEO and GEO."
     status: complete
 
   - id: seo-for-docs
@@ -802,9 +688,7 @@ concepts:
     time: 3h
     prerequisites: [metadata]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "documentation optimized for SEO and GEO"
+      - "documentation optimized for SEO and GEO"
     status: complete
 
   - id: geo
@@ -815,9 +699,7 @@ concepts:
     time: 3h
     prerequisites: [seo-for-docs, agent-ready-content]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "documentation optimized for SEO and GEO"
+      - "documentation optimized for SEO and GEO"
     status: complete
 
   - id: hallucination-guardrails
@@ -828,9 +710,7 @@ concepts:
     time: 4h
     prerequisites: [grounding, output-evaluation]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "sound judgment about where AI can be trusted"
+      - "sound judgment about where AI can be trusted"
     status: complete
 
   # =========================================================================
@@ -845,9 +725,7 @@ concepts:
     time: 4h
     prerequisites: [documentation-ci]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "Instrument documentation analytics and convert findings into improvements to docs, samples, and tooling"
+      - "Instrument documentation analytics and convert findings into improvements to docs, samples, and tooling"
     status: complete
 
   - id: time-to-first-success
@@ -858,9 +736,7 @@ concepts:
     time: 3h
     prerequisites: [docs-analytics, golden-paths]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "measure time-to-first-success, support deflection, repeat questions, and AI answer quality"
+      - "measure time-to-first-success, support deflection, repeat questions, and AI answer quality"
     status: complete
 
   - id: support-deflection
@@ -871,9 +747,7 @@ concepts:
     time: 3h
     prerequisites: [docs-analytics]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Measurable reductions in support load or onboarding time through self-service knowledge systems"
+      - "Measurable reductions in support load or onboarding time through self-service knowledge systems"
     status: complete
 
   - id: repeat-questions
@@ -884,9 +758,7 @@ concepts:
     time: 3h
     prerequisites: [support-deflection]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "repeat questions"
+      - "repeat questions"
     status: complete
 
   - id: search-log-analysis
@@ -897,9 +769,7 @@ concepts:
     time: 3h
     prerequisites: [findability, docs-analytics]
     demanded_by:
-      - source: nvidia
-        provenance: adjacent
-        quote: "Not named. The input that turns a hand-written evaluation set into a representative one."
+      - "Not named. The input that turns a hand-written evaluation set into a representative one."
     status: complete
 
   - id: ai-answer-quality
@@ -910,9 +780,7 @@ concepts:
     time: 5h
     prerequisites: [output-evaluation, docs-analytics]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "AI answer quality"
+      - "AI answer quality"
     status: complete
 
   # =========================================================================
@@ -927,9 +795,7 @@ concepts:
     time: 5h
     prerequisites: []
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result"
+      - "Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result"
     status: complete
 
   - id: learning-paths
@@ -940,9 +806,7 @@ concepts:
     time: 5h
     prerequisites: [instructional-design, diataxis]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "structured learning paths"
+      - "structured learning paths"
     status: complete
 
   - id: cognitive-load
@@ -953,9 +817,7 @@ concepts:
     time: 3h
     prerequisites: [instructional-design]
     demanded_by:
-      - source: intel
-        provenance: adjacent
-        quote: "Not named. The mechanism behind every claim about reaching first success in minutes."
+      - "Not named. The mechanism behind every claim about reaching first success in minutes."
     status: complete
 
   - id: assessment
@@ -966,9 +828,7 @@ concepts:
     time: 3h
     prerequisites: [instructional-design]
     demanded_by:
-      - source: intel
-        provenance: adjacent
-        quote: "Not named. The counterpart to cold-start testing: how you know the curriculum worked."
+      - "Not named. The counterpart to cold-start testing: how you know the curriculum worked."
     status: complete
 
   - id: workshops
@@ -979,9 +839,7 @@ concepts:
     time: 4h
     prerequisites: [learning-paths, reproducible-environments]
     demanded_by:
-      - source: both
-        provenance: adjacent
-        quote: "Neither posting mentions workshops. A standard developer-relations deliverable."
+      - "Neither posting mentions workshops. A standard developer-relations deliverable."
     status: complete
 
   - id: developer-advocacy
@@ -992,9 +850,7 @@ concepts:
     time: 3h
     prerequisites: []
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "Partner with engineering, product, and developer advocates so each new capability ships with tested documentation"
+      - "Partner with engineering, product, and developer advocates so each new capability ships with tested documentation"
     status: complete
 
   - id: screencasts
@@ -1005,9 +861,7 @@ concepts:
     time: 4h
     prerequisites: [tutorial-design]
     demanded_by:
-      - source: both
-        provenance: adjacent
-        quote: "Neither posting mentions video. A common secondary deliverable in developer-relations roles."
+      - "Neither posting mentions video. A common secondary deliverable in developer-relations roles."
     status: complete
 
   # =========================================================================
@@ -1022,9 +876,7 @@ concepts:
     time: 5h
     prerequisites: []
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
+      - "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
     status: complete
 
   - id: content-data-transformation
@@ -1035,9 +887,7 @@ concepts:
     time: 4h
     prerequisites: [python-for-content, content-model]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
+      - "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
     status: complete
 
   - id: api-integration
@@ -1048,9 +898,7 @@ concepts:
     time: 4h
     prerequisites: [python-for-content]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "automate content tasks, transform data, and integrate with APIs"
+      - "automate content tasks, transform data, and integrate with APIs"
     status: complete
 
   # =========================================================================
@@ -1065,9 +913,7 @@ concepts:
     time: 4h
     prerequisites: []
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Documentation experience in graphics, simulation, robotics, or real-time systems"
+      - "Documentation experience in graphics, simulation, robotics, or real-time systems"
     status: complete
 
   - id: usd-omniverse
@@ -1078,9 +924,7 @@ concepts:
     time: 4h
     prerequisites: []
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "familiarity with USD, Omniverse, Isaac Sim, or ROS"
+      - "familiarity with USD, Omniverse, Isaac Sim, or ROS"
     status: complete
 
   - id: robotics-sim
@@ -1091,9 +935,7 @@ concepts:
     time: 4h
     prerequisites: [usd-omniverse]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Documentation experience in graphics, simulation, robotics, or real-time systems; familiarity with USD, Omniverse, Isaac Sim, or ROS"
+      - "Documentation experience in graphics, simulation, robotics, or real-time systems; familiarity with USD, Omniverse, Isaac Sim, or ROS"
     status: complete
 
   - id: inference-serving
@@ -1104,9 +946,7 @@ concepts:
     time: 4h
     prerequisites: []
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "including inference microservices and the agentic toolkit"
+      - "including inference microservices and the agentic toolkit"
     status: complete
 
   - id: ai-stack
@@ -1117,9 +957,7 @@ concepts:
     time: 4h
     prerequisites: [inference-serving]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "Python literacy sufficient to run and validate AI samples, with working familiarity with the AI software stack"
+      - "Python literacy sufficient to run and validate AI samples, with working familiarity with the AI software stack"
     status: complete
 
   # =========================================================================
@@ -1134,9 +972,7 @@ concepts:
     time: 2h
     prerequisites: []
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "A systems mindset: you fix the class of problem, not just the instance"
+      - "A systems mindset: you fix the class of problem, not just the instance"
     status: complete
 
   - id: sme-interviews
@@ -1147,9 +983,7 @@ concepts:
     time: 3h
     prerequisites: []
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Turning documentation, standards, and tribal knowledge into tooling, templates, and self-service paths"
+      - "Turning documentation, standards, and tribal knowledge into tooling, templates, and self-service paths"
     status: complete
 
   - id: docs-prioritization
@@ -1160,9 +994,7 @@ concepts:
     time: 3h
     prerequisites: [repeat-questions, systems-mindset]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "use the data to decide what to build, fix, or retire"
+      - "use the data to decide what to build, fix, or retire"
     status: complete
 
   - id: working-with-engineers
@@ -1173,9 +1005,7 @@ concepts:
     time: 3h
     prerequisites: [sme-interviews, docs-review]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Partner with Engineering, Product, Security, Developer Relations, and Partner Programs so every release ships documented, discoverable, and supportable"
+      - "Partner with Engineering, Product, Security, Developer Relations, and Partner Programs so every release ships documented, discoverable, and supportable"
     status: complete
 
   # =========================================================================
@@ -1192,9 +1022,7 @@ concepts:
     time: 8h
     prerequisites: []
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "Strong technical writing and information architecture skills for developer documentation"
+      - "Strong technical writing and information architecture skills for developer documentation"
     status: complete
 
   - id: reading-code-to-verify
@@ -1205,9 +1033,7 @@ concepts:
     time: 5h
     prerequisites: []
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Enough technical depth to read code and APIs, verify accuracy, and write working examples"
+      - "Enough technical depth to read code and APIs, verify accuracy, and write working examples"
     status: complete
 
   - id: docs-as-product
@@ -1218,9 +1044,7 @@ concepts:
     time: 3h
     prerequisites: []
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "Treats setup, runnable samples, and docs as one product"
+      - "Treats setup, runnable samples, and docs as one product"
     status: complete
 
   - id: implementation-feedback
@@ -1231,9 +1055,7 @@ concepts:
     time: 3h
     prerequisites: [systems-mindset]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "sharing implementation feedback (what works, breaks, and scales) to refine content models, information architecture, and AI-readiness patterns"
+      - "sharing implementation feedback (what works, breaks, and scales) to refine content models, information architecture, and AI-readiness patterns"
     status: complete
 
   - id: ai-trust-judgment
@@ -1244,9 +1066,7 @@ concepts:
     time: 4h
     prerequisites: [prompting]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "sound judgment about where AI can be trusted"
+      - "sound judgment about where AI can be trusted"
     status: complete
 
   - id: release-readiness
@@ -1257,9 +1077,7 @@ concepts:
     time: 4h
     prerequisites: [documentation-ci]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents"
+      - "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents"
     status: complete
 
   - id: user-stories
@@ -1270,9 +1088,7 @@ concepts:
     time: 2h
     prerequisites: []
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Encode standards (user stories, release readiness, onboarding, security guidance) into templates"
+      - "Encode standards (user stories, release readiness, onboarding, security guidance) into templates"
     status: complete
 
   - id: partner-documentation
@@ -1283,9 +1099,7 @@ concepts:
     time: 3h
     prerequisites: [metadata]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "deliver Simulation Technology knowledge to developers, partners, internal teams, and the AI agents that increasingly sit between them and our documentation"
+      - "deliver Simulation Technology knowledge to developers, partners, internal teams, and the AI agents that increasingly sit between them and our documentation"
     status: complete
 
   - id: playbooks
@@ -1296,9 +1110,7 @@ concepts:
     time: 4h
     prerequisites: [sme-interviews]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Capture tribal knowledge from engineering, product, and operations, and turn it into playbooks, decision guides, and self-service paths"
+      - "Capture tribal knowledge from engineering, product, and operations, and turn it into playbooks, decision guides, and self-service paths"
     status: complete
 
   - id: security-documentation
@@ -1309,9 +1121,7 @@ concepts:
     time: 3h
     prerequisites: [style-guide]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows"
+      - "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows"
     status: complete
 
   - id: content-retirement
@@ -1322,9 +1132,7 @@ concepts:
     time: 3h
     prerequisites: [content-lifecycle]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "use the data to decide what to build, fix, or retire"
+      - "use the data to decide what to build, fix, or retire"
     status: complete
 
   - id: guided-workflows
@@ -1335,9 +1143,7 @@ concepts:
     time: 5h
     prerequisites: [templates-scaffolding]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "into templates, validators, and guided workflows rather than static documents"
+      - "into templates, validators, and guided workflows rather than static documents"
     status: complete
 
   - id: freshness-monitoring
@@ -1348,9 +1154,7 @@ concepts:
     time: 4h
     prerequisites: [content-lifecycle, documentation-ci]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters"
+      - "with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters"
     status: complete
 
   - id: terminology-drift
@@ -1361,9 +1165,7 @@ concepts:
     time: 3h
     prerequisites: [taxonomy, prose-linting]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "checks for freshness, code accuracy, and terminology drift"
+      - "checks for freshness, code accuracy, and terminology drift"
     status: complete
 
   - id: custom-linters
@@ -1374,9 +1176,7 @@ concepts:
     time: 5h
     prerequisites: [prose-linting]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Content quality automation you've built, such as Vale or custom linters"
+      - "Content quality automation you've built, such as Vale or custom linters"
     status: complete
 
   - id: doc-test-harness
@@ -1387,9 +1187,7 @@ concepts:
     time: 6h
     prerequisites: [code-sample-validation]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
+      - "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
     status: complete
 
   - id: ai-assistants
@@ -1400,9 +1198,7 @@ concepts:
     time: 8h
     prerequisites: [rag, grounding]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "structure and package content for RAG, internal assistants, and agentic workflows"
+      - "structure and package content for RAG, internal assistants, and agentic workflows"
     status: complete
 
   - id: agentic-workflows
@@ -1413,9 +1209,7 @@ concepts:
     time: 6h
     prerequisites: [mcp, agent-skills]
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "structure and package content for RAG, internal assistants, and agentic workflows"
+      - "structure and package content for RAG, internal assistants, and agentic workflows"
     status: complete
 
   - id: coding-agents
@@ -1426,9 +1220,7 @@ concepts:
     time: 4h
     prerequisites: [agent-ready-content]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "Optimize documentation for search (SEO and GEO) and for AI assistants and coding agents through agentready, LLMdigestible content"
+      - "Optimize documentation for search (SEO and GEO) and for AI assistants and coding agents through agentready, LLMdigestible content"
     status: complete
 
   - id: crawlability
@@ -1439,9 +1231,7 @@ concepts:
     time: 3h
     prerequisites: [seo-for-docs]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "site navigation, and a crawlable, agent-ready front door"
+      - "site navigation, and a crawlable, agent-ready front door"
     status: complete
 
   - id: developer-feedback-loops
@@ -1452,9 +1242,7 @@ concepts:
     time: 3h
     prerequisites: [docs-analytics]
     demanded_by:
-      - source: intel
-        provenance: quoted
-        quote: "Ability to translate developer feedback into documentation, samples, and product improvements"
+      - "Ability to translate developer feedback into documentation, samples, and product improvements"
     status: complete
 
   - id: publishing-in-public
@@ -1465,9 +1253,7 @@ concepts:
     time: 4h
     prerequisites: []
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Open source contributions or published work on docs-as-code, AI-assisted documentation, or knowledge engineering"
+      - "Open source contributions or published work on docs-as-code, AI-assisted documentation, or knowledge engineering"
     status: complete
 
   - id: realtime-systems
@@ -1478,9 +1264,7 @@ concepts:
     time: 4h
     prerequisites: []
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "Documentation experience in graphics, simulation, robotics, or real-time systems"
+      - "Documentation experience in graphics, simulation, robotics, or real-time systems"
     status: complete
 
 # ---------------------------------------------------------------------------
@@ -1552,7 +1336,7 @@ paths:
 
   - id: knowledgeops
     name: The KnowledgeOps path
-    audience: The NVIDIA posting, more or less exactly.
+    audience: The KnowledgeOps posting, more or less exactly.
     summary: Making a corpus answerable by machines, and knowing whether it worked.
     concepts:
       - content-model
@@ -1575,7 +1359,7 @@ paths:
 
   - id: developer-educator
     name: The developer educator
-    audience: The Intel posting's curriculum half.
+    audience: The Developer Relations posting's curriculum half.
     summary: Taking a developer from a clean environment to a working result, repeatably.
     concepts:
       - docs-as-product
@@ -1597,7 +1381,7 @@ paths:
   - id: writer-who-builds
     name: The writer who builds
     audience: >-
-      NVIDIA's own description of the person they want. The half of the job that
+      The KnowledgeOps posting's own description of the person it wants. The half that
       is judgement and collaboration rather than tooling.
     summary: The craft and the working relationships, which no pipeline substitutes for.
     concepts:

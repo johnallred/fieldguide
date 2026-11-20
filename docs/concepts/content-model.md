@@ -11,8 +11,8 @@ tags: [ia, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Information architecture skills: content modeling, taxonomy, and metadata for both navigation and machine retrieval"
+!!! quote "Why it is on the curriculum"
+    "Information architecture skills: content modeling, taxonomy, and metadata for both navigation and machine retrieval"
 
 **Prerequisites:** [Information architecture](information-architecture.md)
 
@@ -31,7 +31,7 @@ actually fails a build. The golden path does exactly that, twelve times.
 
 ## Why the job asks for it
 
-NVIDIA lists content modeling first in its information architecture
+The KnowledgeOps posting lists content modeling first in its information architecture
 requirement, ahead of taxonomy and metadata, which is the right order: the
 model is the thing the other two attach to.
 

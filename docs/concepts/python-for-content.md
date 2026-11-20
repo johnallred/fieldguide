@@ -11,8 +11,8 @@ tags: [auto, core]
 
 `core` · difficulty 2 · 5h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
+!!! quote "Why it is on the curriculum"
+    "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
 
 **Leads to:** [Content and data transformation](content-data-transformation.md), [API integration](api-integration.md)
 
@@ -29,7 +29,7 @@ and front matter, which lines cannot see.
 
 ## Why the job asks for it
 
-NVIDIA's bullet is one sentence naming three jobs: automate content tasks,
+The KnowledgeOps posting's bullet is one sentence naming three jobs: automate content tasks,
 transform data, integrate with APIs. This concept is the first, and the other
 two have pages of their own because they fail differently.
 
@@ -320,7 +320,7 @@ matter.
 
 ## Related
 
-- [Content and data transformation](content-data-transformation.md), the next job in NVIDIA's sentence
+- [Content and data transformation](content-data-transformation.md), the next job in the KnowledgeOps posting's sentence
 - [API integration](api-integration.md), the third one
 - [Custom linters](custom-linters.md), where these habits get enforced
 - [Code-sample validation](code-sample-validation.md), the fence parser's main consumer

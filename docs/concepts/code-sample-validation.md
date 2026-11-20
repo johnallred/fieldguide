@@ -11,10 +11,10 @@ tags: [qa, core]
 
 `core` · difficulty 3 · 5h
 
-!!! quote "Asked for by name"
-    Intel: "documentation CI, including link and code-sample validation"
+!!! quote "Why it is on the curriculum"
+    "documentation CI, including link and code-sample validation"
 
-    NVIDIA: "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
+    "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
 
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 

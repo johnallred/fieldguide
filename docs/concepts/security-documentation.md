@@ -11,15 +11,15 @@ tags: [ia, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents"
+!!! quote "Why it is on the curriculum"
+    "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents"
 
 **Prerequisites:** [Style guides and terminology management](style-guide.md)
 
 ## What it is
 
 Turning the security rules your documentation must follow into checks that run,
-rather than a page telling authors to be careful. NVIDIA's bullet is explicit
+rather than a page telling authors to be careful. The KnowledgeOps posting's bullet is explicit
 about the preference: templates, validators and guided workflows **rather than
 static documents**.
 
@@ -38,7 +38,7 @@ in every project that follows it, with the authority of official guidance, for
 as long as the page lives. The blast radius is the difference, and it is why
 security guidance belongs on the list of standards worth encoding.
 
-The second reason is in NVIDIA's own phrasing: you will "interface with
+The second reason is in the KnowledgeOps posting's own phrasing: you will "interface with
 Security". A security team can give you a policy document. Converting that into
 a validator is the part they cannot do for you, and arriving with one is a
 much better opening than arriving with questions.
@@ -238,7 +238,7 @@ known-bad patterns in samples. It does not mean the documentation gives secure
 advice, and a page can pass every rule while recommending an insecure
 architecture in prose.
 
-### The other standards on NVIDIA's list
+### The other standards on the KnowledgeOps posting's list
 
 The bullet names four, and all four follow the same pattern:
 

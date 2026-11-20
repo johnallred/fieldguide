@@ -28,7 +28,7 @@ visible to something that fetches your HTML and does not run your search index.
 
 ## Why the job asks for it
 
-Neither posting says "JSON-LD", which is why this is `derived`. Intel asks for
+Neither posting says "JSON-LD", which is why this is `derived`. The Developer Relations posting asks for
 "a crawlable, agent-ready front door" and for content optimized "for search
 (SEO and GEO) and for AI assistants and coding agents". Structured data is the
 mechanism that makes a page's type machine-readable to a consumer that is not

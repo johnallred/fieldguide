@@ -13,7 +13,6 @@ tags: [ai, supporting]
 
 > site navigation, and a crawlable, agent-ready front door
 
-> Source: intel posting, verbatim
 
 **Prerequisites:** [SEO for documentation](seo-for-docs.md)
 
@@ -24,12 +23,12 @@ content in the response. The dull precondition underneath
 [SEO](seo-for-docs.md), [GEO](geo.md), [llms.txt](llms-txt.md) and every
 retrieval system: **none of them work on a page nobody can fetch.**
 
-Intel's phrase "front door" is the useful part. It means there is an entry
+The Developer Relations posting's phrase "front door" is the useful part. It means there is an entry
 point a machine arriving with no context can start from.
 
 ## Why the job asks for it
 
-Intel names it in the role summary, alongside site navigation. It is listed as
+The Developer Relations posting names it in the role summary, alongside site navigation. It is listed as
 something the role owns rather than as a qualification, which tells you it is
 operational work: redirects, sitemaps, render modes, robots rules.
 
@@ -448,7 +447,7 @@ it, which is the classic way a page you wanted removed stays listed forever.
 | Reference it from `robots.txt` | The only discovery mechanism that needs no submission |
 | Split above 50,000 URLs | The per-file limit |
 
-### The front door, in Intel's sense
+### The front door, in the Developer Relations posting's sense
 
 A machine arriving with no context needs somewhere to start:
 

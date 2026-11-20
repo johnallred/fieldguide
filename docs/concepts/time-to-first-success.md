@@ -11,16 +11,16 @@ tags: [meas, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "measure time-to-first-success, support deflection, repeat questions, and AI answer quality"
+!!! quote "Why it is on the curriculum"
+    "measure time-to-first-success, support deflection, repeat questions, and AI answer quality"
 
 **Prerequisites:** [Documentation analytics](docs-analytics.md), [Golden paths](golden-paths.md)
 
 ## What it is
 
 The elapsed time between a developer deciding to try something and that
-developer having it work. Intel writes the same idea as a design goal, "from a
-clean environment to a working result", and NVIDIA writes it as a metric. It is
+developer having it work. The Developer Relations posting writes the same idea as a design goal, "from a
+clean environment to a working result", and the KnowledgeOps posting writes it as a metric. It is
 the same quantity from two sides.
 
 It is the best single number in developer documentation, because it is the only
@@ -42,7 +42,7 @@ minutes. Time to first success is the metric that refuses to be fooled by that,
 which is precisely why it is uncomfortable to adopt: it is the one number that
 can make a quarter of good work look insufficient.
 
-NVIDIA lists it first of four, ahead of deflection and answer quality, and that
+The KnowledgeOps posting lists it first of four, ahead of deflection and answer quality, and that
 ordering is defensible. Deflection measures the load you removed from someone
 else. First success measures whether the thing works for the person in front of
 you.

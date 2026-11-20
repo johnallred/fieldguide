@@ -11,8 +11,8 @@ tags: [dom, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Documentation experience in graphics, simulation, robotics, or real-time systems; familiarity with USD, Omniverse, Isaac Sim, or ROS"
+!!! quote "Why it is on the curriculum"
+    "Documentation experience in graphics, simulation, robotics, or real-time systems; familiarity with USD, Omniverse, Isaac Sim, or ROS"
 
 !!! warning "No simulator was run"
     No ROS, no Isaac Sim and no robot were available here. The measurement in step 2 is a simulation of the frame properties that ROS specifies, written to demonstrate why the specification says what it does; the specification itself in step 1 was verified by opening it. Nothing on this page is experience of operating a robot.
@@ -35,7 +35,7 @@ descriptions disagree, and the disagreement is deliberate.
 Because the concept that costs readers the most is a choice between two things
 that both look correct.
 
-NVIDIA groups robotics with graphics, simulation and real-time systems, and
+The KnowledgeOps posting groups robotics with graphics, simulation and real-time systems, and
 documentation in all four has to explain a model before it can explain an API.
 In robotics, the model is the transform tree, and the specific thing that bites
 is which frame to read a position from. Getting it wrong produces software that

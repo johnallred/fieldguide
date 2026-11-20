@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > Ways to stand out: experience building RAG pipelines, AI assistants, MCP servers, or agent skill and context libraries backed by documentation
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Chunking strategies](chunking.md), [Vector stores and hybrid search](vector-stores.md)
 
@@ -30,7 +29,7 @@ instead of to a person.
 
 ## Why the job asks for it
 
-NVIDIA names it three times: "structure and package content for RAG", "RAG
+The KnowledgeOps posting names it three times: "structure and package content for RAG", "RAG
 pipelines" under ways to stand out, and implicitly in "internal assistants". It
 is the single most-repeated technical artifact in either posting.
 

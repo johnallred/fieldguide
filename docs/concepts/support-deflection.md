@@ -11,8 +11,8 @@ tags: [meas, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Measurable reductions in support load or onboarding time through self-service knowledge systems"
+!!! quote "Why it is on the curriculum"
+    "Measurable reductions in support load or onboarding time through self-service knowledge systems"
 
 **Prerequisites:** [Documentation analytics](docs-analytics.md)
 
@@ -37,7 +37,7 @@ Because it is the one documentation outcome that converts directly into money,
 which makes it the number a documentation team is funded by and the number it is
 most tempted to overstate.
 
-NVIDIA's phrasing is careful: "measurable reductions in support load". Not
+The KnowledgeOps posting's phrasing is careful: "measurable reductions in support load". Not
 "fewer tickets", which any release can produce by shipping fewer features, and
 not "a self-service portal", which is an artifact rather than an outcome. The
 word doing the work is *measurable*, and the honest answer in most organisations

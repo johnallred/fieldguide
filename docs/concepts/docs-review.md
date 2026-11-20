@@ -11,8 +11,8 @@ tags: [qa, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Hands-on docs-as-code experience: Git, pull request review, Markdown/RST, static site generators ... and CI/CD"
+!!! quote "Why it is on the curriculum"
+    "Hands-on docs-as-code experience: Git, pull request review, Markdown/RST, static site generators ... and CI/CD"
 
 **Prerequisites:** [Git authoring workflows for writers](git-authoring.md), [Style guides](style-guide.md)
 
@@ -29,7 +29,7 @@ executable, and the golden path below moves it.
 
 ## Why the job asks for it
 
-NVIDIA lists pull request review alongside Git and CI, in the same breath. That
+The KnowledgeOps posting lists pull request review alongside Git and CI, in the same breath. That
 grouping is the point: review is one stage of a pipeline, not a substitute for
 one.
 

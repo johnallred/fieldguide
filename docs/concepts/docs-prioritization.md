@@ -13,7 +13,6 @@ tags: [craft, supporting]
 
 > use the data to decide what to build, fix, or retire
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Repeat-question analysis](repeat-questions.md), [A systems mindset](systems-mindset.md)
 
@@ -25,7 +24,7 @@ crucially a **retire** column, which most documentation backlogs do not have.
 
 ## Why the job asks for it
 
-NVIDIA's phrasing is one clause at the end of the measurement bullet: "Measure
+The KnowledgeOps posting's phrasing is one clause at the end of the measurement bullet: "Measure
 outcomes such as time-to-first-success, support deflection, repeat questions,
 and AI answer quality, and use the data to decide what to build, fix, or
 retire."

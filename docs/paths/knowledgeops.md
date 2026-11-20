@@ -9,7 +9,7 @@ generated: true
 
 # The KnowledgeOps path
 
-**Who this is for.** The NVIDIA posting, more or less exactly.
+**Who this is for.** The KnowledgeOps posting, more or less exactly.
 
 Making a corpus answerable by machines, and knowing whether it worked.
 
@@ -70,7 +70,7 @@ Builds on, earlier in this path: Agent-ready content.
 
 `core` · practise it · 4h
 
-Required by any RAG pipeline, and NVIDIA names RAG pipelines twice.
+Required by any RAG pipeline, and one posting names RAG pipelines twice.
 
 Builds on, earlier in this path: Chunking strategies.
 
@@ -78,7 +78,7 @@ Builds on, earlier in this path: Chunking strategies.
 
 `core` · build something · 5h
 
-The retrieval half of a RAG pipeline, which NVIDIA names as a way to stand out.
+The retrieval half of a RAG pipeline, named as a way to stand out.
 
 Builds on, earlier in this path: Embeddings.
 

@@ -11,8 +11,8 @@ tags: [dom, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    NVIDIA: "familiarity with USD, Omniverse, Isaac Sim, or ROS"
+!!! quote "Why it is on the curriculum"
+    "familiarity with USD, Omniverse, Isaac Sim, or ROS"
 
 **Leads to:** [Robotics simulation](robotics-sim.md)
 
@@ -32,7 +32,7 @@ not know, not to ship scene code.
 
 ## Why the job asks for it
 
-Because NVIDIA lists USD among the things to be familiar with, and because the
+Because the KnowledgeOps posting lists USD among the things to be familiar with, and because the
 documentation failure around it is unusually clear-cut.
 
 USD's reference material describes composition as a set of **arcs**:

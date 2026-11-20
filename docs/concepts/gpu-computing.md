@@ -11,8 +11,8 @@ tags: [dom, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Documentation experience in graphics, simulation, robotics, or real-time systems"
+!!! quote "Why it is on the curriculum"
+    "Documentation experience in graphics, simulation, robotics, or real-time systems"
 
 !!! warning "No GPU was available"
     This machine has no NVIDIA device, so nothing on this page was run on a GPU. The measurement in step 1 is a CPU analogue of a GPU lesson and is labelled as such; the compatibility material in step 3 was verified by opening NVIDIA's own documentation. Where this page reasons rather than demonstrates, it says so.
@@ -30,7 +30,7 @@ the toolchain's compatibility rules are the largest source of reader pain.
 
 ## Why the job asks for it
 
-NVIDIA lists graphics, simulation, robotics and real-time systems, and CUDA is
+The KnowledgeOps posting lists graphics, simulation, robotics and real-time systems, and CUDA is
 underneath all four. The role writes for people whose code already works and is
 slower than they expected, or does not build at all.
 

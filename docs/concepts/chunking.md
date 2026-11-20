@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > structure and package content for RAG, internal assistants, and agentic workflows
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Agent-ready content](agent-ready-content.md)
 
@@ -30,7 +29,7 @@ destroys is usually the thing that made the text findable.
 
 ## Why the job asks for it
 
-NVIDIA asks you to "structure and package content for RAG", which is this. It
+The KnowledgeOps posting asks you to "structure and package content for RAG", which is this. It
 is the lowest-level decision in the whole AI-ready stack and the one that
 constrains everything above it: no reranker recovers information the chunker
 threw away.

@@ -11,8 +11,8 @@ tags: [dom, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Documentation experience in graphics, simulation, robotics, or real-time systems"
+!!! quote "Why it is on the curriculum"
+    "Documentation experience in graphics, simulation, robotics, or real-time systems"
 
 ## What it is
 
@@ -28,7 +28,7 @@ in this domain most often gets wrong.
 ## Why the job asks for it
 
 Because the metric conventions a documentation writer brings from web services
-are actively misleading here, and NVIDIA lists four domains that all share this
+are actively misleading here, and the KnowledgeOps posting lists four domains that all share this
 property.
 
 In a web service, a slow request is a degraded request and the mean is a

@@ -11,15 +11,15 @@ tags: [dom, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    Intel: "Python literacy sufficient to run and validate AI samples, with working familiarity with the AI software stack"
+!!! quote "Why it is on the curriculum"
+    "Python literacy sufficient to run and validate AI samples, with working familiarity with the AI software stack"
 
 **Prerequisites:** [Inference serving and microservices](inference-serving.md)
 
 ## What it is
 
 The layered set of components between a model and the silicon: a framework, an
-exchange format, a runtime, a kernel library, a driver. Intel's bullet asks for
+exchange format, a runtime, a kernel library, a driver. The Developer Relations posting's bullet asks for
 "Python literacy sufficient to run and validate AI samples", which is a precise
 and modest requirement: not building models, but being able to run a sample and
 tell whether its output is right.
@@ -83,7 +83,7 @@ onnx 1.23.2 make_model default ir_version = 14
 reader.** No flags, no exotic operators, a single `Relu`, and the two most
 obvious packages in the ecosystem disagree out of the box.
 
-The message deserves its own look. A reader is handed a path on NVIDIA's build
+The message deserves its own look. A reader is handed a path on the KnowledgeOps posting's build
 machine, a fully-qualified C++ constructor signature, and then the text is
 truncated before it says what to do. The fix is one line, `m.ir_version = 10`,
 and it is not in the message.
@@ -185,7 +185,7 @@ you nothing about the ecosystem your readers actually install into.
 | Tolerance stated explicitly | False failures on different hardware |
 | A known-wrong input | A sample that cannot fail |
 
-Intel's phrase is "run **and validate**", and the distance between rows one and
+The Developer Relations posting's phrase is "run **and validate**", and the distance between rows one and
 three is the whole of it. A sample asserted only on exit code passes while
 producing nonsense, which is the characteristic AI-sample defect.
 
