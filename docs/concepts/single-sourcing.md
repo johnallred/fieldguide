@@ -34,7 +34,7 @@ broken include can make a page disappear, and the build may not mention it.
 
 It does not, by name. It is here because both postings make claims that depend
 on it. "A small team of educators operating with the reach of an organisation ten
-times larger", in Anthropic's phrasing. Or NVIDIA's "turn documentation,
+times larger", in Anthropic's phrasing. Or the KnowledgeOps posting's "turn documentation,
 standards and tribal knowledge into tooling, templates and self-service
 paths". Both are statements about leverage, and leverage in a documentation
 corpus means not writing the same thing N times.

@@ -11,8 +11,8 @@ tags: [dac, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    NVIDIA: "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+!!! quote "Why it is on the curriculum"
+    "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
 
 **Prerequisites:** [Choosing a static site generator](static-site-generators.md)
 
@@ -30,7 +30,7 @@ second.
 
 ## Why the job asks for it
 
-NVIDIA names it in a list of three. It is the most likely generator to appear
+The KnowledgeOps posting names it in a list of three. It is the most likely generator to appear
 on a newer documentation project, because a usable site is about fifteen
 minutes of work and the theme makes it look deliberate without a designer.
 

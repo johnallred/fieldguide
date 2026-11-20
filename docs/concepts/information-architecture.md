@@ -13,7 +13,6 @@ tags: [ia, core]
 
 > Information architecture skills: content modeling, taxonomy, and metadata for both navigation and machine retrieval
 
-> Source: nvidia posting, verbatim
 
 **Leads to:** [Content models](content-model.md), [Diátaxis](diataxis.md), [Knowledge architecture](knowledge-architecture.md), [Metadata for navigation and retrieval](metadata.md)
 
@@ -29,7 +28,7 @@ not knowing to the right page?**
 
 ## Why the job asks for it
 
-NVIDIA names it directly and then does something unusual: it specifies the
+The KnowledgeOps posting names it directly and then does something unusual: it specifies the
 purpose twice, "for both navigation and machine retrieval". That second half is
 the whole reason this concept is `core` rather than historical.
 
@@ -265,7 +264,7 @@ is somewhere around fifty pages or the second author, whichever comes first.
 Saying this unprompted signals that you have paid the cost rather than only
 read about the benefit.
 
-**One sharper point.** The strongest version of the NVIDIA bullet is that
+**One sharper point.** The strongest version of the KnowledgeOps posting's bullet is that
 navigation and retrieval have different failure modes, so structure designed
 only for one fails the other quietly. Navigation fails visibly: a reader cannot
 find the page and complains. Retrieval fails invisibly: a model returns a

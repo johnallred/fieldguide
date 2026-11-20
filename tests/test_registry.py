@@ -14,7 +14,6 @@ import pytest
 
 from fieldguide.registry import (
     MIN_COMPLETE_WORDS,
-    PROVENANCE,
     REQUIRED_SECTIONS,
     STATUSES,
     TIERS,
@@ -41,9 +40,7 @@ concepts:
     time: 1h
     prerequisites: []
     demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "we need alpha"
+      - "we need alpha"
     status: planned
   - id: beta
     name: Beta
@@ -53,9 +50,7 @@ concepts:
     time: 2h
     prerequisites: [alpha]
     demanded_by:
-      - source: intel
-        provenance: derived
-        quote: "beta follows from alpha"
+      - "beta follows from alpha"
     status: planned
 paths:
   - id: short
@@ -104,10 +99,14 @@ def test_in_category_puts_core_first(tmp_path):
     assert [c.id for c in registry.in_category("ia")] == ["alpha", "beta"]
 
 
-def test_is_evidence_is_true_only_for_a_quotation(tmp_path):
+def test_every_concept_carries_the_line_behind_it(tmp_path):
+    """`demanded_by` may not be empty, so this holds for the whole registry.
+
+    It used to distinguish a verbatim quotation from an inference. That tag is
+    gone, so the only thing left to assert is that nothing is here on nothing.
+    """
     registry = load_registry(write(tmp_path, MINIMAL))
-    assert registry.by_id["alpha"].has_evidence
-    assert not registry.by_id["beta"].has_evidence
+    assert all(c.has_evidence for c in registry.concepts)
 
 
 # ------------------------------------------------------- closed vocabularies
@@ -119,8 +118,6 @@ def test_is_evidence_is_true_only_for_a_quotation(tmp_path):
         ("tier: core", "tier: essential", "tier must be one of"),
         ("status: planned\n  - id: beta", "status: shipped\n  - id: beta", "status must be one of"),
         ("difficulty: 1", "difficulty: 7", "difficulty must be one of"),
-        ("provenance: quoted", "provenance: vibes", "provenance must be one of"),
-        ("source: nvidia", "source: google", "source must be intel, nvidia or both"),
         ("category: ia\n    tier: core", "category: xx\n    tier: core", "unknown category"),
     ],
 )
@@ -138,15 +135,13 @@ def test_an_id_that_is_not_kebab_case_is_rejected(tmp_path):
 def test_an_empty_quote_is_rejected(tmp_path):
     """A concept's claim on the reader IS the quote. Without one there is nothing to check."""
     with pytest.raises(RegistryError, match="quote must not be empty"):
-        load_registry(write(tmp_path, mutate(MINIMAL, 'quote: "we need alpha"', 'quote: ""')))
+        load_registry(write(tmp_path, mutate(MINIMAL, '- "we need alpha"', '- ""')))
 
 
 def test_demanded_by_may_not_be_empty(tmp_path):
     body = MINIMAL.replace(
         """    demanded_by:
-      - source: nvidia
-        provenance: quoted
-        quote: "we need alpha"
+      - "we need alpha"
 """,
         "    demanded_by: []\n",
     )
@@ -327,9 +322,7 @@ def test_a_prerequisite_outside_the_path_is_not_a_violation(tmp_path):
     time: 1h
     prerequisites: [beta]
     demanded_by:
-      - source: both
-        provenance: adjacent
-        quote: "gamma needs beta"
+      - "gamma needs beta"
     status: planned
 """
     # Insert into the concepts list rather than appending, which would land
@@ -343,18 +336,16 @@ def test_a_prerequisite_outside_the_path_is_not_a_violation(tmp_path):
     assert findings.ok
 
 
-def test_unsourced_concepts_are_advisory_not_a_failure(tmp_path):
-    """A derived claim is weaker evidence, not an error. The report says so."""
-    registry = load_registry(
-        write(tmp_path, MINIMAL.replace("status: planned", "status: drafted"))
-    )
-    docs = tmp_path / "docs" / "concepts"
-    docs.mkdir(parents=True)
-    for cid in ("alpha", "beta"):
-        (docs / f"{cid}.md").write_text(good_page(cid), encoding="utf-8")
-    findings = validate_against_tree(registry, tmp_path / "docs")
-    assert any(f.startswith("beta") for f in findings.unsourced)
-    assert findings.ok
+def test_a_demand_may_still_be_written_as_a_mapping(tmp_path):
+    """The older shape still loads.
+
+    A demand used to be a mapping of source, provenance and quote. The source
+    and the tag are gone and the quote is the whole record now, but the parser
+    still accepts the mapping, so an older registry is not a hard failure.
+    """
+    body = MINIMAL.replace('      - "we need alpha"', '      - quote: "we need alpha"')
+    registry = load_registry(write(tmp_path, body))
+    assert registry.concepts[0].demanded_by[0].quote == "we need alpha"
 
 
 def test_the_report_renders_a_clean_result(tmp_path):
@@ -402,11 +393,11 @@ def test_most_of_the_real_registry_is_backed_by_a_quotation():
     assert quoted / len(registry.concepts) >= 0.4
 
 
-def test_every_provenance_value_is_used():
-    """If nothing is ever `adjacent`, the distinction is decoration."""
+def test_every_concept_in_the_real_registry_carries_a_line():
+    """The claim the whole site rests on, checked against the real registry."""
     registry = load_registry(REAL_REGISTRY)
-    used = {d.provenance for c in registry.concepts for d in c.demanded_by}
-    assert used == set(PROVENANCE)
+    empty = [c.id for c in registry.concepts if not c.demanded_by]
+    assert not empty, f"concepts with nothing behind them: {empty}"
 
 
 def test_the_real_paths_only_reference_written_or_planned_concepts():

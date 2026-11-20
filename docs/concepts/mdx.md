@@ -11,8 +11,8 @@ tags: [dac, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    Intel: "Hands on experience with docs-as-code workflows and documentation CI, including Git, Markdown or MDX, and doc build pipelines"
+!!! quote "Why it is on the curriculum"
+    "Hands on experience with docs-as-code workflows and documentation CI, including Git, Markdown or MDX, and doc build pipelines"
 
 **Prerequisites:** [Markdown and its dialects](markdown.md)
 
@@ -30,7 +30,7 @@ that, including the one genuinely dangerous property.
 
 ## Why the job asks for it
 
-Intel names it directly, as an alternative to Markdown. In practice that means
+The Developer Relations posting names it directly, as an alternative to Markdown. In practice that means
 their documentation estate includes a React-based generator, almost certainly
 [Docusaurus](docusaurus.md), and you would be maintaining pages that are
 partly code.

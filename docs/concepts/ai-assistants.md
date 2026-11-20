@@ -13,14 +13,13 @@ tags: [ai, core]
 
 > structure and package content for RAG, internal assistants, and agentic workflows
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [RAG pipelines](rag.md), [Grounding and citation](grounding.md)
 
 ## What it is
 
 A product built on [retrieval](rag.md): a developer asks a question in prose and
-gets an answer with citations. NVIDIA's phrase is "internal assistants", which
+gets an answer with citations. The KnowledgeOps posting's phrase is "internal assistants", which
 is the common case, since an internal assistant has a known audience and a
 forgiving failure mode.
 
@@ -30,8 +29,8 @@ noticed and fixed.
 
 ## Why the job asks for it
 
-NVIDIA names it twice, in the AI-ready bullet and under ways to stand out ("RAG
-pipelines, AI assistants, MCP servers"). Intel's version is "makes
+The KnowledgeOps posting names it twice, in the AI-ready bullet and under ways to stand out ("RAG
+pipelines, AI assistants, MCP servers"). The Developer Relations posting's version is "makes
 documentation discoverable and usable by both developers and AI assistants",
 which is the other side: being the corpus an assistant reads.
 

@@ -11,8 +11,8 @@ tags: [dac, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+!!! quote "Why it is on the curriculum"
+    "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
 
 **Prerequisites:** [Markdown and its dialects](markdown.md)
 
@@ -25,7 +25,7 @@ The tool that turns a tree of source files into a website. It decides your
 extension mechanism, and, least discussed and most important, **how much of
 your corpus's correctness the build is willing to check**.
 
-NVIDIA names three by name. The useful skill is not having a favourite, it is
+The KnowledgeOps posting names three by name. The useful skill is not having a favourite, it is
 being able to say what each one's build does and does not verify.
 
 ## Why the job asks for it

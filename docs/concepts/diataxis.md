@@ -32,10 +32,10 @@ It is the closest thing this field has to a standard.
 ## Why the job asks for it
 
 Neither posting says "Diátaxis", which is why this concept is tagged
-`adjacent`. Both describe the problem it solves, repeatedly. Intel asks for
+`adjacent`. Both describe the problem it solves, repeatedly. The Developer Relations posting asks for
 golden paths, curriculum, tutorials, sample walkthroughs and reference
 documentation as *separate deliverables*, which is a Diátaxis decomposition
-written out without the name. NVIDIA asks for content modeling and for content
+written out without the name. The KnowledgeOps posting asks for content modeling and for content
 structured for machine retrieval, and the type of a page is the single most
 useful field in that model.
 
@@ -339,4 +339,4 @@ opinion about it marks you as someone who has done the work.
 - [Information architecture](information-architecture.md), the layer this sits inside
 - [Content models](content-model.md), how to make the type a validated field
 - [Designing tutorials](tutorial-design.md), the hardest of the four to write well
-- [Golden paths](golden-paths.md), what Intel calls the tutorial done properly
+- [Golden paths](golden-paths.md), what the Developer Relations posting calls the tutorial done properly

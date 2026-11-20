@@ -11,8 +11,8 @@ tags: [gp, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    Intel: "Write and maintain reference documentation, tutorials, and sample walkthroughs that assume no prior context"
+!!! quote "Why it is on the curriculum"
+    "Write and maintain reference documentation, tutorials, and sample walkthroughs that assume no prior context"
 
 **Prerequisites:** [Diátaxis](diataxis.md)
 
@@ -25,7 +25,7 @@ evidence that they learned rather than the point of the exercise. That is what
 separates it from a [quickstart](quickstarts.md), which optimises for the
 working thing and teaches as little as it can get away with.
 
-Intel's phrase is "assume no prior context", which is the hard constraint. The
+The Developer Relations posting's phrase is "assume no prior context", which is the hard constraint. The
 design question this page is built on is narrower and measurable: **how long
 does your tutorial leave the reader with no way to tell whether it is
 working?**

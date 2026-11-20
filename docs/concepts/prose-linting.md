@@ -11,8 +11,8 @@ tags: [qa, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
+!!! quote "Why it is on the curriculum"
+    "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
 
 **Prerequisites:** [Style guides](style-guide.md)
 
@@ -29,7 +29,7 @@ sentence in a wiki and becomes a failing build.
 
 ## Why the job asks for it
 
-NVIDIA names Vale specifically, in the "ways to stand out" section, alongside
+The KnowledgeOps posting names Vale specifically, in the "ways to stand out" section, alongside
 custom linters and doc test harnesses. That grouping tells you what they mean
 by it: not that you have installed a linter, but that you have *built* content
 quality automation.

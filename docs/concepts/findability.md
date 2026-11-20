@@ -11,8 +11,8 @@ tags: [ia, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    Intel: "The role makes documentation discoverable and usable by both developers and AI assistants through search optimization and agentready content"
+!!! quote "Why it is on the curriculum"
+    "The role makes documentation discoverable and usable by both developers and AI assistants through search optimization and agentready content"
 
 **Prerequisites:** [Metadata for navigation and retrieval](metadata.md)
 
@@ -29,7 +29,7 @@ responsible for. It is a file. You can open it.
 
 ## Why the job asks for it
 
-Intel pairs discoverability for developers with discoverability for AI
+The Developer Relations posting pairs discoverability for developers with discoverability for AI
 assistants in one sentence, which is the right pairing: both are retrieval
 over the same corpus, and both fail for the same reasons.
 
@@ -203,7 +203,7 @@ competing with real content.
 | External search | Readers who start on a search engine | See [SEO for docs](seo-for-docs.md) and [GEO](geo.md) |
 | Assistant retrieval | Readers who ask a question | See [RAG](rag.md) and [chunking](chunking.md) |
 
-Intel's sentence covers the second and fourth. They share an index-quality
+The Developer Relations posting's sentence covers the second and fourth. They share an index-quality
 problem and differ in what they do with the results.
 
 ### What makes a page findable on-site

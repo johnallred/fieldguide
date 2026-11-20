@@ -11,8 +11,8 @@ tags: [ia, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "content modeling, taxonomy, and metadata for both navigation and machine retrieval"
+!!! quote "Why it is on the curriculum"
+    "content modeling, taxonomy, and metadata for both navigation and machine retrieval"
 
 **Prerequisites:** [Content models](content-model.md)
 
@@ -20,7 +20,7 @@ tags: [ia, core]
 
 ## What it is
 
-The structured data attached to each page, usually in front matter. NVIDIA's
+The structured data attached to each page, usually in front matter. The KnowledgeOps posting's
 phrasing is unusually precise and worth taking literally: metadata **for both
 navigation and machine retrieval**. Those are two audiences with different
 needs, and a single field set rarely serves both well.
@@ -37,7 +37,7 @@ Because the retrieval half is new and most corpora do not have it.
 Navigation metadata is well understood: a title, a position, a section. It has
 existed as long as documentation sites have. Retrieval metadata is what makes a
 filtered search possible, what lets a chunk carry its context into a vector
-store, and what an assistant uses to decide where to look. NVIDIA asking for
+store, and what an assistant uses to decide where to look. The KnowledgeOps posting asking for
 both in one phrase is a signal that they know the second is a separate design
 problem.
 
@@ -212,7 +212,7 @@ computed at build time cannot drift, because nothing stores it.
 
 ## How to talk about it
 
-**Take NVIDIA's phrasing literally.** "Navigation metadata and retrieval
+**Take the KnowledgeOps posting's phrasing literally.** "Navigation metadata and retrieval
 metadata are different field sets. Navigation needs ordering and a label;
 retrieval needs filters, and it needs them copied onto every chunk, because a
 chunk leaves the page without its context. A corpus with good navigation

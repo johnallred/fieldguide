@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > Make knowledge AI-ready: structure and package content for RAG, internal assistants, and agentic workflows
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Content models](content-model.md), [Metadata for navigation and retrieval](metadata.md)
 
@@ -29,7 +28,7 @@ way to fail the other two.
 
 ## Why the job asks for it
 
-NVIDIA's bullet is the clearest statement of this work anywhere in either
+The KnowledgeOps posting's bullet is the clearest statement of this work anywhere in either
 posting: "Make knowledge AI-ready: structure and package content for RAG,
 internal assistants, and agentic workflows, including llms.txt, MCP-accessible
 sources, agent skills and context kits, and evaluation sets for answer
@@ -41,7 +40,7 @@ formats of the same thing; they are four different artifacts for different
 consumption patterns, and the posting is asking for all of them because no one
 of them covers the others.
 
-Intel's version is the same requirement from the other side: "a crawlable,
+The Developer Relations posting's version is the same requirement from the other side: "a crawlable,
 agent-ready front door" and "agentready, LLMdigestible content".
 
 On a Tuesday this is a question you answer repeatedly: an assistant gave a
@@ -357,7 +356,7 @@ A fourth consumer, an agent that needs to *act* rather than read, is served by
 | "We built a RAG pipeline" | Embeddings over a scrape | A corpus with a content model under it |
 | "The assistant works" | Somebody tried five questions | [An evaluation set](retrieval-evaluation.md) |
 
-The last row is the gap that matters most and the one NVIDIA asks about by
+The last row is the gap that matters most and the one the KnowledgeOps posting asks about by
 name.
 
 ### What agent-ready does not mean

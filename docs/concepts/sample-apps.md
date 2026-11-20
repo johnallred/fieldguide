@@ -11,8 +11,8 @@ tags: [gp, supporting]
 
 `supporting` · difficulty 3 · 6h
 
-!!! quote "Asked for by name"
-    Intel: "This role owns the developer first experience end to end across the Intel AI stack, including quickstarts, golden paths, reference documentation, tutorials, samples, and structured learning paths, by writing and maintaining developer documentation, the sample-app gallery, site navigation, and a crawlable, agent-ready front door"
+!!! quote "Why it is on the curriculum"
+    "This role owns the developer first experience end to end across the [vendor's] AI stack, including quickstarts, golden paths, reference documentation, tutorials, samples, and structured learning paths, by writing and maintaining developer documentation, the sample-app gallery, site navigation, and a crawlable, agent-ready front door"
 
 **Prerequisites:** [Sample walkthroughs](sample-walkthroughs.md), [Code-sample validation](code-sample-validation.md)
 
@@ -23,7 +23,7 @@ Unlike a [code sample](code-sample-validation.md) in a page, a sample app is a
 standalone project a reader can clone and run; unlike a
 [walkthrough](sample-walkthroughs.md), it is not primarily there to be read.
 
-Intel names the sample-app gallery as an owned artifact. The word that matters
+The Developer Relations posting names the sample-app gallery as an owned artifact. The word that matters
 is **gallery**, because it is the index that creates the obligations. A gallery
 is a published list of promises: these things exist, they work, and they are
 worth your time.

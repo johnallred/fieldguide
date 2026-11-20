@@ -11,8 +11,8 @@ tags: [auto, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
+!!! quote "Why it is on the curriculum"
+    "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
 
 **Prerequisites:** [Python for content automation](python-for-content.md), [Content models](content-model.md)
 
@@ -37,7 +37,7 @@ visible to nobody until a retrieval returns something unhelpful, and then it
 looks like a ranking problem. The team spends a quarter evaluating embedding
 models for a defect introduced by a transformation that ran correctly.
 
-NVIDIA's sentence puts "transform data" between automating content tasks and
+The KnowledgeOps posting's sentence puts "transform data" between automating content tasks and
 integrating with APIs, which is the right order: transformation is where the
 corpus stops being prose and becomes someone else's input, and the handover is
 where the accountability gets lost.

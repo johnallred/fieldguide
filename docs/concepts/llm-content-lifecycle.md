@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > Automate the content lifecycle with LLMs and scripting, from drafting and updating to auditing, with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Prompting for content work](prompting.md), [Content lifecycle and governance](content-lifecycle.md)
 
@@ -28,7 +27,7 @@ The work is deciding where that is.
 
 ## Why the job asks for it
 
-NVIDIA's bullet is a job description in one sentence. It names three activities
+The KnowledgeOps posting's bullet is a job description in one sentence. It names three activities
 (drafting, updating, auditing), three checks (freshness, code accuracy,
 terminology drift), and one constraint (human review where judgement matters).
 Every other page in this category is a piece of it.
@@ -125,7 +124,7 @@ Every stage returns PROPOSALS. Nothing writes to the corpus, because the
 constraint named in the posting is "human review where judgment matters" and
 a stage that applies its own findings has removed the place to put a human.
 
-The three checks NVIDIA names map onto three different mechanisms, and only
+The three checks the KnowledgeOps posting names map onto three different mechanisms, and only
 one of them should involve a model at all:
 
   FRESHNESS         a date comparison. No model. Deterministic
@@ -418,7 +417,7 @@ a diff a reviewer might approve.**
 | Deciding what to retire | Judgement | **Never** |
 | Confirming a page is accurate | Needs the implementation | **Never** |
 
-Three of the four checks NVIDIA names involve no model at all. That is the most
+Three of the four checks the KnowledgeOps posting names involve no model at all. That is the most
 useful thing on this page: **"automate the content lifecycle with LLMs" is
 mostly automation, with an LLM at two specific points.** A pipeline that uses a
 model for the freshness check is slower, more expensive and less reliable than

@@ -11,8 +11,8 @@ tags: [edu, supporting]
 
 `supporting` · difficulty 1 · 4h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Open source contributions or published work on docs-as-code, AI-assisted documentation, or knowledge engineering"
+!!! quote "Why it is on the curriculum"
+    "Open source contributions or published work on docs-as-code, AI-assisted documentation, or knowledge engineering"
 
 ## What it is
 
@@ -32,7 +32,7 @@ a documentation pipeline from someone who has read about one.
 Every other signal is self-reported. A résumé asserts, an interview answer
 describes, a reference agrees. Published work is the only artifact where the
 assessment is performed by the reader rather than conveyed to them, which is
-why NVIDIA lists it beside formal qualifications rather than under interests.
+why the KnowledgeOps posting lists it beside formal qualifications rather than under interests.
 
 There is a second reason, specific to this field. Documentation work is mostly
 invisible in its outcomes: when it succeeds, nothing happens, support volume

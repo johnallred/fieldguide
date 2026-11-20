@@ -11,15 +11,15 @@ tags: [ia, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Measure outcomes such as time-to-first-success, support deflection, repeat questions, and AI answer quality, and use the data to decide what to build, fix, or retire"
+!!! quote "Why it is on the curriculum"
+    "Measure outcomes such as time-to-first-success, support deflection, repeat questions, and AI answer quality, and use the data to decide what to build, fix, or retire"
 
 **Prerequisites:** [Content lifecycle and governance](content-lifecycle.md)
 
 ## What it is
 
 Removing a page from the corpus on purpose: deciding it should go, redirecting
-its URL, and dealing with everything that pointed at it. NVIDIA lists retire
+its URL, and dealing with everything that pointed at it. The KnowledgeOps posting lists retire
 alongside build and fix as one of three outcomes of measurement, which is more
 than most teams do, because most teams have no third option.
 
@@ -33,7 +33,7 @@ Every stale page competes with a current one in search, dilutes
 most valuable documentation work available is deletion, and nobody is
 authorised to do it.
 
-NVIDIA naming retirement as a measurement outcome is the important part. The
+The KnowledgeOps posting naming retirement as a measurement outcome is the important part. The
 decision to retire needs evidence, which means it needs the
 [measurement](docs-analytics.md) category to exist first, and it means the answer to
 "can we delete this" stops being a matter of opinion.

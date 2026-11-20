@@ -11,7 +11,7 @@ tags: [edu, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Adjacent, not quoted"
+!!! quote "Why it is on the curriculum"
     Neither posting mentions video. A common secondary deliverable in developer-relations roles.
 
 **Prerequisites:** [Designing tutorials](tutorial-design.md)

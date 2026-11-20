@@ -11,8 +11,8 @@ tags: [qa, supporting]
 
 `supporting` · difficulty 3 · 5h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
+!!! quote "Why it is on the curriculum"
+    "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
 
 **Prerequisites:** [Prose linting with Vale](prose-linting.md)
 
@@ -41,7 +41,7 @@ silently broke seven pages of this guide.
 
 The deeper reason is that a custom linter encodes a decision. Once a rule is
 code, the convention it enforces becomes explicit, testable and arguable in a
-pull request, which is NVIDIA's "encode standards into templates, validators
+pull request, which is the KnowledgeOps posting's "encode standards into templates, validators
 and guided workflows rather than static documents."
 
 ## The golden path

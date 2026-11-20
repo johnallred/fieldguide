@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > Practical experience applying LLMs to content workflows (prompting, retrieval and grounding, output evaluation)
 
-> Source: nvidia posting, verbatim
 
 **Leads to:** [Judging where AI can be trusted](ai-trust-judgment.md), [LLMs in the content lifecycle](llm-content-lifecycle.md)
 
@@ -26,7 +25,7 @@ looks like: it has to work on the four hundredth input as well as the first.
 
 ## Why the job asks for it
 
-NVIDIA lists it first in a three-part requirement: "prompting, retrieval and
+The KnowledgeOps posting lists it first in a three-part requirement: "prompting, retrieval and
 grounding, output evaluation". The ordering is the pipeline, and prompting is
 the part people think is the whole thing.
 
@@ -375,7 +374,7 @@ scope, and require evidence for claims. That is why documentation people are
 often good at this: you already write specifications for human contractors and
 already know that "tell me what's wrong with it" is a bad brief. Saying that
 connects the LLM work to the craft rather than treating it as a separate skill,
-which is exactly how NVIDIA's posting frames the whole role.
+which is exactly how the KnowledgeOps posting frames the whole role.
 
 ## How to prove it
 

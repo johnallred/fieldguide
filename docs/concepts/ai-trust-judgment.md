@@ -13,7 +13,6 @@ tags: [craft, core]
 
 > sound judgment about where AI can be trusted
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Prompting for content work](prompting.md)
 
@@ -28,7 +27,7 @@ pipeline with a human in a specific place, not a better prompt.
 
 ## Why the job asks for it
 
-NVIDIA asks for it twice, and the second instance is the more revealing one. The
+The KnowledgeOps posting asks for it twice, and the second instance is the more revealing one. The
 qualification is "practical experience applying LLMs to content workflows
 (prompting, retrieval and grounding, output evaluation) and sound judgment about
 where AI can be trusted." The responsibility is "Automate the content lifecycle
@@ -325,7 +324,7 @@ rarer and more convincing.
    with a real term list. Measure how many proposals a reviewer accepts; if it
    is above 95 percent your filter is too loose and the review is theatre.
 3. **Write down one thing you refused to automate and why.** One paragraph. This
-   is the single most direct answer to NVIDIA's "sound judgment" line, and
+   is the single most direct answer to the KnowledgeOps posting's "sound judgment" line, and
    almost nobody brings one.
 
 **What makes it credible rather than decorative.** Enthusiasm about LLMs is universal and worthless as

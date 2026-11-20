@@ -11,8 +11,8 @@ tags: [dac, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Markdown/RST"
+!!! quote "Why it is on the curriculum"
+    "Markdown/RST"
 
 **Prerequisites:** [Markdown and its dialects](markdown.md)
 
@@ -33,7 +33,7 @@ line precisely.
 
 ## Why the job asks for it
 
-NVIDIA writes "Markdown/RST", and the reason is almost certainly that their
+The KnowledgeOps posting writes "Markdown/RST", and the reason is almost certainly that their
 documentation estate includes Sphinx projects. Simulation, robotics and
 graphics tooling is largely Python and C++, and Python API documentation has
 been Sphinx territory for twenty years.

@@ -9,7 +9,7 @@ generated: true
 
 # The writer who builds
 
-**Who this is for.** NVIDIA's own description of the person they want. The half of the job that is judgement and collaboration rather than tooling.
+**Who this is for.** The KnowledgeOps posting's own description of the person it wants. The half that is judgement and collaboration rather than tooling.
 
 The craft and the working relationships, which no pipeline substitutes for.
 

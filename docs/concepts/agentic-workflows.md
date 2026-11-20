@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > structure and package content for RAG, internal assistants, and agentic workflows
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Model Context Protocol](mcp.md), [Agent skills and context kits](agent-skills.md)
 
@@ -29,8 +28,8 @@ and the difficulty.
 
 ## Why the job asks for it
 
-NVIDIA names it as the third consumer of AI-ready content, alongside RAG and
-internal assistants. Intel's version is "the agentic toolkit" and "coding
+The KnowledgeOps posting names it as the third consumer of AI-ready content, alongside RAG and
+internal assistants. The Developer Relations posting's version is "the agentic toolkit" and "coding
 agents" as a documentation audience.
 
 What makes it `core` and difficulty 3 is that **the usual review model stops

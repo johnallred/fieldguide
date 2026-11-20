@@ -13,7 +13,6 @@ tags: [ai, supporting]
 
 > sound judgment about where AI can be trusted
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Grounding and citation](grounding.md), [Output evaluation](output-evaluation.md)
 
@@ -27,7 +26,7 @@ The useful framing is not "stop hallucination", which is not available. It is
 
 ## Why the job asks for it
 
-NVIDIA asks for "sound judgment about where AI can be trusted" and for "human
+The KnowledgeOps posting asks for "sound judgment about where AI can be trusted" and for "human
 review where judgment matters". Both are about this. The posting never uses the
 word hallucination, which is why the tag is `quoted` on a different phrase: they
 are asking about the behaviour rather than the vocabulary.

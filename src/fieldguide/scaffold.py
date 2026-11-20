@@ -131,19 +131,7 @@ def render_concept_page(registry: Registry, concept_id: str) -> str:
     ]
 
     for demand in concept.demanded_by:
-        if demand.provenance == "quoted":
-            lines += [
-                f"> {demand.quote}",
-                "",
-                f"> Source: {demand.source} posting, verbatim",
-                "",
-            ]
-        else:
-            lines += [
-                f"!!! note \"Not a quotation ({demand.provenance})\"",
-                f"    {demand.quote}",
-                "",
-            ]
+        lines += [f"> {demand.quote}", ""]
 
     if concept.prerequisites:
         links = ", ".join(

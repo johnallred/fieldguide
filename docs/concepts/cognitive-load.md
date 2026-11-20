@@ -11,7 +11,7 @@ tags: [edu, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Adjacent, not quoted"
+!!! quote "Why it is on the curriculum"
     Neither posting names it. It is the mechanism behind every claim about reaching first success in minutes.
 
 **Prerequisites:** [Instructional design for developers](instructional-design.md)

@@ -11,8 +11,8 @@ tags: [meas, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    Intel: "Ability to translate developer feedback into documentation, samples, and product improvements"
+!!! quote "Why it is on the curriculum"
+    "Ability to translate developer feedback into documentation, samples, and product improvements"
 
 **Prerequisites:** [Documentation analytics](docs-analytics.md)
 
@@ -24,7 +24,7 @@ the translation: a complaint is evidence about an experience, and turning it
 into an edit means deciding what it is evidence *of*, which is usually not what
 the complaint names.
 
-Intel's bullet puts "documentation, samples, and product improvements" in one
+The Developer Relations posting's bullet puts "documentation, samples, and product improvements" in one
 sentence, which is the right scope. The same report frequently calls for all
 three, and routing it only to the documentation queue is how feedback gets
 answered without being used.
@@ -124,7 +124,7 @@ this do".
 | README reordered, making before checking | Documentation | The ordering was the reported symptom |
 | Three tests on the new command | Tests | So it cannot silently rot |
 
-Intel's bullet asks for exactly that split, and the product change is the one
+The Developer Relations posting's bullet asks for exactly that split, and the product change is the one
 that gets missed by treating a README complaint as a README task.
 
 ```

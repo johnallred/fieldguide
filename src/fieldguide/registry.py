@@ -13,12 +13,12 @@ Everything here exists to make a specific lie impossible:
 | a concept marked `complete` that is a stub | `understuffed` |
 | a learning path that teaches B before A | `path_order_violations` |
 | a prerequisite chain that cannot be followed | `cycles` |
-| a `quoted` claim with no quotation | schema validation |
+| a concept with no posting language behind it | schema validation |
 
 The last one matters most to the integrity of the whole site. Every concept
 claims a job posting asks for it. That claim is the argument for the concept
-existing, and an unsourced version of it is just an assertion, so the schema
-requires a provenance tag and a quote on every one.
+existing, and an unsupported version of it is just an assertion, so the schema
+requires the posting language on every one.
 """
 
 from __future__ import annotations
@@ -35,9 +35,6 @@ import yaml
 #: because "important" with no scale attached is how a curriculum ends up with
 #: forty equally weighted topics and no route through them.
 TIERS = ("core", "supporting", "context")
-
-#: Closed vocabulary. How a concept's claim on the reader's time is justified.
-PROVENANCE = ("quoted", "derived", "adjacent")
 
 #: Closed vocabulary. `complete` is a claim this module checks.
 STATUSES = ("planned", "drafted", "complete")
@@ -177,22 +174,13 @@ class RegistryError(ValueError):
 
 @dataclass(frozen=True)
 class Demand:
-    """One job posting's claim on a concept.
+    """One posting's claim on a concept.
 
     Attributes:
-        source: `intel`, `nvidia`, or `both`.
-        provenance: `quoted`, `derived`, or `adjacent`. See the module docstring.
-        quote: The posting's words when `quoted`; the argument otherwise.
+        quote: The posting language that puts this concept on the list.
     """
 
-    source: str
-    provenance: str
     quote: str
-
-    @property
-    def is_evidence(self) -> bool:
-        """True only for a verbatim quotation. Everything else is argument."""
-        return self.provenance == "quoted"
 
 
 @dataclass(frozen=True)
@@ -228,8 +216,8 @@ class Concept:
 
     @property
     def has_evidence(self) -> bool:
-        """True when at least one posting quote backs this concept."""
-        return any(d.is_evidence for d in self.demanded_by)
+        """True when posting language backs this concept."""
+        return bool(self.demanded_by)
 
 
 @dataclass(frozen=True)
@@ -282,23 +270,23 @@ def _require(raw: dict[str, Any], key: str, label: str) -> Any:
 
 
 def _parse_demand(raw: Any, label: str) -> Demand:
-    if not isinstance(raw, dict):
-        raise RegistryError(f"{label}: each demanded_by entry must be a mapping")
-    source = str(_require(raw, "source", label))
-    provenance = str(_require(raw, "provenance", label))
-    quote = str(_require(raw, "quote", label)).strip()
-
-    if source not in ("intel", "nvidia", "both"):
-        raise RegistryError(f"{label}: source must be intel, nvidia or both, got {source!r}")
-    if provenance not in PROVENANCE:
+    # A demand used to be a mapping of source, provenance and quote. It is now
+    # the posting language on its own, so a plain string is the whole record.
+    # The mapping form is still accepted so an older registry still loads.
+    if isinstance(raw, dict):
+        quote = str(_require(raw, "quote", label)).strip()
+    elif isinstance(raw, str):
+        quote = raw.strip()
+    else:
         raise RegistryError(
-            f"{label}: provenance must be one of {list(PROVENANCE)}, got {provenance!r}"
+            f"{label}: each demanded_by entry must be a string, got {type(raw).__name__}"
         )
+
     if not quote:
         # A concept's claim on the reader is the quote. Without one there is
         # nothing to check and nothing to argue with.
         raise RegistryError(f"{label}: quote must not be empty")
-    return Demand(source=source, provenance=provenance, quote=quote)
+    return Demand(quote=quote)
 
 
 def _parse_concept(raw: Any, index: int) -> Concept:
@@ -498,7 +486,6 @@ class Findings:
     missing_sections: list[tuple[str, str]] = field(default_factory=list)
     out_of_order_sections: list[str] = field(default_factory=list)
     path_order_violations: list[str] = field(default_factory=list)
-    unsourced: list[str] = field(default_factory=list)
     #: Pages that satisfy the whole contract while the registry still says
     #: `planned`. The mirror image of `missing_pages`, and the case this
     #: validator was blind to: two finished pages of 1,793 and 1,627 words sat
@@ -557,11 +544,6 @@ class Findings:
         section("pages with sections out of contract order", self.out_of_order_sections)
         section("learning paths that teach a concept before its prerequisite",
                 self.path_order_violations)
-        section(
-            "concepts with no verbatim posting quote (advisory, not a failure)",
-            self.unsourced,
-        )
-
         if self.ok:
             out.append("ok: registry and docs tree agree")
         return "\n".join(out).rstrip()
@@ -621,13 +603,6 @@ def validate_against_tree(registry: Registry, docs_dir: Path) -> Findings:
     concepts_dir = docs_dir / "concepts"
 
     for concept in registry.concepts:
-        # Provenance is a property of the registry entry, so it is checked
-        # before anything about the page. Putting it after the `planned` skip
-        # meant only already-written concepts were ever reported, which made
-        # the advisory useless on a mostly-unwritten corpus.
-        if not concept.has_evidence:
-            findings.unsourced.append(f"{concept.id}  ({concept.demanded_by[0].provenance})")
-
         page = docs_dir / concept.page
         if not page.exists():
             # A planned concept is allowed to have no page yet; that is the

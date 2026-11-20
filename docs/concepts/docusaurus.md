@@ -11,8 +11,8 @@ tags: [dac, supporting]
 
 `supporting` · difficulty 2 · 5h
 
-!!! quote "Asked for by name"
-    NVIDIA: "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+!!! quote "Why it is on the curriculum"
+    "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
 
 **Prerequisites:** [Choosing a static site generator](static-site-generators.md), [MDX](mdx.md)
 
@@ -29,7 +29,7 @@ pre-rendering turns out to matter more than it sounds.
 
 ## Why the job asks for it
 
-NVIDIA lists it third. In practice Docusaurus is what you find on product-facing
+The KnowledgeOps posting lists it third. In practice Docusaurus is what you find on product-facing
 developer sites, especially where the documentation needs interactive pieces or
 where the front-end team already lives in React.
 

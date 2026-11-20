@@ -46,7 +46,7 @@ posting line that justifies the concept, and a status.
 | This page follows the contract | All seven required sections, in order |
 | This path is teachable | No concept before a prerequisite the path also teaches |
 | This graph is followable | No cycles, no dangling prerequisites |
-| A posting asks for this | Every concept needs a source, provenance, and a quote |
+| A posting asks for this | Every concept needs the posting line behind it |
 
 The [coverage matrix](../coverage.md), the [learning paths](../paths/index.md),
 and [the full ordering](../study-plan.md) are all generated from the registry.
@@ -103,4 +103,4 @@ makes the list *consistent and honest about its sources*. It cannot make it
 ## Related
 
 - [The page contract](the-page-contract.md), the part of the model that governs prose.
-- [Provenance](provenance.md), on why every concept prints its evidence.
+- [Provenance](provenance.md), on why every concept prints the line behind it.

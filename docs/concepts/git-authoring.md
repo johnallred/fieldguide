@@ -11,10 +11,10 @@ tags: [dac, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Hands-on docs-as-code experience: Git, pull request review, Markdown/RST, static site generators (Sphinx, MkDocs, Docusaurus, or similar), and CI/CD"
+!!! quote "Why it is on the curriculum"
+    "Hands-on docs-as-code experience: Git, pull request review, Markdown/RST, static site generators (Sphinx, MkDocs, Docusaurus, or similar), and CI/CD"
 
-    Intel: "Hands on experience with docs-as-code workflows and documentation CI, including Git, Markdown or MDX, and doc build pipelines"
+    "Hands on experience with docs-as-code workflows and documentation CI, including Git, Markdown or MDX, and doc build pipelines"
 
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 

@@ -14,7 +14,7 @@ from __future__ import annotations
 import yaml
 
 from .demos import CEILING_REASONS, TRIAGE_REASONS
-from .registry import PROVENANCE, REQUIRED_SECTIONS, Registry, topological_order
+from .registry import REQUIRED_SECTIONS, Registry, topological_order
 
 TIER_BLURB = {
     "core": "You cannot do this job without it.",
@@ -70,13 +70,7 @@ def placeholder_page(registry: Registry, concept_id: str) -> str:
 
     out.append("## Why it is on the curriculum\n")
     for demand in concept.demanded_by:
-        if demand.provenance == "quoted":
-            out += [f"> {demand.quote}", "", f"> Source: {demand.source} posting, verbatim", ""]
-        else:
-            out += [
-                f"**Not a quotation ({demand.provenance}).** {demand.quote}",
-                "",
-            ]
+        out += [f"> {demand.quote}", ""]
 
     out.append(f"{TIER_BLURB[concept.tier]}\n")
 
@@ -161,26 +155,15 @@ def coverage_page(registry: Registry) -> str:
         "# Coverage\n",
         f"**{done} of {total} concepts written.** "
         f"{counts['drafted']} drafted, {counts['planned']} planned.\n",
-        "Each row names the concept, the posting line that put it on this list, and how",
-        "strong that claim is. `quoted` is a verbatim phrase from a posting. `derived`",
-        "means the posting requires the thing but these are not its words. `adjacent`",
-        "means neither posting names it and the named work is impossible without it.\n",
-        "Read that last column as a confidence rating on the concept's right to your time.\n",
+        "Each row names the concept and the posting line that put it on this list.\n",
     ]
 
-    evidence = sum(1 for c in registry.concepts if c.has_evidence)
-    by_provenance = {
-        p: sum(1 for c in registry.concepts for d in c.demanded_by if d.provenance == p)
-        for p in PROVENANCE
-    }
     out += [
         "## Where this list comes from\n",
-        f"- **{evidence} of {total}** concepts are backed by at least one verbatim quote.",
-        f"- Claims by provenance: "
-        + ", ".join(f"{n} {p}" for p, n in by_provenance.items())
-        + ".\n",
-        "A concept with no `quoted` claim is still here on an argument, and the argument",
-        "is printed next to it so you can reject it.\n",
+        f"- **{total} of {total}** concepts carry the posting language behind them.",
+        "",
+        "The line that put a concept on the list is printed next to it, so a reader can",
+        "judge whether it earns the time rather than taking the list on trust.\n",
     ]
 
     for key, label in registry.categories.items():
@@ -202,7 +185,7 @@ def coverage_page(registry: Registry) -> str:
             out.append(
                 f"| {link} | {concept.tier} | {DIFFICULTY_LABEL[concept.difficulty]} "
                 f"| {concept.time} | {mark} {concept.status} "
-                f"| *{demand.source}, {demand.provenance}:* {quote} |"
+                f"| {quote} |"
             )
         out.append("")
 

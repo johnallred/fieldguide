@@ -11,8 +11,8 @@ tags: [meas, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    Intel: "Instrument documentation analytics and convert findings into improvements to docs, samples, and tooling"
+!!! quote "Why it is on the curriculum"
+    "Instrument documentation analytics and convert findings into improvements to docs, samples, and tooling"
 
 **Prerequisites:** [Documentation CI](documentation-ci.md)
 
@@ -32,7 +32,7 @@ need no audience and work on day zero.
 depth, exit rates, the path through a funnel. They need an audience, a
 pipeline, and usually a privacy review.
 
-Intel's bullet says "instrument ... and convert findings into improvements",
+The Developer Relations posting's bullet says "instrument ... and convert findings into improvements",
 and that second half is the part that matters: the deliverable is a change, not
 a dashboard.
 
@@ -238,7 +238,7 @@ claim resting on reader-side analytics alone is a claim about one surface.
 
 ### Converting findings into changes
 
-Intel's bullet ends "improvements to docs, samples, and tooling", and that
+The Developer Relations posting's bullet ends "improvements to docs, samples, and tooling", and that
 ordering is a useful discipline: a finding that produces only a documentation
 edit is often a finding about the tooling.
 

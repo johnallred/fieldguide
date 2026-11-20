@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > including llms.txt, MCP-accessible sources, agent skills and context kits, and evaluation sets for answer accuracy
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Model Context Protocol](mcp.md), [Templates and scaffolding](templates-scaffolding.md)
 
@@ -33,7 +32,7 @@ question.**
 
 ## Why the job asks for it
 
-NVIDIA names both in the same breath as llms.txt and MCP: "agent skills and
+The KnowledgeOps posting names both in the same breath as llms.txt and MCP: "agent skills and
 context kits". Under ways to stand out, "agent skill and context libraries
 backed by documentation".
 

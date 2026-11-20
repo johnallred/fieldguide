@@ -11,10 +11,10 @@ tags: [dac, core]
 
 `core` · difficulty 1 · 2h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Markdown/RST"
+!!! quote "Why it is on the curriculum"
+    "Markdown/RST"
 
-    Intel: "Git, Markdown or MDX, and doc build pipelines"
+    "Git, Markdown or MDX, and doc build pipelines"
 
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 
@@ -35,7 +35,7 @@ with the tildes attached.
 
 ## Why the job asks for it
 
-Both postings name it, Intel alongside MDX and NVIDIA alongside RST, which
+Both postings name it, the Developer Relations posting alongside MDX and the KnowledgeOps posting alongside RST, which
 tells you the expectation is not "can you write Markdown" but "do you
 understand that these are different dialects with different capabilities."
 

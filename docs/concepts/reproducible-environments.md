@@ -11,8 +11,8 @@ tags: [gp, supporting]
 
 `supporting` · difficulty 3 · 4h
 
-!!! quote "Asked for by name"
-    Intel: "golden paths and curriculum that take a developer from a clean environment to a working result"
+!!! quote "Why it is on the curriculum"
+    "golden paths and curriculum that take a developer from a clean environment to a working result"
 
 **Prerequisites:** [Golden paths](golden-paths.md)
 
@@ -20,7 +20,7 @@ tags: [gp, supporting]
 
 ## What it is
 
-The "clean environment" half of Intel's sentence. Making it true requires three
+The "clean environment" half of the Developer Relations posting's sentence. Making it true requires three
 decisions: what level of isolation a reader is asked to create, whether
 dependencies are pinned, and what your CI reproduces.
 
@@ -29,7 +29,7 @@ because each one changes what your quickstart can honestly promise.
 
 ## Why the job asks for it
 
-Intel's phrase is "from a clean environment", and the word *clean* is doing a
+The Developer Relations posting's phrase is "from a clean environment", and the word *clean* is doing a
 lot of work. A clean environment is the only starting state a document can
 assume, because it is the only one that is the same for everyone.
 
@@ -213,7 +213,7 @@ converts the one check that finds this class of defect into one that cannot.
 ## How to talk about it
 
 **Lead with the trade rather than the tooling.** "Reproducibility and time to
-first success pull against each other, and both are things Intel asks for. A
+first success pull against each other, and both are things the Developer Relations posting asks for. A
 reader who has to build a container before seeing anything work has a slower
 first success and a more reliable one. I pick the weakest isolation that
 catches my actual failures, and I can say what each level misses."

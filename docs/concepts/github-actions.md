@@ -31,8 +31,8 @@ the first.
 ## Why the job asks for it
 
 Neither posting says "GitHub Actions" and both describe the thing it does.
-NVIDIA asks for CI/CD builds, linting, link and code-sample validation and
-publishing; Intel asks for docs-as-code pipelines and documentation CI. Those
+The KnowledgeOps posting asks for CI/CD builds, linting, link and code-sample validation and
+publishing; the Developer Relations posting asks for docs-as-code pipelines and documentation CI. Those
 are the steps in the file.
 
 What makes this a real engineering concern rather than configuration is the

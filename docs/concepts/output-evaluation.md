@@ -13,7 +13,6 @@ tags: [ai, core]
 
 > Practical experience applying LLMs to content workflows (prompting, retrieval and grounding, output evaluation)
 
-> Source: nvidia posting, verbatim
 
 **Prerequisites:** [Grounding and citation](grounding.md), [Retrieval evaluation](retrieval-evaluation.md)
 
@@ -30,7 +29,7 @@ harder question because there is no single correct output to compare against.
 
 ## Why the job asks for it
 
-NVIDIA lists it third in the required triple: "prompting, retrieval and
+The KnowledgeOps posting lists it third in the required triple: "prompting, retrieval and
 grounding, output evaluation". The ordering is the pipeline, and this is the
 stage that tells you whether the first two worked.
 

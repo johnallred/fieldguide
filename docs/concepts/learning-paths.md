@@ -11,8 +11,8 @@ tags: [edu, core]
 
 `core` · difficulty 3 · 5h
 
-!!! quote "Asked for by name"
-    Intel: "structured learning paths"
+!!! quote "Why it is on the curriculum"
+    "structured learning paths"
 
 **Prerequisites:** [Diátaxis](diataxis.md), [Instructional design for developers](instructional-design.md)
 
@@ -37,7 +37,7 @@ does not arrive with a kind. They arrive with a job.
 A corpus sorted into tutorials, how-to guides, reference and explanation is
 navigable and gives no answer to "I started on Monday, what do I read first".
 The four quadrants are an authoring discipline and a filing system; a path is
-the reading order that the filing system deliberately does not encode. Intel
+the reading order that the filing system deliberately does not encode. The Developer Relations posting
 asks for "structured learning paths" next to golden paths and quickstarts
 because those are the three shapes of the same obligation at three scales: one
 command, one page, one career's first fortnight.

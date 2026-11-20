@@ -11,14 +11,14 @@ tags: [auto, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    NVIDIA: "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
+!!! quote "Why it is on the curriculum"
+    "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
 
 **Prerequisites:** [Python for content automation](python-for-content.md)
 
 ## What it is
 
-The third job in NVIDIA's sentence: making a program talk to a service it does
+The third job in the KnowledgeOps posting's sentence: making a program talk to a service it does
 not control. In a documentation role those services are the ones holding
 content and process, a CMS, a ticket tracker, a translation vendor, a
 repository host, a search index, and increasingly the documentation platform is

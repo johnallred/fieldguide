@@ -11,7 +11,7 @@ tags: [edu, supporting]
 
 `supporting` · difficulty 2 · 4h
 
-!!! quote "Adjacent, not quoted"
+!!! quote "Why it is on the curriculum"
     Neither posting mentions workshops. A standard developer-relations deliverable, and the only setting where you can watch a reader fail.
 
 **Prerequisites:** [Learning paths and curriculum](learning-paths.md), [Reproducible environments](reproducible-environments.md)

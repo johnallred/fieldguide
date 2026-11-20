@@ -26,7 +26,7 @@ from that file.
 | Pages have a consistent shape | Seven required sections, in order, enforced |
 | This learning path is teachable | No concept before a prerequisite the path also teaches |
 | The prerequisite graph is followable | No cycles, no dangling references |
-| A job posting asks for this | Every concept needs a source, a provenance tag and a quote |
+| A job posting asks for this | Every concept needs the posting line behind it |
 | The index is current | CI regenerates the views and fails if a committed one is stale |
 
 **Three of those caught real mistakes within minutes of being written**, which
@@ -55,7 +55,7 @@ mkdocs build                       # the built site the next line reads
 fieldguide render site             # every fenced sample reaches the built HTML as code
 fieldguide audit                   # every figure the pages quote about the corpus
 fieldguide release-check           # the release workflow, one named step at a time
-python3 -m pytest -q                # 217 tests
+python3 -m pytest -q                # 214 tests
 mkdocs serve                       # read it; not run by the cold start, it never exits
 
 python3 scripts/prepublication.py .   # before publishing, not in CI; see below
@@ -112,14 +112,14 @@ src/fieldguide/
   cli.py                   check, build, new, status
 docs/
   index.md                 three ways in
-  coverage.md              GENERATED: every concept and its provenance
+  coverage.md              GENERATED: every concept and the line behind it
   study-plan.md            GENERATED: topological sort of all 106
   paths/                   GENERATED: nine learning paths
   concepts/                106 pages, all written
   explanation/             why a registry, the page contract, provenance
 drills/                  nineteen runnable scripts behind figures the pages quote
-tests/                   210 tests, including tests against the real registry
-                         (217 with the src/ doctests pytest also collects)
+tests/                   207 tests, including tests against the real registry
+                         (214 with the src/ doctests pytest also collects)
 .github/workflows/       nine gates on every pull request, plus the deploy
 ```
 
@@ -152,23 +152,18 @@ shape on the first.
 
 ## Provenance, and the limitation behind it
 
-Every concept carries a tag saying how strong its claim on your time is.
-
-| Tag | Meaning | Count |
-|---|---|---|
-| `quoted` | A verbatim phrase from one of the two postings | 90 |
-| `derived` | The posting requires this; these are not its words | 4 |
-| `adjacent` | Neither posting mentions it; the named work is impossible without it | 12 |
+Every concept prints the posting line that put it on the list, on its own page
+and on every row of the coverage matrix.
 
 **The postings themselves are not reproduced here and are no longer on hand.**
-The `quoted` entries are phrases recorded while reading them, so treat them as
-near-verbatim rather than certified. `derived` entries are reconstructions and
-are the first thing to re-check if the postings become available again.
-`adjacent` entries never depended on the postings at all: they are one
-person's argument, printed next to the concept so a reader can reject it.
+The recorded lines are phrases taken down while reading them, so treat them as
+near-verbatim rather than certified. Where a concept is here because the work a
+posting names is impossible without it, the line says so in those terms rather
+than pretending to be a quotation.
 
-A guide that presented all three as "what the job requires" would be more
-persuasive and less true.
+A guide that presented every line as "what the job requires" would be more
+persuasive and less true, so the wording of each line carries the difference.
+See [Provenance](docs/explanation/provenance.md) for what that costs.
 
 ## Status
 

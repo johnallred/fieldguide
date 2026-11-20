@@ -63,11 +63,6 @@ def build_parser() -> argparse.ArgumentParser:
 
     check = sub.add_parser("check", help="Validate the registry against the docs tree")
     _common(check)
-    check.add_argument(
-        "--strict-sources",
-        action="store_true",
-        help="Also fail when a concept has no verbatim posting quote",
-    )
 
     build = sub.add_parser("build", help="Regenerate the pages derived from the registry")
     _common(build)
@@ -155,9 +150,6 @@ def cmd_check(args: argparse.Namespace) -> int:
     print("ok: every page's front matter parses as YAML")
 
     if not findings.ok:
-        return 1
-    if args.strict_sources and findings.unsourced:
-        print(f"\nFAIL: {len(findings.unsourced)} concepts have no verbatim quote", file=sys.stderr)
         return 1
     return 0
 

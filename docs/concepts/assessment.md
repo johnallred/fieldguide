@@ -11,7 +11,7 @@ tags: [edu, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Adjacent, not quoted"
+!!! quote "Why it is on the curriculum"
     Not named in either posting. The counterpart to cold-start testing: how you find out the curriculum worked.
 
 **Prerequisites:** [Instructional design for developers](instructional-design.md)

@@ -11,8 +11,8 @@ tags: [ia, supporting]
 
 `supporting` · difficulty 1 · 2h
 
-!!! quote "Asked for by name"
-    NVIDIA: "You're a writer who builds: as comfortable in Git, CI, or Python as in a style guide, and fluent with LLMs in daily work"
+!!! quote "Why it is on the curriculum"
+    "You're a writer who builds: as comfortable in Git, CI, or Python as in a style guide, and fluent with LLMs in daily work"
 
 **Prerequisites:** [Taxonomy and controlled vocabularies](taxonomy.md)
 
@@ -34,7 +34,7 @@ will ever check it.
 
 ## Why the job asks for it
 
-NVIDIA's phrasing is "as comfortable in Git, CI, or Python as in a style
+The KnowledgeOps posting's phrasing is "as comfortable in Git, CI, or Python as in a style
 guide", which is a claim about range rather than about style guides
 specifically. The expectation is that you can both write the rules and
 implement them.

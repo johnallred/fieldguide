@@ -11,10 +11,10 @@ tags: [qa, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Asked for by name"
-    Intel: "Build and maintain docsascode pipelines and documentation CI, including link checking and coldstart testing of quickstarts"
+!!! quote "Why it is on the curriculum"
+    "Build and maintain docsascode pipelines and documentation CI, including link checking and coldstart testing of quickstarts"
 
-    NVIDIA: "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
+    "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
 
 **Prerequisites:** [Docs-as-code](docs-as-code.md), [Git authoring workflows for writers](git-authoring.md)
 
@@ -37,7 +37,7 @@ against the current release. Each of those is a silent, specific defect, and
 each needs a specific check.
 
 Both postings ask for the pipeline because it is the only mechanism that scales
-past the size where a human can hold the corpus in their head. NVIDIA's phrase
+past the size where a human can hold the corpus in their head. The KnowledgeOps posting's phrase
 for the philosophy is exact: build systems where the right way is easier than
 the wrong way. A gate is how you make the wrong way harder.
 

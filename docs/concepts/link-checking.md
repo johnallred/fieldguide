@@ -11,8 +11,8 @@ tags: [qa, core]
 
 `core` · difficulty 1 · 2h
 
-!!! quote "Asked for by name"
-    Intel: "documentation CI, including link checking and coldstart testing of quickstarts"
+!!! quote "Why it is on the curriculum"
+    "documentation CI, including link checking and coldstart testing of quickstarts"
 
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 
@@ -29,7 +29,7 @@ missing files. The half that rots a corpus is missing anchors.
 
 ## Why the job asks for it
 
-Intel names it directly. It is the cheapest gate in this entire category,
+The Developer Relations posting names it directly. It is the cheapest gate in this entire category,
 which is why it is difficulty 1 and why it is usually the first thing added
 after a strict build.
 

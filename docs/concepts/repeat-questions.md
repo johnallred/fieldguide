@@ -11,8 +11,8 @@ tags: [meas, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Asked for by name"
-    NVIDIA: "repeat questions"
+!!! quote "Why it is on the curriculum"
+    "repeat questions"
 
 **Prerequisites:** [Support deflection](support-deflection.md)
 
@@ -35,7 +35,7 @@ carry. A repeat tells you **which sentence to write**.
 Because a repeat question is the cheapest high-quality signal in this entire
 field, and almost nobody acts on it.
 
-NVIDIA lists it among the things to measure, alongside deflection and answer
+The KnowledgeOps posting lists it among the things to measure, alongside deflection and answer
 quality, and it is the one that most directly converts into an edit. The
 failure mode is organisational rather than technical: repeats are visible to
 support, the fix belongs to documentation, and the two have separate queues. So

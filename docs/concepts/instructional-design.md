@@ -11,8 +11,8 @@ tags: [edu, core]
 
 `core` · difficulty 2 · 5h
 
-!!! quote "Asked for by name"
-    Intel: "Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result"
+!!! quote "Why it is on the curriculum"
+    "Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result"
 
 **Leads to:** [Learning paths and curriculum](learning-paths.md), [Cognitive load in technical content](cognitive-load.md), [Assessment and checks for understanding](assessment.md)
 
@@ -31,7 +31,7 @@ which is a claim about the *reader* rather than about the page.
 
 ## Why the job asks for it
 
-Intel's bullet is the concept in one line: "from a clean environment to a
+The Developer Relations posting's bullet is the concept in one line: "from a clean environment to a
 working result". That is an instructional objective written in behavioural
 terms, with its starting state named. The posting is describing design, not
 writing.
@@ -207,7 +207,7 @@ number.
 | "Know the architecture" | "Trace one request through all three services" |
 
 The test is whether you could watch someone and tell whether they had done it.
-"Understand" fails that test, which is why Intel's "to a working result" is
+"Understand" fails that test, which is why the Developer Relations posting's "to a working result" is
 better written than most objectives in actual curricula.
 
 ### Where expertise hurts

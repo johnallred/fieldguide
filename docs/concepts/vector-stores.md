@@ -12,7 +12,7 @@ tags: [ai, core]
 `core` · difficulty 3 · 5h
 
 !!! note "Not a quotation (derived)"
-    The retrieval half of a RAG pipeline, which NVIDIA names as a way to stand out.
+    The retrieval half of a RAG pipeline, which the KnowledgeOps posting names as a way to stand out.
 
 **Prerequisites:** [Embeddings](embeddings.md)
 
@@ -30,7 +30,7 @@ mistake.**
 
 ## Why the job asks for it
 
-Neither posting names a vector store, which is why this is `derived`. NVIDIA
+Neither posting names a vector store, which is why this is `derived`. The KnowledgeOps posting
 asks for RAG pipelines twice and for content "structured and packaged for RAG",
 and this is where the packaged content ends up.
 
