@@ -55,7 +55,7 @@ Making a corpus answerable by machines, and knowing whether it worked.
 
 Taking a developer from a clean environment to a working result, repeatably.
 
-17 concepts, roughly 71 hours.
+19 concepts, roughly 80 hours.
 
 ## [The writer who builds](writer-who-builds.md)
 

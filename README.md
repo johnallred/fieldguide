@@ -13,7 +13,7 @@ agents, measure whether any of it worked, and automate the publishing, testing
 and monitoring that keep it true.
 
 Different titles, the same discipline, and no settled curriculum for it
-anywhere. This is an attempt at one: **108 concepts, each with a golden path,
+anywhere. This is an attempt at one: **110 concepts, each with a golden path,
 each naming the day-to-day work that needs it.**
 
 ---
@@ -62,7 +62,7 @@ mkdocs build                       # the built site the next line reads
 fieldguide render site             # every fenced sample reaches the built HTML as code
 fieldguide audit                   # every figure the pages quote about the corpus
 fieldguide release-check           # the release workflow, one named step at a time
-python3 -m pytest -q                # 218 tests
+python3 -m pytest -q                # 222 tests
 mkdocs serve                       # read it; not run by the cold start, it never exits
 
 python3 scripts/prepublication.py .   # before publishing, not in CI; see below
@@ -111,7 +111,7 @@ verifies generated pages are current without rewriting them; CI runs that check.
 ## How it is organised
 
 ```
-concepts.yaml            the curriculum: 108 concepts, 9 paths, the checklist
+concepts.yaml            the curriculum: 110 concepts, 9 paths, the checklist
 src/fieldguide/
   registry.py              the model and every validator
   generate.py              coverage, paths, study plan, placeholders
@@ -120,13 +120,13 @@ src/fieldguide/
 docs/
   index.md                 three ways in
   coverage.md              GENERATED: every concept and the line behind it
-  study-plan.md            GENERATED: topological sort of all 108
+  study-plan.md            GENERATED: topological sort of all 110
   paths/                   GENERATED: nine learning paths
-  concepts/                108 pages, all written
+  concepts/                110 pages, all written
   explanation/             why a registry, the page contract, provenance
 drills/                  nineteen runnable scripts behind figures the pages quote
-tests/                   211 tests, including tests against the real registry
-                         (218 with the src/ doctests pytest also collects)
+tests/                   215 tests, including tests against the real registry
+                         (222 with the src/ doctests pytest also collects)
 .github/workflows/       nine gates on every pull request, plus the deploy
 ```
 
@@ -171,7 +171,7 @@ for how it was checked.
 
 ## Status
 
-**108 of 108 concepts written**, across all ten categories, in dependency order
+**110 of 110 concepts written**, across all ten categories, in dependency order
 so every page links backwards to something that exists. `fieldguide status`
 prints the breakdown by category and tier.
 

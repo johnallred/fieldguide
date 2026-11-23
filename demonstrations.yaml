@@ -1,6 +1,6 @@
 # Which concepts have a working demonstration, and in which file.
 #
-# This guide is 108 concepts of prose about how to do a job. Prose is cheap.
+# This guide is 110 concepts of prose about how to do a job. Prose is cheap.
 # `docpack` is a companion repository that actually does a chunk of the work,
 # and this file records exactly which chunk, down to the file that does it.
 #
@@ -498,6 +498,18 @@ demonstrates:
     artifact: drills/terminology_drift.py
     extent: partial
     note: "Conformance measured against a glossary two ways, to show that the obvious way flatters: a word-boundary search for the canonical term matches inside its own deprecated variants, scoring drift as conformance, so widget reads 60% when the true figure is 33%. Masking variants before counting fixes it. Three pages, not a corpus, and no team or review process is involved."
+
+  - concept: lms-administration
+    project: fieldguide
+    artifact: drills/lms_admin.py
+    extent: partial
+    note: "A drift check between a course's source and an export in the shape the Canvas modules API returns, plus a completion funnel and a per-section start rate. Its largest drop turns out to be an unpublished module, an administrative fault rather than a content one. No live LMS, and the learner data is invented; the page says both."
+
+  - concept: learning-content-standards
+    project: fieldguide
+    artifact: drills/content_standards.py
+    extent: partial
+    note: "A SCORM manifest, xAPI statements and an LTI 1.3 launch checked against rules quoted from each specification: four defects found before upload, none after the fixes. Checked as files only; never run against a real LMS, LRS or LTI platform."
 
   - concept: learner-task-analysis
     project: fieldguide

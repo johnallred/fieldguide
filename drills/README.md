@@ -49,6 +49,8 @@ one machine. A test pins the constant columns.
 | `playbook.py` | `pyyaml` | Playbooks and decision guides |
 | `alignment_audit.py` | nothing | Learning science for developer education |
 | `task_analysis.py` | nothing | Learner and task analysis |
+| `lms_admin.py` | nothing | LMS administration |
+| `content_standards.py` | nothing | Learning content standards |
 | `sphinx_autodoc.py` | `pip install sphinx myst-parser` | Sphinx |
 
 These ten are different in kind. Their pages are golden paths: a reader can

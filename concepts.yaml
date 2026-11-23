@@ -816,6 +816,28 @@ concepts:
       - "Designing curriculum so a developer learns what they need, in the order they need it."
     status: complete
 
+  - id: lms-administration
+    name: LMS administration
+    category: edu
+    tier: supporting
+    difficulty: 2
+    time: 4h
+    prerequisites: [learning-paths]
+    in_practice:
+      - "Keeping the courses in a learning management system true to their source, enrolled correctly, and reporting completion you can act on."
+    status: complete
+
+  - id: learning-content-standards
+    name: Learning content standards
+    category: edu
+    tier: supporting
+    difficulty: 2
+    time: 5h
+    prerequisites: [lms-administration]
+    in_practice:
+      - "Packaging courses and labs so any learning platform can launch them, and getting the tracking data back out in a form someone can use."
+    status: complete
+
   - id: learning-paths
     name: Learning paths and curriculum
     category: edu
@@ -1393,6 +1415,8 @@ paths:
       - reproducible-environments
       - coldstart-testing
       - learning-paths
+      - lms-administration
+      - learning-content-standards
       - assessment
       - sample-apps
       - workshops

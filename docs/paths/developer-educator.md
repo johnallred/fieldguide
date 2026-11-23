@@ -13,7 +13,7 @@ generated: true
 
 Taking a developer from a clean environment to a working result, repeatably.
 
-**17 concepts, roughly 71 hours.** The order matters:
+**19 concepts, roughly 80 hours.** The order matters:
 each step assumes the ones above it.
 
 **Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Code-sample validation](../concepts/code-sample-validation.md), [Templates and scaffolding](../concepts/templates-scaffolding.md). Each step below repeats what it assumes.
@@ -120,7 +120,23 @@ Sequencing content into structured learning paths a reader can follow start to f
 
 Builds on, earlier in this path: Instructional design for developers, Diátaxis.
 
-## 14. [Assessment and checks for understanding](../concepts/assessment.md)
+## 14. [LMS administration](../concepts/lms-administration.md)
+
+`supporting` · practise it · 4h
+
+Keeping the courses in a learning management system true to their source, enrolled correctly, and reporting completion you can act on.
+
+Builds on, earlier in this path: Learning paths and curriculum.
+
+## 15. [Learning content standards](../concepts/learning-content-standards.md)
+
+`supporting` · practise it · 5h
+
+Packaging courses and labs so any learning platform can launch them, and getting the tracking data back out in a form someone can use.
+
+Builds on, earlier in this path: LMS administration.
+
+## 16. [Assessment and checks for understanding](../concepts/assessment.md)
 
 `supporting` · practise it · 3h
 
@@ -128,7 +144,7 @@ Checking that a learner actually learned: how you know the curriculum worked.
 
 Builds on, earlier in this path: Instructional design for developers.
 
-## 15. [Sample applications and galleries](../concepts/sample-apps.md)
+## 17. [Sample applications and galleries](../concepts/sample-apps.md)
 
 `supporting` · build something · 6h
 
@@ -138,7 +154,7 @@ Builds on, earlier in this path: Sample walkthroughs.
 
 Assumes, from outside this path: [Code-sample validation](../concepts/code-sample-validation.md).
 
-## 16. [Workshops and hands-on labs](../concepts/workshops.md)
+## 18. [Workshops and hands-on labs](../concepts/workshops.md)
 
 `supporting` · practise it · 4h
 
@@ -146,7 +162,7 @@ Running hands-on workshops and labs, a standard developer-relations deliverable.
 
 Builds on, earlier in this path: Learning paths and curriculum, Reproducible environments.
 
-## 17. [Guided workflows](../concepts/guided-workflows.md)
+## 19. [Guided workflows](../concepts/guided-workflows.md)
 
 `core` · build something · 5h
 

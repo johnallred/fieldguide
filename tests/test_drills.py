@@ -85,6 +85,16 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "which layer caught each failure, and which layers alone would miss it",
         ),
     ),
+    "lms_admin.py": (
+        "docs/concepts/lms-administration.md",
+        "<<'DATA'\n",
+        ("COURSE", "MODULES", "PROGRESS"),
+    ),
+    "content_standards.py": (
+        "docs/concepts/learning-content-standards.md",
+        "<<'DATA'\n",
+        ("MANIFEST", "STATEMENTS", "LAUNCH", "STATEMENTS_FIXED", "LAUNCH_FIXED"),
+    ),
     "task_analysis.py": (
         "docs/concepts/learner-task-analysis.md",
         "<<'TXT'\n",
@@ -157,6 +167,29 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "docs/b.md: ...'e\\nPoint the Widget CLI at your'...",
         ),
     ),
+    "lms_admin.py": (
+        "docs/concepts/lms-administration.md",
+        0,
+        (
+            "  unpublished in the LMS:   Choosing a value",
+            "  only in the LMS:          Retries FAQ (old)",
+            "  4 difference(s)",
+            "  largest drop: Choosing a value (-7)",
+            "  partners    5/8 never started",
+        ),
+    ),
+    "content_standards.py": (
+        "docs/concepts/learning-content-standards.md",
+        0,
+        (
+            "SCORM  resource r2: diagnose.html is not in the package",
+            "xAPI   statement 2: actor has 2 identifiers (mbox, account), needs exactly 1",
+            "xAPI   statement 3: verb id 'finished' is not an IRI",
+            "LTI    launch is missing the roles claim",
+            "4 finding(s)",
+            "0 finding(s)",
+        ),
+    ),
     "task_analysis.py": (
         "docs/concepts/learner-task-analysis.md",
         0,
@@ -185,7 +218,7 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         (
             "two hours against the 34-hour first-week path: 6%",
             "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
-            "concepts in this corpus of 3h or less: 48/108",
+            "concepts in this corpus of 3h or less: 48/110",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",
         ),

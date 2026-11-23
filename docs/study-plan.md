@@ -90,7 +90,7 @@ without much cost.
 65. [Treating docs, setup and samples as one product](concepts/docs-as-product.md) · 3h
 66. [llms.txt and llms-full.txt](concepts/llms-txt.md) · 2h
 
-## Everything (108 concepts)
+## Everything (110 concepts)
 
 | # | Concept | Category | Tier | Time |
 |---|---|---|---|---|
@@ -162,43 +162,45 @@ without much cost.
 | 66 | [Knowledge architecture](concepts/knowledge-architecture.md) | Information and knowledge architecture | core | 6h |
 | 67 | [LLMs in the content lifecycle](concepts/llm-content-lifecycle.md) | AI-ready content and agents | core | 6h |
 | 68 | [Learning paths and curriculum](concepts/learning-paths.md) | Developer education and curriculum | core | 5h |
-| 69 | [Link checking](concepts/link-checking.md) | Quality automation and documentation CI | core | 2h |
-| 70 | [Single-sourcing and content reuse](concepts/single-sourcing.md) | Information and knowledge architecture | supporting | 3h |
-| 71 | [Localization and translation pipelines](concepts/localization.md) | Docs-as-code toolchain | supporting | 4h |
-| 72 | [Measuring AI answer quality](concepts/ai-answer-quality.md) | Measurement and feedback | core | 5h |
-| 73 | [MkDocs and Material](concepts/mkdocs.md) | Docs-as-code toolchain | core | 4h |
-| 74 | [OpenAPI and REST reference](concepts/openapi.md) | Docs-as-code toolchain | supporting | 4h |
-| 75 | [OpenUSD and Omniverse](concepts/usd-omniverse.md) | Domain context | context | 4h |
-| 76 | [Playbooks and decision guides](concepts/playbooks.md) | Information and knowledge architecture | core | 4h |
-| 77 | [Preview deployments and publishing](concepts/preview-deployments.md) | Quality automation and documentation CI | supporting | 3h |
-| 78 | [Support deflection](concepts/support-deflection.md) | Measurement and feedback | core | 3h |
-| 79 | [Repeat-question analysis](concepts/repeat-questions.md) | Measurement and feedback | core | 3h |
-| 80 | [Prioritizing documentation work](concepts/docs-prioritization.md) | Ways of working | supporting | 3h |
-| 81 | [Publishing in public](concepts/publishing-in-public.md) | Developer education and curriculum | supporting | 4h |
-| 82 | [Quickstarts that survive contact](concepts/quickstarts.md) | Golden paths and developer onboarding | core | 3h |
-| 83 | [Reading an AI software stack](concepts/ai-stack.md) | Domain context | context | 4h |
-| 84 | [Reading code to verify accuracy](concepts/reading-code-to-verify.md) | Ways of working | core | 5h |
-| 85 | [Real-time and graphics systems](concepts/realtime-systems.md) | Domain context | context | 4h |
-| 86 | [Release readiness for documentation](concepts/release-readiness.md) | Ways of working | core | 4h |
-| 87 | [Retiring content](concepts/content-retirement.md) | Information and knowledge architecture | supporting | 3h |
-| 88 | [Reviewing documentation](concepts/docs-review.md) | Quality automation and documentation CI | supporting | 3h |
-| 89 | [Robotics simulation, Isaac Sim and ROS](concepts/robotics-sim.md) | Domain context | context | 4h |
-| 90 | [Sample walkthroughs](concepts/sample-walkthroughs.md) | Golden paths and developer onboarding | core | 3h |
-| 91 | [Sample applications and galleries](concepts/sample-apps.md) | Golden paths and developer onboarding | supporting | 6h |
-| 92 | [Screencasts and video](concepts/screencasts.md) | Developer education and curriculum | context | 4h |
-| 93 | [Search and query log analysis](concepts/search-log-analysis.md) | Measurement and feedback | supporting | 3h |
-| 94 | [Security guidance as encoded standard](concepts/security-documentation.md) | Information and knowledge architecture | supporting | 3h |
-| 95 | [reStructuredText](concepts/restructuredtext.md) | Docs-as-code toolchain | supporting | 3h |
-| 96 | [Sphinx](concepts/sphinx.md) | Docs-as-code toolchain | core | 6h |
-| 97 | [Structured data and JSON-LD](concepts/structured-data.md) | AI-ready content and agents | supporting | 3h |
-| 98 | [Technical writing as a craft](concepts/technical-writing.md) | Ways of working | core | 8h |
-| 99 | [Time to first success](concepts/time-to-first-success.md) | Measurement and feedback | core | 3h |
-| 100 | [Transforming content as data](concepts/content-data-transformation.md) | Automation with Python | core | 4h |
-| 101 | [Treating docs, setup and samples as one product](concepts/docs-as-product.md) | Ways of working | core | 3h |
-| 102 | [Turning developer feedback into changes](concepts/developer-feedback-loops.md) | Measurement and feedback | supporting | 3h |
-| 103 | [User stories as a documentation standard](concepts/user-stories.md) | Ways of working | supporting | 2h |
-| 104 | [Versioned documentation](concepts/versioning.md) | Docs-as-code toolchain | supporting | 3h |
-| 105 | [Working with engineers as sources](concepts/working-with-engineers.md) | Ways of working | supporting | 3h |
-| 106 | [Workshops and hands-on labs](concepts/workshops.md) | Developer education and curriculum | supporting | 4h |
-| 107 | [Writing custom linters](concepts/custom-linters.md) | Quality automation and documentation CI | supporting | 5h |
-| 108 | [llms.txt and llms-full.txt](concepts/llms-txt.md) | AI-ready content and agents | core | 2h |
+| 69 | [LMS administration](concepts/lms-administration.md) | Developer education and curriculum | supporting | 4h |
+| 70 | [Learning content standards](concepts/learning-content-standards.md) | Developer education and curriculum | supporting | 5h |
+| 71 | [Link checking](concepts/link-checking.md) | Quality automation and documentation CI | core | 2h |
+| 72 | [Single-sourcing and content reuse](concepts/single-sourcing.md) | Information and knowledge architecture | supporting | 3h |
+| 73 | [Localization and translation pipelines](concepts/localization.md) | Docs-as-code toolchain | supporting | 4h |
+| 74 | [Measuring AI answer quality](concepts/ai-answer-quality.md) | Measurement and feedback | core | 5h |
+| 75 | [MkDocs and Material](concepts/mkdocs.md) | Docs-as-code toolchain | core | 4h |
+| 76 | [OpenAPI and REST reference](concepts/openapi.md) | Docs-as-code toolchain | supporting | 4h |
+| 77 | [OpenUSD and Omniverse](concepts/usd-omniverse.md) | Domain context | context | 4h |
+| 78 | [Playbooks and decision guides](concepts/playbooks.md) | Information and knowledge architecture | core | 4h |
+| 79 | [Preview deployments and publishing](concepts/preview-deployments.md) | Quality automation and documentation CI | supporting | 3h |
+| 80 | [Support deflection](concepts/support-deflection.md) | Measurement and feedback | core | 3h |
+| 81 | [Repeat-question analysis](concepts/repeat-questions.md) | Measurement and feedback | core | 3h |
+| 82 | [Prioritizing documentation work](concepts/docs-prioritization.md) | Ways of working | supporting | 3h |
+| 83 | [Publishing in public](concepts/publishing-in-public.md) | Developer education and curriculum | supporting | 4h |
+| 84 | [Quickstarts that survive contact](concepts/quickstarts.md) | Golden paths and developer onboarding | core | 3h |
+| 85 | [Reading an AI software stack](concepts/ai-stack.md) | Domain context | context | 4h |
+| 86 | [Reading code to verify accuracy](concepts/reading-code-to-verify.md) | Ways of working | core | 5h |
+| 87 | [Real-time and graphics systems](concepts/realtime-systems.md) | Domain context | context | 4h |
+| 88 | [Release readiness for documentation](concepts/release-readiness.md) | Ways of working | core | 4h |
+| 89 | [Retiring content](concepts/content-retirement.md) | Information and knowledge architecture | supporting | 3h |
+| 90 | [Reviewing documentation](concepts/docs-review.md) | Quality automation and documentation CI | supporting | 3h |
+| 91 | [Robotics simulation, Isaac Sim and ROS](concepts/robotics-sim.md) | Domain context | context | 4h |
+| 92 | [Sample walkthroughs](concepts/sample-walkthroughs.md) | Golden paths and developer onboarding | core | 3h |
+| 93 | [Sample applications and galleries](concepts/sample-apps.md) | Golden paths and developer onboarding | supporting | 6h |
+| 94 | [Screencasts and video](concepts/screencasts.md) | Developer education and curriculum | context | 4h |
+| 95 | [Search and query log analysis](concepts/search-log-analysis.md) | Measurement and feedback | supporting | 3h |
+| 96 | [Security guidance as encoded standard](concepts/security-documentation.md) | Information and knowledge architecture | supporting | 3h |
+| 97 | [reStructuredText](concepts/restructuredtext.md) | Docs-as-code toolchain | supporting | 3h |
+| 98 | [Sphinx](concepts/sphinx.md) | Docs-as-code toolchain | core | 6h |
+| 99 | [Structured data and JSON-LD](concepts/structured-data.md) | AI-ready content and agents | supporting | 3h |
+| 100 | [Technical writing as a craft](concepts/technical-writing.md) | Ways of working | core | 8h |
+| 101 | [Time to first success](concepts/time-to-first-success.md) | Measurement and feedback | core | 3h |
+| 102 | [Transforming content as data](concepts/content-data-transformation.md) | Automation with Python | core | 4h |
+| 103 | [Treating docs, setup and samples as one product](concepts/docs-as-product.md) | Ways of working | core | 3h |
+| 104 | [Turning developer feedback into changes](concepts/developer-feedback-loops.md) | Measurement and feedback | supporting | 3h |
+| 105 | [User stories as a documentation standard](concepts/user-stories.md) | Ways of working | supporting | 2h |
+| 106 | [Versioned documentation](concepts/versioning.md) | Docs-as-code toolchain | supporting | 3h |
+| 107 | [Working with engineers as sources](concepts/working-with-engineers.md) | Ways of working | supporting | 3h |
+| 108 | [Workshops and hands-on labs](concepts/workshops.md) | Developer education and curriculum | supporting | 4h |
+| 109 | [Writing custom linters](concepts/custom-linters.md) | Quality automation and documentation CI | supporting | 5h |
+| 110 | [llms.txt and llms-full.txt](concepts/llms-txt.md) | AI-ready content and agents | core | 2h |
