@@ -11,11 +11,7 @@ tags: [dac, supporting]
 
 `supporting` · difficulty 3 · 4h
 
-!!! note "Not a quotation (adjacent)"
-    Neither posting mentions localization. It is here because a platform
-    documentation role at a company selling worldwide meets it eventually, and
-    because the engineering is a content-model problem rather than a language
-    one.
+> Getting content translated and keeping translations in step with the source as it changes.
 
 **Prerequisites:** [Content models](content-model.md), [Single-sourcing](single-sourcing.md)
 
@@ -30,9 +26,10 @@ The reason it is difficulty 3 is that almost all of the difficulty is in
 segmentation and protection, both of which are decisions about your content
 model. Translation itself is somebody else's job.
 
-## Why the job asks for it
+## How this applies to your role
 
-It does not, and the banner says so. The case for knowing it is that
+You may never run a localization pipeline, and the banner says so. The case
+for knowing it is that
 localization is the most unforgiving test of a content model that exists.
 
 A corpus with inconsistent structure, inline HTML, text baked into screenshots
@@ -262,7 +259,7 @@ If localization is known to be coming, it belongs in the
 [generator choice](static-site-generators.md), because retrofitting it is
 substantially harder than starting with it.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with it as a content-model test.** "Localization is the most
 unforgiving test of a content model. A corpus with inline HTML, assembled
@@ -274,7 +271,7 @@ find out their model is broken when the first translation bill arrives."
 segment-level staleness: hash each source segment so a change invalidates only
 the segments it touched. Without it, a typo fix invalidates a whole page.
 
-**The tradeoff to volunteer.** Segmentation is where the quality lives and it
+**The tradeoff to name.** Segmentation is where the quality lives and it
 is never finished. My own first pass produced two broken segments out of five:
 a placeholder that ate a link's closing bracket, and an admonition whose syntax
 marker was bundled with its prose. Both would have reached a translator. You
@@ -289,9 +286,9 @@ one unit with named placeholders. That decision is made in the content model
 long before anybody thinks about languages, which is why localization belongs
 in this category rather than in a translation one.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** An extraction script whose output you have read as a
+**The work product.** An extraction script whose output you have read as a
 translator would, plus a placeholder-integrity check on returned segments.
 
 **Three things to do, in order:**
@@ -303,7 +300,7 @@ translator would, plus a placeholder-integrity check on returned segments.
 3. Write the placeholder-integrity check. It is five lines, and it is the
    difference between a wrong page and a caught error.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories is localized, which the [demonstrated](../demonstrated.md) page
 records. What travels is the specific engineering: a segmentation pass, the two
 bugs it had on first run, why each one matters to a translator, and an

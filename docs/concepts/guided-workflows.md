@@ -11,14 +11,14 @@ tags: [gp, core]
 
 `core` · difficulty 3 · 5h
 
-!!! quote "Why it is on the curriculum"
-    "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents"
+> Replacing static instructions with workflows that guide a person through a standard.
 
 **Prerequisites:** [Templates and scaffolding](templates-scaffolding.md)
 
 ## What it is
 
-The third thing on the KnowledgeOps posting's list, and the most ambitious. A
+The third way to encode a standard, after templates and validators, and the
+most ambitious. A
 [template](templates-scaffolding.md) gives you a correctly shaped artifact. A
 validator tells you whether an artifact is correct. A guided workflow **walks
 you through a process**, checking as it goes, so that completing it is the same
@@ -28,7 +28,7 @@ The concrete form is usually a command rather than a page: `release-check`,
 `onboard`, `new-integration`. It replaces a checklist page where a human reads
 an item, decides whether it is done, and ticks it.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because a checklist asks a question the reader is badly placed to answer.
 
@@ -39,7 +39,7 @@ that means "I did not look". A guided workflow answers the question instead of
 asking it, and the difference is not convenience: it is whether the record is
 true.
 
-The KnowledgeOps posting's phrase is again **rather than static documents**. The standard that
+The phrase that matters is again **rather than static documents**. The standard that
 exists as a page is a standard whose compliance is self-reported.
 
 ## The golden path
@@ -160,7 +160,7 @@ trips.
 
 ## Reference
 
-### The three forms the KnowledgeOps posting names
+### The three forms an encoded standard takes
 
 | Form | Gives you | Tells you | Walks you |
 |---|---|---|---|
@@ -230,13 +230,13 @@ answers "is the repository correct" for a machine; a guided workflow answers
 "what do I do next" for a person, with names, details and a record. The same
 function can serve both, and the presentation is the difference.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the self-report problem.** "A checklist asks the reader to decide
 whether an item is done, which means checking 121 pages or guessing, and under
 deadline it is a guess. A guided workflow answers the question instead of
-asking it, so the record means something. That is why the KnowledgeOps posting says workflows
-rather than static documents."
+asking it, so the record means something. That is why the standard
+should be a workflow rather than a static document."
 
 **The follow-up is sequencing, and it is the measurement worth bringing.** The
 obvious implementation stops at the first failure, which looks like
@@ -244,7 +244,7 @@ correctness and cost me four runs for three defects. Separating sequence from
 dependency, and finding that none of my three steps actually gated anything,
 took it to two. Everything not in an explicit `GATES` list runs.
 
-**The tradeoff to volunteer.** A guided workflow is a program with a user
+**The tradeoff to name.** A guided workflow is a program with a user
 interface, and that is a bigger commitment than a checklist page. It needs
 maintaining, its failure messages are documentation that will go stale, and a
 flaky step poisons trust in the whole thing. On a process run twice a year by
@@ -257,9 +257,9 @@ is a state no documentation page ever gets its audience into. Treat those
 strings as prose, name the specific file, and say what to do, because that is
 the sentence that actually teaches the standard.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A workflow command in a repository of yours, with named
+**The work product.** A workflow command in a repository of yours, with named
 steps, details on success, specific failures, and an explicit `GATES` list.
 
 **Three things to do, in order:**
@@ -328,7 +328,7 @@ fails to parse walked straight past the step named after it. A test caught it.
 A step's name is a claim about what it checks, and the two drift apart as
 quietly as anything else on a page.
 
-**What makes it credible rather than decorative.** The command exists, runs in
+**How to tell it is working.** The command exists, runs in
 CI, and its steps check real properties of a real corpus; the
 [demonstrated](../demonstrated.md) page records it. The distinction from
 `fieldguide check` is the point: that is a validator, which reports everything

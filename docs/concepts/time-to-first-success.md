@@ -11,17 +11,16 @@ tags: [meas, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "measure time-to-first-success, support deflection, repeat questions, and AI answer quality"
+> Measuring how long a new developer takes to reach a working result, and shortening it.
 
 **Prerequisites:** [Documentation analytics](docs-analytics.md), [Golden paths](golden-paths.md)
 
 ## What it is
 
 The elapsed time between a developer deciding to try something and that
-developer having it work. The Developer Relations posting writes the same idea as a design goal, "from a
-clean environment to a working result", and the KnowledgeOps posting writes it as a metric. It is
-the same quantity from two sides.
+developer having it work. Developer-education teams state it as a design
+goal, "from a clean environment to a working result", and KnowledgeOps teams
+state it as a metric. It is the same quantity from two sides.
 
 It is the best single number in developer documentation, because it is the only
 one that cannot be satisfied by a well-written page. Prose quality, link
@@ -31,7 +30,7 @@ them substitutes for it.
 Defining it requires two decisions, and both are where the metric usually goes
 wrong: when the clock starts, and what counts as success.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because every other documentation metric can be green while nobody can get
 started.
@@ -42,8 +41,8 @@ minutes. Time to first success is the metric that refuses to be fooled by that,
 which is precisely why it is uncomfortable to adopt: it is the one number that
 can make a quarter of good work look insufficient.
 
-The KnowledgeOps posting lists it first of four, ahead of deflection and answer quality, and that
-ordering is defensible. Deflection measures the load you removed from someone
+It belongs first of the four outcome measures, ahead of deflection, repeat
+questions and answer quality, and that ordering is defensible. Deflection measures the load you removed from someone
 else. First success measures whether the thing works for the person in front of
 you.
 
@@ -287,7 +286,7 @@ team and the reason the metric belongs next to the tooling.
 A fast first success followed by a wall is a real pattern, and this metric
 reports the good half of it.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with why it is the best metric and what it costs.** "It is the only
 documentation number that cannot be satisfied by a well-written page. Prose
@@ -320,9 +319,9 @@ recognises the result, and the only instrument that checks the second one is a
 human. So the proxy goes in CI and the human channel stays open, because the
 proxy exists only because a person spoke up first.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A cold-start script in CI that runs from an empty
+**The work product.** A cold-start script in CI that runs from an empty
 environment and asserts a promised output, plus a check on whichever entry
 point it does not cover.
 
@@ -339,7 +338,7 @@ point it does not cover.
    appears. If the answer is more than one, reorder the list; it is the cheapest
    improvement available in this entire category.
 
-**What makes it credible rather than decorative.** `scripts/coldstart.sh` is in
+**How to tell it is working.** `scripts/coldstart.sh` is in
 the companion repository, runs in CI, and passed in nine seconds with exit zero
 on the run quoted above. The reader failure is equally real, reported by the
 first person to follow the README, and the test added in step 4 is in

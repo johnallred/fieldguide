@@ -11,8 +11,7 @@ tags: [ia, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Capture tribal knowledge from engineering, product, and operations, and turn it into playbooks, decision guides, and self-service paths"
+> Turning tribal knowledge from engineering, product and operations into playbooks and decision guides.
 
 **Prerequisites:** [Interviewing subject-matter experts](sme-interviews.md)
 
@@ -28,11 +27,11 @@ branches as **data** rather than as prose. Then you can render the page and
 validate the structure, which is the difference between a playbook and a wiki
 page with a lot of nested bullets.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting's bullet is the clearest statement of leverage anywhere in either
-posting: capture what individuals know and turn it into self-service paths, so
-fewer people have to ask "how do I…?".
+This is the clearest form of leverage in the work: capture what individuals
+know and turn it into self-service paths, so fewer people have to ask "how do
+I…?".
 
 The reason this needs a page of its own rather than being a kind of how-to is
 that tribal knowledge is *conditional*. The expert does not know one procedure;
@@ -288,7 +287,7 @@ routing is the part an assistant is otherwise worst at.
 | Review it after an incident it failed to cover | The missing branch is now known |
 | Date the outcomes | "Rotate the token" changes when the auth system does |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the routing.** "Tribal knowledge is conditional. The expert does
 not know one procedure, they know how to tell which of six situations they are
@@ -302,7 +301,7 @@ dead-end options, no unreachable outcomes. Four checks that catch failures no
 amount of reading will, because reading follows one path and these are
 properties of the whole structure.
 
-**The tradeoff to volunteer.** A playbook as data costs you a generator and a
+**The tradeoff to name.** A playbook as data costs you a generator and a
 validator, and it makes casual editing harder: a contributor who wants to add a
 sentence now has to understand a schema. On a guide with four branches that is
 not worth it, and prose with a diagram is the better answer. It starts paying
@@ -316,9 +315,9 @@ schedule fire?" is useful. No validator catches that, which is why these need
 testing with a reader who is genuinely stuck rather than review by the expert
 who wrote them.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A playbook for something you actually know, as data, with the
+**The work product.** A playbook for something you actually know, as data, with the
 four structural checks and a rendered page from the same source.
 
 **Three things to do, in order:**
@@ -331,7 +330,7 @@ four structural checks and a rendered page from the same source.
 3. Give it to someone who does not know the answer and watch where they stop.
    That is the diagnostic-question defect, and it is the only way to find it.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories contains a playbook, which the
 [demonstrated](../demonstrated.md) page records. The validator above is real
 and runs, and the honest limit is that it checks structure only: it proves

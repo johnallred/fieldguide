@@ -11,20 +11,19 @@ tags: [edu, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Partner with engineering, product, and developer advocates so each new capability ships with tested documentation"
+> Working with engineering, product and advocates so each new capability ships with tested documentation.
 
 ## What it is
 
 The part of this job that happens in other people's meetings. Advocacy in the
-sense the Developer Relations posting's bullet means is not conference talks and not evangelism: it is
+sense this page means is not conference talks and not evangelism: it is
 arranging that documentation is produced as part of shipping, by the people who
 built the thing, rather than reconstructed afterwards by someone who did not.
 
 The operative phrase is **ships with**. Everything else in the sentence
 describes who you have to work with to make that true.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because the alternative does not scale and everyone knows it.
 
@@ -33,7 +32,7 @@ queue lengthens, the docs describe the product of six months ago, and the team
 is measured on throughput against an inflow it does not control. The structural
 fix is to move authorship to the point where the knowledge already exists, and
 that is an organisational change rather than a writing one, which is why it
-appears in a job posting as "partner with".
+is described as partnering with engineering, product and developer advocates.
 
 The reason it needs a mechanism rather than goodwill is that goodwill does not
 survive a deadline. A definition of done that includes documentation, enforced
@@ -105,7 +104,7 @@ of Python not having private modules. `Span` is a dataclass used in one place.
 Documenting it would be writing documentation nobody will read in order to
 satisfy a counter, which is the characteristic output of a badly aimed gate.
 
-Both gates are measuring symbols. The posting says **capability**.
+Both gates are measuring symbols. The goal is a tested **capability**.
 
 **Step 3: the third gate, per shipped capability**
 
@@ -194,7 +193,8 @@ right version found on its first run.
 | Every capability is named where readers look | `render` missing from the quick start | Usable |
 | Every capability has a *tested* example | The honest target | Expensive, and correct |
 
-The last row is what the Developer Relations posting's sentence actually asks for, and it needs
+The last row is what "each new capability ships with tested documentation"
+actually means, and it needs
 [code-sample validation](code-sample-validation.md) underneath it to mean
 anything.
 
@@ -245,7 +245,7 @@ thinner.
 | Reviewing every pull request for docs | Does not scale; gate it |
 | Persuasion | Mechanism outlives persuasion |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with what "ships with" implies.** "A documentation team that writes
 everything is a queue, and the queue is always behind an inflow it does not
@@ -272,15 +272,15 @@ acquires a reputation, so the real work is aiming the gate before anyone else
 sees it: run it on your own repository, let it fail, fix what it finds, and
 bring the number instead of the principle.
 
-**The tradeoff to volunteer.** A gate can only check that documentation exists,
+**The tradeoff to name.** A gate can only check that documentation exists,
 never that it is any good. "When to use this and when not" is the most valuable
 thing in a reference and no mechanism will ever require it. So the gate buys
 coverage and the review still has to be human, and a team that mistakes the
 first for the second ends up with complete documentation nobody can use.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A test in a repository of yours that enumerates shipped
+**The work product.** A test in a repository of yours that enumerates shipped
 capabilities from the program itself and fails when one is undocumented, plus
 the commit where its first run fixed something.
 
@@ -297,7 +297,7 @@ the commit where its first run fixed something.
    example. If the answer is the docs role, there is a transcription step in
    the pipeline, and that is the thing to propose removing.
 
-**What makes it credible rather than decorative.** The gate exists, lives in
+**How to tell it is working.** The gate exists, lives in
 this guide's test suite, enumerates subcommands from the parser rather than
 from a list, and its first run produced two fixes in the README. What is not
 demonstrated is the partnership: this is a one-person repository, so no
@@ -312,4 +312,4 @@ records that split.
 - [Documentation CI](documentation-ci.md), where a gate like this runs
 - [Release readiness](release-readiness.md), the checklist this belongs on
 - [Guided workflows](guided-workflows.md), the same standard encoded as a process
-- [Publishing in public](publishing-in-public.md), the outward-facing half of this role
+- [Publishing in public](publishing-in-public.md), the outward-facing half of this work

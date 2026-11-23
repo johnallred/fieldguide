@@ -11,7 +11,7 @@ tags: [ai, supporting]
 
 `supporting` · difficulty 3 · 4h
 
-> sound judgment about where AI can be trusted
+> Catching and limiting AI answers that are confident and wrong.
 
 
 **Prerequisites:** [Grounding and citation](grounding.md), [Output evaluation](output-evaluation.md)
@@ -24,12 +24,12 @@ is a mechanism that catches one before a reader acts on it.
 The useful framing is not "stop hallucination", which is not available. It is
 **bound the damage and make the failures visible**, which is.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting asks for "sound judgment about where AI can be trusted" and for "human
-review where judgment matters". Both are about this. The posting never uses the
-word hallucination, which is why the tag is `quoted` on a different phrase: they
-are asking about the behaviour rather than the vocabulary.
+Any team applying AI to content needs sound judgement about where AI can be
+trusted, and human review where judgement matters. Both are about this. The
+behaviour matters more than the vocabulary: you may never hear the word
+hallucination in a planning meeting, and you will deal with it every week.
 
 What makes this `supporting` rather than `core` is that most of the work lives in
 [grounding](grounding.md) and [output evaluation](output-evaluation.md). This
@@ -397,9 +397,9 @@ Only a person who knows the subject catches that, which is what
 [judging where AI can be trusted](ai-trust-judgment.md) keeps high-cost tasks
 away from models entirely.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the identifier case, because
+**How to explain it.** Lead with the identifier case, because
 it shows you have debugged a real system rather than read about hallucination.
 "Grounding catches fused claims and invented numbers. Where it gets unreliable
 is a fabricated identifier, and specifically a camouflaged one: invent a flag
@@ -414,10 +414,10 @@ nothing else in the pipeline was using it."
 followed by the reframing that matters: you bound it and you make it visible.
 Bounding is grounding plus vocabulary checks, which confine fabrication to
 things that exist. Visibility is an abstention metric and a sampled human read,
-so the failures you cannot check mechanically still get counted. A candidate who
-claims elimination has not operated one of these.
+so the failures you cannot check mechanically still get counted. Anyone who promises
+elimination has not operated one of these.
 
-**The tradeoff to volunteer.** Every guardrail increases refusals, and refusals
+**The tradeoff to name.** Every guardrail increases refusals, and refusals
 have a cost that nobody measures. An assistant tuned hard enough to never
 fabricate will decline questions it could have answered, and users stop asking,
 and the project is judged a failure for being useless rather than for being
@@ -434,9 +434,9 @@ from real reader questions. Teams treat that log as a safety problem; it is also
 the most honest [documentation backlog](docs-prioritization.md) you will ever
 get, and reframing it that way is what gets the work funded.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A vocabulary guardrail whose known-good list is generated in
+**The work product.** A vocabulary guardrail whose known-good list is generated in
 CI, plus the layer matrix showing what each catches.
 
 **Three things to do, in order:**
@@ -452,11 +452,10 @@ CI, plus the layer matrix showing what each catches.
    count what fraction of answers are refusals. A rate near zero is the finding,
    and almost nobody has the number.
 
-**What makes it credible rather than decorative.** Discussing hallucination is unfalsifiable. A
-vocabulary check against a CI-generated identifier list, a layer matrix showing grounding
-catching a fabricated flag in one phrasing and missing it in two others, and a
-refusal-rate number, demonstrates that you measured the failure rather than
-worried about it.
+**How to tell it is working.** A vocabulary check against a CI-generated identifier
+list, a layer matrix showing which guardrail catches which fabrication, and a
+refusal-rate number that someone looks at. That is measuring the failure rather
+than worrying about it, and invented-flag tickets fall.
 
 ## Related
 

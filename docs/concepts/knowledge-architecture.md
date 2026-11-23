@@ -11,8 +11,7 @@ tags: [ia, core]
 
 `core` · difficulty 3 · 6h
 
-!!! quote "Why it is on the curriculum"
-    "Collaborate with documentation leads on knowledge architecture, sharing implementation feedback (what works, breaks, and scales) to refine content models, information architecture, and AI-readiness patterns"
+> Working with documentation leads on how knowledge is organised across products, teams and sources.
 
 **Prerequisites:** [Information architecture](information-architecture.md)
 
@@ -28,16 +27,16 @@ obvious place in a navigation tree while the thing it explains depends on four
 concepts a reader has not met. Information architecture will not tell you that.
 A dependency graph will.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names it directly, and names the relationship precisely: you
-**collaborate** with documentation leads on it, and your contribution is
-**implementation feedback**, what works, breaks and scales. The architecture is
-owned jointly; what you bring is evidence from having built it.
+The relationship is usually precise: you **collaborate** with documentation
+leads on it, and your contribution is **implementation feedback**, what works,
+breaks and scales. The architecture is owned jointly; what you bring is
+evidence from having built it.
 
-That framing tells you what the role is not. You are not being hired to design
-a taxonomy in isolation and hand it over. You are being hired to implement an
-architecture, find out where it breaks at scale, and feed that back. Which
+That framing tells you what the work is not. You are not there to design a
+taxonomy in isolation and hand it over. You implement an architecture, find out
+where it breaks at scale, and feed that back. Which
 means the valuable skill is **measuring an architecture**, and that is what the
 golden path does.
 
@@ -192,7 +191,7 @@ looked like a defect and was a property of the domain.
 | Question it answers | Where does this page go? | What must a reader already know? |
 | Failure | A reader cannot find the page | A reader finds it and cannot follow it |
 | Validated by | Card sorting, tree testing, search logs | Graph properties, and reader drop-off |
-| Who owns it | Often the docs team alone | Jointly, per the KnowledgeOps posting's bullet |
+| Who owns it | Often the docs team alone | Jointly, with documentation leads |
 
 ### What a knowledge graph lets you compute
 
@@ -238,21 +237,21 @@ The second row is the discipline that keeps the graph meaningful. It is
 tempting to add an edge whenever two concepts are mentioned together, and the
 result is a graph with no sequence in it.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the distinction.** "Information architecture organises pages;
 knowledge architecture organises what is known. They can disagree: a page can
 be in the obvious place while depending on four concepts the reader has not
 met. The second one is a graph, which means you can compute over it."
 
-**Match the KnowledgeOps posting's framing on ownership.** The bullet says collaborate with
-documentation leads and bring implementation feedback. So the answer is not
-"I would design the architecture", it is "I would implement it, measure it, and
-tell the leads what breaks". Then give an example of a measurement: depth of
+**Be precise about ownership.** You collaborate with documentation leads and
+bring implementation feedback. So the description of your part is not "I
+design the architecture", it is "I implement it, measure it, and tell the leads
+what breaks". Then give an example of a measurement: depth of
 eleven, four supporting concepts carrying more of the graph than the average
 core concept.
 
-**The tradeoff to volunteer.** Making relationships explicit is real ongoing
+**The tradeoff to name.** Making relationships explicit is real ongoing
 cost. Every new concept needs its edges decided, the graph needs validating in
 CI, and the temptation to add "related to" edges has to be resisted
 continuously or the graph stops encoding sequence. On a corpus of thirty pages
@@ -266,9 +265,9 @@ are not prerequisites for anything: you do not learn to write well once and
 build on it. An architecture that cannot represent those will quietly drop
 them.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A concept graph for a corpus you own, validated in CI, plus
+**The work product.** A concept graph for a corpus you own, validated in CI, plus
 the audit from steps 2 through 5.
 
 **Three things to do, in order:**
@@ -282,7 +281,7 @@ the audit from steps 2 through 5.
    are either mis-tierings or craft skills, and telling those apart is the
    judgment this concept is about.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories was recorded as demonstrating this, and the honest position is
 that the registry itself is the demonstration: 106 concepts, 115 edges,
 acyclic and enforced, with prerequisite resolution failing the build and a

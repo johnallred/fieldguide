@@ -11,10 +11,7 @@ tags: [ia, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! note "Not a quotation (adjacent)"
-    Neither posting mentions single-sourcing. It is the mechanism behind every
-    claim about documentation scaling, so it is here as the thing those claims
-    depend on.
+> Writing a fact once and reusing it wherever it appears, so documentation scales across products.
 
 **Prerequisites:** [Content models](content-model.md)
 
@@ -30,13 +27,12 @@ The reason it is worth a page of its own is that reuse introduces a failure
 mode that copied prose does not have. A duplicated paragraph goes stale. A
 broken include can make a page disappear, and the build may not mention it.
 
-## Why the job asks for it
+## How this applies to your role
 
-It does not, by name. It is here because both postings make claims that depend
-on it. "A small team of educators operating with the reach of an organisation ten
-times larger", in Anthropic's phrasing. Or the KnowledgeOps posting's "turn documentation,
-standards and tribal knowledge into tooling, templates and self-service
-paths". Both are statements about leverage, and leverage in a documentation
+Rarely by name. It is here because so many goals in this work depend on it: a
+small team of educators operating with the reach of an organisation ten times
+larger, or documentation, standards and tribal knowledge turned into tooling,
+templates and self-service paths. Both are statements about leverage, and leverage in a documentation
 corpus means not writing the same thing N times.
 
 It also decides how expensive your [localization](localization.md) is, since
@@ -73,8 +69,8 @@ appearing on more than one page: 27
    40 pages: this concept is on the curriculum and the prose is not written yet
    40 pages: everything below comes from the registry, so it is accurate as far
    40 pages: the [page contract](../explanation/the-page-contract.md) applies t
-    5 pages: neither posting names it; both describe the problem it solves.
-    4 pages: you will be asked to do it; it is not the centre of the role.
+    5 pages: few teams name it; all of them describe the problem it solves.
+    4 pages: you will be asked to do it; it is not the centre of the work.
 ```
 
 Read that carefully, because the top three are not a problem. They appear on 40
@@ -222,7 +218,7 @@ The last row is the one that makes generation trustworthy. Generating pages is
 easy; the hard part is guaranteeing that the committed output matches what the
 generator produces today, and that is a `--check` mode plus a CI step.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with measurement.** "I measure duplication before adopting a mechanism.
 On this corpus, 27 of 3,654 prose sentences appeared on more than one page, and
@@ -236,7 +232,7 @@ default settings, a missing include is silently dropped and the page ships with
 an empty body at exit zero. So the integrity check goes in with the mechanism,
 in the same commit.
 
-**The tradeoff to volunteer.** An include is a commitment that two passages are
+**The tradeoff to name.** An include is a commitment that two passages are
 the same thing permanently, and the pressure is always toward parameterising it
 when one page needs a variation. That road ends in a templating language inside
 your prose, which is worse than the duplication you started with. Reuse facts
@@ -249,9 +245,9 @@ makes an index, a coverage matrix or an API reference impossible to leave
 stale. It costs you a generator that is real software, and the discipline that
 makes it safe is a `--check` mode that fails when committed output has drifted.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A corpus with one reuse mechanism, its integrity check
+**The work product.** A corpus with one reuse mechanism, its integrity check
 enabled, and a duplication measurement that justified choosing it.
 
 **Three things to do, in order:**
@@ -264,7 +260,7 @@ enabled, and a duplication measurement that justified choosing it.
    that one. Start with a version number or a prerequisite, not an
    explanation.
 
-**What makes it credible rather than decorative.** `docpack` single-sources
+**How to tell it is working.** `docpack` single-sources
 page summaries through `hooks/seo.py`, so one front-matter field feeds the
 page, the meta description and the retrieval artifacts, which is recorded as a
 partial demonstration. This guide's own generation is the stronger example:

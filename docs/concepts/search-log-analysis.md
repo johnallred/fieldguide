@@ -11,8 +11,7 @@ tags: [meas, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    Not named in either posting. The input that turns a hand-written evaluation set into a representative one.
+> Reading what people search for, so evaluation sets and fixes reflect real questions.
 
 **Prerequisites:** [Findability and search design](findability.md), [Documentation analytics](docs-analytics.md)
 
@@ -27,7 +26,7 @@ did not find it.
 The most useful single output is the zero-result list, which is a list, in
 readers' own words, of content you do not have.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because every other way of deciding what readers want is the author guessing.
 
@@ -113,13 +112,13 @@ index entry titles that are not unique:                            42
 The first two are clean. The third is the real finding:
 
 ```
-Related                   x109
-What it is                x107
-Why the job asks for it   x107
-The golden path           x107
-Reference                 x107
-How to talk about it      x107
-How to prove it           x107
+Related                         x109
+What it is                      x107
+How this applies to your role   x107
+The golden path                 x107
+Reference                       x107
+Explaining it to your team      x107
+Putting it into practice        x107
 
 entries carrying one of those seven titles: 751 of 1505  (50%)
 ```
@@ -227,12 +226,12 @@ collection; it is a reason to collect the aggregate rather than the transcript.
 
 ### Why this concept is adjacent rather than quoted
 
-Neither posting names search logs, and both ask for measurement that depends on
-them. The KnowledgeOps posting's "AI answer quality" and "repeat questions" are each evaluation
-over a question set, and a question set without query data is the author's
+Few teams name search logs, and most of the measurement they want depends on
+them. AI answer quality and repeat questions are each evaluation over a
+question set, and a question set without query data is the author's
 guess about readers, which is exactly the gap step 4 measures.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the asymmetry.** "Page views tell me what people found. Queries tell
 me what they were looking for, including every time they did not find it. The
@@ -264,9 +263,9 @@ not ambiguous: I wrote twenty questions about what the corpus explains, and the
 reader asked about what it had not thought to say. Logs close that gap and
 nothing else does.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** Search logging enabled on a corpus you own, and a weekly
+**The work product.** Search logging enabled on a corpus you own, and a weekly
 zero-result list somebody actually reads.
 
 **Three things to do, in order:**
@@ -280,7 +279,7 @@ zero-result list somebody actually reads.
    template they are not, and any consumer reading titles without locations is
    presenting duplicates.
 
-**What makes it credible rather than decorative.** The structural measurements
+**How to tell it is working.** The structural measurements
 run against this guide's built search index and are reproducible; the failed
 proxy and its disproof are both recorded above rather than tidied away. What
 does not exist is a single query log: no site has been published, so there are

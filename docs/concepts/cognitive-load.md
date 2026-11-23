@@ -11,8 +11,7 @@ tags: [edu, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    Neither posting names it. It is the mechanism behind every claim about reaching first success in minutes.
+> Cutting what a reader has to hold in their head, so they reach first success sooner.
 
 **Prerequisites:** [Instructional design for developers](instructional-design.md)
 
@@ -28,7 +27,7 @@ Nearly every documentation complaint that gets reported as "too complicated"
 is extraneous load, and nearly every attempt to fix it by adding explanation
 makes it worse.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because "a developer reaches a working result in fifteen minutes" is a claim
 about working memory, not about word count.
@@ -307,7 +306,7 @@ look organised.
 | Fewer links | The fix is marking their kind, not deleting them |
 | One page per idea | Fragmentation adds navigation load |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the three-way split, briefly.** "Intrinsic load is the subject,
 extraneous load is the presentation, germane load is the reader actually
@@ -333,7 +332,7 @@ readability score. The fix is not fewer links, it is making the kind of link
 visible, because a prerequisites line and a "related" footer make the decision
 for the reader and an inline link does not.
 
-**The tradeoff to volunteer.** Load is a model, not a measurement, and the
+**The tradeoff to name.** Load is a model, not a measurement, and the
 numbers above are proxies for something nobody can observe directly. A page
 with a 60-word sentence may be perfectly clear and a page of short sentences
 may be unreadable. The measurements earn their place by finding candidates
@@ -349,9 +348,9 @@ sentences, because the broken version had been merging real prose too. An audit
 that re-implements a solved problem inherits the exact bug the solution exists
 for.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A per-page maximum sentence length and a cross-reference
+**The work product.** A per-page maximum sentence length and a cross-reference
 census over a corpus you own, both computed with that corpus's own parser.
 
 **Three things to do, in order:**
@@ -364,7 +363,7 @@ census over a corpus you own, both computed with that corpus's own parser.
 3. Open your quickstart and count the choices it presents before the reader's
    first success. Each one is extraneous load at the worst possible moment.
 
-**What makes it credible rather than decorative.** Every figure in steps 2
+**How to tell it is working.** Every figure in steps 2
 through 4 comes from `fieldguide audit`, a committed subcommand rather than a
 script that was thrown away, so a reader can run it and get these numbers.
 `fences.py` is the parser it uses, and it exists because the naive version was

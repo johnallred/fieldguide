@@ -83,7 +83,7 @@ def test_tables_and_list_items_are_not_sentences():
 
 def test_proof_tasks_are_found_and_stripped_of_markup():
     text = (
-        "## How to prove it\n\n"
+        "## Putting it into practice\n\n"
         "**Three things to do today:**\n\n"
         "1. **Run** the thing and see.\n"
         "2. Measure [something](other.md) twice.\n"
@@ -98,7 +98,7 @@ def test_proof_tasks_are_found_and_stripped_of_markup():
 
 
 def test_a_quoted_heading_inside_a_fence_does_not_split_the_page():
-    """`assessment.md` quotes `"## How to prove it"` in a Python sample.
+    """`assessment.md` quotes `"## Putting it into practice"` in a Python sample.
 
     An unanchored search split that page at its own code sample and reported
     the page as having no proof section at all.
@@ -106,9 +106,9 @@ def test_a_quoted_heading_inside_a_fence_does_not_split_the_page():
     text = (
         "## The golden path\n\n"
         "```python\n"
-        'section = text.partition("## How to prove it")[2]\n'
+        'section = text.partition("## Putting it into practice")[2]\n'
         "```\n\n"
-        "## How to prove it\n\n"
+        "## Putting it into practice\n\n"
         "**Three things to do today:**\n\n"
         "1. One task only.\n\n"
         "## Related\n\n- [x](y.md)\n"

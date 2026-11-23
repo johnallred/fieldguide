@@ -11,8 +11,7 @@ tags: [qa, core]
 
 `core` · difficulty 3 · 6h
 
-!!! quote "Why it is on the curriculum"
-    "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
+> Building a harness that runs documentation as tests, so broken pages fail the build.
 
 **Prerequisites:** [Code-sample validation](code-sample-validation.md)
 
@@ -28,17 +27,17 @@ Three problems make it real work: shell samples carry state a subprocess does
 not inherit, concatenating them destroys failure attribution, and any harness
 built on parsing source can be fooled by the source.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting lists doc test harnesses as a thing you have built. The word is doing
-work: a harness, not a test. The difference is everything in this page.
+A doc test harness is something you build, not something you configure. The
+word is doing work: a harness, not a test. The difference is everything in this page.
 
 A script that executes Python blocks is a weekend. A real harness is not: it
 handles bash and Python, keeps per-page state, attributes failures to a source
 line, carries a reviewable skip convention with a budget, and verifies its
 conclusions against what the reader actually receives. That is a piece of
-engineering, and it is the most direct evidence you can offer that
-documentation correctness is something you enforce rather than hope for.
+engineering, and it is what turns documentation correctness into something
+your team enforces rather than hopes for.
 
 ## The golden path
 
@@ -246,7 +245,7 @@ fenced source line against the `<pre>` content of the built page, and found 127
 defects on the day it was written. Keep the fast half for feedback and the slow
 half for truth.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the shell state problem**, because it is concrete and most people
 have not thought it through. "Sharing a temp directory between bash blocks is
@@ -260,7 +259,7 @@ as the attack surface: a required reason, a ratio budget, an explicit rule that
 you do not widen the budget to go green, and the honest caveat that the budget
 does nothing on a small corpus.
 
-**The tradeoff to volunteer.** A harness that runs real shell commands is
+**The tradeoff to name.** A harness that runs real shell commands is
 running untrusted-ish code from pull requests. It needs a scratch directory, no
 credentials in its environment, and ideally a container, and that means
 contributors cannot easily reproduce the sandbox locally. You are trading
@@ -273,9 +272,9 @@ guide had every static check green while seven pages shipped code as prose, and
 the fix was a comparison against the built HTML, not a smarter parser. If you
 can only say one thing about harness design, say that.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A harness in a repository of yours that handles more than one
+**The work product.** A harness in a repository of yours that handles more than one
 language, attributes failures to a source line, and has a skip convention with
 a budget.
 
@@ -289,9 +288,9 @@ a budget.
    you have not found the artifact yet: every static check skips something,
    and what it skips is where the next defect lives.
 
-**What makes it credible rather than decorative.** `docpack`'s harness extracts
+**How to tell it is working.** `docpack`'s harness extracts
 every Python block, executes it, requires a reason on every skip, and asserts
-the skip ratio stays under 25 per cent. The number is the credible part: a
+the skip ratio stays under 25 per cent. The number is the part to watch: a
 harness with no budget and a dozen silent skips is a harness that stopped
 testing a while ago and did not mention it.
 

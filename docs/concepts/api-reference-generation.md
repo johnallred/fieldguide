@@ -11,8 +11,7 @@ tags: [dac, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Write and maintain reference documentation, tutorials, and sample walkthroughs that assume no prior context"
+> Producing reference documentation from the code itself, so it assumes no prior context and stays current.
 
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 
@@ -30,10 +29,10 @@ does not. Generation makes signatures correct automatically. It does nothing
 for prose that describes behaviour, and it does nothing for the links *into*
 the reference unless you use the right reference syntax.
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting asks for reference documentation that assumes no prior context, alongside
-tutorials and sample walkthroughs. Reference is the layer where hand-authoring
+You will maintain reference documentation that assumes no prior context,
+alongside tutorials and sample walkthroughs. Reference is the layer where hand-authoring
 fails first and worst: a corpus with two hundred functions cannot be
 hand-maintained through a refactor, and the failure is silent.
 
@@ -244,7 +243,7 @@ developer documentation: complete, accurate, and unusable by a newcomer.
 
 Reference is necessary and it is the easy half.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the split.** "Generating reference from source means the published
 signature is the real one by construction, so a rename fails the build instead
@@ -258,7 +257,7 @@ no for a Python-only corpus. `mkdocstrings` gives you generation and checked
 `[text][symbol]` references on MkDocs. Sphinx wins when you have several
 language domains or want `intersphinx` checking across projects.
 
-**The tradeoff to volunteer.** Generated reference is only as good as the
+**The tradeoff to name.** Generated reference is only as good as the
 docstrings, and generation creates pressure to write docstrings for the tool
 rather than for the reader. You end up with two hundred pages that are
 technically complete and tell nobody how to accomplish anything. The mitigation
@@ -272,9 +271,9 @@ ship anyway, because MkDocs treats a dead anchor as `INFO`. That is the
 specific, checkable reason to use the reference syntax rather than a preference
 for it.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A repository where reference is generated and where a renamed
+**The work product.** A repository where reference is generated and where a renamed
 symbol fails the build, plus the use of symbol references rather than anchors.
 
 **Three things to do, in order:**
@@ -288,7 +287,7 @@ symbol fails the build, plus the use of symbol references rather than anchors.
 3. Convert the five most important of those to `[text][symbol]` form and turn
    on `--strict`. Whatever fails was already broken.
 
-**What makes it credible rather than decorative.** `docpack` generates its
+**How to tell it is working.** `docpack` generates its
 reference with `mkdocstrings` and runs `--doctest-modules` across the package,
 so the docstrings that feed the reference are themselves executed. The
 combination is the thing to point at: generation keeps the signature honest,

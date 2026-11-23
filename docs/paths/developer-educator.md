@@ -9,7 +9,7 @@ generated: true
 
 # The developer educator
 
-**Who this is for.** The Developer Relations posting's curriculum half.
+**Who this is for.** Someone who owns developer onboarding, tutorials and curriculum.
 
 Taking a developer from a clean environment to a working result, repeatably.
 
@@ -22,19 +22,19 @@ each step assumes the ones above it.
 
 `core` · practise it · 3h
 
-Treats setup, runnable samples, and docs as one product
+Treating setup, runnable samples and documentation as one product the developer experiences.
 
 ## 2. [Instructional design for developers](../concepts/instructional-design.md)
 
 `core` · practise it · 5h
 
-Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result
+Designing curriculum so a developer learns what they need, in the order they need it.
 
 ## 3. [Cognitive load in technical content](../concepts/cognitive-load.md)
 
 `core` · practise it · 3h
 
-Not named. The mechanism behind every claim about reaching first success in minutes.
+Cutting what a reader has to hold in their head, so they reach first success sooner.
 
 Builds on, earlier in this path: Instructional design for developers.
 
@@ -42,7 +42,7 @@ Builds on, earlier in this path: Instructional design for developers.
 
 `core` · read it · 2h
 
-The dominant framework for documentation structure. Neither posting names it; both describe the problem it solves.
+Deciding whether a page is a tutorial, a how-to, reference or explanation, and keeping it to one of them.
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
@@ -50,7 +50,7 @@ Assumes, from outside this path: [Information architecture](../concepts/informat
 
 `core` · practise it · 4h
 
-tutorial
+Designing tutorials that teach by having the reader build something real.
 
 Builds on, earlier in this path: Diátaxis.
 
@@ -58,7 +58,7 @@ Builds on, earlier in this path: Diátaxis.
 
 `core` · build something · 5h
 
-Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result
+Designing and maintaining the routes that take a developer from a clean environment to a working result.
 
 Builds on, earlier in this path: Diátaxis.
 
@@ -66,7 +66,7 @@ Builds on, earlier in this path: Diátaxis.
 
 `core` · practise it · 3h
 
-coldstart testing of quickstarts
+Writing quickstarts that still work when a new developer follows them cold.
 
 Builds on, earlier in this path: Golden paths.
 
@@ -74,7 +74,7 @@ Builds on, earlier in this path: Golden paths.
 
 `core` · practise it · 3h
 
-sample walkthrough
+Writing walkthroughs that explain a sample line by line, without drifting from the sample.
 
 Builds on, earlier in this path: Designing tutorials.
 
@@ -82,7 +82,7 @@ Builds on, earlier in this path: Designing tutorials.
 
 `supporting` · build something · 4h
 
-take a developer from a clean environment to a working result
+Making sure every exercise starts from an environment a reader can recreate exactly.
 
 Builds on, earlier in this path: Golden paths.
 
@@ -90,7 +90,7 @@ Builds on, earlier in this path: Golden paths.
 
 `core` · build something · 5h
 
-coldstart testing of quickstarts
+Testing quickstarts from a clean environment, the way a new developer meets them.
 
 Builds on, earlier in this path: Reproducible environments.
 
@@ -100,7 +100,7 @@ Assumes, from outside this path: [Code-sample validation](../concepts/code-sampl
 
 `core` · build something · 5h
 
-structured learning paths
+Sequencing content into structured learning paths a reader can follow start to finish.
 
 Builds on, earlier in this path: Instructional design for developers, Diátaxis.
 
@@ -108,7 +108,7 @@ Builds on, earlier in this path: Instructional design for developers, Diátaxis.
 
 `supporting` · practise it · 3h
 
-Not named. The counterpart to cold-start testing: how you know the curriculum worked.
+Checking that a learner actually learned: how you know the curriculum worked.
 
 Builds on, earlier in this path: Instructional design for developers.
 
@@ -116,7 +116,7 @@ Builds on, earlier in this path: Instructional design for developers.
 
 `supporting` · build something · 6h
 
-the sample-app gallery
+Building and maintaining the sample applications, and the gallery developers browse them from.
 
 Builds on, earlier in this path: Sample walkthroughs.
 
@@ -126,7 +126,7 @@ Assumes, from outside this path: [Code-sample validation](../concepts/code-sampl
 
 `supporting` · practise it · 4h
 
-Neither posting mentions workshops. A standard developer-relations deliverable.
+Running hands-on workshops and labs, a standard developer-relations deliverable.
 
 Builds on, earlier in this path: Learning paths and curriculum, Reproducible environments.
 
@@ -134,6 +134,6 @@ Builds on, earlier in this path: Learning paths and curriculum, Reproducible env
 
 `core` · build something · 5h
 
-into templates, validators, and guided workflows rather than static documents
+Replacing static instructions with workflows that guide a person through a standard.
 
 Assumes, from outside this path: [Templates and scaffolding](../concepts/templates-scaffolding.md).

@@ -11,8 +11,7 @@ tags: [meas, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Instrument documentation analytics and convert findings into improvements to docs, samples, and tooling"
+> Instrumenting documentation and turning what the data shows into fixes to docs, samples and tooling.
 
 **Prerequisites:** [Documentation CI](documentation-ci.md)
 
@@ -32,11 +31,11 @@ need no audience and work on day zero.
 depth, exit rates, the path through a funnel. They need an audience, a
 pipeline, and usually a privacy review.
 
-The Developer Relations posting's bullet says "instrument ... and convert findings into improvements",
-and that second half is the part that matters: the deliverable is a change, not
+The work is to instrument documentation and convert findings into
+improvements, and that second half is the part that matters: the deliverable is a change, not
 a dashboard.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because without it every statement about documentation is an assertion, and
 documentation people make a great many statements.
@@ -238,7 +237,7 @@ claim resting on reader-side analytics alone is a claim about one surface.
 
 ### Converting findings into changes
 
-The Developer Relations posting's bullet ends "improvements to docs, samples, and tooling", and that
+Findings should become improvements to docs, samples and tooling, and that
 ordering is a useful discipline: a finding that produces only a documentation
 edit is often a finding about the tooling.
 
@@ -250,7 +249,7 @@ edit is often a finding about the tooling.
 | The same support question recurs | Add an FAQ entry | Change the thing people get wrong |
 | Nobody runs the samples | Promote them | Check whether they still work |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the split, because it is the useful idea.** "Documentation
 analytics is two jobs. Corpus-side measures the artifact and needs no audience:
@@ -282,9 +281,9 @@ impossible ratio is a lucky way to discover that, since most measurement bugs
 produce a plausible number instead. Every figure here gets a fixture with a
 known answer before it is quoted anywhere.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A script in your own repository reporting reachability, click
+**The work product.** A script in your own repository reporting reachability, click
 depth and orphans, run in CI so the numbers show up in a diff.
 
 **Three things to do, in order:**
@@ -297,7 +296,7 @@ depth and orphans, run in CI so the numbers show up in a diff.
 3. Take your most confident claim about your documentation and work out which
    half of analytics could test it. If it is neither, it is an assertion.
 
-**What makes it credible rather than decorative.** The corpus-side
+**How to tell it is working.** The corpus-side
 measurements above run against this guide's own pages and its built search
 index, and the 134-of-121 bug is recorded rather than tidied away. That page
 count is deliberately not quoted here: it changes whenever a learning path is

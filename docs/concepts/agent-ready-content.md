@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 2 · 4h
 
-> Make knowledge AI-ready: structure and package content for RAG, internal assistants, and agentic workflows
+> Structuring knowledge so AI assistants and agents can use it as reliably as people can.
 
 
 **Prerequisites:** [Content models](content-model.md), [Metadata for navigation and retrieval](metadata.md)
@@ -21,27 +21,26 @@ tags: [ai, core]
 ## What it is
 
 Structuring and packaging a corpus so that machines can find the right part,
-know what kind of answer it supports, and cite it. The phrase is vague on
-purpose in job postings and should not be vague in your head: **"AI-ready" is
+know what kind of answer it supports, and cite it. The phrase is used
+loosely across the industry and should not be vague in your head: **"AI-ready" is
 three consumers with incompatible needs**, and serving one of them is the usual
 way to fail the other two.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting's bullet is the clearest statement of this work anywhere in either
-posting: "Make knowledge AI-ready: structure and package content for RAG,
-internal assistants, and agentic workflows, including llms.txt, MCP-accessible
-sources, agent skills and context kits, and evaluation sets for answer
-accuracy."
+The clearest statement of this work is a list of outputs: structure and package
+content for RAG, internal assistants and agentic workflows, including
+`llms.txt`, MCP-accessible sources, agent skills and context kits, and
+evaluation sets for answer accuracy.
 
-Read the list of outputs. `llms.txt` is a map. MCP is an interface. Chunks for
+Read that list again. `llms.txt` is a map. MCP is an interface. Chunks for
 RAG are retrieval units. Agent skills are instructions. Those are not four
 formats of the same thing; they are four different artifacts for different
-consumption patterns, and the posting is asking for all of them because no one
-of them covers the others.
+consumption patterns, and the work needs all of them because no one of them
+covers the others.
 
-The Developer Relations posting's version is the same requirement from the other side: "a crawlable,
-agent-ready front door" and "agentready, LLMdigestible content".
+The same requirement seen from the developer-relations side is a crawlable,
+agent-ready front door: content that an LLM can digest as easily as a person.
 
 On a Tuesday this is a question you answer repeatedly: an assistant gave a
 developer a wrong answer about batch sizing. Was the chunk missing, or was the
@@ -356,8 +355,8 @@ A fourth consumer, an agent that needs to *act* rather than read, is served by
 | "We built a RAG pipeline" | Embeddings over a scrape | A corpus with a content model under it |
 | "The assistant works" | Somebody tried five questions | [An evaluation set](retrieval-evaluation.md) |
 
-The last row is the gap that matters most and the one the KnowledgeOps posting asks about by
-name.
+The last row is the gap that matters most, and the one an evaluation set
+exists to close.
 
 ### What agent-ready does not mean
 
@@ -369,10 +368,9 @@ name.
 - **Not a formatting convention.** No amount of cleaner Markdown substitutes
   for the page declaring what it is.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the three consumers, because
-it immediately distinguishes you from the common answer. "AI-ready is three
+**How to explain it.** Lead with the three consumers, because it immediately separates the work from the common misunderstanding. "AI-ready is three
 consumers rather than one. A retriever wants small filterable units. An
 assistant choosing where to look wants a map, which is what llms.txt is. An
 assistant doing a one-shot read wants everything in one fetch. Serving only one
@@ -386,7 +384,7 @@ the question needs, and that is the failure that no ranking improvement fixes.
 A corpus with a content model can produce all three artifacts later; a corpus
 without one produces three artifacts over mush.
 
-**The tradeoff to volunteer.** Every one of these artifacts is a derived view
+**The tradeoff to name.** Every one of these artifacts is a derived view
 that has to be regenerated, and a stale derived view is worse than none because
 it looks authoritative. An `llms.txt` committed by hand six months ago is now
 actively misleading a model about what your corpus contains. So the real cost of
@@ -404,16 +402,16 @@ that the benefit is now measurable with an
 [evaluation set](retrieval-evaluation.md). That framing is both true and
 reassuring to a documentation lead who fears this is a new discipline.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** All three outputs, generated from one corpus by a script in
+**The work product.** All three outputs, generated from one corpus by a script in
 CI, plus a measurement showing the type filter helps.
 
 **Three things to do, in order:**
 
 1. **Run the golden path** against a real corpus. Twenty pages is enough. The
    failure-A demonstration, where an explanation chunk answers a how-to query,
-   is the single most convincing two minutes you can show.
+   is the single most useful two minutes to walk your team through.
 2. **Generate the artifacts in CI, never by hand.** The gate that matters is one
    that fails when a committed view is stale. That is the difference between
    agent-ready and agent-ready-once.
@@ -421,9 +419,10 @@ CI, plus a measurement showing the type filter helps.
    filtering on the expected page type. The gap is the value of your content
    model, in a number. See [retrieval evaluation](retrieval-evaluation.md).
 
-**What makes it credible rather than decorative.** An `llms.txt` file proves you read a blog post. Three
-generated artifacts, a CI gate against staleness, and a measured difference from
-the metadata filter proves you understand why they are three things.
+**How to tell it is working.** An `llms.txt` file on its own means someone read a
+blog post. Three generated artifacts, a CI gate against staleness, and a
+measured difference from the metadata filter mean the team understands why they
+are three things, and that the corpus will stay that way.
 
 ## Related
 

@@ -11,8 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 3 · 5h
 
-!!! note "Not a quotation (derived)"
-    The retrieval half of a RAG pipeline, which the KnowledgeOps posting names as a way to stand out.
+> Storing and searching embedded content, alone or alongside keyword search: the retrieval half of RAG.
 
 **Prerequisites:** [Embeddings](embeddings.md)
 
@@ -28,11 +27,10 @@ methods fail on different queries.
 For a documentation corpus, **hybrid is the default and vector-only is the
 mistake.**
 
-## Why the job asks for it
+## How this applies to your role
 
-Neither posting names a vector store, which is why this is `derived`. The KnowledgeOps posting
-asks for RAG pipelines twice and for content "structured and packaged for RAG",
-and this is where the packaged content ends up.
+Every RAG pipeline has one, and content you structure and package for RAG ends
+up in it.
 
 What makes it `core` is the decision rather than the database. The database
 choice barely matters and people spend all their time on it; **the hybrid
@@ -529,9 +527,9 @@ nothing, while the right answer sat at rank 150.
 | No `updated` in the metadata | Cannot discount stale content at query time |
 | Re-indexing on every commit | Avoidable with [stable chunk ids](chunking.md) |
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with hybrid and with the specific
+**How to explain it.** Lead with hybrid and with the specific
 failure. "For documentation I would not ship vector-only search. A developer
 asking about `max_memory_gb` has to get the page about `max_memory_gb`, and
 dense retrieval puts that nearly on top of `max_memory_mb`. So BM25 plus dense,
@@ -547,7 +545,7 @@ refusing to choose reads as evasion: Postgres with `pgvector` if they already
 run Postgres, an in-process index if the corpus is small, a search engine like
 OpenSearch if they want hybrid in one system.
 
-**The tradeoff to volunteer.** Hybrid search is two indexes to build, two to
+**The tradeoff to name.** Hybrid search is two indexes to build, two to
 keep in sync, and two to debug, and it roughly doubles your retrieval
 infrastructure for a gain that is invisible on the queries you tested with.
 There is also a subtler cost: fusion makes results harder to explain. With BM25
@@ -564,9 +562,9 @@ re-embed that is a deliberate migration rather than a surprise. Teams that treat
 the store as the system discover this when a model update quietly degrades
 retrieval and nothing in their dashboards explains why.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A scored comparison of lexical, dense and fused retrieval on
+**The work product.** A scored comparison of lexical, dense and fused retrieval on
 your own corpus, with the per-query losses visible.
 
 **Three things to do, in order:**
@@ -581,10 +579,11 @@ your own corpus, with the per-query losses visible.
    fewer than exist, it filters after. Writing that test down is a small,
    specific thing most people never check.
 
-**What makes it credible rather than decorative.** Naming vector databases proves you read a comparison
-post. A per-query table showing exactly which queries dense retrieval loses on
-your own vocabulary, and a stated conclusion about hybrid, demonstrates you
-measured it.
+**How to tell it is working.** A database choice tells you little. A per-query
+table showing exactly which queries dense retrieval loses on your own
+vocabulary, and a stated conclusion about hybrid, means the team measured it
+rather than read a comparison post, and exact-identifier searches stop
+failing.
 
 ### How this would be demonstrated elsewhere
 

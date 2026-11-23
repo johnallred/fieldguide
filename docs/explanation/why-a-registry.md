@@ -33,8 +33,8 @@ the index, and after that the index is decoration.
 ## What the registry does instead
 
 `concepts.yaml` holds the curriculum as structured data: 106 concepts
-with a category, a tier, a difficulty, a time estimate, prerequisites, the job
-posting line that justifies the concept, and a status.
+with a category, a tier, a difficulty, a time estimate, prerequisites, a line naming the work that needs the concept, and a
+status.
 
 `fieldguide check` then refuses to let the registry and the repository disagree:
 
@@ -46,7 +46,7 @@ posting line that justifies the concept, and a status.
 | This page follows the contract | All seven required sections, in order |
 | This path is teachable | No concept before a prerequisite the path also teaches |
 | This graph is followable | No cycles, no dangling prerequisites |
-| A posting asks for this | Every concept needs the posting line behind it |
+| The work needs this | Every concept needs a line naming that work |
 
 The [coverage matrix](../coverage.md), the [learning paths](../paths/index.md),
 and [the full ordering](../study-plan.md) are all generated from the registry.

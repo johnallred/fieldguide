@@ -11,7 +11,7 @@ tags: [craft, supporting]
 
 `core` · difficulty 2 · 3h
 
-> use the data to decide what to build, fix, or retire
+> Using data to decide what to build, fix or retire next.
 
 
 **Prerequisites:** [Repeat-question analysis](repeat-questions.md), [A systems mindset](systems-mindset.md)
@@ -22,16 +22,16 @@ Choosing which documentation work to do from evidence rather than from whoever
 asked most recently. The output is a ranked list with a stated basis, and
 crucially a **retire** column, which most documentation backlogs do not have.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting's phrasing is one clause at the end of the measurement bullet: "Measure
-outcomes such as time-to-first-success, support deflection, repeat questions,
-and AI answer quality, and use the data to decide what to build, fix, or
-retire."
+Measurement exists to feed one decision. You measure outcomes such as
+time-to-first-success, support deflection, repeat questions and AI answer
+quality, and you use the data to decide what to build, fix or retire.
 
 The three verbs are the content. Most documentation prioritisation has two
 options, build and fix, and a backlog that therefore only grows. **Retire is the
-one that makes the other two sustainable**, and it is in the posting explicitly.
+one that makes the other two sustainable**, and it belongs on the list
+explicitly.
 
 On a Tuesday this is the thing that decides whether you are useful. A
 documentation backlog at a company this size has a few hundred items: requests
@@ -180,7 +180,7 @@ individually:
 | It dilutes [llms.txt](llms-txt.md) and the chunk corpus | Every assistant answer |
 | It can be found and followed, and be wrong | A reader, expensively |
 
-The fourth row is new and is the one worth raising in an interview. In a corpus
+The fourth row is new and is the one worth raising with your team. In a corpus
 packaged for retrieval, **a stale page is not merely unread, it is competing**.
 That is a materially stronger argument for retirement than it was five years
 ago.
@@ -210,9 +210,9 @@ A scoring function that is treated as a decision is worse than no scoring
 function, because it launders judgement as arithmetic. Treated as a prompt for
 disagreement, it is useful.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with an override and with retire.
+**How to explain it.** Lead with an override and with retire.
 "I score the backlog on people affected per hour of work, and then I write down
 where I disagree with the score. Last quarter the highest-value thing I did
 scored zero: retiring eleven pages about a version nobody runs. Two hours, and
@@ -227,7 +227,7 @@ for 300 based on search data. I can do the first if it matters more for a reason
 the data cannot see." That reframes it from your judgement against theirs to a
 choice they are making with information.
 
-**The tradeoff to volunteer.** Evidence-based prioritisation systematically
+**The tradeoff to name.** Evidence-based prioritisation systematically
 underweights new things. Every input you can cheaply measure is about the
 readers you already have and the content that already exists, so a strict
 reading of the data never builds documentation for a capability that has not
@@ -245,10 +245,10 @@ pages being out of date is not four fix items; it is one
 [the systems mindset](systems-mindset.md) as a prioritisation technique, and it
 is how a backlog starts shrinking instead of being triaged forever.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A ranked backlog with a basis column and a written record of
-the overrides. One page, and it is unusual enough to be memorable.
+**The work product.** A ranked backlog with a basis column and a written record of
+the overrides. One page, and it ends most priority arguments before they start.
 
 **Three things to do, in order:**
 
@@ -262,9 +262,9 @@ the overrides. One page, and it is unusual enough to be memorable.
    are the artifact. A ranking is arithmetic; knowing when to ignore it is the
    job.
 
-**What makes it credible rather than decorative.** Anyone can say they are data-driven. A backlog with
-a basis column, and a documented case where you did the thing that scored zero
-and said why, demonstrates that you use evidence without hiding behind it.
+**How to tell it is working.** Anyone can say they are data-driven. A backlog with
+a basis column, and a documented case where the team did the thing that scored
+zero and said why, means evidence is being used without being hidden behind.
 
 ### How this would be demonstrated elsewhere
 
@@ -289,12 +289,12 @@ chosen anyway.
 | Agreement between the data order and your instinct | Partial | Where it disagrees is the interesting part |
 | Tasks you did anyway, against the data | Some, and that is fine | Say why, in the column |
 
-The fourth row is the demonstration. Anyone can claim to be data-driven; the
-specific, unfakeable artifact is a backlog where one item scored zero, was done
-anyway, and carries the reason.
+The fourth row is the one that matters. Anyone can say they are data-driven;
+the specific record is a backlog where one item scored zero, was done anyway,
+and carries the reason.
 
 **Why it does not commit.** A ranked backlog is a snapshot of an argument. The
-evidence of skill is in having held the argument and recorded the exception,
+value is in having held the argument and recorded the exception,
 and that is a document in someone else's planning tool.
 
 ## Related

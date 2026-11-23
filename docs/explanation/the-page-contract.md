@@ -12,11 +12,12 @@ order. `fieldguide check` rejects one that does not, and `fieldguide new`
 generates the headings so nobody has to remember them.
 
 1. What it is
-2. Why the job asks for it
+2. How this applies to your role
 3. The golden path
 4. Reference
-5. How to talk about it
-6. How to prove it
+5. Explaining it to your team
+6. Putting it into practice
+7. Related
 
 ## Why a fixed order rather than a suggested one
 
@@ -26,8 +27,8 @@ page the thing they want is. The second is pure overhead, and it is paid again
 on every page.
 
 A fixed contract pays it once. By the third page a reader knows that the
-command they can paste is under "The golden path" and the interview answer is
-fifth, and they can skip directly. That is the entire benefit, and it only
+command they can paste is under "The golden path" and the tradeoff is in the
+fifth section, and they can skip directly. That is the entire benefit, and it only
 exists if the order is actually reliable, which is why it is a build failure
 rather than a style note.
 
@@ -51,13 +52,13 @@ complete that it conveys nothing. "Diátaxis is a systematic framework for
 technical documentation authoring" is correct and useless. Prefer the sentence
 you would say out loud to a colleague.
 
-### Why the job asks for it
+### How this applies to your role
 
-The posting quote is already printed at the top of the page. This section
-explains the work behind it: what does someone in this role do on a Tuesday
-that requires this?
+The line at the top of the page names the work that needs the concept. This
+section explains that work: what does someone doing it do on a Tuesday that
+requires this, whatever their title?
 
-**The failure mode is restating the quote.** If this section can be deleted
+**The failure mode is restating the line.** If this section can be deleted
 without losing information, it was not written.
 
 ### The golden path
@@ -82,22 +83,24 @@ The facts worth looking up later: vocabulary, options, defaults, gotchas.
 **The failure mode is narrative.** Nobody reads this section; they scan it and
 leave. Tables, definition lists, and short rows beat paragraphs.
 
-### How to talk about it
+### Explaining it to your team
 
-What a competent answer sounds like, and what the follow-up question will be.
+How you would explain the concept to a colleague, a manager or an engineer
+who asks, and what their follow-up question will be.
 
 **Every one of these must include a tradeoff.** Reciting what a thing does is
-not signal, because anyone can read the documentation an hour before the
-interview. Knowing what it costs, and when you would not use it, is the thing
-that cannot be faked, and it is the question a good interviewer asks second.
+not useful, because anyone can read the documentation an hour before a
+meeting. Knowing what it costs, and when you would not use it, is the part your
+team needs from you, and it is the question a good colleague asks second.
 
-### How to prove it
+### Putting it into practice
 
-The artifact that demonstrates the concept without the reader having to assert
-it: a repository, a file, a measured number, a commit.
+The work product the concept produces when it is done well: a repository, a
+file, a measured number, a commit. Then three tasks to do next, in order, and
+how to tell the result is working.
 
 **It has to be specific enough to act on today.** "Build a RAG pipeline" is not
-a proof. "Write twenty questions with their expected source pages, score
+a task. "Write twenty questions with their expected source pages, score
 recall@3, and publish the number including the bad one" is.
 
 ## How it is enforced

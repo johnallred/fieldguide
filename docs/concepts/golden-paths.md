@@ -11,8 +11,7 @@ tags: [gp, core]
 
 `core` · difficulty 3 · 5h
 
-!!! quote "Why it is on the curriculum"
-    "Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result"
+> Designing and maintaining the routes that take a developer from a clean environment to a working result.
 
     "Treats setup, runnable samples, and docs as one product, engineering docs-as-code with cold-start and link CI so a developer reaches first success in minutes with zero help"
 
@@ -26,14 +25,15 @@ tags: [gp, core]
 for every reader, not every supported configuration: one route, chosen,
 written down, and tested end to end.
 
-The word that does the work in the Developer Relations posting's phrasing is *a*. A golden path is
+The word that does the work in "a golden path" is *a*. A golden path is
 singular. The moment there are two, neither is golden, because you can no
 longer say "this is the route we test and support".
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting asks for it twice, and the second quote gives the acceptance criterion:
-first success in minutes, with zero help. That is a measurable claim about a
+A golden path takes a developer from a clean environment to a working result,
+and it comes with an acceptance criterion: first success in minutes, with zero
+help. That is a measurable claim about a
 specific artifact, which is unusual and worth taking seriously.
 
 The reason golden paths are hard is that they require **saying no** in a
@@ -198,7 +198,7 @@ from an opinion into a finding, plus the testing argument that makes it matter.
 | Every command copy-pasteable | No placeholders the reader must resolve |
 | No decisions | A decision is a branch, and a branch is untested surface |
 | Tested in CI | [Cold-start testing](coldstart-testing.md) |
-| Minutes, and the number is known | the Developer Relations posting's own criterion |
+| Minutes, and the number is known | The acceptance criterion above |
 
 ### Where the alternatives go
 
@@ -244,7 +244,7 @@ Golden path and tutorial get conflated most. A tutorial may deliberately take a
 longer route because the detour teaches something. A golden path takes the
 shortest route to working and teaches nothing it does not have to.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the number.** "A golden path is one route from a clean environment
 to a stated result. The reason it is one is testability: a cold-start test
@@ -257,7 +257,7 @@ alternatives get a page and a link rather than deletion. The reader who uses
 conda is one click from their instructions instead of disambiguating four
 sections, and that reader's page can now be tested too.
 
-**The tradeoff to volunteer.** Choosing one route means someone's case is not
+**The tradeoff to name.** Choosing one route means someone's case is not
 the default, and the person whose case it is will tell you. The honest answer
 is that this is the cost, it is paid by a minority of readers, and the
 alternative is a page where every reader's route is untested. Also: testability
@@ -271,9 +271,9 @@ three false positives in my corpus and not the third. So it is a screening
 signal: good for finding the 24-route page, useless for distinguishing 1 from
 2. Saying which half a metric is good for is worth more than the metric.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A quickstart with one route, a stated expected output, a
+**The work product.** A quickstart with one route, a stated expected output, a
 cold-start test, and a separate options page carrying everything you removed.
 
 **Three things to do, in order:**
@@ -284,7 +284,7 @@ cold-start test, and a separate options page carrying everything you removed.
 3. Move the alternatives to a second page and leave one link behind. The
    quickstart gets shorter and the alternatives get testable.
 
-**What makes it credible rather than decorative.** `docpack`'s
+**How to tell it is working.** `docpack`'s
 `docs/tutorials/getting-started.md` is a single route verified by
 `scripts/coldstart.sh`, which builds a fresh virtual environment, follows the
 tutorial literally and asserts the exact output string the tutorial promises.
@@ -297,4 +297,4 @@ nightly build walks.
 - [Quickstarts that survive contact](quickstarts.md), the page that implements this
 - [Cold-start testing](coldstart-testing.md), what makes the single route verifiable
 - [Reproducible environments](reproducible-environments.md), the "clean environment" half
-- [Time to first success](time-to-first-success.md), the metric the Developer Relations posting names
+- [Time to first success](time-to-first-success.md), the metric that tells you it worked

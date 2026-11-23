@@ -39,7 +39,7 @@ concepts:
     difficulty: 1
     time: 1h
     prerequisites: []
-    demanded_by:
+    in_practice:
       - "we need alpha"
     status: planned
   - id: beta
@@ -49,7 +49,7 @@ concepts:
     difficulty: 2
     time: 2h
     prerequisites: [alpha]
-    demanded_by:
+    in_practice:
       - "beta follows from alpha"
     status: planned
 paths:
@@ -100,7 +100,7 @@ def test_in_category_puts_core_first(tmp_path):
 
 
 def test_every_concept_carries_the_line_behind_it(tmp_path):
-    """`demanded_by` may not be empty, so this holds for the whole registry.
+    """`in_practice` may not be empty, so this holds for the whole registry.
 
     It used to distinguish a verbatim quotation from an inference. That tag is
     gone, so the only thing left to assert is that nothing is here on nothing.
@@ -138,12 +138,12 @@ def test_an_empty_quote_is_rejected(tmp_path):
         load_registry(write(tmp_path, mutate(MINIMAL, '- "we need alpha"', '- ""')))
 
 
-def test_demanded_by_may_not_be_empty(tmp_path):
+def test_in_practice_may_not_be_empty(tmp_path):
     body = MINIMAL.replace(
-        """    demanded_by:
+        """    in_practice:
       - "we need alpha"
 """,
-        "    demanded_by: []\n",
+        "    in_practice: []\n",
     )
     with pytest.raises(RegistryError, match="non-empty list"):
         load_registry(write(tmp_path, body))
@@ -321,7 +321,7 @@ def test_a_prerequisite_outside_the_path_is_not_a_violation(tmp_path):
     difficulty: 2
     time: 1h
     prerequisites: [beta]
-    demanded_by:
+    in_practice:
       - "gamma needs beta"
     status: planned
 """
@@ -339,13 +339,13 @@ def test_a_prerequisite_outside_the_path_is_not_a_violation(tmp_path):
 def test_a_demand_may_still_be_written_as_a_mapping(tmp_path):
     """The older shape still loads.
 
-    A demand used to be a mapping of source, provenance and quote. The source
+    An entry used to be a mapping of source, provenance and quote. The source
     and the tag are gone and the quote is the whole record now, but the parser
     still accepts the mapping, so an older registry is not a hard failure.
     """
     body = MINIMAL.replace('      - "we need alpha"', '      - quote: "we need alpha"')
     registry = load_registry(write(tmp_path, body))
-    assert registry.concepts[0].demanded_by[0].quote == "we need alpha"
+    assert registry.concepts[0].in_practice[0].text == "we need alpha"
 
 
 def test_the_report_renders_a_clean_result(tmp_path):
@@ -380,12 +380,11 @@ def test_every_category_in_the_real_registry_has_concepts():
         assert registry.in_category(key), f"category {label!r} ({key}) is empty"
 
 
-def test_most_of_the_real_registry_is_backed_by_a_quotation():
+def test_most_of_the_real_registry_names_the_work_behind_it():
     """The guide's credibility rests on this ratio, so it is a test.
 
-    Not all of it: `derived` and `adjacent` entries are legitimate, and the
-    coverage page prints which is which. But if most of the curriculum rested
-    on the author's opinion rather than on the postings, the framing would be
+    If most of the curriculum rested on nothing but the author's say-so, with
+    no line naming the work that needs each concept, the framing would be
     dishonest.
     """
     registry = load_registry(REAL_REGISTRY)
@@ -396,7 +395,7 @@ def test_most_of_the_real_registry_is_backed_by_a_quotation():
 def test_every_concept_in_the_real_registry_carries_a_line():
     """The claim the whole site rests on, checked against the real registry."""
     registry = load_registry(REAL_REGISTRY)
-    empty = [c.id for c in registry.concepts if not c.demanded_by]
+    empty = [c.id for c in registry.concepts if not c.in_practice]
     assert not empty, f"concepts with nothing behind them: {empty}"
 
 
@@ -559,7 +558,7 @@ def test_pages_that_state_the_corpus_size_state_it_correctly():
     # Two broader arms were tried and removed. "all N pages" and "of N pages"
     # match subset counts just as well as corpus counts, so they flagged
     # "the site default on all 46 pages" and a hypothetical 400-page corpus in
-    # an interview answer, and the only way to keep them was a magnitude floor
+    # a worked explanation, and the only way to keep them was a magnitude floor
     # chosen to exclude the inconvenient hits. That is the same mistake as the
     # frequency floor in the label sweep, so the arms are gone and the
     # limitation is written here: a stale subset-shaped count will not be
@@ -576,7 +575,7 @@ def test_pages_that_state_the_corpus_size_state_it_correctly():
     #: drift fails while a deliberate one is documented. The same choice this
     #: file makes for blocked demonstrations and for retired labels.
     historical: dict[tuple[str, int], str] = {
-        ("concepts/llm-content-lifecycle.md", 400): "someone else's corpus, in an interview answer",
+        ("concepts/llm-content-lifecycle.md", 400): "someone else's corpus, in a worked explanation",
     }
     # `("concepts/docs-analytics.md", 121)` was here and is gone. It was added
     # while the pattern still had the "all N pages" arm, which matched that
@@ -1155,7 +1154,7 @@ def test_every_demonstration_names_a_file_that_exists():
     known project and one of two extents. It has never checked the one field a
     reader actually follows: the path. Eighty-four entries name a file, every
     path was typed by hand, and a rename would leave the honesty centrepiece
-    of this portfolio pointing at nothing while every gate stayed green.
+    of this guide pointing at nothing while every gate stayed green.
 
     The companion repository's half can only be checked when it is checked out
     beside this one, so it is skipped rather than guessed at. Saying which

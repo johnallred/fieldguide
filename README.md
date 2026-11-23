@@ -3,11 +3,18 @@
 **A curriculum for documentation engineering, developer experience and
 KnowledgeOps, built as an example of its own subject.**
 
-A few job postings started this. One for a Docs and Learning Experience role in Developer Relations, that asks for golden paths, curriculum, documentation CI, cold-start testing, and content optimized for SEO and GEO. One for a Senior Content Engineer in something called KnowledgeOps, which asks for content modeling, taxonomy, metadata for machine retrieval, RAG packaging, agent skills, and evaluation sets for answer accuracy. One for a role called Developer Education Lead that asks for demos, labs, quick-reference guides, technical currciulum, self-service resources, experimental tools, content-freshness automation, etc. One for a Lab Development Engineer on a Cloud Training Team that asks for automated lab publishing process, automation of the curriculum publication process, automation of lab environment monitoring, design and develop new labs to ensure consistency and quality, perform the testing of new labs prior to release, ensure that all new and existing labs can be created in a reliable, repeatable, and scalable manner.
+A training manual for people already doing this work, whatever their title:
+documentation engineer, developer education lead, content engineer,
+KnowledgeOps, docs and learning experience, lab development engineer. The work
+underneath those titles is largely the same. You design golden paths and
+curriculum, run documentation CI and cold-start tests, model content and
+metadata for navigation and machine retrieval, package knowledge for RAG and
+agents, measure whether any of it worked, and automate the publishing, testing
+and monitoring that keep it true.
 
 Different titles, the same discipline, and no settled curriculum for it
 anywhere. This is an attempt at one: **106 concepts, each with a golden path,
-each traceable to the posting line that put it on the list.**
+each naming the day-to-day work that needs it.**
 
 ---
 
@@ -26,7 +33,7 @@ from that file.
 | Pages have a consistent shape | Seven required sections, in order, enforced |
 | This learning path is teachable | No concept before a prerequisite the path also teaches |
 | The prerequisite graph is followable | No cycles, no dangling references |
-| A job posting asks for this | Every concept needs the posting line behind it |
+| The work needs this | Every concept needs a line naming that work |
 | The index is current | CI regenerates the views and fails if a committed one is stale |
 
 **Three of those caught real mistakes within minutes of being written**, which
@@ -130,15 +137,15 @@ rejects one that does not:
 
 1. **What it is**, in two sentences, for someone who heard the term in a
    meeting and did not admit they were lost.
-2. **Why the job asks for it**, explaining the work behind the posting's words
-   rather than restating them.
+2. **How this applies to your role**, describing the work behind the concept
+   and what it looks like on an ordinary Tuesday.
 3. **The golden path**: the shortest real exercise producing a working result,
    from a clean environment, ending in something observable.
 4. **Reference**: facts worth looking up later. Tables, not narrative.
-5. **How to talk about it**, including the tradeoff, because reciting what a
-   thing does is not the signal.
-6. **How to prove it**: the artifact that demonstrates it without you having
-   to claim it.
+5. **Explaining it to your team**, including the tradeoff, because reciting
+   what a thing does is not the useful part.
+6. **Putting it into practice**: the work product, the next tasks, and how to
+   tell it is working.
 7. **Related**: the lateral links the prerequisite graph does not know about,
    each with a clause saying why a reader would follow it from here.
 
@@ -152,18 +159,15 @@ shape on the first.
 
 ## Provenance, and the limitation behind it
 
-Every concept prints the posting line that put it on the list, on its own page
-and on every row of the coverage matrix.
+Every concept prints a line naming the work that needs it, on its own page and
+on every row of the coverage matrix.
 
-**The postings themselves are not reproduced here and are no longer on hand.**
-The recorded lines are phrases taken down while reading them, so treat them as
-near-verbatim rather than certified. Where a concept is here because the work a
-posting names is impossible without it, the line says so in those terms rather
-than pretending to be a quotation.
-
-A guide that presented every line as "what the job requires" would be more
-persuasive and less true, so the wording of each line carries the difference.
-See [Provenance](docs/explanation/provenance.md) for what that costs.
+The scope comes from descriptions of this work across several kinds of teams.
+Some concepts are named directly in that work; others are here because the
+named work is impossible without them, and their lines say so in those terms
+rather than overstating it. The list is one person's judgement, made visible so
+a reader can disagree with it. See [Provenance](docs/explanation/provenance.md)
+for how it was checked.
 
 ## Status
 

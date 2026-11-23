@@ -11,7 +11,7 @@ tags: [craft, core]
 
 `core` · difficulty 2 · 3h
 
-> sharing implementation feedback (what works, breaks, and scales) to refine content models, information architecture, and AI-readiness patterns
+> Telling architecture owners what works, breaks and scales, so content models and AI-readiness patterns improve.
 
 
 **Prerequisites:** [A systems mindset](systems-mindset.md)
@@ -25,19 +25,16 @@ complaint, and not quietly working around it.
 The useful unit is an instance with a count: this rule, this many pages, this
 failure, this proposal.
 
-## Why the job asks for it
+## How this applies to your role
 
-This is the most distinctive thing in the KnowledgeOps posting and the easiest to skim
-past. Read the two bullets together:
+This is the most distinctive part of KnowledgeOps work and the easiest to
+overlook. You collaborate with documentation leads on knowledge architecture,
+and you share implementation feedback (what works, breaks and scales) to refine
+content models, information architecture and AI-readiness patterns. You turn
+design intent into working systems and give leads clear, constructive feedback
+grounded in implementation.
 
-"Collaborate with documentation leads on knowledge architecture, sharing
-implementation feedback (what works, breaks, and scales) to refine content
-models, information architecture, and AI-readiness patterns."
-
-"A collaborative style: you turn design intent into working systems and give
-leads clear, constructive feedback grounded in implementation."
-
-**The role is explicitly the implementer advising the architects.** Documentation
+**You are the implementer advising the architects.** Documentation
 leads own the content model; you apply it to thousands of pages and find out
 where it does not hold. That split is deliberate, and it means the job has a
 built-in feedback obligation. You are not expected to accept a standard you have
@@ -45,8 +42,8 @@ discovered is wrong, and you are not authorised to change it unilaterally
 either.
 
 On a Tuesday this is a specific recurring moment. The content model requires an
-`audience` field with four allowed values. You apply it across the Omniverse
-corpus and find 180 pages that are genuinely for two audiences at once, and
+`audience` field with four allowed values. You apply it across a
+simulation-platform corpus and find 180 pages that are genuinely for two audiences at once, and
 another 40 where the honest answer is a fifth value nobody anticipated. You can
 pick the closest value and move on, which corrupts the data quietly. You can
 block on it, which stops the migration. Or you can report it in a form the lead
@@ -221,7 +218,7 @@ different conclusion from the same facts without overruling you.
 | A rule nobody violated in 3,000 pages | It may be unnecessary, and removing it is cheap |
 | A validator whose warnings are universally ignored | A dead gate is worse than none |
 | The cost of a rule in author time | Nobody measures this and it is the main objection |
-| Where the model held under scale | "What works" is in the posting's own phrasing |
+| Where the model held under scale | "What works" is half of the feedback |
 
 That last row is in the quote and is the part almost everybody drops. "What
 works, breaks, and scales" is three things.
@@ -237,9 +234,9 @@ works, breaks, and scales" is three things.
 | Reporting only failures | The lead over-corrects a working standard |
 | No default if they do nothing | Your report joins a backlog |
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Tell it as a report, with the number
+**How to explain it.** Tell it as a report, with the number
 first. "The content model required one audience per page. Applying it to 260
 pages, 69 percent either had two honest audiences or had none in the
 vocabulary. I wrote it up with the counts, example pages, three options with
@@ -255,23 +252,22 @@ value rather than a true one, and report the number in six months. That is
 disagreeing with evidence rather than with insistence, and it is the only form
 of disagreement that survives a difference in authority.
 
-**The tradeoff to volunteer.** This kind of report costs an hour to write and it
+**The tradeoff to name.** This kind of report costs an hour to write and it
 is an hour you are not migrating pages. There is a real version of this job where
 you write careful reports about everything and ship nothing, and a lead will
 notice. The filter is scale: report what you found because you did the work at
 volume, and absorb what is merely awkward. A finding that only appears at 260
 pages is worth an hour; a rule you personally find annoying is not.
 
-**One sharper point.** The structural value of this role is that **the implementer
+**One sharper point.** The structural value of this work is that **the implementer
 sees things the architect cannot.** A content model is a hypothesis about a
 corpus, and the corpus is the only thing that can falsify it. Saying that out
-loud reframes the feedback obligation from politeness to epistemics, which is
-much closer to how the KnowledgeOps posting describes it, and it explains why they
-wanted this as a named requirement rather than assuming it.
+loud reframes the feedback obligation from politeness to epistemics, and it
+explains why it should be a named responsibility rather than an assumption.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** One written report in the five-part shape, about something real.
+**The work product.** One written report in the five-part shape, about something real.
 It can be from any context: a schema you applied, a lint rule you rolled out, a
 convention you migrated to.
 
@@ -288,10 +284,10 @@ convention you migrated to.
    removing it. Removing a rule is the clearest possible demonstration that your
    feedback is about the system rather than about your preferences.
 
-**What makes it credible rather than decorative.** "I give constructive feedback" is unfalsifiable. A
+**How to tell it is working.** "I give constructive feedback" is unfalsifiable. A
 one-page report with a percentage, two example files, a costed options table and
-a recommendation at the bottom is a thing an interviewer can read in two minutes
-and immediately recognise as the output of someone who has done this.
+a recommendation at the bottom is a thing a lead can read in two minutes and
+decide from. The sign it is working is that the standard changes.
 
 ### How this would be demonstrated elsewhere
 

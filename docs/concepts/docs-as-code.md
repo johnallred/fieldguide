@@ -11,8 +11,7 @@ tags: [dac, core]
 
 `core` · difficulty 1 · 2h
 
-!!! note "Not a quotation (derived)"
-    Both postings describe documentation built, reviewed and shipped like software.
+> Running documentation through Git, CI builds, linting, link and sample checks, and automated publishing.
 
 **Leads to:** [Code-sample validation](code-sample-validation.md), [Documentation CI](documentation-ci.md), [Generated API reference](api-reference-generation.md), [Git authoring workflows for writers](git-authoring.md), [Link checking](link-checking.md), [Markdown and its dialects](markdown.md)
 
@@ -26,13 +25,12 @@ through a web form, and published by someone clicking a button.
 It is a workflow decision rather than a tooling decision, though it forces a
 long chain of tooling decisions afterwards.
 
-## Why the job asks for it
+## How this applies to your role
 
-Neither posting uses the phrase. Both describe its consequences, which is more
-telling: the Developer Relations posting asks for Git authoring, CI/CD builds, linting, link validation
-and publishing as separate bullets, and the KnowledgeOps posting asks for standards encoded into
-validators. Those are all things you can only do to documentation that lives in
-a repository.
+Most of the daily work in this field assumes it, even where nobody uses the
+phrase: Git authoring, CI/CD builds, linting, link validation, publishing, and
+standards encoded into validators. Those are all things you can only do to
+documentation that lives in a repository.
 
 The practical reason this matters on a Tuesday is **drift**. Documentation
 stored away from the code it describes has no mechanism connecting the two. An
@@ -163,9 +161,9 @@ file.
 | Having docs on GitHub | Storage is not review, and review is not CI |
 | Writing docs in the code | That is docstrings and [generated reference](api-reference-generation.md), one part of a larger corpus |
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with drift and with gates, not
+**How to explain it.** Lead with drift and with gates, not
 with Git. "Documentation in the repository means a page can be in the same pull
 request as the change it describes, and it means I can fail a build on a dead
 link or an example that no longer runs. Those two things are most of what keeps
@@ -184,26 +182,24 @@ large writing teams. And some organisations genuinely should not do this: if
 most of your content is authored by people whose job is not software, the
 workflow tax is real and a content management system may win.
 
-**The tradeoff to volunteer.** Docs-as-code moves the cost of documentation
+**The tradeoff to name.** Docs-as-code moves the cost of documentation
 from publishing time to authoring time. Publishing becomes free and automatic;
 authoring now requires a toolchain, a review cycle, and a green build. That
 trade is overwhelmingly worth it for developer documentation, where the
 audience and the authors both live in repositories. It is much less obviously
-right for marketing content or end-user help centres, and claiming otherwise in
-an interview signals that you have only worked on one kind of documentation.
+right for marketing content or end-user help centres, and saying so to the
+teams who own those builds trust.
 
-**One sharper point if you want to show depth.** Docs-as-code is often sold as
+**One sharper point.** Docs-as-code is often sold as
 "engineers will contribute to the docs now". They mostly will not. What
 actually changes is that *you* can automate quality, and that a change to the
-code and a change to its documentation can be made atomic. Pitch it on the
+code and a change to its documentation can be made atomic. Make the case on the
 automation, not on the contributions, because the contribution promise is the
 one that disappoints.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A public repository whose documentation build is a CI gate,
-not a convenience. The specific thing a reviewer looks for is a workflow file
-with `--strict` in it and more than one check in the job.
+**The work product.** A repository whose documentation build is a CI gate, not a convenience: a workflow file with `--strict` in it and more than one check in the job.
 
 **Three things to do, in order:**
 
@@ -219,11 +215,11 @@ with `--strict` in it and more than one check in the job.
    together, and link to it. That diff *is* the argument, and it is more
    convincing than any description of the workflow.
 
-**What makes it credible rather than decorative.** A repository where the docs
-build is green and nothing would fail if the content were wrong proves you can
-install MkDocs. A repository with a check that has *caught* something, visible
-in the history as a red build followed by a fix, proves the gate does work.
-Keep that commit; it is the most useful thing in the project.
+**How to tell it is working.** A repository where the docs
+build is green and nothing would fail if the content were wrong has installed
+MkDocs and nothing more. A repository with a check that has *caught* something,
+visible in the history as a red build followed by a fix, has a gate that does
+work. Keep that commit; it is the most useful thing in the project.
 
 ## Related
 

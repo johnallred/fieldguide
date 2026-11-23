@@ -11,8 +11,7 @@ tags: [dom, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "familiarity with USD, Omniverse, Isaac Sim, or ROS"
+> Documenting tools built on OpenUSD and Omniverse.
 
 **Leads to:** [Robotics simulation](robotics-sim.md)
 
@@ -30,10 +29,10 @@ which one wins.
 `context` tier means the goal is to follow a conversation and know what you do
 not know, not to ship scene code.
 
-## Why the job asks for it
+## How this applies to your role
 
-Because the KnowledgeOps posting lists USD among the things to be familiar with, and because the
-documentation failure around it is unusually clear-cut.
+Because USD underpins a growing share of simulation and graphics tooling, and
+because the documentation failure around it is unusually clear-cut.
 
 USD's reference material describes composition as a set of **arcs**:
 sublayers, references, payloads, inherits, variant sets, specialises. Each is
@@ -220,7 +219,7 @@ separate documentation sets and separate failure modes.
 Every row is a resolution question, which is the argument for leading the
 documentation with resolution.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with composition rather than the format.** "USD is a scene format and
 really a composition engine: several files state opinions about the same
@@ -235,8 +234,8 @@ and Docker layers, so a developer's existing intuition is reliably wrong in one
 specific direction, and they get a silently incorrect scene rather than an
 error.
 
-**The documentation point, which is the reason this is worth discussing in an
-interview.** USD's reference material documents six composition arcs
+**The documentation point, which is the reason this is worth raising with your
+team.** USD's reference material documents six composition arcs
 accurately, and a reader finishes it able to name all six and unable to answer
 why their override is ignored. The arcs are a feature list; what the reader
 needs is the resolution order, LIVRPS, plus a demonstration of the
@@ -246,14 +245,14 @@ came from, which is the first thing I would put in a troubleshooting page.
 
 **Be honest about the depth.** I have composed layers, resolved overrides and
 read the API; I have not shipped a production scene graph, tuned payload
-loading on heavy assets, or used Omniverse itself. For this role that is the
+loading on heavy assets, or used Omniverse itself. For documentation work that is the
 right amount: enough to write the page that is missing and to know which
 questions to take to an engineer.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** Three `.usda` files and a script that prints the resolution
-order, which fits in a gist and demonstrates the thing newcomers get wrong.
+**The work product.** Three `.usda` files and a script that prints the resolution
+order, which fits in a gist and shows the thing newcomers get wrong.
 
 **Three things to do, in order:**
 
@@ -265,7 +264,7 @@ order, which fits in a gist and demonstrates the thing newcomers get wrong.
 3. Write the paragraph that states the resolution order and names the
    intuition it violates. It is the page that does not exist.
 
-**What makes it credible rather than decorative.** Every result above was
+**How to tell it is working.** Every result above was
 executed against `usd-core` 0.26.11 on this machine, and the files are three
 short scripts. What is absent is the platform: no Omniverse, no Kit, no live
 Connector, no heavy asset, and no production pipeline, so this is familiarity

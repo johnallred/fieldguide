@@ -11,8 +11,7 @@ tags: [gp, supporting]
 
 `supporting` · difficulty 3 · 6h
 
-!!! quote "Why it is on the curriculum"
-    "This role owns the developer first experience end to end across the [vendor's] AI stack, including quickstarts, golden paths, reference documentation, tutorials, samples, and structured learning paths, by writing and maintaining developer documentation, the sample-app gallery, site navigation, and a crawlable, agent-ready front door"
+> Building and maintaining the sample applications, and the gallery developers browse them from.
 
 **Prerequisites:** [Sample walkthroughs](sample-walkthroughs.md), [Code-sample validation](code-sample-validation.md)
 
@@ -23,12 +22,12 @@ Unlike a [code sample](code-sample-validation.md) in a page, a sample app is a
 standalone project a reader can clone and run; unlike a
 [walkthrough](sample-walkthroughs.md), it is not primarily there to be read.
 
-The Developer Relations posting names the sample-app gallery as an owned artifact. The word that matters
+The sample-app gallery is something you own, not just contribute to. The word that matters
 is **gallery**, because it is the index that creates the obligations. A gallery
 is a published list of promises: these things exist, they work, and they are
 worth your time.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because a gallery is where a corpus's maintenance debt becomes visible to
 readers.
@@ -265,7 +264,7 @@ a redirect if it had a URL, and say why. A sample marked unmaintained in a
 gallery is more honest than one quietly broken, and far more honest than one
 listed and absent.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the gallery as a promise list.** "A sample app that goes stale
 costs a reader an hour and they conclude the product is broken, not the sample.
@@ -282,7 +281,7 @@ features ship, so a gallery documents each feature's happy path and nothing
 about retries, auth or error handling. Those are not features,
 so nobody is assigned to demonstrate them.
 
-**The tradeoff to volunteer.** Every sample is an independent maintenance
+**The tradeoff to name.** Every sample is an independent maintenance
 commitment with its own dependency tree, and the honest consequence is that the
 right number of samples is much smaller than teams want. Ten that work and
 cover the top support topics beat forty with six broken, and getting from forty
@@ -294,9 +293,9 @@ easiest thing in the world to create, because the index and the implementation
 live in different places. One `Path.exists()` per entry catches it, and on an
 old gallery it usually catches something.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A gallery driven by a manifest, a CI job that runs every
+**The work product.** A gallery driven by a manifest, a CI job that runs every
 entry and asserts its output, and a coverage measurement against support
 volume.
 
@@ -310,7 +309,7 @@ volume.
 3. Pick the oldest sample nobody has verified and run it. Whatever happens is
    information.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories ships a sample gallery, which the
 [demonstrated](../demonstrated.md) page records; `docpack` validates samples
 embedded in its own documentation, which is the in-page case rather than this

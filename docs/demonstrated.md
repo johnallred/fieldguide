@@ -10,7 +10,7 @@ generated: true
 
 # Demonstrated
 
-This guide is prose about how to do a job, and prose is cheap. This page
+This guide is prose about how to do the work, and prose is cheap. This page
 records which concepts are also *implemented* somewhere you can open, down to
 the file that does the work.
 
@@ -232,8 +232,8 @@ a stated reason why no amount of further code reaches `full`.
 
 **`not-published`:** [Publishing in public](concepts/publishing-in-public.md), [Release readiness for documentation](concepts/release-readiness.md)
 
-A portfolio that published only the first table would be the flattering half of
-the truth. The gaps are where the interview happens.
+A guide that published only the first table would be the flattering half of
+the truth. The gaps are where the judgement lives.
 
 ### Every core concept with no demonstration (15)
 

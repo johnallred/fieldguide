@@ -11,8 +11,7 @@ tags: [qa, supporting]
 
 `supporting` · difficulty 2 · 2h
 
-!!! quote "Why it is on the curriculum"
-    "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
+> Keeping examples in docstrings executable, so they fail when the code changes.
 
 **Prerequisites:** [Code-sample validation](code-sample-validation.md)
 
@@ -27,10 +26,9 @@ It is the cheapest form of [code-sample validation](code-sample-validation.md),
 because the sample and the implementation are in the same file and cannot be
 edited separately.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting asks for doc test harnesses. Doctests are the version of that which
-costs nothing to adopt: one flag in `pyproject.toml` and every docstring
+Doctests are the version of a doc test harness that costs nothing to adopt: one flag in `pyproject.toml` and every docstring
 example is executed on every run.
 
 The specific decay they prevent is the worst kind, because it is invisible. A
@@ -243,7 +241,7 @@ small and examples are one-liners. They are a poor fit for tutorials, and
 trying to force a tutorial into docstrings is how projects end up with
 unreadable module headers.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the generated reference.** "Doctests keep the examples in generated
 API documentation honest, which matters because readers trust generated
@@ -255,7 +253,7 @@ floating point, dict ordering, and anything needing fixtures. Say that you
 round in the example rather than pasting a full float repr, and that a doctest
 wanting a fixture should become a unit test.
 
-**The tradeoff to volunteer.** Doctests make docstrings longer and partly
+**The tradeoff to name.** Doctests make docstrings longer and partly
 mortgage readability to testability. A module whose header is forty lines of
 session transcript is worse documentation than one with a clear paragraph, even
 though the transcript is verified. The honest position is that doctests belong
@@ -267,21 +265,21 @@ useful metric is what fraction of the public surface carries a runnable
 example, which is twenty lines of `ast` walking and is almost never measured.
 Bring the number.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A repository with `--doctest-modules` enabled against the
+**The work product.** A repository with `--doctest-modules` enabled against the
 source tree, and ideally a coverage number for runnable examples.
 
 **Three things to do, in order:**
 
-1. Run the golden path. The `fees(100)` failure is the whole pitch, and it
-   takes two minutes to reproduce.
+1. Run the golden path. The `fees(100)` failure is the whole argument, and
+   it takes two minutes to reproduce.
 2. Add `--doctest-modules` to a project you own, with `testpaths` including the
    source. Whatever fails was already wrong in your published reference.
 3. Run the step 5 coverage script over your package and write the number down.
-   That is the sentence nobody else in the interview will have.
+   It is the number nobody else on the team will have.
 
-**What makes it credible rather than decorative.** `docpack` runs
+**How to tell it is working.** `docpack` runs
 `--doctest-modules` across its package, so every docstring example is executed,
 and one of them broke a strict build and had to be fixed. The broken one is the
 story: it proves the examples are load-bearing rather than decorative.

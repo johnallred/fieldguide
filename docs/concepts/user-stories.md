@@ -11,7 +11,7 @@ tags: [craft, supporting]
 
 `supporting` · difficulty 1 · 2h
 
-> Encode standards (user stories, release readiness, onboarding, security guidance) into templates
+> Turning user stories into a documentation standard that templates can enforce.
 
 
 ## What it is
@@ -20,14 +20,14 @@ The format "as a *role*, I want to *do something*, so that *outcome*", used here
 as a constraint on documentation scope rather than as a planning artifact. A
 page that cannot be stated as one story is usually more than one page.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting lists it first among the standards to encode "into templates, validators,
-and guided workflows rather than static documents". That placement is the
-interesting part. User stories are normally a product-planning artifact, and
-The KnowledgeOps posting is asking for them as something a *template* enforces.
+User stories come first among the standards worth encoding "into templates,
+validators, and guided workflows rather than static documents". That placement
+is the interesting part. User stories are normally a product-planning
+artifact, and here they are something a *template* enforces.
 
-Read that way, the requirement makes sense. The story format is a cheap test for
+Read that way, the standard makes sense. The story format is a cheap test for
 the most common documentation defect, which is a page with no single reader in
 mind. "As a developer, I want to configure retry behaviour, so that transient
 upstream failures do not surface to my callers" is a page. "Retry and timeout
@@ -233,9 +233,9 @@ The last row is real. "As a developer or an operator, I want to read the logs"
 is a legitimate single page, and the strict one-role rule would split it
 pointlessly. A good check warns rather than blocks on that case.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Frame it as a scope test, not as a
+**How to explain it.** Frame it as a scope test, not as a
 planning practice, because that is what distinguishes the documentation use from
 the product-management use. "I require a story on how-to and tutorial pages, and
 I cross-check the role against the declared audience. It is a cheap test for the
@@ -247,9 +247,9 @@ bureaucracy?" Agree partly. The honest position: the value is in the ninety
 seconds of thought at authoring time, and the stored field is mostly a way to
 make that thinking non-optional. If a team already scopes pages well, the field
 is overhead. It earns its place on a corpus with many authors of varying
-experience, which is exactly the KnowledgeOps posting's situation.
+experience, which is the situation at most large companies.
 
-**The tradeoff to volunteer.** This is a required field, and every required
+**The tradeoff to name.** This is a required field, and every required
 field is friction on every contributor forever. On a corpus of twenty pages with
 one author it is pure cost. It also invites gaming: an author who wants to ship
 writes a vague story, the check passes, and now there is a field full of noise
@@ -265,9 +265,9 @@ explain to an engineer who has never heard of Diátaxis and is not going to read
 a framework. Using it as the friendly front end to a stricter model underneath
 is a genuinely practical move.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** The check, scoped to the right page types, plus one page you
+**The work product.** The check, scoped to the right page types, plus one page you
 split because the format forced it.
 
 **Three things to do, in order:**
@@ -276,14 +276,14 @@ split because the format forced it.
    need more than one; in most corpora it is a third or more, and that number is
    the finding.
 2. **Add the field and the check** to a real repository, exempting reference and
-   explanation. The exemptions are what make it credible.
+   explanation. The exemptions are what make it survive.
 3. **Split one page** because the stories forced it, and link the before and
-   after. The split is the evidence; the field is just the prompt.
+   after. The split is the result; the field is just the prompt.
 
-**What makes it credible rather than decorative.** User stories are a well-worn format and claiming to
-use them signals nothing. Using them as a validator on documentation scope, with
-the two page types where they do not apply explicitly exempted, shows you have
-thought about the format's limits rather than adopted it.
+**How to tell it is working.** User stories as a validator on documentation scope,
+with the two page types where they do not apply explicitly exempted, and pages
+being split because a story forced it. That is using the format's limits rather
+than just adopting it.
 
 ### How this would be demonstrated elsewhere
 

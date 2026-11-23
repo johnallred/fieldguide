@@ -11,8 +11,7 @@ tags: [qa, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
+> Previewing every documentation change as a built site, and publishing it when it merges.
 
 **Prerequisites:** [GitHub Actions for docs](github-actions.md)
 
@@ -28,9 +27,9 @@ Publishing is nearly free once a build exists. Previews are where the real
 decisions are, and most of them are about permissions and search engines
 rather than about building.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting lists publishing as part of the pipeline. The reason it belongs in a
+Publishing is part of the pipeline. The reason it belongs in a
 quality category rather than an infrastructure one is that previews are the
 single most effective fix for the biggest objection to
 [docs-as-code](docs-as-code.md): that non-engineer contributors and reviewers
@@ -228,7 +227,7 @@ GitHub Pages hosts one site per repository and adding a real preview means
 adding a second host. That is recorded as a partial demonstration rather than
 written up as a complete one, which is the honest state.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with review, not deployment.** "Previews are how review by
 non-engineers becomes real. A reviewer who is handed a Markdown diff approves
@@ -241,7 +240,7 @@ get no secrets, `pull_request_target` has secrets but must never check out
 contributor code, and the safe shape is build-without-secrets then publish from
 a `workflow_run`.
 
-**The tradeoff to volunteer.** Previews cost a second hosting target, a cleanup
+**The tradeoff to name.** Previews cost a second hosting target, a cleanup
 story, and a small ongoing bill, and they are worth it in direct proportion to
 how many of your reviewers are not engineers. On a repository where every
 reviewer reads diffs comfortably, the CI-artifact approach gets most of the
@@ -254,9 +253,9 @@ competing with the real thing. It is two lines to prevent, and noticing it is
 the kind of detail that reads as having operated a real site rather than
 configured one.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A repository that publishes on merge with least-privilege
+**The work product.** A repository that publishes on merge with least-privilege
 permissions, plus either a working preview or an explicit written reason there
 is none.
 
@@ -268,10 +267,10 @@ is none.
    and grep for `noindex`. If it is missing, that is a real finding on a real
    site.
 3. Write down, in your repository, why you do or do not have previews. The
-   written reason is worth as much in an interview as the feature, because it
-   shows the decision was made rather than skipped.
+   written reason is worth as much to the next maintainer as the feature,
+   because it shows the decision was made rather than skipped.
 
-**What makes it credible rather than decorative.** A publish job that is gated
+**How to tell it is working.** A publish job that is gated
 on the default branch and scoped with `permissions:`, and an answer to the fork
 question that does not involve `pull_request_target` checking out the head.
 

@@ -11,8 +11,7 @@ tags: [qa, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Build and maintain docsascode pipelines and documentation CI, including link checking and coldstart testing of quickstarts"
+> Running automated checks on every documentation change before it merges.
 
     "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
 
@@ -21,14 +20,14 @@ tags: [qa, core]
 ## What it is
 
 The set of automated checks that run on every documentation pull request, and
-the decision about which of them can block a merge. Both postings name it as a
-thing you build and operate, not a thing you configure once.
+the decision about which of them can block a merge. It is a thing you build
+and operate, not a thing you configure once.
 
 The useful framing is not "CI for docs" but **a list of ways this corpus can
 start lying, each with a gate that catches it**. The pipeline is the artifact;
 the list is the thinking.
 
-## Why the job asks for it
+## How this applies to your role
 
 A documentation corpus does not decay because people write badly. It decays
 because the world moves and nothing tells the page. A flag is renamed, a
@@ -36,15 +35,15 @@ default changes from 3 to 5, a heading is reworded, a sample stops running
 against the current release. Each of those is a silent, specific defect, and
 each needs a specific check.
 
-Both postings ask for the pipeline because it is the only mechanism that scales
-past the size where a human can hold the corpus in their head. The KnowledgeOps posting's phrase
-for the philosophy is exact: build systems where the right way is easier than
-the wrong way. A gate is how you make the wrong way harder.
+The pipeline exists because it is the only mechanism that scales past the size
+where a human can hold the corpus in their head. The philosophy fits in a
+sentence: build systems where the right way is easier than the wrong way. A
+gate is how you make the wrong way harder.
 
-The part interviewers probe is **what you chose to block on**. Anyone can add
-checks. Deciding that a dead link blocks a merge while a style suggestion does
-not, and being able to defend the line, is the judgment the role is actually
-hiring for.
+The hard part is **what you choose to block on**. Anyone can add checks.
+Deciding that a dead link blocks a merge while a style suggestion does not, and
+being able to defend the line to the people it blocks, is the judgement the
+work actually turns on.
 
 ## The golden path
 
@@ -203,7 +202,7 @@ real problems.
 Keep them as separate jobs so the slow one does not gate the fast feedback.
 A writer fixing a typo should not wait on a virtual environment build.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the list, not the pipeline.** "I start from the ways the corpus can
 start lying, and then there is one gate per way. Dead link, sample that no
@@ -216,13 +215,13 @@ Prose style is the usual example: failing a build because a sentence is passive
 teaches contributors that the pipeline is an obstacle rather than a safety net,
 so style warns and correctness blocks.
 
-**The tradeoff to volunteer.** Every gate is a tax on contribution, paid by the
+**The tradeoff to name.** Every gate is a tax on contribution, paid by the
 next person who wants to fix a typo. A pipeline with fifteen required checks on
 a corpus nobody contributes to has optimised the wrong thing. The honest
 version is that you add gates in response to defects that actually shipped, not
 in anticipation of all possible defects.
 
-**One sharper point, and it is the best thing to say here.** A gate suite is
+**One sharper point.** A gate suite is
 only as good as its coverage of failure *modes*, and the count tells you
 nothing about that coverage. This guide had a fully green pipeline, a
 hundred-odd tests and a passing strict build while seven of its pages were
@@ -240,9 +239,9 @@ and this paragraph is a story about a blind spot. The lesson is not
 "add more gates". It is that every green pipeline has blind spots, and the
 useful question in a review is which failure mode nothing here would catch.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A workflow file with more than one independent check, step
+**The work product.** A workflow file with more than one independent check, step
 names that describe failure modes, and a commit history that shows a gate
 catching something real.
 
@@ -259,11 +258,11 @@ catching something real.
    the one worth talking about, because it came from your corpus rather than
    from a blog post.
 
-**What makes it credible rather than decorative.** A reviewer can tell the
-difference between a pipeline assembled from a tutorial and one grown in
-response to real breakage. The tell is specificity: a gate that exists because
-a particular page misled a particular reader, with the commit to prove it. Keep
-the red build in the history.
+**How to tell it is working.** A pipeline assembled from
+a tutorial looks different from one grown in response to real breakage. The
+tell is specificity: a gate that exists because a particular page misled a
+particular reader, with the commit that records it. Keep the red build in the
+history.
 
 ## Related
 

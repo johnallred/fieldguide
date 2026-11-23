@@ -11,24 +11,23 @@ tags: [ia, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents"
+> Encoding security guidance into templates, validators and workflows rather than static pages.
 
 **Prerequisites:** [Style guides and terminology management](style-guide.md)
 
 ## What it is
 
 Turning the security rules your documentation must follow into checks that run,
-rather than a page telling authors to be careful. The KnowledgeOps posting's bullet is explicit
-about the preference: templates, validators and guided workflows **rather than
-static documents**.
+rather than a page telling authors to be careful. The preference is
+explicit: templates, validators and guided workflows **rather than static
+documents**.
 
 The specific problem is that documentation code samples are the most
 copy-pasted code in any organisation. A sample is read as a recommendation, so
 an insecure sample propagates the insecurity into every project that follows
 the quickstart.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because a documentation site is a distribution channel for patterns.
 
@@ -38,8 +37,7 @@ in every project that follows it, with the authority of official guidance, for
 as long as the page lives. The blast radius is the difference, and it is why
 security guidance belongs on the list of standards worth encoding.
 
-The second reason is in the KnowledgeOps posting's own phrasing: you will "interface with
-Security". A security team can give you a policy document. Converting that into
+The second reason is that you will work with your security team. A security team can give you a policy document. Converting that into
 a validator is the part they cannot do for you, and arriving with one is a
 much better opening than arriving with questions.
 
@@ -233,14 +231,14 @@ are capitalised, and YAML keys vary.
 | A substitute for threat modelling | It checks patterns, not design |
 | A claim of security review | It is a floor; the pages may still advise badly |
 
-Be precise about that last one in an interview. The gate catches a list of
+Be precise about that last one when you report it. The gate catches a list of
 known-bad patterns in samples. It does not mean the documentation gives secure
 advice, and a page can pass every rule while recommending an insecure
 architecture in prose.
 
-### The other standards on the KnowledgeOps posting's list
+### The other standards worth encoding
 
-The bullet names four, and all four follow the same pattern:
+There are four common ones, and all four follow the same pattern:
 
 | Standard | Static document | Encoded as |
 |---|---|---|
@@ -264,9 +262,9 @@ judgment. Which is the same split as the [style guide](style-guide.md).
 
 The third row is the one that compounds. A security finding on a single page is
 worth fixing once; converted into a rule it is worth fixing forever, and that
-conversion is the thing you are being hired to do rather than asked to do.
+conversion is the part of the work nobody else will do for you.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with blast radius.** "Documentation samples are the most copy-pasted
 code in an organisation, and a sample reads as a recommendation. An engineer
@@ -278,7 +276,7 @@ security rules go in CI rather than in a page asking authors to be careful."
 security team's own policy converted into patterns, plus every past finding on
 a doc page turned into a rule so the class cannot return.
 
-**The tradeoff to volunteer.** Secure samples are longer. Verifying a checksum
+**The tradeoff to name.** Secure samples are longer. Verifying a checksum
 before running an installer is three lines where the insecure version is one,
 and the pressure on a quickstart is always toward brevity because
 [time to first success](time-to-first-success.md) is the metric. That tension
@@ -292,9 +290,9 @@ secret takes in a shell sample, because environment variables are uppercase by
 convention. A security rule that silently matches nothing is worse than no rule,
 and you only find out by writing a fixture that must fail.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A sample linter in CI with a named rule list, plus one
+**The work product.** A sample linter in CI with a named rule list, plus one
 commit where it caught something in your own documentation.
 
 **Three things to do, in order:**
@@ -305,7 +303,7 @@ commit where it caught something in your own documentation.
 3. Take the last security finding anyone raised about your documentation and
    write it as a rule.
 
-**What makes it credible rather than decorative.** The linter is committed as
+**How to tell it is working.** The linter is committed as
 `drills/security_lint.py` and reproduces all three states in one run: five
 findings against six planted problems, six once the rule is case-insensitive,
 and none once the quickstart is actually repaired. A test asserts that the

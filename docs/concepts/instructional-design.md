@@ -11,8 +11,7 @@ tags: [edu, core]
 
 `core` · difficulty 2 · 5h
 
-!!! quote "Why it is on the curriculum"
-    "Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result"
+> Designing curriculum so a developer learns what they need, in the order they need it.
 
 **Leads to:** [Learning paths and curriculum](learning-paths.md), [Cognitive load in technical content](cognitive-load.md), [Assessment and checks for understanding](assessment.md)
 
@@ -29,12 +28,11 @@ different jobs sharing one medium. A reference page is finished when it is
 accurate. A tutorial is finished when a stranger reaches a working result,
 which is a claim about the *reader* rather than about the page.
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting's bullet is the concept in one line: "from a clean environment to a
+The concept fits in one line: take a developer "from a clean environment to a
 working result". That is an instructional objective written in behavioural
-terms, with its starting state named. The posting is describing design, not
-writing.
+terms, with its starting state named. It describes design, not writing.
 
 It matters on an ordinary Tuesday because most developer documentation is
 written by people who already know the thing, and expertise is the enemy of
@@ -55,7 +53,7 @@ your own writing actually costs. About thirty-five minutes.
 | Objective | What the exercise produces | A stated result at its end |
 | Entry state | What the reader must already know | A prerequisites line |
 | Practice | Something to do, not to read | The golden path itself |
-| Verification | How the reader knows it worked | A "how to prove it" section |
+| Verification | How the reader knows it worked | A "Putting it into practice" section |
 
 These are not the only possible commitments. They are four that a program can
 verify, which is what makes them worth adopting over good intentions.
@@ -68,7 +66,7 @@ for c in [x for x in reg.concepts if x.status == "complete"]:
     if c.prerequisites and "**Prerequisites:**" in t:   has["prereq"] += 1
     if DURATION.search(t):                              has["dur"] += 1
     if re.search(r"\*\*What you (?:built|learned)", t):  has["result"] += 1
-    if "## How to prove it" in t:                       has["proof"] += 1
+    if "## Putting it into practice" in t:                       has["proof"] += 1
 ```
 
 ```
@@ -207,8 +205,8 @@ number.
 | "Know the architecture" | "Trace one request through all three services" |
 
 The test is whether you could watch someone and tell whether they had done it.
-"Understand" fails that test, which is why the Developer Relations posting's "to a working result" is
-better written than most objectives in actual curricula.
+"Understand" fails that test, which is why "to a working result" is better written than most objectives in
+actual curricula.
 
 ### Where expertise hurts
 
@@ -248,7 +246,7 @@ The last row is the one this page learned the hard way, and the one most
 corpora get wrong without noticing, because each author is individually
 consistent.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the difference between the two jobs.** "A reference page is done
 when it is accurate. A tutorial is done when a stranger finishes with a working
@@ -263,7 +261,7 @@ care. Cold-start testing catches undeclared prerequisites; a required
 prerequisites line forces the author to decide what they are assuming; the rest
 needs a real reader, which is the limit of what tooling buys you.
 
-**The tradeoff to volunteer.** Structural commitments are a tax on every page
+**The tradeoff to name.** Structural commitments are a tax on every page
 and they can decay into ritual. A prerequisites line reading "none" on forty
 pages is noise, and a "what you built" paragraph written to satisfy a checker
 is worse than none at all. They work while they force a decision and fail once
@@ -279,9 +277,9 @@ commitment it had already met. Five would have been published as findings. An au
 defect profile as the corpus it measures, so it gets a fixture with a known
 answer before any of its numbers are believed.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A corpus whose structural commitments are checked in CI,
+**The work product.** A corpus whose structural commitments are checked in CI,
 plus the audit and the fixtures that make the audit trustworthy.
 
 **Three things to do, in order:**
@@ -297,7 +295,7 @@ plus the audit and the fixtures that make the audit trustworthy.
 3. Find an exercise that never says what it produced, and write that sentence.
    It is the fastest way to discover an exercise that produces nothing.
 
-**What makes it credible rather than decorative.** `fieldguide audit` prints
+**How to tell it is working.** `fieldguide audit` prints
 the four commitments on demand, which is the whole of the claim: a
 seven-section page contract enforced in CI, a prerequisite graph with no
 cycles, 89 of 89 prerequisite lines, and 106 of 106 golden paths stating a

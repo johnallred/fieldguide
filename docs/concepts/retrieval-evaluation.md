@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 3 · 6h
 
-> including llms.txt, MCP-accessible sources, agent skills and context kits, and evaluation sets for answer accuracy
+> Building question sets that measure whether retrieval finds the right content.
 
 
 **Prerequisites:** [RAG pipelines](rag.md)
@@ -28,10 +28,10 @@ demand.
 It is the only check in a documentation pipeline that asks whether the corpus
 is **useful** rather than whether it is **correct**.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names it directly: "evaluation sets for answer accuracy", listed
-alongside llms.txt and MCP as a required AI-ready output. It is the rarest of
+Evaluation sets for answer accuracy are one of the four AI-ready outputs,
+alongside llms.txt and MCP. It is the rarest of
 the four in practice and the most diagnostic of whether a team is serious.
 
 Here is why it matters more than it sounds. Every other gate in this guide,
@@ -512,9 +512,9 @@ do with real logs is replace them.
 | Publish the scores, gate on a lower floor | The floor survives edits; the published number gets explained |
 | Add a case with every reported failure | The set grows from real traffic rather than imagination |
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with what it decides, not with the
+**How to explain it.** Lead with what it decides, not with the
 metrics. "Every other documentation check asks whether something is broken.
 This is the only one that asks whether asking a question returns the right
 page. I keep twenty-odd cases phrased the way readers actually type, validated
@@ -524,12 +524,11 @@ below the current number so content edits do not trip it. The number I insist on
 having is the lexical baseline, because a dense pipeline scoring worse than BM25
 is a quarter spent going backwards."
 
-**The follow-up is "how many cases do you need",** and the answer that shows
-judgement is about resolution rather than a number. Twenty cases means one case
+**The follow-up is "how many cases do you need",** and the useful answer is about resolution rather than a number. Twenty cases means one case
 is five points, so anything under about ten points is noise and should not drive
 a decision. That is enough to catch a page becoming unreachable, which is what a
 gate is for, and not enough to choose between two close retrievers. Say that
-before someone asks, because a candidate quoting a precise improvement from a
+before someone asks, because anyone quoting a precise improvement from a
 twelve-case set has told you they do not understand the instrument.
 
 **The tradeoff to volunteer, and it is the real one.** A golden set becomes a
@@ -548,11 +547,11 @@ that is the most valuable output of the whole exercise. Sorting your failures by
 [the five RAG failure modes](rag.md) tells you how much of your problem is
 engineering and how much is writing, and in most documentation corpora the
 answer is mostly writing. That reframes an AI project into a documentation gap
-analysis, which is both true and a much better pitch to a documentation lead.
+analysis, which is both true and a much easier case to make to a documentation lead.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A golden set in version control, a harness, published scores
+**The work product.** A golden set in version control, a harness, published scores
 including the bad ones, and a CI floor.
 
 **Three things to do, in order:**
@@ -561,17 +560,17 @@ including the bad ones, and a CI floor.
    the demonstration: it shows the set earning its keep by settling a decision
    rather than by producing a number.
 2. **Publish the unflattering score.** A page with your real hit@1, the cases
-   you lose, and why each is hard is far more credible than a good number with
-   no failures listed. Nobody believes a retrieval system that works.
+   you lose, and why each is hard is far more trustworthy than a good number
+   with no failures listed. Nobody believes a retrieval system that works.
 3. **Replace your hand-written cases with real queries.** Export zero-click
    searches or ticket subjects and rebuild the set from them. Then report how
    much the score changed, because that delta is the measure of how wrong your
    assumptions about your readers were, and it is usually a large number.
 
-**What makes it credible rather than decorative.** Describing hit@k and MRR is reading a blog post. A
-committed golden set with a `why` on every case, a validator that fails on a
-renamed page, a lexical baseline next to every other number, and a published
-score you are not proud of demonstrates that you ran it rather than built it.
+**How to tell it is working.** A committed golden set with a `why` on every case, a
+validator that fails on a renamed page, a lexical baseline next to every other
+number, and a published score nobody is proud of. When a proposed change is
+settled by that score, it is working.
 
 ## Related
 

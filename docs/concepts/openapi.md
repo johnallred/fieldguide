@@ -11,10 +11,7 @@ tags: [dac, supporting]
 
 `supporting` · difficulty 2 · 4h
 
-!!! note "Not a quotation (adjacent)"
-    Neither posting mentions OpenAPI. It is the standard contract format for
-    any HTTP surface you will document, so it is here on the grounds that the
-    work requires it even where the requisition does not say so.
+> Documenting any HTTP API from its contract, and keeping that contract and the reference in step.
 
 **Prerequisites:** [Generated API reference](api-reference-generation.md)
 
@@ -30,11 +27,11 @@ Validity is a property of the document and has good tooling. Accuracy is a
 property of the relationship between the document and the running service, and
 has almost none.
 
-## Why the job asks for it
+## How this applies to your role
 
-It does not, explicitly, and the banner says so. But reference documentation
-for an HTTP surface is OpenAPI work in practice, and both postings ask for
-reference documentation.
+Nobody may call it OpenAPI work, and the banner says so. But reference
+documentation for an HTTP surface is OpenAPI work in practice, and reference
+documentation is part of nearly every documentation role.
 
 The reason it belongs in a documentation-engineering curriculum rather than an
 API-design one is that the spec is a documentation artifact with the same decay
@@ -271,7 +268,7 @@ The mock server is underrated for documentation work. It lets a
 [cold-start tested](coldstart-testing.md), before the real service is
 available or without credentials.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the two properties.** "A spec can be valid and wrong. Validity has
 good tooling and catches `$ref` typos and missing descriptions. Accuracy, which
@@ -284,7 +281,7 @@ ranks the options: generated-from-code removes shape drift but faithfully
 documents bugs; spec-first is the strongest guarantee and the biggest process
 change; hand-written is what most teams have and is the worst of the three.
 
-**The tradeoff to volunteer.** A contract check needs a running service, which
+**The tradeoff to name.** A contract check needs a running service, which
 means it cannot be a merge gate without a test environment that is itself
 reliable. Gating merges on a check that depends on a deployed service is how you
 get a team that reruns CI until it passes. So it belongs on a schedule, or in a
@@ -298,9 +295,9 @@ it belongs in the warning set, and knowing the difference is the kind of
 precision that distinguishes someone who has built one of these from someone
 who has configured a validator.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A repository with spec validation and a style ruleset in CI,
+**The work product.** A repository with spec validation and a style ruleset in CI,
 plus a contract check that runs somewhere and produces findings.
 
 **Three things to do, in order:**
@@ -311,7 +308,7 @@ plus a contract check that runs somewhere and produces findings.
 3. Write the field-set comparison from step 4 against one real endpoint. The
    first undocumented field you find is your evidence.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories documents an HTTP API, which the [demonstrated](../demonstrated.md)
 page records. What travels is the distinction and the measurement behind it: a
 spec that validates cleanly while the service returns an undocumented field,

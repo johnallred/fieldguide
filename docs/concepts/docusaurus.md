@@ -11,8 +11,7 @@ tags: [dac, supporting]
 
 `supporting` · difficulty 2 · 5h
 
-!!! quote "Why it is on the curriculum"
-    "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+> Building and maintaining a documentation site on Docusaurus.
 
 **Prerequisites:** [Choosing a static site generator](static-site-generators.md), [MDX](mdx.md)
 
@@ -27,13 +26,14 @@ integration and a sidebar model.
 It produces a React application that is pre-rendered to static HTML, and that
 pre-rendering turns out to matter more than it sounds.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting lists it third. In practice Docusaurus is what you find on product-facing
+It is one of the three generators you are most likely to meet. In practice
+Docusaurus is what you find on product-facing
 developer sites, especially where the documentation needs interactive pieces or
 where the front-end team already lives in React.
 
-The judgment being tested is whether you can weigh it honestly. It is the
+The judgement that matters is weighing it honestly. It is the
 strongest of the four on versioning and translation, which are the two features
 teams most often discover they need after choosing a generator that makes them
 hard. It is also the heaviest, and its content is the least portable.
@@ -225,7 +225,7 @@ this is the generator that makes them ordinary rather than a project.
 | A React team maintains the site | Nobody on the team writes JavaScript |
 | It is a product site, not a library reference | It is a Python or C++ API reference |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with what it makes ordinary.** "Docusaurus is the one where versioned
 docs and internationalisation are features rather than projects, and where
@@ -237,7 +237,7 @@ concedes it with numbers and then says what it buys. If the project does not
 need versioning, i18n, or components, the weight buys nothing and MkDocs is the
 better choice.
 
-**The tradeoff to volunteer.** Content portability. Pages written against your
+**The tradeoff to name.** Content portability. Pages written against your
 component library cannot move to another generator without a rewrite, and that
 coupling grows quietly as the component set grows. It is usually the right bet
 for a product site with a long life and a front-end team, and it is a genuine
@@ -250,9 +250,9 @@ warn that component typos reach readers; that is true of the compiler and false
 of this build. Knowing the difference shows you tested the pipeline rather than
 read about the format.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A Docusaurus site with `onBrokenLinks` and `onBrokenAnchors`
+**The work product.** A Docusaurus site with `onBrokenLinks` and `onBrokenAnchors`
 set to throw explicitly, and a versioned docs directory if versioning is the
 reason you chose it.
 
@@ -265,7 +265,7 @@ reason you chose it.
 3. Check whether `onBrokenAnchors` is set on a site you maintain. Links are
    usually handled; anchors usually are not.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories uses Docusaurus, which the [demonstrated](../demonstrated.md) page
 records. What travels is the measured comparison: fails on a broken link by
 default where MkDocs needs `--strict`, catches a missing component where the

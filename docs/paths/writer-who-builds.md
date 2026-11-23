@@ -9,7 +9,7 @@ generated: true
 
 # The writer who builds
 
-**Who this is for.** The KnowledgeOps posting's own description of the person it wants. The half that is judgement and collaboration rather than tooling.
+**Who this is for.** A writer who also builds tooling, and needs the half of the work that is judgement and collaboration rather than tooling.
 
 The craft and the working relationships, which no pipeline substitutes for.
 
@@ -22,31 +22,31 @@ each step assumes the ones above it.
 
 `core` · practise it · 8h
 
-Strong technical writing and information architecture skills for developer documentation
+Writing developer documentation a reader can act on without asking you a question.
 
 ## 2. [Reading code to verify accuracy](../concepts/reading-code-to-verify.md)
 
 `core` · practise it · 5h
 
-Enough technical depth to read code and APIs, verify accuracy, and write working examples
+Reading code and APIs to verify a page is accurate, and writing examples that work.
 
 ## 3. [Treating docs, setup and samples as one product](../concepts/docs-as-product.md)
 
 `core` · practise it · 3h
 
-Treats setup, runnable samples, and docs as one product
+Treating setup, runnable samples and documentation as one product the developer experiences.
 
 ## 4. [A systems mindset](../concepts/systems-mindset.md)
 
 `core` · practise it · 2h
 
-A systems mindset: you fix the class of problem, not just the instance
+Fixing the class of problem rather than the single instance in front of you.
 
 ## 5. [Giving architecture owners implementation feedback](../concepts/implementation-feedback.md)
 
 `core` · practise it · 3h
 
-sharing implementation feedback (what works, breaks, and scales) to refine content models, information architecture, and AI-readiness patterns
+Telling architecture owners what works, breaks and scales, so content models and AI-readiness patterns improve.
 
 Builds on, earlier in this path: A systems mindset.
 
@@ -54,19 +54,19 @@ Builds on, earlier in this path: A systems mindset.
 
 `core` · practise it · 3h
 
-Turning documentation, standards, and tribal knowledge into tooling, templates, and self-service paths
+Getting tribal knowledge out of experts' heads and into tooling, templates and self-service paths.
 
 ## 7. [User stories as a documentation standard](../concepts/user-stories.md)
 
 `supporting` · read it · 2h
 
-Encode standards (user stories, release readiness, onboarding, security guidance) into templates
+Turning user stories into a documentation standard that templates can enforce.
 
 ## 8. [Release readiness for documentation](../concepts/release-readiness.md)
 
 `core` · practise it · 4h
 
-Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents
+Making documentation part of what "ready to release" means, enforced rather than remembered.
 
 Assumes, from outside this path: [Documentation CI](../concepts/documentation-ci.md).
 
@@ -74,7 +74,7 @@ Assumes, from outside this path: [Documentation CI](../concepts/documentation-ci
 
 `core` · practise it · 4h
 
-sound judgment about where AI can be trusted
+Deciding where AI output can be trusted and where a human must check it.
 
 Assumes, from outside this path: [Prompting for content work](../concepts/prompting.md).
 
@@ -82,6 +82,6 @@ Assumes, from outside this path: [Prompting for content work](../concepts/prompt
 
 `context` · practise it · 3h
 
-deliver Simulation Technology knowledge to developers, partners, internal teams, and the AI agents that increasingly sit between them and our documentation
+Delivering knowledge to developers, partners, internal teams and the AI agents between them.
 
 Assumes, from outside this path: [Metadata for navigation and retrieval](../concepts/metadata.md).

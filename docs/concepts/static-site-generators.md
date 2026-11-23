@@ -11,8 +11,7 @@ tags: [dac, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+> Choosing, configuring and living with the generator that turns your source into a site.
 
 **Prerequisites:** [Markdown and its dialects](markdown.md)
 
@@ -25,10 +24,10 @@ The tool that turns a tree of source files into a website. It decides your
 extension mechanism, and, least discussed and most important, **how much of
 your corpus's correctness the build is willing to check**.
 
-The KnowledgeOps posting names three by name. The useful skill is not having a favourite, it is
+Sphinx, MkDocs and Docusaurus are the three you will meet most. The useful skill is not having a favourite, it is
 being able to say what each one's build does and does not verify.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because the choice is close to irreversible and it is usually made by whoever
 set up the repository in week one.
@@ -180,7 +179,8 @@ checked. Plain Markdown links to generated anchors are not.
 | Anything else, and you want to be productive today | [MkDocs](mkdocs.md) |
 | You inherited one | Keep it, and close its gaps with gates |
 
-The last row is the most common real situation and the best interview answer.
+The last row is the most common real situation, and the best answer when
+someone asks which to use.
 
 ### What you will have to build yourself, by choice
 
@@ -196,7 +196,7 @@ Both still need [sample validation](code-sample-validation.md) and
 [cold-start testing](coldstart-testing.md). No generator checks whether your
 quickstart works.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with correctness, not syntax.** "The difference that matters is how much
 the build verifies. MkDocs in strict mode ships a dead heading anchor and an
@@ -210,7 +210,7 @@ generator constant and swapping a bare theme for Material and a dozen
 extensions cost twenty-seven times more than the generator choice did. Theme
 weight dominates.
 
-**The tradeoff to volunteer.** Sphinx's correctness comes from a doctree, and
+**The tradeoff to name.** Sphinx's correctness comes from a doctree, and
 the doctree is also its difficulty: `conf.py` is a Python program, errors are
 reported in its own vocabulary, and contributors meet directives before they
 meet their first page. MkDocs is dramatically easier to adopt, and you pay for
@@ -221,11 +221,11 @@ simply better is the tell.
 happen, so this reads like a high-stakes decision and mostly is not one: you
 will inherit a choice. The valuable skill is auditing what your generator's
 build does *not* check and closing those specific gaps, which is a concrete
-thing to have done and a much better interview answer than a preference.
+thing to have done and a much better answer than a preference.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A table like step 2's for the generator you actually use,
+**The work product.** A table like step 2's for the generator you actually use,
 with the gaps you closed and how.
 
 **Three things to do, in order:**
@@ -237,11 +237,11 @@ with the gaps you closed and how.
 3. Time your build with your theme and again with the default theme. The ratio
    tells you where your build minutes actually go.
 
-**What makes it credible rather than decorative.** This guide runs on MkDocs
+**How to tell it is working.** This guide runs on MkDocs
 with Material, and it has a hand-written anchor checker, a fence gate and a
 render gate precisely because the build does not cover them. Being able to say
-"I chose this generator and here are the three checks I added to compensate" is
-the answer that demonstrates judgment rather than preference.
+"we chose this generator and here are the three checks we added to compensate"
+is judgement rather than preference.
 
 ## Related
 

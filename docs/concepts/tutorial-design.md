@@ -11,8 +11,7 @@ tags: [gp, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Write and maintain reference documentation, tutorials, and sample walkthroughs that assume no prior context"
+> Designing tutorials that teach by having the reader build something real.
 
 **Prerequisites:** [Diátaxis](diataxis.md)
 
@@ -25,12 +24,12 @@ evidence that they learned rather than the point of the exercise. That is what
 separates it from a [quickstart](quickstarts.md), which optimises for the
 working thing and teaches as little as it can get away with.
 
-The Developer Relations posting's phrase is "assume no prior context", which is the hard constraint. The
+A tutorial has to "assume no prior context", which is the hard constraint. The
 design question this page is built on is narrower and measurable: **how long
 does your tutorial leave the reader with no way to tell whether it is
 working?**
 
-## Why the job asks for it
+## How this applies to your role
 
 Because a tutorial is where a reader decides whether the product is for them,
 and because its failures are structural rather than stylistic.
@@ -254,7 +253,7 @@ you are deliberately omitting it, and link where it is covered.
 The last row is irreplaceable. Blind-run length tells you where defects *can*
 hide; only a real learner tells you whether the explanation lands.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the measurement.** "The structural failure in tutorials is
 sequencing. An author who knows the architecture builds it in architectural
@@ -269,7 +268,7 @@ detour teaches; a quickstart optimises for working and teaches as little as it
 can. Merging them produces a page too long to be one and too thin to be the
 other.
 
-**The tradeoff to volunteer.** Keeping the blind run short costs you
+**The tradeoff to name.** Keeping the blind run short costs you
 refactoring inside the tutorial: the good version builds a working thing in
 step 1 and then rewrites part of it in step 2, which is more words and feels
 less elegant than building the final structure once. Some readers notice and
@@ -282,9 +281,9 @@ defects indefinitely: mine exited zero with three bugs in it. Every step that
 runs something should show what the reader will see, and the final step most of
 all.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A tutorial with output shown at every step, a cold-start
+**The work product.** A tutorial with output shown at every step, a cold-start
 test, and a measured blind-run length.
 
 **Three things to do, in order:**
@@ -296,7 +295,7 @@ test, and a measured blind-run length.
 3. Check that your final step produces output. Silent final steps are common
    and they make the whole tutorial unfalsifiable.
 
-**What makes it credible rather than decorative.** `docpack`'s
+**How to tell it is working.** `docpack`'s
 `docs/tutorials/getting-started.md` is the demonstration, recorded on the
 [demonstrated](../demonstrated.md) page: five steps, nine code blocks, one
 route, no choice offered before first success, with `scripts/coldstart.sh`

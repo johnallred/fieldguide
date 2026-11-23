@@ -11,8 +11,7 @@ tags: [ia, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "The role makes documentation discoverable and usable by both developers and AI assistants through search optimization and agentready content"
+> Making sure developers and AI assistants can both find and use the page they need.
 
 **Prerequisites:** [Metadata for navigation and retrieval](metadata.md)
 
@@ -27,10 +26,10 @@ The useful move is to stop treating search as a feature your generator
 provides and start treating the search index as an artifact you are
 responsible for. It is a file. You can open it.
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting pairs discoverability for developers with discoverability for AI
-assistants in one sentence, which is the right pairing: both are retrieval
+Documentation has to be discoverable by developers and by AI assistants, and
+those belong together: both are retrieval
 over the same corpus, and both fail for the same reasons.
 
 The reason this is engineering rather than a content concern is that the
@@ -203,7 +202,7 @@ competing with real content.
 | External search | Readers who start on a search engine | See [SEO for docs](seo-for-docs.md) and [GEO](geo.md) |
 | Assistant retrieval | Readers who ask a question | See [RAG](rag.md) and [chunking](chunking.md) |
 
-The Developer Relations posting's sentence covers the second and fourth. They share an index-quality
+Developers and AI assistants are the second and fourth. They share an index-quality
 problem and differ in what they do with the results.
 
 ### What makes a page findable on-site
@@ -232,7 +231,7 @@ Material supports prebuilding and compressing the index, and beyond roughly a
 thousand pages the answer is a hosted search service rather than a client-side
 one. Knowing the crossover exists, and where yours sits, is the point.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the index as an artifact.** "I treat the search index as something
 I am responsible for rather than a feature the generator provides. It is a JSON
@@ -246,7 +245,7 @@ content. The fix gave one field three readers, the page body, the search index
 and the meta description, and the CI gate reads the built output because a
 hook's unit tests pass whether or not it is wired in.
 
-**The tradeoff to volunteer.** Putting the summary in the body means every page
+**The tradeoff to name.** Putting the summary in the body means every page
 opens with a sentence that partly repeats its title, which is a small cost in
 polish for a large gain in findability. And it is a client-side index, so
 everything that improves matching also grows a file every searching visitor
@@ -259,9 +258,9 @@ is a bad search result, and the heading-level work that an accessibility audit
 produces improves search at the same time. Those are usually treated as
 unrelated chores.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** An audit of your own index with numbers: size, granularity,
+**The work product.** An audit of your own index with numbers: size, granularity,
 and one concrete thing you found missing and fixed.
 
 **Three things to do, in order:**
@@ -273,7 +272,7 @@ and one concrete thing you found missing and fixed.
 3. If you fix it with a hook, add the CI assertion from step 6. Otherwise one
    `mkdocs.yml` edit silently reverts the whole thing.
 
-**What makes it credible rather than decorative.** `docpack` exposes its corpus
+**How to tell it is working.** `docpack` exposes its corpus
 through an MCP server with a BM25 index, recorded as a partial demonstration of
 this concept, and its retrieval evaluation caught `summary` being unindexed
 there too. The same defect existed in this guide, which is the part worth telling. I

@@ -11,8 +11,7 @@ tags: [qa, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Automate the content lifecycle with LLMs and scripting, from drafting and updating to auditing, with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters"
+> Checking automatically that content is still current, and routing what is not to a human.
 
 **Prerequisites:** [Content lifecycle](content-lifecycle.md), [Documentation CI](documentation-ci.md)
 
@@ -23,10 +22,10 @@ naive implementation flags pages older than some number of days. The useful one
 compares a page against **the thing it documents**, because age is not
 staleness and the two are only loosely correlated.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting groups freshness with code accuracy and terminology drift as the three
-things content auditing should cover. They share a shape: correct when written,
+Freshness belongs with code accuracy and terminology drift as the three things
+content auditing should cover. They share a shape: correct when written,
 falsified by something that happened elsewhere.
 
 Freshness is the hardest of the three to measure honestly, which is why most
@@ -202,7 +201,7 @@ stopped being true" fails builds for authors who cannot act on them, and the
 check gets switched off. Run it on a schedule, open issues, and track how long
 the queue is.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the divergence.** "Age is not staleness. A page edited yesterday
 for a typo is no more accurate, and a three-year-old page about something that
@@ -216,7 +215,7 @@ depends on a habit. Say that a `reviewed:` field nobody maintains decays into
 the weaker check, and that you would rather measure the decay than assume it
 away.
 
-**The tradeoff to volunteer.** Subject tracking is coarse. A page flagged
+**The tradeoff to name.** Subject tracking is coarse. A page flagged
 because its source file changed may say nothing about the part that changed,
 which is the `overview.md` case above. Narrowing the subject to a symbol costs
 parsing and a convention nobody will follow perfectly. Since the output is a
@@ -228,9 +227,9 @@ because readers draw a conclusion about accuracy from a fact about file
 modification. Either publish a review date that means what readers think it
 means, or publish nothing and keep the signal internal.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A scheduled job that produces a ranked review queue rather
+**The work product.** A scheduled job that produces a ranked review queue rather
 than a pass or fail, with a tracked subject per page.
 
 **Three things to do, in order:**
@@ -244,13 +243,13 @@ than a pass or fail, with a tracked subject per page.
    direction before the second measurement. A queue you expected to grow and
    did not is as useful a finding as the trend you went looking for.
 
-**What makes it credible rather than decorative.** `docpack` implements the
+**How to tell it is working.** `docpack` implements the
 weak version honestly and says so: `PageMeta.is_stale` fires at 365 days and is
 surfaced as a warning and as an `## Optional` section in `llms.txt`. That is
 recorded as a **partial** demonstration rather than written up as a complete
 one, because a clock-based check is exactly what this page argues against.
-Being able to name the weakness of your own implementation is worth more in an
-interview than a stronger claim nobody can verify.
+Naming the weakness of your own implementation is worth more to the people who
+rely on it than a stronger claim nobody can verify.
 
 ## Related
 

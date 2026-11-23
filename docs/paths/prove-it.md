@@ -1,5 +1,5 @@
 ---
-title: Prove it in a weekend
+title: A working result in a weekend
 summary: The shortest path through the concepts that produce something reviewable.
 diataxis: placeholder
 audience: new-user
@@ -7,9 +7,9 @@ generated: true
 ---
 
 
-# Prove it in a weekend
+# A working result in a weekend
 
-**Who this is for.** Someone who needs a portfolio artifact before Monday.
+**Who this is for.** Someone who needs to ship something their team can review by Monday.
 
 The shortest path through the concepts that produce something reviewable.
 
@@ -22,13 +22,13 @@ each step assumes the ones above it.
 
 `core` · read it · 2h
 
-Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing
+Running documentation through Git, CI builds, linting, link and sample checks, and automated publishing.
 
 ## 2. [Diátaxis](../concepts/diataxis.md)
 
 `core` · read it · 2h
 
-The dominant framework for documentation structure. Neither posting names it; both describe the problem it solves.
+Deciding whether a page is a tutorial, a how-to, reference or explanation, and keeping it to one of them.
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
@@ -36,7 +36,7 @@ Assumes, from outside this path: [Information architecture](../concepts/informat
 
 `core` · practise it · 4h
 
-content modeling, taxonomy, and metadata
+Defining the types of content your team writes and the fields each one must carry.
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
@@ -44,7 +44,7 @@ Assumes, from outside this path: [Information architecture](../concepts/informat
 
 `core` · practise it · 4h
 
-static site generators (Sphinx, MkDocs, Docusaurus, or similar)
+Building and maintaining a documentation site on MkDocs with the Material theme.
 
 Assumes, from outside this path: [Choosing a static site generator](../concepts/static-site-generators.md).
 
@@ -52,7 +52,7 @@ Assumes, from outside this path: [Choosing a static site generator](../concepts/
 
 `core` · practise it · 4h
 
-documentation CI
+Running automated checks on every documentation change before it merges.
 
 Builds on, earlier in this path: Docs-as-code.
 
@@ -62,7 +62,7 @@ Assumes, from outside this path: [Git authoring workflows for writers](../concep
 
 `core` · read it · 2h
 
-link checking
+Catching broken links before readers do, in CI and on the published site.
 
 Builds on, earlier in this path: Docs-as-code.
 
@@ -70,7 +70,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 `core` · practise it · 3h
 
-Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring
+Enforcing your style guide automatically with Vale, so reviews argue with a rule rather than a person.
 
 Assumes, from outside this path: [Style guides and terminology management](../concepts/style-guide.md).
 
@@ -78,7 +78,7 @@ Assumes, from outside this path: [Style guides and terminology management](../co
 
 `core` · build something · 5h
 
-link and code-sample validation
+Proving every code sample in the docs still runs and still produces what the page says.
 
 Builds on, earlier in this path: Docs-as-code.
 
@@ -86,7 +86,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 `core` · build something · 6h
 
-Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring
+Building a harness that runs documentation as tests, so broken pages fail the build.
 
 Builds on, earlier in this path: Code-sample validation.
 
@@ -94,7 +94,7 @@ Builds on, earlier in this path: Code-sample validation.
 
 `core` · build something · 5h
 
-coldstart testing of quickstarts
+Testing quickstarts from a clean environment, the way a new developer meets them.
 
 Builds on, earlier in this path: Code-sample validation.
 
@@ -104,7 +104,7 @@ Assumes, from outside this path: [Reproducible environments](../concepts/reprodu
 
 `core` · read it · 2h
 
-including llms.txt, MCP-accessible sources, agent skills and context kits, and evaluation sets for answer accuracy
+Publishing machine-readable entry points to your docs, such as llms.txt, for AI tools to consume.
 
 Assumes, from outside this path: [Agent-ready content](../concepts/agent-ready-content.md).
 
@@ -112,7 +112,7 @@ Assumes, from outside this path: [Agent-ready content](../concepts/agent-ready-c
 
 `core` · build something · 5h
 
-structure and package content for RAG, internal assistants, and agentic workflows
+Splitting content into pieces a RAG system, internal assistant or agent can retrieve on their own.
 
 Assumes, from outside this path: [Agent-ready content](../concepts/agent-ready-content.md).
 
@@ -120,7 +120,7 @@ Assumes, from outside this path: [Agent-ready content](../concepts/agent-ready-c
 
 `core` · build something · 5h
 
-Ways to stand out: experience building RAG pipelines, AI assistants, MCP servers
+Exposing documentation and tools to AI assistants through Model Context Protocol servers.
 
 Assumes, from outside this path: [Agent-ready content](../concepts/agent-ready-content.md).
 
@@ -128,7 +128,7 @@ Assumes, from outside this path: [Agent-ready content](../concepts/agent-ready-c
 
 `core` · build something · 6h
 
-evaluation sets for answer accuracy
+Building question sets that measure whether retrieval finds the right content.
 
 Assumes, from outside this path: [RAG pipelines](../concepts/rag.md).
 
@@ -136,4 +136,4 @@ Assumes, from outside this path: [RAG pipelines](../concepts/rag.md).
 
 `supporting` · read it · 4h
 
-Open source contributions or published work on docs-as-code, AI-assisted documentation, or knowledge engineering
+Publishing your documentation tooling and work openly, and doing it safely.

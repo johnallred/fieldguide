@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 3 · 6h
 
-> Automate the content lifecycle with LLMs and scripting, from drafting and updating to auditing, with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters
+> Using LLMs to draft, update and audit content, with human review where judgement matters.
 
 
 **Prerequisites:** [Prompting for content work](prompting.md), [Content lifecycle and governance](content-lifecycle.md)
@@ -19,15 +19,14 @@ tags: [ai, core]
 ## What it is
 
 Using models as one stage in the machinery that keeps a corpus current:
-proposing drafts, flagging what has gone stale, auditing for drift. The quote
-above is the most specific bullet in either posting, and it names its own
-constraint at the end: **human review where judgment matters.**
+proposing drafts, flagging what has gone stale, auditing for drift. The work has a
+built-in constraint, and it is the most important part: **human review where judgment matters.**
 
 The work is deciding where that is.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting's bullet is a job description in one sentence. It names three activities
+The work fits in one sentence. It has three activities
 (drafting, updating, auditing), three checks (freshness, code accuracy,
 terminology drift), and one constraint (human review where judgement matters).
 Every other page in this category is a piece of it.
@@ -121,10 +120,10 @@ cat > lifecycle.py <<'PY'
 """Audit, update and draft stages for a documentation corpus.
 
 Every stage returns PROPOSALS. Nothing writes to the corpus, because the
-constraint named in the posting is "human review where judgment matters" and
+constraint on this work is "human review where judgment matters" and
 a stage that applies its own findings has removed the place to put a human.
 
-The three checks the KnowledgeOps posting names map onto three different mechanisms, and only
+The three standard checks map onto three different mechanisms, and only
 one of them should involve a model at all:
 
   FRESHNESS         a date comparison. No model. Deterministic
@@ -417,7 +416,7 @@ a diff a reviewer might approve.**
 | Deciding what to retire | Judgement | **Never** |
 | Confirming a page is accurate | Needs the implementation | **Never** |
 
-Three of the four checks the KnowledgeOps posting names involve no model at all. That is the most
+Three of the four checks involve no model at all. That is the most
 useful thing on this page: **"automate the content lifecycle with LLMs" is
 mostly automation, with an LLM at two specific points.** A pipeline that uses a
 model for the freshness check is slower, more expensive and less reliable than
@@ -488,9 +487,9 @@ means you built a pipeline that generates work faster than the team absorbs it,
 which is a worse outcome than not having one, because the corpus now also looks
 audited.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with how little of it needs a
+**How to explain it.** Lead with how little of it needs a
 model, then with the capacity constraint. "Three of the four checks in that
 bullet are not model work: freshness is a date comparison, code accuracy is
 claims against ground truth generated in CI, terminology drift is a
@@ -508,7 +507,7 @@ named, as a diff, applied to nothing. An open instruction to improve a page has
 no bound on what it can change, and that is a design choice rather than a
 prompting problem.
 
-**The tradeoff to volunteer.** This pipeline makes the corpus more consistent and
+**The tradeoff to name.** This pipeline makes the corpus more consistent and
 can make it blander. Batched terminology fixes are genuinely good; batched
 anything-else starts flattening the voice of pages that had one, and the
 reviewer approving a batch of nine is not reading nine pages. There is also a
@@ -527,9 +526,9 @@ treadmill. That is [the systems mindset](systems-mindset.md) applied to your own
 automation, and it is the thing that distinguishes an operator from someone who
 set up a cron job.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A pipeline that proposes and never applies, with a routing
+**The work product.** A pipeline that proposes and never applies, with a routing
 step that batches and rations, and queue-depth numbers over a few weeks.
 
 **Three things to do, in order:**
@@ -543,11 +542,10 @@ step that batches and rations, and queue-depth numbers over a few weeks.
    grows while acceptance is high, you have the capacity problem rather than a
    precision problem, and that diagnosis is the whole value.
 
-**What makes it credible rather than decorative.** "We use AI to maintain our docs" is a slogan. A
-pipeline where three of four checks are deterministic, drafting is bounded to
-located findings, mechanical findings batch into one approval, and queue depth
-is a tracked metric demonstrates that you have run one long enough for the
-review bottleneck to bite.
+**How to tell it is working.** "We use AI to maintain our docs" is a slogan. The
+working version is a pipeline where three of four checks are deterministic,
+drafting is bounded to located findings, mechanical findings batch into one
+approval, and queue depth is a tracked metric that stays flat or falls.
 
 ### How this would be demonstrated elsewhere
 

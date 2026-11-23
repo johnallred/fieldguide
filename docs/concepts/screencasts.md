@@ -11,8 +11,7 @@ tags: [edu, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    Neither posting mentions video. A common secondary deliverable in developer-relations roles.
+> Producing short videos that show a task, and keeping them accurate as the product changes.
 
 **Prerequisites:** [Designing tutorials](tutorial-design.md)
 
@@ -29,7 +28,7 @@ of those is a property the rest of a docs-as-code toolchain depends on, so a
 screencast sits outside every mechanism described elsewhere here, which is the
 reason this concept is tier `context` rather than core.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because some things genuinely do not survive being written down, and because
 people ask for video regardless.
@@ -233,7 +232,7 @@ the page is what people arrive at and the video is what some of them play.
 The third row is the one worth saying out loud in a planning meeting. Video
 does not fix unclear material, it embeds it in a format you cannot edit.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the asymmetry.** "A screencast script is a code sample with
 timestamps, so I test it in CI like any other sample. What that buys is not a
@@ -255,7 +254,7 @@ no way to fix one line. Screencasts are maintainable only at a size you are
 willing to re-record, that number is small, and deciding it before you start is
 what separates a useful handful from a back catalogue nobody dares audit.
 
-**The tradeoff to volunteer.** I am sceptical of video and it does win
+**The tradeoff to name.** I am sceptical of video and it does win
 sometimes: an unfamiliar interface where knowing where to look is the hard
 part, or a workflow whose shape does not survive prose. For those, thirty
 seconds beats a page. What I would not do is answer "the docs are confusing"
@@ -267,9 +266,9 @@ answers live in recordings is one an assistant cannot answer from, and since
 that is increasingly how people reach documentation, those answers have
 effectively stopped existing. The companion text is no longer a courtesy.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A script format with timestamps, expected output and
+**The work product.** A script format with timestamps, expected output and
 narration, plus a CI job that runs every beat and reports drift by timestamp.
 
 **Three things to do, in order:**
@@ -284,7 +283,7 @@ narration, plus a CI job that runs every beat and reports drift by timestamp.
    re-record all of them for a three-character output change. The number you
    would re-record is the number you should maintain.
 
-**What makes it credible rather than decorative.** The script checker above was
+**How to tell it is working.** The script checker above was
 executed, caught a beat that was never true, passed cleanly after the flag was
 implemented, and caught the upstream output change by timestamp; the corpus
 figures of 727 blocks and 9,982 lines come from this guide's own pages. What

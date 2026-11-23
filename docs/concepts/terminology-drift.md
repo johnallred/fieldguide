@@ -11,8 +11,7 @@ tags: [qa, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Automate the content lifecycle with LLMs and scripting, from drafting and updating to auditing, with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters"
+> Detecting when the words in your docs drift away from the words in the product.
 
 **Prerequisites:** [Taxonomy](taxonomy.md), [Prose linting with Vale](prose-linting.md)
 
@@ -28,10 +27,10 @@ The distinction matters because the two produce different actions. A linter
 finding is a fix. A drift measurement is a decision: rename the thing, update
 the glossary, or accept that the term you chose lost.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names it alongside freshness and code accuracy as one of three things
-the content lifecycle should be audited for. All three share a shape: the
+It sits alongside freshness and code accuracy as one of three things the
+content lifecycle should be audited for. All three share a shape: the
 individual page was correct when written, and the world moved.
 
 Terminology drift is the one that damages trust fastest, because it is
@@ -263,7 +262,7 @@ The third one is the most common in developer documentation. `access token` in
 prose and `ACCESS_TOKEN` in a sample are both correct, and a checker that does
 not separate prose vocabulary from code identifiers will drown you.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with retrieval, not consistency**, because it is the stronger argument
 and the one that connects to the rest of the job. "Three names for one concept
@@ -275,7 +274,7 @@ answer involves usage data rather than preference: what the product calls it in
 the UI, what support tickets call it, what the search logs show people typing.
 A glossary that disagrees with all three will lose.
 
-**The tradeoff to volunteer.** A drift report is only as good as its glossary,
+**The tradeoff to name.** A drift report is only as good as its glossary,
 and maintaining a glossary is real ongoing work that nobody is assigned. If you
 automate the measurement without owning the glossary, you get a dashboard
 measuring a stale list. Say that the glossary is the artifact and the script is
@@ -287,9 +286,9 @@ deprecated forms. A conformance number produced without masking is not
 conservative, it is biased toward good news, which is the worst property a
 quality metric can have.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A glossary in version control, a script that reports a rate
+**The work product.** A glossary in version control, a script that reports a rate
 per term and a ranked list of pages, and a before-and-after number.
 
 **Three things to do, in order:**
@@ -302,7 +301,7 @@ per term and a ranked list of pages, and a before-and-after number.
 3. Pick the term with the lowest rate and decide, in writing, whether to fix
    the corpus or change the glossary. That decision is the deliverable.
 
-**What makes it credible rather than decorative.** A rate measured twice, with
+**How to tell it is working.** A rate measured twice, with
 work in between. One measurement is a complaint; two measurements and a
 glossary commit are a managed quantity. Nothing in this guide's own
 repositories demonstrates this yet, which is recorded honestly on the

@@ -11,7 +11,7 @@ tags: [craft, core]
 
 `core` · difficulty 2 · 4h
 
-> Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents
+> Making documentation part of what "ready to release" means, enforced rather than remembered.
 
 
 **Prerequisites:** [Documentation CI](documentation-ci.md)
@@ -22,17 +22,17 @@ Making documentation part of the definition of done for a release, enforced by
 something other than goodwill. The output is a check, a template field, or a
 gate in the release pipeline, not a policy document.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names it inside a list of standards to encode, and the phrasing is the
-important part: "into templates, validators, and guided workflows **rather than
-static documents**". They are explicitly ruling out the usual artifact, which is
+Release readiness is one of the standards worth encoding "into templates,
+validators, and guided workflows **rather than static documents**". That
+phrasing rules out the usual artifact, which is
 a wiki page titled "Definition of Done" that everyone agreed to in a meeting two
 years ago.
 
-The outcome they attach to it is "so every release ships documented,
-discoverable, and supportable". The Developer Relations posting's version: "so each new capability ships
-with tested documentation".
+The outcome is that every release ships documented, discoverable and
+supportable, or, put the developer-relations way, that each new capability
+ships with tested documentation.
 
 On a Tuesday this is the recurring unpleasant conversation. A capability shipped
 on Thursday. The release notes mention it. There is no page, the sample does not
@@ -278,10 +278,10 @@ The third row is the real residual risk, and it is why
 [claim checking](working-with-engineers.md) are not optional complements to
 this.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the escape hatch, because it
-proves you have shipped this rather than proposed it. "I added a `docs:`
+**How to explain it.** Lead with the escape hatch, because it
+is what separates a gate that ships from one that only gets proposed. "I added a `docs:`
 annotation to changelog entries and a check that fails the release branch if a
 `feat:` entry has no page declaring that version. It takes `n/a` for changes
 with no user-visible surface, which is what keeps engineers from disabling it,
@@ -292,11 +292,11 @@ the release instead of in a ticket after it."
 question the whole concept lives or dies on. Have a real answer. The useful shape
 is: it blocked, someone asked for an override, and the override was granted with
 the gap recorded. A gate that has never been overridden is either very new or
-not actually on the critical path. Saying that you granted an override, and that
-the record of it is what later justified headcount, is a much more credible story
-than a gate nobody ever fought.
+not actually on the critical path. An override that was granted, and whose record
+later justified headcount, is a much better outcome than a gate nobody ever
+fought.
 
-**The tradeoff to volunteer.** This gate moves documentation work from after the
+**The tradeoff to name.** This gate moves documentation work from after the
 release to before it, which means it sometimes delays releases, and the cost
 lands on engineers rather than on you. That is a real transfer and it is why the
 gate needs an owner with authority behind it. There is a version of this that is
@@ -313,9 +313,9 @@ Framing it as a cost-of-delay argument rather than a quality argument is what
 moves release managers, because quality arguments lose to ship dates and cost
 arguments do not.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** The gate plus the escape hatch, in a repository, with at least
+**The work product.** The gate plus the escape hatch, in a repository, with at least
 one commit where it failed.
 
 **Three things to do, in order:**
@@ -333,11 +333,10 @@ one commit where it failed.
    releases and keep the numbers. A gate proposed with two months of data behind
    it is a different conversation from a gate proposed on principle.
 
-**What makes it credible rather than decorative.** A policy document proves nothing, and most people in
-this field have written one. A check that reads the changelog, takes `n/a`, and
-has a commit where it blocked a release is specific, unfakeable, and
-demonstrates that you have had the political conversation rather than theorised
-about it.
+**How to tell it is working.** A policy document changes nothing, and most teams have
+one. A check that reads the changelog, takes `n/a`, and has a commit where it
+blocked a release is specific, and it means the political conversation actually
+happened.
 
 This repository has the mechanism without the politics, and the distinction is
 worth stating plainly rather than blurring. `fieldguide release-check` is a
@@ -350,10 +349,10 @@ imposed on yourself is a habit, and a gate somebody else agreed to is a
 negotiation; the second is the thing this page is actually about, and no
 amount of code in a solo repository produces it.
 
-So the honest version in an interview is: here is the mechanism, here is the
-report-only mode that exists for the conversation, and the conversation itself
-is the part I would be having with your release engineers rather than showing
-you from a repository of my own.
+So the honest version, when you take it to your team, is: here is the
+mechanism, here is the report-only mode that exists for the conversation, and
+the conversation itself is the part that happens with your release engineers,
+not in a repository.
 
 ## Related
 

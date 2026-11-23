@@ -11,8 +11,7 @@ tags: [dac, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Hands on experience with docs-as-code workflows and documentation CI, including Git, Markdown or MDX, and doc build pipelines"
+> Authoring pages that mix Markdown with components, inside a docs-as-code workflow with CI.
 
 **Prerequisites:** [Markdown and its dialects](markdown.md)
 
@@ -28,14 +27,14 @@ The fact that matters more than the syntax: **MDX does not compile to HTML. It
 compiles to a JavaScript module.** Everything else on this page follows from
 that, including the one genuinely dangerous property.
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting names it directly, as an alternative to Markdown. In practice that means
-their documentation estate includes a React-based generator, almost certainly
-[Docusaurus](docusaurus.md), and you would be maintaining pages that are
-partly code.
+You meet it as an alternative to Markdown. In practice that means the
+documentation estate includes a React-based generator, almost certainly
+[Docusaurus](docusaurus.md), and you are maintaining pages that are partly
+code.
 
-The judgment being tested is whether you understand the costs. MDX is
+The judgement that matters is understanding the costs. MDX is
 genuinely better for a developer-facing site that needs interactive examples,
 and it moves a class of error from your build into your reader's browser. An
 engineer who has only read about it tends to describe the first half.
@@ -230,7 +229,7 @@ above rather than inherited from a migration guide.
 | A component replaces copy-pasted boilerplate on many pages | Pages are mostly unique |
 | Your audience is front-end developers | Your audience is anyone else |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the compilation target.** "MDX compiles to a JavaScript module
 rather than to HTML, and that is the root of everything. It buys components in
@@ -246,7 +245,7 @@ generator: if it pre-renders, the build *is* your render check, and if it does
 not, you need a crawl of the output or a component-reference check against your
 library.
 
-**The tradeoff to volunteer.** Components reduce duplication and increase
+**The tradeoff to name.** Components reduce duplication and increase
 coupling. Every page using `<Tabs>` is now tied to your component library, so
 a refactor of that component is a change to hundreds of pages, and the pages
 cannot move to another generator without a rewrite. On a corpus you expect to
@@ -264,10 +263,9 @@ both are worse inputs to [chunking](chunking.md) than plain Markdown. If the
 same organisation is asking for both MDX and agent-ready content, that tension
 is worth naming out loud, because it is real and most people miss it.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** Less a repository than a demonstrated understanding of the
-failure distribution. If you do build something, the valuable piece is the
+**The work product.** Less a repository than a written understanding of the failure distribution. If you do build something, the valuable piece is the
 component-reference check.
 
 **Three things to do, in order:**
@@ -279,7 +277,7 @@ component-reference check.
 3. On any MDX site you can reach, find out whether CI renders the pages or only
    compiles them. If it only compiles, undefined components reach readers.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories uses MDX, which the [demonstrated](../demonstrated.md) page
 records. What travels is the pair of measurements and the correction between them. The
 compiler emits `if (!Note) _missingMdxReference("Note", true)`, a runtime

@@ -11,8 +11,7 @@ tags: [meas, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "repeat questions"
+> Finding the questions people keep asking, and fixing the content that keeps causing them.
 
 **Prerequisites:** [Support deflection](support-deflection.md)
 
@@ -30,12 +29,12 @@ The reason it earns a concept of its own, next to
 the volume is not. Deflection tells you how much load the documentation could
 carry. A repeat tells you **which sentence to write**.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because a repeat question is the cheapest high-quality signal in this entire
 field, and almost nobody acts on it.
 
-The KnowledgeOps posting lists it among the things to measure, alongside deflection and answer
+It belongs among the things to measure, alongside deflection and answer
 quality, and it is the one that most directly converts into an edit. The
 failure mode is organisational rather than technical: repeats are visible to
 support, the fix belongs to documentation, and the two have separate queues. So
@@ -224,7 +223,7 @@ fails the same query the same way, with more confidence.
 | Needs weighting | Yes, badly | Less: a repeat is self-weighting |
 | Output | A percentage | An edit |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the reframing.** "A question asked forty times is a defect report
 about the documentation, not a support workload. Deflection tells me how much
@@ -251,15 +250,15 @@ failures are not ranking failures, and no reranker or embedding upgrade will
 touch them. That is a ten-point gap that looks like a business case for a
 reranker, and half of it was a synonym.
 
-**The tradeoff to volunteer.** Repeat analysis without frequency data finds
+**The tradeoff to name.** Repeat analysis without frequency data finds
 candidates and cannot rank them. My twenty cases are unweighted, so a question
 asked four hundred times counts the same as one asked twice, and the fix order
 I would derive is therefore arbitrary. Search logs or a ticket queue supply the
 weights, and until they exist this is a method rather than a prioritisation.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A vocabulary-coverage measurement over your own golden set or
+**The work product.** A vocabulary-coverage measurement over your own golden set or
 query log, and one page edited to carry a reader's word beside your own.
 
 **Three things to do, in order:**
@@ -274,7 +273,7 @@ query log, and one page edited to carry a reader's word beside your own.
    term, then re-run your retrieval scores. It is the highest return per
    keystroke available in this job.
 
-**What makes it credible rather than decorative.** Every figure above was
+**How to tell it is working.** Every figure above was
 executed against `docpack`: the plateau, the 1,159-term vocabulary, the two
 absent words, the two-sentence fix, and the before-and-after on both the
 retrieval scores and the vocabulary metric, all reproducible from the

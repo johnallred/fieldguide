@@ -22,7 +22,7 @@ missing demonstrations and applies equally here.
   dom     Domain context                0/6
 ```
 
-Measurement and automation are the two categories the KnowledgeOps posting leans on
+Measurement and automation are the two categories KnowledgeOps work leans on
 hardest, "measurable reductions in support load" and "Python proficiency to
 automate content tasks, transform data, and integrate with APIs", and a reader
 who arrives wanting exactly that has no curated route through either.
@@ -197,7 +197,7 @@ eight per cent of the guide's genuinely shortest path, not six per cent of the
 one the page had picked. A stale superlative that makes your own argument
 weaker when fixed is the kind worth looking for.
 
-**The general lesson**, which is the one to tell an interviewer. A page that
+**The general lesson**, which is the one to tell a team. A page that
 quotes output makes two claims: that the code does this, and that this is what
 the code does. Committing the code is the cheap half. Asserting that the page
 and the code still agree is the half that finds defects, and it found six.
@@ -714,7 +714,7 @@ refuses), **triaged** (a gap, which closes when somebody does the work) and
 **ceilinged** (demonstrated as far as it can be here).
 
 A gap and a ceiling look identical in a coverage percentage and are completely
-different things to say to an interviewer. "Nobody has built it yet" invites
+different things to report. "Nobody has built it yet" invites
 the obvious follow-up. "The corpus-side half is built, measured and gated, and
 the reader-side half needs readers I do not have" is a statement about the
 limits of the evidence, which is more defensible and considerably harder to
@@ -857,7 +857,7 @@ says both halves, including which one was missing.
 checks that every entry names a real concept, a known project and one of two
 extents, and never checked the one field a reader follows. Eighty-four entries
 name a file, every path was typed by hand across this whole backlog, and a
-rename would have left the honesty centrepiece of the portfolio pointing at
+rename would have left the honesty centrepiece of the guide pointing at
 nothing with every gate green. Now checked for the local half, and skipped
 rather than guessed for the sibling, because saying which half was verified is
 the entire point of the register.

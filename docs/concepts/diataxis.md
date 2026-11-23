@@ -11,8 +11,7 @@ tags: [ia, core]
 
 `core` · difficulty 1 · 2h
 
-!!! note "Not a quotation (adjacent)"
-    The dominant framework for documentation structure. Neither posting names it; both describe the problem it solves.
+> Deciding whether a page is a tutorial, a how-to, reference or explanation, and keeping it to one of them.
 
 **Prerequisites:** [Information architecture](information-architecture.md)
 
@@ -29,17 +28,16 @@ It is attributed to Daniele Procida and has been adopted as the organising
 framework by Canonical, Django, Gatsby, Cloudflare and a long list of others.
 It is the closest thing this field has to a standard.
 
-## Why the job asks for it
+## How this applies to your role
 
-Neither posting says "Diátaxis", which is why this concept is tagged
-`adjacent`. Both describe the problem it solves, repeatedly. The Developer Relations posting asks for
-golden paths, curriculum, tutorials, sample walkthroughs and reference
-documentation as *separate deliverables*, which is a Diátaxis decomposition
-written out without the name. The KnowledgeOps posting asks for content modeling and for content
-structured for machine retrieval, and the type of a page is the single most
-useful field in that model.
+Few teams say "Diátaxis", but nearly all of them describe the problem it
+solves. Developer-education work produces golden paths, curriculum, tutorials,
+sample walkthroughs and reference documentation as *separate deliverables*,
+which is a Diátaxis decomposition written out without the name. KnowledgeOps
+work models content and structures it for machine retrieval, and the type of a
+page is the single most useful field in that model.
 
-The reason it earns `core` status despite being unquoted is that it answers the
+The reason it earns `core` status is that it answers the
 first question anyone asks when they open an unfamiliar corpus: **what is a
 page?** Without an answer, every page drifts toward being the same page: a bit
 of motivation, some steps, a table of options, and a paragraph about design
@@ -264,9 +262,9 @@ Worth knowing, because being asked is likely:
 - **API reference generated from source.** Reference, but the type is determined by the generator rather than a choice.
 - **Landing and orientation pages.** Navigation, not content.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Name the four, then immediately give
+**How to explain it.** Name the four, then immediately give
 the discriminating test rather than definitions, because the definitions are
 googleable and the test is what you use. "The useful question is what state the
 reader is in: studying or working, and do they want steps or facts. That gives
@@ -298,7 +296,7 @@ model has no slot for. Anyone who tells you the four types partition all
 documentation cleanly has not migrated a large corpus.
 
 **One sharper point.** The strongest modern argument for Diátaxis is not
-navigational at all, and it is the one most candidates miss: type separation is
+navigational at all, and it is the one most people miss: type separation is
 what makes retrieval filterable. If every page declares one of four types, a
 retrieval system can be told to return only how-to content for a "how do I"
 question, which is a hard constraint rather than a hope that the embedding
@@ -306,37 +304,37 @@ noticed the genre. Diátaxis was proposed years before anyone was packaging docs
 for language models, and it turned out to be the most useful metadata field in
 the corpus. That is worth saying out loud.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A corpus organised by type, where the type is a declared
+**The work product.** A corpus organised by type, where the type is a declared
 field and not only a folder name, and something that uses the field.
 
 **Three things to do, in order:**
 
 1. **Run the golden path.** Keep both files. `before.md` next to the split
-   tree is a two-minute demonstration in an interview, and showing the before
-   is what makes the after land.
+   tree is a two-minute explanation for your team, and showing the before is
+   what makes the after land.
 2. **Audit a real corpus by type.** Take a project's documentation, classify
    thirty pages into the four types, and count how many are more than one.
    The number is usually between a third and a half, and reporting it with the
-   examples is a genuinely useful piece of analysis. Do it on your own project's
-   docs first; doing it on an employer's corpus is a strong interview artifact
-   but check whether you can share it.
+   examples is a genuinely useful piece of analysis. Do it on your own team's docs
+   first, and share the count with whoever owns the navigation.
 3. **Make the type do work.** Add it as a required field, validate it in
    [documentation CI](documentation-ci.md), and then use it for something: a
    faceted navigation, a filter in your [retrieval](rag.md) layer, or grouping
    in [llms.txt](llms-txt.md). A type field nothing reads is a convention; a
    type field that filters a search is architecture.
 
-**What makes it credible rather than decorative.** Everyone in this field can name the four types.
-The signal is the migration: having taken a real page apart, and being able to
-say which boundary was genuinely ambiguous and how you decided. Interviewers in
-this category have all fought with the troubleshooting question. Having an
-opinion about it marks you as someone who has done the work.
+**How to tell it is working.** Everyone in this field can name the four types.
+The sign it is working is the migration: real pages taken apart, a type field
+that something reads, and a recorded decision about which boundary was
+genuinely ambiguous and how you settled it. Everyone who does this work has
+fought with the troubleshooting question; a team with a written answer to it
+has done the work.
 
 ## Related
 
 - [Information architecture](information-architecture.md), the layer this sits inside
 - [Content models](content-model.md), how to make the type a validated field
 - [Designing tutorials](tutorial-design.md), the hardest of the four to write well
-- [Golden paths](golden-paths.md), what the Developer Relations posting calls the tutorial done properly
+- [Golden paths](golden-paths.md), the tutorial done properly

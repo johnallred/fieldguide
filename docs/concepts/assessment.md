@@ -11,8 +11,7 @@ tags: [edu, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    Not named in either posting. The counterpart to cold-start testing: how you find out the curriculum worked.
+> Checking that a learner actually learned: how you know the curriculum worked.
 
 **Prerequisites:** [Instructional design for developers](instructional-design.md)
 
@@ -30,7 +29,7 @@ Assessment tells you whether the *reader* does. A corpus can pass the first
 perfectly and hold no evidence at all about the second, which is the normal
 state and worth saying out loud rather than disguising.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because every claim a documentation team makes about outcomes is an assessment
 claim wearing other clothes.
@@ -56,7 +55,7 @@ measurement is wrong twice before it is right.
 **Step 1: find the instrument**
 
 ```python
-proof = text.partition("## How to prove it")[2].partition("## Related")[0]
+proof = text.partition("## Putting it into practice")[2].partition("## Related")[0]
 tail  = proof[LABEL.search(proof).end():].partition("**What makes it")[0]
 items = [" ".join(m.group(1).split()) for m in ITEM.finditer(tail)]
 ```
@@ -305,7 +304,7 @@ education claims, and stating both rows avoids it.
 | Content with four readers | Ask all four |
 | A number is wanted for a slide | Say what you actually have |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the pairing.** "Cold-start testing tells me whether the content
 works; assessment tells me whether the reader does. Most documentation has the
@@ -339,9 +338,9 @@ discovery of that defect here: the earlier fix had been applied to the label
 that surfaced instead of to the class, so the right move is to sweep every
 structural element for variants in one pass.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A classification of your own practice tasks by whether they
+**The work product.** A classification of your own practice tasks by whether they
 state a success criterion, and one task rewritten into predict-then-check.
 
 **Three things to do, in order:**
@@ -356,7 +355,7 @@ state a success criterion, and one task rewritten into predict-then-check.
    ten minutes. It does not scale, it is still the best instrument available,
    and it will contradict at least one thing you believe.
 
-**What makes it credible rather than decorative.** The measurement above runs
+**How to tell it is working.** The measurement above runs
 against this guide's own 106 pages and is reproducible from the repository;
 what it establishes is that 318 tasks are well formed and that 128 of them are
 assessable, against a classifier scored on sixty hand-labelled tasks rather

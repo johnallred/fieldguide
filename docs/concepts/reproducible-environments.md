@@ -11,8 +11,7 @@ tags: [gp, supporting]
 
 `supporting` · difficulty 3 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "golden paths and curriculum that take a developer from a clean environment to a working result"
+> Making sure every exercise starts from an environment a reader can recreate exactly.
 
 **Prerequisites:** [Golden paths](golden-paths.md)
 
@@ -20,16 +19,17 @@ tags: [gp, supporting]
 
 ## What it is
 
-The "clean environment" half of the Developer Relations posting's sentence. Making it true requires three
+The "clean environment" half of taking a developer from a clean environment to a
+working result. Making it true requires three
 decisions: what level of isolation a reader is asked to create, whether
 dependencies are pinned, and what your CI reproduces.
 
 They look like infrastructure decisions and they are documentation decisions,
 because each one changes what your quickstart can honestly promise.
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting's phrase is "from a clean environment", and the word *clean* is doing a
+Golden paths start "from a clean environment", and the word *clean* is doing a
 lot of work. A clean environment is the only starting state a document can
 assume, because it is the only one that is the same for everyone.
 
@@ -210,10 +210,10 @@ pre-built environment is testing your cache, and when the cold-start check
 fails the temptation is always to make the environment more permissive, which
 converts the one check that finds this class of defect into one that cannot.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the trade rather than the tooling.** "Reproducibility and time to
-first success pull against each other, and both are things the Developer Relations posting asks for. A
+first success pull against each other, and we are accountable for both. A
 reader who has to build a container before seeing anything work has a slower
 first success and a more reliable one. I pick the weakest isolation that
 catches my actual failures, and I can say what each level misses."
@@ -224,7 +224,7 @@ one verifies that a reader following the page today succeeds. Those are
 different questions, so pin the tutorial, leave the quickstart unpinned, and
 schedule the unpinned run rather than gating merges on it.
 
-**The tradeoff to volunteer.** Unpinned cold-start checks are the flakiest
+**The tradeoff to name.** Unpinned cold-start checks are the flakiest
 thing you will own, and a flaky required check trains people to re-run CI until
 green, which damages the credibility of every other gate. That is a real cost
 and the mitigation is scheduling rather than pretending the flakiness is not
@@ -237,9 +237,9 @@ clean machine fails on step two. Matching the isolation level to the kinds of
 dependency your instructions actually have is the decision, and almost nobody
 makes it explicitly.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A cold-start script that creates the isolation level your
+**The work product.** A cold-start script that creates the isolation level your
 docs describe, plus a written reason for your pinning choice.
 
 **Three things to do, in order:**
@@ -251,12 +251,12 @@ docs describe, plus a written reason for your pinning choice.
 3. Write down why your quickstart is or is not pinned. The written reason is
    the deliverable; most projects have the state without the decision.
 
-**What makes it credible rather than decorative.** `docpack`'s
+**How to tell it is working.** `docpack`'s
 `scripts/coldstart.sh` creates a fresh virtual environment and installs the way
 a reader would, which is level 2 in the table above and the right level for a
 pure-Python project. The honest limit, recorded rather than glossed: it would
 not catch a system-package dependency, and nothing in that repository needs
-one. Naming your isolation level and its blind spot is the signal.
+one. Naming your isolation level and its blind spot is the habit to keep.
 
 ## Related
 

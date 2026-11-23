@@ -11,8 +11,7 @@ tags: [qa, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Hands-on docs-as-code experience: Git, pull request review, Markdown/RST, static site generators ... and CI/CD"
+> Reviewing documentation pull requests for accuracy, structure and style.
 
 **Prerequisites:** [Git authoring workflows for writers](git-authoring.md), [Style guides](style-guide.md)
 
@@ -27,9 +26,9 @@ automated."
 That boundary is not fixed. It moves every time you make an artifact
 executable, and the golden path below moves it.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting lists pull request review alongside Git and CI, in the same breath. That
+Pull request review belongs with Git and CI, as part of the same workflow. That
 grouping is the point: review is one stage of a pipeline, not a substitute for
 one.
 
@@ -202,7 +201,7 @@ The second row is a sequencing decision with real leverage. A reviewer who
 opens a pull request with a red build spends their attention triaging CI
 failures. Make CI pass first, and human review starts where machines stop.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the boundary, not the checklist.** "I treat review as the stage
 that handles what no check can judge: whether the page should exist, whether
@@ -217,7 +216,7 @@ source-to-render discrepancy, and automation cannot catch a procedure that runs
 but teaches badly. They fail in different directions, which is why you want
 both and why neither is a safety net for the other.
 
-**The tradeoff to volunteer.** Shrinking the checklist assumes the automation
+**The tradeoff to name.** Shrinking the checklist assumes the automation
 exists and works. On a corpus with no CI, the fifteen-item checklist is doing
 real work badly, and taking items off it before building the gates makes things
 worse. The sequence matters: automate, then shrink, and be able to point at
@@ -230,9 +229,9 @@ the useful question in a review is not "is this correct" but "could a machine
 have caught this", and when the answer is yes the fix goes in the pipeline
 rather than in the page.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A pull request template that names the judgment questions
+**The work product.** A pull request template that names the judgment questions
 only, plus the list of gates that replaced the mechanical ones.
 
 **Three things to do, in order:**
@@ -244,10 +243,10 @@ only, plus the list of gates that replaced the mechanical ones.
 3. Write the four judgment questions into a template. If the template is longer
    than about five items, something on it is a machine's job.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories demonstrates review process, which is recorded on the
 [demonstrated](../demonstrated.md) page, and process is genuinely hard to
-evidence in a portfolio. What travels instead is a specific story: a checklist
+see from outside a team. What to look for instead is a specific history: a checklist
 item you deleted, the gate you built to replace it, and one defect that got
 through review anyway and what you added afterwards. This guide's own answer to
 the last part is the fence defect in seven pages and the render check that now

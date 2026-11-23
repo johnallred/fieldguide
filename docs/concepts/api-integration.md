@@ -11,15 +11,15 @@ tags: [auto, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
+> Connecting your content tooling to other systems through their APIs.
 
 **Prerequisites:** [Python for content automation](python-for-content.md)
 
 ## What it is
 
-The third job in the KnowledgeOps posting's sentence: making a program talk to a service it does
-not control. In a documentation role those services are the ones holding
+The third part of content automation, after automating tasks and transforming
+data: making a program talk to a service it does not control. In documentation
+work those services are the ones holding
 content and process, a CMS, a ticket tracker, a translation vendor, a
 repository host, a search index, and increasingly the documentation platform is
 itself the server, answering an agent.
@@ -28,7 +28,7 @@ The work divides unevenly. Calling an endpoint that behaves is twenty minutes.
 Everything after that is deciding what the client does when the service
 disagrees, and that is where integrations are actually written.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because the content a documentation team needs is almost never in the
 repository. It is in the issue tracker, the CMS, the analytics product and the
@@ -273,7 +273,7 @@ The checkpoint is the one that pays. A four-hour extraction that dies at hour
 three having written nothing is the most expensive mistake available here, and
 appending JSONL as you go prevents it.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with where the work actually is.** "Calling an endpoint that behaves is
 twenty minutes. The integration is everything after: which field means failure,
@@ -306,16 +306,16 @@ failure, a confident low-relevance match, has no branch at all. That is why
 retrieval needs [evaluation](retrieval-evaluation.md) rather than error
 handling.
 
-**The tradeoff to volunteer.** All of this was learned against a local server
+**The tradeoff to name.** All of this was learned against a local server
 with no auth, no network and no rate limit, which is the easiest integration
 there is. It taught the contract questions well and taught nothing about
 credentials expiring mid-run, pagination over a moving dataset, or a vendor
 whose staging and production behaviour differ. Those need the real service, and
 I would not claim them from a stdio pipe.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A client of yours with a misuse table, and whichever end you
+**The work product.** A client of yours with a misuse table, and whichever end you
 control fixed so that failure travels on one channel.
 
 **Three things to do, in order:**
@@ -328,7 +328,7 @@ control fixed so that failure travels on one channel.
 3. Add a checkpoint to the longest extraction script you own. It prevents the
    most expensive failure in this area and the fix is an append.
 
-**What makes it credible rather than decorative.** The client is a short script driving `docpack`'s `mcp_server/server.py` over
+**How to tell it is working.** The client is a short script driving `docpack`'s `mcp_server/server.py` over
 stdio. The two server defects are fixed in that file with the reasoning left
 in comments. `tests/test_mcp_server.py` holds fourteen tests asserting on
 `isError` rather than on message text, including one that a bad filter value

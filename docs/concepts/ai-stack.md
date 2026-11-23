@@ -11,27 +11,26 @@ tags: [dom, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Python literacy sufficient to run and validate AI samples, with working familiarity with the AI software stack"
+> Running and validating AI samples, which means reading the software stack under them.
 
 **Prerequisites:** [Inference serving and microservices](inference-serving.md)
 
 ## What it is
 
 The layered set of components between a model and the silicon: a framework, an
-exchange format, a runtime, a kernel library, a driver. The Developer Relations posting's bullet asks for
-"Python literacy sufficient to run and validate AI samples", which is a precise
-and modest requirement: not building models, but being able to run a sample and
+exchange format, a runtime, a kernel library, a driver. What the work needs is
+enough Python literacy to run and validate AI samples, which is a precise and
+modest requirement: not building models, but being able to run a sample and
 tell whether its output is right.
 
 The reason it needs a page is that the layers have independent version numbers
 and the compatibility rules between them are the single largest source of
 support load in this field.
 
-## Why the job asks for it
+## How this applies to your role
 
-Because "run and validate AI samples" is the job description of a person who
-will spend their first month on version errors.
+Because whoever runs and validates AI samples will spend their first month on
+version errors.
 
 A documentation engineer in this space does not debug kernels. They do
 repeatedly answer the question "why does the sample not load", and the answer is
@@ -83,7 +82,7 @@ onnx 1.23.2 make_model default ir_version = 14
 reader.** No flags, no exotic operators, a single `Relu`, and the two most
 obvious packages in the ecosystem disagree out of the box.
 
-The message deserves its own look. A reader is handed a path on the KnowledgeOps posting's build
+The message deserves its own look. A reader is handed a path on someone else's build
 machine, a fully-qualified C++ constructor signature, and then the text is
 truncated before it says what to do. The fix is one line, `m.ir_version = 10`,
 and it is not in the message.
@@ -185,7 +184,7 @@ you nothing about the ecosystem your readers actually install into.
 | Tolerance stated explicitly | False failures on different hardware |
 | A known-wrong input | A sample that cannot fail |
 
-The Developer Relations posting's phrase is "run **and validate**", and the distance between rows one and
+The work is to run **and validate**, and the distance between rows one and
 three is the whole of it. A sample asserted only on exit code passes while
 producing nonsense, which is the characteristic AI-sample defect.
 
@@ -215,7 +214,7 @@ simplified.
 [NVIDIA's minor version compatibility page](https://docs.nvidia.com/deploy/cuda-compatibility/minor-version-compatibility.html);
 the figures and carve-outs above are from that page, not from search results.)*
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the version problem, because it is the job.** "Running and
 validating AI samples sounds modest, and in practice it means becoming the
@@ -251,9 +250,9 @@ OpenVINO, no distributed training. I can run a sample, read a version matrix,
 and tell whether output is plausible. I would not claim to debug a kernel or
 tune an accelerator, and `context` tier is what this is.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A compatibility table for two components you use, with the
+**The work product.** A compatibility table for two components you use, with the
 symptom text, the accepted ranges and the one-line fix.
 
 **Three things to do, in order:**
@@ -267,7 +266,7 @@ symptom text, the accepted ranges and the one-line fix.
 3. Check whether a sample you own asserts anything about its output beyond the
    exit code. "Run and validate" is two verbs and most samples do one.
 
-**What makes it credible rather than decorative.** Every result was executed
+**How to tell it is working.** Every result was executed
 here against `onnx` 1.23.2 and `onnxruntime` 1.29.0, including the full error
 text and the four-outcome version matrix. The CUDA material is verified by
 opening NVIDIA's own compatibility page, and is cited as reading rather than as

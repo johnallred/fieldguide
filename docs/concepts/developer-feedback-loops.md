@@ -11,8 +11,7 @@ tags: [meas, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Ability to translate developer feedback into documentation, samples, and product improvements"
+> Turning developer feedback into changes to documentation, samples and the product.
 
 **Prerequisites:** [Documentation analytics](docs-analytics.md)
 
@@ -24,12 +23,12 @@ the translation: a complaint is evidence about an experience, and turning it
 into an edit means deciding what it is evidence *of*, which is usually not what
 the complaint names.
 
-The Developer Relations posting's bullet puts "documentation, samples, and product improvements" in one
-sentence, which is the right scope. The same report frequently calls for all
+The work is to translate feedback into documentation, samples and product
+improvements, all three in one sentence, which is the right scope. The same report frequently calls for all
 three, and routing it only to the documentation queue is how feedback gets
 answered without being used.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because it is the only measurement in this category that no instrument
 produces.
@@ -124,7 +123,7 @@ this do".
 | README reordered, making before checking | Documentation | The ordering was the reported symptom |
 | Three tests on the new command | Tests | So it cannot silently rot |
 
-The Developer Relations posting's bullet asks for exactly that split, and the product change is the one
+The work calls for exactly that split, and the product change is the one
 that gets missed by treating a README complaint as a README task.
 
 ```
@@ -233,7 +232,7 @@ a reordered README; the lasting change is a check asserting that the first
 quick-start command after install produces something rather than reporting
 something.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the gate audit, because it is the strongest thing here.** "The first
 real reader of my repository ran nine commands, all exited zero, and reported
@@ -258,7 +257,7 @@ defect an instrument finds daily and a person never would, against a structural
 failure a person finds and an instrument never will. The difference is supply:
 instruments run on every commit, the first reader happens once.
 
-**The tradeoff to volunteer.** Acting on a single report risks building for one
+**The tradeoff to name.** Acting on a single report risks building for one
 person, and one report cannot tell you whether the confusion generalises. What
 made this one safe to act on is that the fix was additive and the diagnosis was
 checkable without him: the command ordering and the absent capability are facts
@@ -273,9 +272,9 @@ hit that wall conclude they are missing something obvious and say nothing. The
 right prior on a gently worded confusion report is that it is severe and
 under-reported.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A repository where a reader's report is traceable to a commit,
+**The work product.** A repository where a reader's report is traceable to a commit,
 and a check that closes the class rather than the instance.
 
 **Three things to do, in order:**
@@ -291,7 +290,7 @@ and a check that closes the class rather than the instance.
    and it works exactly once per person, so spend it on the project you care
    about most.
 
-**What makes it credible rather than decorative.** Both loops are in the
+**How to tell it is working.** Both loops are in the
 repositories: `docpack search` exists with three tests, the README is reordered
 into commands that make something and commands that check something with a line
 saying why, the vocabulary edits are in two how-to pages, and the score movement

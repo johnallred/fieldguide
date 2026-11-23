@@ -7,8 +7,8 @@ shape along with its mistakes.
 
 So the contract ships as a generator. `fieldguide new <concept-id>` reads the
 concept out of the registry and writes a page with its seven headings, its front
-matter, its prerequisites already cross-linked, and the posting quote that
-justifies it already in place.
+matter, its prerequisites already cross-linked, and the line naming the work
+that needs it already in place.
 
 The prompts under each heading are not filler. Each one names the specific way
 that section usually goes wrong.
@@ -26,8 +26,8 @@ from .registry import STRUCTURAL_LABELS, Concept, Registry
 #: fills them in rather than naming them, which is where variants come from.
 SECTION_LABELS: dict[str, tuple[str, ...]] = {
     "The golden path": ("built",),
-    "How to talk about it": ("competent-answer", "sharper-point", "tradeoff"),
-    "How to prove it": ("artifact", "proof-tasks", "credibility"),
+    "Explaining it to your team": ("competent-answer", "sharper-point", "tradeoff"),
+    "Putting it into practice": ("artifact", "proof-tasks", "credibility"),
 }
 
 
@@ -39,11 +39,12 @@ motivation, no list of benefits.
 The failure mode here is writing the Wikipedia opening: a definition so
 careful it is useless. Prefer the sentence you would actually say out loud.
 """,
-    "Why the job asks for it": """Connect it to the posting line above. What
-does someone holding this role do on a Tuesday that requires this?
+    "How this applies to your role": """Connect it to the line above. What does
+someone doing this work do on a Tuesday that requires this, whatever their
+title?
 
-The failure mode is restating the quote. The quote is already printed; this
-section earns its place by explaining the work behind it.
+The failure mode is restating the line. It is already printed; this section
+earns its place by describing the work behind it.
 """,
     "The golden path": """The shortest real exercise that produces a working
 result. Commands the reader can paste, with what they should see after each
@@ -58,17 +59,18 @@ options, the defaults, the gotchas. Tables beat prose here.
 
 The failure mode is narrative. Nobody reads this section; they scan it.
 """,
-    "How to talk about it": """What a competent answer sounds like when an
-interviewer asks about this, and what the follow-up question will be.
+    "Explaining it to your team": """How you would explain this to a colleague,
+a manager or an engineer who asks, and what their follow-up question will be.
 
-Include the tradeoff. Anyone can recite what a thing does; the signal is
+Include the tradeoff. Anyone can recite what a thing does; the useful part is
 knowing what it costs and when not to use it.
 """,
-    "How to prove it": """The artifact that demonstrates this without you
-having to claim it: a repository, a file, a measured number, a commit.
+    "Putting it into practice": """The work product this produces when it is done
+well: a repository, a file, a measured number, a commit. Then the tasks to do
+next, and how you would tell the result is working.
 
-Be specific enough to act on today. "Build a RAG pipeline" is not a proof;
-"add an eval set of twenty questions and publish the recall figure" is.
+Be specific enough to act on today. "Build a RAG pipeline" is not a task; "add
+an eval set of twenty questions and publish the recall figure" is.
 """,
     "Related": """Four or five neighbouring concepts, each with a clause saying
 why a reader would follow it from here. The prerequisites and dependents are
@@ -117,7 +119,7 @@ def render_concept_page(registry: Registry, concept_id: str) -> str:
     lines = [
         "---",
         f"title: {concept.name}",
-        f"summary: 'TODO: one sentence on what {concept.name.lower()} is and why this role needs it.'",
+        f"summary: 'TODO: one sentence on what {concept.name.lower()} is and where the work needs it.'",
         "diataxis: explanation",
         "audience: developer",
         f"concept: {concept.id}",
@@ -130,8 +132,8 @@ def render_concept_page(registry: Registry, concept_id: str) -> str:
         "",
     ]
 
-    for demand in concept.demanded_by:
-        lines += [f"> {demand.quote}", ""]
+    for practice in concept.in_practice:
+        lines += [f"> {practice.text}", ""]
 
     if concept.prerequisites:
         links = ", ".join(

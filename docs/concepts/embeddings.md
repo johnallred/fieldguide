@@ -11,8 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 2 · 4h
 
-!!! note "Not a quotation (derived)"
-    Required by any RAG pipeline, and the KnowledgeOps posting names RAG pipelines twice.
+> Turning content into vectors so it can be searched by meaning, the first step of any RAG pipeline.
 
 **Prerequisites:** [Chunking strategies](chunking.md)
 
@@ -27,11 +26,10 @@ usually cosine similarity, which is the angle between two vectors.
 That is the whole idea. Everything interesting is in what "similar meaning"
 turns out to mean in practice, which is not always what you want.
 
-## Why the job asks for it
+## How this applies to your role
 
-Neither posting says "embeddings", which is why this is tagged `derived`.
-The KnowledgeOps posting asks for RAG pipelines twice, and there is no RAG pipeline without an
-embedding step, so the inference is safe.
+You may never be asked to choose an embedding model, but you will own content
+that goes through one. There is no RAG pipeline without an embedding step.
 
 What makes this `core` rather than a detail is that embeddings are where
 **documentation people usually stop understanding their own system.** The
@@ -256,7 +254,7 @@ the things embeddings blur.
 
 The numbers are not quoted here on purpose. They vary by model, and a page that
 printed them would be asserting a result the reader should measure on their own
-vocabulary. Step 4 of "how to prove it" below is where that matters.
+vocabulary. Step 1 of "Putting it into practice" below is where that matters.
 
 ## Reference
 
@@ -327,9 +325,9 @@ For a 5,000-page corpus at roughly 8 chunks per page:
 Embedding is cheap. **Re-embedding carelessly is what costs**, which is why
 chunk identity is a design decision rather than an implementation detail.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the failure modes, because
+**How to explain it.** Lead with the failure modes, because
 everyone can describe what embeddings do and far fewer can say where they break.
 "They buy you paraphrase matching, so a question about high p99 latency finds a
 chunk that never uses the word 'performance'. What they do not buy is polarity
@@ -346,7 +344,7 @@ More dimensions cost storage and latency on every query forever; the gain is
 usually small on a documentation corpus and is sometimes zero. The point is that
 this is a measurable question and should not be answered from a blog post.
 
-**The tradeoff to volunteer.** Adding embeddings makes retrieval better at the
+**The tradeoff to name.** Adding embeddings makes retrieval better at the
 queries you cannot anticipate and worse at being debuggable. A BM25 result is
 explainable: these terms matched, with these weights. A vector result is a number
 with no account of itself, and when it is wrong the only available fix is
@@ -360,12 +358,12 @@ writing summaries and headings in the reader's words, which is free, improves
 the page for humans, helps lexical search too, and does not degrade when a model
 is updated. Embeddings are the right tool when you cannot anticipate the
 vocabulary; they are an expensive substitute for writing when you can. Saying
-that in an interview for a documentation role lands well, because it is the
+that to a team about to buy a bigger model lands well, because it is the
 documentation-specific insight rather than the generic ML one.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A working local embedding search and a measured table of its
+**The work product.** A working local embedding search and a measured table of its
 failure modes on your own corpus's vocabulary.
 
 **Three things to do, in order:**
@@ -373,18 +371,18 @@ failure modes on your own corpus's vocabulary.
 1. **Run the golden path, especially step 4.** Then redo step 4 with
    **identifiers from your own product**: your flag names, your version numbers,
    your enable/disable pairs. The numbers are usually worse than the generic
-   examples and far more persuasive.
+   examples and far more useful.
 2. **Find a real confusion.** Embed your corpus, query it with ten real
    questions, and find one case where a semantically adjacent chunk beats the
    correct one. That single example is the whole argument for hybrid search.
 3. **Pin the model version and write down why.** One line in a README about a
-   model update invalidating a stored index demonstrates operational
-   understanding that most candidates lack.
+   model update invalidating a stored index saves the next person a week of
+   confusion.
 
-**What makes it credible rather than decorative.** Describing cosine similarity proves nothing. A
-measured table showing that your product's own flag names embed nearly
-identically, and a stated conclusion that you would not ship vector-only search
-because of it, demonstrates that you tested the tool rather than adopted it.
+**How to tell it is working.** A measured table showing whether your product's own
+flag names embed nearly identically, and a recorded decision about vector-only
+search based on it. That is the difference between testing the tool and
+adopting it.
 
 ### How this would be demonstrated elsewhere
 

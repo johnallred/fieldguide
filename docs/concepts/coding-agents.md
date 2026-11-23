@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 2 · 4h
 
-> Optimize documentation for search (SEO and GEO) and for AI assistants and coding agents through agentready, LLMdigestible content
+> Making documentation usable by coding agents as well as by search engines and people.
 
 
 **Prerequisites:** [Agent-ready content](agent-ready-content.md)
@@ -26,11 +26,11 @@ code with your library.
 The distinguishing property is that **it acts on your examples directly and
 cannot ask whether one was meant to be complete.**
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting names this audience explicitly and separately from AI assistants:
-"optimize documentation ... for AI assistants and coding agents". The
-separation is correct and worth preserving, because the two want different
+Coding agents are an audience of their own, separate from AI assistants, and
+documentation increasingly has to be optimised for both. The separation is
+correct and worth preserving, because the two want different
 things from the same page.
 
 An assistant wants to find the chunk that answers a question. A coding agent
@@ -393,7 +393,7 @@ and inconsistent markers are worse than none.
 
 ### "LLM-digestible", unpacked
 
-The Developer Relations posting's phrase. It decomposes into things that are checkable:
+"Agent-ready, LLM-digestible content" is the usual phrase. It decomposes into things that are checkable:
 
 | Property | Mechanism |
 |---|---|
@@ -419,9 +419,9 @@ thing.
 | More samples | Three unmarked fragments are worse than one complete example |
 | An `llms.txt` alone | A map does not make a sample runnable |
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the concatenation failure,
+**How to explain it.** Lead with the concatenation failure,
 because it is specific and nobody expects it. "A coding agent assembles from
 several pages. Our retries page had `client = WidgetClient(..., retries=3)` with
 no import, because every human reader knows `client` came from the quickstart. An
@@ -439,7 +439,7 @@ one canonical complete example that every excerpt is drawn from, which is
 [single-sourcing](single-sourcing.md) applied to code and is testable by
 [sample validation](code-sample-validation.md) so it cannot rot.
 
-**The tradeoff to volunteer.** Self-contained samples are more verbose and worse
+**The tradeoff to name.** Self-contained samples are more verbose and worse
 for a human skimming a reference page, who now reads three lines of setup before
 the one line they came for. There is a genuine conflict between the two
 audiences on this specific point, and it does not fully resolve. Marking
@@ -457,9 +457,9 @@ onto documentation, it is an old defect finally getting measured, which is the
 same pattern as [RAG](rag.md) surfacing content gaps. That framing is both true
 and much easier to fund.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** The AST-based undefined-names checker in CI, plus a canonical
+**The work product.** The AST-based undefined-names checker in CI, plus a canonical
 complete example that sample validation executes.
 
 **Three things to do, in order:**
@@ -474,10 +474,11 @@ complete example that sample validation executes.
    excerpt from it. That is one page, it is tested, and it gives an agent
    somewhere correct to fall back to.
 
-**What makes it credible rather than decorative.** Saying docs should be agent-friendly is a slogan. An
+**How to tell it is working.** Saying docs should be agent-friendly is a slogan. An
 AST checker that distinguishes a marked fragment from an unmarked one, a stated
 rule about which page types get self-contained samples, and a tested canonical
-example demonstrates that you found the failure and built the gate.
+example are the mechanism. The "your docs do not work" tickets with stitched
+fragments stop arriving.
 
 ### How this would be demonstrated elsewhere
 
@@ -525,4 +526,4 @@ measuring the model and has to be re-run with that held fixed.
 - [Agent-ready content](agent-ready-content.md), the framing above this
 - [Code-sample validation](code-sample-validation.md), what keeps the canonical example true
 - [Crawlability and the agent-ready front door](crawlability.md), being reachable
-- [Generative engine optimization](geo.md), the other half of the Developer Relations posting's bullet
+- [Generative engine optimization](geo.md), the other half of optimising for machines

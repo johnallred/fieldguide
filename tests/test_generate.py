@@ -56,7 +56,7 @@ concepts:
     difficulty: 1
     time: 1h
     prerequisites: []
-    demanded_by:
+    in_practice:
       - "we need alpha for the thing"
     status: planned
   - id: beta
@@ -66,7 +66,7 @@ concepts:
     difficulty: 2
     time: 2h
     prerequisites: [alpha]
-    demanded_by:
+    in_practice:
       - "beta follows from alpha"
     status: planned
 paths:
@@ -180,7 +180,7 @@ def test_coverage_prints_the_line_behind_every_row(registry):
     """The guide's credibility rests on this being visible, not aggregated away."""
     text = coverage_page(registry)
     for concept in registry.concepts:
-        quote = concept.demanded_by[0].quote
+        quote = concept.in_practice[0].text
         assert quote[:60] in text, f"{concept.id} has no line in the coverage table"
 
 
@@ -190,7 +190,7 @@ def test_coverage_escapes_pipes_so_the_table_survives(registry):
     for line in text.splitlines():
         if line.startswith("| [") or line.startswith("| "):
             continue
-    assert "\\|" in text or not any("|" in d.quote for c in registry.concepts for d in c.demanded_by)
+    assert "\\|" in text or not any("|" in d.text for c in registry.concepts for d in c.in_practice)
 
 
 def test_coverage_states_the_page_contract(registry):
@@ -331,12 +331,12 @@ def test_the_study_plan_core_section_only_lists_core(registry):
 # -------------------------------------------------------------- placeholders
 
 
-def test_a_placeholder_carries_the_posting_quote(planned_registry):
+def test_a_placeholder_carries_the_work_line(planned_registry):
     planned = [c for c in planned_registry.concepts if c.status == "planned"]
     assert planned, "the synthetic registry must hold a planned concept"
     concept = planned[0]
     text = placeholder_page(planned_registry, concept.id)
-    assert concept.demanded_by[0].quote[:40] in text
+    assert concept.in_practice[0].text[:40] in text
     assert "Outline only" in text
 
 
@@ -379,7 +379,7 @@ def test_the_scaffold_fills_in_what_the_registry_already_knows(registry):
     # page was scaffolded or hand-written, which reads as incoherence.
     assert "**Prerequisites:**" in text
     assert "Read first" not in text
-    assert concept.demanded_by[0].quote[:30] in text
+    assert concept.in_practice[0].text[:30] in text
 
 
 def test_the_scaffold_refuses_a_concept_not_in_the_registry(registry):
@@ -397,7 +397,7 @@ def test_the_scaffold_will_not_overwrite_an_existing_page(registry):
 def test_the_scaffold_prints_the_line_as_a_blockquote(registry):
     concept = next(c for c in registry.concepts if c.has_evidence)
     text = render_concept_page(registry, concept.id)
-    assert f"> {concept.demanded_by[0].quote}" in text
+    assert f"> {concept.in_practice[0].text}" in text
 
 
 # ------------------------------------------------------- the demonstration map

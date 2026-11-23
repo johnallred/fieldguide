@@ -11,8 +11,7 @@ tags: [dom, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Documentation experience in graphics, simulation, robotics, or real-time systems"
+> Documenting software that runs on GPUs, well enough to follow the engineers who build it.
 
 !!! warning "No GPU was available"
     This machine has no NVIDIA device, so nothing on this page was run on a GPU. The measurement in step 1 is a CPU analogue of a GPU lesson and is labelled as such; the compatibility material in step 3 was verified by opening NVIDIA's own documentation. Where this page reasons rather than demonstrates, it says so.
@@ -28,10 +27,10 @@ For a documentation role the useful framing is not the hardware. It is that GPU
 performance is governed by **data movement rather than arithmetic**, and that
 the toolchain's compatibility rules are the largest source of reader pain.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting lists graphics, simulation, robotics and real-time systems, and CUDA is
-underneath all four. The role writes for people whose code already works and is
+Documentation in graphics, simulation, robotics and real-time systems all sits
+on CUDA. The work is writing for people whose code already works and is
 slower than they expected, or does not build at all.
 
 Both of those have documentable causes, and neither is about kernel
@@ -190,7 +189,7 @@ twenty times slower with no error anywhere.
 | A detection snippet for silent CPU fallback | An assumption it worked |
 | The minimum driver, stated numerically | "A recent driver" |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the honest boundary, because it is better than bluffing.** "I have
 not shipped CUDA. What I can do is the reasoning a documentation role needs:
@@ -227,9 +226,9 @@ no occupancy I have tuned. For a documentation role at `context` depth that is
 the right boundary, and I would want an engineer's review on anything past the
 arithmetic.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** An arithmetic-intensity table for the operations your readers
+**The work product.** An arithmetic-intensity table for the operations your readers
 actually run, and a symptom-keyed compatibility matrix.
 
 **Three things to do, in order:**
@@ -242,7 +241,7 @@ actually run, and a symptom-keyed compatibility matrix.
 3. Find a timing claim in GPU documentation you rely on and check whether it
    synchronised. If the page does not say, assume it did not.
 
-**What makes it credible rather than decorative.** The intensity measurement ran
+**How to tell it is working.** The intensity measurement ran
 here on CPU with numpy and is reproducible, and the compatibility figures were
 verified by opening NVIDIA's documentation, which is cited as reading. No GPU,
 no CUDA, no kernel, no profiler: the [demonstrated](../demonstrated.md) page

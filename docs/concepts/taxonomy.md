@@ -11,8 +11,7 @@ tags: [ia, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Information architecture skills: content modeling, taxonomy, and metadata for both navigation and machine retrieval"
+> Agreeing the terms content is classified by, and keeping that vocabulary closed and consistent.
 
 **Prerequisites:** [Content models](content-model.md)
 
@@ -29,9 +28,9 @@ That distinction is the whole concept. An open vocabulary is a suggestion. A
 closed one is a guarantee, and a guarantee is the only thing a pipeline can be
 built on.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names taxonomy between content modeling and metadata, which is where it
+Taxonomy sits between content modelling and metadata, which is where it
 belongs: the model says a field exists, the taxonomy says what may go in it,
 and metadata is the result.
 
@@ -244,7 +243,7 @@ Where there is no external source of truth, as with page type and audience,
 you own it, and the right size is the smallest set that supports a filter
 somebody actually wants.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with filtering, not tidiness.** "Closing a vocabulary is what makes
 filtering possible: 'how-to pages for operators' is answerable only if those
@@ -257,7 +256,7 @@ vocabulary honest, and the answer is a consumer. I had a closed, fully
 populated `diataxis` field whose value was wrong on 44 per cent of pages,
 because a generator hardcoded one value and nothing read the field.
 
-**The tradeoff to volunteer.** Every closed vocabulary is an argument you have
+**The tradeoff to name.** Every closed vocabulary is an argument you have
 to have, and then a constraint contributors live with. A vocabulary that is too
 small forces pages into the wrong bucket, and the mitigation is to add the
 value that is true rather than making authors lie. `placeholder` is not in
@@ -270,9 +269,9 @@ half-populated means nothing can depend on it, and nothing depending on it
 means nobody fixes it. Either close the list and require it, or delete the
 field.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A closed vocabulary, a check that rejects values outside it,
+**The work product.** A closed vocabulary, a check that rejects values outside it,
 and something that consumes it.
 
 **Three things to do, in order:**
@@ -285,7 +284,7 @@ and something that consumes it.
 3. Pick your least reliable vocabulary and either close and require it, or
    remove it. Both are improvements; leaving it half-populated is not.
 
-**What makes it credible rather than decorative.** `docpack` validates five
+**How to tell it is working.** `docpack` validates five
 front-matter fields, two of them closed vocabularies, rejected in CI. The more
 useful story is this one: a closed vocabulary that was fully populated,
 entirely legal and wrong on 53 pages, found by comparing the value distribution

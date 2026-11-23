@@ -11,8 +11,7 @@ tags: [auto, core]
 
 `core` · difficulty 2 · 5h
 
-!!! quote "Why it is on the curriculum"
-    "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
+> Using Python to automate content tasks, transform data and call APIs.
 
 **Leads to:** [Content and data transformation](content-data-transformation.md), [API integration](api-integration.md)
 
@@ -27,13 +26,13 @@ Every interesting bug in this area comes from that sentence. A Markdown file
 looks like lines, so you process lines; the meaning lives in nesting, fences
 and front matter, which lines cannot see.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting's bullet is one sentence naming three jobs: automate content tasks,
-transform data, integrate with APIs. This concept is the first, and the other
+Python in content work does three jobs: automate content tasks, transform
+data, integrate with APIs. This concept is the first, and the other
 two have pages of their own because they fail differently.
 
-The reason it is a requirement rather than a nice-to-have is arithmetic. A
+The reason it is a necessity rather than a nice-to-have is arithmetic. A
 corpus of a hundred pages has a few hundred cross-references, a few hundred
 code samples and a metadata field on every page, and every claim anybody makes
 about it ("every page has a summary", "no sample is broken", "this concept is
@@ -255,7 +254,7 @@ want from a check.
 | Re-deriving every metric after adding a generator | A template satisfying its own gate |
 | Normalising whitespace before matching | Wrapped prose defeating a pattern |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the data, not the language.** "Python for content automation is not
 a language specialism, it is knowing that documentation is text carrying
@@ -277,7 +276,7 @@ by five per cent. Parsing errors are sparse and one-directional, so a sum is
 robust to exactly the defect you are looking for. A sum is the worst available
 instrument for finding a parsing bug.
 
-**The tradeoff to volunteer.** Writing your own parser is a maintenance
+**The tradeoff to name.** Writing your own parser is a maintenance
 liability and I would not recommend it as a default: use a real Markdown library
 where you can. The case for owning the fence logic in a checker is that it has
 to answer questions a renderer does not, such as whether a closing fence
@@ -292,9 +291,9 @@ which pages are in the sample. "This correction is negligible" is a claim about
 a sample and not about a corpus, and it needs re-checking whenever the sample
 changes, which in a growing corpus is constantly.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A measurement over a corpus you own, with its error budget
+**The work product.** A measurement over a corpus you own, with its error budget
 written down and a fixture that pins the answer.
 
 **Three things to do, in order:**
@@ -309,7 +308,7 @@ written down and a fixture that pins the answer.
    containing three-backtick fences, and count both by hand. Every parsing bug
    in this project would have been caught by that one file.
 
-**What makes it credible rather than decorative.** `docpack` is seven modules
+**How to tell it is working.** `docpack` is seven modules
 and 134 tests operating on a documentation tree as data, and this guide's own
 `src/fieldguide/fences.py` exists because three successive naive versions
 returned plausible wrong answers; every figure above is reproducible from the
@@ -320,7 +319,7 @@ matter.
 
 ## Related
 
-- [Content and data transformation](content-data-transformation.md), the next job in the KnowledgeOps posting's sentence
+- [Content and data transformation](content-data-transformation.md), the second of the three jobs
 - [API integration](api-integration.md), the third one
 - [Custom linters](custom-linters.md), where these habits get enforced
 - [Code-sample validation](code-sample-validation.md), the fence parser's main consumer

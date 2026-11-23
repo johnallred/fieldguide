@@ -11,8 +11,7 @@ tags: [gp, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Write and maintain reference documentation, tutorials, and sample walkthroughs that assume no prior context"
+> Writing walkthroughs that explain a sample line by line, without drifting from the sample.
 
 **Prerequisites:** [Designing tutorials](tutorial-design.md)
 
@@ -30,14 +29,12 @@ decomposes it. Both are legitimate, and they fail differently: a tutorial fails
 on sequencing, a walkthrough fails on **drift**, because it quotes code that
 lives somewhere else.
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting lists walkthroughs alongside reference and tutorials, which is the right
-company: all three are the explain-this-thing layer rather than the get-started
+Walkthroughs sit alongside reference and tutorials, which is the right company: all three are the explain-this-thing layer rather than the get-started
 layer.
 
-Walkthroughs matter disproportionately for a sample gallery, which the Developer Relations posting also
-names. A gallery of twenty samples with no walkthroughs is twenty repositories
+Walkthroughs matter disproportionately for a sample gallery. A gallery of twenty samples with no walkthroughs is twenty repositories
 a reader has to reverse-engineer. The walkthrough is what converts a sample
 from a thing you can run into a thing you can learn from.
 
@@ -270,7 +267,7 @@ is missing is part of explaining what is there.
 The last one is cheap and worth having. An anchor left in a sample after the
 walkthrough stopped using it is a small mess that accumulates.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the failure mode, because it is specific to this form.** "A
 walkthrough is prose containing copies of code, so it drifts: nothing about the
@@ -283,7 +280,7 @@ adding two lines to my sample, the paragraph about the retry count rendered
 `import click` and the build exited zero. Named anchors fix it, and the cost is
 two comment lines in the sample.
 
-**The tradeoff to volunteer.** Transclusion puts documentation markers in
+**The tradeoff to name.** Transclusion puts documentation markers in
 source files, which some teams will not accept, and it means the walkthrough
 cannot show a simplified version of the code. Sometimes you *want* to show a
 cut-down snippet for teaching, and then you are back to copying with a drift
@@ -295,9 +292,9 @@ production template, and samples are copied into production constantly. That
 sentence costs nothing and prevents the most expensive misreading a walkthrough
 can produce.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A walkthrough that transcludes by named anchor, plus a check
+**The work product.** A walkthrough that transcludes by named anchor, plus a check
 that no quoted block has drifted for anything still copied.
 
 **Three things to do, in order:**
@@ -309,7 +306,7 @@ that no quoted block has drifted for anything still copied.
 3. Add one sentence to your most-read walkthrough saying what the sample
    deliberately omits.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories contains a sample walkthrough, which the
 [demonstrated](../demonstrated.md) page records. What travels is the measured
 progression: a drift check that caught a stale constant, a transclusion that

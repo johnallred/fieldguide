@@ -11,8 +11,7 @@ tags: [dac, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Hands-on docs-as-code experience: Git, pull request review, Markdown/RST, static site generators (Sphinx, MkDocs, Docusaurus, or similar), and CI/CD"
+> Writing in Git: branches, pull requests and review, in Markdown or RST, built by a static site generator.
 
     "Hands on experience with docs-as-code workflows and documentation CI, including Git, Markdown or MDX, and doc build pipelines"
 
@@ -27,11 +26,11 @@ Branch and review conventions, commit granularity, and, most consequentially,
 **how you wrap lines**, because Git's unit is the line and a paragraph is not
 one.
 
-Both postings name Git. The thing worth knowing is not `git rebase`. It is that
+Everyone in this work uses Git. The thing worth knowing is not `git rebase`. It is that
 a formatting decision almost nobody makes deliberately determines whether your
 diffs are reviewable and whether two writers editing one page collide.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because the objection to [docs-as-code](docs-as-code.md) is always the same:
 that it does not work for people whose job is writing. Most of the time the
@@ -204,7 +203,7 @@ The wrapping convention belongs in writing. It is the one rule that is
 invisible, consequential, and impossible to infer from the existing files once
 somebody has broken it.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the measurement, not the practice.** "The thing that decides
 whether Git works for writers is line wrapping. I measured it: one inserted
@@ -217,7 +216,7 @@ answer is not a mass reflow on day one, because that destroys `git blame` for
 every page. Set the convention for new and edited content, use word diffs
 meanwhile, and reflow a page when you are substantially rewriting it anyway.
 
-**The tradeoff to volunteer.** Semantic line breaks make the source look
+**The tradeoff to name.** Semantic line breaks make the source look
 ragged and make some editors' formatting commands actively harmful, since a
 "reflow paragraph" keystroke undoes it silently. You need the convention
 documented and ideally a lint rule, or it decays one well-meaning editor at a
@@ -229,9 +228,9 @@ conflicts are formatting decisions; reviewing rendered pages is a preview
 deployment. Fix those three and the residual difficulty of Git for an
 occasional contributor is a web editor and one page of instructions.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A repository with a documented wrapping convention, a
+**The work product.** A repository with a documented wrapping convention, a
 `.gitattributes` prose diff driver, and a pull request template that asks the
 judgment questions rather than the mechanical ones.
 
@@ -244,7 +243,7 @@ judgment questions rather than the mechanical ones.
 3. Set up the word-diff driver and read one recent prose diff with it. If your
    corpus is hard-wrapped, the difference is immediate.
 
-**What makes it credible rather than decorative.** Numbers. "Semantic line
+**How to tell it is working.** Numbers. "Semantic line
 breaks produce better diffs" is a preference; "one inserted clause changed nine
 lines against two, and the hard-wrapped version conflicted where the other
 merged cleanly" is a measurement, and it takes half an hour to reproduce on any

@@ -11,8 +11,7 @@ tags: [dac, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Markdown/RST"
+> Maintaining docs written in reStructuredText, usually alongside a Sphinx build.
 
 **Prerequisites:** [Markdown and its dialects](markdown.md)
 
@@ -27,14 +26,14 @@ inline ones, both of which take arguments and options. That extensibility is
 what lets reStructuredText express a cross-reference to a Python function,
 rather than a link to a URL you had to know.
 
-The thing most people get wrong, including in interviews, is where
+The thing most people get wrong, including experienced writers, is where
 reStructuredText ends and [Sphinx](sphinx.md) begins. The golden path draws the
 line precisely.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting writes "Markdown/RST", and the reason is almost certainly that their
-documentation estate includes Sphinx projects. Simulation, robotics and
+Documentation estates are often "Markdown/RST", and the reason is almost
+always Sphinx projects. Simulation, robotics and
 graphics tooling is largely Python and C++, and Python API documentation has
 been Sphinx territory for twenty years.
 
@@ -194,7 +193,7 @@ maintainable.
 | Inline markup is fussy | Nested emphasis and adjacent punctuation need escapes |
 | Smaller tooling ecosystem | Fewer editors, linters and preview tools than Markdown |
 | Errors can be invisible | As step 3 shows, docutils renders errors into the page |
-| Hiring | Most writers arrive knowing Markdown |
+| Onboarding | Most new contributors arrive knowing Markdown |
 
 ### If you have an RST corpus and want Markdown
 
@@ -204,12 +203,12 @@ maintainable.
 | Convert with `pandoc` | Prose | Every Sphinx construct in the right column above |
 | Rewrite into another generator | Nothing automatic | Cross-reference checking, domains |
 
-MyST is almost always the right answer, and knowing that is worth more in an
-interview than an opinion about which syntax is nicer. It lets a Sphinx project
+MyST is almost always the right answer, and knowing that is worth more in a
+migration discussion than an opinion about which syntax is nicer. It lets a Sphinx project
 accept Markdown without giving up the capability that made Sphinx worth using,
 so the migration question stops being all-or-nothing.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the boundary.** "Most of what people call RST is Sphinx. The
 language gives you admonitions, tables and substitutions; `code-block`, `ref`,
@@ -221,7 +220,7 @@ rather than a conversion. It lets contributors write Markdown inside a Sphinx
 project, keeping typed cross-references and domains, which is the capability
 nobody wants to lose and most conversions throw away.
 
-**The tradeoff to volunteer.** Typed cross-references are the real feature, and
+**The tradeoff to name.** Typed cross-references are the real feature, and
 they are worth friction on an API corpus of any size, because a reference to a
 symbol that moved becomes a build failure instead of a dead link. They are not
 worth it for a dozen conceptual pages, where the directive syntax is pure cost
@@ -232,9 +231,9 @@ published page. So an RST project without `-W` or an equivalent has probably
 shipped visible error boxes at some point, and checking for `system-message` in
 built output is a two-minute audit that tends to find something.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** Less about a repository than about being able to answer the
+**The work product.** Less about a repository than about being able to answer the
 migration question concretely, with the two-column table above.
 
 **Three things to do, in order:**
@@ -246,11 +245,11 @@ migration question concretely, with the two-column table above.
 3. Take ten pages of an RST corpus and classify every directive and role into
    language or tool. That classification *is* the migration estimate.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories uses reStructuredText, which is recorded on the
 [demonstrated](../demonstrated.md) page. What travels instead is the boundary
-itself: being the person in the room who knows that `code-block` is not
-reStructuredText is a small thing that reliably signals first-hand experience.
+itself: knowing that `code-block` is Sphinx rather than reStructuredText is a
+small thing that saves a migration from a wrong estimate.
 
 ## Related
 

@@ -18,7 +18,7 @@ from .registry import REQUIRED_SECTIONS, Registry, topological_order
 
 TIER_BLURB = {
     "core": "You cannot do this job without it.",
-    "supporting": "You will be asked to do it; it is not the centre of the role.",
+    "supporting": "You will be asked to do it; it is not the centre of the work.",
     "context": "Enough to not be lost in the room.",
 }
 
@@ -31,7 +31,7 @@ def _link(concept, prefix: str = "") -> str:
     Every concept has a page: `fieldguide build` writes a placeholder for one
     that is still `planned`. That is a deliberate choice over leaving the link
     dead. A placeholder is navigable, it carries the registry's metadata and
-    the posting quote that justifies the concept, and it keeps the strict build
+    the line naming the work that needs the concept, and it keeps the strict build
     green while the corpus is half written. A dead link does none of that and
     teaches readers to stop trusting the cross-references.
 
@@ -46,7 +46,7 @@ def placeholder_page(registry: Registry, concept_id: str) -> str:
     """Render the placeholder shown for a concept that has no prose yet.
 
     It is a real page rather than an apology: the tier, the effort, the time
-    estimate, the posting quote, and the position in the prerequisite graph are
+    estimate, the work that needs it, and the position in the prerequisite graph are
     all known from the registry, and all of them are useful to someone deciding
     whether to wait for this page or go and learn it elsewhere.
     """
@@ -68,9 +68,9 @@ def placeholder_page(registry: Registry, concept_id: str) -> str:
         "",
     ]
 
-    out.append("## Why it is on the curriculum\n")
-    for demand in concept.demanded_by:
-        out += [f"> {demand.quote}", ""]
+    out.append("## Where it shows up in the work\n")
+    for practice in concept.in_practice:
+        out += [f"> {practice.text}", ""]
 
     out.append(f"{TIER_BLURB[concept.tier]}\n")
 
@@ -150,20 +150,20 @@ def coverage_page(registry: Registry) -> str:
     out = [
         _front_matter(
             "Coverage",
-            "Every concept this guide covers, where it came from, and whether it is written yet.",
+            "Every concept this guide covers, where it shows up in the work, and whether it is written yet.",
         ),
         "# Coverage\n",
         f"**{done} of {total} concepts written.** "
         f"{counts['drafted']} drafted, {counts['planned']} planned.\n",
-        "Each row names the concept and the posting line that put it on this list.\n",
+        "Each row names the concept and the day-to-day work that needs it.\n",
     ]
 
     out += [
         "## Where this list comes from\n",
-        f"- **{total} of {total}** concepts carry the posting language behind them.",
+        f"- **{total} of {total}** concepts name the work that needs them.",
         "",
-        "The line that put a concept on the list is printed next to it, so a reader can",
-        "judge whether it earns the time rather than taking the list on trust.\n",
+        "That line is printed next to each concept, so a reader can judge whether it",
+        "earns their time rather than taking the list on trust.\n",
     ]
 
     for key, label in registry.categories.items():
@@ -171,15 +171,15 @@ def coverage_page(registry: Registry) -> str:
         if not group:
             continue
         out.append(f"## {label}\n")
-        out.append("| Concept | Tier | Effort | Time | Status | Why it is on this list |")
+        out.append("| Concept | Tier | Effort | Time | Status | Where it shows up in the work |")
         out.append("|---|---|---|---|---|---|")
         for concept in group:
-            demand = concept.demanded_by[0]
+            practice = concept.in_practice[0]
             mark = {"complete": ":material-check:", "drafted": ":material-pencil:"}.get(
                 concept.status, ":material-circle-outline:"
             )
             link = _link(concept, "concepts/")
-            quote = demand.quote.replace("|", "\\|")
+            quote = practice.text.replace("|", "\\|")
             if len(quote) > 120:
                 quote = quote[:117] + "..."
             out.append(
@@ -293,7 +293,7 @@ def path_page(registry: Registry, path_id: str) -> str:
         out.append(
             f"`{concept.tier}` · {DIFFICULTY_LABEL[concept.difficulty]} · {concept.time}\n"
         )
-        out.append(f"{concept.demanded_by[0].quote}\n")
+        out.append(f"{concept.in_practice[0].text}\n")
         if inside:
             names = ", ".join(by_id[p].name for p in inside)
             out.append(f"Builds on, earlier in this path: {names}.\n")
@@ -374,9 +374,9 @@ def demonstrated_page(registry: Registry, demonstrations) -> str:
     """Render the map of which concepts are implemented, and which are not.
 
     Both halves are the point. The overlap tells a reader where to go to see a
-    concept working. The absence tells them which parts of this job a repository
-    cannot prove, which is the more useful fact and the one a portfolio is
-    tempted to leave out.
+    concept working. The absence tells them which parts of this work a
+    repository cannot show, which is the more useful fact and the one a
+    showcase is tempted to leave out.
     """
     by_concept = demonstrations.by_concept
     total = len(registry.concepts)
@@ -393,7 +393,7 @@ def demonstrated_page(registry: Registry, demonstrations) -> str:
             "Which concepts have working code behind them, which file does the work, and which have none.",
         ),
         "# Demonstrated\n",
-        "This guide is prose about how to do a job, and prose is cheap. This page",
+        "This guide is prose about how to do the work, and prose is cheap. This page",
         "records which concepts are also *implemented* somewhere you can open, down to",
         "the file that does the work.\n",
         f"**{covered} of {total} concepts have a demonstration**, {full} of them in full.",
@@ -511,8 +511,8 @@ def demonstrated_page(registry: Registry, demonstrations) -> str:
             "those pages carries an account of how the skill would be demonstrated instead.\n",
         ]
     out += [
-        "A portfolio that published only the first table would be the flattering half of",
-        "the truth. The gaps are where the interview happens.\n",
+        "A guide that published only the first table would be the flattering half of",
+        "the truth. The gaps are where the judgement lives.\n",
     ]
 
     core_gaps = [

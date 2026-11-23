@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 3 · 6h
 
-> structure and package content for RAG, internal assistants, and agentic workflows
+> Structuring content so agents can carry out multi-step tasks from it.
 
 
 **Prerequisites:** [Model Context Protocol](mcp.md), [Agent skills and context kits](agent-skills.md)
@@ -26,11 +26,12 @@ The distinguishing feature is **the agent chooses what to do next**. That is
 what separates it from a script, and it is the entire source of both the value
 and the difficulty.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names it as the third consumer of AI-ready content, alongside RAG and
-internal assistants. The Developer Relations posting's version is "the agentic toolkit" and "coding
-agents" as a documentation audience.
+Agentic workflows are the third consumer of AI-ready content, alongside RAG and
+internal assistants. On the developer-relations side, the same thing shows up
+as an agentic toolkit to document and as coding agents reading your
+documentation.
 
 What makes it `core` and difficulty 3 is that **the usual review model stops
 working.** For a single generated answer you can check the output: grounded,
@@ -447,9 +448,9 @@ Mapped onto [judging where AI can be trusted](ai-trust-judgment.md): an agentic
 workflow belongs in the *proposes-for-review* cell, and the tripwires are what
 keep it there when a run goes wrong.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the review problem, because
+**How to explain it.** Lead with the review problem, because
 that is the thing that distinguishes this from "we ran a script". "The usual
 check does not work on a multi-step run. You get a diff and a summary written by
 the thing you are reviewing, and if the selection step picked the wrong pages
@@ -459,13 +460,12 @@ why, put the human approval on the selection rather than on the final diff, and
 declare tripwires in advance: never touch a page marked pinned, never more than
 five files, never edit the validators."
 
-**The follow-up is "how do you stop it going off the rails",** and the answer that
-lands is that you do not rely on the agent for that. Tripwires work because they
+**The follow-up is "how do you stop it going off the rails",** and the honest answer is that you do not rely on the agent for that. Tripwires work because they
 do not judge the work: a run that is competent and wrong passes every quality
 check and still fails a file-count limit. Pair that with proposing diffs rather
 than applying them, so the worst outcome is a rejected pull request.
 
-**The tradeoff to volunteer.** Checkpoints and tripwires cost most of the
+**The tradeoff to name.** Checkpoints and tripwires cost most of the
 speedup. A run that proposes a diff for human approval, with a five-file limit,
 is not much faster than doing the work yourself for anything small, and the
 honest payoff only arrives at volume: a hundred pages, a mechanical change, a
@@ -484,9 +484,9 @@ real output of adopting agentic workflows is usually a better
 a productivity one and happens to be the one that survives contact with a
 documentation lead.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A workflow with per-step checkpoints and declared tripwires,
+**The work product.** A workflow with per-step checkpoints and declared tripwires,
 plus the run where an early wrong decision produces competent downstream work.
 
 **Three things to do, in order:**
@@ -495,17 +495,17 @@ plus the run where an early wrong decision produces competent downstream work.
    demonstration: identical-looking output, correct-looking diffs, blocked only
    by a tripwire.
 2. **Write the tripwires for a task you would actually automate.** Five lines.
-   Doing this before building anything is the habit worth demonstrating. Write
+   Doing this before building anything is the habit worth building. Write
    the tripwires before you look at the task's failure modes, then compare.
    The ones you missed are the ones that will fire in production.
 3. **Find a convention that only exists in someone's head** and turn it into a
    front-matter field, so a gate can see it. That is the durable output, and it
    improves the corpus whether or not the agent ever runs.
 
-**What makes it credible rather than decorative.** Describing agent workflows is cheap. Per-step
-checkpoints that record exclusions, tripwires declared in advance, and a
-demonstrated run where everything downstream of a bad decision looked right
-shows that you have thought about how these fail rather than how they help.
+**How to tell it is working.** Per-step checkpoints that record exclusions,
+tripwires declared in advance, and at least one recorded run where a tripwire
+caught a bad early decision that every later step built on. When a wrong run
+fails a tripwire before it reaches review, the workflow is working.
 
 ### How this would be demonstrated elsewhere
 

@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 3 · 8h
 
-> structure and package content for RAG, internal assistants, and agentic workflows
+> Building and feeding assistants that answer questions from your documentation.
 
 
 **Prerequisites:** [RAG pipelines](rag.md), [Grounding and citation](grounding.md)
@@ -19,20 +19,19 @@ tags: [ai, core]
 ## What it is
 
 A product built on [retrieval](rag.md): a developer asks a question in prose and
-gets an answer with citations. The KnowledgeOps posting's phrase is "internal assistants", which
-is the common case, since an internal assistant has a known audience and a
+gets an answer with citations. The common case is an internal assistant, since an internal assistant has a known audience and a
 forgiving failure mode.
 
 The retrieval is the easy half. The hard half is everything around it: when to
 refuse, what to do with a follow-up question, and how a wrong answer gets
 noticed and fixed.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names it twice, in the AI-ready bullet and under ways to stand out ("RAG
-pipelines, AI assistants, MCP servers"). The Developer Relations posting's version is "makes
-documentation discoverable and usable by both developers and AI assistants",
-which is the other side: being the corpus an assistant reads.
+You meet assistants from two sides. Sometimes you build or feed one, usually
+alongside RAG pipelines and MCP servers. More often your documentation is the
+corpus someone else's assistant reads, and it has to be discoverable and usable
+by that assistant as well as by developers.
 
 What makes it `core` rather than a product-management concern is that the
 decisions are documentation decisions. **Refusal thresholds, citation display
@@ -536,9 +535,9 @@ and people learned not to try.
 | It cannot say "nobody wrote this yet" without you logging it | Gaps look like failures |
 | Internal and external need different scope and tone | And different [visibility filtering](partner-documentation.md) |
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the two refusals, because it
+**How to explain it.** Lead with the two refusals, because it
 is the design decision that shows you have operated one. "The retrieval is the
 easy half. The thing that decided whether ours was useful was separating two
 refusals: out of scope, which points you elsewhere, and low confidence, which
@@ -549,14 +548,14 @@ converse immediately and 'what about for quantised models' is four words with no
 subject."
 
 **The follow-up is "how do you set the confidence threshold",** and the answer
-has to be empirical or it signals you guessed. You need a labelled set: questions
+has to be empirical or it is a guess. You need a labelled set: questions
 you know the corpus answers and questions you know it does not, then pick the
 floor that minimises both fabrication and false refusal. That is
 [output evaluation](output-evaluation.md) applied to a product decision, and the
 threshold moves whenever the corpus or the retriever changes, which is why it
 belongs in CI rather than in a config file somebody tuned once.
 
-**The tradeoff to volunteer.** An assistant reduces the number of people who read
+**The tradeoff to name.** An assistant reduces the number of people who read
 your documentation, and that is partly a loss. A reader who lands on a page sees
 the surrounding caveats, the related links, and the thing they did not know to
 ask about. A reader who gets a paragraph gets exactly what they asked for and
@@ -573,12 +572,12 @@ your readers actually use, which is the input
 [evaluation sets](retrieval-evaluation.md) all need and almost nobody has. A
 documentation team that ships one and treats the logs as a product feature has
 acquired the user research it was never funded to do. That reframes the project
-from an AI initiative into instrumentation, which is both true and a much better
-pitch.
+from an AI initiative into instrumentation, which is both true and much easier
+to get funded.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** An assistant with the two distinct refusals, a turn log, and a
+**The work product.** An assistant with the two distinct refusals, a turn log, and a
 weekly report that lists gap refusals with the reader's wording.
 
 **Three things to do, in order:**
@@ -591,10 +590,11 @@ weekly report that lists gap refusals with the reader's wording.
 3. **Instrument turns per conversation** on anything you ship. If it is near
    1.0, your follow-up handling is broken and nobody has told you.
 
-**What makes it credible rather than decorative.** A working chatbot over docs is a weekend project. A
-scope boundary, two semantically different refusals, a logged rewriting step,
-and a report that produces a prioritised content backlog demonstrates that you
-built it as documentation infrastructure rather than as a demo.
+**How to tell it is working.** A working chatbot over docs is a weekend project. The
+infrastructure version has a scope boundary, two semantically different
+refusals, a logged rewriting step, and a report that produces a prioritised
+content backlog. When that backlog is driving edits and usage holds past week
+two, it is working.
 
 ### How this would be demonstrated elsewhere
 

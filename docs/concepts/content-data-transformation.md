@@ -11,8 +11,7 @@ tags: [auto, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
+> Treating content as data: parsing, reshaping and generating it with scripts.
 
 **Prerequisites:** [Python for content automation](python-for-content.md), [Content models](content-model.md)
 
@@ -27,7 +26,7 @@ transformation can only carry fields that reliably exist.
 The whole discipline reduces to one question asked at every stage: **what did
 this drop, and who finds out?**
 
-## Why the job asks for it
+## How this applies to your role
 
 Because the artifacts a documentation platform ships are mostly derived, and
 derived artifacts fail quietly.
@@ -37,8 +36,8 @@ visible to nobody until a retrieval returns something unhelpful, and then it
 looks like a ranking problem. The team spends a quarter evaluating embedding
 models for a defect introduced by a transformation that ran correctly.
 
-The KnowledgeOps posting's sentence puts "transform data" between automating content tasks and
-integrating with APIs, which is the right order: transformation is where the
+Transforming data sits between automating content tasks and integrating with
+APIs, which is the right order: transformation is where the
 corpus stops being prose and becomes someone else's input, and the handover is
 where the accountability gets lost.
 
@@ -228,7 +227,7 @@ and look at the distribution. An even seven per cent is a design decision. One
 page at forty per cent is a bug, and nothing else in the pipeline would have
 told you.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the question.** "Every transformation drops something, so the only
 question that matters at each stage is what it dropped and who finds out. The
@@ -250,7 +249,7 @@ point: correct pipeline, complete artifact, documented schema, and a reasonable
 integrator writing `record["text"]` gets a quietly worse system. The defect is
 in the contract the pipeline never stated.
 
-**The tradeoff to volunteer.** I would not fix that by stopping the relocation,
+**The tradeoff to name.** I would not fix that by stopping the relocation,
 because the records are better with the heading as a field. The fix is a stated
 contract, a helper that does the rejoining so nobody has to remember, and a test
 that fails if the relocation changes. That is three small obligations on the
@@ -263,9 +262,9 @@ minutes and converted "89 per cent, presumably fine" into an itemised account. I
 one page had come back at forty per cent I would have had a bug, and no other
 check in the pipeline would have mentioned it.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A transformation of yours with a character-level account of
+**The work product.** A transformation of yours with a character-level account of
 each stage, and a stated contract for any field it relocates.
 
 **Three things to do, in order:**
@@ -279,7 +278,7 @@ each stage, and a stated contract for any field it relocates.
 3. Assert a record count in CI. The silently-empty failure is the only one on
    this page that nobody notices at all, and one assertion closes it.
 
-**What makes it credible rather than decorative.** `docpack`'s pipeline is real and every figure above is reproducible from it.
+**How to tell it is working.** `docpack`'s pipeline is real and every figure above is reproducible from it.
 Three outputs at 89, 99 and 5 per cent of source. A seven per cent round-trip
 gap resolved into headings and blank lines. 82 of 85 chunks with relocated
 headings, and the five-point grounding difference between rejoining the

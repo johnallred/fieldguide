@@ -1,8 +1,8 @@
 site_name: John Allred's Field Guide for Developer Education
 site_description: >-
-  A validated curriculum for documentation engineering, developer experience,
-  and KnowledgeOps roles: every concept two real job postings ask for, with a
-  golden path through each one.
+  A training manual for documentation engineering, developer education and
+  KnowledgeOps work, whatever your title: 106 concepts, each with a golden path
+  and the day-to-day work that needs it.
 site_url: https://johnallred.github.io/fieldguide/
 repo_url: https://github.com/johnallred/fieldguide
 edit_uri: edit/main/docs/
@@ -70,7 +70,7 @@ nav:
       - The KnowledgeOps path: paths/knowledgeops.md
       - The developer educator: paths/developer-educator.md
       - The writer who builds: paths/writer-who-builds.md
-      - Prove it in a weekend: paths/prove-it.md
+      - A working result in a weekend: paths/prove-it.md
       - The domain context: paths/domain-context.md
       - Prove the outcomes: paths/prove-the-outcomes.md
   - About this guide:

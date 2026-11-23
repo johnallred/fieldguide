@@ -11,8 +11,7 @@ tags: [gp, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "documentation CI, including link checking and coldstart testing of quickstarts"
+> Writing quickstarts that still work when a new developer follows them cold.
 
     "so a developer reaches first success in minutes with zero help"
 
@@ -29,11 +28,11 @@ It is also the page with the shortest half-life, for a reason worth stating
 plainly: it is the only page whose author cannot test it, because their
 machine already has everything.
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting names cold-start testing *of quickstarts* specifically, out of everything
-it could have named. That phrasing tells you they have been burned by a
-quickstart that worked for its author.
+Of everything that gets cold-start tested, quickstarts come first, and teams
+that insist on it have usually been burned by a quickstart that worked for its
+author.
 
 The deeper reason is that a quickstart makes several claims at once, and they
 fail independently. It claims the commands work from an empty environment, that
@@ -204,7 +203,7 @@ automating this page's verification rather than reviewing it.
 
 ### Time to first success
 
-The Developer Relations posting's criterion is minutes. To claim it you have to measure it, which means
+The usual criterion is minutes. To claim it you have to measure it, which means
 timing the cold-start run and publishing the number:
 
 | What to time | Why |
@@ -229,7 +228,7 @@ nobody has checked. See [time to first success](time-to-first-success.md).
 Merging them produces a page that is too long to be a quickstart and too thin
 to teach, which is the most common failure in this category.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the claims, not the page.** "A quickstart makes three separable
 claims: the commands work from empty, the output is what the page shows, and
@@ -241,7 +240,7 @@ its own output."
 their machine already has everything, so the verification has to come from a
 clean environment in CI rather than from a careful reviewer.
 
-**The tradeoff to volunteer.** Asserting output makes the quickstart brittle
+**The tradeoff to name.** Asserting output makes the quickstart brittle
 against intentional change: every deliberate behaviour change now requires a
 documentation update in the same pull request. That is the point and it is real
 friction, and on a fast-moving product you will spend time updating expected
@@ -255,9 +254,9 @@ was there from the first commit and no reader would catch it, because catching
 it requires mentally executing `head`. Drift gets all the attention; pages that
 were never self-consistent are at least as common.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A quickstart with a stated expected output, a cold-start test
+**The work product.** A quickstart with a stated expected output, a cold-start test
 that asserts it, and a published time to first success.
 
 **Three things to do, in order:**
@@ -269,7 +268,7 @@ that asserts it, and a published time to first success.
 3. Time your own quickstart from a clean environment and put the number on the
    page. If you cannot state it, you cannot claim minutes.
 
-**What makes it credible rather than decorative.** `docpack`'s
+**How to tell it is working.** `docpack`'s
 `scripts/coldstart.sh` builds a fresh virtual environment, installs the way a
 reader would, follows the tutorial literally, and asserts the exact output
 string the tutorial promises. The exact-output assertion is the part to point
@@ -281,4 +280,4 @@ of the three claims.
 - [Golden paths](golden-paths.md), the single route this implements
 - [Cold-start testing](coldstart-testing.md), how the first claim is checked
 - [Reproducible environments](reproducible-environments.md), where pinning is decided
-- [Time to first success](time-to-first-success.md), the number the Developer Relations posting asks for
+- [Time to first success](time-to-first-success.md), the number that says whether it worked

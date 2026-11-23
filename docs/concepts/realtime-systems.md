@@ -11,8 +11,7 @@ tags: [dom, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Documentation experience in graphics, simulation, robotics, or real-time systems"
+> Documenting graphics, simulation and real-time systems, where timing is part of correctness.
 
 ## What it is
 
@@ -25,11 +24,11 @@ dropped frame, and the user sees a stutter rather than a delay.
 That one property changes which numbers matter, and it is the thing documentation
 in this domain most often gets wrong.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because the metric conventions a documentation writer brings from web services
-are actively misleading here, and the KnowledgeOps posting lists four domains that all share this
-property.
+are actively misleading here, and graphics, simulation, robotics and real-time systems all share
+this property.
 
 In a web service, a slow request is a degraded request and the mean is a
 reasonable summary. In a real-time system, the mean is close to irrelevant: a
@@ -237,7 +236,7 @@ something the kernel does not offer, and this is why real-time work reaches for
 | Say what degrades when the deadline is missed | Leaving the failure mode implicit |
 | Name the required kernel or configuration | Implying stock hardware suffices |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the definition, because it is the whole thing.** "A real-time
 system is not a fast system, it is one with a deadline, and a result after the
@@ -271,9 +270,9 @@ real-time and the wrong one for anything else. No `PREEMPT_RT`, no GPU, no
 frame capture, no graphics pipeline. The reasoning about statistics and budgets
 transfers; the engineering does not, and `context` tier is the honest claim.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A deadline sweep over a workload of yours, reported as a miss
+**The work product.** A deadline sweep over a workload of yours, reported as a miss
 rate and a tail rather than an average.
 
 **Three things to do, in order:**
@@ -287,7 +286,7 @@ rate and a tail rather than an average.
    idle machine it was a third again here, and readers budget with the number
    you give them.
 
-**What makes it credible rather than decorative.** The sweep ran on this
+**How to tell it is working.** The sweep ran on this
 machine and the script is a dozen lines, so the flat median against a 30 per
 cent miss rate and the cliff between 2.0 and 1.5 ms are both reproducible.
 What is absent is the domain's actual engineering: no real-time kernel, no

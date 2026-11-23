@@ -11,8 +11,7 @@ tags: [qa, supporting]
 
 `supporting` · difficulty 3 · 5h
 
-!!! quote "Why it is on the curriculum"
-    "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
+> Writing your own content checks when an off-the-shelf linter cannot express the rule.
 
 **Prerequisites:** [Prose linting with Vale](prose-linting.md)
 
@@ -24,10 +23,10 @@ its relatives match text. Some of the most valuable documentation rules require
 front-matter field is a member of a closed vocabulary, whether the version
 mentioned in a sentence is the one in the lockfile.
 
-The phrase in the posting is "content quality automation you've built." Built,
-not configured.
+The useful phrase is "content quality automation you have built." Built, not
+configured.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because the interesting defects in a documentation corpus are structural, and
 structure is exactly what a text matcher cannot see.
@@ -41,8 +40,8 @@ silently broke seven pages of this guide.
 
 The deeper reason is that a custom linter encodes a decision. Once a rule is
 code, the convention it enforces becomes explicit, testable and arguable in a
-pull request, which is the KnowledgeOps posting's "encode standards into templates, validators
-and guided workflows rather than static documents."
+pull request, which is what it means to encode standards into templates, validators and
+guided workflows rather than static documents.
 
 ## The golden path
 
@@ -240,7 +239,7 @@ to genuinely be code on the page. It found 127 defects across seven pages on
 the day it was written, every one of which had passed a strict build, a hundred
 tests and a registry validator.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the class of rule, not the tool.** "Vale covers anything that is a
 pattern. I write my own when the rule needs a parse: validating front matter
@@ -253,7 +252,7 @@ linter without a test that proves it fires is a liability, because a future
 refactor can silently neuter it and the build stays green. Say that you write
 the failing fixture first.
 
-**The tradeoff to volunteer.** Every custom linter is code you now own, with a
+**The tradeoff to name.** Every custom linter is code you now own, with a
 false-positive rate you are responsible for, and a suppression mechanism people
 will use. A rule with widespread suppressions is a rule that is wrong, so you
 have to watch suppression counts as a signal about the rule rather than about
@@ -267,9 +266,9 @@ an afternoon of edits plus a permanent tax on contributors. Measure, read the
 findings, and be willing to conclude that the convention needs changing instead
 of the pages.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** One linter you wrote, with a test that proves it fires, and
+**The work product.** One linter you wrote, with a test that proves it fires, and
 a number: how many real defects it found on first run.
 
 **Three things to do, in order:**
@@ -279,12 +278,12 @@ a number: how many real defects it found on first run.
 2. Write the failing fixture before the rule. If you cannot construct a
    document that should fail, you do not yet know what the rule is.
 3. Write down the false-positive rate of your rule on your own corpus. That
-   number is the most credible thing you can say about a linter, and almost
+   number is the most useful thing you can know about a linter, and almost
    nobody has it.
 
-**What makes it credible rather than decorative.** A linter that has never
-caught anything proves you can write a loop. A linter with a commit history
-showing a red build followed by a real fix proves the rule is about something.
+**How to tell it is working.** A linter that has never
+caught anything is a loop. A linter with a commit history showing a red build
+followed by a real fix is a rule about something.
 `docpack` has four hand-written Vale rules, and the one worth discussing is the
 one that caught the author's own prose.
 

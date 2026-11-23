@@ -11,10 +11,7 @@ tags: [qa, core]
 
 `core` · difficulty 2 · 4h
 
-!!! note "Not a quotation (derived)"
-    Both postings name CI/CD for documentation. GitHub Actions is the most
-    common implementation of it, and the one both companies' public
-    documentation repositories use.
+> Writing and maintaining the CI workflows that build, check and publish your documentation.
 
 **Prerequisites:** [Documentation CI](documentation-ci.md)
 
@@ -28,12 +25,11 @@ The interesting problem is not the syntax. It is that the workflow file is a
 *second* definition of what the checks are, and a second definition drifts from
 the first.
 
-## Why the job asks for it
+## How this applies to your role
 
-Neither posting says "GitHub Actions" and both describe the thing it does.
-The KnowledgeOps posting asks for CI/CD builds, linting, link and code-sample validation and
-publishing; the Developer Relations posting asks for docs-as-code pipelines and documentation CI. Those
-are the steps in the file.
+A docs-as-code pipeline is CI/CD builds, linting, link and code-sample
+validation, and publishing. In most repositories you will work in, those are
+the steps in a GitHub Actions workflow file.
 
 What makes this a real engineering concern rather than configuration is the
 gap between CI and the contributor. If the gates live only in the workflow, a
@@ -279,7 +275,7 @@ Read-only at the top, elevated only in the job that publishes. A workflow with
 no `permissions:` block inherits whatever the repository default is, which on
 older repositories is write access for every job.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the contributor loop, not the YAML.** "The thing I care about in a
 docs pipeline is that a writer can run every gate locally before pushing. If
@@ -290,7 +286,7 @@ it, and that is why documentation contribution dies."
 slow cold-start check out of the fast path. Be specific that you would not make
 a writer fixing a typo wait on a fresh virtual environment.
 
-**The tradeoff to volunteer.** A single entry point makes the workflow thin and
+**The tradeoff to name.** A single entry point makes the workflow thin and
 reviewable, and it moves complexity into a Makefile or script that CI cannot
 see into. If that script is badly structured, you lose per-gate reporting in
 the Actions UI, where each step is normally its own green or red line. The
@@ -301,12 +297,11 @@ you keep both the single definition and legible output.
 to the repository and no `permissions:` block, so every step in it inherits
 write access including the ones that run third-party actions against
 contributor input. Read-only by default, elevated in the publish job only, is
-free to implement and the kind of detail that signals you have worked next to a
-security team.
+free to implement and the kind of detail a security team will thank you for.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A workflow where the gate step calls the same command a
+**The work product.** A workflow where the gate step calls the same command a
 contributor runs, with caching, least-privilege permissions, and the slow check
 in its own job.
 
@@ -319,7 +314,7 @@ in its own job.
 3. Add `permissions: contents: read` at the top of a workflow you own and see
    what breaks. Whatever breaks is a job that was quietly holding write access.
 
-**What makes it credible rather than decorative.** Anybody can paste a
+**How to tell it is working.** Anybody can paste a
 workflow. What a reviewer notices is a repository where `make check` and CI
 cannot disagree, because that is a structural decision rather than a copied
 file.

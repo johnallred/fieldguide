@@ -9,7 +9,7 @@ generated: true
 
 # The KnowledgeOps path
 
-**Who this is for.** The KnowledgeOps posting, more or less exactly.
+**Who this is for.** Someone responsible for making a knowledge base usable by AI assistants and agents.
 
 Making a corpus answerable by machines, and knowing whether it worked.
 
@@ -22,7 +22,7 @@ each step assumes the ones above it.
 
 `core` · practise it · 4h
 
-content modeling, taxonomy, and metadata
+Defining the types of content your team writes and the fields each one must carry.
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
@@ -30,7 +30,7 @@ Assumes, from outside this path: [Information architecture](../concepts/informat
 
 `core` · practise it · 3h
 
-metadata for both navigation and machine retrieval
+Tagging content so navigation, search and AI retrieval can all find the right page.
 
 Builds on, earlier in this path: Content models.
 
@@ -38,7 +38,7 @@ Builds on, earlier in this path: Content models.
 
 `core` · practise it · 4h
 
-Make knowledge AI-ready
+Structuring knowledge so AI assistants and agents can use it as reliably as people can.
 
 Builds on, earlier in this path: Content models, Metadata for navigation and retrieval.
 
@@ -46,7 +46,7 @@ Builds on, earlier in this path: Content models, Metadata for navigation and ret
 
 `core` · read it · 2h
 
-including llms.txt, MCP-accessible sources, agent skills and context kits, and evaluation sets for answer accuracy
+Publishing machine-readable entry points to your docs, such as llms.txt, for AI tools to consume.
 
 Builds on, earlier in this path: Agent-ready content.
 
@@ -54,7 +54,7 @@ Builds on, earlier in this path: Agent-ready content.
 
 `core` · practise it · 4h
 
-Optimize documentation for search (SEO and GEO) and for AI assistants and coding agents through agentready, LLMdigestible content
+Making documentation usable by coding agents as well as by search engines and people.
 
 Builds on, earlier in this path: Agent-ready content.
 
@@ -62,7 +62,7 @@ Builds on, earlier in this path: Agent-ready content.
 
 `core` · build something · 5h
 
-structure and package content for RAG, internal assistants, and agentic workflows
+Splitting content into pieces a RAG system, internal assistant or agent can retrieve on their own.
 
 Builds on, earlier in this path: Agent-ready content.
 
@@ -70,7 +70,7 @@ Builds on, earlier in this path: Agent-ready content.
 
 `core` · practise it · 4h
 
-Required by any RAG pipeline, and one posting names RAG pipelines twice.
+Turning content into vectors so it can be searched by meaning, the first step of any RAG pipeline.
 
 Builds on, earlier in this path: Chunking strategies.
 
@@ -78,7 +78,7 @@ Builds on, earlier in this path: Chunking strategies.
 
 `core` · build something · 5h
 
-The retrieval half of a RAG pipeline, named as a way to stand out.
+Storing and searching embedded content, alone or alongside keyword search: the retrieval half of RAG.
 
 Builds on, earlier in this path: Embeddings.
 
@@ -86,7 +86,7 @@ Builds on, earlier in this path: Embeddings.
 
 `core` · build something · 8h
 
-Ways to stand out: experience building RAG pipelines, AI assistants, MCP servers
+Building and maintaining pipelines that answer questions from your documentation.
 
 Builds on, earlier in this path: Chunking strategies, Vector stores and hybrid search.
 
@@ -94,7 +94,7 @@ Builds on, earlier in this path: Chunking strategies, Vector stores and hybrid s
 
 `core` · practise it · 4h
 
-prompting, retrieval and grounding, output evaluation
+Making AI answers cite and stay within the documentation they draw on.
 
 Builds on, earlier in this path: RAG pipelines.
 
@@ -102,7 +102,7 @@ Builds on, earlier in this path: RAG pipelines.
 
 `core` · build something · 8h
 
-structure and package content for RAG, internal assistants, and agentic workflows
+Building and feeding assistants that answer questions from your documentation.
 
 Builds on, earlier in this path: RAG pipelines, Grounding and citation.
 
@@ -110,7 +110,7 @@ Builds on, earlier in this path: RAG pipelines, Grounding and citation.
 
 `core` · build something · 6h
 
-evaluation sets for answer accuracy
+Building question sets that measure whether retrieval finds the right content.
 
 Builds on, earlier in this path: RAG pipelines.
 
@@ -118,7 +118,7 @@ Builds on, earlier in this path: RAG pipelines.
 
 `core` · build something · 6h
 
-prompting, retrieval and grounding, output evaluation
+Measuring whether LLM output in your content workflows is accurate and usable.
 
 Builds on, earlier in this path: Grounding and citation, Evaluating retrieval.
 
@@ -126,7 +126,7 @@ Builds on, earlier in this path: Grounding and citation, Evaluating retrieval.
 
 `core` · build something · 5h
 
-Ways to stand out: experience building RAG pipelines, AI assistants, MCP servers
+Exposing documentation and tools to AI assistants through Model Context Protocol servers.
 
 Builds on, earlier in this path: Agent-ready content.
 
@@ -134,7 +134,7 @@ Builds on, earlier in this path: Agent-ready content.
 
 `core` · practise it · 4h
 
-agent skills and context kits
+Packaging instructions and context so agents can do a task the way your team does it.
 
 Builds on, earlier in this path: Model Context Protocol.
 
@@ -144,7 +144,7 @@ Assumes, from outside this path: [Templates and scaffolding](../concepts/templat
 
 `core` · build something · 6h
 
-structure and package content for RAG, internal assistants, and agentic workflows
+Structuring content so agents can carry out multi-step tasks from it.
 
 Builds on, earlier in this path: Model Context Protocol, Agent skills and context kits.
 
@@ -152,7 +152,7 @@ Builds on, earlier in this path: Model Context Protocol, Agent skills and contex
 
 `core` · build something · 5h
 
-AI answer quality
+Measuring how often an AI assistant answers correctly from your documentation.
 
 Builds on, earlier in this path: Output evaluation.
 

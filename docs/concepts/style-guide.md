@@ -11,8 +11,7 @@ tags: [ia, supporting]
 
 `supporting` · difficulty 1 · 2h
 
-!!! quote "Why it is on the curriculum"
-    "You're a writer who builds: as comfortable in Git, CI, or Python as in a style guide, and fluent with LLMs in daily work"
+> Keeping voice and terminology consistent across many authors, and enforcing it in the same tools as code.
 
 **Prerequisites:** [Taxonomy and controlled vocabularies](taxonomy.md)
 
@@ -32,12 +31,11 @@ are bad at it and it uses up the review attention that
 explain, how much, in what order, when an example beats a paragraph. No linter
 will ever check it.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting's phrasing is "as comfortable in Git, CI, or Python as in a style
-guide", which is a claim about range rather than about style guides
-specifically. The expectation is that you can both write the rules and
-implement them.
+The work asks you to be as comfortable in Git, CI or Python as in a style
+guide, which is a claim about range rather than about style guides
+specifically. You write the rules and you implement them.
 
 The thing that distinguishes experience here is knowing which rules are worth
 encoding and being willing to say that most style guides are too long to be
@@ -217,7 +215,7 @@ If a rule can be enforced, enforce it and delete the prose about it. What
 remains in writing should be only the part that needs human judgment, and that
 is genuinely short.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the split.** "A style guide is two documents. The mechanical half,
 terminology, acronyms, heading case, belongs in a linter, because humans
@@ -232,7 +230,7 @@ wrote three rules and one of them silently matched nothing, because Vale's
 start of a sentence. Nothing reported it. So every rule ships with an example
 that must fail.
 
-**The tradeoff to volunteer.** Encoding a rule makes it rigid. A terminology
+**The tradeoff to name.** Encoding a rule makes it rigid. A terminology
 rule banning "dataset" will flag a direct quotation from a third-party API
 genuinely called `dataset`, so you need a suppression mechanism, and then you
 have to watch how often it is used, because widespread suppression means the
@@ -244,9 +242,9 @@ over-narrow token all produce a rule that fires on nothing, and a corpus with
 no findings looks identical to a corpus with no enforcement. A rule you have
 not seen fail is a rule you should not count.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A `styles/` directory of rules you wrote, each with a
+**The work product.** A `styles/` directory of rules you wrote, each with a
 fixture, and a short editorial document that contains only what the rules
 cannot.
 
@@ -260,7 +258,7 @@ cannot.
 3. For every rule you already have, write a line that should fail and check it
    does. Expect at least one surprise.
 
-**What makes it credible rather than decorative.** `docpack` carries four
+**How to tell it is working.** `docpack` carries four
 hand-written Vale rules with terminology as errors and style as warnings, and
 one of them caught the author's own hedge word in the README. That is the
 story to tell: not that the rules exist, but that one fired on the person who

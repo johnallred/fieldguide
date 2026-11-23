@@ -1,83 +1,78 @@
 ---
 title: Provenance
-summary: Every concept prints the posting line that put it on the list, and the limits of that evidence are stated rather than implied.
+summary: Every concept names the day-to-day work that needs it, and the limits of that judgement are stated rather than implied.
 diataxis: explanation
 audience: new-user
 ---
 
 # Provenance
 
-Every concept in this guide prints the posting language that put it on the
-list. The line appears on every row of the [coverage matrix](../coverage.md)
-and at the top of every concept page, and `fieldguide check` requires one on
-every concept.
+Every concept in this guide prints a line naming the work that needs it. The
+line appears on every row of the [coverage matrix](../coverage.md) and at the
+top of every concept page, and `fieldguide check` requires one on every
+concept.
 
 ## Why this is worth the clutter
 
-A curriculum assembled from job postings has an obvious failure mode: the
-author's existing interests quietly become requirements. The posting says
-"information architecture", and forty pages later the guide is teaching a
-specific taxonomy methodology the author happens to like, with the posting's
-authority borrowed for all of it.
+A curriculum has an obvious failure mode: the author's existing interests
+quietly become requirements. The work involves "information architecture", and
+forty pages later the guide is teaching a specific taxonomy methodology the
+author happens to like, with the work's authority borrowed for all of it.
 
 Printing the line that justifies each concept makes that move visible. A reader
 who disagrees with a concept's place on the list can see exactly what it rests
 on, rather than taking the curriculum's word for it.
 
-## The limitation, stated plainly
+## Where the list comes from
 
-**The postings themselves are not reproduced here and are no longer on hand.**
-The lines recorded against each concept are phrases taken down while reading
-them, so treat them as near-verbatim rather than certified. Where a concept is
-here because the work named in a posting is impossible without it, the line
-says so in those terms rather than pretending to be a quotation.
+The scope was built from descriptions of this work as several different teams
+do it: developer relations, developer education, cloud training labs and
+KnowledgeOps. The titles differed and the work overlapped heavily, which is the
+premise of the whole guide.
 
-That distinction used to be carried by a tag on every entry. It is now carried
-by the wording of the line itself, which is less rigorous and worth knowing
-about: a reader can no longer filter the list down to only what an employer
-literally asked for.
+Some concepts are named directly in that work: docs-as-code pipelines, Git
+authoring, documentation CI, content modelling, `llms.txt`, evaluation sets.
+Others are here because the named work is impossible without them, and their
+lines say so in those terms. Diátaxis is one of those, and so is every
+embedding concept underneath RAG.
 
-## What a second pass against the source text changed
+## What a second pass changed
 
 The first version of this registry was built from notes rather than from the
-postings themselves, and it is worth recording what happened when the postings
-were read again in full, because it is the best available argument for tracking
-where a concept came from at all.
+source descriptions, and it is worth recording what happened when the sources
+were read again in full, because it is the best available argument for
+tracking where a concept came from at all.
 
-**Fifty-one concepts were mislabelled.** Most were understated: the postings
-name docs-as-code pipelines, Git authoring, Markdown and RST, Sphinx, MkDocs,
-Docusaurus, knowledge architecture, Vale, llms.txt, documentation analytics,
-the sample-app gallery and the AI software stack in so many words, and all of
-those had been recorded as inferences.
+**Fifty-one concepts were mislabelled.** Most were understated: docs-as-code
+pipelines, Git authoring, Markdown and RST, Sphinx, MkDocs, Docusaurus,
+knowledge architecture, Vale, `llms.txt`, documentation analytics, the
+sample-app gallery and the AI software stack are all named directly in the
+work, and all of those had been recorded as inferences.
 
 **Eight were overstated in the other direction**, which matters more.
 Localization, accessibility, versioned documentation, OpenAPI, single-sourcing,
-screencasts, workshops and assessment design had been recorded as things a
-posting required. No posting mentions any of them. They are here because one
-person thinks the work needs them, and no employer said so.
+screencasts, workshops and assessment design had been recorded as things the
+work explicitly requires. They are here because one person thinks the work
+needs them, and their lines now say so.
 
 **Twenty-three concepts were missing entirely**, including three that are
-`core`: technical writing as a craft, which the postings list as a minimum
-qualification; reading code to verify accuracy; and judging where AI can be
-trusted.
+`core`: technical writing as a craft, which everything else rests on; reading
+code to verify accuracy; and judging where AI can be trusted.
 
 The curriculum did not get more rigorous, it got more honestly labelled, and
 the eight demotions are the part worth dwelling on. An unchecked registry
-drifts toward whatever the author already believed, with a posting's authority
-attached.
+drifts toward whatever the author already believed.
 
 ## How to read a weak claim
 
-A concept resting on an inference rather than a quotation is not thereby
-unimportant. Diátaxis is one of them, and it is the single most useful thing on
-this list: no posting names it, and they describe at length the problem it
-solves. Markdown is another, and you will not get through a day in any of these
-roles without it.
+A concept resting on an inference is not thereby unimportant. Diátaxis is one
+of them, and it is the single most useful thing on this list: few teams name
+it, and all of them describe at length the problem it solves. Markdown is
+another, and you will not get through a day of this work without it.
 
-What the line tells you is **where the authority comes from**: an employer's
-words, or one person's judgement about what the work requires. Decide how much
-that is worth to you, which is a decision you can only make if somebody tells
-you which it is.
+What the line tells you is **what the concept is for**. Whether that earns your
+time is a decision only you can make, and you can only make it if somebody
+tells you.
 
 ## Related
 

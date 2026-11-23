@@ -11,8 +11,7 @@ tags: [dom, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "including inference microservices and the agentic toolkit"
+> Documenting how models are served as microservices, and the agent tooling around them.
 
 **Leads to:** [Reading an AI software stack](ai-stack.md)
 
@@ -22,12 +21,12 @@ Putting a trained model behind a network interface so other services can use
 it. The model is fixed; everything interesting is the serving layer: batching,
 queueing, concurrency, warm-up, and which number you promise.
 
-The Developer Relations posting's phrase is "inference microservices", which is the current packaging:
+"Inference microservices" is the current packaging:
 the model, a runtime, a server and a health check shipped as a container with
 an endpoint. The documentation obligations follow from that being an operable
 service rather than a library.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because the thing a reader has to get right is a tradeoff, and tradeoffs are
 where documentation either earns its keep or misleads at scale.
@@ -193,7 +192,7 @@ dashboard blames the network.
 Preprocessing is the one to raise in a review. It runs per request, is usually
 single-threaded Python, and is absent from every published figure.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the two numbers moving in opposite directions.** "An inference
 service has a throughput number and a latency number and batching trades one
@@ -221,9 +220,9 @@ correctly about the tradeoff and to know which questions to ask, and it is not
 operational experience of running inference at scale. For a documentation role
 I would rather state that boundary than imply the other thing.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A latency-throughput sweep on whatever runtime you have, with
+**The work product.** A latency-throughput sweep on whatever runtime you have, with
 queue wait included and the knee identified.
 
 **Three things to do, in order:**
@@ -237,7 +236,7 @@ queue wait included and the knee identified.
 3. Time the first request after a restart against the hundredth. The ratio
    decides whether autoscaling is viable, and it is rarely documented.
 
-**What makes it credible rather than decorative.** The measurements ran against
+**How to tell it is working.** The measurements ran against
 ONNX Runtime 1.29 with a 33.6 MB two-matmul model on this machine's CPU, and
 the sweep is a short script. What is absent is everything operational: no GPU,
 no Triton or comparable server, no containers, no autoscaling, no real traffic

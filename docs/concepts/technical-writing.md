@@ -11,7 +11,7 @@ tags: [craft, core]
 
 `core` · difficulty 2 · 8h
 
-> Strong technical writing and information architecture skills for developer documentation
+> Writing developer documentation a reader can act on without asking you a question.
 
 
 **Leads to:** [Giving architecture owners implementation feedback](implementation-feedback.md)
@@ -25,12 +25,12 @@ whether the reader does the right thing next.
 It is a craft in the specific sense that it improves with deliberate practice on
 feedback, and that people who are good at it can say *why* a sentence is wrong.
 
-## Why the job asks for it
+## How this applies to your role
 
-Both postings list it as a minimum qualification. The Developer Relations posting asks for "strong
-technical writing" in the same breath as information architecture; the KnowledgeOps posting opens
-with "You're a writer who builds" and wants eight years in technical writing or
-developer documentation.
+Everything else in this guide rests on it. Strong technical writing goes hand
+in hand with information architecture, and the people who do this work best
+are usually writers who build: technical writers and developer-documentation
+specialists who also own the tooling.
 
 This guide's first version covered pipelines, retrieval, taxonomy and validators
 and had no page for writing well. That was its worst gap, and the reason it was
@@ -39,7 +39,7 @@ legible.** A chunker either works or does not. A link checker either fails the
 build or does not. Prose quality has no test suite, so it quietly becomes the
 thing nobody budgets for while everyone agrees it matters.
 
-On a Tuesday this is less glamorous than the postings suggest. An engineer hands
+On a Tuesday this is less glamorous than it sounds. An engineer hands
 you four paragraphs about a new flag. The paragraphs are accurate. They also
 open with implementation history, use three names for the same thing, bury the
 one command a reader needs in the middle of the third sentence, and never say
@@ -47,7 +47,7 @@ what happens if you get it wrong. Turning that into a page someone can act on,
 in twenty minutes, without losing anything true, is the job. You will do it
 several times a day.
 
-The second reason it is `core`: in a role where you build the validators, your
+The second reason it is `core`: when you are the one building the validators, your
 own writing is the reference implementation. A style rule you cannot follow is a
 style rule the team will litigate.
 
@@ -154,8 +154,7 @@ for choosing a value, and a statement of what goes wrong.
 
 Note that the rewrite is not merely shorter. The history moved to an explanation
 page rather than being destroyed, which is [Diátaxis](diataxis.md) doing the
-work. Keep both files: a before-and-after you can show is the most persuasive
-artifact in this whole category.
+work. Keep both files: a before-and-after is the most useful thing to share with whoever wrote the original.
 
 ## Reference
 
@@ -206,9 +205,9 @@ link between this page and the automation half of the job.
 | Simplification | Never make it less true to make it shorter |
 | Explaining everything | An explanation inside a how-to guide is a defect |
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Do not call your writing clear and
+**How to explain it.** Do not call your writing clear and
 concise; everyone does. Describe a specific edit and its cost. "The page
 documented a flag accurately in 150 words of history. I moved the history to an
 explanation page, put the default in the first sentence, added a table for
@@ -216,13 +215,13 @@ choosing a value and a line on what happens if you set it too high. The reader
 reaches the answer in one sentence instead of five, and nothing true was lost."
 
 **The follow-up is usually "how do you get engineers to write documentation".**
-The answer that lands is that mostly you do not, and designing around that is
+The honest answer is that mostly you do not, and designing around that is
 the skill. You take their accurate, badly organised paragraph as a *source*
 rather than a draft, and you ask them to review for accuracy rather than for
 style. An engineer will happily confirm a number is right. They will not
 happily restructure a page.
 
-**The tradeoff to volunteer.** Editing someone else's writing hard enough to
+**The tradeoff to name.** Editing someone else's writing hard enough to
 make it usable costs political capital every time, and the cost is highest with
 the people whose expertise you most need. There is a real version of this job
 where you keep every contributor happy and the documentation stays bad. The
@@ -237,35 +236,35 @@ page destroys your ability to judge it. Once you understand the system, the gap
 you left is invisible to you. Nothing fixes that from the inside, which is the
 real argument for [cold-start testing](coldstart-testing.md) and for watching
 someone new follow your page without helping them. Saying that connects the
-craft to the automation, which is the whole pitch of both roles.
+craft to the automation, which is what this whole field is about.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A before-and-after, with the reasoning. Not a writing sample:
-a sample shows you can write, which is table stakes. An edit shows you can
-diagnose.
+**The work product.** A before-and-after, with the reasoning. Not just a finished
+page: a page shows the writing, and an edit shows the diagnosis, which is the
+part a team can learn from.
 
 **Three things to do, in order:**
 
 1. **Run the golden path on a real page.** Find a genuinely bad page in a
    project you know, rewrite it with the four passes, and write three sentences
-   on what each pass removed. Twenty minutes, and the highest-value portfolio
-   item on this page.
+   on what each pass removed. Twenty minutes, and the most useful habit on this
+   page.
 2. **Encode one of your own rules as a linter.** Take a habit you care about,
    hedge words or synonym drift, and write the [Vale rule](custom-linters.md). A
-   writer who ships their style guide as code is making precisely the argument
-   both postings are hiring for.
+   writer who ships their style guide as code has made the standard impersonal,
+   which is what makes it stick.
 3. **Watch someone follow one of your pages without helping them.** Note where
-   they stop, then fix the page rather than explaining it. That note is more
-   convincing about your judgement than any finished page. Predict where they
+   they stop, then fix the page rather than explaining it. That note teaches
+   you more about your judgement than any finished page. Predict where they
    will stop before you watch. Being wrong about that is the point of doing it
    with a person rather than from the page.
 
-**What makes it credible rather than decorative.** Anyone can produce a polished
-page. The signal is being able to say what is wrong with a page and in what
-order you would fix it, and having an example where you were the one who was
-wrong. If the "before" is always someone else's writing, that is a smaller claim
-than one where it is yours.
+**How to tell it is working.** Readers act on the page without asking a question,
+and support questions about it stop. Underneath that is a habit: being able to
+say what is wrong with a page and in what order you would fix it, including
+pages where you were the one who was wrong. If the "before" is always someone
+else's writing, the habit is only half formed.
 
 ### How this would be demonstrated elsewhere
 
@@ -289,11 +288,11 @@ Then the reverse: take a page that does not work, and fix it without adding
 words. The constraint is the whole exercise. Most bad documentation is bad by
 addition, and the instinct to explain more is the instinct to resist.
 
-**What competence looks like, in evidence someone else can see.**
+**What competence looks like.**
 
 | Evidence | Why it carries weight |
 |---|---|
-| A diff that shortens a page and improves it | The rarest and most convincing artifact |
+| A diff that shortens a page and improves it | The rarest and most valuable edit |
 | An author thanking you for a cut | They had to agree, which is the test |
 | A page whose support questions stopped | Indirect, and the only outcome measure |
 | A style decision you reversed, with the reason | Shows the judgment is live rather than inherited |

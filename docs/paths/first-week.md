@@ -9,7 +9,7 @@ generated: true
 
 # The first week
 
-**Who this is for.** Someone who has just taken one of these roles and needs to be useful by Friday.
+**Who this is for.** Someone who has just started in this kind of work and needs to be useful by Friday.
 
 The shortest route to shipping a documentation change with confidence.
 
@@ -22,25 +22,25 @@ each step assumes the ones above it.
 
 `core` · practise it · 8h
 
-Strong technical writing and information architecture skills for developer documentation
+Writing developer documentation a reader can act on without asking you a question.
 
 ## 2. [Treating docs, setup and samples as one product](../concepts/docs-as-product.md)
 
 `core` · practise it · 3h
 
-Treats setup, runnable samples, and docs as one product
+Treating setup, runnable samples and documentation as one product the developer experiences.
 
 ## 3. [Docs-as-code](../concepts/docs-as-code.md)
 
 `core` · read it · 2h
 
-Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing
+Running documentation through Git, CI builds, linting, link and sample checks, and automated publishing.
 
 ## 4. [Markdown and its dialects](../concepts/markdown.md)
 
 `core` · read it · 2h
 
-Markdown/RST; Git, Markdown or MDX, and doc build pipelines
+Writing in Markdown every day, and knowing which dialect your build pipeline actually speaks.
 
 Builds on, earlier in this path: Docs-as-code.
 
@@ -48,7 +48,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 `core` · practise it · 4h
 
-Hands-on docs-as-code experience: Git, pull request review, Markdown/RST, static site generators
+Writing in Git: branches, pull requests and review, in Markdown or RST, built by a static site generator.
 
 Builds on, earlier in this path: Docs-as-code.
 
@@ -56,7 +56,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 `core` · read it · 2h
 
-The dominant framework for documentation structure. Neither posting names it; both describe the problem it solves.
+Deciding whether a page is a tutorial, a how-to, reference or explanation, and keeping it to one of them.
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
@@ -64,7 +64,7 @@ Assumes, from outside this path: [Information architecture](../concepts/informat
 
 `core` · practise it · 3h
 
-static site generators (Sphinx, MkDocs, Docusaurus, or similar)
+Choosing, configuring and living with the generator that turns your source into a site.
 
 Builds on, earlier in this path: Markdown and its dialects.
 
@@ -72,7 +72,7 @@ Builds on, earlier in this path: Markdown and its dialects.
 
 `core` · practise it · 4h
 
-static site generators (Sphinx, MkDocs, Docusaurus, or similar)
+Building and maintaining a documentation site on MkDocs with the Material theme.
 
 Builds on, earlier in this path: Choosing a static site generator.
 
@@ -80,7 +80,7 @@ Builds on, earlier in this path: Choosing a static site generator.
 
 `core` · read it · 2h
 
-link checking
+Catching broken links before readers do, in CI and on the published site.
 
 Builds on, earlier in this path: Docs-as-code.
 
@@ -88,6 +88,6 @@ Builds on, earlier in this path: Docs-as-code.
 
 `core` · practise it · 4h
 
-documentation CI
+Running automated checks on every documentation change before it merges.
 
 Builds on, earlier in this path: Docs-as-code, Git authoring workflows for writers.

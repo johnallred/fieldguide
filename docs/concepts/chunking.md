@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 3 · 5h
 
-> structure and package content for RAG, internal assistants, and agentic workflows
+> Splitting content into pieces a RAG system, internal assistant or agent can retrieve on their own.
 
 
 **Prerequisites:** [Agent-ready content](agent-ready-content.md)
@@ -27,10 +27,10 @@ decides what an assistant can possibly know in one answer.
 The entire difficulty is that **splitting destroys context**, and the context it
 destroys is usually the thing that made the text findable.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting asks you to "structure and package content for RAG", which is this. It
-is the lowest-level decision in the whole AI-ready stack and the one that
+Structuring and packaging content for RAG comes down to this. It is the
+lowest-level decision in the whole AI-ready stack and the one that
 constrains everything above it: no reranker recovers information the chunker
 threw away.
 
@@ -420,9 +420,9 @@ section changes only for the section you edited.
 On a corpus of a few hundred pages that is the difference between re-embedding
 everything on each commit and re-embedding three chunks.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the thing the window destroys
+**How to explain it.** Lead with the thing the window destroys
 and the measured result. "Fixed-size windows split tables from their headers and
 drop the heading that said what the text was about. On a five-query test against
 one configuration page, the heading-aware chunker routed every query to the
@@ -460,9 +460,9 @@ information architecture problem one layer up, which is why
 [Diátaxis](diataxis.md) turned out to be the most useful metadata field anyone
 had.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** Two chunkers and a scored comparison. The comparison is what
+**The work product.** Two chunkers and a scored comparison. The comparison is what
 makes it an argument rather than an opinion.
 
 **Three things to do, in order:**
@@ -477,10 +477,10 @@ makes it an argument rather than an opinion.
    enough to be informative. Publish the number including the cases you lose;
    see [retrieval evaluation](retrieval-evaluation.md).
 
-**What makes it credible rather than decorative.** Everyone in this field can describe heading-aware
-chunking. A repository with both implementations, a fence-bug test, and a scored
-comparison on reader-phrased queries demonstrates that you measured rather than
-adopted the consensus.
+**How to tell it is working.** Both implementations kept side by side, a
+fence-bug test, and a scored comparison on reader-phrased queries. When a
+chunking change is decided by that score rather than by consensus, it is
+working.
 
 ## Related
 

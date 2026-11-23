@@ -11,7 +11,7 @@ tags: [craft, core]
 
 `core` · difficulty 2 · 3h
 
-> Turning documentation, standards, and tribal knowledge into tooling, templates, and self-service paths
+> Getting tribal knowledge out of experts' heads and into tooling, templates and self-service paths.
 
 
 **Leads to:** [Playbooks and decision guides](playbooks.md), [Working with engineers as sources](working-with-engineers.md)
@@ -26,16 +26,17 @@ experience it as knowledge. It feels like common sense.
 The work is an interview technique plus a judgement about what shape the result
 should take, and the second part is where most of the value is.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names it twice. Once in the framing: "turning documentation, standards,
-and tribal knowledge into tooling, templates, and self-service paths, so fewer
-people have to ask how do I". Once as a responsibility: "Capture tribal
-knowledge from engineering, product, and operations, and turn it into playbooks,
-decision guides, and self-service paths".
+It shows up in two forms. One is the overall goal: turning documentation,
+standards and tribal knowledge into tooling, templates and self-service paths,
+so fewer people have to ask "how do I". The other is the day-to-day
+responsibility: capturing tribal knowledge from engineering, product and
+operations, and turning it into playbooks, decision guides and self-service
+paths.
 
-Notice what the sentences have in common. Neither says "write it down". Both
-specify an *output form*, and none of the forms is a page. That is the distinctive thing about this role, and the thing most technical
+Notice what the two have in common. Neither says "write it down". Both
+specify an *output form*, and none of the forms is a page. That is the distinctive thing about this work, and the thing most technical
 writers get wrong. The deliverable for tribal knowledge is often a template, a
 validator, or a decision tree. The knowledge in question is usually a
 judgement rather than a fact, and a page describing a judgement gets read once
@@ -50,7 +51,7 @@ four questions in order, each narrowing the choice, ending in one answer and the
 reason. That is the same knowledge and a different artifact, and only one of
 them stops the questions.
 
-The second reason this matters: the knowledge is **the thing the role is
+The second reason this matters: losing the knowledge is **the thing the work is
 protecting against**. A platform whose operational knowledge lives in four
 people's heads is one reorganisation away from losing it.
 
@@ -247,7 +248,7 @@ a document and a captured claim.
 | A convention people keep getting wrong | A [template](templates-scaffolding.md) |
 | A number that drifts | A [freshness check](freshness-monitoring.md) on the page |
 
-The fourth row is the one that distinguishes this role. If the judgement can be
+The fourth row is the one that distinguishes this work. If the judgement can be
 computed, **the right output is code, not prose.** If the tutorial's batch size
 is wrong for most workloads, the strongest fix is changing the default and
 warning on the bad combination, and the page becomes an explanation of a safe
@@ -275,9 +276,9 @@ default rather than a warning about a dangerous one.
 | No provenance | In two years nobody knows whether it is still true |
 | Interviewing one person | You have captured one person's opinion as doctrine |
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Name the output form and why you chose
+**How to explain it.** Name the output form and why you chose
 it. "An engineer was being asked monthly which batch size to use. The page that
 existed listed the options without ranking them, so I built a decision guide
 with the four questions she actually asks, in order, plus the failure modes and
@@ -294,7 +295,7 @@ is not, so scope is your main lever. Beyond that: write the draft wrong on
 purpose and send it, because experts who will not compose will happily correct,
 and a wrong draft generates a faster response than a request for information.
 
-**The tradeoff to volunteer.** Extraction takes the expert's time, and the people
+**The tradeoff to name.** Extraction takes the expert's time, and the people
 with the most tribal knowledge are the most interrupted people on the team. You
 are asking for the scarcest resource in the building to reduce demand on itself,
 which is a good trade and an unobvious one. The way to make it land is to lead
@@ -305,13 +306,12 @@ three times a month, let me take thirty minutes and make it stop."
 is usually that it is a judgement with exceptions, which is genuinely hard to
 write down and easy to write down badly. A confidently wrong decision guide is
 worse than no guide, because people follow it. This is why question four exists
-and why provenance is non-negotiable. Saying that demonstrates you understand
-why the knowledge was not already written down, which is a more sophisticated
+and why provenance is non-negotiable. Understanding that is understanding why the knowledge was not already written down, which is a more sophisticated
 position than assuming nobody got round to it.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A decision guide with a named source and a date, for a question
+**The work product.** A decision guide with a named source and a date, for a question
 that genuinely recurred. Not an overview.
 
 **Three things to do, in order:**
@@ -321,12 +321,13 @@ that genuinely recurred. Not an overview.
    the knowledge is not a fact.
 2. **Count the interruptions before and after.** Ask the expert, a month later,
    whether the question stopped. That number is the whole argument, and it is
-   what the KnowledgeOps posting means by "measurable reductions in support load".
+   what "measurable reductions in support load" means at the smallest scale.
 3. **Find one case where the answer was code.** A judgement that could be a
    default, a warning, or a validator. Propose it. Being the documentation person
-   who argues for changing a default rather than documenting it is memorable.
+   who argues for changing a default rather than documenting it changes how
+   engineers bring problems to you.
 
-**What makes it credible rather than decorative.** Everyone in this field says they interview subject
+**How to tell it is working.** Everyone in this field says they interview subject
 matter experts. A decision guide with four ordered questions, an exception, a
 failure table and a named source is specific enough to be checked, and "she
 stopped getting asked" is the only outcome that matters.

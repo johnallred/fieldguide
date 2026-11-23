@@ -22,13 +22,13 @@ each step assumes the ones above it.
 
 `core` · practise it · 4h
 
-Information architecture skills: content modeling, taxonomy, and metadata for both navigation and machine retrieval
+Deciding how content is modelled, classified and tagged so people can navigate it and machines can retrieve it.
 
 ## 2. [Diátaxis](../concepts/diataxis.md)
 
 `core` · read it · 2h
 
-The dominant framework for documentation structure. Neither posting names it; both describe the problem it solves.
+Deciding whether a page is a tutorial, a how-to, reference or explanation, and keeping it to one of them.
 
 Builds on, earlier in this path: Information architecture.
 
@@ -36,7 +36,7 @@ Builds on, earlier in this path: Information architecture.
 
 `core` · practise it · 4h
 
-content modeling, taxonomy, and metadata
+Defining the types of content your team writes and the fields each one must carry.
 
 Builds on, earlier in this path: Information architecture.
 
@@ -44,7 +44,7 @@ Builds on, earlier in this path: Information architecture.
 
 `core` · practise it · 3h
 
-content modeling, taxonomy, and metadata
+Agreeing the terms content is classified by, and keeping that vocabulary closed and consistent.
 
 Builds on, earlier in this path: Content models.
 
@@ -52,7 +52,7 @@ Builds on, earlier in this path: Content models.
 
 `core` · practise it · 3h
 
-metadata for both navigation and machine retrieval
+Tagging content so navigation, search and AI retrieval can all find the right page.
 
 Builds on, earlier in this path: Content models.
 
@@ -60,7 +60,7 @@ Builds on, earlier in this path: Content models.
 
 `supporting` · read it · 2h
 
-as comfortable in Git, CI, or Python as in a style guide
+Keeping voice and terminology consistent across many authors, and enforcing it in the same tools as code.
 
 Builds on, earlier in this path: Taxonomy and controlled vocabularies.
 
@@ -68,7 +68,7 @@ Builds on, earlier in this path: Taxonomy and controlled vocabularies.
 
 `supporting` · practise it · 3h
 
-Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows
+Encoding security guidance into templates, validators and workflows rather than static pages.
 
 Builds on, earlier in this path: Style guides and terminology management.
 
@@ -76,7 +76,7 @@ Builds on, earlier in this path: Style guides and terminology management.
 
 `supporting` · practise it · 3h
 
-Neither posting mentions single-sourcing. The mechanism behind every claim about scaling documentation across products.
+Writing a fact once and reusing it wherever it appears, so documentation scales across products.
 
 Builds on, earlier in this path: Content models.
 
@@ -84,7 +84,7 @@ Builds on, earlier in this path: Content models.
 
 `supporting` · practise it · 3h
 
-automate the content lifecycle with LLMs: drafting, updating, auditing
+Running content from draft to update to audit to retirement, increasingly with LLM help at each stage.
 
 Builds on, earlier in this path: Content models.
 
@@ -92,7 +92,7 @@ Builds on, earlier in this path: Content models.
 
 `supporting` · practise it · 3h
 
-use the data to decide what to build, fix, or retire
+Deciding what to retire, and removing it without breaking what links to it.
 
 Builds on, earlier in this path: Content lifecycle and governance.
 
@@ -100,7 +100,7 @@ Builds on, earlier in this path: Content lifecycle and governance.
 
 `supporting` · practise it · 3h
 
-makes documentation discoverable and usable by both developers and AI assistants
+Making sure developers and AI assistants can both find and use the page they need.
 
 Builds on, earlier in this path: Metadata for navigation and retrieval.
 
@@ -108,7 +108,7 @@ Builds on, earlier in this path: Metadata for navigation and retrieval.
 
 `core` · practise it · 4h
 
-Capture tribal knowledge from engineering, product, and operations, and turn it into playbooks, decision guides, and self-service paths
+Turning tribal knowledge from engineering, product and operations into playbooks and decision guides.
 
 Assumes, from outside this path: [Extracting tribal knowledge](../concepts/sme-interviews.md).
 
@@ -116,6 +116,6 @@ Assumes, from outside this path: [Extracting tribal knowledge](../concepts/sme-i
 
 `core` · build something · 6h
 
-Collaborate with documentation leads on knowledge architecture
+Working with documentation leads on how knowledge is organised across products, teams and sources.
 
 Builds on, earlier in this path: Information architecture.

@@ -11,7 +11,7 @@ tags: [ai, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-> site navigation, and a crawlable, agent-ready front door
+> Making sure crawlers and agents can reach and read every page, starting from the front door.
 
 
 **Prerequisites:** [SEO for documentation](seo-for-docs.md)
@@ -23,14 +23,14 @@ content in the response. The dull precondition underneath
 [SEO](seo-for-docs.md), [GEO](geo.md), [llms.txt](llms-txt.md) and every
 retrieval system: **none of them work on a page nobody can fetch.**
 
-The Developer Relations posting's phrase "front door" is the useful part. It means there is an entry
+The phrase "front door" is the useful part. It means there is an entry
 point a machine arriving with no context can start from.
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting names it in the role summary, alongside site navigation. It is listed as
-something the role owns rather than as a qualification, which tells you it is
-operational work: redirects, sitemaps, render modes, robots rules.
+Crawlability usually sits with whoever owns site navigation. It is something
+you own rather than something you know, which tells you it is operational work:
+redirects, sitemaps, render modes, robots rules.
 
 What makes this `supporting` rather than `core` is that it is mostly checks
 rather than judgement. It earns a page because **it is the failure that makes
@@ -447,7 +447,7 @@ it, which is the classic way a page you wanted removed stays listed forever.
 | Reference it from `robots.txt` | The only discovery mechanism that needs no submission |
 | Split above 50,000 URLs | The per-file limit |
 
-### The front door, in the Developer Relations posting's sense
+### The front door, in the developer-relations sense
 
 A machine arriving with no context needs somewhere to start:
 
@@ -477,9 +477,9 @@ The last one is the nastiest in enterprise documentation: an authenticated page
 returns a login form with a 200 status, so a crawler indexes the login page and
 a retrieval system embeds it.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the silence. "The failures
+**How to explain it.** Lead with the silence. "The failures
 here are almost all invisible from a browser. The one that cost us a quarter was
 a client-rendered API reference: a fetch returned an empty div, so every chunk
 and every embedding for those pages was built from nothing and nothing raised an
@@ -492,10 +492,10 @@ generated, never hand-written."
 that the work overlaps and the stakes changed. Being unfetchable used to cost
 you search traffic, which somebody else measured. It now also silently poisons
 your retrieval corpus, your llms.txt and your assistant, and those are yours.
-The check belongs with whoever owns the machine-facing artifacts, which in both
-these postings is this role.
+The check belongs with whoever owns the machine-facing artifacts, which is
+usually the documentation team.
 
-**The tradeoff to volunteer.** An audit over a built site is a second CI job on
+**The tradeoff to name.** An audit over a built site is a second CI job on
 output that already passed its own tests, and it will produce findings that are
 deliberate: a page genuinely excluded, a description shared between two
 near-identical generated pages. So it needs an allowlist, and an allowlist
@@ -513,9 +513,9 @@ almost never is, because the other things are more interesting to work on. That
 ordering argument is worth making to a lead who is being asked to fund a RAG
 pipeline.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** The audit in CI over the built site, plus a generated sitemap
+**The work product.** The audit in CI over the built site, plus a generated sitemap
 and the one-line no-JavaScript text check.
 
 **Three things to do, in order:**
@@ -529,11 +529,11 @@ and the one-line no-JavaScript text check.
    committed one. The difference is a list of ghosts and omissions nobody knew
    about.
 
-**What makes it credible rather than decorative.** Mentioning sitemaps and robots.txt is table stakes.
-A built-site audit whose first check is text-without-JavaScript, a count of how
-many of its findings are invisible to a human, and the argument that this
-should precede the interesting work demonstrates that you have been burned by
-the silent version.
+**How to tell it is working.** Having a sitemap and a robots.txt is the minimum.
+The working version is a built-site audit whose first check is
+text-without-JavaScript, run in CI, with a count of how many of its findings
+are invisible to a human, and a team that runs it before the interesting work
+rather than after the silent failure.
 
 ## Related
 

@@ -11,8 +11,7 @@ tags: [ia, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "content modeling, taxonomy, and metadata for both navigation and machine retrieval"
+> Tagging content so navigation, search and AI retrieval can all find the right page.
 
 **Prerequisites:** [Content models](content-model.md)
 
@@ -20,9 +19,9 @@ tags: [ia, core]
 
 ## What it is
 
-The structured data attached to each page, usually in front matter. The KnowledgeOps posting's
-phrasing is unusually precise and worth taking literally: metadata **for both
-navigation and machine retrieval**. Those are two audiences with different
+The structured data attached to each page, usually in front matter. The useful
+phrasing is precise and worth taking literally: metadata **for both navigation
+and machine retrieval**. Those are two audiences with different
 needs, and a single field set rarely serves both well.
 
 Navigation metadata answers "where does this page belong and what do I call
@@ -30,15 +29,14 @@ it in a sidebar". Retrieval metadata answers "which subset of the corpus
 should a query search". They overlap and they are not the same, and the
 mistake is designing one and assuming it covers the other.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because the retrieval half is new and most corpora do not have it.
 
 Navigation metadata is well understood: a title, a position, a section. It has
 existed as long as documentation sites have. Retrieval metadata is what makes a
 filtered search possible, what lets a chunk carry its context into a vector
-store, and what an assistant uses to decide where to look. The KnowledgeOps posting asking for
-both in one phrase is a signal that they know the second is a separate design
+store, and what an assistant uses to decide where to look. Naming both in one phrase is a reminder that the second is a separate design
 problem.
 
 The uncomfortable part, and the subject of the golden path, is that adding
@@ -210,9 +208,9 @@ added because they seem like good practice are the ones that end up lying.
 Deriving is underrated. A heading trail, a word count or a reading time
 computed at build time cannot drift, because nothing stores it.
 
-## How to talk about it
+## Explaining it to your team
 
-**Take the KnowledgeOps posting's phrasing literally.** "Navigation metadata and retrieval
+**Take "navigation and machine retrieval" literally.** "Navigation metadata and retrieval
 metadata are different field sets. Navigation needs ordering and a label;
 retrieval needs filters, and it needs them copied onto every chunk, because a
 chunk leaves the page without its context. A corpus with good navigation
@@ -224,7 +222,7 @@ field with more writers than readers will be wrong and nothing will report it.
 I had a fully populated, closed-vocabulary field that was wrong on 44 per cent
 of pages for exactly that reason.
 
-**The tradeoff to volunteer.** Every required field is a tax on contribution
+**The tradeoff to name.** Every required field is a tax on contribution
 and a thing reviewers have to check, so the right number is small. The pressure
 runs the other way, because each new filter suggests a new field, and the way
 to resist it is to require a named consumer before adding one.
@@ -236,9 +234,9 @@ pages, and the only visible symptom was their meta descriptions falling back to
 the site default. Four lines of check, and it is the cheapest
 [AI-readiness](agent-ready-content.md) work available.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A metadata audit of a corpus you own: coverage per field,
+**The work product.** A metadata audit of a corpus you own: coverage per field,
 value distribution per field, and reader count per field.
 
 **Three things to do, in order:**
@@ -250,7 +248,7 @@ value distribution per field, and reader count per field.
 3. Parse all your front matter with a real YAML parser. This takes four lines
    and finds something more often than it should.
 
-**What makes it credible rather than decorative.** `docpack` carries metadata
+**How to tell it is working.** `docpack` carries metadata
 through into its retrieval artifacts, so each chunk keeps its source, heading
 trail and page type, and `summary` is indexed for search after an evaluation
 showed it was being ignored. The more useful story is the audit above: a field

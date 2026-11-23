@@ -11,7 +11,7 @@ tags: [craft, supporting]
 
 `core` · difficulty 2 · 3h
 
-> Partner with Engineering, Product, Security, Developer Relations, and Partner Programs so every release ships documented, discoverable, and supportable
+> Working with engineering, product, security and partner teams so every release ships documented.
 
 
 **Prerequisites:** [Extracting tribal knowledge](sme-interviews.md), [Reviewing documentation](docs-review.md)
@@ -20,19 +20,20 @@ tags: [craft, supporting]
 
 Getting accurate information from people whose job is not documentation,
 repeatedly, over years, without becoming the person they avoid. It is the
-ongoing relationship rather than the one-off interview.
+ongoing relationship rather than the one-off conversation.
 
 The mechanics matter more than the rapport. A process that asks engineers for
 the cheapest thing they can give is worth more than being well liked.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting lists five partner functions by name and attaches an outcome to the
-partnership: "so every release ships documented, discoverable, and
-supportable". The Developer Relations posting's version is "Partner with engineering, product, and
-developer advocates so each new capability ships with tested documentation."
+You work with five partner functions, Engineering, Product, Security,
+Developer Relations and Partner Programs, and the partnership has an outcome:
+every release ships documented, discoverable and supportable. The
+developer-relations version is that each new capability ships with tested
+documentation.
 
-Both are asking for the same thing, which is that documentation stops being a
+Both mean the same thing, which is that documentation stops being a
 thing that happens after a release and becomes a thing the release cannot ship
 without. That is a relationship problem before it is a process problem.
 
@@ -234,7 +235,7 @@ this relationship sustainable over years.
 | Reporting their mistake to their manager | Never recoverable |
 | Asking the same thing twice because you did not write it down | Signals their time is cheap |
 
-### The partner functions the KnowledgeOps posting names, and what each wants
+### The partner functions, and what each wants
 
 | Function | What they need from docs | What they can give you |
 |---|---|---|
@@ -247,9 +248,9 @@ this relationship sustainable over years.
 Reading that table as five different asks rather than one is most of
 [release readiness](release-readiness.md).
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the cost reduction, not the
+**How to explain it.** Lead with the cost reduction, not the
 rapport. "I stopped asking engineers to explain things and started asking them
 to confirm specific claims, after reading the code first. A review went from
 forty minutes to two. Then I put the numeric claims in front matter and added a
@@ -265,7 +266,7 @@ retry budget's scope is unconfirmed" is better than a page that guesses, and it
 is often what finally prompts a correction. What does not work is escalation,
 which buys one response and costs the relationship.
 
-**The tradeoff to volunteer.** Every mechanism that reduces the ask shifts work
+**The tradeoff to name.** Every mechanism that reduces the ask shifts work
 onto you. Reading the code before asking is slower for you and faster for them.
 Writing the draft first means you write things that turn out to be wrong. That
 trade is correct, because your time is the cheaper resource and because the
@@ -278,15 +279,13 @@ engineers care about documentation.** That is the trap, and it is where most
 documentation advocacy goes. You are trying to make the correct thing cost them
 nothing: a field in a template they already fill in, a check that fails without
 anyone's attention, a question answerable in ten seconds. Caring is not a
-mechanism. Saying that plainly is unusual and it is exactly what the KnowledgeOps posting's
-"systems where the right way is easier than the wrong way" means when applied
-to people.
+mechanism. Saying that plainly is unusual, and it is exactly what "systems where the
+right way is easier than the wrong way" means when applied to people.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A pull request template with a docs field, or a claim-checking
-gate, plus one marked-up review request. Small artifacts, specific, and they
-demonstrate the design instinct rather than the social skill.
+**The work product.** A pull request template with a docs field, or a claim-checking
+gate, plus one marked-up review request. Small artifacts, specific, and they put the design instinct to work rather than the social skill.
 
 **Three things to do, in order:**
 
@@ -296,13 +295,14 @@ demonstrate the design instinct rather than the social skill.
    with the "changed defaults or limits" prompt. That one line is the highest
    ratio of value to effort on this page.
 3. **Build the claim gate.** Put one numeric claim in front matter and check it
-   against the code. It is twenty lines and it is the thing that proves you
-   think about this structurally rather than socially.
+   against the code. It is twenty lines and it moves the relationship from
+   social to structural.
 
-**What makes it credible rather than decorative.** Everyone says they collaborate well with engineers.
+**How to tell it is working.** Everyone says they collaborate well with engineers.
 A PR template diff, a two-minute review request, and a check that fails when a
-default drifts are three things an interviewer can look at, and together they
-make a much more specific claim than any description of your working style.
+default drifts are three things anyone can look at, and together they say more
+than any description of a working style. The sign it is working is that
+engineers answer your review requests the same day.
 
 ### How this would be demonstrated elsewhere
 

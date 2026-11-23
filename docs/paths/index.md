@@ -19,7 +19,7 @@ and that is worth knowing before you pick where to start.
 
 ## [The first week](first-week.md)
 
-*Someone who has just taken one of these roles and needs to be useful by Friday.*
+*Someone who has just started in this kind of work and needs to be useful by Friday.*
 
 The shortest route to shipping a documentation change with confidence.
 
@@ -43,7 +43,7 @@ Every automated gate that stops documentation rotting, in the order worth adding
 
 ## [The KnowledgeOps path](knowledgeops.md)
 
-*The KnowledgeOps posting, more or less exactly.*
+*Someone responsible for making a knowledge base usable by AI assistants and agents.*
 
 Making a corpus answerable by machines, and knowing whether it worked.
 
@@ -51,7 +51,7 @@ Making a corpus answerable by machines, and knowing whether it worked.
 
 ## [The developer educator](developer-educator.md)
 
-*The Developer Relations posting's curriculum half.*
+*Someone who owns developer onboarding, tutorials and curriculum.*
 
 Taking a developer from a clean environment to a working result, repeatably.
 
@@ -59,15 +59,15 @@ Taking a developer from a clean environment to a working result, repeatably.
 
 ## [The writer who builds](writer-who-builds.md)
 
-*The KnowledgeOps posting's own description of the person it wants. The half that is judgement and collaboration rather than tooling.*
+*A writer who also builds tooling, and needs the half of the work that is judgement and collaboration rather than tooling.*
 
 The craft and the working relationships, which no pipeline substitutes for.
 
 10 concepts, roughly 37 hours.
 
-## [Prove it in a weekend](prove-it.md)
+## [A working result in a weekend](prove-it.md)
 
-*Someone who needs a portfolio artifact before Monday.*
+*Someone who needs to ship something their team can review by Monday.*
 
 The shortest path through the concepts that produce something reviewable.
 
@@ -77,15 +77,15 @@ The shortest path through the concepts that produce something reviewable.
 
 *Someone whose documentation work is real and who has been asked, probably in a review, to show what it achieved.*
 
-Write the programs that measure a corpus, then measure the four outcomes the postings actually name.
+Write the programs that measure a corpus, then measure the four outcomes that matter most.
 
 10 concepts, roughly 37 hours.
 
 ## [Enough domain to not be lost](domain-context.md)
 
-*Someone interviewing for, or newly inside, a documentation role at a company whose product is graphics, simulation, robotics or AI infrastructure.*
+*Someone doing documentation work at a company whose product is graphics, simulation, robotics or AI infrastructure.*
 
-The six domains these postings name, at the depth where you can follow an engineer and know which questions are not yours to answer.
+Six technical domains, at the depth where you can follow an engineer and know which questions are not yours to answer.
 
 6 concepts, roughly 24 hours.
 

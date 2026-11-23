@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 2 · 4h
 
-> including llms.txt, MCP-accessible sources, agent skills and context kits, and evaluation sets for answer accuracy
+> Packaging instructions and context so agents can do a task the way your team does it.
 
 
 **Prerequisites:** [Model Context Protocol](mcp.md), [Templates and scaffolding](templates-scaffolding.md)
@@ -30,11 +30,11 @@ The distinction that matters is not the naming. It is that **this content is
 read by something that will act on it immediately and cannot ask a follow-up
 question.**
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names both in the same breath as llms.txt and MCP: "agent skills and
-context kits". Under ways to stand out, "agent skill and context libraries
-backed by documentation".
+Agent skills and context kits sit alongside `llms.txt` and MCP in the set of
+AI-ready outputs, and the most useful of them are libraries backed by your
+documentation rather than written from memory.
 
 This is the newest concept in the guide and the one with the least settled
 practice, which is exactly why it is worth having an opinion about. The
@@ -418,10 +418,10 @@ Present this internally as a cheap, high-return convention rather than as
 settled practice, because it is moving fast and a claim of standardisation will
 be challenged by someone who read a different blog post last week.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with derivation and with
-prohibitions, because both signal you have shipped one. "I derive the kit from
+**How to explain it.** Lead with derivation and with
+prohibitions, because those are what make a kit trustworthy. "I derive the kit from
 what CI enforces rather than writing it from memory, so every rule in it has a
 gate behind it and every gate is documented. Then I test the kit against the
 validators in both directions: a value the kit lists that the validator rejects,
@@ -437,7 +437,7 @@ missing from the kit or stated ambiguously in it, and that count is the only
 real feedback signal available. There is no eval set for a context kit yet,
 which is worth admitting.
 
-**The tradeoff to volunteer.** An always-on kit is a recurring cost paid on every
+**The tradeoff to name.** An always-on kit is a recurring cost paid on every
 task, so it competes directly with the work. A thorough kit that covers every
 convention crowds out the actual problem, and the failure mode is subtle: the
 agent follows all your conventions and does the task badly. That tension is why
@@ -456,9 +456,9 @@ write the thing that stops the question. Framing it that way makes it
 continuous with the documentation craft rather than a new AI discipline, which
 is both more accurate and more reassuring to a documentation lead.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A kit with a prohibitions section, and the test that checks it
+**The work product.** A kit with a prohibitions section, and the test that checks it
 against the validators in both directions.
 
 **Three things to do, in order:**
@@ -475,11 +475,11 @@ against the validators in both directions.
    the reviews are not about conventions or nobody is reviewing: both are
    findings, and neither produces a kit.
 
-**What makes it credible rather than decorative.** An `AGENTS.md` file proves you read about the
-convention. One derived from the CI gates, with explicit prohibitions against
-widening constraints, and a test that fails when a validator and the kit
-disagree, demonstrates that you treated it as documentation with a consumer
-that cannot ask questions.
+**How to tell it is working.** An `AGENTS.md` file on its own means someone read
+about the convention. One derived from the CI gates, with explicit prohibitions
+against widening constraints, and a test that fails when a validator and the
+kit disagree, means it is being treated as documentation with a consumer that
+cannot ask questions. The repeated review comments stop.
 
 ### How this would be demonstrated elsewhere
 

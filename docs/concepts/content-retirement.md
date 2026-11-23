@@ -11,21 +11,20 @@ tags: [ia, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Measure outcomes such as time-to-first-success, support deflection, repeat questions, and AI answer quality, and use the data to decide what to build, fix, or retire"
+> Deciding what to retire, and removing it without breaking what links to it.
 
 **Prerequisites:** [Content lifecycle and governance](content-lifecycle.md)
 
 ## What it is
 
 Removing a page from the corpus on purpose: deciding it should go, redirecting
-its URL, and dealing with everything that pointed at it. The KnowledgeOps posting lists retire
+its URL, and dealing with everything that pointed at it. Retire belongs
 alongside build and fix as one of three outcomes of measurement, which is more
-than most teams do, because most teams have no third option.
+than most teams manage, because most teams have no third option.
 
 The mechanics are easy. The reason corpora only ever grow is not technical.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because an unretired corpus degrades in a way that no amount of writing fixes.
 Every stale page competes with a current one in search, dilutes
@@ -33,7 +32,7 @@ Every stale page competes with a current one in search, dilutes
 most valuable documentation work available is deletion, and nobody is
 authorised to do it.
 
-The KnowledgeOps posting naming retirement as a measurement outcome is the important part. The
+Treating retirement as a measurement outcome is the important part. The
 decision to retire needs evidence, which means it needs the
 [measurement](docs-analytics.md) category to exist first, and it means the answer to
 "can we delete this" stops being a matter of opinion.
@@ -198,7 +197,7 @@ The last row is the useful one in practice. A page that has been in the review
 queue for four quarters without an owner claiming it is a page nobody is
 willing to maintain, and that is the evidence.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with why it does not happen.** "The mechanics of retirement are a
 redirect and a link rewrite. The reason corpora only grow is that authoring has
@@ -211,7 +210,7 @@ the stated reason more often than the real one. Redirects solve the external
 case; internal links get rewritten rather than bounced, because chains
 accumulate a broken hop that link checking cannot see.
 
-**The tradeoff to volunteer.** Redirects are not free: each one is a permanent
+**The tradeoff to name.** Redirects are not free: each one is a permanent
 entry in a map that grows forever, and after a few years the redirect map is
 its own maintenance problem with chains and loops in it. Periodically
 collapsing chains and dropping redirects for URLs that have had no traffic for
@@ -223,9 +222,9 @@ answer arrives with a citation to a URL that now 404s. Retirement has to reach
 the retrieval artifacts, and that step is missing from essentially every
 retirement checklist written before 2023.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A retirement that happened: a redirect, the internal links
+**The work product.** A retirement that happened: a redirect, the internal links
 rewritten in the same commit, and a written policy that authorised it.
 
 **Three things to do, in order:**
@@ -237,7 +236,7 @@ rewritten in the same commit, and a written policy that authorised it.
 3. Check whether anything in your retrieval pipeline would notice a deleted
    page. Usually nothing does.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories has retired anything, which the [demonstrated](../demonstrated.md)
 page records, and a project with no readers has no retirement evidence to act
 on. What travels is the measured behaviour of the mechanism and the

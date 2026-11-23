@@ -11,8 +11,7 @@ tags: [edu, core]
 
 `core` · difficulty 3 · 5h
 
-!!! quote "Why it is on the curriculum"
-    "structured learning paths"
+> Sequencing content into structured learning paths a reader can follow start to finish.
 
 **Prerequisites:** [Diátaxis](diataxis.md), [Instructional design for developers](instructional-design.md)
 
@@ -29,7 +28,7 @@ Both claims are checkable, which is what separates a learning path from a
 list of links with a heading, and almost all published learning paths are
 lists of links with a heading.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because [Diátaxis](diataxis.md) organises content by its kind, and a reader
 does not arrive with a kind. They arrive with a job.
@@ -37,10 +36,10 @@ does not arrive with a kind. They arrive with a job.
 A corpus sorted into tutorials, how-to guides, reference and explanation is
 navigable and gives no answer to "I started on Monday, what do I read first".
 The four quadrants are an authoring discipline and a filing system; a path is
-the reading order that the filing system deliberately does not encode. The Developer Relations posting
-asks for "structured learning paths" next to golden paths and quickstarts
-because those are the three shapes of the same obligation at three scales: one
-command, one page, one career's first fortnight.
+the reading order that the filing system deliberately does not encode. Structured
+learning paths sit next to golden paths and quickstarts because those are the
+three shapes of the same obligation at three scales: one
+command, one page, a newcomer's first fortnight.
 
 The failure mode is specific and nearly universal: a path that is a table of
 contents, ordered by the order someone wrote the pages in, with no claim about
@@ -285,7 +284,7 @@ than splitting it.
 | Coverage is reported | Orphaned core concepts are invisible otherwise |
 | Reuse is reported | A concept in four paths is load-bearing |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with why Diátaxis is not enough.** "Diátaxis sorts content by kind, and
 a reader does not arrive with a kind, they arrive with a job. The four
@@ -309,7 +308,7 @@ assumed set and states it before step 1, and a test asserts it appears above
 the first heading, because the useful version of that information is the one
 visible while deciding whether to start.
 
-**The tradeoff to volunteer.** The two gaps pull in opposite directions.
+**The tradeoff to name.** The two gaps pull in opposite directions.
 Closing the prerequisite gaps lengthens paths past the point anyone finishes
 them; closing the coverage gap, four core concepts currently in no path, means
 more or wider paths, which worsens the prerequisite gaps. I do not think there
@@ -321,9 +320,9 @@ A path that is the sole route to a third of a corpus is doing navigation work
 rather than curriculum work, and calling it curriculum obscures that the real
 need was [findability](findability.md).
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** Paths held as data, pages generated from them, an ordering
+**The work product.** Paths held as data, pages generated from them, an ordering
 check and a coverage report in CI, and an entry state computed per path.
 
 **Three things to do, in order:**
@@ -336,7 +335,7 @@ check and a coverage report in CI, and an entry state computed per path.
 3. Count how many paths each item appears in. Anything appearing once is
    navigation, not curriculum, and should probably be solved by search instead.
 
-**What makes it credible rather than decorative.** This guide holds nine paths
+**How to tell it is working.** This guide holds nine paths
 over 106 concepts in `concepts.yaml`, generates every path page from them, and
 fails CI on an ordering violation; the entry-state paragraph and its test were
 added by the exercise above. The honest limits: no reader has completed any of

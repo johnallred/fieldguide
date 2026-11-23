@@ -11,7 +11,7 @@ tags: [craft, core]
 
 `core` · difficulty 2 · 2h
 
-> A systems mindset: you fix the class of problem, not just the instance
+> Fixing the class of problem rather than the single instance in front of you.
 
 
 **Leads to:** [Giving architecture owners implementation feedback](implementation-feedback.md), [Prioritizing documentation work](docs-prioritization.md)
@@ -26,15 +26,15 @@ The second half is what makes it a mindset rather than a slogan: it includes
 knowing when the answer is "nothing, this was genuinely a one-off", because
 building a system for every instance is its own failure.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names it as a required trait and spells it out, which is unusual for a
-soft requirement. The surrounding language explains why: "We build systems where
-the right way is easier than the wrong way", and "turning documentation,
-standards, and tribal knowledge into tooling, templates, and self-service paths,
-so fewer people have to ask how do I".
+The short version is: you fix the class of problem, not just the instance. The
+goals around it explain why: build systems where the right way is easier than
+the wrong way, and turn documentation, standards and tribal knowledge into
+tooling, templates and self-service paths, so fewer people have to ask "how do
+I".
 
-Read those together and the role becomes clear. This is not a documentation job
+Read those together and the work becomes clear. This is not a documentation job
 with some automation attached. **It is a job whose output is mechanisms**, and
 pages are one kind of mechanism among several.
 
@@ -181,7 +181,7 @@ increment is obvious.
 | The same question in support three times | Missing self-service path | [Repeat-question analysis](repeat-questions.md) |
 | A release shipped undocumented | Docs outside the definition of done | [Release readiness](release-readiness.md) |
 
-That table is most of what both postings are asking for, which is why this page
+That table is most of what this kind of work asks of you, which is why this page
 is short and the others are long.
 
 ### When the instance fix is correct
@@ -206,13 +206,13 @@ available, is to make the defect **unrepresentable**: a
 down, not merely that it is caught. A [generator](templates-scaffolding.md)
 means a conforming page is the path of least resistance.
 
-The KnowledgeOps posting's phrase for this is "systems where the right way is easier than the
-wrong way", and it is a stronger claim than validation. Validation makes the
+The phrase for this is "systems where the right way is easier than the wrong
+way", and it is a stronger claim than validation. Validation makes the
 right way mandatory, which is a different and more annoying thing.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Tell a two-level story with a number.
+**How to explain it.** Tell a two-level story with a number.
 "A reader reported a broken sample. I fixed it, then wrote a test that extracts
 and executes every Python block in the docs. It found four more that day.
 Then I added a skip marker with an assertion that skips stay under a quarter of
@@ -221,13 +221,13 @@ the samples, because an escape hatch with no limit becomes the default."
 That third sentence is the signal. It shows you expect your own mechanism to be
 worked around and designed for it.
 
-**The follow-up is "when have you over-engineered this",** and an interviewer
-who asks it is testing for judgement rather than enthusiasm. Have a real answer.
+**The follow-up is "when have you over-engineered this",** and a manager who
+asks it is checking for judgement rather than enthusiasm. Have a real answer.
 The most common honest one in this field is a linter rule too aggressive for its
 corpus, producing dozens of warnings everyone learned to ignore, which left the
 corpus worse than before because now there was a check that meant nothing.
 
-**The tradeoff to volunteer.** Every gate is permanent friction on everyone who
+**The tradeoff to name.** Every gate is permanent friction on everyone who
 contributes afterwards, and the people who pay it are not the people who
 benefited from it. A check that saves you an hour a quarter and costs eleven
 contributors thirty seconds a day is a net loss that will never show up in any
@@ -240,12 +240,12 @@ discipline.
 **social** problems, not technical ones. "An engineer rewrote a page badly" has
 a class, and the class fix is usually a template or a review checklist rather
 than a conversation. Most documentation people apply systems thinking to
-pipelines and instance thinking to humans. Saying that out loud is unusual and
-it is the thing the KnowledgeOps posting's "collaborative style" bullet is circling.
+pipelines and instance thinking to humans. Saying that out loud is unusual, and
+it is what a collaborative working style looks like in practice.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A commit pair: the instance fix, and the gate that closes its
+**The work product.** A commit pair: the instance fix, and the gate that closes its
 class. In the same history, visible as two commits.
 
 **Three things to do, in order:**
@@ -254,19 +254,18 @@ class. In the same history, visible as two commits.
    then write the smallest gate. Twenty lines is fine; the point is not the
    sophistication.
 2. **Write down what the gate does not cover, in the gate.** A comment or a
-   README line. This is the cheapest credibility available on this page,
-   because almost nobody does it and it is immediately recognisable as the work
-   of someone who has been burned.
+   README line. This is the cheapest improvement on this page, because
+   almost nobody does it and the next maintainer will rely on it.
 3. **Find one gate to remove.** A check that has never caught anything, or
    whose warnings everyone ignores. Removing it is the same skill pointed the
-   other way, and it is the harder half to demonstrate. If you cannot find a
+   other way, and it is the harder half to practise. If you cannot find a
    check that has never caught anything, you have either a young pipeline or
    no record of what your gates catch, and the second is the more common
    answer.
 
-**What makes it credible rather than decorative.** "I think in systems" is a claim anyone can make. A
-repository where you can point at the red build, the fix, and the gate that
-followed is not. The strongest version includes a gate you later deleted.
+**How to tell it is working.** A repository where you can point at the red build,
+the fix, and the gate that followed, and a backlog that grows more slowly than
+the product. The strongest version includes a gate you later deleted.
 
 ### How this would be demonstrated elsewhere
 

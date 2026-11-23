@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 3 · 5h
 
-> Ways to stand out: experience building RAG pipelines, AI assistants, MCP servers, or agent skill and context libraries backed by documentation
+> Exposing documentation and tools to AI assistants through Model Context Protocol servers.
 
 
 **Prerequisites:** [Agent-ready content](agent-ready-content.md)
@@ -28,11 +28,11 @@ For documentation, it means an agent can *query* your corpus mid-task instead of
 being given a pre-selected chunk of it. The difference matters: the agent gets
 to decide what it needs, and to ask twice.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names it twice. Once in the AI-ready list, "MCP-accessible sources", and
-once under ways to stand out, "MCP servers ... backed by documentation". That
-repetition is a signal: they want the interface, not just the content.
+MCP shows up twice in AI-ready work: as MCP-accessible sources, and as MCP
+servers backed by documentation. That second form is the important one: the
+work is the interface, not just the content.
 
 The reason this is worth a `core` slot rather than being filed as a tool choice:
 **it serves a consumer none of the other artifacts do.**
@@ -445,9 +445,9 @@ retrieval: the tool is the interface, the retrieval is the implementation.
 The third and fifth are the ones people skip, and the first is the one that
 actually gets attempted, usually by accident.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the consumer and the recovery
+**How to explain it.** Lead with the consumer and the recovery
 property. "MCP serves an agent working mid-task, which llms.txt and a chunk dump
 do not. It calls `search_docs` with a kind filter, gets three results, and if
 they are wrong it calls again with a different filter. A flat context dump cannot
@@ -460,17 +460,16 @@ answer is the thing most people miss: **the tool description is a prompt.**
 Writing `"'how-to' for instructions, 'reference' for exact values,
 'explanation' for reasoning"` instead of `"filter by kind"` changes the model's
 behaviour, because that text is what it reads when deciding. Tool descriptions
-are documentation written for a model, which is a genuinely nice thing to point
-out in a documentation interview.
+are documentation written for a model, which is a genuinely useful thing to point
+out to a documentation team.
 
-**The tradeoff to volunteer.** An MCP server is a running process with an
+**The tradeoff to name.** An MCP server is a running process with an
 operational burden that a static file does not have: it has to be deployed,
 monitored, versioned and secured, and it only helps clients that speak MCP.
 `llms.txt` is a file on a web server that works with anything that can fetch a
 URL. For a corpus where most consumption is a model fetching pages, the file is
 the better investment. MCP earns its cost when agents are doing multi-step work
-against your docs, which is exactly the KnowledgeOps posting's "agentic workflows" and is not
-every situation.
+against your docs, which is exactly what agentic workflows are, and is not every situation.
 
 **One sharper point.** The strongest observation is that **MCP makes your content
 model externally visible, and therefore externally tested.** The `kind` enum
@@ -482,9 +481,9 @@ would produce. Treating the MCP schema as a probe into your information
 architecture is a more sophisticated position than treating it as a delivery
 mechanism.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A working server, driven by a committed JSON-RPC session file,
+**The work product.** A working server, driven by a committed JSON-RPC session file,
 including the traversal attempt and the unknown-tool call. The error cases are
 what distinguish it from a tutorial copy.
 
@@ -501,10 +500,10 @@ what distinguish it from a tutorial copy.
    corpus with no per-caller filtering is an access-control hole, and noticing
    that is worth more than the server itself.
 
-**What makes it credible rather than decorative.** Standing up an MCP server from a template proves
-little. One with three deliberately chosen tools, descriptions written as
+**How to tell it is working.** An MCP server stood up from a template is a start.
+A designed one has three deliberately chosen tools, descriptions written as
 prompts, a path-traversal guard, errors returned rather than raised, and a
-committed transcript demonstrates that you designed it.
+committed transcript showing an agent recovering from a bad first query.
 
 ## Related
 

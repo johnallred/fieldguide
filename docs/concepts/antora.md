@@ -11,10 +11,7 @@ tags: [dac, context]
 
 `context` · difficulty 2 · 3h
 
-!!! note "Not a quotation (adjacent)"
-    Covered only by "or similar" in the KnowledgeOps posting's list of generators. Worth
-    recognising, rarely worth choosing for a new project, and the one answer to
-    a problem the others cannot solve.
+> Recognising and maintaining Antora and AsciiDoc sites you inherit; rarely the choice for a new one.
 
 **Prerequisites:** [Choosing a static site generator](static-site-generators.md)
 
@@ -28,10 +25,10 @@ content living in *several Git repositories*, each at a chosen branch or tag.
 That second part is its reason to exist, and it is the thing none of the other
 three generators do.
 
-## Why the job asks for it
+## How this applies to your role
 
-It does not, except through "or similar", which the banner above records
-honestly. This page is `context` tier for two reasons.
+Rarely directly, which the banner above records honestly. This page is
+`context` tier for two reasons.
 
 The first is recognition. AsciiDoc shows up in enterprise and Java-adjacent
 documentation estates, and in the Red Hat ecosystem in particular, so you will
@@ -41,7 +38,7 @@ The second is more useful. Antora solves the one problem that genuinely has no
 good answer in MkDocs, Sphinx or Docusaurus: documentation that lives next to
 the code in a dozen repositories and has to publish as one coherent site with
 one navigation and one search index. If you are ever asked how you would do
-that, Antora is the answer, and knowing it exists is worth more than fluency in
+that, Antora is the usual answer, and knowing it exists is worth more than fluency in
 its configuration.
 
 ## The golden path
@@ -221,7 +218,7 @@ a snippet include plugin on MkDocs, `.. include::` on Sphinx, or MDX imports on
 Docusaurus. Reaching for Antora to get includes is a large change for a small
 feature.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the multi-repository problem, because that is the only reason to
 choose it.** "Antora is the answer when documentation lives next to the code in
@@ -233,7 +230,7 @@ that, and the common workarounds, submodules or a sync script, are worse."
 honest answer is usually no. It is the more capable language, and contributor
 familiarity and tooling ecosystem decide most projects. Say both halves.
 
-**The tradeoff to volunteer.** Adopting AsciiDoc costs you the Markdown
+**The tradeoff to name.** Adopting AsciiDoc costs you the Markdown
 ecosystem: fewer editors and preview tools, a smaller set of linters, and
 contributors who need to learn a syntax they do not already know. On a project
 where most content comes from engineers writing occasionally, that friction is
@@ -245,9 +242,9 @@ Markdown, content reuse is always a per-generator plugin, so a corpus that
 relies on it is locked to that generator. In AsciiDoc the reuse mechanism
 travels with the content.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** Realistically, none. This is a recognition-and-judgment
+**The work product.** Realistically, none. This is a recognition-and-judgment
 concept, and the deliverable is being able to answer the multi-repository
 question without reaching for submodules.
 
@@ -260,12 +257,12 @@ question without reaching for submodules.
 3. Find an AsciiDoc page in the wild, a Red Hat or Spring doc, and read its
    source. Recognition is most of what this concept is for.
 
-**What makes it credible rather than decorative.** Saying plainly which parts
+**How to tell it is working.** Saying plainly which parts
 you have run. Steps 1 and 2 are measured here with `@asciidoctor/core` 3.0.4;
 the Antora playbook is not, because this environment cannot reach
-`rubygems.org` and a real build needs remote Git sources. A candidate who
-separates those two things is more trustworthy than one who presents a
-configuration file as experience.
+`rubygems.org` and a real build needs remote Git sources. Someone who separates
+those two things, in a design review or a recommendation, is more trustworthy
+than one who presents a configuration file as experience.
 
 ## Related
 

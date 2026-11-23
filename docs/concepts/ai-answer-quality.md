@@ -11,16 +11,15 @@ tags: [meas, core]
 
 `core` · difficulty 3 · 5h
 
-!!! quote "Why it is on the curriculum"
-    "AI answer quality"
+> Measuring how often an AI assistant answers correctly from your documentation.
 
 **Prerequisites:** [Output evaluation](output-evaluation.md), [Documentation analytics](docs-analytics.md)
 
 ## What it is
 
 Measuring whether an assistant answering from your corpus answers correctly.
-The KnowledgeOps posting lists it as a metric the role owns, which makes documentation partly
-responsible for a system it does not control: the model is someone else's, the
+Documentation teams are increasingly asked to own it as a metric, which makes
+documentation partly responsible for a system it does not control: the model is someone else's, the
 prompt is often someone else's, and the only input the documentation team owns
 is the corpus.
 
@@ -30,7 +29,7 @@ requires the model to supply it from elsewhere, which is the behaviour you are
 trying to prevent. **Retrieval quality is an upper bound on grounded answer
 quality**, and the bound is measurable without a model in the loop at all.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because readers have stopped arriving at documentation and started arriving at
 answers about it.
@@ -160,8 +159,9 @@ what the measurement does not cover.
 | Answer correctness | Was it built correctly | The system | A model call per case |
 | Answer usefulness | Did it help the reader | The product | A human per case |
 
-The KnowledgeOps posting's bullet names the second and a documentation role can only move the
-first, which is a reasonable division: the first is a ceiling on the second.
+Your stakeholders will ask about the second, and documentation work can only
+move the first, which is a reasonable division: the first is a ceiling on the
+second.
 
 ### Metrics worth running, in order of cost
 
@@ -251,7 +251,7 @@ the mistake quoted it again and cost the same five points.
 | Would a reader have been satisfied | A reader |
 | Is the assistant better than the search box | Both, measured side by side |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the ceiling, because it reframes the whole problem.** "The model and
 the prompt usually are not mine, and the corpus is. If the retrieved context
@@ -286,9 +286,9 @@ while the retrieved context is irrelevant, and that last case scores as success
 on every metric I have. Closing that needs a model and a grader, which is
 output evaluation and costs per run.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A golden set with `must_contain` terms, a grounded@k curve
+**The work product.** A golden set with `must_contain` terms, a grounded@k curve
 over your real retriever, and a commit where fixing the corpus moved the
 numbers.
 
@@ -302,7 +302,7 @@ numbers.
 3. Check whether any documentation page quotes one of your evaluation
    questions. If it does, that page is winning its own test case.
 
-**What makes it credible rather than decorative.** The grounded@k curve, the
+**How to tell it is working.** The grounded@k curve, the
 plateau, the two-sentence fix and the before-and-after table are all from
 `docpack`'s twenty-case golden set and reproducible with
 `docpack eval evals/golden.yaml`; the recorded scores on its

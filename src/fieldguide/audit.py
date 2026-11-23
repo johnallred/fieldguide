@@ -17,7 +17,7 @@ Three habits are deliberate, each learned by getting it wrong first:
 - Code is never prose. Fenced blocks are removed with `fences.fence_spans`,
   which tracks marker length and skips heredoc bodies. A naive toggle agrees
   with it to 0.2 per cent across the corpus and is wrong on a fifth of pages.
-- Headings are anchored. A page that quotes `## How to prove it` inside a code
+- Headings are anchored. A page that quotes `## Putting it into practice` inside a code
   fence will split a `str.partition` in the wrong place, which it did.
 - Markup is stripped before matching words. Classifying tasks by their opening
   verb put the rate at 54 per cent until the `**` was removed; it is 95.
@@ -128,13 +128,13 @@ ARTIFACT = re.compile(
 def heading(name: str) -> re.Pattern[str]:
     """An anchored `## ` heading.
 
-    Anchored because `assessment.md` quotes `"## How to prove it"` inside a
+    Anchored because `assessment.md` quotes `"## Putting it into practice"` inside a
     Python sample, and an unanchored search split that page at its own code.
     """
     return re.compile(rf"^## {re.escape(name)}$", re.M)
 
 
-PROOF_HEADING = heading("How to prove it")
+PROOF_HEADING = heading("Putting it into practice")
 RELATED_HEADING = heading("Related")
 
 
@@ -411,7 +411,7 @@ def audit(registry: Registry, docs: Path) -> Audit:
     # had declared the corpus clean. A frequency floor is a filter on what you
     # are willing to find.
     declared = set(STRUCTURAL_LABELS.values()) | set(RETIRED_LABELS)
-    for section in ("How to talk about it", "How to prove it"):
+    for section in ("Explaining it to your team", "Putting it into practice"):
         for concept in complete:
             text = texts[concept.id]
             if f"## {section}" not in text:

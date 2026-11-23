@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 2 · 3h
 
-> Practical experience applying LLMs to content workflows (prompting, retrieval and grounding, output evaluation)
+> Writing prompts for drafting, rewriting and checking content, and knowing where they fail.
 
 
 **Leads to:** [Judging where AI can be trusted](ai-trust-judgment.md), [LLMs in the content lifecycle](llm-content-lifecycle.md)
@@ -23,10 +23,10 @@ drafting, auditing, classifying, rewriting. For documentation work the prompt is
 usually part of a script rather than a conversation, which changes what good
 looks like: it has to work on the four hundredth input as well as the first.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting lists it first in a three-part requirement: "prompting, retrieval and
-grounding, output evaluation". The ordering is the pipeline, and prompting is
+It is the first of three parts of applying LLMs to content work: prompting,
+retrieval and grounding, output evaluation. The ordering is the pipeline, and prompting is
 the part people think is the whole thing.
 
 What makes it `core` in a documentation role rather than a general skill is the
@@ -339,9 +339,9 @@ procedure behind that table.
 | Log the prompt version with every output | You will need to know which prompt produced a finding |
 | Sample and review after you start trusting it | Quality drifts, and nothing tells you |
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the null answer, because it is
+**How to explain it.** Lead with the null answer, because it is
 the clause that shows you have run a batch rather than written a prompt. "On an
 audit prompt the clause that matters most is telling the model that an empty
 findings list is a correct answer. Without it, a model asked to find problems
@@ -358,7 +358,7 @@ to tell a prompt improvement from a coincidence. Anyone who answers this
 question by describing their prompt rather than their measurement has not run
 one at scale.
 
-**The tradeoff to volunteer.** Every clause you add constrains the model, and
+**The tradeoff to name.** Every clause you add constrains the model, and
 over-constraining produces a different failure: a prompt with a tightly closed
 defect set will miss real problems that fall outside it, confidently and
 silently. The quote-or-drop rule has the same shape, since a genuine defect that
@@ -374,11 +374,11 @@ scope, and require evidence for claims. That is why documentation people are
 often good at this: you already write specifications for human contractors and
 already know that "tell me what's wrong with it" is a bad brief. Saying that
 connects the LLM work to the craft rather than treating it as a separate skill,
-which is exactly how the KnowledgeOps posting frames the whole role.
+which is the right way to frame the whole of this work.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A prompt in version control, with the labelled set you scored
+**The work product.** A prompt in version control, with the labelled set you scored
 it against, and the validator that drops ungrounded findings.
 
 **Three things to do, in order:**
@@ -396,10 +396,10 @@ it against, and the validator that drops ungrounded findings.
    prompt you end up with. Shipping the validator first is the move that shows
    judgement.
 
-**What makes it credible rather than decorative.** Showing a prompt proves nothing; everyone has
-prompts. A prompt plus a labelled set plus a mechanical grounding check plus a
-precision number, including the version where precision was bad, demonstrates
-that you treated it as engineering.
+**How to tell it is working.** Everyone has prompts. The working version is a prompt
+plus a labelled set plus a mechanical grounding check plus a precision number,
+with the history including the version where precision was bad. That is
+treating it as engineering.
 
 ### How this would be demonstrated elsewhere
 

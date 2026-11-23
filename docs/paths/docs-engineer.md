@@ -23,13 +23,13 @@ each step assumes the ones above it.
 
 `core` · read it · 2h
 
-Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing
+Running documentation through Git, CI builds, linting, link and sample checks, and automated publishing.
 
 ## 2. [Git authoring workflows for writers](../concepts/git-authoring.md)
 
 `core` · practise it · 4h
 
-Hands-on docs-as-code experience: Git, pull request review, Markdown/RST, static site generators
+Writing in Git: branches, pull requests and review, in Markdown or RST, built by a static site generator.
 
 Builds on, earlier in this path: Docs-as-code.
 
@@ -37,7 +37,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 `core` · practise it · 4h
 
-documentation CI
+Running automated checks on every documentation change before it merges.
 
 Builds on, earlier in this path: Docs-as-code, Git authoring workflows for writers.
 
@@ -45,7 +45,7 @@ Builds on, earlier in this path: Docs-as-code, Git authoring workflows for write
 
 `core` · practise it · 4h
 
-CI/CD is named by both; GitHub Actions is the most common implementation of it.
+Writing and maintaining the CI workflows that build, check and publish your documentation.
 
 Builds on, earlier in this path: Documentation CI.
 
@@ -53,7 +53,7 @@ Builds on, earlier in this path: Documentation CI.
 
 `core` · read it · 2h
 
-link checking
+Catching broken links before readers do, in CI and on the published site.
 
 Builds on, earlier in this path: Docs-as-code.
 
@@ -61,7 +61,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 `core` · practise it · 3h
 
-Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring
+Enforcing your style guide automatically with Vale, so reviews argue with a rule rather than a person.
 
 Assumes, from outside this path: [Style guides and terminology management](../concepts/style-guide.md).
 
@@ -69,7 +69,7 @@ Assumes, from outside this path: [Style guides and terminology management](../co
 
 `supporting` · build something · 5h
 
-Content quality automation you've built, such as Vale or custom linters
+Writing your own content checks when an off-the-shelf linter cannot express the rule.
 
 Builds on, earlier in this path: Prose linting with Vale.
 
@@ -77,7 +77,7 @@ Builds on, earlier in this path: Prose linting with Vale.
 
 `core` · build something · 5h
 
-link and code-sample validation
+Proving every code sample in the docs still runs and still produces what the page says.
 
 Builds on, earlier in this path: Docs-as-code.
 
@@ -85,7 +85,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 `supporting` · practise it · 2h
 
-doc test harnesses
+Keeping examples in docstrings executable, so they fail when the code changes.
 
 Builds on, earlier in this path: Code-sample validation.
 
@@ -93,7 +93,7 @@ Builds on, earlier in this path: Code-sample validation.
 
 `core` · build something · 6h
 
-Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring
+Building a harness that runs documentation as tests, so broken pages fail the build.
 
 Builds on, earlier in this path: Code-sample validation.
 
@@ -101,7 +101,7 @@ Builds on, earlier in this path: Code-sample validation.
 
 `core` · practise it · 4h
 
-Write and maintain reference documentation, tutorials, and sample walkthroughs that assume no prior context
+Producing reference documentation from the code itself, so it assumes no prior context and stays current.
 
 Builds on, earlier in this path: Docs-as-code.
 
@@ -109,7 +109,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 `core` · build something · 5h
 
-Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result
+Designing and maintaining the routes that take a developer from a clean environment to a working result.
 
 Assumes, from outside this path: [Diátaxis](../concepts/diataxis.md).
 
@@ -117,7 +117,7 @@ Assumes, from outside this path: [Diátaxis](../concepts/diataxis.md).
 
 `core` · build something · 5h
 
-coldstart testing of quickstarts
+Testing quickstarts from a clean environment, the way a new developer meets them.
 
 Builds on, earlier in this path: Code-sample validation.
 
@@ -127,7 +127,7 @@ Assumes, from outside this path: [Reproducible environments](../concepts/reprodu
 
 `core` · practise it · 4h
 
-with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters
+Checking automatically that content is still current, and routing what is not to a human.
 
 Builds on, earlier in this path: Documentation CI.
 
@@ -137,7 +137,7 @@ Assumes, from outside this path: [Content lifecycle and governance](../concepts/
 
 `supporting` · practise it · 3h
 
-and publishing
+Previewing every documentation change as a built site, and publishing it when it merges.
 
 Builds on, earlier in this path: GitHub Actions for docs.
 
@@ -145,7 +145,7 @@ Builds on, earlier in this path: GitHub Actions for docs.
 
 `core` · practise it · 3h
 
-encode standards into templates, validators, and guided workflows
+Encoding team standards into templates and scaffolds, so the right shape is the default.
 
 Assumes, from outside this path: [Content models](../concepts/content-model.md).
 
@@ -153,7 +153,7 @@ Assumes, from outside this path: [Content models](../concepts/content-model.md).
 
 `core` · build something · 5h
 
-into templates, validators, and guided workflows rather than static documents
+Replacing static instructions with workflows that guide a person through a standard.
 
 Builds on, earlier in this path: Templates and scaffolding.
 
@@ -161,6 +161,6 @@ Builds on, earlier in this path: Templates and scaffolding.
 
 `core` · practise it · 4h
 
-Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents
+Making documentation part of what "ready to release" means, enforced rather than remembered.
 
 Builds on, earlier in this path: Documentation CI.

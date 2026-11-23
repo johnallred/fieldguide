@@ -11,8 +11,7 @@ tags: [ai, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! note "Not a quotation (derived)"
-    Required by "a crawlable, agent-ready front door": the machine-readable half of SEO and GEO.
+> Adding machine-readable markup so search engines and AI tools understand what a page is.
 
 **Prerequisites:** [Metadata for navigation and retrieval](metadata.md)
 
@@ -26,11 +25,11 @@ machine cannot infer from prose.
 It is the only place where your [content model](content-model.md) becomes
 visible to something that fetches your HTML and does not run your search index.
 
-## Why the job asks for it
+## How this applies to your role
 
-Neither posting says "JSON-LD", which is why this is `derived`. The Developer Relations posting asks for
-"a crawlable, agent-ready front door" and for content optimized "for search
-(SEO and GEO) and for AI assistants and coding agents". Structured data is the
+Nobody may ask you for JSON-LD by name, but they will ask for a crawlable,
+agent-ready front door and for content optimised for search (SEO and GEO) and
+for AI assistants and coding agents. Structured data is the
 mechanism that makes a page's type machine-readable to a consumer that is not
 your retriever.
 
@@ -372,9 +371,9 @@ Present it internally as cheap, generated, and useful for parsing rather than
 as a ranking lever, because the ranking claim is overstated everywhere and
 someone in the room will know it.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the boundary problem, which is
+**How to explain it.** Lead with the boundary problem, which is
 the documentation-specific insight. "The page type is the most useful field in
 our content model, and it stops existing at the HTML boundary: front matter does
 not reach a crawler. So I generate a `TechArticle` block from the required
@@ -392,7 +391,7 @@ it is generated so it cannot rot, and it forces per-page descriptions, which is
 worth having regardless. If someone wants a ranking promise, they should not get
 one.
 
-**The tradeoff to volunteer.** This is a second representation of facts that
+**The tradeoff to name.** This is a second representation of facts that
 already exist in front matter, and a second representation can drift. Generating
 it removes most of that risk and not all: a change to the content model needs a
 corresponding change here, and nothing fails if you forget. Hence the validator,
@@ -405,12 +404,12 @@ world.** Every field you cannot map onto a public vocabulary is a field only
 your own tooling can use, and that is fine for `audience` and genuinely awkward
 for page genre, which is your most valuable facet. Noticing that the thing you
 most want to tell a machine has no standard way to say it is a more interesting
-position than listing schema.org types, and it is the sort of gap a
-`KnowledgeOps` role is being hired to notice.
+position than listing schema.org types, and it is the sort of gap KnowledgeOps work exists to
+notice.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A generated block in a build step, with the validator, and
+**The work product.** A generated block in a build step, with the validator, and
 specifically the distinct-descriptions check.
 
 **Three things to do, in order:**
@@ -424,10 +423,10 @@ specifically the distinct-descriptions check.
    the validator in CI. That is the difference between structured data and a
    snippet somebody pasted into a template once.
 
-**What makes it credible rather than decorative.** Listing schema.org types proves nothing. A generated
-block, a validator whose first check is that descriptions differ, and an
-articulated reason for putting the page genre in `about` demonstrates that you
-thought about what a machine can and cannot learn from your HTML.
+**How to tell it is working.** A generated block, a validator whose first check is
+that descriptions differ, and a written reason for putting the page genre in
+`about`. That is the team deciding what a machine can and cannot learn from its
+HTML.
 
 ## Related
 

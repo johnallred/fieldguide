@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 3 · 8h
 
-> Ways to stand out: experience building RAG pipelines, AI assistants, MCP servers, or agent skill and context libraries backed by documentation
+> Building and maintaining pipelines that answer questions from your documentation.
 
 
 **Prerequisites:** [Chunking strategies](chunking.md), [Vector stores and hybrid search](vector-stores.md)
@@ -27,11 +27,11 @@ knowing which one is broken when the answer is wrong.
 The name oversells the novelty. It is search, with the results handed to a model
 instead of to a person.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names it three times: "structure and package content for RAG", "RAG
-pipelines" under ways to stand out, and implicitly in "internal assistants". It
-is the single most-repeated technical artifact in either posting.
+RAG shows up in three forms: content you structure and package for it, the
+pipelines themselves, and the internal assistants built on them. It is the
+single most common technical artifact in AI-ready documentation work.
 
 What makes it `core` and difficulty 3 is not the code, which is a few hundred
 lines. It is that **a RAG pipeline has five distinct failure modes that all
@@ -449,9 +449,9 @@ The second row is the one that causes incidents: an index built in March
 answering questions in September, with nothing in the answer indicating its
 age. A freshness field in the chunk metadata is cheap insurance.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with diagnosis, not architecture.
+**How to explain it.** Lead with diagnosis, not architecture.
 Everyone can draw the three boxes. "When a RAG answer is wrong there are five
 candidates, and they look identical to the user: the content does not exist, it
 was chunked badly, it was not retrieved, it was retrieved and outranked, or the
@@ -466,7 +466,7 @@ pages, scored on whether the right page came back and at what rank, run in CI.
 And the number you must have next to it is the lexical baseline, because a dense
 pipeline that scores worse than BM25 is a quarter spent going backwards.
 
-**The tradeoff to volunteer.** RAG converts a search problem you could inspect
+**The tradeoff to name.** RAG converts a search problem you could inspect
 into a generation problem you cannot. A search results page is honest: the
 reader sees five results and judges them. A generated answer hides the ranking,
 so a confidently wrong synthesis of two half-relevant chunks reads exactly like
@@ -481,14 +481,13 @@ questions it answers badly are the pages you have not written or have written in
 the wrong vocabulary. Teams treat a bad RAG answer as a model problem; it is
 usually a content report, delivered in the reader's own words, for free. Pointing
 that out reframes the whole project from an AI initiative into a documentation
-gap analysis, which is a much better pitch to a documentation lead and happens
-to be true.
+gap analysis, which is a much easier case to make to a documentation lead and
+happens to be true.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A pipeline with a trace object, plus the five-failure
-demonstration. The trace is what makes it look like something you operate rather
-than something you assembled.
+**The work product.** A pipeline with a trace object, plus the five-failure
+demonstration. The trace is what makes it something you can operate rather than something you assembled.
 
 **Three things to do, in order:**
 
@@ -504,10 +503,10 @@ than something you assembled.
    the distribution first. If mode 1 is not the largest, your corpus is in
    better shape than most and the retrieval configuration is where to look.
 
-**What makes it credible rather than decorative.** A working RAG demo is now a weekend project and
-proves little. A trace object, a five-mode taxonomy with a worked example of
-each, and a lexical baseline next to your retrieval numbers demonstrates that
-you have debugged one rather than built one.
+**How to tell it is working.** A working RAG demo is now a weekend project. A
+pipeline you can debug has a trace object, a five-mode taxonomy with a worked
+example of each, and a lexical baseline next to its retrieval numbers. When a
+wrong answer can be assigned to one failure mode in minutes, it is working.
 
 ## Related
 

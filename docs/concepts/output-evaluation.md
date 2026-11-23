@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 3 · 6h
 
-> Practical experience applying LLMs to content workflows (prompting, retrieval and grounding, output evaluation)
+> Measuring whether LLM output in your content workflows is accurate and usable.
 
 
 **Prerequisites:** [Grounding and citation](grounding.md), [Retrieval evaluation](retrieval-evaluation.md)
@@ -27,10 +27,10 @@ to a prompt or a model produces a number instead of an impression.
 back. This asks whether the text produced from it was any good, which is a
 harder question because there is no single correct output to compare against.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting lists it third in the required triple: "prompting, retrieval and
-grounding, output evaluation". The ordering is the pipeline, and this is the
+It is the third part of applying LLMs to content work, after prompting, and
+retrieval and grounding. The ordering is the pipeline, and this is the
 stage that tells you whether the first two worked.
 
 What makes it `core` and difficulty 3 is that it has no obvious answer key.
@@ -491,9 +491,9 @@ is this concept again one level up. **Pairwise comparison** asks which of two
 outputs is better, which humans do far more reliably than absolute scoring and
 which is the right method when the task has no answer key at all.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the tradeoff that eyeballing
+**How to explain it.** Lead with the tradeoff that eyeballing
 hides. "I keep a hand-labelled set of pages, including clean ones, because
 without clean cases you cannot measure precision at all. When someone tightened
 our audit prompt, both versions looked perfect to a reviewer, because every
@@ -511,7 +511,7 @@ from an afternoon of invention. If someone suggests having a model label the
 set, that is LLM-as-judge, and it needs its own human-labelled set to validate
 against, so it does not remove the labelling, it moves it.
 
-**The tradeoff to volunteer.** A labelled set is a target, and the same
+**The tradeoff to name.** A labelled set is a target, and the same
 Goodhart problem as [retrieval evaluation](retrieval-evaluation.md) applies more
 sharply here because prompts are so cheap to iterate. Sweep a few prompt
 variants against the set and you have fitted the prompt to twenty pages and
@@ -527,9 +527,9 @@ inter-annotator agreement before optimising tells you whether you are chasing a
 real gap or noise, and almost nobody does it. That observation separates someone
 who has run an evaluation from someone who has read about metrics.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A labelled set with clean and ambiguous cases, a scorer
+**The work product.** A labelled set with clean and ambiguous cases, a scorer
 reporting precision and recall per defect type, and one documented case where
 the measurement contradicted the spot check.
 
@@ -543,16 +543,14 @@ the measurement contradicted the spot check.
    faked.
 3. **Measure your own agreement with yourself.** Label ten pages, wait a week,
    label them again blind, and count the disagreements. That number is your
-   ceiling, and reporting it alongside a precision figure is unusual enough to
-   be memorable. Expect to disagree with yourself on at least one page in ten.
+   ceiling, and reporting it alongside a precision figure stops anyone over-reading the precision. Expect to disagree with yourself on at least one page in ten.
    A perfect second pass means you are remembering your labels rather than re-
    deriving them, and the week was not long enough.
 
-**What makes it credible rather than decorative.** Quoting precision and recall is a definition anyone
-can recite. A labelled set containing deliberately ambiguous cases, per-type
-metrics, and a worked example where tightening a prompt halved recall while F1
-stayed flat demonstrates that you have been misled by a spot check and built
-the thing that stops it happening again.
+**How to tell it is working.** A labelled set containing deliberately ambiguous
+cases, per-type metrics, and every prompt change run against it before it ships.
+When the set catches a change that looked better on a spot check, like the one
+that halved recall while F1 stayed flat, it is working.
 
 ### How this would be demonstrated elsewhere
 

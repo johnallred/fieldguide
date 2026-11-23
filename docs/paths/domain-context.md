@@ -1,7 +1,7 @@
 ---
 title: Enough domain to not be lost
-summary: The six domains these postings name, at the depth where you can follow an
-  engineer and know which questions are not yours to answer.
+summary: Six technical domains, at the depth where you can follow an engineer and
+  know which questions are not yours to answer.
 diataxis: placeholder
 audience: new-user
 generated: true
@@ -10,9 +10,9 @@ generated: true
 
 # Enough domain to not be lost
 
-**Who this is for.** Someone interviewing for, or newly inside, a documentation role at a company whose product is graphics, simulation, robotics or AI infrastructure.
+**Who this is for.** Someone doing documentation work at a company whose product is graphics, simulation, robotics or AI infrastructure.
 
-The six domains these postings name, at the depth where you can follow an engineer and know which questions are not yours to answer.
+Six technical domains, at the depth where you can follow an engineer and know which questions are not yours to answer.
 
 **6 concepts, roughly 24 hours.** The order matters:
 each step assumes the ones above it.
@@ -21,19 +21,19 @@ each step assumes the ones above it.
 
 `context` · practise it · 4h
 
-Documentation experience in graphics, simulation, robotics, or real-time systems
+Documenting software that runs on GPUs, well enough to follow the engineers who build it.
 
 ## 2. [Inference serving and microservices](../concepts/inference-serving.md)
 
 `context` · practise it · 4h
 
-including inference microservices and the agentic toolkit
+Documenting how models are served as microservices, and the agent tooling around them.
 
 ## 3. [Reading an AI software stack](../concepts/ai-stack.md)
 
 `context` · practise it · 4h
 
-Python literacy sufficient to run and validate AI samples, with working familiarity with the AI software stack
+Running and validating AI samples, which means reading the software stack under them.
 
 Builds on, earlier in this path: Inference serving and microservices.
 
@@ -41,18 +41,18 @@ Builds on, earlier in this path: Inference serving and microservices.
 
 `context` · practise it · 4h
 
-Documentation experience in graphics, simulation, robotics, or real-time systems
+Documenting graphics, simulation and real-time systems, where timing is part of correctness.
 
 ## 5. [OpenUSD and Omniverse](../concepts/usd-omniverse.md)
 
 `context` · practise it · 4h
 
-familiarity with USD, Omniverse, Isaac Sim, or ROS
+Documenting tools built on OpenUSD and Omniverse.
 
 ## 6. [Robotics simulation, Isaac Sim and ROS](../concepts/robotics-sim.md)
 
 `context` · practise it · 4h
 
-Documentation experience in graphics, simulation, robotics, or real-time systems; familiarity with USD, Omniverse, Isaac Sim, or ROS
+Documenting robotics simulation with Isaac Sim and ROS.
 
 Builds on, earlier in this path: OpenUSD and Omniverse.

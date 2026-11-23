@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 2 · 3h
 
-> Optimize documentation for search (SEO and GEO) and for AI assistants and coding agents through agentready, LLMdigestible content
+> Making documentation the source AI-generated answers draw on and cite.
 
 
 **Prerequisites:** [SEO for documentation](seo-for-docs.md), [Agent-ready content](agent-ready-content.md)
@@ -25,10 +25,9 @@ contested; the underlying question is not.
 **The useful framing: a search engine ranks pages, an assistant extracts
 passages.** Everything that differs follows from that.
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting names it twice, in a responsibility and in minimum qualifications, and
-pairs it with SEO both times. That pairing is the instruction: the same work
+It almost always arrives paired with SEO, and that pairing is the instruction: the same work
 serves both, and the parts that differ are worth knowing.
 
 What makes it `core` despite being the newest idea here is that the mechanism
@@ -397,8 +396,8 @@ and saying so plainly is better than pretending there is no tension.
 
 Present it internally as "making passages extract correctly", which is
 checkable, rather than as GEO, which invites a debate about whether the term
-means anything. The Developer Relations posting used the word, so use it on your résumé and describe the
-mechanism in the interview.
+means anything. Use the word with people who already use it, and describe the mechanism to
+everyone else.
 
 ### How to measure it, since the usual metrics do not exist
 
@@ -410,9 +409,9 @@ mechanism in the interview.
 | Are identifiers findable? | Query your own index for each flag name |
 | Does an assistant cite you? | Ask it, repeatedly, and record. Crude and the only direct signal |
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Define it by the unit, then give the
+**How to explain it.** Define it by the unit, then give the
 failure. "SEO optimises a page to be clicked; GEO optimises a passage to be
 quoted correctly. The failure that taught me the difference was a page whose
 first sentence said the retry default is 3 and whose last section said it
@@ -429,7 +428,7 @@ passage can be wrong while its page is right, and that this is measurable with a
 retrieval eval and a grounding check. Lead with the mechanism and the word stops
 mattering.
 
-**The tradeoff to volunteer.** Writing for extraction makes pages slightly worse
+**The tradeoff to name.** Writing for extraction makes pages slightly worse
 to read. Repeating "as of 2.5" in three consecutive sections is redundant for a
 human and necessary for a machine, and replacing a tidy "what changed" section
 with inline qualifiers scatters information a human would rather have in one
@@ -448,9 +447,9 @@ which is the same pattern as [RAG](rag.md) surfacing content gaps and
 pattern three times is worth saying: **machine consumers did not create these
 defects, they made them measurable.**
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A before-and-after page with the chunk-level audit, plus the
+**The work product.** A before-and-after page with the chunk-level audit, plus the
 checker in CI.
 
 **Three things to do, in order:**
@@ -465,10 +464,11 @@ checker in CI.
 3. **Add the self-contained and qualifier checks to CI.** Thirty lines. The
    pronoun-opening check alone catches a surprising amount.
 
-**What makes it credible rather than decorative.** Using the word GEO proves nothing and may cost you
-credibility with a sceptic. A page rewritten for extraction, a chunk-level audit
-showing which passage gets lifted, and a CI check for cross-chunk contradictions
-demonstrates that you understand what assistants actually do with your content.
+**How to tell it is working.** Using the word GEO changes nothing. A page
+rewritten for extraction, a chunk-level audit showing which passage gets
+lifted, and a CI check for cross-chunk contradictions mean the team is working
+with what assistants actually do with your content, and the wrong-default
+complaints stop.
 
 ## Related
 

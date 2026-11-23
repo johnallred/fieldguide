@@ -1,24 +1,29 @@
 ---
 title: Start here
-summary: A validated curriculum for documentation engineering, developer experience, and KnowledgeOps roles.
+summary: A training manual for documentation engineering, developer education and KnowledgeOps work, whatever your title.
 diataxis: explanation
 audience: new-user
 ---
 
 # Start here
 
-**A curriculum for a job category that does not have a settled name yet.**
+**A training manual for work that does not have a settled name yet.**
 
-A few job postings started this. One for a Docs and Learning Experience role in Developer Relations, that asks for golden paths, curriculum, documentation CI, cold-start testing, and content optimized for SEO and GEO. One for a Senior Content Engineer in something called KnowledgeOps, which asks for content modeling, taxonomy, metadata for machine retrieval, RAG packaging, agent skills, and evaluation sets for answer accuracy. One for a role called Developer Education Lead that asks for demos, labs, quick-reference guides, technical currciulum, self-service resources, experimental tools, content-freshness automation, etc. One for a Lab Development Engineer on a Cloud Training Team that asks for automated lab publishing process, automation of the curriculum publication process, automation of lab environment monitoring, design and develop new labs to ensure consistency and quality, perform the testing of new labs prior to release, ensure that all new and existing labs can be created in a reliable, repeatable, and scalable manner.
+The work goes by many titles: documentation engineer, developer education lead,
+content engineer, KnowledgeOps, docs and learning experience, lab development
+engineer. The day-to-day work underneath them is largely the same. You design
+golden paths and curriculum, run documentation CI and cold-start tests, model
+content and metadata so people and machines can find it, package knowledge for
+RAG and agents, measure whether any of it worked, and automate the publishing,
+testing and monitoring that keep it true.
 
-The titles are different. The work is essentially same work, and it is a real
-discipline with no agreed curriculum, no textbook, and almost no one
-deliberately trained for it. This guide is an attempt at the curriculum.
+It is a real discipline with no agreed curriculum, no textbook, and almost no
+one deliberately trained for it. This guide is meant to be handed to someone
+already doing the work, or just starting it, as a training manual.
 
-**It covers 106 concepts.** Every one is here because one of those two postings
-asks for it, and every one says which posting and in what words. The
-[coverage matrix](coverage.md) prints the receipts, including the places where
-the claim is this author's argument rather than a quotation.
+**It covers 106 concepts.** Every one names the day-to-day work that needs it,
+and the [coverage matrix](coverage.md) lists them all, so you can judge for
+yourself which earn your time.
 
 ## Three ways in
 
@@ -28,15 +33,15 @@ the claim is this author's argument rather than a quotation.
 
     Nine [learning paths](paths/index.md), each an ordered sequence with the
     prerequisites worked out. Start with [the first week](paths/first-week.md)
-    if you have just taken one of these jobs, or
-    [prove it in a weekend](paths/prove-it.md) if you need a portfolio artifact
-    before Monday.
+    if you have just started in this work, or
+    [a working result in a weekend](paths/prove-it.md) if you need to ship
+    something your team can review by Monday.
 
 -   :material-table-search: **Look something up**
 
     The [coverage matrix](coverage.md) is every concept with its tier,
-    difficulty, time estimate, and the posting line that put it on the list.
-    Sorted by category, so you can read one domain and ignore the rest.
+    difficulty, time estimate, and where it shows up in the work. Sorted by
+    category, so you can read one domain and ignore the rest.
 
 -   :material-sort-numeric-ascending: **Do all of it**
 
@@ -52,15 +57,15 @@ Every one answers the same seven questions in the same order:
 
 1. **What it is**, in two sentences, for someone who has heard the term in a
    meeting and not admitted they do not know it.
-2. **Why the job asks for it**, connected to the posting line, explaining the
-   work behind the words.
+2. **How this applies to your role**: the work behind the concept, and what it
+   looks like on an ordinary Tuesday.
 3. **The golden path**: the shortest real exercise that produces a working
    result, from a clean environment, ending in something observable.
 4. **Reference**: the facts worth looking up later. Tables, not narrative.
-5. **How to talk about it**, including the tradeoff, because reciting what a
-   thing does is not the signal.
-6. **How to prove it**: the artifact that demonstrates it without you having to
-   claim it.
+5. **Explaining it to your team**, including the tradeoff, because reciting
+   what a thing does is not the useful part.
+6. **Putting it into practice**: the work product, the next tasks, and how to
+   tell it is working.
 7. **Related**: the lateral links the prerequisite graph does not know about,
    each with a clause saying why a reader would follow it from here.
 
@@ -86,13 +91,12 @@ minutes of being written, which is the honest argument for all of it. See
 
 ## Where to be sceptical
 
-**The postings are not reproduced here.** The line recorded against each
-concept is a phrase taken down while reading them, so it is near-verbatim
-rather than certified. Where a concept is here because the work a posting names
-is impossible without it, the line says so rather than pretending to be a
-quotation. The [provenance page](explanation/provenance.md) explains why that
-line is printed on every row rather than quietly averaged away.
+**The scope is one person's judgement.** Each concept's line names the work
+that needs it, and some concepts are here because that work is impossible
+without them rather than because anyone asked for them by name. The
+[provenance page](explanation/provenance.md) explains how the list was built
+and checked.
 
-**One person wrote this.** The golden paths have been run; the career advice
-is opinion. Where a page recommends a tool over an alternative, it says what
-the alternative is better at.
+**One person wrote this.** The golden paths have been run; the advice about
+working with people is opinion. Where a page recommends a tool over an
+alternative, it says what the alternative is better at.

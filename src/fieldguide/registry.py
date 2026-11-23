@@ -13,12 +13,12 @@ Everything here exists to make a specific lie impossible:
 | a concept marked `complete` that is a stub | `understuffed` |
 | a learning path that teaches B before A | `path_order_violations` |
 | a prerequisite chain that cannot be followed | `cycles` |
-| a concept with no posting language behind it | schema validation |
+| a concept with no statement of the work behind it | schema validation |
 
 The last one matters most to the integrity of the whole site. Every concept
-claims a job posting asks for it. That claim is the argument for the concept
-existing, and an unsupported version of it is just an assertion, so the schema
-requires the posting language on every one.
+claims a place in the day-to-day work of the role. That claim is the argument
+for the concept existing, and an unsupported version of it is just an
+assertion, so the schema requires a line naming that work on every one.
 """
 
 from __future__ import annotations
@@ -64,11 +64,11 @@ DIATAXIS = ("tutorial", "how-to", "reference", "explanation", "placeholder")
 #: nobody wrote down, and the reader meets the inconsistency either way.
 REQUIRED_SECTIONS = (
     "What it is",
-    "Why the job asks for it",
+    "How this applies to your role",
     "The golden path",
     "Reference",
-    "How to talk about it",
-    "How to prove it",
+    "Explaining it to your team",
+    "Putting it into practice",
     "Related",
 )
 
@@ -87,8 +87,8 @@ REQUIRED_SECTIONS = (
 #:                       on 35, plus "One sharper point, and the best thing to
 #:                       say here." on 5, which the first sweep missed because
 #:                       it was looking for labels used ten times or more
-#:   credibility         "What makes it credible rather than decorative." on
-#:                       72 against "What makes it credible." on 34
+#:   credibility         two wordings of the closing check in the practice
+#:                       section, on 72 and 34 pages
 #:
 #: A reader meeting two wordings for one element does not read two
 #: conventions, they read incoherence, and no spell-checker, linter or strict
@@ -99,17 +99,20 @@ REQUIRED_SECTIONS = (
 #: Two of the three choices were decided on accuracy rather than on majority.
 #: "in order" beat the more common "today" because the tasks genuinely are
 #: ordered, with the first always being to run the golden path, while "today"
-#: promises a scope some of these tasks do not have. "rather than decorative"
-#: beat the shorter form because that clause is the section's whole argument.
+#: promises a scope some of these tasks do not have.
+#:
+#: Three labels were later reworded when the guide was recast as a training
+#: manual for people already doing the work, rather than preparation for
+#: getting it. Their old wordings are in `RETIRED_LABELS`.
 STRUCTURAL_LABELS: dict[str, str] = {
     "prerequisites": "**Prerequisites:**",
     "leads-to": "**Leads to:**",
-    "artifact": "**The artifact.**",
+    "artifact": "**The work product.**",
     "built": "**What you built.**",
-    "tradeoff": "**The tradeoff to volunteer.**",
-    "competent-answer": "**What a competent answer sounds like.**",
+    "tradeoff": "**The tradeoff to name.**",
+    "competent-answer": "**How to explain it.**",
     "sharper-point": "**One sharper point.**",
-    "credibility": "**What makes it credible rather than decorative.**",
+    "credibility": "**How to tell it is working.**",
     "proof-tasks": "**Three things to do, in order:**",
     # Sub-template labels. Each belongs to one family of pages rather than to
     # every page, and each is consistent within its family, so they are
@@ -142,6 +145,10 @@ RETIRED_LABELS: dict[str, str] = {
     "**What makes it credible.**": "credibility",
     "**Read first:**": "prerequisites",
     "**One sharper point, and the best thing to say here.**": "sharper-point",
+    "**The tradeoff to volunteer.**": "tradeoff",
+    "**What a competent answer sounds like.**": "competent-answer",
+    "**What makes it credible rather than decorative.**": "credibility",
+    "**The artifact.**": "artifact",
 }
 
 #: A `complete` page shorter than this is a stub wearing a label.
@@ -173,14 +180,14 @@ class RegistryError(ValueError):
 
 
 @dataclass(frozen=True)
-class Demand:
-    """One posting's claim on a concept.
+class Practice:
+    """Where a concept shows up in the work.
 
     Attributes:
-        quote: The posting language that puts this concept on the list.
+        text: One line naming the day-to-day work that needs this concept.
     """
 
-    quote: str
+    text: str
 
 
 @dataclass(frozen=True)
@@ -195,7 +202,7 @@ class Concept:
         difficulty: 1 read it, 2 practise it, 3 build something non-trivial.
         time: Honest estimate to working competence, as a human string.
         prerequisites: Concept ids that come first.
-        demanded_by: Why this concept earns a page.
+        in_practice: Why this concept earns a page.
         status: One of `STATUSES`.
     """
 
@@ -206,7 +213,7 @@ class Concept:
     difficulty: int
     time: str
     prerequisites: tuple[str, ...]
-    demanded_by: tuple[Demand, ...]
+    in_practice: tuple[Practice, ...]
     status: str
 
     @property
@@ -216,8 +223,8 @@ class Concept:
 
     @property
     def has_evidence(self) -> bool:
-        """True when posting language backs this concept."""
-        return bool(self.demanded_by)
+        """True when a line of real work backs this concept."""
+        return bool(self.in_practice)
 
 
 @dataclass(frozen=True)
@@ -269,24 +276,24 @@ def _require(raw: dict[str, Any], key: str, label: str) -> Any:
     return raw[key]
 
 
-def _parse_demand(raw: Any, label: str) -> Demand:
-    # A demand used to be a mapping of source, provenance and quote. It is now
-    # the posting language on its own, so a plain string is the whole record.
-    # The mapping form is still accepted so an older registry still loads.
+def _parse_practice(raw: Any, label: str) -> Practice:
+    # An entry used to be a mapping of source, provenance and quote. It is now
+    # one line of text, so a plain string is the whole record. The mapping form
+    # (with a `quote` key) is still accepted so an older registry still loads.
     if isinstance(raw, dict):
         quote = str(_require(raw, "quote", label)).strip()
     elif isinstance(raw, str):
         quote = raw.strip()
     else:
         raise RegistryError(
-            f"{label}: each demanded_by entry must be a string, got {type(raw).__name__}"
+            f"{label}: each in_practice entry must be a string, got {type(raw).__name__}"
         )
 
     if not quote:
-        # A concept's claim on the reader is the quote. Without one there is
+        # A concept's claim on the reader is this line. Without one there is
         # nothing to check and nothing to argue with.
         raise RegistryError(f"{label}: quote must not be empty")
-    return Demand(quote=quote)
+    return Practice(text=quote)
 
 
 def _parse_concept(raw: Any, index: int) -> Concept:
@@ -312,9 +319,9 @@ def _parse_concept(raw: Any, index: int) -> Concept:
             f"{label}: difficulty must be one of {list(DIFFICULTIES)}, got {difficulty!r}"
         )
 
-    demands = _require(raw, "demanded_by", label)
-    if not isinstance(demands, list) or not demands:
-        raise RegistryError(f"{label}: demanded_by must be a non-empty list")
+    practices = _require(raw, "in_practice", label)
+    if not isinstance(practices, list) or not practices:
+        raise RegistryError(f"{label}: in_practice must be a non-empty list")
 
     return Concept(
         id=concept_id,
@@ -324,7 +331,7 @@ def _parse_concept(raw: Any, index: int) -> Concept:
         difficulty=int(difficulty),
         time=str(_require(raw, "time", label)),
         prerequisites=tuple(str(p) for p in raw.get("prerequisites", ()) or ()),
-        demanded_by=tuple(_parse_demand(d, label) for d in demands),
+        in_practice=tuple(_parse_practice(d, label) for d in practices),
         status=status,
     )
 

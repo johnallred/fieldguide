@@ -11,8 +11,7 @@ tags: [qa, core]
 
 `core` · difficulty 3 · 5h
 
-!!! quote "Why it is on the curriculum"
-    "Build and maintain docsascode pipelines and documentation CI, including link checking and coldstart testing of quickstarts"
+> Testing quickstarts from a clean environment, the way a new developer meets them.
 
     "Treats setup, runnable samples, and docs as one product ... so a developer reaches first success in minutes with zero help"
 
@@ -25,10 +24,10 @@ environment, a clean container, no caches, no credentials the instructions did
 not mention. The test is not whether the commands work. It is whether the
 *document* is complete.
 
-The Developer Relations posting names it explicitly, which is unusual and tells you something about what
-they have been burned by.
+Teams that ask for it by name are usually teams that have been burned by its
+absence.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because a quickstart is the only page whose author is structurally incapable of
 testing it. The author has the SDK installed, the token exported, the
@@ -40,9 +39,9 @@ Then a developer who has none of that follows it and hits `ModuleNotFoundError`
 on step two. That developer is now evaluating your product on the basis of a
 document that was never true for anyone but its author.
 
-The Developer Relations posting's phrasing is "first success in minutes with zero help." Cold-start
-testing is the only mechanism that measures whether that claim holds, and it is
-why they list setup, samples and docs as one product. A quickstart is not prose
+The goal is usually stated as "first success in minutes with zero help."
+Cold-start testing is the only mechanism that measures whether that claim
+holds, and it is why setup, samples and docs have to be treated as one product. A quickstart is not prose
 with code in it. It is an executable artifact that happens to be readable.
 
 ## The golden path
@@ -237,7 +236,7 @@ hides that until a reader reports it.
 Only the last one is about omissions, and omissions are what make a quickstart
 fail for a stranger.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the author's blind spot.** "A quickstart is the one page its author
 cannot test, because their machine already has everything. So it runs from an
@@ -249,22 +248,22 @@ clone, a token nobody mentioned."
 on a schedule or per pull request, never in the fast feedback path, because the
 ratio is seconds against milliseconds and more like minutes in a container.
 
-**The tradeoff to volunteer.** Cold-start tests are the flakiest check you will
+**The tradeoff to name.** Cold-start tests are the flakiest check you will
 own, because they depend on package indexes and the network, and a flaky
 required check trains people to re-run CI until green. The mitigations are a
 separate job, a retry on genuine network failure only, and a clear rule about
 who investigates a red cold start. Do not pretend it is as deterministic as a
 unit test.
 
-**One sharper point, and the thing to say if you say one thing.** When a cold
+**One sharper point.** When a cold
 start fails, the fix is in the document, not the harness. Every instinct pushes
 the other way, because pre-installing the dependency makes the build green in
 one line. That single decision is the difference between a cold-start test and
 a cold-start-shaped piece of theatre.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A script that creates a clean environment, extracts the
+**The work product.** A script that creates a clean environment, extracts the
 quickstart's own commands, runs them in order, and asserts the final output.
 
 **Three things to do, in order:**
@@ -279,7 +278,7 @@ quickstart's own commands, runs them in order, and asserts the final output.
 3. Time it, and put the number in the README. The cost is the reason it lives
    in its own job, and knowing the number is how you defend that decision.
 
-**What makes it credible rather than decorative.** `docpack`'s
+**How to tell it is working.** `docpack`'s
 `scripts/coldstart.sh` builds a fresh virtual environment, installs the way a
 reader would, follows the tutorial literally, and asserts the exact output
 string the tutorial promises. The exact-output assertion is the part worth

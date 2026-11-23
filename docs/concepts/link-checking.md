@@ -11,8 +11,7 @@ tags: [qa, core]
 
 `core` · difficulty 1 · 2h
 
-!!! quote "Why it is on the curriculum"
-    "documentation CI, including link checking and coldstart testing of quickstarts"
+> Catching broken links before readers do, in CI and on the published site.
 
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 
@@ -27,9 +26,9 @@ The reason it gets its own page rather than one line in
 easy half, ships it, and believes the problem is solved. The easy half is
 missing files. The half that rots a corpus is missing anchors.
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting names it directly. It is the cheapest gate in this entire category,
+It is the cheapest gate in this entire category,
 which is why it is difficulty 1 and why it is usually the first thing added
 after a strict build.
 
@@ -287,7 +286,7 @@ to re-run CI until it passes, which destroys the gate's credibility for the
 internal checks too. Run external checks on a schedule, open an issue, and keep
 them out of the merge path.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the anchor gap**, because it is the part that shows you have run
 this rather than read about it. "A strict MkDocs build fails on a missing page
@@ -295,11 +294,10 @@ but only logs an `INFO` for a missing heading anchor, so it ships dead deep
 links. Renaming a heading is the most common way a site breaks its own links,
 and it is exactly the case the build cannot see."
 
-**The follow-up is usually about external links.** The answer that signals
-experience is that you deliberately do not gate merges on them, and why:
+**The follow-up is usually about external links.** The answer is that you deliberately do not gate merges on them, and why:
 non-determinism in a required check trains people to retry until green.
 
-**The tradeoff to volunteer.** Slug generation is tool-specific. Your checker
+**The tradeoff to name.** Slug generation is tool-specific. Your checker
 reimplements the slug rules of your static site generator, and if those rules
 drift your checker produces false reports. The honest mitigation is to
 unit-test `slugify` against real headings from your own corpus. The better
@@ -312,9 +310,9 @@ report that says the site has a broken link is a chore; a report that says
 why the script blanks fenced lines rather than deleting them: line numbers stay
 true.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A repository with link checking as its own CI step, plus a
+**The work product.** A repository with link checking as its own CI step, plus a
 commit where that step caught something.
 
 **Three things to do, in order:**
@@ -323,12 +321,12 @@ commit where that step caught something.
    watched a strict build publish a dead anchor.
 2. Point the script at a docs site you already have. On any corpus more than a
    few months old it will find something, and the first finding is the argument
-   you will use in the interview.
+   you will take to your team.
 3. Write one unit test for `slugify` using the ugliest real heading in your
    corpus, something with backticks and punctuation. That test is what makes
    the checker trustworthy rather than approximately right.
 
-**What makes it credible rather than decorative.** Anchors. A link checker that
+**How to tell it is working.** Anchors. A link checker that
 only resolves file paths reimplements something the build already does. Being
 able to say "mine catches renamed headings, and here is the pull request where
 it did" is the whole difference.

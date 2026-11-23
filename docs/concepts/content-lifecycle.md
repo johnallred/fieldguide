@@ -11,8 +11,7 @@ tags: [ia, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Automate the content lifecycle with LLMs and scripting, from drafting and updating to auditing, with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters"
+> Running content from draft to update to audit to retirement, increasingly with LLM help at each stage.
 
 **Prerequisites:** [Content models](content-model.md)
 
@@ -24,19 +23,19 @@ The states a page moves through from proposal to retirement, who owns it in
 each state, and what has to be true before it moves. Governance is the part
 that says who decides.
 
-The KnowledgeOps posting's phrasing names four activities: drafting, updating, auditing, and
-human review where judgment matters. That last clause is the governance
+The work breaks into four activities: drafting, updating, auditing, and human
+review where judgement matters. That last clause is the governance
 question, and it is the one that determines whether the first three are worth
 automating.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because a corpus without a lifecycle has exactly one state, which is
 "published", and therefore no mechanism for anything. A page cannot be known to
 be a draft, cannot be flagged for review, and cannot be retired, so the corpus
 only ever grows.
 
-The automation the KnowledgeOps posting asks for is downstream of the states. You cannot automate
+Lifecycle automation is downstream of the states. You cannot automate
 auditing without a definition of what is due for audit, and that definition is
 a lifecycle state plus a date. Teams that try to add the automation first end
 up with a script producing a list nobody owns.
@@ -152,7 +151,7 @@ something different happens because a page is in it.
 
 ### What to automate and what not to
 
-The KnowledgeOps posting's list, with the honest division:
+The four activities, with the honest division:
 
 | Activity | Automatable | What stays human |
 |---|---|---|
@@ -163,8 +162,8 @@ The KnowledgeOps posting's list, with the honest division:
 | Retiring | The mechanics | The decision |
 
 The pattern across every row: **measurement automates, judgment does not.**
-That is also the KnowledgeOps posting's own framing, "human review where judgment matters", and
-echoing it back with this division is a strong answer.
+That is what "human review where judgement matters" means in practice, and this
+division is the clearest way to explain it to a stakeholder.
 
 ### Making a state real
 
@@ -190,19 +189,19 @@ are.
 | A standing queue of audit findings | Converts measurement into a work item |
 | A retirement policy | Permits deletion, which otherwise never happens |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with falsifiability.** "A lifecycle state is only real if something
 checks it. In my own registry, `complete` claims seven required sections and a
 minimum length, and all of those fail a build if they are not true. Before the
 checks existed, `complete` was an opinion."
 
-**The follow-up is the KnowledgeOps posting's own clause**, human review where judgment matters,
-and the division to offer is that measurement automates and judgment does not.
+**The follow-up is usually where the human review goes**, and the division to
+offer is that measurement automates and judgment does not.
 Freshness, terminology drift and code accuracy are all measurable; whether a
 page should exist, and whether a proposed correction is right, are not.
 
-**The tradeoff to volunteer.** Every state is overhead, and a lifecycle with
+**The tradeoff to name.** Every state is overhead, and a lifecycle with
 eight states on a corpus of two hundred pages means authors spend their time
 in a workflow instead of writing. Three states that are checked beat eight that
 are aspirational. Add a state when something different will actually happen
@@ -215,9 +214,9 @@ word count; I cannot check that I ran the code. Being able to say which part of
 your own claim rests on discipline rather than on a gate is worth more than
 claiming the gate covers everything.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A closed state vocabulary, a written claim per state, a check
+**The work product.** A closed state vocabulary, a written claim per state, a check
 per claim, and an owner table.
 
 **Three things to do, in order:**
@@ -228,7 +227,7 @@ per claim, and an owner table.
 3. Write the owner table. Four rows is enough, and a page that cannot be traced
    to a person has no lifecycle.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories implements a governance process, which the
 [demonstrated](../demonstrated.md) page records, because process needs an
 organisation. What does exist is the falsifiable half: three states, a written

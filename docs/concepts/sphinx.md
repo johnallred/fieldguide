@@ -11,8 +11,7 @@ tags: [dac, core]
 
 `core` · difficulty 3 · 6h
 
-!!! quote "Why it is on the curriculum"
-    "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+> Building and maintaining documentation with Sphinx, especially for Python projects.
 
 **Prerequisites:** [Choosing a static site generator](static-site-generators.md), [reStructuredText](restructuredtext.md)
 
@@ -28,14 +27,14 @@ build fails**.
 It is the strictest of the generators and the hardest to adopt, and those are
 the same fact.
 
-## Why the job asks for it
+## How this applies to your role
 
-NVIDIA's documentation estate is Python and C++ tooling: Omniverse, Isaac Sim,
-OpenUSD. That is Sphinx territory and has been for twenty years, because
+Documentation for Python and C++ tooling, such as simulation and graphics
+platforms, is Sphinx territory and has been for twenty years, because
 Sphinx is the only common generator that treats API symbols as first-class
 objects with their own namespaces.
 
-The thing being tested is whether you know what it buys. Anyone can describe
+The thing worth knowing is what it buys. Anyone can describe
 Sphinx as "the Python one with RST". The useful answer is that its build is a
 correctness gate on the relationship between documentation and code. The honest
 version adds that `mkdocstrings` achieves the same gate for Python on MkDocs,
@@ -288,7 +287,7 @@ set coherent.
 | Symbols are renamed often enough to hurt | The team has no Python experience |
 | You need cross-project references | You need a site this afternoon |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the rename.** "Sphinx's build fails when a function referenced in
 the docs is renamed in the code, because references are typed and resolve
@@ -300,7 +299,7 @@ drifts and documentation that cannot."
 lets contributors write Markdown while keeping domains, `toctree` and typed
 references. Knowing that is what separates a current answer from a 2015 one.
 
-**The tradeoff to volunteer.** The doctree buys correctness and costs
+**The tradeoff to name.** The doctree buys correctness and costs
 approachability. `conf.py` is a Python program that can have bugs, errors are
 reported in docutils vocabulary, and `nitpicky` on an existing project produces
 a wall of unresolvable standard-library types before it produces value. Sphinx
@@ -313,9 +312,9 @@ class is verified rather than hoped for. In an ecosystem of related packages,
 that turns a set of separate documentation sites into something closer to one
 correct corpus, and almost nobody mentions it.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A Sphinx project with `-W` in CI, `autodoc` generating
+**The work product.** A Sphinx project with `-W` in CI, `autodoc` generating
 reference from source, and ideally `nitpicky` on.
 
 **Three things to do, in order:**
@@ -327,10 +326,10 @@ reference from source, and ideally `nitpicky` on.
 3. Add `intersphinx` pointing at the Python standard library and see how many
    previously unresolved types start resolving.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories is *built* with Sphinx, which the
-[demonstrated](../demonstrated.md) page records, and that is a real gap for a
-role at a company whose documentation is Sphinx-shaped. Running it in a drill
+[demonstrated](../demonstrated.md) page records, and that is a real gap for anyone
+working on a Sphinx-shaped documentation estate. Running it in a drill
 is not the same as owning a Sphinx corpus: nothing here involves a large
 `conf.py`, a custom extension, a theme fork, or `intersphinx` across teams,
 which is where the actual work is.

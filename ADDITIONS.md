@@ -14,8 +14,8 @@ plus one item that is blocked on a decision only the author can make.
 ## P1 Navigation: two new learning paths
 
 Path coverage is the largest structural gap. Three categories are almost
-unreachable by any curated route, and two of them are what the source postings
-lean on hardest.
+unreachable by any curated route, and two of them are what the work leans on
+hardest.
 
 ```
   meas    Measurement and feedback    1/7

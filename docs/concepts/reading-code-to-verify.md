@@ -11,7 +11,7 @@ tags: [craft, core]
 
 `core` · difficulty 2 · 5h
 
-> Enough technical depth to read code and APIs, verify accuracy, and write working examples
+> Reading code and APIs to verify a page is accurate, and writing examples that work.
 
 
 ## What it is
@@ -23,13 +23,12 @@ the validation rule, the error path, and the thing the docstring forgot.
 It is not software engineering. The skill is narrow and reading-only: navigate
 an unfamiliar codebase well enough to answer one factual question, then get out.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting puts this in minimum qualifications, and the phrasing is precise: "enough
-technical depth to read code and APIs, verify accuracy, and write working
-examples." The word doing the work is **enough**. They are not asking you to
-contribute to the simulation engine. They are asking you to stop being dependent
-on an engineer's memory.
+The bar is precise: enough technical depth to read code and APIs, verify
+accuracy, and write working examples. The word doing the work is **enough**.
+You do not need to contribute to the simulation engine. You need to stop being
+dependent on an engineer's memory.
 
 That dependency is the thing to understand. Here is the default workflow in a
 documentation team that cannot read code: you notice a page might be wrong, you
@@ -45,8 +44,8 @@ to 30 seconds. You open the client, find the constructor, and the default is
 region. Nobody lied; the page was right two years ago. **You could only find
 that by looking.**
 
-The second reason, and the one that gets you hired: it changes what you are in
-a room with engineers. A writer who arrives with "the page says 30, the
+The second reason, and the one that changes your working relationships: it
+changes what you are in a room with engineers. A writer who arrives with "the page says 30, the
 constructor says None, which is right?" gets a different conversation than one
 who arrives with "can you explain timeouts to me." It is the difference between
 being a channel and being a reviewer, and it is most of what
@@ -229,9 +228,9 @@ improvement before anyone checks it.
 5. **The example works only in the author's environment**, which is what
    [cold-start testing](coldstart-testing.md) exists for.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Give a concrete catch. "The page said
+**How to explain it.** Give a concrete catch. "The page said
 the visibility timeout defaulted to 30 seconds. The constructor passes `None`,
 which falls through to a server-side default that differs by region. The page
 had been right two years earlier. I found it by reading the signature, and I
@@ -243,7 +242,7 @@ That last clause is the one that gets remembered, because it is
 
 **The follow-up is "what do you do when you cannot read the code",** meaning a
 compiled component, a service you have no access to, a C++ simulation kernel.
-This is a real situation at the KnowledgeOps posting in particular. The honest answer has three
+This is a real situation at any company with a large native codebase. The honest answer has three
 parts. Read the public API surface and the tests, which are usually available
 even when the implementation is not. Verify behaviour by running it and
 observing, which is slower but authoritative. And when neither is possible,
@@ -252,7 +251,7 @@ came from an engineer's statement in 2026 rather than from the code. The failure
 mode to avoid is writing an unsourced claim with the same confidence as a
 verified one.
 
-**The tradeoff to volunteer.** Verification is slow, and the slowness is not
+**The tradeoff to name.** Verification is slow, and the slowness is not
 distributed evenly: it is most expensive exactly when you are new, which is when
 you have the most pages to write. A writer who verifies every claim on every
 page ships very little. The judgement is about which claims are worth it, and
@@ -268,11 +267,11 @@ which is how you get from manual verification to
 [doc test harnesses](doc-test-harness.md). The reading skill is the thing that
 teaches you what is automatable.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A pull request fixing a documented claim, with the source
-reference in the description. That is a small, specific, unfakeable thing, and
-open-source projects are full of opportunities for it.
+**The work product.** A pull request fixing a documented claim, with the source
+reference in the description. That is small and specific, and every corpus you
+maintain is full of opportunities for it.
 
 **Three things to do, in order:**
 
@@ -282,16 +281,15 @@ open-source projects are full of opportunities for it.
 2. **Write the check that would have caught it.** If the claim was a default
    value, write twenty lines that compare documented defaults against
    `inspect.signature` and fail if they disagree. This is the step that converts
-   a catch into a system, and it is a genuinely strong portfolio piece.
+   a catch into a system, and it is worth adding to CI.
 3. **Add provenance to one page.** Take a page with claims you cannot verify
    and mark which ones came from a conversation rather than from code. Then go
    verify the two that matter most. The marking is the discipline; the
    verification is the payoff.
 
-**What makes it credible rather than decorative.** Saying you can read code is unfalsifiable. A merged
-pull request that says "the docs say 30, the signature says None, here is the
-commit that changed it" is not. One of those is worth more than a paragraph of
-self-assessment.
+**How to tell it is working.** Merged pull requests that say "the docs say 30, the
+signature says None, here is the commit that changed it". When your corrections
+carry a file and a line, and engineers stop needing to be asked, it is working.
 
 ### How this would be demonstrated elsewhere
 

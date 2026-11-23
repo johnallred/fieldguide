@@ -11,7 +11,7 @@ tags: [craft, context]
 
 `context` · difficulty 2 · 3h
 
-> deliver Simulation Technology knowledge to developers, partners, internal teams, and the AI agents that increasingly sit between them and our documentation
+> Delivering knowledge to developers, partners, internal teams and the AI agents between them.
 
 
 **Prerequisites:** [Metadata for navigation and retrieval](metadata.md)
@@ -24,11 +24,11 @@ acting for each of them. The hard part is not writing differently for each. It
 is that the same source tree has to produce different outputs, and a mistake
 publishes something it should not.
 
-## Why the job asks for it
+## How this applies to your role
 
-It is the first sentence of the KnowledgeOps posting, and the list is deliberate:
-developers, partners, internal teams, and AI agents. Later, among the partner
-functions, "Partner Programs".
+Knowledge goes to four audiences, and the list is deliberate: developers,
+partners, internal teams, and AI agents. Partner programs are usually a team of
+their own that you work alongside.
 
 This is tagged `context` rather than `core` because you will not design the
 access model, and most of it is someone else's policy. But being unaware of it
@@ -255,9 +255,9 @@ Worth saying plainly, since this is `context` tier:
 Your job is that the content model carries the distinction, the publish step
 fails closed, and the retrieval layer respects it.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the whitelist and the agent
+**How to explain it.** Lead with the whitelist and the agent
 problem. "Visibility is a required field with a closed vocabulary, and the
 publish step copies in what is allowed rather than filtering out what is not, so
 a missing or misspelled value withholds the page instead of publishing it. The
@@ -275,7 +275,7 @@ depends on how much content genuinely spans tiers, and on whether you trust the
 gate. For a corpus where most internal content is runbooks and incident history,
 separate repositories are usually simpler.
 
-**The tradeoff to volunteer.** A visibility field makes every author make a
+**The tradeoff to name.** A visibility field makes every author make a
 security-adjacent decision while writing, and most authors are not equipped to
 make it. The field defaults to nothing on purpose, so an unclassified page blocks
 the build, but that means an author can be stopped by a question they cannot
@@ -292,10 +292,9 @@ distinction unprompted is the most valuable thing on this page, and at a company
 with partner programs and simulation customers under NDA it is a live concern
 rather than a hypothetical.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** The whitelist publish step plus the failing cases. It is forty
-lines and it demonstrates a design instinct that is hard to claim otherwise.
+**The work product.** The whitelist publish step plus the failing cases. It is forty lines and it turns an access policy into something a build enforces.
 
 **Three things to do, in order:**
 
@@ -310,10 +309,9 @@ lines and it demonstrates a design instinct that is hard to claim otherwise.
    when the corpus was indexed. Short, specific, and it is the kind of
    observation that gets remembered.
 
-**What makes it credible rather than decorative.** Multi-audience documentation is a common claim. A
-publish step that fails closed, with a demonstrated typo case, and a stated
-concern about the retrieval layer, is concrete and shows you have thought about
-the failure rather than the feature.
+**How to tell it is working.** A publish step that fails closed, a tested typo
+case, and a written position on the retrieval layer. When a mistyped audience
+value blocks a publish instead of leaking a page, it is working.
 
 ### How this would be demonstrated elsewhere
 

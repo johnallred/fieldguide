@@ -33,7 +33,7 @@
 #                  here, and no amount of further code changes that
 #
 # A gap and a ceiling look identical in a coverage percentage and are
-# completely different things to say in an interview. "Nobody has built it
+# completely different things to report to a team. "Nobody has built it
 # yet" invites the question of why not. "The corpus-side half is built,
 # measured and gated, and the reader-side half needs readers I do not have"
 # is a statement about the limits of the evidence, which is the more
@@ -224,7 +224,7 @@ demonstrates:
     project: fieldguide
     artifact: src/fieldguide/scaffold.py
     extent: full
-    note: "`fieldguide new` computes tags, the posting quote and both sets of graph links, and names a failure mode in every section prompt. CI asserts its output satisfies the validator for all planned concepts; a measurement showed the prompt comments were supplying 84 per cent of the 450-word gate, so word counts now exclude them."
+    note: "`fieldguide new` computes tags, the work line and both sets of graph links, and names a failure mode in every section prompt. CI asserts its output satisfies the validator for all planned concepts; a measurement showed the prompt comments were supplying 84 per cent of the 450-word gate, so word counts now exclude them."
 
   - concept: style-guide
     project: docpack

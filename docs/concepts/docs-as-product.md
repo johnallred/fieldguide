@@ -11,7 +11,7 @@ tags: [craft, core]
 
 `core` · difficulty 2 · 3h
 
-> Treats setup, runnable samples, and docs as one product
+> Treating setup, runnable samples and documentation as one product the developer experiences.
 
 
 ## What it is
@@ -21,11 +21,11 @@ rather than owning the pages along it. Setup instructions, the install script,
 the sample repository and the tutorial are one deliverable with one success
 criterion, even when three different teams maintain them.
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting states it in one sentence and the rest of the posting follows from it:
-"Treats setup, runnable samples, and docs as one product", and then "so a
-developer reaches first success in minutes with zero help".
+The principle fits in one sentence, and most of developer-education work
+follows from it: treat setup, runnable samples and docs as one product, so a
+developer reaches first success in minutes with zero help.
 
 The failure this prevents is organisational rather than editorial. The page is
 correct. The sample repository is correct. The install script is correct. The
@@ -254,7 +254,7 @@ put on it".
 | Minutes off-path | Where developers actually abandon. Total time hides this |
 | Number of artifacts on the route | A proxy for how many ways it can break |
 | Artifacts owned by teams whose CI excludes the route | The real risk register |
-| First-attempt success rate on a clean machine | The only number that matches the posting's promise |
+| First-attempt success rate on a clean machine | The only number that matches the promise of first success with zero help |
 
 ### The limits of this framing
 
@@ -264,9 +264,9 @@ put on it".
 | "One product, one owner" | Four teams still ship four artifacts on their own schedules |
 | "Cold-start testing proves it works" | It proves it works on the CI runner's clean machine, not on the developer's |
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the seam, not the philosophy.
+**How to explain it.** Lead with the seam, not the philosophy.
 "The quickstart was accurate and the sample repository was accurate and the
 route failed, because the sample had pinned a runtime version three weeks
 earlier. I added a check that compares the sample's requirements against the
@@ -285,7 +285,7 @@ Where it is not enough, the escalation is
 [release readiness](release-readiness.md): getting documentation into the
 definition of done, which is a political project rather than a technical one.
 
-**The tradeoff to volunteer.** Claiming the whole route means owning failures
+**The tradeoff to name.** Claiming the whole route means owning failures
 you cannot fix. You will be the person who reports that the model download
 started requiring authentication, and you will not be the person who can change
 it back. That is genuinely uncomfortable and it is the job: the alternative is a
@@ -296,13 +296,12 @@ product's actual API for new users**, and it is the only part of a platform that
 every single user touches in the same order. Teams instrument their services
 heavily and instrument that route not at all. Pointing out that the
 highest-traffic, least-monitored path in the product is the first ten minutes is
-a good way to get resources, and it is exactly the argument the Developer Relations posting is
-making with "setup, runnable samples, and docs as one product".
+a good way to get resources, and it is exactly the argument behind treating "setup, runnable samples, and
+docs as one product".
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A route document and one gate on one seam. The route document
-is unusual enough to be memorable and takes an hour.
+**The work product.** A route document and one gate on one seam. The route document is unusual, takes an hour, and gives every team on the route the same picture.
 
 **Three things to do, in order:**
 
@@ -317,7 +316,7 @@ is unusual enough to be memorable and takes an hour.
    list is a risk register nobody has written, and presenting it is a stronger
    demonstration of product ownership than any page.
 
-**What makes it credible rather than decorative.** "I think of docs as a product" is a slogan. A table
+**How to tell it is working.** "I think of docs as a product" is a slogan. A table
 of eight artifacts, four owners, and a measured twenty minutes off-path is not.
 
 ### How this would be demonstrated elsewhere

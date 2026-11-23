@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 1 · 2h
 
-> including llms.txt, MCP-accessible sources, agent skills and context kits, and evaluation sets for answer accuracy
+> Publishing machine-readable entry points to your docs, such as llms.txt, for AI tools to consume.
 
 
 **Prerequisites:** [Agent-ready content](agent-ready-content.md)
@@ -27,11 +27,10 @@ They are a community convention proposed by Jeremy Howard of Answer.AI in
 September 2024. **Not a standard**, and that distinction matters when you
 present it internally.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names the file explicitly, in a list of four AI-ready outputs. That is
-the whole justification, and it is a `core` concept for a cheaper reason than
-most: it takes an afternoon and it is the single most visible signal that a
+It is one of the four standard AI-ready outputs, and it is a `core` concept for
+a cheaper reason than most: it takes an afternoon and it is the single most visible signal that a
 documentation team has thought about machine consumers at all.
 
 On a Tuesday it is a generation step in your build, and the only interesting
@@ -376,12 +375,13 @@ cp -r docs site/docs
 
 Adoption is real, including by several developer-tools companies, and
 scepticism about it is also real. Present it internally as cheap and
-low-risk rather than as table stakes, because somebody in the room will know
-it is contested and a claim of standardisation will cost you credibility.
+low-risk rather than as an established standard, because somebody in the room
+will know it is contested and a claim of standardisation will cost you their
+trust.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Say what it is for, say what it is not,
+**How to explain it.** Say what it is for, say what it is not,
 and lead with the summary quality. "It is a map for a model that has not read
 your corpus yet: a name, a description, and annotated links grouped by what kind
 of question each page answers. The only thing that matters is the annotations.
@@ -398,7 +398,7 @@ reason to do it anyway is that it costs an afternoon, it is generated so it
 cannot rot, and it forces you to write a real one-sentence summary for every
 page, which is worth having regardless of whether any model ever reads the file.
 
-**The tradeoff to volunteer.** A hand-written `llms.txt` is worse than none.
+**The tradeoff to name.** A hand-written `llms.txt` is worse than none.
 Committed once and forgotten, it actively misinforms a model about what your
 corpus contains, and unlike a stale page nothing in your site contradicts it.
 So the real commitment is a build step and a CI gate that fails when the
@@ -413,9 +413,9 @@ scattered across forty pages of front matter. Several teams have found their
 content model's weakest field this way, and that is a real benefit independent
 of whether the convention survives.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A generated `llms.txt` with annotations that pass the
+**The work product.** A generated `llms.txt` with annotations that pass the
 reader-vocabulary test, plus the CI gate against staleness.
 
 **Three things to do, in order:**
@@ -432,10 +432,10 @@ reader-vocabulary test, plus the CI gate against staleness.
    guess and the count is the measurement, and it is usually in the same
    direction.
 
-**What makes it credible rather than decorative.** Publishing an `llms.txt` proves you read about it. A
-generated one, gated against staleness, with annotations written in reader
-vocabulary, and an opinion about the convention's contested status, proves you
-thought about it.
+**How to tell it is working.** A hand-written `llms.txt` goes stale within a
+release. A generated one, gated against staleness, with annotations written in
+reader vocabulary, and a recorded position on the convention's contested
+status, is one the team has actually thought about.
 
 ## Related
 

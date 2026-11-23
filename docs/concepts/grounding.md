@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 2 · 4h
 
-> Practical experience applying LLMs to content workflows (prompting, retrieval and grounding, output evaluation)
+> Making AI answers cite and stay within the documentation they draw on.
 
 
 **Prerequisites:** [RAG pipelines](rag.md)
@@ -28,10 +28,10 @@ enforcement: a claim with no supporting text is rejected before anyone reads it.
 The distinction matters because **a citation is not evidence of grounding.** A
 model will happily attach `[c3]` to a sentence `c3` does not support.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting lists it in the middle of the three-part requirement: "prompting,
-retrieval and grounding, output evaluation". The ordering is the pipeline, and
+Applying LLMs to content work has three parts: prompting, retrieval and
+grounding, output evaluation. The ordering is the pipeline, and
 grounding is the stage that makes the other two auditable.
 
 What makes it `core` rather than a nicety is the asymmetry described in
@@ -375,10 +375,10 @@ errors**, so it is a check on the pipeline and not on the documentation. That is
 what [freshness monitoring](freshness-monitoring.md) and
 [reading code to verify](reading-code-to-verify.md) are for.
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the fused claim, because it is
-the failure that proves you have looked at real output. "Citations are not
+**How to explain it.** Lead with the fused claim, because it is
+the failure that only shows up in real output. "Citations are not
 evidence of grounding. The failure I check for is a fused claim: the answer
 takes a flag name from one chunk and a default value from another and combines
 them into a sentence that is true of neither, with a citation attached. So every
@@ -395,7 +395,7 @@ threshold is a parameter you measure, not a number you reason to, which is why
 this concept leads directly into
 [output evaluation](output-evaluation.md).
 
-**The tradeoff to volunteer.** Strict grounding makes answers worse to read.
+**The tradeoff to name.** Strict grounding makes answers worse to read.
 A citation at the end of every sentence is noisy, the one-source-per-sentence
 rule forbids useful synthesis, and a model constrained this hard produces prose
 that reads like a quotation anthology. There is a real tension between an answer
@@ -412,10 +412,10 @@ complaints; with it you have a prioritised content backlog. That reframes the
 work from AI safety into [documentation prioritisation](docs-prioritization.md),
 and it is the framing a documentation lead will actually fund.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** The checker, plus a set of answers it rejects, including one
-that looks correct. The fused example is the one to show.
+**The work product.** The checker, plus a set of answers it rejects, including one
+that looks correct. The fused example is the one to share with your team.
 
 **Three things to do, in order:**
 
@@ -429,10 +429,10 @@ that looks correct. The fused example is the one to show.
    question-and-expected-source pairs, failing the build when the grounded rate
    drops. That is the step from a script to a gate.
 
-**What makes it credible rather than decorative.** Saying "we require citations" is near-universal and
+**How to tell it is working.** Saying "we require citations" is near-universal and
 means almost nothing. A checker that rejects a fused claim carrying a valid
-citation, with the threshold justified from a labelled set, demonstrates that
-you know citations are not grounding.
+citation, with the threshold justified from a labelled set, is grounding. Fused
+answers get caught before a reader sees them.
 
 ## Related
 

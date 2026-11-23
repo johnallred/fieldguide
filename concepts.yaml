@@ -14,28 +14,24 @@
 #   id            kebab-case, stable, used in URLs and cross-references.
 #   name          display name.
 #   category      one of the closed set in `categories` below.
-#   tier          core      you cannot do this job without it
+#   tier          core      you cannot do this work without it
 #                 supporting you will be asked to do it, it is not the centre
 #                 context    you need to not be lost in the room
 #   difficulty    1 read it  2 practise it  3 build something non-trivial
 #   time          honest estimate to working competence, not to familiarity
 #   prerequisites concept ids that should come first. Validated as a DAG.
-#   demanded_by   the posting language that puts this concept on the list
+#   in_practice   one line naming the day-to-day work that needs this concept
 #   status        planned | drafted | complete
 #
 # ---------------------------------------------------------------------------
-# On provenance, and a limitation worth stating plainly
+# On scope
 # ---------------------------------------------------------------------------
 #
-# A Developer Relations posting and a KnowledgeOps posting were read in
-# full when this registry was built, and the `quoted` entries are verbatim
-# phrases recorded at that time. The posting text itself is no longer on hand,
-# so entries marked `derived` are reconstructions of requirements rather than
-# quotations, and `adjacent` entries are this author's judgement about what the
-# named work actually requires.
-#
-# Treat `quoted` as evidence and the other two as argument. If the postings are
-# available again, the `derived` entries are the ones to re-check first.
+# The guide is written for people already doing documentation engineering,
+# developer education or KnowledgeOps work, whatever their title. Each
+# `in_practice` line names the work a concept is for, so a reader can judge
+# whether it earns their time. Some concepts are here because the named work
+# is impossible without them, and their lines say so in those terms.
 
 categories:
   ia: Information and knowledge architecture
@@ -62,8 +58,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: []
-    demanded_by:
-      - "Information architecture skills: content modeling, taxonomy, and metadata for both navigation and machine retrieval"
+    in_practice:
+      - "Deciding how content is modelled, classified and tagged so people can navigate it and machines can retrieve it."
     status: complete
 
   - id: knowledge-architecture
@@ -73,8 +69,8 @@ concepts:
     difficulty: 3
     time: 6h
     prerequisites: [information-architecture]
-    demanded_by:
-      - "Collaborate with documentation leads on knowledge architecture"
+    in_practice:
+      - "Working with documentation leads on how knowledge is organised across products, teams and sources."
     status: complete
 
   - id: diataxis
@@ -84,8 +80,8 @@ concepts:
     difficulty: 1
     time: 2h
     prerequisites: [information-architecture]
-    demanded_by:
-      - "The dominant framework for documentation structure. Neither posting names it; both describe the problem it solves."
+    in_practice:
+      - "Deciding whether a page is a tutorial, a how-to, reference or explanation, and keeping it to one of them."
     status: complete
 
   - id: content-model
@@ -95,8 +91,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [information-architecture]
-    demanded_by:
-      - "content modeling, taxonomy, and metadata"
+    in_practice:
+      - "Defining the types of content your team writes and the fields each one must carry."
     status: complete
 
   - id: taxonomy
@@ -106,8 +102,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [content-model]
-    demanded_by:
-      - "content modeling, taxonomy, and metadata"
+    in_practice:
+      - "Agreeing the terms content is classified by, and keeping that vocabulary closed and consistent."
     status: complete
 
   - id: metadata
@@ -117,8 +113,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [content-model]
-    demanded_by:
-      - "metadata for both navigation and machine retrieval"
+    in_practice:
+      - "Tagging content so navigation, search and AI retrieval can all find the right page."
     status: complete
 
   - id: content-lifecycle
@@ -128,8 +124,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [content-model]
-    demanded_by:
-      - "automate the content lifecycle with LLMs: drafting, updating, auditing"
+    in_practice:
+      - "Running content from draft to update to audit to retirement, increasingly with LLM help at each stage."
     status: complete
 
   - id: single-sourcing
@@ -139,8 +135,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [content-model]
-    demanded_by:
-      - "Neither posting mentions single-sourcing. The mechanism behind every claim about scaling documentation across products."
+    in_practice:
+      - "Writing a fact once and reusing it wherever it appears, so documentation scales across products."
     status: complete
 
   - id: style-guide
@@ -150,8 +146,8 @@ concepts:
     difficulty: 1
     time: 2h
     prerequisites: [taxonomy]
-    demanded_by:
-      - "as comfortable in Git, CI, or Python as in a style guide"
+    in_practice:
+      - "Keeping voice and terminology consistent across many authors, and enforcing it in the same tools as code."
     status: complete
 
   - id: findability
@@ -161,8 +157,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [metadata]
-    demanded_by:
-      - "makes documentation discoverable and usable by both developers and AI assistants"
+    in_practice:
+      - "Making sure developers and AI assistants can both find and use the page they need."
     status: complete
 
   # =========================================================================
@@ -176,8 +172,8 @@ concepts:
     difficulty: 1
     time: 2h
     prerequisites: []
-    demanded_by:
-      - "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
+    in_practice:
+      - "Running documentation through Git, CI builds, linting, link and sample checks, and automated publishing."
     status: complete
 
   - id: git-authoring
@@ -187,8 +183,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [docs-as-code]
-    demanded_by:
-      - "Hands-on docs-as-code experience: Git, pull request review, Markdown/RST, static site generators"
+    in_practice:
+      - "Writing in Git: branches, pull requests and review, in Markdown or RST, built by a static site generator."
     status: complete
 
   - id: markdown
@@ -198,8 +194,8 @@ concepts:
     difficulty: 1
     time: 2h
     prerequisites: [docs-as-code]
-    demanded_by:
-      - "Markdown/RST; Git, Markdown or MDX, and doc build pipelines"
+    in_practice:
+      - "Writing in Markdown every day, and knowing which dialect your build pipeline actually speaks."
     status: complete
 
   - id: mdx
@@ -209,8 +205,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [markdown]
-    demanded_by:
-      - "Hands on experience with docs-as-code workflows and documentation CI, including Git, Markdown or MDX"
+    in_practice:
+      - "Authoring pages that mix Markdown with components, inside a docs-as-code workflow with CI."
     status: complete
 
   - id: restructuredtext
@@ -220,8 +216,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [markdown]
-    demanded_by:
-      - "Markdown/RST"
+    in_practice:
+      - "Maintaining docs written in reStructuredText, usually alongside a Sphinx build."
     status: complete
 
   - id: static-site-generators
@@ -231,8 +227,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [markdown]
-    demanded_by:
-      - "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+    in_practice:
+      - "Choosing, configuring and living with the generator that turns your source into a site."
     status: complete
 
   - id: mkdocs
@@ -242,8 +238,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [static-site-generators]
-    demanded_by:
-      - "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+    in_practice:
+      - "Building and maintaining a documentation site on MkDocs with the Material theme."
     status: complete
 
   - id: sphinx
@@ -253,8 +249,8 @@ concepts:
     difficulty: 3
     time: 6h
     prerequisites: [static-site-generators, restructuredtext]
-    demanded_by:
-      - "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+    in_practice:
+      - "Building and maintaining documentation with Sphinx, especially for Python projects."
     status: complete
 
   - id: docusaurus
@@ -264,8 +260,8 @@ concepts:
     difficulty: 2
     time: 5h
     prerequisites: [static-site-generators, mdx]
-    demanded_by:
-      - "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+    in_practice:
+      - "Building and maintaining a documentation site on Docusaurus."
     status: complete
 
   - id: antora
@@ -275,8 +271,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [static-site-generators]
-    demanded_by:
-      - "Covered only by 'or similar' in one posting's list of generators. Worth recognising, rarely worth choosing new."
+    in_practice:
+      - "Recognising and maintaining Antora and AsciiDoc sites you inherit; rarely the choice for a new one."
     status: complete
 
   - id: api-reference-generation
@@ -286,8 +282,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [docs-as-code]
-    demanded_by:
-      - "Write and maintain reference documentation, tutorials, and sample walkthroughs that assume no prior context"
+    in_practice:
+      - "Producing reference documentation from the code itself, so it assumes no prior context and stays current."
     status: complete
 
   - id: openapi
@@ -297,8 +293,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [api-reference-generation]
-    demanded_by:
-      - "Neither posting mentions OpenAPI. The standard contract format for any HTTP surface you will document."
+    in_practice:
+      - "Documenting any HTTP API from its contract, and keeping that contract and the reference in step."
     status: complete
 
   - id: versioning
@@ -308,8 +304,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [static-site-generators]
-    demanded_by:
-      - "Neither posting mentions versioned docs. Unavoidable for any platform that ships releases, which is both of these."
+    in_practice:
+      - "Publishing documentation for more than one release at once, and keeping readers on the right version."
     status: complete
 
   - id: localization
@@ -319,8 +315,8 @@ concepts:
     difficulty: 3
     time: 4h
     prerequisites: [content-model, single-sourcing]
-    demanded_by:
-      - "Neither posting mentions localization. Included because a platform documentation role at that scale eventually meets it."
+    in_practice:
+      - "Getting content translated and keeping translations in step with the source as it changes."
     status: complete
 
   # =========================================================================
@@ -334,8 +330,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [docs-as-code, git-authoring]
-    demanded_by:
-      - "documentation CI"
+    in_practice:
+      - "Running automated checks on every documentation change before it merges."
     status: complete
 
   - id: github-actions
@@ -345,8 +341,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [documentation-ci]
-    demanded_by:
-      - "CI/CD is named by both; GitHub Actions is the most common implementation of it."
+    in_practice:
+      - "Writing and maintaining the CI workflows that build, check and publish your documentation."
     status: complete
 
   - id: prose-linting
@@ -356,8 +352,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [style-guide]
-    demanded_by:
-      - "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
+    in_practice:
+      - "Enforcing your style guide automatically with Vale, so reviews argue with a rule rather than a person."
     status: complete
 
   # The individual checks come before the practice of automating them. You run
@@ -371,8 +367,8 @@ concepts:
     difficulty: 1
     time: 2h
     prerequisites: [docs-as-code]
-    demanded_by:
-      - "link checking"
+    in_practice:
+      - "Catching broken links before readers do, in CI and on the published site."
     status: complete
 
   - id: code-sample-validation
@@ -382,8 +378,8 @@ concepts:
     difficulty: 3
     time: 5h
     prerequisites: [docs-as-code]
-    demanded_by:
-      - "link and code-sample validation"
+    in_practice:
+      - "Proving every code sample in the docs still runs and still produces what the page says."
     status: complete
 
   - id: coldstart-testing
@@ -393,8 +389,8 @@ concepts:
     difficulty: 3
     time: 5h
     prerequisites: [code-sample-validation, reproducible-environments]
-    demanded_by:
-      - "coldstart testing of quickstarts"
+    in_practice:
+      - "Testing quickstarts from a clean environment, the way a new developer meets them."
     status: complete
 
   - id: doctests
@@ -404,8 +400,8 @@ concepts:
     difficulty: 2
     time: 2h
     prerequisites: [code-sample-validation]
-    demanded_by:
-      - "doc test harnesses"
+    in_practice:
+      - "Keeping examples in docstrings executable, so they fail when the code changes."
     status: complete
 
   - id: accessibility
@@ -415,8 +411,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [documentation-ci]
-    demanded_by:
-      - "Neither posting mentions accessibility. Included because published content at either company is subject to it regardless."
+    in_practice:
+      - "Making sure published content is usable by everyone, which applies to every page you ship."
     status: complete
 
   - id: preview-deployments
@@ -426,8 +422,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [github-actions]
-    demanded_by:
-      - "and publishing"
+    in_practice:
+      - "Previewing every documentation change as a built site, and publishing it when it merges."
     status: complete
 
   - id: docs-review
@@ -437,8 +433,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [git-authoring, style-guide]
-    demanded_by:
-      - "Git, pull request review, Markdown/RST"
+    in_practice:
+      - "Reviewing documentation pull requests for accuracy, structure and style."
     status: complete
 
   # =========================================================================
@@ -452,8 +448,8 @@ concepts:
     difficulty: 3
     time: 5h
     prerequisites: [diataxis]
-    demanded_by:
-      - "Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result"
+    in_practice:
+      - "Designing and maintaining the routes that take a developer from a clean environment to a working result."
     status: complete
 
   - id: quickstarts
@@ -463,8 +459,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [golden-paths]
-    demanded_by:
-      - "coldstart testing of quickstarts"
+    in_practice:
+      - "Writing quickstarts that still work when a new developer follows them cold."
     status: complete
 
   - id: tutorial-design
@@ -474,8 +470,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [diataxis]
-    demanded_by:
-      - "tutorial"
+    in_practice:
+      - "Designing tutorials that teach by having the reader build something real."
     status: complete
 
   - id: sample-walkthroughs
@@ -485,8 +481,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [tutorial-design]
-    demanded_by:
-      - "sample walkthrough"
+    in_practice:
+      - "Writing walkthroughs that explain a sample line by line, without drifting from the sample."
     status: complete
 
   - id: sample-apps
@@ -496,8 +492,8 @@ concepts:
     difficulty: 3
     time: 6h
     prerequisites: [sample-walkthroughs, code-sample-validation]
-    demanded_by:
-      - "the sample-app gallery"
+    in_practice:
+      - "Building and maintaining the sample applications, and the gallery developers browse them from."
     status: complete
 
   - id: templates-scaffolding
@@ -507,8 +503,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [content-model]
-    demanded_by:
-      - "encode standards into templates, validators, and guided workflows"
+    in_practice:
+      - "Encoding team standards into templates and scaffolds, so the right shape is the default."
     status: complete
 
   - id: reproducible-environments
@@ -518,8 +514,8 @@ concepts:
     difficulty: 3
     time: 4h
     prerequisites: [golden-paths]
-    demanded_by:
-      - "take a developer from a clean environment to a working result"
+    in_practice:
+      - "Making sure every exercise starts from an environment a reader can recreate exactly."
     status: complete
 
   # =========================================================================
@@ -533,8 +529,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [content-model, metadata]
-    demanded_by:
-      - "Make knowledge AI-ready"
+    in_practice:
+      - "Structuring knowledge so AI assistants and agents can use it as reliably as people can."
     status: complete
 
   - id: llms-txt
@@ -544,8 +540,8 @@ concepts:
     difficulty: 1
     time: 2h
     prerequisites: [agent-ready-content]
-    demanded_by:
-      - "including llms.txt, MCP-accessible sources, agent skills and context kits, and evaluation sets for answer accuracy"
+    in_practice:
+      - "Publishing machine-readable entry points to your docs, such as llms.txt, for AI tools to consume."
     status: complete
 
   - id: chunking
@@ -555,8 +551,8 @@ concepts:
     difficulty: 3
     time: 5h
     prerequisites: [agent-ready-content]
-    demanded_by:
-      - "structure and package content for RAG, internal assistants, and agentic workflows"
+    in_practice:
+      - "Splitting content into pieces a RAG system, internal assistant or agent can retrieve on their own."
     status: complete
 
   - id: embeddings
@@ -566,8 +562,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [chunking]
-    demanded_by:
-      - "Required by any RAG pipeline, and one posting names RAG pipelines twice."
+    in_practice:
+      - "Turning content into vectors so it can be searched by meaning, the first step of any RAG pipeline."
     status: complete
 
   - id: vector-stores
@@ -577,8 +573,8 @@ concepts:
     difficulty: 3
     time: 5h
     prerequisites: [embeddings]
-    demanded_by:
-      - "The retrieval half of a RAG pipeline, named as a way to stand out."
+    in_practice:
+      - "Storing and searching embedded content, alone or alongside keyword search: the retrieval half of RAG."
     status: complete
 
   - id: rag
@@ -588,8 +584,8 @@ concepts:
     difficulty: 3
     time: 8h
     prerequisites: [chunking, vector-stores]
-    demanded_by:
-      - "Ways to stand out: experience building RAG pipelines, AI assistants, MCP servers"
+    in_practice:
+      - "Building and maintaining pipelines that answer questions from your documentation."
     status: complete
 
   - id: retrieval-evaluation
@@ -599,8 +595,8 @@ concepts:
     difficulty: 3
     time: 6h
     prerequisites: [rag]
-    demanded_by:
-      - "evaluation sets for answer accuracy"
+    in_practice:
+      - "Building question sets that measure whether retrieval finds the right content."
     status: complete
 
   - id: grounding
@@ -610,8 +606,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [rag]
-    demanded_by:
-      - "prompting, retrieval and grounding, output evaluation"
+    in_practice:
+      - "Making AI answers cite and stay within the documentation they draw on."
     status: complete
 
   - id: output-evaluation
@@ -621,8 +617,8 @@ concepts:
     difficulty: 3
     time: 6h
     prerequisites: [grounding, retrieval-evaluation]
-    demanded_by:
-      - "prompting, retrieval and grounding, output evaluation"
+    in_practice:
+      - "Measuring whether LLM output in your content workflows is accurate and usable."
     status: complete
 
   - id: prompting
@@ -632,8 +628,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: []
-    demanded_by:
-      - "Practical experience applying LLMs to content workflows (prompting, retrieval and grounding, output evaluation)"
+    in_practice:
+      - "Writing prompts for drafting, rewriting and checking content, and knowing where they fail."
     status: complete
 
   - id: llm-content-lifecycle
@@ -643,8 +639,8 @@ concepts:
     difficulty: 3
     time: 6h
     prerequisites: [prompting, content-lifecycle]
-    demanded_by:
-      - "automate the content lifecycle with LLMs: drafting, updating, auditing"
+    in_practice:
+      - "Using LLMs to draft, update and audit content, with human review where judgement matters."
     status: complete
 
   - id: mcp
@@ -654,8 +650,8 @@ concepts:
     difficulty: 3
     time: 5h
     prerequisites: [agent-ready-content]
-    demanded_by:
-      - "Ways to stand out: experience building RAG pipelines, AI assistants, MCP servers"
+    in_practice:
+      - "Exposing documentation and tools to AI assistants through Model Context Protocol servers."
     status: complete
 
   - id: agent-skills
@@ -665,8 +661,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [mcp, templates-scaffolding]
-    demanded_by:
-      - "agent skills and context kits"
+    in_practice:
+      - "Packaging instructions and context so agents can do a task the way your team does it."
     status: complete
 
   - id: structured-data
@@ -676,8 +672,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [metadata]
-    demanded_by:
-      - "Required by 'a crawlable, agent-ready front door': the machine-readable half of SEO and GEO."
+    in_practice:
+      - "Adding machine-readable markup so search engines and AI tools understand what a page is."
     status: complete
 
   - id: seo-for-docs
@@ -687,8 +683,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [metadata]
-    demanded_by:
-      - "documentation optimized for SEO and GEO"
+    in_practice:
+      - "Making documentation rank for the searches developers actually run."
     status: complete
 
   - id: geo
@@ -698,8 +694,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [seo-for-docs, agent-ready-content]
-    demanded_by:
-      - "documentation optimized for SEO and GEO"
+    in_practice:
+      - "Making documentation the source AI-generated answers draw on and cite."
     status: complete
 
   - id: hallucination-guardrails
@@ -709,8 +705,8 @@ concepts:
     difficulty: 3
     time: 4h
     prerequisites: [grounding, output-evaluation]
-    demanded_by:
-      - "sound judgment about where AI can be trusted"
+    in_practice:
+      - "Catching and limiting AI answers that are confident and wrong."
     status: complete
 
   # =========================================================================
@@ -724,8 +720,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [documentation-ci]
-    demanded_by:
-      - "Instrument documentation analytics and convert findings into improvements to docs, samples, and tooling"
+    in_practice:
+      - "Instrumenting documentation and turning what the data shows into fixes to docs, samples and tooling."
     status: complete
 
   - id: time-to-first-success
@@ -735,8 +731,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [docs-analytics, golden-paths]
-    demanded_by:
-      - "measure time-to-first-success, support deflection, repeat questions, and AI answer quality"
+    in_practice:
+      - "Measuring how long a new developer takes to reach a working result, and shortening it."
     status: complete
 
   - id: support-deflection
@@ -746,8 +742,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [docs-analytics]
-    demanded_by:
-      - "Measurable reductions in support load or onboarding time through self-service knowledge systems"
+    in_practice:
+      - "Measuring how much support load and onboarding time self-service content removes."
     status: complete
 
   - id: repeat-questions
@@ -757,8 +753,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [support-deflection]
-    demanded_by:
-      - "repeat questions"
+    in_practice:
+      - "Finding the questions people keep asking, and fixing the content that keeps causing them."
     status: complete
 
   - id: search-log-analysis
@@ -768,8 +764,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [findability, docs-analytics]
-    demanded_by:
-      - "Not named. The input that turns a hand-written evaluation set into a representative one."
+    in_practice:
+      - "Reading what people search for, so evaluation sets and fixes reflect real questions."
     status: complete
 
   - id: ai-answer-quality
@@ -779,8 +775,8 @@ concepts:
     difficulty: 3
     time: 5h
     prerequisites: [output-evaluation, docs-analytics]
-    demanded_by:
-      - "AI answer quality"
+    in_practice:
+      - "Measuring how often an AI assistant answers correctly from your documentation."
     status: complete
 
   # =========================================================================
@@ -794,8 +790,8 @@ concepts:
     difficulty: 2
     time: 5h
     prerequisites: []
-    demanded_by:
-      - "Design and maintain golden paths and curriculum that take a developer from a clean environment to a working result"
+    in_practice:
+      - "Designing curriculum so a developer learns what they need, in the order they need it."
     status: complete
 
   - id: learning-paths
@@ -805,8 +801,8 @@ concepts:
     difficulty: 3
     time: 5h
     prerequisites: [instructional-design, diataxis]
-    demanded_by:
-      - "structured learning paths"
+    in_practice:
+      - "Sequencing content into structured learning paths a reader can follow start to finish."
     status: complete
 
   - id: cognitive-load
@@ -816,8 +812,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [instructional-design]
-    demanded_by:
-      - "Not named. The mechanism behind every claim about reaching first success in minutes."
+    in_practice:
+      - "Cutting what a reader has to hold in their head, so they reach first success sooner."
     status: complete
 
   - id: assessment
@@ -827,8 +823,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [instructional-design]
-    demanded_by:
-      - "Not named. The counterpart to cold-start testing: how you know the curriculum worked."
+    in_practice:
+      - "Checking that a learner actually learned: how you know the curriculum worked."
     status: complete
 
   - id: workshops
@@ -838,8 +834,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [learning-paths, reproducible-environments]
-    demanded_by:
-      - "Neither posting mentions workshops. A standard developer-relations deliverable."
+    in_practice:
+      - "Running hands-on workshops and labs, a standard developer-relations deliverable."
     status: complete
 
   - id: developer-advocacy
@@ -849,8 +845,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: []
-    demanded_by:
-      - "Partner with engineering, product, and developer advocates so each new capability ships with tested documentation"
+    in_practice:
+      - "Working with engineering, product and advocates so each new capability ships with tested documentation."
     status: complete
 
   - id: screencasts
@@ -860,8 +856,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [tutorial-design]
-    demanded_by:
-      - "Neither posting mentions video. A common secondary deliverable in developer-relations roles."
+    in_practice:
+      - "Producing short videos that show a task, and keeping them accurate as the product changes."
     status: complete
 
   # =========================================================================
@@ -875,8 +871,8 @@ concepts:
     difficulty: 2
     time: 5h
     prerequisites: []
-    demanded_by:
-      - "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
+    in_practice:
+      - "Using Python to automate content tasks, transform data and call APIs."
     status: complete
 
   - id: content-data-transformation
@@ -886,8 +882,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [python-for-content, content-model]
-    demanded_by:
-      - "Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs"
+    in_practice:
+      - "Treating content as data: parsing, reshaping and generating it with scripts."
     status: complete
 
   - id: api-integration
@@ -897,8 +893,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [python-for-content]
-    demanded_by:
-      - "automate content tasks, transform data, and integrate with APIs"
+    in_practice:
+      - "Connecting your content tooling to other systems through their APIs."
     status: complete
 
   # =========================================================================
@@ -912,8 +908,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: []
-    demanded_by:
-      - "Documentation experience in graphics, simulation, robotics, or real-time systems"
+    in_practice:
+      - "Documenting software that runs on GPUs, well enough to follow the engineers who build it."
     status: complete
 
   - id: usd-omniverse
@@ -923,8 +919,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: []
-    demanded_by:
-      - "familiarity with USD, Omniverse, Isaac Sim, or ROS"
+    in_practice:
+      - "Documenting tools built on OpenUSD and Omniverse."
     status: complete
 
   - id: robotics-sim
@@ -934,8 +930,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [usd-omniverse]
-    demanded_by:
-      - "Documentation experience in graphics, simulation, robotics, or real-time systems; familiarity with USD, Omniverse, Isaac Sim, or ROS"
+    in_practice:
+      - "Documenting robotics simulation with Isaac Sim and ROS."
     status: complete
 
   - id: inference-serving
@@ -945,8 +941,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: []
-    demanded_by:
-      - "including inference microservices and the agentic toolkit"
+    in_practice:
+      - "Documenting how models are served as microservices, and the agent tooling around them."
     status: complete
 
   - id: ai-stack
@@ -956,8 +952,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [inference-serving]
-    demanded_by:
-      - "Python literacy sufficient to run and validate AI samples, with working familiarity with the AI software stack"
+    in_practice:
+      - "Running and validating AI samples, which means reading the software stack under them."
     status: complete
 
   # =========================================================================
@@ -971,8 +967,8 @@ concepts:
     difficulty: 2
     time: 2h
     prerequisites: []
-    demanded_by:
-      - "A systems mindset: you fix the class of problem, not just the instance"
+    in_practice:
+      - "Fixing the class of problem rather than the single instance in front of you."
     status: complete
 
   - id: sme-interviews
@@ -982,8 +978,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: []
-    demanded_by:
-      - "Turning documentation, standards, and tribal knowledge into tooling, templates, and self-service paths"
+    in_practice:
+      - "Getting tribal knowledge out of experts' heads and into tooling, templates and self-service paths."
     status: complete
 
   - id: docs-prioritization
@@ -993,8 +989,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [repeat-questions, systems-mindset]
-    demanded_by:
-      - "use the data to decide what to build, fix, or retire"
+    in_practice:
+      - "Using data to decide what to build, fix or retire next."
     status: complete
 
   - id: working-with-engineers
@@ -1004,14 +1000,14 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [sme-interviews, docs-review]
-    demanded_by:
-      - "Partner with Engineering, Product, Security, Developer Relations, and Partner Programs so every release ships documented, discoverable, and supportable"
+    in_practice:
+      - "Working with engineering, product, security and partner teams so every release ships documented."
     status: complete
 
   # =========================================================================
-  # Added after re-reading both postings in full. Every one of these is named
-  # in a posting and was missing from the first pass, which is the argument for
-  # doing this diff against the source text rather than against notes.
+  # Added in a second pass over the work this guide covers. Each was missing
+  # from the first pass, which is the argument for checking a curriculum
+  # against the work itself rather than against notes.
   # =========================================================================
 
   - id: technical-writing
@@ -1021,8 +1017,8 @@ concepts:
     difficulty: 2
     time: 8h
     prerequisites: []
-    demanded_by:
-      - "Strong technical writing and information architecture skills for developer documentation"
+    in_practice:
+      - "Writing developer documentation a reader can act on without asking you a question."
     status: complete
 
   - id: reading-code-to-verify
@@ -1032,8 +1028,8 @@ concepts:
     difficulty: 2
     time: 5h
     prerequisites: []
-    demanded_by:
-      - "Enough technical depth to read code and APIs, verify accuracy, and write working examples"
+    in_practice:
+      - "Reading code and APIs to verify a page is accurate, and writing examples that work."
     status: complete
 
   - id: docs-as-product
@@ -1043,8 +1039,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: []
-    demanded_by:
-      - "Treats setup, runnable samples, and docs as one product"
+    in_practice:
+      - "Treating setup, runnable samples and documentation as one product the developer experiences."
     status: complete
 
   - id: implementation-feedback
@@ -1054,8 +1050,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [systems-mindset]
-    demanded_by:
-      - "sharing implementation feedback (what works, breaks, and scales) to refine content models, information architecture, and AI-readiness patterns"
+    in_practice:
+      - "Telling architecture owners what works, breaks and scales, so content models and AI-readiness patterns improve."
     status: complete
 
   - id: ai-trust-judgment
@@ -1065,8 +1061,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [prompting]
-    demanded_by:
-      - "sound judgment about where AI can be trusted"
+    in_practice:
+      - "Deciding where AI output can be trusted and where a human must check it."
     status: complete
 
   - id: release-readiness
@@ -1076,8 +1072,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [documentation-ci]
-    demanded_by:
-      - "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows rather than static documents"
+    in_practice:
+      - "Making documentation part of what \"ready to release\" means, enforced rather than remembered."
     status: complete
 
   - id: user-stories
@@ -1087,8 +1083,8 @@ concepts:
     difficulty: 1
     time: 2h
     prerequisites: []
-    demanded_by:
-      - "Encode standards (user stories, release readiness, onboarding, security guidance) into templates"
+    in_practice:
+      - "Turning user stories into a documentation standard that templates can enforce."
     status: complete
 
   - id: partner-documentation
@@ -1098,8 +1094,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [metadata]
-    demanded_by:
-      - "deliver Simulation Technology knowledge to developers, partners, internal teams, and the AI agents that increasingly sit between them and our documentation"
+    in_practice:
+      - "Delivering knowledge to developers, partners, internal teams and the AI agents between them."
     status: complete
 
   - id: playbooks
@@ -1109,8 +1105,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [sme-interviews]
-    demanded_by:
-      - "Capture tribal knowledge from engineering, product, and operations, and turn it into playbooks, decision guides, and self-service paths"
+    in_practice:
+      - "Turning tribal knowledge from engineering, product and operations into playbooks and decision guides."
     status: complete
 
   - id: security-documentation
@@ -1120,8 +1116,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [style-guide]
-    demanded_by:
-      - "Encode standards (user stories, release readiness, onboarding, security guidance) into templates, validators, and guided workflows"
+    in_practice:
+      - "Encoding security guidance into templates, validators and workflows rather than static pages."
     status: complete
 
   - id: content-retirement
@@ -1131,8 +1127,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [content-lifecycle]
-    demanded_by:
-      - "use the data to decide what to build, fix, or retire"
+    in_practice:
+      - "Deciding what to retire, and removing it without breaking what links to it."
     status: complete
 
   - id: guided-workflows
@@ -1142,8 +1138,8 @@ concepts:
     difficulty: 3
     time: 5h
     prerequisites: [templates-scaffolding]
-    demanded_by:
-      - "into templates, validators, and guided workflows rather than static documents"
+    in_practice:
+      - "Replacing static instructions with workflows that guide a person through a standard."
     status: complete
 
   - id: freshness-monitoring
@@ -1153,8 +1149,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [content-lifecycle, documentation-ci]
-    demanded_by:
-      - "with checks for freshness, code accuracy, and terminology drift, and human review where judgment matters"
+    in_practice:
+      - "Checking automatically that content is still current, and routing what is not to a human."
     status: complete
 
   - id: terminology-drift
@@ -1164,8 +1160,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [taxonomy, prose-linting]
-    demanded_by:
-      - "checks for freshness, code accuracy, and terminology drift"
+    in_practice:
+      - "Detecting when the words in your docs drift away from the words in the product."
     status: complete
 
   - id: custom-linters
@@ -1175,8 +1171,8 @@ concepts:
     difficulty: 3
     time: 5h
     prerequisites: [prose-linting]
-    demanded_by:
-      - "Content quality automation you've built, such as Vale or custom linters"
+    in_practice:
+      - "Writing your own content checks when an off-the-shelf linter cannot express the rule."
     status: complete
 
   - id: doc-test-harness
@@ -1186,8 +1182,8 @@ concepts:
     difficulty: 3
     time: 6h
     prerequisites: [code-sample-validation]
-    demanded_by:
-      - "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
+    in_practice:
+      - "Building a harness that runs documentation as tests, so broken pages fail the build."
     status: complete
 
   - id: ai-assistants
@@ -1197,8 +1193,8 @@ concepts:
     difficulty: 3
     time: 8h
     prerequisites: [rag, grounding]
-    demanded_by:
-      - "structure and package content for RAG, internal assistants, and agentic workflows"
+    in_practice:
+      - "Building and feeding assistants that answer questions from your documentation."
     status: complete
 
   - id: agentic-workflows
@@ -1208,8 +1204,8 @@ concepts:
     difficulty: 3
     time: 6h
     prerequisites: [mcp, agent-skills]
-    demanded_by:
-      - "structure and package content for RAG, internal assistants, and agentic workflows"
+    in_practice:
+      - "Structuring content so agents can carry out multi-step tasks from it."
     status: complete
 
   - id: coding-agents
@@ -1219,8 +1215,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: [agent-ready-content]
-    demanded_by:
-      - "Optimize documentation for search (SEO and GEO) and for AI assistants and coding agents through agentready, LLMdigestible content"
+    in_practice:
+      - "Making documentation usable by coding agents as well as by search engines and people."
     status: complete
 
   - id: crawlability
@@ -1230,8 +1226,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [seo-for-docs]
-    demanded_by:
-      - "site navigation, and a crawlable, agent-ready front door"
+    in_practice:
+      - "Making sure crawlers and agents can reach and read every page, starting from the front door."
     status: complete
 
   - id: developer-feedback-loops
@@ -1241,8 +1237,8 @@ concepts:
     difficulty: 2
     time: 3h
     prerequisites: [docs-analytics]
-    demanded_by:
-      - "Ability to translate developer feedback into documentation, samples, and product improvements"
+    in_practice:
+      - "Turning developer feedback into changes to documentation, samples and the product."
     status: complete
 
   - id: publishing-in-public
@@ -1252,8 +1248,8 @@ concepts:
     difficulty: 1
     time: 4h
     prerequisites: []
-    demanded_by:
-      - "Open source contributions or published work on docs-as-code, AI-assisted documentation, or knowledge engineering"
+    in_practice:
+      - "Publishing your documentation tooling and work openly, and doing it safely."
     status: complete
 
   - id: realtime-systems
@@ -1263,8 +1259,8 @@ concepts:
     difficulty: 2
     time: 4h
     prerequisites: []
-    demanded_by:
-      - "Documentation experience in graphics, simulation, robotics, or real-time systems"
+    in_practice:
+      - "Documenting graphics, simulation and real-time systems, where timing is part of correctness."
     status: complete
 
 # ---------------------------------------------------------------------------
@@ -1277,7 +1273,7 @@ paths:
 
   - id: first-week
     name: The first week
-    audience: Someone who has just taken one of these roles and needs to be useful by Friday.
+    audience: Someone who has just started in this kind of work and needs to be useful by Friday.
     summary: The shortest route to shipping a documentation change with confidence.
     concepts:
       - technical-writing
@@ -1336,7 +1332,7 @@ paths:
 
   - id: knowledgeops
     name: The KnowledgeOps path
-    audience: The KnowledgeOps posting, more or less exactly.
+    audience: Someone responsible for making a knowledge base usable by AI assistants and agents.
     summary: Making a corpus answerable by machines, and knowing whether it worked.
     concepts:
       - content-model
@@ -1359,7 +1355,7 @@ paths:
 
   - id: developer-educator
     name: The developer educator
-    audience: The Developer Relations posting's curriculum half.
+    audience: Someone who owns developer onboarding, tutorials and curriculum.
     summary: Taking a developer from a clean environment to a working result, repeatably.
     concepts:
       - docs-as-product
@@ -1381,8 +1377,8 @@ paths:
   - id: writer-who-builds
     name: The writer who builds
     audience: >-
-      The KnowledgeOps posting's own description of the person it wants. The half that
-      is judgement and collaboration rather than tooling.
+      A writer who also builds tooling, and needs the half of the work that is
+      judgement and collaboration rather than tooling.
     summary: The craft and the working relationships, which no pipeline substitutes for.
     concepts:
       - technical-writing
@@ -1397,8 +1393,8 @@ paths:
       - partner-documentation
 
   - id: prove-it
-    name: Prove it in a weekend
-    audience: Someone who needs a portfolio artifact before Monday.
+    name: A working result in a weekend
+    audience: Someone who needs to ship something their team can review by Monday.
     summary: The shortest path through the concepts that produce something reviewable.
     concepts:
       - docs-as-code
@@ -1420,7 +1416,7 @@ paths:
   - id: prove-the-outcomes
     name: Prove the outcomes
     audience: Someone whose documentation work is real and who has been asked, probably in a review, to show what it achieved.
-    summary: Write the programs that measure a corpus, then measure the four outcomes the postings actually name.
+    summary: Write the programs that measure a corpus, then measure the four outcomes that matter most.
     concepts:
       - python-for-content
       - content-data-transformation
@@ -1435,8 +1431,8 @@ paths:
 
   - id: domain-context
     name: Enough domain to not be lost
-    audience: Someone interviewing for, or newly inside, a documentation role at a company whose product is graphics, simulation, robotics or AI infrastructure.
-    summary: The six domains these postings name, at the depth where you can follow an engineer and know which questions are not yours to answer.
+    audience: Someone doing documentation work at a company whose product is graphics, simulation, robotics or AI infrastructure.
+    summary: Six technical domains, at the depth where you can follow an engineer and know which questions are not yours to answer.
     concepts:
       - gpu-computing
       - inference-serving

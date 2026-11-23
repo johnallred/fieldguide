@@ -11,10 +11,7 @@ tags: [qa, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! note "Not a quotation (adjacent)"
-    Neither posting mentions accessibility. It is here because published
-    documentation at either company is subject to it regardless, and because
-    the automatable part costs an afternoon.
+> Making sure published content is usable by everyone, which applies to every page you ship.
 
 **Prerequisites:** [Documentation CI](documentation-ci.md)
 
@@ -30,15 +27,15 @@ browser receives, and a Markdown source file cannot tell you whether your
 theme emitted a `lang` attribute or what heading level a generated page landed
 on.
 
-## Why the job asks for it
+## How this applies to your role
 
-It does not, and this page says so in its own banner. It is on the curriculum
-for two reasons.
+Nobody will assign it to you as a task, and this page says so in its own
+banner. It is on the curriculum for two reasons.
 
 The first is that documentation at a large company is published content subject
-to the same obligations as the rest of the site, whether or not a job posting
-mentions it. Nobody writes "must not ship inaccessible pages" in a requisition,
-and everybody expects it.
+to the same obligations as the rest of the site, whether or not anyone on your
+team mentions it. Nobody writes "must not ship inaccessible pages" in a project
+plan, and everybody expects it.
 
 The second is that the automatable subset overlaps almost exactly with things
 that are *also* correctness problems for other readers. A heading structure
@@ -234,7 +231,7 @@ and a defect class specific to your own generated output, which is exactly the
 case here. A general tool would have found the heading skip too; writing it
 yourself is how you learn which of its findings matter.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the overlap, not the obligation.** "The automatable subset of
 accessibility overlaps almost exactly with machine readability. Heading
@@ -248,7 +245,7 @@ honest answer is no. Automated checks cover roughly a third of the criteria.
 Say that number, say the gate is a regression floor, and say that a real
 assessment involves assistive technology and users.
 
-**The tradeoff to volunteer.** The checks run on built HTML, which means they
+**The tradeoff to name.** The checks run on built HTML, which means they
 need a build before they can run, and they report against built paths rather
 than source lines. An author gets a failure pointing at
 `site/paths/content-architect/index.html` and has to work out that the cause is
@@ -263,9 +260,9 @@ a wall of noise they cannot fix, and it will be switched off. Audit the theme
 once, fix it upstream, and let the recurring gate cover only what authors and
 generators control.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A CI step that audits built HTML, plus a commit where it
+**The work product.** A CI step that audits built HTML, plus a commit where it
 caught something and the fix went into a generator or template rather than into
 individual pages.
 
@@ -278,7 +275,7 @@ individual pages.
 3. Convert the finding into a property test rather than a string assertion, so
    the next change is informed rather than blocked.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories demonstrated accessibility checking before this page was written,
 which is recorded on the [demonstrated](../demonstrated.md) page. What exists
 now is better evidence than a tool in a workflow file: a check that found seven

@@ -1,6 +1,6 @@
 ---
 title: Publishing in public
-summary: "Published work is the only evidence of this skillset a stranger can check without taking your word, and the most persuasive page in a repository is the one listing what it does not demonstrate."
+summary: "Publishing documentation tooling openly means a stranger can run it and check it, and the most trustworthy page in a repository is the one listing what it does not demonstrate."
 diataxis: how-to
 audience: developer
 concept: publishing-in-public
@@ -11,30 +11,33 @@ tags: [edu, supporting]
 
 `supporting` · difficulty 1 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Open source contributions or published work on docs-as-code, AI-assisted documentation, or knowledge engineering"
+> Publishing your documentation tooling and work openly, and doing it safely.
 
 ## What it is
 
-Putting work where a stranger can run it. The phrase in the posting is a
-qualification requirement, and it is unusual among qualification requirements
-in being verifiable: a reader can clone the thing and find out.
+Putting your team's documentation tooling, samples and writing where a
+stranger can run it: open-source contributions, public repositories, published
+write-ups on docs-as-code, AI-assisted documentation or knowledge engineering.
+Its defining property is that it is verifiable: a reader can clone the thing
+and find out.
 
 That property is the entire point, and it sets a bar that most published
-portfolios do not clear. A repository that cannot be run is a claim. A
+repositories do not clear. A repository that cannot be run is a claim. A
 repository a stranger clones, installs and tests in five minutes is evidence.
 
-## Why the job asks for it
+## How this applies to your role
 
-Because nothing else in a hiring process can distinguish someone who has built
-a documentation pipeline from someone who has read about one.
+Because developer-facing teams increasingly publish their tooling, samples and
+pipelines, and published work has a reader you cannot brief. Internal work can
+lean on context: the reader knows the team, the history and whom to ask.
+Published work is judged by a stranger who has only what is in the repository,
+and that is the most demanding review your work will get.
 
-Every other signal is self-reported. A résumé asserts, an interview answer
-describes, a reference agrees. Published work is the only artifact where the
-assessment is performed by the reader rather than conveyed to them, which is
-why the KnowledgeOps posting lists it beside formal qualifications rather than under interests.
+It is also how other teams adopt what you built. A linter, a doc test harness
+or a sample gallery that another team can clone and run spreads without a
+meeting. One that only works on your machine does not spread at all.
 
-There is a second reason, specific to this field. Documentation work is mostly
+There is a third reason, specific to this field. Documentation work is mostly
 invisible in its outcomes: when it succeeds, nothing happens, support volume
 quietly fails to rise, and the credit accrues to the product. A public
 repository is the one place the work itself is the object, rather than its
@@ -293,23 +296,24 @@ face of it, a page about what is missing.
 | Trust collapses at the first gap | Trust survives, because the gaps are the author's own list |
 
 A repository that states its limits is making a verifiable claim about its
-author's judgment, and that is a stronger signal than any of the work itself.
+authors' judgement, and readers trust that more than any of the work itself.
 It is also the cheapest page to write and the hardest to write honestly.
 
 ### What counts as published work
 
-| Form | Evidence of | Effort |
+| Form | What it gives a reader | Effort |
 |---|---|---|
-| A runnable repository | Ability, maintenance, judgment | High |
-| An upstream contribution that was merged | Ability to work in someone else's codebase | Medium, and gated by review |
-| A written account of a real problem | Judgment, and that you can explain | Low to medium |
-| A published site built by the thing | That the thing works | Low, once the repo exists |
-| A talk recording | Communication | Medium |
+| A runnable repository | Something to run, adopt and maintain | High |
+| An upstream contribution that was merged | A fix in the tool they already use | Medium, and gated by review |
+| A written account of a real problem | The reasoning, which travels further than the code | Low to medium |
+| A published site built by the thing | Proof that the thing works | Low, once the repo exists |
+| A talk recording | The overview, for people who will not read | Medium |
 | A list of technologies | Nothing | Low |
 
-An upstream merge is the strongest single signal per unit of effort, because
-somebody else's maintainer agreed. A repository of your own is the strongest
-overall, because it shows the parts review never sees: what you chose to check,
+An upstream merge is the most useful contribution per unit of effort, because
+it lands where readers already are and somebody else's maintainer agreed. A
+repository of your own is the most complete, because it shows the parts review
+never sees: what you chose to check,
 what you chose to leave out, and whether you wrote down the limits.
 
 ### The README contract
@@ -340,13 +344,12 @@ life, until the [capability gate](developer-advocacy.md) read it.
 | No credentials, in any file or any commit | History is public too |
 | A clean clone passes its own tests | [Cold-start testing](coldstart-testing.md), applied to yourself |
 
-## How to talk about it
+## Explaining it to your team
 
-**Lead with verifiability.** "Published work is the only part of an application
-where the assessment is done by the reader instead of conveyed to them. A
-repository that cannot be run is a claim; one a stranger clones and tests in
-five minutes is evidence, and that is a much higher bar than a portfolio
-usually clears."
+**Lead with verifiability.** "Published work is checked by the reader instead
+of explained to them. A repository that cannot be run is a claim; one a
+stranger clones and tests in five minutes is evidence, and that is a much
+higher bar than most published repositories clear."
 
 **The follow-up is what you would check before publishing, and the useful
 answer is about the checker.** My first pre-publication audit produced
@@ -365,7 +368,7 @@ perfectly, the allowlist-scoped one produced seven false hits on first contact.
 A check scoped by what a file is for travels; a check scoped by exceptions is a
 record of one repository's history.
 
-**And the ending, which is the part I would volunteer.** Writing the page about
+**And the ending, which is the part worth telling.** Writing the page about
 the script made the script fail on the page, eleven times, because the page
 quotes the markers it explains. One of those had a role-based fix. The TODO
 check did not, because TODO is simultaneously a marker and a word, so no
@@ -374,25 +377,24 @@ deleted the check and left the reasoning in the source. Three checks remain and
 they produce two findings on a 143-file repository and two on a 42-file one,
 both real, with nothing changed between the runs.
 
-**The counterintuitive point, and the best thing to say here.** The most
-persuasive page in a published repository is the one listing what it does not
+**The counterintuitive point.** The most trustworthy page in a published repository is the one listing what it does not
 demonstrate. Mine names every concept with no working example in either
 codebase. Without that page a reader who finds a gap has found a lie and stops
 trusting everything; with it, they find the gap already named by the author, and
 the remaining claims get stronger rather than weaker. It is the cheapest page to
 write and the hardest to write honestly.
 
-**The tradeoff to volunteer.** Published work is expensive and its payoff is
+**The tradeoff to name.** Published work is expensive and its payoff is
 unpredictable: the repository took far longer than the writing it supports, and
-most readers will look at it for ninety seconds. If the goal were only to pass
-a hiring filter, a smaller artifact with one genuinely working demonstration
+most readers will look at it for ninety seconds. If the goal were only to have
+something public, a smaller artifact with one genuinely working demonstration
 would be the better investment. The reason to build the larger one is that the
 act of making every claim checkable is what found the defects, and that part
 was not optional.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A pre-publication script in your own repository, run against
+**The work product.** A pre-publication script in your own repository, run against
 a second repository to see whether its checks are about file roles or about
 your history.
 
@@ -408,7 +410,7 @@ your history.
    against an actual 119, stale for the project's entire life, and nothing had
    ever looked.
 
-**What makes it credible rather than decorative.** `scripts/prepublication.py`
+**How to tell it is working.** `scripts/prepublication.py`
 is in this repository, runs on it and on `docpack`, and currently exits 1 with
 two findings: the placeholder `site_url` and `repo_url` in `mkdocs.yml`, which
 stay open until the repositories have real homes. Neither repository has been

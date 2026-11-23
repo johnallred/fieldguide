@@ -11,8 +11,7 @@ tags: [qa, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Content quality automation you've built, such as Vale or custom linters, doc test harnesses, or freshness monitoring"
+> Enforcing your style guide automatically with Vale, so reviews argue with a rule rather than a person.
 
 **Prerequisites:** [Style guides](style-guide.md)
 
@@ -27,12 +26,11 @@ What it is really for is converting the mechanical half of a
 into a check that runs. "Use *widget* rather than *Widget CLI*" stops being a
 sentence in a wiki and becomes a failing build.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names Vale specifically, in the "ways to stand out" section, alongside
-custom linters and doc test harnesses. That grouping tells you what they mean
-by it: not that you have installed a linter, but that you have *built* content
-quality automation.
+Vale belongs in the same family as custom linters and doc test harnesses. That
+grouping tells you what the work is: not installing a linter, but *building*
+content quality automation.
 
 The reason it matters on a large corpus is consistency at scale. One writer
 with good judgment produces consistent prose. Thirty contributors across
@@ -240,7 +238,7 @@ styles/
 Keep your own rules in a directory named after your organization rather than
 scattering them into a vendored style, so `vale sync` cannot overwrite them.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the division of labour.** "A prose linter handles the mechanical
 half of the style guide so human review can be about whether the procedure is
@@ -252,7 +250,7 @@ the answer is yes, if you set the levels wrong. Say that explicitly. A linter
 that fails builds over defensible choices gets disabled, and the mitigation is
 that only non-negotiable rules are errors.
 
-**The tradeoff to volunteer.** Every rule is a guess about intent, and some
+**The tradeoff to name.** Every rule is a guess about intent, and some
 fire on correct prose. A terminology rule banning "dataset" will flag a direct
 quotation from a third-party API that is genuinely called `dataset`. You need
 an escape hatch, Vale's `<!-- vale off -->` comments, and the moment you have
@@ -265,9 +263,9 @@ each rule file under version control instead of in a CI flag, which is the
 right place for it. Knowing that distinction is a reliable signal of having
 operated Vale rather than installed it.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A `styles/` directory of rules you wrote, with levels set
+**The work product.** A `styles/` directory of rules you wrote, with levels set
 deliberately, and at least one rule that caught something real.
 
 **Three things to do, in order:**
@@ -281,7 +279,7 @@ deliberately, and at least one rule that caught something real.
    suppression per ten pages means the rule is wrong rather than the prose,
    and the fix belongs in the rule.
 
-**What makes it credible rather than decorative.** `docpack` runs Vale with
+**How to tell it is working.** `docpack` runs Vale with
 terminology errors blocking the build and style warnings advisory, and one of
 its four hand-written rules caught the author's own prose. The rule that caught
 you is the one to talk about: it proves the gate works on the person who wrote

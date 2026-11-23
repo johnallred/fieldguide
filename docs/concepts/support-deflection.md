@@ -11,8 +11,7 @@ tags: [meas, core]
 
 `core` · difficulty 2 · 3h
 
-!!! quote "Why it is on the curriculum"
-    "Measurable reductions in support load or onboarding time through self-service knowledge systems"
+> Measuring how much support load and onboarding time self-service content removes.
 
 **Prerequisites:** [Documentation analytics](docs-analytics.md)
 
@@ -31,13 +30,13 @@ the documentation and measurable today with no audience. **Deflection achieved**
 is whether support volume actually fell because of it, which is a property of
 the world and needs a comparison almost nobody sets up.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because it is the one documentation outcome that converts directly into money,
 which makes it the number a documentation team is funded by and the number it is
 most tempted to overstate.
 
-The KnowledgeOps posting's phrasing is careful: "measurable reductions in support load". Not
+The careful way to state the goal is "measurable reductions in support load". Not
 "fewer tickets", which any release can produce by shipping fewer features, and
 not "a self-service portal", which is an artifact rather than an outcome. The
 word doing the work is *measurable*, and the honest answer in most organisations
@@ -194,7 +193,7 @@ conversation rather than during it.
 | "Just give me a percentage" | The capability figure, labelled as capability |
 | "Our competitor claims 40%" | Ask what they controlled for |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the split, because it is the part most people have not separated.**
 "Deflection capability is whether the corpus contains the answer and surfaces it
@@ -229,9 +228,9 @@ support taxonomy records it. A corpus that answers everything and surfaces
 nothing looks exactly like a corpus with holes in it, and the two call for
 opposite work: one needs a writer, the other needs a synonym.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A deflection ceiling computed from your own golden set, with
+**The work product.** A deflection ceiling computed from your own golden set, with
 the answerable and findable columns kept separate.
 
 **Three things to do, in order:**
@@ -245,7 +244,7 @@ the answerable and findable columns kept separate.
 3. Convert any deflection figure you currently report into a rate per active
    user. If the trend reverses, the previous chart was measuring growth.
 
-**What makes it credible rather than decorative.** The measurement above runs
+**How to tell it is working.** The measurement above runs
 against `docpack`'s twenty-case golden set and its twelve pages and is
 reproducible from the repository: a ceiling of 100 per cent, an achieved figure
 of 65 per cent, and a gap of seven named cases. What does not exist is a ticket

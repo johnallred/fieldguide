@@ -1,7 +1,7 @@
 ---
 title: Prove the outcomes
 summary: Write the programs that measure a corpus, then measure the four outcomes
-  the postings actually name.
+  that matter most.
 diataxis: placeholder
 audience: new-user
 generated: true
@@ -12,7 +12,7 @@ generated: true
 
 **Who this is for.** Someone whose documentation work is real and who has been asked, probably in a review, to show what it achieved.
 
-Write the programs that measure a corpus, then measure the four outcomes the postings actually name.
+Write the programs that measure a corpus, then measure the four outcomes that matter most.
 
 **10 concepts, roughly 37 hours.** The order matters:
 each step assumes the ones above it.
@@ -23,13 +23,13 @@ each step assumes the ones above it.
 
 `core` · practise it · 5h
 
-Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs
+Using Python to automate content tasks, transform data and call APIs.
 
 ## 2. [Transforming content as data](../concepts/content-data-transformation.md)
 
 `core` · practise it · 4h
 
-Working proficiency in Python or similar to automate content tasks, transform data, and integrate with APIs
+Treating content as data: parsing, reshaping and generating it with scripts.
 
 Builds on, earlier in this path: Python for content automation.
 
@@ -39,7 +39,7 @@ Assumes, from outside this path: [Content models](../concepts/content-model.md).
 
 `core` · practise it · 4h
 
-automate content tasks, transform data, and integrate with APIs
+Connecting your content tooling to other systems through their APIs.
 
 Builds on, earlier in this path: Python for content automation.
 
@@ -47,7 +47,7 @@ Builds on, earlier in this path: Python for content automation.
 
 `core` · practise it · 4h
 
-Instrument documentation analytics and convert findings into improvements to docs, samples, and tooling
+Instrumenting documentation and turning what the data shows into fixes to docs, samples and tooling.
 
 Assumes, from outside this path: [Documentation CI](../concepts/documentation-ci.md).
 
@@ -55,7 +55,7 @@ Assumes, from outside this path: [Documentation CI](../concepts/documentation-ci
 
 `core` · practise it · 3h
 
-measure time-to-first-success, support deflection, repeat questions, and AI answer quality
+Measuring how long a new developer takes to reach a working result, and shortening it.
 
 Builds on, earlier in this path: Documentation analytics.
 
@@ -65,7 +65,7 @@ Assumes, from outside this path: [Golden paths](../concepts/golden-paths.md).
 
 `core` · practise it · 3h
 
-Measurable reductions in support load or onboarding time through self-service knowledge systems
+Measuring how much support load and onboarding time self-service content removes.
 
 Builds on, earlier in this path: Documentation analytics.
 
@@ -73,7 +73,7 @@ Builds on, earlier in this path: Documentation analytics.
 
 `core` · practise it · 3h
 
-repeat questions
+Finding the questions people keep asking, and fixing the content that keeps causing them.
 
 Builds on, earlier in this path: Support deflection.
 
@@ -81,7 +81,7 @@ Builds on, earlier in this path: Support deflection.
 
 `supporting` · practise it · 3h
 
-Not named. The input that turns a hand-written evaluation set into a representative one.
+Reading what people search for, so evaluation sets and fixes reflect real questions.
 
 Builds on, earlier in this path: Documentation analytics.
 
@@ -91,7 +91,7 @@ Assumes, from outside this path: [Findability and search design](../concepts/fin
 
 `core` · build something · 5h
 
-AI answer quality
+Measuring how often an AI assistant answers correctly from your documentation.
 
 Builds on, earlier in this path: Documentation analytics.
 
@@ -101,6 +101,6 @@ Assumes, from outside this path: [Output evaluation](../concepts/output-evaluati
 
 `supporting` · practise it · 3h
 
-Ability to translate developer feedback into documentation, samples, and product improvements
+Turning developer feedback into changes to documentation, samples and the product.
 
 Builds on, earlier in this path: Documentation analytics.

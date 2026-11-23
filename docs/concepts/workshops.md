@@ -11,8 +11,7 @@ tags: [edu, supporting]
 
 `supporting` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    Neither posting mentions workshops. A standard developer-relations deliverable, and the only setting where you can watch a reader fail.
+> Running hands-on workshops and labs, a standard developer-relations deliverable.
 
 **Prerequisites:** [Learning paths and curriculum](learning-paths.md), [Reproducible environments](reproducible-environments.md)
 
@@ -27,7 +26,7 @@ one attendee while the room moves on without them.
 Everything that makes workshop design different from writing a tutorial
 follows from that constraint.
 
-## Why the job asks for it
+## How this applies to your role
 
 Two reasons, and only one of them is about teaching.
 
@@ -263,7 +262,7 @@ mediocre, and the fifth is why the handout matters more than the slides.
 | Nobody asks anything | A planted checkpoint question, not an invitation |
 | The material exists only as slides | Write the path first |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the arithmetic, because it is the thing nobody has done.** "A
 three-hour workshop has about two hours of hands-on time, and the shortest path
@@ -285,16 +284,16 @@ judgment. Foundational material that a page explains perfectly is the most
 comfortable thing to teach and the worst use of the only resource a workshop
 has.
 
-**The tradeoff to volunteer.** A workshop costs a day and reaches twenty
+**The tradeoff to name.** A workshop costs a day and reaches twenty
 people; a page costs a day and reaches thousands. The honest justification is
 not teaching efficiency, it is that a room is the only place I get to watch
 people fail, and that is feedback no analytics produce. A team running one
 workshop a quarter purely to collect it, and publishing a page from what it
 learned, would be making the right trade.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A wheelhouse or image that installs offline, a timed run of
+**The work product.** A wheelhouse or image that installs offline, a timed run of
 it, and a workshop plan whose hands-on minutes are written next to the hours of
 material it claims to cover.
 
@@ -310,7 +309,7 @@ material it claims to cover.
    answer is "all of it", the material has not been written down yet, and
    writing it is the actual task.
 
-**What makes it credible rather than decorative.** The setup measurements were
+**How to tell it is working.** The setup measurements were
 executed: 34 packages and 94,697,572 bytes from four requested, a wheelhouse of
 33 files and 28 MB built in two seconds, an offline install in six. The path
 arithmetic comes from this guide's own registry. What has not happened is a

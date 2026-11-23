@@ -11,7 +11,7 @@ tags: [craft, core]
 
 `core` · difficulty 2 · 4h
 
-> sound judgment about where AI can be trusted
+> Deciding where AI output can be trusted and where a human must check it.
 
 
 **Prerequisites:** [Prompting for content work](prompting.md)
@@ -25,19 +25,17 @@ output cost, and would anyone notice?**
 It is a design skill rather than a prompting skill. The output is usually a
 pipeline with a human in a specific place, not a better prompt.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting asks for it twice, and the second instance is the more revealing one. The
-qualification is "practical experience applying LLMs to content workflows
-(prompting, retrieval and grounding, output evaluation) and sound judgment about
-where AI can be trusted." The responsibility is "Automate the content lifecycle
-with LLMs and scripting, from drafting and updating to auditing, with checks for
-freshness, code accuracy, and terminology drift, **and human review where
-judgment matters**."
+It shows up in two places. One is the practical skill of applying LLMs to
+content workflows: prompting, retrieval and grounding, output evaluation. The
+other is the responsibility of automating the content lifecycle, from drafting
+and updating to auditing, with checks for freshness, code accuracy and
+terminology drift, **and human review where judgement matters**.
 
-That last clause is the job. They are not asking whether you can get an LLM to
-write a page. They are asking where you would put the human, and that is a
-question about failure cost, not about model capability.
+That last clause is the job. The hard question is not whether you can get an
+LLM to write a page. It is where you put the human, and that is a question
+about failure cost, not about model capability.
 
 On a Tuesday it is a sequence of small decisions that compound. You are
 auditing 400 pages for stale version references. An LLM can find candidates
@@ -276,10 +274,10 @@ that produces a warning promotes nothing, because warnings are ignored.
 | No sampling after the pipeline is trusted | Model or prompt changes silently degrade it |
 | Treating "the model is better now" as a reason to remove the human | The failure cost did not change |
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with a refusal, because the
-refusals are the evidence of judgement. "I use an LLM to find candidate pages
+**How to explain it.** Lead with a refusal, because the
+refusals are where the judgement is visible. "I use an LLM to find candidate pages
 for a terminology audit and to pre-filter the false positives, with a human
 accepting each change. I do not use one to write parameter tables, because
 mkdocstrings generates them from the signatures and is right every time. A
@@ -294,7 +292,7 @@ model cannot usually get it right. It is that when it is wrong, nothing in the
 system disagrees with it. That property is about the pipeline, not the model, so
 it does not improve with the model.
 
-**The tradeoff to volunteer.** Every human review step you add is a step that
+**The tradeoff to name.** Every human review step you add is a step that
 will be skipped under deadline pressure, and a review queue nobody works is
 worse than no automation, because the proposals accumulate and the corpus looks
 audited. So the design constraint is not "where should a human review" but
@@ -310,27 +308,26 @@ expensive to be wrong about and nothing rejects them. Almost every good
 LLM-in-documentation design turns a fact-production task into a
 proposal-production task, and almost every bad one does the reverse.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A pipeline with the human in a documented place, and a written
-list of tasks you decided not to automate, with reasons. The second half is
-rarer and more convincing.
+**The work product.** A pipeline with the human in a documented place, and a written
+list of tasks you decided not to automate, with reasons. The second half is rarer and more useful.
 
 **Three things to do, in order:**
 
 1. **Classify twenty real content tasks** on the two axes. An hour. The output
-   is a table you can show, and the "never" rows are the interesting part.
+   is a table your team can use, and the "never" rows are the interesting part.
 2. **Build the proposal pipeline from the golden path** against a real corpus,
    with a real term list. Measure how many proposals a reviewer accepts; if it
    is above 95 percent your filter is too loose and the review is theatre.
 3. **Write down one thing you refused to automate and why.** One paragraph. This
-   is the single most direct answer to the KnowledgeOps posting's "sound judgment" line, and
-   almost nobody brings one.
+   is the most direct record of the judgement this page is about, and almost
+   nobody writes one down.
 
-**What makes it credible rather than decorative.** Enthusiasm about LLMs is universal and worthless as
-a signal. A candidate who says "I would not use a model for that, here is the
-generator I would use instead" is demonstrating exactly the thing the posting
-asks for, and it is a short sentence that is very hard to fake.
+**How to tell it is working.** Enthusiasm about LLMs is universal and tells you
+nothing. The sign that the judgement is working is a team that says "we would
+not use a model for that, here is the generator we use instead", and a review
+queue where reviewers still reject a meaningful share of proposals.
 
 ### How this would be demonstrated elsewhere
 

@@ -11,8 +11,7 @@ tags: [dom, context]
 
 `context` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Documentation experience in graphics, simulation, robotics, or real-time systems; familiarity with USD, Omniverse, Isaac Sim, or ROS"
+> Documenting robotics simulation with Isaac Sim and ROS.
 
 !!! warning "No simulator was run"
     No ROS, no Isaac Sim and no robot were available here. The measurement in step 2 is a simulation of the frame properties that ROS specifies, written to demonstrate why the specification says what it does; the specification itself in step 1 was verified by opening it. Nothing on this page is experience of operating a robot.
@@ -30,13 +29,13 @@ For a documentation role the domain's defining difficulty is not physics. It is
 that a robot's software maintains **several descriptions of where it is**, those
 descriptions disagree, and the disagreement is deliberate.
 
-## Why the job asks for it
+## How this applies to your role
 
 Because the concept that costs readers the most is a choice between two things
 that both look correct.
 
-The KnowledgeOps posting groups robotics with graphics, simulation and real-time systems, and
-documentation in all four has to explain a model before it can explain an API.
+Robotics sits with graphics, simulation and real-time systems, and documentation
+in all four has to explain a model before it can explain an API.
 In robotics, the model is the transform tree, and the specific thing that bites
 is which frame to read a position from. Getting it wrong produces software that
 works in a demo and misbehaves on a robot, which is the most expensive class of
@@ -210,7 +209,7 @@ it uses.
 | What the simulator does not model | Implying parity with hardware |
 | A hardware-verified claim marked as such | Mixing simulated and real results |
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the boundary and then the model.** "I have not operated a robot.
 What I can do is the documentation reasoning, and in robotics that starts with
@@ -244,9 +243,9 @@ the mitigation is editorial: mark which claims were verified on hardware.
 and the simulated demonstration are mine; the operating experience is not, and
 `context` tier is the accurate label.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A short simulation showing the two frames' properties, and a
+**The work product.** A short simulation showing the two frames' properties, and a
 page stating which frame answers which question.
 
 **Three things to do, in order:**
@@ -259,7 +258,7 @@ page stating which frame answers which question.
 3. Check whether a sample that times anything reads the simulation clock or the
    system clock. Under a simulator that can pause, the difference is not subtle.
 
-**What makes it credible rather than decorative.** REP 105's frame names,
+**How to tell it is working.** REP 105's frame names,
 ordering, continuity guarantees and transform ownership were verified by opening
 the specification, and the drift-against-jump measurement is a short script that
 ran here. What is absent is the entire stack: no ROS installation, no Isaac Sim,

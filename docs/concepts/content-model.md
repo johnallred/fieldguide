@@ -11,8 +11,7 @@ tags: [ia, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "Information architecture skills: content modeling, taxonomy, and metadata for both navigation and machine retrieval"
+> Defining the types of content your team writes and the fields each one must carry.
 
 **Prerequisites:** [Information architecture](information-architecture.md)
 
@@ -29,10 +28,10 @@ The way to judge one is not by how elegant the schema is. It is by asking **what
 specific lies it makes impossible**, and then checking that each of those lies
 actually fails a build. The golden path does exactly that, twelve times.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting lists content modeling first in its information architecture
-requirement, ahead of taxonomy and metadata, which is the right order: the
+Content modelling comes first in information architecture work, ahead of
+taxonomy and metadata, which is the right order: the
 model is the thing the other two attach to.
 
 The reason it is engineering rather than documentation theory is that a model
@@ -62,8 +61,8 @@ PROVENANCE = ("quoted", "derived", "adjacent")
 STATUSES   = ("planned", "drafted", "complete")
 
 REQUIRED_SECTIONS = (
-    "What it is", "Why the job asks for it", "The golden path",
-    "Reference", "How to talk about it", "How to prove it",
+    "What it is", "How this applies to your role", "The golden path",
+    "Reference", "Explaining it to your team", "Putting it into practice",
 )
 MIN_COMPLETE_WORDS = 450
 ```
@@ -246,7 +245,7 @@ The fourth row is the one with teeth. A field that is optional is a field your
 pipeline cannot rely on, so "optional metadata" is usually a decision not to
 use it for anything.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with lies, not schemas.** "I judge a content model by the specific lies
 it makes impossible. On this guide's own registry I could not mark a concept
@@ -259,7 +258,7 @@ every required field is a tax and the right number is small. Four required
 fields that everything depends on beats twelve that half the corpus omits,
 because an optional field cannot be built on.
 
-**The tradeoff to volunteer.** Cross-page rules need code, which means your
+**The tradeoff to name.** Cross-page rules need code, which means your
 content model becomes software you maintain, with its own tests and its own
 bugs. My own validator had a counting bug that double-reported demonstrations
 and a generator that emitted invalid YAML for 38% of the corpus. A model with a
@@ -273,9 +272,9 @@ parser. I shipped 46 such pages. That check is four lines and it is the
 cheapest AI-readiness work available, because a corpus that cannot be parsed
 cannot be filtered, chunked or retrieved.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A content model with a validator, plus the list of defects it
+**The work product.** A content model with a validator, plus the list of defects it
 catches, each with a test.
 
 **Three things to do, in order:**
@@ -288,10 +287,10 @@ catches, each with a test.
 3. Pick the most consequential lie that is still possible and make it fail. One
    check, with a test that proves it fires.
 
-**What makes it credible rather than decorative.** `docpack` validates five
+**How to tell it is working.** `docpack` validates five
 required front-matter fields, two of them closed vocabularies, rejected by
 `docpack docs --check`. This guide's registry adds the relational rules a
-per-page schema cannot express. The part worth discussing in an interview is
+per-page schema cannot express. The part worth explaining to your team is
 step 4: the model that caught twelve things and missed the thirteenth, and how
 the thirteenth was found.
 

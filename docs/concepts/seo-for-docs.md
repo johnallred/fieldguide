@@ -11,7 +11,7 @@ tags: [ai, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-> Optimize documentation for search (SEO and GEO) and for AI assistants and coding agents through agentready, LLMdigestible content
+> Making documentation rank for the searches developers actually run.
 
 
 **Prerequisites:** [Metadata for navigation and retrieval](metadata.md)
@@ -29,13 +29,12 @@ building and no content marketing. It is mostly titles, descriptions, headings
 and URLs, done consistently, derived from a [content model](content-model.md)
 rather than hand-tuned per page.
 
-## Why the job asks for it
+## How this applies to your role
 
-The Developer Relations posting names it in a responsibility and again in minimum qualifications:
-"Experience optimizing technical content for search (SEO and GEO) and for AI
-assistants." That is unusual for an engineering-adjacent role and it tells you
-something about how the Developer Relations posting sees the job: the front door is a search result page
-they do not own.
+Optimising technical content for search (SEO and GEO) and for AI assistants is
+part of developer-facing documentation work. That is unusual for
+engineering-adjacent work, and it tells you something about the job: the front
+door is a search result page you do not own.
 
 On a Tuesday it is a specific recurring decision. An engineer titles a page
 "Configuration Options Reference". Nobody searches that. The developer who needs
@@ -347,9 +346,9 @@ fixes them.
 | Content refresh for its own sake | A `updated` date you bumped without changing anything is dishonest |
 | Long-form padding | A reference page should be exactly as long as the interface |
 
-## How to talk about it
+## Explaining it to your team
 
-**What a competent answer sounds like.** Lead with the vocabulary mismatch,
+**How to explain it.** Lead with the vocabulary mismatch,
 because it is the documentation-specific insight. "Documentation gets titled
 from the structure of the product and searched from the state of the reader.
 A page called 'Configuration Options Reference' does not rank for 'server out
@@ -365,7 +364,7 @@ ticket subject lines, and the zero-click queries from Search Console are all
 cheap and all underused. A list of fifty real phrasings is worth more than any
 amount of SEO advice, and gathering it is an afternoon.
 
-**The tradeoff to volunteer.** Optimising for search vocabulary pulls titles
+**The tradeoff to name.** Optimising for search vocabulary pulls titles
 toward symptoms and away from structure, and a corpus titled entirely by symptom
 is hard to navigate for someone browsing rather than searching. "Fix an
 out-of-memory error under load" is a better search result and a worse table-of-
@@ -380,12 +379,11 @@ vocabulary-matching problems between a reader's phrasing and an author's. A
 summary written in the reader's words improves the search snippet, the retrieval
 snippet, the [llms.txt](llms-txt.md) annotation and the embedding, all at once,
 from one edit. That is why the content model's `summary` field is load-bearing
-far out of proportion to its size, and why "optimise for SEO and GEO" in the Developer Relations posting's
-posting is one task rather than two.
+far out of proportion to its size, and why "optimise for SEO and GEO" is one task rather than two.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A generated head-tag build step, plus the vocabulary check run
+**The work product.** A generated head-tag build step, plus the vocabulary check run
 against real queries, plus one before-and-after page.
 
 **Three things to do, in order:**
@@ -400,10 +398,9 @@ against real queries, plus one before-and-after page.
    site serving one site-wide description on every page, which looks fine and
    destroys every snippet.
 
-**What makes it credible rather than decorative.** Describing title tags proves nothing. A vocabulary
-check driven by exported queries, a list of mismatched pages, and a measured
-before-and-after on one of them demonstrates that you treated findability as
-measurable.
+**How to tell it is working.** A vocabulary check driven by exported queries, a list
+of mismatched pages, and a measured before-and-after on one of them. Findability
+is being treated as measurable, and the mismatched pages start to rank.
 
 ## Related
 

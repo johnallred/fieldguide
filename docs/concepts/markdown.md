@@ -11,8 +11,7 @@ tags: [dac, core]
 
 `core` · difficulty 1 · 2h
 
-!!! quote "Why it is on the curriculum"
-    "Markdown/RST"
+> Writing in Markdown every day, and knowing which dialect your build pipeline actually speaks.
 
     "Git, Markdown or MDX, and doc build pipelines"
 
@@ -33,13 +32,13 @@ the failure mode. A parser that does not understand a construct does not raise
 an error. It passes the characters through, so the reader gets `~~struck~~`
 with the tildes attached.
 
-## Why the job asks for it
+## How this applies to your role
 
-Both postings name it, the Developer Relations posting alongside MDX and the KnowledgeOps posting alongside RST, which
-tells you the expectation is not "can you write Markdown" but "do you
+You will meet it alongside MDX in one repository and alongside RST in the next,
+which tells you the useful skill is not "can you write Markdown" but "do you
 understand that these are different dialects with different capabilities."
 
-Nobody is testing whether you can write a heading. What matters on a real
+Nobody needs help writing a heading. What matters on a real
 corpus is knowing which constructs are safe to use, where the extension
 configuration lives, and that a dialect mismatch is silent. On a corpus with
 multiple contributors, somebody will write GitHub-flavoured syntax because
@@ -244,7 +243,7 @@ to anything that consumes your source rather than your HTML, including
 [chunking](chunking.md) and [llms.txt](llms-txt.md) generation. A corpus with
 heavy inline HTML is markedly harder to make [agent-ready](agent-ready-content.md).
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the failure mode, not the feature list.** "Markdown is a family of
 dialects, and the thing that bites is that an unsupported construct is not an
@@ -258,7 +257,7 @@ request they just opened, and the mitigations are a short authoring guide, a
 sensible extension set that includes the common GFM constructs, and a check
 that catches the rest.
 
-**The tradeoff to volunteer.** Every extension you enable is a construct that
+**The tradeoff to name.** Every extension you enable is a construct that
 will not render elsewhere. Content written against Material's admonitions
 cannot move to Docusaurus without a rewrite, and the more extensions you adopt
 the more your corpus is locked to one generator. Portability and expressiveness
@@ -270,9 +269,9 @@ parsing, which is why its failures look different: a malformed YAML block can
 take out the whole page rather than one construct, and it needs a
 [content model](content-model.md) validator rather than a Markdown gate.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A documented extension set plus a check that fails when
+**The work product.** A documented extension set plus a check that fails when
 somebody writes outside it.
 
 **Three things to do, in order:**
@@ -284,7 +283,7 @@ somebody writes outside it.
 3. Grep your corpus for `~~` and `- [ ]` outside code fences. If you find any,
    they are shipping as literal characters right now.
 
-**What makes it credible rather than decorative.** `src/fieldguide/dialect.py`
+**How to tell it is working.** `src/fieldguide/dialect.py`
 is the gate from step 5, with seven tests covering both directions, including
 the case that keeps it honest: a page discussing the syntax inside a fence must
 not be flagged for using it. This guide's own corpus is clean, which the test

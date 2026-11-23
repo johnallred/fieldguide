@@ -11,10 +11,7 @@ tags: [dac, supporting]
 
 `supporting` · difficulty 2 · 3h
 
-!!! note "Not a quotation (adjacent)"
-    Neither posting mentions versioned documentation. It is unavoidable for any
-    platform that ships releases, which is both of these, so it is here on the
-    grounds that the work requires it.
+> Publishing documentation for more than one release at once, and keeping readers on the right version.
 
 **Prerequisites:** [Choosing a static site generator](static-site-generators.md)
 
@@ -29,13 +26,13 @@ The mechanism is simple. The consequences, which are what this page is about,
 are a per-version duplication cost that is almost always larger than people
 expect and a content problem that no tool solves.
 
-## Why the job asks for it
+## How this applies to your role
 
-It does not ask, and the banner says so. But both postings describe platforms
-that ship releases, and documentation for a platform that ships releases needs
+Nobody may ask for it, and the banner says so. But most platforms you will
+document ship releases, and documentation for a platform that ships releases needs
 versioning the moment a reader can be on an older one.
 
-The judgment being tested, if it comes up, is when *not* to version. Versioning
+The judgement that matters, when it comes up, is when *not* to version. Versioning
 multiplies the corpus you maintain, and a team that versions everything from
 day one ends up with five copies of a conceptual explanation that was never
 version-specific, four of which are now wrong and none of which anybody is
@@ -208,7 +205,7 @@ done so. A version banner on every non-latest page, saying which version this
 is and linking to the current one, costs a template change and prevents the
 single most common versioned-docs support ticket.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with what to version rather than how.** "The mechanism is a directory
 per release and a switcher, and every generator has it. The decision that
@@ -222,7 +219,7 @@ the content: I measured 99 per cent of each version as webfonts, CSS and
 JavaScript, with eleven kilobytes of HTML. It matters for clone and deploy
 times rather than for storage.
 
-**The tradeoff to volunteer.** Versioning multiplies the maintenance surface
+**The tradeoff to name.** Versioning multiplies the maintenance surface
 and gives you no mechanism for keeping the copies consistent. A fix to a
 tutorial that applies to three supported versions is three pull requests, and
 in practice it is one, applied to `latest`, with the other two quietly left
@@ -234,9 +231,9 @@ your current page for some queries, because they have had longer to accumulate
 links. Canonical tags to the current version plus a banner on non-latest pages
 is the fix, and almost nobody does either until a support ticket arrives.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A versioned site with aliases, a documented retirement
+**The work product.** A versioned site with aliases, a documented retirement
 policy, canonical tags on old versions and a version banner.
 
 **Three things to do, in order:**
@@ -248,7 +245,7 @@ policy, canonical tags on old versions and a version banner.
 3. Write the two-column table above for a product you know. The disagreements
    about which column a page belongs in are the valuable part.
 
-**What makes it credible rather than decorative.** Neither of this guide's
+**How to tell it is working.** Neither of this guide's
 repositories is versioned, which the [demonstrated](../demonstrated.md) page
 records, and for a single-version project versioning would be theatre. What
 travels is the measurement and the judgment table: knowing that the cost is

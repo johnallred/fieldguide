@@ -11,8 +11,7 @@ tags: [dac, core]
 
 `core` · difficulty 2 · 4h
 
-!!! quote "Why it is on the curriculum"
-    "static site generators (Sphinx, MkDocs, Docusaurus, or similar)"
+> Building and maintaining a documentation site on MkDocs with the Material theme.
 
 **Prerequisites:** [Choosing a static site generator](static-site-generators.md)
 
@@ -28,9 +27,10 @@ It is the easiest of the generators to adopt and the one whose build checks the
 least. Both halves of that sentence matter, and this page is mostly about the
 second.
 
-## Why the job asks for it
+## How this applies to your role
 
-The KnowledgeOps posting names it in a list of three. It is the most likely generator to appear
+It is one of the three generators you are most likely to meet, and the most
+likely to appear
 on a newer documentation project, because a usable site is about fifteen
 minutes of work and the theme makes it look deliberate without a designer.
 
@@ -213,7 +213,7 @@ three gates you now owe, and a measured reason to care about your theme.
 Hooks live in the repository and need no packaging, which makes them the right
 default for one-off fixes. The whole mechanism is one `hooks:` key.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the trade, not the features.** "MkDocs with Material is the fastest
 way to a site people want to read, and its build checks less than Sphinx's. In
@@ -226,7 +226,7 @@ build, and the theme dominates build time. Twenty-seven times on the same 121
 pages in my own measurement, bare theme against Material plus a dozen
 extensions. That is the number that decides whether contributors build locally.
 
-**The tradeoff to volunteer.** Material's extensions are excellent and they
+**The tradeoff to name.** Material's extensions are excellent and they
 lock your content to it. Admonitions, content tabs and code annotations are all
 Material-specific syntax, so a corpus that uses them heavily cannot move to
 another generator without a rewrite. That is usually an acceptable bet, and it
@@ -238,9 +238,9 @@ solves it and gets reviewed alongside the content. The `description`
 fallback above is a good example: a real SEO defect, fixed in nine lines,
 with no dependency added.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** An MkDocs site with the three compensating gates in CI, and
+**The work product.** An MkDocs site with the three compensating gates in CI, and
 ideally one hook you wrote.
 
 **Three things to do, in order:**
@@ -252,7 +252,7 @@ ideally one hook you wrote.
 3. Time your build with and without your theme. Put the ratio in the README so
    the next person understands where the minutes go.
 
-**What makes it credible rather than decorative.** This guide and `docpack` both
+**How to tell it is working.** This guide and `docpack` both
 run on MkDocs with Material, and between them they carry a hand-written
 anchor-and-heading link checker, a fence gate, a render gate, a dialect gate
 and a `hooks/seo.py` that exists because the README once claimed something the

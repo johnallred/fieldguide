@@ -11,8 +11,7 @@ tags: [qa, core]
 
 `core` · difficulty 3 · 5h
 
-!!! quote "Why it is on the curriculum"
-    "documentation CI, including link and code-sample validation"
+> Proving every code sample in the docs still runs and still produces what the page says.
 
     "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
 
@@ -23,11 +22,11 @@ tags: [qa, core]
 Extracting the code blocks out of your documentation and running them, so that
 a sample which no longer works fails a build instead of failing a reader.
 
-Both postings name it. The distinction that separates a real implementation
+Every docs-as-code pipeline needs it. The distinction that separates a real implementation
 from a checkbox is whether you assert the **output** or merely the exit code,
 and the golden path below makes the difference measurable.
 
-## Why the job asks for it
+## How this applies to your role
 
 A code sample is the part of a page a reader trusts most and the part most
 likely to be wrong. Prose ages gracefully; a sample either runs or it does not,
@@ -284,7 +283,7 @@ ratio can only be 0, 33, 67 or 100 per cent, so the cap fired on a corpus with
 nothing wrong with it. Budgets mean something at a hundred blocks and nothing
 at ten. Until then, require the reason and read it in review.
 
-## How to talk about it
+## Explaining it to your team
 
 **Lead with the difference between running and being correct.** "Extracting
 and executing samples catches the obvious rot, renames and deletions. It does
@@ -296,7 +295,7 @@ that the reader can also see."
 marker that carries a reason plus a cap on the skip ratio, with the honest
 admission that the cap is meaningless on a small corpus.
 
-**The tradeoff to volunteer.** Output assertions make the harness brittle
+**The tradeoff to name.** Output assertions make the harness brittle
 against legitimate change. Every intentional behaviour change now requires a
 documentation update in the same pull request, which is the point and is also
 real friction. On a fast-moving product you will spend time updating expected
@@ -310,9 +309,9 @@ it to find out what happens. Writing the output down helps every reader and
 happens to give the harness something to assert, which is the best kind of
 quality mechanism: one that makes the page better even when it never fires.
 
-## How to prove it
+## Putting it into practice
 
-**The artifact.** A test that extracts samples from your own documentation,
+**The work product.** A test that extracts samples from your own documentation,
 executes them, and asserts at least some of their output, plus a commit where
 it caught a real change.
 
@@ -325,11 +324,11 @@ it caught a real change.
 3. Add an expected-output fence to the one sample readers ask about most. You
    have improved the page and created an assertion in the same edit.
 
-**What makes it credible rather than decorative.** `docpack` extracts every
+**How to tell it is working.** `docpack` extracts every
 Python block from its documentation and executes it, with `# docpack: skip`
 making exceptions visible and a test asserting the skip ratio stays under 25
-per cent. The part worth discussing in an interview is the skip ratio
-assertion, because it shows you understood that the escape hatch is the threat.
+per cent. The part worth explaining to your team is the skip ratio
+assertion, because it treats the escape hatch as the threat.
 
 ## Related
 
