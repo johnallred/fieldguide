@@ -48,6 +48,7 @@ one machine. A test pins the constant columns.
 | `walkthrough_transclusion.py` | `mkdocs`, `pymdown-extensions` | Sample walkthroughs |
 | `playbook.py` | `pyyaml` | Playbooks and decision guides |
 | `alignment_audit.py` | nothing | Learning science for developer education |
+| `task_analysis.py` | nothing | Learner and task analysis |
 | `sphinx_autodoc.py` | `pip install sphinx myst-parser` | Sphinx |
 
 These ten are different in kind. Their pages are golden paths: a reader can

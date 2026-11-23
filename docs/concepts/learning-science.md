@@ -13,7 +13,7 @@ tags: [edu, core]
 
 > Applying what research says about how people learn to every tutorial, lab and learning path you design.
 
-**Leads to:** [Instructional design for developers](instructional-design.md)
+**Leads to:** [Instructional design for developers](instructional-design.md), [Learner and task analysis](learner-task-analysis.md)
 
 ## What it is
 
@@ -338,3 +338,4 @@ readers pass after a redesign than before.
 - [Assessment and checks for understanding](assessment.md), how to find out whether the design worked
 - [Designing tutorials](tutorial-design.md), where worked examples and fading are applied
 - [Learning paths and curriculum](learning-paths.md), alignment at the scale of a whole path
+- [Learner and task analysis](learner-task-analysis.md), where the objectives in the drill come from

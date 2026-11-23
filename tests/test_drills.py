@@ -85,6 +85,11 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "which layer caught each failure, and which layers alone would miss it",
         ),
     ),
+    "task_analysis.py": (
+        "docs/concepts/learner-task-analysis.md",
+        "<<'TXT'\n",
+        ("TASKS", "TICKETS", "SURVEY"),
+    ),
     "alignment_audit.py": (
         "docs/concepts/learning-science.md",
         "<<'MDEOF'\n",
@@ -152,6 +157,16 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "docs/b.md: ...'e\\nPoint the Widget CLI at your'...",
         ),
     ),
+    "task_analysis.py": (
+        "docs/concepts/learner-task-analysis.md",
+        0,
+        (
+            "  decisions the expert described: 0/6",
+            "  T3 rotate the API key                      6      1/6      no      fix the product, not the page",
+            "  T2 diagnose an exhausted retry budget      8      7/8      no      teach it",
+            "  already used retries somewhere: 29/40 (72%)",
+        ),
+    ),
     "alignment_audit.py": (
         "docs/concepts/learning-science.md",
         0,
@@ -170,7 +185,7 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         (
             "two hours against the 34-hour first-week path: 6%",
             "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
-            "concepts in this corpus of 3h or less: 48/107",
+            "concepts in this corpus of 3h or less: 48/108",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",
         ),

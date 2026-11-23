@@ -794,13 +794,24 @@ concepts:
       - "Applying what research says about how people learn to every tutorial, lab and learning path you design."
     status: complete
 
+  - id: learner-task-analysis
+    name: Learner and task analysis
+    category: edu
+    tier: core
+    difficulty: 2
+    time: 5h
+    prerequisites: [learning-science]
+    in_practice:
+      - "Finding out who your readers are and what they actually do before deciding what any tutorial, lab or course should teach."
+    status: complete
+
   - id: instructional-design
     name: Instructional design for developers
     category: edu
     tier: core
     difficulty: 2
     time: 5h
-    prerequisites: [learning-science]
+    prerequisites: [learning-science, learner-task-analysis]
     in_practice:
       - "Designing curriculum so a developer learns what they need, in the order they need it."
     status: complete
@@ -1371,6 +1382,7 @@ paths:
     concepts:
       - docs-as-product
       - learning-science
+      - learner-task-analysis
       - instructional-design
       - cognitive-load
       - diataxis

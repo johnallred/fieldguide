@@ -1,6 +1,6 @@
 # Which concepts have a working demonstration, and in which file.
 #
-# This guide is 107 concepts of prose about how to do a job. Prose is cheap.
+# This guide is 108 concepts of prose about how to do a job. Prose is cheap.
 # `docpack` is a companion repository that actually does a chunk of the work,
 # and this file records exactly which chunk, down to the file that does it.
 #
@@ -498,6 +498,12 @@ demonstrates:
     artifact: drills/terminology_drift.py
     extent: partial
     note: "Conformance measured against a glossary two ways, to show that the obvious way flatters: a word-boundary search for the canonical term matches inside its own deprecated variants, scoring drift as conformance, so widget reads 60% when the true figure is 33%. Masking variants before counting fixes it. Three pages, not a corpus, and no team or review process is involved."
+
+  - concept: learner-task-analysis
+    project: fieldguide
+    artifact: drills/task_analysis.py
+    extent: partial
+    note: "A task inventory with every step and decision attributed to an expert interview or an observation, crossed with tagged support tickets and a reader survey: the expert described 0 of 6 decisions, and 2 of 4 struggling tasks turned out to be product obstacles rather than teaching gaps. The tickets and survey are invented and the page says so; the arithmetic is real."
 
   - concept: learning-science
     project: fieldguide
