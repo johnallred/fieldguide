@@ -1197,6 +1197,17 @@ concepts:
       - "Deciding what to retire, and removing it without breaking what links to it."
     status: complete
 
+  - id: content-migration
+    name: Content migration
+    category: ia
+    tier: supporting
+    difficulty: 3
+    time: 6h
+    prerequisites: [docs-as-code, content-retirement]
+    in_practice:
+      - "Moving a documentation corpus from a wiki or CMS into docs-as-code, deciding page by page what moves, merges or goes, and keeping every old link working."
+    status: complete
+
   - id: guided-workflows
     name: Guided workflows
     category: gp
@@ -1368,6 +1379,7 @@ paths:
       - single-sourcing
       - content-lifecycle
       - content-retirement
+      - content-migration
       - findability
       - playbooks
       - knowledge-architecture

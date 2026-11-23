@@ -31,7 +31,7 @@ The shortest route to shipping a documentation change with confidence.
 
 From a folder of Markdown to a modeled, governed, machine-readable corpus.
 
-13 concepts, roughly 43 hours.
+14 concepts, roughly 49 hours.
 
 ## [The documentation engineer](docs-engineer.md)
 

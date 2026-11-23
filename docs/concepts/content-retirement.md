@@ -15,6 +15,8 @@ tags: [ia, supporting]
 
 **Prerequisites:** [Content lifecycle and governance](content-lifecycle.md)
 
+**Leads to:** [Content migration](content-migration.md)
+
 ## What it is
 
 Removing a page from the corpus on purpose: deciding it should go, redirecting

@@ -85,6 +85,12 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "which layer caught each failure, and which layers alone would miss it",
         ),
     ),
+    "migration_audit.py": (
+        "docs/concepts/content-migration.md",
+        "<<'DATA'\n",
+        ("INVENTORY", "GETTING_STARTED", "CONFIGURE_RETRIES", "TROUBLESHOOTING",
+         "INVENTORY_FIXED", "API_KEYS", "CONFIGURE_RETRIES_FIXED", "TROUBLESHOOTING_FIXED"),
+    ),
     "release_notes.py": (
         "docs/concepts/release-notes.md",
         "<<'DATA'\n",
@@ -177,6 +183,18 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "docs/b.md: ...'e\\nPoint the Widget CLI at your'...",
         ),
     ),
+    "migration_audit.py": (
+        "docs/concepts/content-migration.md",
+        0,
+        (
+            "RETIRED  /display/DOCS/API+Keys (455 views) has no redirect",
+            "RESIDUE  configure-retries.md: wiki macro {info}",
+            "RESIDUE  troubleshooting.md: old host link wiki.example.com",
+            "7 finding(s); 4450/4920 views (90.4%) land on a new page",
+            "0 finding(s); 4905/4920 views (99.7%) land on a new page",
+            "/display/DOCS/FAQ  ->  /troubleshooting/",
+        ),
+    ),
     "release_notes.py": (
         "docs/concepts/release-notes.md",
         0,
@@ -252,7 +270,7 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         (
             "two hours against the 34-hour first-week path: 6%",
             "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
-            "concepts in this corpus of 3h or less: 50/112",
+            "concepts in this corpus of 3h or less: 50/113",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",
         ),

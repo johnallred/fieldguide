@@ -1,6 +1,6 @@
 # Which concepts have a working demonstration, and in which file.
 #
-# This guide is 112 concepts of prose about how to do a job. Prose is cheap.
+# This guide is 113 concepts of prose about how to do a job. Prose is cheap.
 # `docpack` is a companion repository that actually does a chunk of the work,
 # and this file records exactly which chunk, down to the file that does it.
 #
@@ -498,6 +498,12 @@ demonstrates:
     artifact: drills/terminology_drift.py
     extent: partial
     note: "Conformance measured against a glossary two ways, to show that the obvious way flatters: a word-boundary search for the canonical term matches inside its own deprecated variants, scoring drift as conformance, so widget reads 60% when the true figure is 33%. Masking variants before counting fixes it. Three pages, not a corpus, and no team or review process is involved."
+
+  - concept: content-migration
+    project: fieldguide
+    artifact: drills/migration_audit.py
+    extent: partial
+    note: "A migration inventory and its converted pages audited before switch-off: a retired page with 455 readers and no redirect, and six pieces of wiki residue, fixed in a second pass that lands 99.7 per cent of last quarter's traffic on a new page, plus the redirect map. The corpus is invented and no converter is run."
 
   - concept: release-notes
     project: fieldguide

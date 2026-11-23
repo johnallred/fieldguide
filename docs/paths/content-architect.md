@@ -13,10 +13,10 @@ generated: true
 
 From a folder of Markdown to a modeled, governed, machine-readable corpus.
 
-**13 concepts, roughly 43 hours.** The order matters:
+**14 concepts, roughly 49 hours.** The order matters:
 each step assumes the ones above it.
 
-**Assumed before step 1.** This path does not teach [Extracting tribal knowledge](../concepts/sme-interviews.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Docs-as-code](../concepts/docs-as-code.md), [Extracting tribal knowledge](../concepts/sme-interviews.md). Each step below repeats what it assumes.
 
 ## 1. [Information architecture](../concepts/information-architecture.md)
 
@@ -96,7 +96,17 @@ Deciding what to retire, and removing it without breaking what links to it.
 
 Builds on, earlier in this path: Content lifecycle and governance.
 
-## 11. [Findability and search design](../concepts/findability.md)
+## 11. [Content migration](../concepts/content-migration.md)
+
+`supporting` · build something · 6h
+
+Moving a documentation corpus from a wiki or CMS into docs-as-code, deciding page by page what moves, merges or goes, and keeping every old link working.
+
+Builds on, earlier in this path: Retiring content.
+
+Assumes, from outside this path: [Docs-as-code](../concepts/docs-as-code.md).
+
+## 12. [Findability and search design](../concepts/findability.md)
 
 `supporting` · practise it · 3h
 
@@ -104,7 +114,7 @@ Making sure developers and AI assistants can both find and use the page they nee
 
 Builds on, earlier in this path: Metadata for navigation and retrieval.
 
-## 12. [Playbooks and decision guides](../concepts/playbooks.md)
+## 13. [Playbooks and decision guides](../concepts/playbooks.md)
 
 `core` · practise it · 4h
 
@@ -112,7 +122,7 @@ Turning tribal knowledge from engineering, product and operations into playbooks
 
 Assumes, from outside this path: [Extracting tribal knowledge](../concepts/sme-interviews.md).
 
-## 13. [Knowledge architecture](../concepts/knowledge-architecture.md)
+## 14. [Knowledge architecture](../concepts/knowledge-architecture.md)
 
 `core` · build something · 6h
 

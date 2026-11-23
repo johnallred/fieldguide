@@ -10,13 +10,13 @@ generated: true
 
 # Coverage
 
-**112 of 112 concepts written.** 0 drafted, 0 planned.
+**113 of 113 concepts written.** 0 drafted, 0 planned.
 
 Each row names the concept and the day-to-day work that needs it.
 
 ## Where this list comes from
 
-- **112 of 112** concepts name the work that needs them.
+- **113 of 113** concepts name the work that needs them.
 
 That line is printed next to each concept, so a reader can judge whether it
 earns their time rather than taking the list on trust.
@@ -33,6 +33,7 @@ earns their time rather than taking the list on trust.
 | [Playbooks and decision guides](concepts/playbooks.md) | core | practise it | 4h | :material-check: complete | Turning tribal knowledge from engineering, product and operations into playbooks and decision guides. |
 | [Taxonomy and controlled vocabularies](concepts/taxonomy.md) | core | practise it | 3h | :material-check: complete | Agreeing the terms content is classified by, and keeping that vocabulary closed and consistent. |
 | [Content lifecycle and governance](concepts/content-lifecycle.md) | supporting | practise it | 3h | :material-check: complete | Running content from draft to update to audit to retirement, increasingly with LLM help at each stage. |
+| [Content migration](concepts/content-migration.md) | supporting | build something | 6h | :material-check: complete | Moving a documentation corpus from a wiki or CMS into docs-as-code, deciding page by page what moves, merges or goes,... |
 | [Findability and search design](concepts/findability.md) | supporting | practise it | 3h | :material-check: complete | Making sure developers and AI assistants can both find and use the page they need. |
 | [Retiring content](concepts/content-retirement.md) | supporting | practise it | 3h | :material-check: complete | Deciding what to retire, and removing it without breaking what links to it. |
 | [Security guidance as encoded standard](concepts/security-documentation.md) | supporting | practise it | 3h | :material-check: complete | Encoding security guidance into templates, validators and workflows rather than static pages. |

@@ -53,6 +53,7 @@ one machine. A test pins the constant columns.
 | `content_standards.py` | nothing | Learning content standards |
 | `diagram_drift.py` | `pyyaml` | Diagrams as code |
 | `release_notes.py` | nothing | Release notes and changelogs |
+| `migration_audit.py` | nothing | Content migration |
 | `sphinx_autodoc.py` | `pip install sphinx myst-parser` | Sphinx |
 
 These ten are different in kind. Their pages are golden paths: a reader can

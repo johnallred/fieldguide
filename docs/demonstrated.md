@@ -14,7 +14,7 @@ This guide is prose about how to do the work, and prose is cheap. This page
 records which concepts are also *implemented* somewhere you can open, down to
 the file that does the work.
 
-**83 of 112 concepts have a demonstration**, 37 of them in full.
+**84 of 113 concepts have a demonstration**, 37 of them in full.
 The rest of this page is the other side of that number, which is the half worth
 reading.
 
@@ -32,7 +32,7 @@ A Python library and the documentation site that documents it, where the site is
 
 The repository you are reading. It earns entries here only where it does the work rather than describing it: a two-part fence gate that compares fenced source against the rendered code blocks of the built HTML, and an accessibility property test over generated pages. The fence gate found 127 defects across seven pages that every other check had passed.
 
-[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 41 concepts
+[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 42 concepts
 
 ## What is demonstrated
 
@@ -43,7 +43,7 @@ embeds them.
 
 ### Information and knowledge architecture
 
-11 of 13.
+12 of 14.
 
 | Concept | Extent | Artifact | What it does |
 |---|---|---|---|
@@ -54,6 +54,7 @@ embeds them.
 | [Metadata for navigation and retrieval](concepts/metadata.md) | :material-circle-half-full: partial | `src/fieldguide/dialect.py` | Front matter must parse as YAML and `diataxis` must be in a closed vocabulary. Added after 46 pages shipped unparseable front matter and 53 claimed a page type a generator had hardcoded. |
 | [Playbooks and decision guides](concepts/playbooks.md) | :material-check-circle: full | `drills/playbook.py` | A decision guide validated as a graph: dangling targets, dead-end options, orphaned outcomes, unreachable nodes and cycles reported as the looping path. Each class is injected and caught. Committing it found the page's step 4 had been trimmed to one line per class, hiding that two of the four injections cascade, so four defects produce six findings and a findings count is not a repair list. |
 | [Taxonomy and controlled vocabularies](concepts/taxonomy.md) | :material-check-circle: full | `src/docpack/frontmatter.py` | `DIATAXIS_TYPES` and `AUDIENCES` as frozensets: adding a term is a code change and a review. |
+| [Content migration](concepts/content-migration.md) | :material-circle-half-full: partial | `drills/migration_audit.py` | A migration inventory and its converted pages audited before switch-off: a retired page with 455 readers and no redirect, and six pieces of wiki residue, fixed in a second pass that lands 99.7 per cent of last quarter's traffic on a new page, plus the redirect map. The corpus is invented and no converter is run. |
 | [Findability and search design](concepts/findability.md) | :material-check-circle: full | `hooks/summary.py` | An audit of the search index found 72 of 73 page summaries absent from it; this hook gives the field three readers (page body, search index, meta description) and a CI step asserts the wiring, because the hook's unit tests pass either way. |
 | [Security guidance as encoded standard](concepts/security-documentation.md) | :material-circle-half-full: partial | `drills/security_lint.py` | A five-rule linter over a quickstart with six planted problems, which finds five. The miss is the demonstration: the credential rule was case-sensitive and environment variables are uppercase, so it missed the commonest shape a secret takes in a shell sample. Tests pin both the findings and the samples to the page. No threat model, no review process, no real product. |
 | [Single-sourcing and content reuse](concepts/single-sourcing.md) | :material-circle-half-full: partial | `hooks/seo.py` | One `summary` field feeds the meta description, Open Graph, JSON-LD, llms.txt and the retrieval snippet. Field-level reuse, not topic-level. |
@@ -200,7 +201,7 @@ Coverage by category, including the categories at zero.
 
 | Category | Demonstrated | Core concepts with nothing behind them |
 |---|---|---|
-| Information and knowledge architecture | 11/13 | 0 |
+| Information and knowledge architecture | 12/14 | 0 |
 | Docs-as-code toolchain | 8/15 | 0 |
 | Quality automation and documentation CI | 13/14 | 0 |
 | Golden paths and developer onboarding | 8/8 | 0 |
