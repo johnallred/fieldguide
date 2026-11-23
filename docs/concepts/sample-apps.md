@@ -15,6 +15,8 @@ tags: [gp, supporting]
 
 **Prerequisites:** [Sample walkthroughs](sample-walkthroughs.md), [Code-sample validation](code-sample-validation.md)
 
+**Leads to:** [Demo design](demo-design.md)
+
 ## What it is
 
 A set of complete, runnable applications, and an index that presents them.

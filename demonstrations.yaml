@@ -1,6 +1,6 @@
 # Which concepts have a working demonstration, and in which file.
 #
-# This guide is 114 concepts of prose about how to do a job. Prose is cheap.
+# This guide is 115 concepts of prose about how to do a job. Prose is cheap.
 # `docpack` is a companion repository that actually does a chunk of the work,
 # and this file records exactly which chunk, down to the file that does it.
 #
@@ -499,6 +499,12 @@ demonstrates:
     extent: partial
     note: "Conformance measured against a glossary two ways, to show that the obvious way flatters: a word-boundary search for the canonical term matches inside its own deprecated variants, scoring drift as conformance, so widget reads 60% when the true figure is 33%. Masking variants before counting fixes it. Three pages, not a corpus, and no team or review process is involved."
 
+  - concept: demo-design
+    project: fieldguide
+    artifact: drills/demo_check.py
+    extent: partial
+    note: "A demo script and its last rehearsal checked for a buried result, an overrun, author-only paths and variables, and live beats with no fallback: eleven findings, with the two rehearsal failures falling exactly on the two author-only beats, then a revision with none. The demo and rehearsal are invented; no audience reacted to anything."
+
   - concept: multi-platform-parity
     project: fieldguide
     artifact: drills/parity_check.py
@@ -664,6 +670,7 @@ ceilings:
   # A ceiling belongs to a concept, not to one project's entry, and a
   # concept with any `full` entry does not have one.
   no-audience:
+    - learning-science
     - instructional-design
     - cognitive-load
     - assessment
@@ -673,6 +680,7 @@ ceilings:
     - developer-feedback-loops
     - reproducible-environments
     - sample-apps
+    - demo-design
   not-published:
     - publishing-in-public
     - release-readiness

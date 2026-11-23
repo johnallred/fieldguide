@@ -507,6 +507,17 @@ concepts:
       - "Building and maintaining the sample applications, and the gallery developers browse them from."
     status: complete
 
+  - id: demo-design
+    name: Demo design
+    category: edu
+    tier: supporting
+    difficulty: 2
+    time: 3h
+    prerequisites: [sample-apps]
+    in_practice:
+      - "Building demos that show the result first, fit their slot, adapt to the audience, and still work when someone other than their author runs them."
+    status: complete
+
   - id: templates-scaffolding
     name: Templates and scaffolding
     category: gp
@@ -1467,6 +1478,7 @@ paths:
       - learning-content-standards
       - assessment
       - sample-apps
+      - demo-design
       - workshops
       - guided-workflows
 

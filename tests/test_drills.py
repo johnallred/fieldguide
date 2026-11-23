@@ -85,6 +85,11 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "which layer caught each failure, and which layers alone would miss it",
         ),
     ),
+    "demo_check.py": (
+        "docs/concepts/demo-design.md",
+        "<<'DATA'\n",
+        ("DEMO", "REHEARSAL", "DEMO_FIXED", "REHEARSAL_FIXED"),
+    ),
     "parity_check.py": (
         "docs/concepts/multi-platform-parity.md",
         "<<'DATA'\n",
@@ -188,6 +193,19 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "docs/b.md: ...'e\\nPoint the Widget CLI at your'...",
         ),
     ),
+    "demo_check.py": (
+        "docs/concepts/demo-design.md",
+        0,
+        (
+            "ORDER     the result is beat 4; show it first",
+            "AUTHOR    beat 3 uses a path on the author's machine",
+            "AUTHOR    beat 4 needs $FLAKY_UPSTREAM, which setup does not provide",
+            "REHEARSAL beat 3 failed in the last dry run",
+            "11 finding(s)",
+            "0 finding(s)",
+            "variant data-engineer: shares 4 of 5 beats",
+        ),
+    ),
     "parity_check.py": (
         "docs/concepts/multi-platform-parity.md",
         0,
@@ -287,7 +305,7 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         (
             "two hours against the 34-hour first-week path: 6%",
             "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
-            "concepts in this corpus of 3h or less: 50/114",
+            "concepts in this corpus of 3h or less: 51/115",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",
         ),

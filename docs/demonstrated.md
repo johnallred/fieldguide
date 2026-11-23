@@ -14,7 +14,7 @@ This guide is prose about how to do the work, and prose is cheap. This page
 records which concepts are also *implemented* somewhere you can open, down to
 the file that does the work.
 
-**85 of 114 concepts have a demonstration**, 37 of them in full.
+**86 of 115 concepts have a demonstration**, 37 of them in full.
 The rest of this page is the other side of that number, which is the half worth
 reading.
 
@@ -32,7 +32,7 @@ A Python library and the documentation site that documents it, where the site is
 
 The repository you are reading. It earns entries here only where it does the work rather than describing it: a two-part fence gate that compares fenced source against the rendered code blocks of the built HTML, and an accessibility property test over generated pages. The fence gate found 127 defects across seven pages that every other check had passed.
 
-[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 43 concepts
+[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 44 concepts
 
 ## What is demonstrated
 
@@ -146,7 +146,7 @@ embeds them.
 
 ### Developer education and curriculum
 
-12 of 12.
+13 of 13.
 
 | Concept | Extent | Artifact | What it does |
 |---|---|---|---|
@@ -156,6 +156,7 @@ embeds them.
 | [Learning paths and curriculum](concepts/learning-paths.md) | :material-circle-half-full: partial | `src/fieldguide/generate.py` | Seven paths generated from the registry, ordering enforced in CI, entry state computed; no reader has walked one. |
 | [Learning science for developer education](concepts/learning-science.md) | :material-circle-half-full: partial | `drills/alignment_audit.py` | A tutorial audited against four learning-science principles (task first, constructive alignment, faded practice) before and after a redesign, 0/3 objectives aligned to 3/3, with both tutorials held identical to the page by a test. It measures structure only: no reader has been observed, so nothing shows the redesign teaches better. |
 | [Assessment and checks for understanding](concepts/assessment.md) | :material-circle-half-full: partial | `src/fieldguide/audit.py` | 318 proof tasks measured across 106 pages, 95 per cent imperative and 40 per cent stating a success criterion. That second figure was published as 17 per cent for months and the classifier was wrong: it matched the preposition in "run it against a corpus you own" and recognised no conditional, predicted value or author comparison, so the guide's self-declared weakest number was about half the real one. It is now scored against sixty tasks hand-labelled before it was written, held in tests/fixtures/criterion_labels.json. The 40 is after a pass that added a criterion to every core page that had none; the correction was worth more than the pass. It establishes that the instrument is well formed and nothing about whether anyone learns. Ceiling: no-audience. |
+| [Demo design](concepts/demo-design.md) | :material-circle-half-full: partial | `drills/demo_check.py` | A demo script and its last rehearsal checked for a buried result, an overrun, author-only paths and variables, and live beats with no fallback: eleven findings, with the two rehearsal failures falling exactly on the two author-only beats, then a revision with none. The demo and rehearsal are invented; no audience reacted to anything. |
 | [Developer advocacy](concepts/developer-advocacy.md) | :material-circle-half-full: partial | `tests/test_registry.py` | A docs gate at capability granularity, enumerating subcommands from the parser; the partnership half is undemonstrable in a one-person repository. |
 | [LMS administration](concepts/lms-administration.md) | :material-circle-half-full: partial | `drills/lms_admin.py` | A drift check between a course's source and an export in the shape the Canvas modules API returns, plus a completion funnel and a per-section start rate. Its largest drop turns out to be an unpublished module, an administrative fault rather than a content one. No live LMS, and the learner data is invented; the page says both. |
 | [Learning content standards](concepts/learning-content-standards.md) | :material-circle-half-full: partial | `drills/content_standards.py` | A SCORM manifest, xAPI statements and an LTI 1.3 launch checked against rules quoted from each specification: four defects found before upload, none after the fixes. Checked as files only; never run against a real LMS, LRS or LTI platform. |
@@ -208,7 +209,7 @@ Coverage by category, including the categories at zero.
 | Golden paths and developer onboarding | 8/8 | 0 |
 | AI-ready content and agents | 13/21 | 8 |
 | Measurement and feedback | 7/7 | 0 |
-| Developer education and curriculum | 12/12 | 0 |
+| Developer education and curriculum | 13/13 | 0 |
 | Automation with Python | 3/3 | 0 |
 | Domain context | 6/6 | 0 |
 | Ways of working | 3/14 | 7 |
@@ -233,10 +234,10 @@ a stated reason why no amount of further code reaches `full`.
 
 | Reason | Concepts | Why it stops there |
 |---|---|---|
-| `no-audience` | 9 | the corpus-side half is built and measured; the reader-side half needs readers, and this project has none |
+| `no-audience` | 11 | the corpus-side half is built and measured; the reader-side half needs readers, and this project has none |
 | `not-published` | 2 | the mechanism runs and gates, but nothing is deployed, so no post-publication behaviour exists to observe |
 
-**`no-audience`:** [Assessment and checks for understanding](concepts/assessment.md), [Cognitive load in technical content](concepts/cognitive-load.md), [Turning developer feedback into changes](concepts/developer-feedback-loops.md), [Documentation analytics](concepts/docs-analytics.md), [Instructional design for developers](concepts/instructional-design.md), [Learning paths and curriculum](concepts/learning-paths.md), [Reproducible environments](concepts/reproducible-environments.md), [Sample applications and galleries](concepts/sample-apps.md), [Time to first success](concepts/time-to-first-success.md)
+**`no-audience`:** [Assessment and checks for understanding](concepts/assessment.md), [Cognitive load in technical content](concepts/cognitive-load.md), [Demo design](concepts/demo-design.md), [Turning developer feedback into changes](concepts/developer-feedback-loops.md), [Documentation analytics](concepts/docs-analytics.md), [Instructional design for developers](concepts/instructional-design.md), [Learning paths and curriculum](concepts/learning-paths.md), [Learning science for developer education](concepts/learning-science.md), [Reproducible environments](concepts/reproducible-environments.md), [Sample applications and galleries](concepts/sample-apps.md), [Time to first success](concepts/time-to-first-success.md)
 
 **`not-published`:** [Publishing in public](concepts/publishing-in-public.md), [Release readiness for documentation](concepts/release-readiness.md)
 

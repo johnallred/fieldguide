@@ -13,7 +13,7 @@ generated: true
 
 Taking a developer from a clean environment to a working result, repeatably.
 
-**19 concepts, roughly 80 hours.** The order matters:
+**20 concepts, roughly 83 hours.** The order matters:
 each step assumes the ones above it.
 
 **Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Code-sample validation](../concepts/code-sample-validation.md), [Templates and scaffolding](../concepts/templates-scaffolding.md). Each step below repeats what it assumes.
@@ -154,7 +154,15 @@ Builds on, earlier in this path: Sample walkthroughs.
 
 Assumes, from outside this path: [Code-sample validation](../concepts/code-sample-validation.md).
 
-## 18. [Workshops and hands-on labs](../concepts/workshops.md)
+## 18. [Demo design](../concepts/demo-design.md)
+
+`supporting` · practise it · 3h
+
+Building demos that show the result first, fit their slot, adapt to the audience, and still work when someone other than their author runs them.
+
+Builds on, earlier in this path: Sample applications and galleries.
+
+## 19. [Workshops and hands-on labs](../concepts/workshops.md)
 
 `supporting` · practise it · 4h
 
@@ -162,7 +170,7 @@ Running hands-on workshops and labs, a standard developer-relations deliverable.
 
 Builds on, earlier in this path: Learning paths and curriculum, Reproducible environments.
 
-## 19. [Guided workflows](../concepts/guided-workflows.md)
+## 20. [Guided workflows](../concepts/guided-workflows.md)
 
 `core` · build something · 5h
 

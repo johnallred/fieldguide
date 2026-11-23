@@ -10,13 +10,13 @@ generated: true
 
 # Coverage
 
-**114 of 114 concepts written.** 0 drafted, 0 planned.
+**115 of 115 concepts written.** 0 drafted, 0 planned.
 
 Each row names the concept and the day-to-day work that needs it.
 
 ## Where this list comes from
 
-- **114 of 114** concepts name the work that needs them.
+- **115 of 115** concepts name the work that needs them.
 
 That line is printed next to each concept, so a reader can judge whether it
 earns their time rather than taking the list on trust.
@@ -140,6 +140,7 @@ earns their time rather than taking the list on trust.
 | [Learning paths and curriculum](concepts/learning-paths.md) | core | build something | 5h | :material-check: complete | Sequencing content into structured learning paths a reader can follow start to finish. |
 | [Learning science for developer education](concepts/learning-science.md) | core | practise it | 6h | :material-check: complete | Applying what research says about how people learn to every tutorial, lab and learning path you design. |
 | [Assessment and checks for understanding](concepts/assessment.md) | supporting | practise it | 3h | :material-check: complete | Checking that a learner actually learned: how you know the curriculum worked. |
+| [Demo design](concepts/demo-design.md) | supporting | practise it | 3h | :material-check: complete | Building demos that show the result first, fit their slot, adapt to the audience, and still work when someone other t... |
 | [Developer advocacy](concepts/developer-advocacy.md) | supporting | practise it | 3h | :material-check: complete | Working with engineering, product and advocates so each new capability ships with tested documentation. |
 | [LMS administration](concepts/lms-administration.md) | supporting | practise it | 4h | :material-check: complete | Keeping the courses in a learning management system true to their source, enrolled correctly, and reporting completio... |
 | [Learning content standards](concepts/learning-content-standards.md) | supporting | practise it | 5h | :material-check: complete | Packaging courses and labs so any learning platform can launch them, and getting the tracking data back out in a form... |
