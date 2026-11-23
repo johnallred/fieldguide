@@ -13,6 +13,8 @@ tags: [edu, core]
 
 > Designing curriculum so a developer learns what they need, in the order they need it.
 
+**Prerequisites:** [Learning science for developer education](learning-science.md)
+
 **Leads to:** [Learning paths and curriculum](learning-paths.md), [Cognitive load in technical content](cognitive-load.md), [Assessment and checks for understanding](assessment.md)
 
 ## What it is
@@ -298,7 +300,7 @@ plus the audit and the fixtures that make the audit trustworthy.
 **How to tell it is working.** `fieldguide audit` prints
 the four commitments on demand, which is the whole of the claim: a
 seven-section page contract enforced in CI, a prerequisite graph with no
-cycles, 89 of 89 prerequisite lines, and 106 of 106 golden paths stating a
+cycles, 90 of 90 prerequisite lines, and 107 of 107 golden paths stating a
 duration and naming a result. Every figure in this page's golden path comes
 from that command rather than from a transcript, and its test fixtures pin the
 three measurement bugs described above so they cannot come back.
@@ -310,6 +312,7 @@ records this as `partial` for that reason.
 
 ## Related
 
+- [Learning science for developer education](learning-science.md), the research these commitments come from
 - [Learning paths and curriculum](learning-paths.md), sequencing across pages
 - [Cognitive load in technical content](cognitive-load.md), the mechanism behind first success
 - [Assessment and checks for understanding](assessment.md), how you find out it worked

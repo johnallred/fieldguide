@@ -85,6 +85,11 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "which layer caught each failure, and which layers alone would miss it",
         ),
     ),
+    "alignment_audit.py": (
+        "docs/concepts/learning-science.md",
+        "<<'MDEOF'\n",
+        ("BEFORE", "AFTER"),
+    ),
     "playbook.py": (
         "docs/concepts/playbooks.md",
         0,
@@ -147,13 +152,25 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "docs/b.md: ...'e\\nPoint the Widget CLI at your'...",
         ),
     ),
+    "alignment_audit.py": (
+        "docs/concepts/learning-science.md",
+        0,
+        (
+            "task shown before demonstration: no",
+            "  O3 Diagnose a retry budget that is exhausted no    no    no",
+            "aligned objectives: 0/3",
+            "practice sequence: worked -> completion -> independent",
+            "aligned objectives: 3/3",
+            "total words: 249",
+        ),
+    ),
     "workshop_arithmetic.py": (
         "docs/concepts/workshops.md",
         0,
         (
             "two hours against the 34-hour first-week path: 6%",
             "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
-            "concepts in this corpus of 3h or less: 48/106",
+            "concepts in this corpus of 3h or less: 48/107",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",
         ),

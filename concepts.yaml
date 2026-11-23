@@ -783,13 +783,24 @@ concepts:
   # Developer education and curriculum
   # =========================================================================
 
+  - id: learning-science
+    name: Learning science for developer education
+    category: edu
+    tier: core
+    difficulty: 2
+    time: 6h
+    prerequisites: []
+    in_practice:
+      - "Applying what research says about how people learn to every tutorial, lab and learning path you design."
+    status: complete
+
   - id: instructional-design
     name: Instructional design for developers
     category: edu
     tier: core
     difficulty: 2
     time: 5h
-    prerequisites: []
+    prerequisites: [learning-science]
     in_practice:
       - "Designing curriculum so a developer learns what they need, in the order they need it."
     status: complete
@@ -1359,6 +1370,7 @@ paths:
     summary: Taking a developer from a clean environment to a working result, repeatably.
     concepts:
       - docs-as-product
+      - learning-science
       - instructional-design
       - cognitive-load
       - diataxis

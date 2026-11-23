@@ -14,7 +14,7 @@ This guide is prose about how to do the work, and prose is cheap. This page
 records which concepts are also *implemented* somewhere you can open, down to
 the file that does the work.
 
-**77 of 106 concepts have a demonstration**, 37 of them in full.
+**78 of 107 concepts have a demonstration**, 37 of them in full.
 The rest of this page is the other side of that number, which is the half worth
 reading.
 
@@ -32,7 +32,7 @@ A Python library and the documentation site that documents it, where the site is
 
 The repository you are reading. It earns entries here only where it does the work rather than describing it: a two-part fence gate that compares fenced source against the rendered code blocks of the built HTML, and an accessibility property test over generated pages. The fence gate found 127 defects across seven pages that every other check had passed.
 
-[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 35 concepts
+[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 36 concepts
 
 ## What is demonstrated
 
@@ -144,13 +144,14 @@ embeds them.
 
 ### Developer education and curriculum
 
-8 of 8.
+9 of 9.
 
 | Concept | Extent | Artifact | What it does |
 |---|---|---|---|
 | [Cognitive load in technical content](concepts/cognitive-load.md) | :material-circle-half-full: partial | `src/fieldguide/audit.py` | Sentence distribution, per-page maxima and the backward/forward/off-path link census, committed as a subcommand with a test fixture for each of the three fence-parsing bugs that preceded it. The loop is now closed rather than open: the corpus was measured, 59 pages carried a sentence over 45 words and six over 60, the worst were edited, and a test holds the ceiling at 55 so it cannot drift back. Two defects fell out of acting on it. The splitter did not treat a sentence ending in bold as a sentence ending, which accounted for as much of the improvement as the editing did, and the metric excluded list items, so a long sentence became compliant the moment somebody bulleted it; both are fixed and both are published beside the result. The effect on a reader is still unmeasured. Ceiling: no-audience. |
 | [Instructional design for developers](concepts/instructional-design.md) | :material-circle-half-full: partial | `src/fieldguide/audit.py` | `fieldguide audit` prints the four structural commitments on demand: 89/89 prerequisite lines, 106/106 durations, results and proof sections. Since then the commitments became enforceable rather than measurable: STRUCTURAL_LABELS declares the wording of all fourteen labelled elements, the scaffold emits them so a new page cannot invent a fifteenth, and the audit reports every repeated label nobody declared. That last check is the one that matters, because this page's own fix had standardised the label that surfaced and asserted that one string, which could not have found the three other variant pairs in use at the time. Ceiling: no-audience. |
 | [Learning paths and curriculum](concepts/learning-paths.md) | :material-circle-half-full: partial | `src/fieldguide/generate.py` | Seven paths generated from the registry, ordering enforced in CI, entry state computed; no reader has walked one. |
+| [Learning science for developer education](concepts/learning-science.md) | :material-circle-half-full: partial | `drills/alignment_audit.py` | A tutorial audited against four learning-science principles (task first, constructive alignment, faded practice) before and after a redesign, 0/3 objectives aligned to 3/3, with both tutorials held identical to the page by a test. It measures structure only: no reader has been observed, so nothing shows the redesign teaches better. |
 | [Assessment and checks for understanding](concepts/assessment.md) | :material-circle-half-full: partial | `src/fieldguide/audit.py` | 318 proof tasks measured across 106 pages, 95 per cent imperative and 40 per cent stating a success criterion. That second figure was published as 17 per cent for months and the classifier was wrong: it matched the preposition in "run it against a corpus you own" and recognised no conditional, predicted value or author comparison, so the guide's self-declared weakest number was about half the real one. It is now scored against sixty tasks hand-labelled before it was written, held in tests/fixtures/criterion_labels.json. The 40 is after a pass that added a criterion to every core page that had none; the correction was worth more than the pass. It establishes that the instrument is well formed and nothing about whether anyone learns. Ceiling: no-audience. |
 | [Developer advocacy](concepts/developer-advocacy.md) | :material-circle-half-full: partial | `tests/test_registry.py` | A docs gate at capability granularity, enumerating subcommands from the parser; the partnership half is undemonstrable in a one-person repository. |
 | [Publishing in public](concepts/publishing-in-public.md) | :material-circle-half-full: partial | `scripts/prepublication.py` | A pre-publication gate at full precision on two repositories; neither is published, so there is no audience yet. |
@@ -200,7 +201,7 @@ Coverage by category, including the categories at zero.
 | Golden paths and developer onboarding | 8/8 | 0 |
 | AI-ready content and agents | 13/21 | 8 |
 | Measurement and feedback | 7/7 | 0 |
-| Developer education and curriculum | 8/8 | 0 |
+| Developer education and curriculum | 9/9 | 0 |
 | Automation with Python | 3/3 | 0 |
 | Domain context | 6/6 | 0 |
 | Ways of working | 1/12 | 7 |

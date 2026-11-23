@@ -1,7 +1,7 @@
 site_name: John Allred's Field Guide for Developer Education
 site_description: >-
   A training manual for documentation engineering, developer education and
-  KnowledgeOps work, whatever your title: 106 concepts, each with a golden path
+  KnowledgeOps work, whatever your title: 107 concepts, each with a golden path
   and the day-to-day work that needs it.
 site_url: https://johnallred.github.io/fieldguide/
 repo_url: https://github.com/johnallred/fieldguide
@@ -53,7 +53,7 @@ markdown_extensions:
 # the three things a reader arrives wanting. Browse by route (paths), look
 # something up (coverage), or understand how the guide itself is built.
 #
-# Concept pages are NOT listed individually here. There are 106 of
+# Concept pages are NOT listed individually here. There are 107 of
 # them, and a sidebar with a hundred leaves is a worse index than the
 # generated coverage matrix. They are reachable from coverage, from the paths,
 # and from each other's prerequisite links.

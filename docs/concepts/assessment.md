@@ -356,7 +356,7 @@ state a success criterion, and one task rewritten into predict-then-check.
    and it will contradict at least one thing you believe.
 
 **How to tell it is working.** The measurement above runs
-against this guide's own 106 pages and is reproducible from the repository;
+against this guide's 106 pages as they stood and is reproducible from the repository;
 what it establishes is that 318 tasks are well formed and that 128 of them are
 assessable, against a classifier scored on sixty hand-labelled tasks rather
 than trusted. What it cannot establish is that any of them teach

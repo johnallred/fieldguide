@@ -13,7 +13,7 @@ generated: true
 
 Taking a developer from a clean environment to a working result, repeatably.
 
-**15 concepts, roughly 60 hours.** The order matters:
+**16 concepts, roughly 66 hours.** The order matters:
 each step assumes the ones above it.
 
 **Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Code-sample validation](../concepts/code-sample-validation.md), [Templates and scaffolding](../concepts/templates-scaffolding.md). Each step below repeats what it assumes.
@@ -24,13 +24,21 @@ each step assumes the ones above it.
 
 Treating setup, runnable samples and documentation as one product the developer experiences.
 
-## 2. [Instructional design for developers](../concepts/instructional-design.md)
+## 2. [Learning science for developer education](../concepts/learning-science.md)
+
+`core` · practise it · 6h
+
+Applying what research says about how people learn to every tutorial, lab and learning path you design.
+
+## 3. [Instructional design for developers](../concepts/instructional-design.md)
 
 `core` · practise it · 5h
 
 Designing curriculum so a developer learns what they need, in the order they need it.
 
-## 3. [Cognitive load in technical content](../concepts/cognitive-load.md)
+Builds on, earlier in this path: Learning science for developer education.
+
+## 4. [Cognitive load in technical content](../concepts/cognitive-load.md)
 
 `core` · practise it · 3h
 
@@ -38,7 +46,7 @@ Cutting what a reader has to hold in their head, so they reach first success soo
 
 Builds on, earlier in this path: Instructional design for developers.
 
-## 4. [Diátaxis](../concepts/diataxis.md)
+## 5. [Diátaxis](../concepts/diataxis.md)
 
 `core` · read it · 2h
 
@@ -46,7 +54,7 @@ Deciding whether a page is a tutorial, a how-to, reference or explanation, and k
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
-## 5. [Designing tutorials](../concepts/tutorial-design.md)
+## 6. [Designing tutorials](../concepts/tutorial-design.md)
 
 `core` · practise it · 4h
 
@@ -54,7 +62,7 @@ Designing tutorials that teach by having the reader build something real.
 
 Builds on, earlier in this path: Diátaxis.
 
-## 6. [Golden paths](../concepts/golden-paths.md)
+## 7. [Golden paths](../concepts/golden-paths.md)
 
 `core` · build something · 5h
 
@@ -62,7 +70,7 @@ Designing and maintaining the routes that take a developer from a clean environm
 
 Builds on, earlier in this path: Diátaxis.
 
-## 7. [Quickstarts that survive contact](../concepts/quickstarts.md)
+## 8. [Quickstarts that survive contact](../concepts/quickstarts.md)
 
 `core` · practise it · 3h
 
@@ -70,7 +78,7 @@ Writing quickstarts that still work when a new developer follows them cold.
 
 Builds on, earlier in this path: Golden paths.
 
-## 8. [Sample walkthroughs](../concepts/sample-walkthroughs.md)
+## 9. [Sample walkthroughs](../concepts/sample-walkthroughs.md)
 
 `core` · practise it · 3h
 
@@ -78,7 +86,7 @@ Writing walkthroughs that explain a sample line by line, without drifting from t
 
 Builds on, earlier in this path: Designing tutorials.
 
-## 9. [Reproducible environments](../concepts/reproducible-environments.md)
+## 10. [Reproducible environments](../concepts/reproducible-environments.md)
 
 `supporting` · build something · 4h
 
@@ -86,7 +94,7 @@ Making sure every exercise starts from an environment a reader can recreate exac
 
 Builds on, earlier in this path: Golden paths.
 
-## 10. [Cold-start testing](../concepts/coldstart-testing.md)
+## 11. [Cold-start testing](../concepts/coldstart-testing.md)
 
 `core` · build something · 5h
 
@@ -96,7 +104,7 @@ Builds on, earlier in this path: Reproducible environments.
 
 Assumes, from outside this path: [Code-sample validation](../concepts/code-sample-validation.md).
 
-## 11. [Learning paths and curriculum](../concepts/learning-paths.md)
+## 12. [Learning paths and curriculum](../concepts/learning-paths.md)
 
 `core` · build something · 5h
 
@@ -104,7 +112,7 @@ Sequencing content into structured learning paths a reader can follow start to f
 
 Builds on, earlier in this path: Instructional design for developers, Diátaxis.
 
-## 12. [Assessment and checks for understanding](../concepts/assessment.md)
+## 13. [Assessment and checks for understanding](../concepts/assessment.md)
 
 `supporting` · practise it · 3h
 
@@ -112,7 +120,7 @@ Checking that a learner actually learned: how you know the curriculum worked.
 
 Builds on, earlier in this path: Instructional design for developers.
 
-## 13. [Sample applications and galleries](../concepts/sample-apps.md)
+## 14. [Sample applications and galleries](../concepts/sample-apps.md)
 
 `supporting` · build something · 6h
 
@@ -122,7 +130,7 @@ Builds on, earlier in this path: Sample walkthroughs.
 
 Assumes, from outside this path: [Code-sample validation](../concepts/code-sample-validation.md).
 
-## 14. [Workshops and hands-on labs](../concepts/workshops.md)
+## 15. [Workshops and hands-on labs](../concepts/workshops.md)
 
 `supporting` · practise it · 4h
 
@@ -130,7 +138,7 @@ Running hands-on workshops and labs, a standard developer-relations deliverable.
 
 Builds on, earlier in this path: Learning paths and curriculum, Reproducible environments.
 
-## 15. [Guided workflows](../concepts/guided-workflows.md)
+## 16. [Guided workflows](../concepts/guided-workflows.md)
 
 `core` · build something · 5h
 

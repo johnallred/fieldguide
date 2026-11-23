@@ -576,6 +576,13 @@ def test_pages_that_state_the_corpus_size_state_it_correctly():
     #: file makes for blocked demonstrations and for retired labels.
     historical: dict[tuple[str, int], str] = {
         ("concepts/llm-content-lifecycle.md", 400): "someone else's corpus, in a worked explanation",
+        # Measured when the corpus held 106 pages, before `learning-science`
+        # became the 107th. Each page reports a run over the corpus as it then
+        # stood, so the figure is a record of that run rather than a claim
+        # about the corpus now.
+        ("concepts/assessment.md", 106): "the 106-page corpus its measurements ran over",
+        ("concepts/cognitive-load.md", 106): "the 106-page corpus its measurements ran over",
+        ("concepts/python-for-content.md", 106): "the 106-page corpus its measurements ran over",
     }
     # `("concepts/docs-analytics.md", 121)` was here and is gone. It was added
     # while the pattern still had the "all N pages" arm, which matched that
