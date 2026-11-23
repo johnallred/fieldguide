@@ -85,6 +85,11 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "which layer caught each failure, and which layers alone would miss it",
         ),
     ),
+    "diagram_drift.py": (
+        "docs/concepts/diagrams-as-code.md",
+        "<<'DATA'\n",
+        ("WORKFLOW", "PAGE"),
+    ),
     "lms_admin.py": (
         "docs/concepts/lms-administration.md",
         "<<'DATA'\n",
@@ -167,6 +172,18 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "docs/b.md: ...'e\\nPoint the Widget CLI at your'...",
         ),
     ),
+    "diagram_drift.py": (
+        "docs/concepts/diagrams-as-code.md",
+        0,
+        (
+            "DRIFT  edge build -> test: in the diagram, not in the workflow",
+            "DRIFT  node test: no job of that name",
+            "A11Y   mermaid block 1 has no accTitle",
+            "9 finding(s)",
+            "  accDescr: lint runs first; build runs after lint; linkcheck runs after build; samples runs after build; deploy runs after linkcheck and samples.",
+            "0 finding(s)",
+        ),
+    ),
     "lms_admin.py": (
         "docs/concepts/lms-administration.md",
         0,
@@ -218,7 +235,7 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         (
             "two hours against the 34-hour first-week path: 6%",
             "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
-            "concepts in this corpus of 3h or less: 48/110",
+            "concepts in this corpus of 3h or less: 49/111",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",
         ),

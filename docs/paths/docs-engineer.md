@@ -14,7 +14,7 @@ generated: true
 
 Every automated gate that stops documentation rotting, in the order worth adding them.
 
-**18 concepts, roughly 70 hours.** The order matters:
+**19 concepts, roughly 73 hours.** The order matters:
 each step assumes the ones above it.
 
 **Assumed before step 1.** This path does not teach [Style guides and terminology management](../concepts/style-guide.md), [Diátaxis](../concepts/diataxis.md), [Reproducible environments](../concepts/reproducible-environments.md), [Content lifecycle and governance](../concepts/content-lifecycle.md), [Content models](../concepts/content-model.md). Each step below repeats what it assumes.
@@ -81,7 +81,15 @@ Proving every code sample in the docs still runs and still produces what the pag
 
 Builds on, earlier in this path: Docs-as-code.
 
-## 9. [Doctests and executable docstrings](../concepts/doctests.md)
+## 9. [Diagrams as code](../concepts/diagrams-as-code.md)
+
+`supporting` · practise it · 3h
+
+Keeping architecture and pipeline diagrams in the repository as text, reviewed like code and checked against the system they describe.
+
+Builds on, earlier in this path: Docs-as-code.
+
+## 10. [Doctests and executable docstrings](../concepts/doctests.md)
 
 `supporting` · practise it · 2h
 
@@ -89,7 +97,7 @@ Keeping examples in docstrings executable, so they fail when the code changes.
 
 Builds on, earlier in this path: Code-sample validation.
 
-## 10. [Building a doc test harness](../concepts/doc-test-harness.md)
+## 11. [Building a doc test harness](../concepts/doc-test-harness.md)
 
 `core` · build something · 6h
 
@@ -97,7 +105,7 @@ Building a harness that runs documentation as tests, so broken pages fail the bu
 
 Builds on, earlier in this path: Code-sample validation.
 
-## 11. [Generated API reference](../concepts/api-reference-generation.md)
+## 12. [Generated API reference](../concepts/api-reference-generation.md)
 
 `core` · practise it · 4h
 
@@ -105,7 +113,7 @@ Producing reference documentation from the code itself, so it assumes no prior c
 
 Builds on, earlier in this path: Docs-as-code.
 
-## 12. [Golden paths](../concepts/golden-paths.md)
+## 13. [Golden paths](../concepts/golden-paths.md)
 
 `core` · build something · 5h
 
@@ -113,7 +121,7 @@ Designing and maintaining the routes that take a developer from a clean environm
 
 Assumes, from outside this path: [Diátaxis](../concepts/diataxis.md).
 
-## 13. [Cold-start testing](../concepts/coldstart-testing.md)
+## 14. [Cold-start testing](../concepts/coldstart-testing.md)
 
 `core` · build something · 5h
 
@@ -123,7 +131,7 @@ Builds on, earlier in this path: Code-sample validation.
 
 Assumes, from outside this path: [Reproducible environments](../concepts/reproducible-environments.md).
 
-## 14. [Freshness monitoring](../concepts/freshness-monitoring.md)
+## 15. [Freshness monitoring](../concepts/freshness-monitoring.md)
 
 `core` · practise it · 4h
 
@@ -133,7 +141,7 @@ Builds on, earlier in this path: Documentation CI.
 
 Assumes, from outside this path: [Content lifecycle and governance](../concepts/content-lifecycle.md).
 
-## 15. [Preview deployments and publishing](../concepts/preview-deployments.md)
+## 16. [Preview deployments and publishing](../concepts/preview-deployments.md)
 
 `supporting` · practise it · 3h
 
@@ -141,7 +149,7 @@ Previewing every documentation change as a built site, and publishing it when it
 
 Builds on, earlier in this path: GitHub Actions for docs.
 
-## 16. [Templates and scaffolding](../concepts/templates-scaffolding.md)
+## 17. [Templates and scaffolding](../concepts/templates-scaffolding.md)
 
 `core` · practise it · 3h
 
@@ -149,7 +157,7 @@ Encoding team standards into templates and scaffolds, so the right shape is the 
 
 Assumes, from outside this path: [Content models](../concepts/content-model.md).
 
-## 17. [Guided workflows](../concepts/guided-workflows.md)
+## 18. [Guided workflows](../concepts/guided-workflows.md)
 
 `core` · build something · 5h
 
@@ -157,7 +165,7 @@ Replacing static instructions with workflows that guide a person through a stand
 
 Builds on, earlier in this path: Templates and scaffolding.
 
-## 18. [Release readiness for documentation](../concepts/release-readiness.md)
+## 19. [Release readiness for documentation](../concepts/release-readiness.md)
 
 `core` · practise it · 4h
 

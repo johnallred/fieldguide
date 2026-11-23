@@ -13,7 +13,7 @@ tags: [dac, core]
 
 > Running documentation through Git, CI builds, linting, link and sample checks, and automated publishing.
 
-**Leads to:** [Code-sample validation](code-sample-validation.md), [Documentation CI](documentation-ci.md), [Generated API reference](api-reference-generation.md), [Git authoring workflows for writers](git-authoring.md), [Link checking](link-checking.md), [Markdown and its dialects](markdown.md)
+**Leads to:** [Code-sample validation](code-sample-validation.md), [Diagrams as code](diagrams-as-code.md), [Documentation CI](documentation-ci.md), [Generated API reference](api-reference-generation.md), [Git authoring workflows for writers](git-authoring.md), [Link checking](link-checking.md), [Markdown and its dialects](markdown.md)
 
 ## What it is
 

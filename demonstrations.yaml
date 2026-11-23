@@ -1,6 +1,6 @@
 # Which concepts have a working demonstration, and in which file.
 #
-# This guide is 110 concepts of prose about how to do a job. Prose is cheap.
+# This guide is 111 concepts of prose about how to do a job. Prose is cheap.
 # `docpack` is a companion repository that actually does a chunk of the work,
 # and this file records exactly which chunk, down to the file that does it.
 #
@@ -498,6 +498,12 @@ demonstrates:
     artifact: drills/terminology_drift.py
     extent: partial
     note: "Conformance measured against a glossary two ways, to show that the obvious way flatters: a word-boundary search for the canonical term matches inside its own deprecated variants, scoring drift as conformance, so widget reads 60% when the true figure is 33%. Masking variants before counting fixes it. Three pages, not a corpus, and no team or review process is involved."
+
+  - concept: diagrams-as-code
+    project: fieldguide
+    artifact: drills/diagram_drift.py
+    extent: partial
+    note: "A hand-drawn Mermaid pipeline diagram checked against the GitHub Actions workflow it describes: seven drifted edges and nodes and two missing text alternatives, then a diagram and description generated from the workflow that passes by construction. Parses a flowchart subset only and renders nothing."
 
   - concept: lms-administration
     project: fieldguide

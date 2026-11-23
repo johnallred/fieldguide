@@ -176,6 +176,17 @@ concepts:
       - "Running documentation through Git, CI builds, linting, link and sample checks, and automated publishing."
     status: complete
 
+  - id: diagrams-as-code
+    name: Diagrams as code
+    category: dac
+    tier: supporting
+    difficulty: 2
+    time: 3h
+    prerequisites: [docs-as-code]
+    in_practice:
+      - "Keeping architecture and pipeline diagrams in the repository as text, reviewed like code and checked against the system they describe."
+    status: complete
+
   - id: git-authoring
     name: Git authoring workflows for writers
     category: dac
@@ -1363,6 +1374,7 @@ paths:
       - prose-linting
       - custom-linters
       - code-sample-validation
+      - diagrams-as-code
       - doctests
       - doc-test-harness
       - api-reference-generation

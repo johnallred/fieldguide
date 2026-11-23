@@ -14,7 +14,7 @@ This guide is prose about how to do the work, and prose is cheap. This page
 records which concepts are also *implemented* somewhere you can open, down to
 the file that does the work.
 
-**81 of 110 concepts have a demonstration**, 37 of them in full.
+**82 of 111 concepts have a demonstration**, 37 of them in full.
 The rest of this page is the other side of that number, which is the half worth
 reading.
 
@@ -32,7 +32,7 @@ A Python library and the documentation site that documents it, where the site is
 
 The repository you are reading. It earns entries here only where it does the work rather than describing it: a two-part fence gate that compares fenced source against the rendered code blocks of the built HTML, and an accessibility property test over generated pages. The fence gate found 127 defects across seven pages that every other check had passed.
 
-[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 39 concepts
+[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 40 concepts
 
 ## What is demonstrated
 
@@ -61,7 +61,7 @@ embeds them.
 
 ### Docs-as-code toolchain
 
-7 of 14.
+8 of 15.
 
 | Concept | Extent | Artifact | What it does |
 |---|---|---|---|
@@ -72,6 +72,7 @@ embeds them.
 | [Markdown and its dialects](concepts/markdown.md) | :material-circle-half-full: partial | `src/fieldguide/dialect.py` | A gate for the dialect failure mode. A construct used in prose whose markers survive into the built HTML did not render; covers two constructs, not every dialect. |
 | [MkDocs and Material](concepts/mkdocs.md) | :material-check-circle: full | `mkdocs.yml` | Material plus mkdocstrings, built with `--strict` from the first commit. |
 | [Sphinx](concepts/sphinx.md) | :material-circle-half-full: partial | `drills/sphinx_autodoc.py` | Autodoc and napoleon pull a typed signature and its parameter docs out of real source, then the function is renamed and nitpicky plus -W turns the unresolvable cross-reference into exit 1. The mechanism is demonstrated; owning a Sphinx corpus is not, and the page says so: no custom extension, no theme fork, no intersphinx across teams. Needs sphinx and myst-parser, which this guide does not depend on. |
+| [Diagrams as code](concepts/diagrams-as-code.md) | :material-circle-half-full: partial | `drills/diagram_drift.py` | A hand-drawn Mermaid pipeline diagram checked against the GitHub Actions workflow it describes: seven drifted edges and nodes and two missing text alternatives, then a diagram and description generated from the workflow that passes by construction. Parses a flowchart subset only and renders nothing. |
 
 ### Quality automation and documentation CI
 
@@ -199,7 +200,7 @@ Coverage by category, including the categories at zero.
 | Category | Demonstrated | Core concepts with nothing behind them |
 |---|---|---|
 | Information and knowledge architecture | 11/13 | 0 |
-| Docs-as-code toolchain | 7/14 | 0 |
+| Docs-as-code toolchain | 8/15 | 0 |
 | Quality automation and documentation CI | 13/14 | 0 |
 | Golden paths and developer onboarding | 8/8 | 0 |
 | AI-ready content and agents | 13/21 | 8 |

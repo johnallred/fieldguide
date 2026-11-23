@@ -10,13 +10,13 @@ generated: true
 
 # Coverage
 
-**110 of 110 concepts written.** 0 drafted, 0 planned.
+**111 of 111 concepts written.** 0 drafted, 0 planned.
 
 Each row names the concept and the day-to-day work that needs it.
 
 ## Where this list comes from
 
-- **110 of 110** concepts name the work that needs them.
+- **111 of 111** concepts name the work that needs them.
 
 That line is printed next to each concept, so a reader can judge whether it
 earns their time rather than taking the list on trust.
@@ -50,6 +50,7 @@ earns their time rather than taking the list on trust.
 | [Markdown and its dialects](concepts/markdown.md) | core | read it | 2h | :material-check: complete | Writing in Markdown every day, and knowing which dialect your build pipeline actually speaks. |
 | [MkDocs and Material](concepts/mkdocs.md) | core | practise it | 4h | :material-check: complete | Building and maintaining a documentation site on MkDocs with the Material theme. |
 | [Sphinx](concepts/sphinx.md) | core | build something | 6h | :material-check: complete | Building and maintaining documentation with Sphinx, especially for Python projects. |
+| [Diagrams as code](concepts/diagrams-as-code.md) | supporting | practise it | 3h | :material-check: complete | Keeping architecture and pipeline diagrams in the repository as text, reviewed like code and checked against the syst... |
 | [Docusaurus](concepts/docusaurus.md) | supporting | practise it | 5h | :material-check: complete | Building and maintaining a documentation site on Docusaurus. |
 | [Localization and translation pipelines](concepts/localization.md) | supporting | build something | 4h | :material-check: complete | Getting content translated and keeping translations in step with the source as it changes. |
 | [MDX](concepts/mdx.md) | supporting | practise it | 3h | :material-check: complete | Authoring pages that mix Markdown with components, inside a docs-as-code workflow with CI. |

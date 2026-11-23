@@ -51,6 +51,7 @@ one machine. A test pins the constant columns.
 | `task_analysis.py` | nothing | Learner and task analysis |
 | `lms_admin.py` | nothing | LMS administration |
 | `content_standards.py` | nothing | Learning content standards |
+| `diagram_drift.py` | `pyyaml` | Diagrams as code |
 | `sphinx_autodoc.py` | `pip install sphinx myst-parser` | Sphinx |
 
 These ten are different in kind. Their pages are golden paths: a reader can
