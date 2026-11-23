@@ -1,6 +1,6 @@
 # Which concepts have a working demonstration, and in which file.
 #
-# This guide is 113 concepts of prose about how to do a job. Prose is cheap.
+# This guide is 114 concepts of prose about how to do a job. Prose is cheap.
 # `docpack` is a companion repository that actually does a chunk of the work,
 # and this file records exactly which chunk, down to the file that does it.
 #
@@ -498,6 +498,12 @@ demonstrates:
     artifact: drills/terminology_drift.py
     extent: partial
     note: "Conformance measured against a glossary two ways, to show that the obvious way flatters: a word-boundary search for the canonical term matches inside its own deprecated variants, scoring drift as conformance, so widget reads 60% when the true figure is 33%. Masking variants before counting fixes it. Three pages, not a corpus, and no team or review process is involved."
+
+  - concept: multi-platform-parity
+    project: fieldguide
+    artifact: drills/parity_check.py
+    extent: partial
+    note: "A single-sourced page checked against a capability matrix and per-platform sample runs: four platform differences the page was silent on and two sample claims nobody had verified, then a measurement showing one platform's reader sees more platform-specific text than shared text, the point at which to split. Platforms and runs are invented; nothing calls a real cloud."
 
   - concept: content-migration
     project: fieldguide

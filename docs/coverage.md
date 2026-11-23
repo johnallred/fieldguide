@@ -10,13 +10,13 @@ generated: true
 
 # Coverage
 
-**113 of 113 concepts written.** 0 drafted, 0 planned.
+**114 of 114 concepts written.** 0 drafted, 0 planned.
 
 Each row names the concept and the day-to-day work that needs it.
 
 ## Where this list comes from
 
-- **113 of 113** concepts name the work that needs them.
+- **114 of 114** concepts name the work that needs them.
 
 That line is printed next to each concept, so a reader can judge whether it
 earns their time rather than taking the list on trust.
@@ -178,6 +178,7 @@ earns their time rather than taking the list on trust.
 | [Release readiness for documentation](concepts/release-readiness.md) | core | practise it | 4h | :material-check: complete | Making documentation part of what "ready to release" means, enforced rather than remembered. |
 | [Technical writing as a craft](concepts/technical-writing.md) | core | practise it | 8h | :material-check: complete | Writing developer documentation a reader can act on without asking you a question. |
 | [Treating docs, setup and samples as one product](concepts/docs-as-product.md) | core | practise it | 3h | :material-check: complete | Treating setup, runnable samples and documentation as one product the developer experiences. |
+| [Multi-platform parity](concepts/multi-platform-parity.md) | supporting | build something | 4h | :material-check: complete | Documenting one product that developers reach through a first-party API and several cloud platforms, so each reader l... |
 | [Prioritizing documentation work](concepts/docs-prioritization.md) | supporting | practise it | 3h | :material-check: complete | Using data to decide what to build, fix or retire next. |
 | [Release notes and changelogs](concepts/release-notes.md) | supporting | practise it | 3h | :material-check: complete | Writing what changed in each release for the people who have to act on it, and making sure the version number tells t... |
 | [User stories as a documentation standard](concepts/user-stories.md) | supporting | read it | 2h | :material-check: complete | Turning user stories into a documentation standard that templates can enforce. |

@@ -13,10 +13,10 @@ generated: true
 
 From a folder of Markdown to a modeled, governed, machine-readable corpus.
 
-**14 concepts, roughly 49 hours.** The order matters:
+**15 concepts, roughly 53 hours.** The order matters:
 each step assumes the ones above it.
 
-**Assumed before step 1.** This path does not teach [Docs-as-code](../concepts/docs-as-code.md), [Extracting tribal knowledge](../concepts/sme-interviews.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Code-sample validation](../concepts/code-sample-validation.md), [Docs-as-code](../concepts/docs-as-code.md), [Extracting tribal knowledge](../concepts/sme-interviews.md). Each step below repeats what it assumes.
 
 ## 1. [Information architecture](../concepts/information-architecture.md)
 
@@ -80,7 +80,17 @@ Writing a fact once and reusing it wherever it appears, so documentation scales 
 
 Builds on, earlier in this path: Content models.
 
-## 9. [Content lifecycle and governance](../concepts/content-lifecycle.md)
+## 9. [Multi-platform parity](../concepts/multi-platform-parity.md)
+
+`supporting` · build something · 4h
+
+Documenting one product that developers reach through a first-party API and several cloud platforms, so each reader learns what is true on their route.
+
+Builds on, earlier in this path: Single-sourcing and content reuse.
+
+Assumes, from outside this path: [Code-sample validation](../concepts/code-sample-validation.md).
+
+## 10. [Content lifecycle and governance](../concepts/content-lifecycle.md)
 
 `supporting` · practise it · 3h
 
@@ -88,7 +98,7 @@ Running content from draft to update to audit to retirement, increasingly with L
 
 Builds on, earlier in this path: Content models.
 
-## 10. [Retiring content](../concepts/content-retirement.md)
+## 11. [Retiring content](../concepts/content-retirement.md)
 
 `supporting` · practise it · 3h
 
@@ -96,7 +106,7 @@ Deciding what to retire, and removing it without breaking what links to it.
 
 Builds on, earlier in this path: Content lifecycle and governance.
 
-## 11. [Content migration](../concepts/content-migration.md)
+## 12. [Content migration](../concepts/content-migration.md)
 
 `supporting` · build something · 6h
 
@@ -106,7 +116,7 @@ Builds on, earlier in this path: Retiring content.
 
 Assumes, from outside this path: [Docs-as-code](../concepts/docs-as-code.md).
 
-## 12. [Findability and search design](../concepts/findability.md)
+## 13. [Findability and search design](../concepts/findability.md)
 
 `supporting` · practise it · 3h
 
@@ -114,7 +124,7 @@ Making sure developers and AI assistants can both find and use the page they nee
 
 Builds on, earlier in this path: Metadata for navigation and retrieval.
 
-## 13. [Playbooks and decision guides](../concepts/playbooks.md)
+## 14. [Playbooks and decision guides](../concepts/playbooks.md)
 
 `core` · practise it · 4h
 
@@ -122,7 +132,7 @@ Turning tribal knowledge from engineering, product and operations into playbooks
 
 Assumes, from outside this path: [Extracting tribal knowledge](../concepts/sme-interviews.md).
 
-## 14. [Knowledge architecture](../concepts/knowledge-architecture.md)
+## 15. [Knowledge architecture](../concepts/knowledge-architecture.md)
 
 `core` · build something · 6h
 

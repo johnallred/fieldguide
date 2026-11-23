@@ -85,6 +85,11 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "which layer caught each failure, and which layers alone would miss it",
         ),
     ),
+    "parity_check.py": (
+        "docs/concepts/multi-platform-parity.md",
+        "<<'DATA'\n",
+        ("MATRIX", "PAGE", "RESULTS", "PAGE_FIXED", "RESULTS_FIXED"),
+    ),
     "migration_audit.py": (
         "docs/concepts/content-migration.md",
         "<<'DATA'\n",
@@ -183,6 +188,18 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "docs/b.md: ...'e\\nPoint the Widget CLI at your'...",
         ),
     ),
+    "parity_check.py": (
+        "docs/concepts/multi-platform-parity.md",
+        0,
+        (
+            "DELTA    cloud-b: batch is not available, and the page does not say so",
+            "UNTESTED batch_example.py claims cloud-a and was never run there",
+            "FAILS    batch_example.py claims cloud-b and fails there",
+            "6 finding(s)",
+            "0 finding(s)",
+            "  cloud-b   69 words: 25 shared + 44 for this platform",
+        ),
+    ),
     "migration_audit.py": (
         "docs/concepts/content-migration.md",
         0,
@@ -270,7 +287,7 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         (
             "two hours against the 34-hour first-week path: 6%",
             "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
-            "concepts in this corpus of 3h or less: 50/113",
+            "concepts in this corpus of 3h or less: 50/114",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",
         ),

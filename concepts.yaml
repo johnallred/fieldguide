@@ -1164,6 +1164,17 @@ concepts:
       - "Delivering knowledge to developers, partners, internal teams and the AI agents between them."
     status: complete
 
+  - id: multi-platform-parity
+    name: Multi-platform parity
+    category: craft
+    tier: supporting
+    difficulty: 3
+    time: 4h
+    prerequisites: [single-sourcing, code-sample-validation]
+    in_practice:
+      - "Documenting one product that developers reach through a first-party API and several cloud platforms, so each reader learns what is true on their route."
+    status: complete
+
   - id: playbooks
     name: Playbooks and decision guides
     category: ia
@@ -1377,6 +1388,7 @@ paths:
       - style-guide
       - security-documentation
       - single-sourcing
+      - multi-platform-parity
       - content-lifecycle
       - content-retirement
       - content-migration

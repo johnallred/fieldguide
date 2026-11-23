@@ -17,6 +17,8 @@ tags: [qa, core]
 
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 
+**Leads to:** [Multi-platform parity](multi-platform-parity.md)
+
 ## What it is
 
 Extracting the code blocks out of your documentation and running them, so that

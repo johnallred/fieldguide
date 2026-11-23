@@ -15,6 +15,8 @@ tags: [ia, supporting]
 
 **Prerequisites:** [Content models](content-model.md)
 
+**Leads to:** [Multi-platform parity](multi-platform-parity.md)
+
 ## What it is
 
 Writing a fact in one place and referencing it everywhere else, rather than
