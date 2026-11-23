@@ -1131,6 +1131,17 @@ concepts:
       - "Making documentation part of what \"ready to release\" means, enforced rather than remembered."
     status: complete
 
+  - id: release-notes
+    name: Release notes and changelogs
+    category: craft
+    tier: supporting
+    difficulty: 2
+    time: 3h
+    prerequisites: [technical-writing, release-readiness]
+    in_practice:
+      - "Writing what changed in each release for the people who have to act on it, and making sure the version number tells them how much."
+    status: complete
+
   - id: user-stories
     name: User stories as a documentation standard
     category: craft
@@ -1385,6 +1396,7 @@ paths:
       - templates-scaffolding
       - guided-workflows
       - release-readiness
+      - release-notes
 
   - id: knowledgeops
     name: The KnowledgeOps path

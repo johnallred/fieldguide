@@ -14,7 +14,7 @@ tags: [craft, core]
 > Writing developer documentation a reader can act on without asking you a question.
 
 
-**Leads to:** [Giving architecture owners implementation feedback](implementation-feedback.md)
+**Leads to:** [Giving architecture owners implementation feedback](implementation-feedback.md), [Release notes and changelogs](release-notes.md)
 
 ## What it is
 

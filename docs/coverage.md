@@ -10,13 +10,13 @@ generated: true
 
 # Coverage
 
-**111 of 111 concepts written.** 0 drafted, 0 planned.
+**112 of 112 concepts written.** 0 drafted, 0 planned.
 
 Each row names the concept and the day-to-day work that needs it.
 
 ## Where this list comes from
 
-- **111 of 111** concepts name the work that needs them.
+- **112 of 112** concepts name the work that needs them.
 
 That line is printed next to each concept, so a reader can judge whether it
 earns their time rather than taking the list on trust.
@@ -178,6 +178,7 @@ earns their time rather than taking the list on trust.
 | [Technical writing as a craft](concepts/technical-writing.md) | core | practise it | 8h | :material-check: complete | Writing developer documentation a reader can act on without asking you a question. |
 | [Treating docs, setup and samples as one product](concepts/docs-as-product.md) | core | practise it | 3h | :material-check: complete | Treating setup, runnable samples and documentation as one product the developer experiences. |
 | [Prioritizing documentation work](concepts/docs-prioritization.md) | supporting | practise it | 3h | :material-check: complete | Using data to decide what to build, fix or retire next. |
+| [Release notes and changelogs](concepts/release-notes.md) | supporting | practise it | 3h | :material-check: complete | Writing what changed in each release for the people who have to act on it, and making sure the version number tells t... |
 | [User stories as a documentation standard](concepts/user-stories.md) | supporting | read it | 2h | :material-check: complete | Turning user stories into a documentation standard that templates can enforce. |
 | [Working with engineers as sources](concepts/working-with-engineers.md) | supporting | practise it | 3h | :material-check: complete | Working with engineering, product, security and partner teams so every release ships documented. |
 | [Documentation for partners and internal teams](concepts/partner-documentation.md) | context | practise it | 3h | :material-check: complete | Delivering knowledge to developers, partners, internal teams and the AI agents between them. |

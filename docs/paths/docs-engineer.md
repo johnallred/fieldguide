@@ -14,10 +14,10 @@ generated: true
 
 Every automated gate that stops documentation rotting, in the order worth adding them.
 
-**19 concepts, roughly 73 hours.** The order matters:
+**20 concepts, roughly 76 hours.** The order matters:
 each step assumes the ones above it.
 
-**Assumed before step 1.** This path does not teach [Style guides and terminology management](../concepts/style-guide.md), [Diátaxis](../concepts/diataxis.md), [Reproducible environments](../concepts/reproducible-environments.md), [Content lifecycle and governance](../concepts/content-lifecycle.md), [Content models](../concepts/content-model.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Style guides and terminology management](../concepts/style-guide.md), [Diátaxis](../concepts/diataxis.md), [Reproducible environments](../concepts/reproducible-environments.md), [Content lifecycle and governance](../concepts/content-lifecycle.md), [Content models](../concepts/content-model.md), [Technical writing as a craft](../concepts/technical-writing.md). Each step below repeats what it assumes.
 
 ## 1. [Docs-as-code](../concepts/docs-as-code.md)
 
@@ -172,3 +172,13 @@ Builds on, earlier in this path: Templates and scaffolding.
 Making documentation part of what "ready to release" means, enforced rather than remembered.
 
 Builds on, earlier in this path: Documentation CI.
+
+## 20. [Release notes and changelogs](../concepts/release-notes.md)
+
+`supporting` · practise it · 3h
+
+Writing what changed in each release for the people who have to act on it, and making sure the version number tells them how much.
+
+Builds on, earlier in this path: Release readiness for documentation.
+
+Assumes, from outside this path: [Technical writing as a craft](../concepts/technical-writing.md).

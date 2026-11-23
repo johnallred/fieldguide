@@ -85,6 +85,11 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "which layer caught each failure, and which layers alone would miss it",
         ),
     ),
+    "release_notes.py": (
+        "docs/concepts/release-notes.md",
+        "<<'DATA'\n",
+        ("COMMITS", "NOTES", "NOTES_FIXED"),
+    ),
     "diagram_drift.py": (
         "docs/concepts/diagrams-as-code.md",
         "<<'DATA'\n",
@@ -172,6 +177,18 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "docs/b.md: ...'e\\nPoint the Widget CLI at your'...",
         ),
     ),
+    "release_notes.py": (
+        "docs/concepts/release-notes.md",
+        0,
+        (
+            "VERSION  2.5.3 -> 2.6.0 is a minor bump; the commits need major",
+            "BREAKING #412 says what changed but not how to upgrade",
+            "MISSING  #418 (fix: include the HTTP status in RetryExhausted) is not in the notes",
+            "INTERNAL #421 (refactor) is in the notes",
+            "6 finding(s)",
+            "0 finding(s)",
+        ),
+    ),
     "diagram_drift.py": (
         "docs/concepts/diagrams-as-code.md",
         0,
@@ -235,7 +252,7 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         (
             "two hours against the 34-hour first-week path: 6%",
             "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
-            "concepts in this corpus of 3h or less: 49/111",
+            "concepts in this corpus of 3h or less: 50/112",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",
         ),

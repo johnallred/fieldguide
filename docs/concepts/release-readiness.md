@@ -16,6 +16,8 @@ tags: [craft, core]
 
 **Prerequisites:** [Documentation CI](documentation-ci.md)
 
+**Leads to:** [Release notes and changelogs](release-notes.md)
+
 ## What it is
 
 Making documentation part of the definition of done for a release, enforced by

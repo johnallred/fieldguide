@@ -300,7 +300,7 @@ plus the audit and the fixtures that make the audit trustworthy.
 **How to tell it is working.** `fieldguide audit` prints
 the four commitments on demand, which is the whole of the claim: a
 seven-section page contract enforced in CI, a prerequisite graph with no
-cycles, 94 of 94 prerequisite lines, and 111 of 111 golden paths stating a
+cycles, 95 of 95 prerequisite lines, and 112 of 112 golden paths stating a
 duration and naming a result. Every figure in this page's golden path comes
 from that command rather than from a transcript, and its test fixtures pin the
 three measurement bugs described above so they cannot come back.

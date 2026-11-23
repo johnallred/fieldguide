@@ -14,7 +14,7 @@ This guide is prose about how to do the work, and prose is cheap. This page
 records which concepts are also *implemented* somewhere you can open, down to
 the file that does the work.
 
-**82 of 111 concepts have a demonstration**, 37 of them in full.
+**83 of 112 concepts have a demonstration**, 37 of them in full.
 The rest of this page is the other side of that number, which is the half worth
 reading.
 
@@ -32,7 +32,7 @@ A Python library and the documentation site that documents it, where the site is
 
 The repository you are reading. It earns entries here only where it does the work rather than describing it: a two-part fence gate that compares fenced source against the rendered code blocks of the built HTML, and an accessibility property test over generated pages. The fence gate found 127 defects across seven pages that every other check had passed.
 
-[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 40 concepts
+[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 41 concepts
 
 ## What is demonstrated
 
@@ -187,11 +187,12 @@ embeds them.
 
 ### Ways of working
 
-1 of 12.
+2 of 13.
 
 | Concept | Extent | Artifact | What it does |
 |---|---|---|---|
 | [Release readiness for documentation](concepts/release-readiness.md) | :material-circle-half-full: partial | `src/fieldguide/release.py` | The gate exists, blocks, runs in CI and carries --report-only for the run-it-before-you-enforce-it advice. What it cannot demonstrate is the political half: the only author here is also the only reviewer, so no one else ever accepted the constraint, and the page says so rather than implying otherwise. |
+| [Release notes and changelogs](concepts/release-notes.md) | :material-circle-half-full: partial | `drills/release_notes.py` | A draft release section checked against a Conventional Commits log: a breaking change shipped as a minor version, no upgrade instruction, a missing fix, an internal refactor, a non-standard heading and a non-ISO date, all six cleared by a revision. The commits are invented and the commit format is simplified. |
 
 ## What is not demonstrated
 
@@ -208,7 +209,7 @@ Coverage by category, including the categories at zero.
 | Developer education and curriculum | 12/12 | 0 |
 | Automation with Python | 3/3 | 0 |
 | Domain context | 6/6 | 0 |
-| Ways of working | 1/12 | 7 |
+| Ways of working | 2/13 | 7 |
 
 ### Why the gaps are there
 

@@ -39,7 +39,7 @@ From a folder of Markdown to a modeled, governed, machine-readable corpus.
 
 Every automated gate that stops documentation rotting, in the order worth adding them.
 
-19 concepts, roughly 73 hours.
+20 concepts, roughly 76 hours.
 
 ## [The KnowledgeOps path](knowledgeops.md)
 

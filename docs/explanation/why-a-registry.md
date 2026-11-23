@@ -32,7 +32,7 @@ the index, and after that the index is decoration.
 
 ## What the registry does instead
 
-`concepts.yaml` holds the curriculum as structured data: 111 concepts
+`concepts.yaml` holds the curriculum as structured data: 112 concepts
 with a category, a tier, a difficulty, a time estimate, prerequisites, a line naming the work that needs the concept, and a
 status.
 
@@ -96,7 +96,7 @@ to become a directory, and the generator would need to grow a notion of
 hierarchy it currently does not have.
 
 **And a validated curriculum is still only one person's curriculum.** Nothing
-here checks whether these are the right 111 concepts. The registry
+here checks whether these are the right 112 concepts. The registry
 makes the list *consistent and honest about its sources*. It cannot make it
 *correct*, and no amount of schema will.
 
