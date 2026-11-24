@@ -13,8 +13,8 @@ tags: [gp, supporting]
 
 > Standing up a real cloud environment for every lab run, checking the lab against it, and proving the teardown left nothing running.
 
-!!! warning "One lab, one account, five runs"
-    The lifecycle on this page was demonstrated by [coldlab](https://github.com/johnallred/coldlab), which runs one lab against one personal AWS account. Its record held five runs when this page was written, the nightly schedule had not yet fired, and the cost of a run has not been measured, so this page gives time and not money. Account vending, a catalog of labs and multiple regions are described here as the production shape and were not built. The drill below runs offline on a dated copy of coldlab's record; it does not touch AWS.
+!!! warning "One lab, one account, a young record"
+    The lifecycle on this page was demonstrated by [coldlab](https://github.com/johnallred/coldlab), which runs one lab against one personal AWS account. Its record is `health/health.jsonl`, which grows with every run, and its summary is generated into `health/HEALTH.md`; every figure below names the run it was read at. The cost of a run has not been measured, so this page gives time and not money. Account vending, a catalog of labs, multiple regions and the rest of what coldlab's README lists under "What it deliberately does not prove" are described here and were not built. The drill runs offline on a dated copy of the record; it does not touch AWS.
 
 **Prerequisites:** [Reproducible environments](reproducible-environments.md), [Cold-start testing](coldstart-testing.md)
 
@@ -149,7 +149,8 @@ It exits 1, because two of the three teardown checks failed.
 
 **Step 4: read the record**
 
-Two of five runs failed, and neither failure was the lab being wrong. The
+In this snapshot, two of five runs failed, and neither failure was the lab
+being wrong. The
 first stopped at deploy, nineteen seconds in, because an organisation policy
 refused a check the deploy tool makes, so every teardown check is green and
 nothing else ran. A run that fails before the lab starts is a fact about the
@@ -165,17 +166,29 @@ pointing at an assumption someone got wrong.
 
 `dlq.receive_count_exact` failed the only time it ran, and the run still
 passed, because it was advisory. That is the mechanism working: the receive
-count was 5 by hand and 4 on every automated run, so an exact value was never
-a real expectation. It was retired in favour of a floor, which gates.
+count was 5 on the hand run and 4 on the automated ones, so an exact value was
+never a real expectation. It was retired in favour of a floor, which gates,
+and the values ever seen, `[5, 4]`, became a drift detector that flags a new
+one without failing the run.
 
 **Step 5: size a catalog**
 
-The median over all runs is 453 seconds, which is the figure coldlab
-publishes; the median over runs that went the whole way is 478. Use the second
-for planning, because failed runs are short. Two hundred labs is 26.6 hours
+In this snapshot the median over all runs is 453 seconds, the figure
+coldlab's generated summary showed after the run of 2026-11-23T23:53Z; the
+median over runs that went the whole way is 478. Use the second for planning,
+because failed runs are short, and recompute both from the record rather than
+copying either. Two hundred labs is 26.6 hours
 run one after another, so the first decision a catalog forces is concurrency,
 not cost: seven at once to fit a four-hour window, and seven at once means
 seven stacks, seven sets of quotas and seven teardowns in flight.
+
+Money is deliberately absent. coldlab's README gives the reasons, and its
+wording is the one to keep: "Free tier covers SQS and Lambda at this volume,
+so the billed figure on a personal account would be near zero and would
+understate a catalog by whatever free tier is worth. And billing data lags
+about a day, so the runs recorded so far are not fully priced yet." And: "A
+dollar figure goes here when it has been measured and recorded, and not
+before."
 
 **Step 6: read the teardown three ways**
 
@@ -225,6 +238,24 @@ anything created outside it.
 | A run that fails before any lab check | The account or its policies, not the lab |
 | An advisory check that disagrees with itself | The expectation was never a single value |
 
+### Claims generated from the record
+
+An observation belongs in the record. Only a value something asserts against
+belongs in a file beside the code. coldlab keeps the receive counts ever seen,
+`[5, 4]`, in `expected.yaml`, because the harness reads that set as its drift
+detector: it is an expectation. Redrive timings are observations, recorded per
+run in `health/health.jsonl`, and `expected.yaml` now points there instead of
+listing them.
+
+It learned that the usual way. A hand-kept list of redrive timings went stale
+within three runs, disagreeing with the record it copied, and the README said
+there was no nightly run for a while after there was one. Neither was a cloud
+failure. Both were a claim maintained by hand next to a system that already
+knew the answer. A lab environment's health claims should be generated from
+its records, because a hand-maintained claim about an automated system rots at
+the speed the system runs. This page follows the same rule: its figures name
+the run they were read at.
+
 ### What a catalog in production adds
 
 | Here | In production |
@@ -242,11 +273,11 @@ working.
 ### Sources
 
 Opened and checked on 2026-11-23, all in the coldlab repository at commit
-99ef593:
+c03a824:
 
-- [`README.md`](https://github.com/johnallred/coldlab/blob/main/README.md): the health block (5 runs, 60%, 453s), the `finally` teardown, the five measured behaviours, and gating and advisory checks.
-- [`HANDOFF.md`](https://github.com/johnallred/coldlab/blob/main/HANDOFF.md): account vending, a second lab, a dashboard, LMS integration and multiple regions were deliberately not built.
-- [`lab/sqs-retry/expected.yaml`](https://github.com/johnallred/coldlab/blob/main/lab/sqs-retry/expected.yaml): the stale tag index, the two required teardown checks, and 8 of 15 resources tagged.
+- [`README.md`](https://github.com/johnallred/coldlab/blob/main/README.md): the `finally` teardown, the five measured behaviours, gating and advisory checks, and the reasons cost is not yet measured ("What does not exist yet"). Its section "What it deliberately does not prove" covers account vending, one lab rather than a catalog, and a single region and account.
+- [`health/HEALTH.md`](https://github.com/johnallred/coldlab/blob/main/health/HEALTH.md): the generated summary (runs, pass rate, median duration, flaky checks), current as of its last run.
+- [`lab/sqs-retry/expected.yaml`](https://github.com/johnallred/coldlab/blob/main/lab/sqs-retry/expected.yaml): the stale tag index, the two required teardown checks and 8 of 15 resources tagged. It keeps `receive_count_observed` as an expectation and leaves redrive observations to the record.
 - [`harness/arns.py`](https://github.com/johnallred/coldlab/blob/main/harness/arns.py) and [`harness/checks.py`](https://github.com/johnallred/coldlab/blob/main/harness/checks.py): resolution of each ARN against its service, and the three teardown checks.
 - [`health/health.jsonl`](https://github.com/johnallred/coldlab/blob/main/health/health.jsonl): the five run records this drill reshapes.
 
@@ -256,11 +287,13 @@ And one outside source, opened the same day:
 
 ## Explaining it to your team
 
-**How to explain it.** Lead with the record, not the harness. "The lab has run
-five times. Three passed. One failure was the account refusing the deploy, and
-one was a bug in how we read an exit code, which is fixed. A full run takes
-about eight minutes. Teardown is checked three ways on every run and has never
-left anything behind."
+**How to explain it.** Lead with the record, not the harness, and say which
+run you read it at. At the snapshot on this page that sounded like: "As of last
+night's run, the lab has run five times and three passed. One failure was the
+account refusing the deploy, and one was a bug in how we read an exit code,
+which is fixed. A full run takes about eight minutes. Teardown is checked three
+ways on every run and has not left anything behind." Next month the numbers
+change and the shape of the sentence does not.
 
 **The follow-up is usually "why not just check the tags?".** Because the tag
 index is eventually consistent and incomplete. It reported a resource that had
@@ -269,8 +302,8 @@ detector that cries wolf gets ignored, and then the real leak is ignored with
 it, so every ARN the index returns is checked against the service that owns it.
 
 **The tradeoff to name.** Real environments cost real money and real time,
-and the record takes weeks to mean anything. Five runs prove the loop closes;
-they say nothing yet about reliability. Do not promise a flake rate, or a cost
+and the record takes weeks to mean anything. A handful of runs proves the
+loop closes; it says nothing yet about reliability. Do not promise a flake rate, or a cost
 per run, until the record holds enough runs to state one.
 
 **One sharper point.** The lab document should be the step list. When the
@@ -297,7 +330,7 @@ that says how often the lab passes and how long it takes.
 
 **How to tell it is working.** The drill above runs in this guide's test suite
 and its output is the output quoted here. The lifecycle itself runs in coldlab
-against a real account, with five recorded runs, one lab and no measured cost,
+against a real account, with one lab, a young record and no measured cost,
 so the [demonstrated](../demonstrated.md) page records the concept as partial.
 In your own work, the sign is that a lab breaks in the record before it breaks
 in front of learners, and that nobody has opened the billing console to find
