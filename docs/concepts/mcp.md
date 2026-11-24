@@ -51,7 +51,8 @@ system can recover from a bad first guess.**
 
 ## The golden path
 
-Build a working MCP server over a documentation tree, dependency-free, and
+Build a working MCP server over a documentation tree, with PyYAML as its only
+dependency, and
 drive it with handwritten JSON-RPC. Forty-five minutes.
 
 **Step 1: a corpus with metadata worth filtering on**
@@ -115,7 +116,7 @@ cat > server.py <<'PY'
 #!/usr/bin/env python3
 """An MCP server exposing a documentation tree to an agent.
 
-Deliberately dependency-free and small enough to read in one sitting. It
+Deliberately small: one dependency, PyYAML, and short enough to read in one sitting. It
 implements the subset of MCP a documentation server actually needs:
 `initialize`, `tools/list` and `tools/call`.
 

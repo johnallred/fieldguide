@@ -96,7 +96,9 @@ The sentence-per-line diff shows exactly the sentence that changed.
 
 Two writers, two branches, editing **different sentences** of the same
 paragraph. One changes "The default is five attempts." and the other changes
-"Set it to one to disable retries entirely."
+"Set it to one to disable retries entirely." Each writer works on a branch made
+from the same commit, with `git switch -c a-wrapped` and `git switch -c
+a-perline` for one side and the equivalent for the other, and commits one edit.
 
 ```bash
 git merge a-wrapped
@@ -114,7 +116,7 @@ git merge a-perline
 
 ```
 Auto-merging perline.md
-  merged cleanly
+Merge made by the 'ort' strategy.
 ```
 
 **Hard-wrapped prose made two writers conflict over edits that did not
@@ -132,7 +134,7 @@ cat > .gitattributes <<'EOF'
 *.md diff=markdown
 EOF
 
-git config diff.markdown.wordRegex '[^[:space:]]'
+git config diff.markdown.wordRegex '[^[:space:]]+'
 git diff --word-diff=color -- perline.md | tail -3
 ```
 

@@ -13,7 +13,7 @@ tags: [qa, supporting]
 
 > Detecting when the words in your docs drift away from the words in the product.
 
-**Prerequisites:** [Taxonomy](taxonomy.md), [Prose linting with Vale](prose-linting.md)
+**Prerequisites:** [Taxonomy and controlled vocabularies](taxonomy.md), [Prose linting with Vale](prose-linting.md)
 
 ## What it is
 

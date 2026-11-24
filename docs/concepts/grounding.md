@@ -51,9 +51,10 @@ against the cited text catches it**, and the check is about forty lines.
 ## The golden path
 
 Build a grounding checker, run it against answers that look right, and watch it
-reject three different kinds of ungrounded claim. Forty minutes, dependency-free.
+reject four different kinds of ungrounded claim. Forty minutes, standard library
+only.
 
-**Step 1: the context, and four answers to judge**
+**Step 1: the context, and seven answers to judge**
 
 ```bash
 mkdir -p ground-drill && cd ground-drill
@@ -86,8 +87,8 @@ EOF
 python3 -c "import json; print(len(json.load(open('answers.json'))), 'answers to judge')"
 ```
 
-Read those five. Four of them look like a correct answer at a glance, and three
-are wrong in ways a reader cannot detect.
+Read those seven. Most of them look like a correct answer at a glance, and
+three are wrong in ways a reader cannot detect.
 
 **Step 2: the checker**
 
@@ -296,7 +297,7 @@ EOF
 cat prompt.txt
 ```
 
-**What you built.** A checker that rejects three kinds of ungrounded answer, and
+**What you built.** A checker that rejects four kinds of ungrounded answer, and
 the prompt that reduces how often they occur.
 
 The division of labor is the lesson. **The prompt makes grounded answers more
@@ -307,7 +308,7 @@ verified, so the prompt is designed around what the validator can check.
 
 ## Reference
 
-### The three failures, and which check catches each
+### The five failures, and which check catches each
 
 | Failure | Looks like | Caught by |
 |---|---|---|
@@ -419,8 +420,8 @@ that looks correct. The fused example is the one to share with your team.
 
 **Three things to do, in order:**
 
-1. **Run the golden path.** Five answers, four of which look right, three
-   rejected for three different reasons. The number check passing "16" and
+1. **Run the golden path.** Seven answers, one passing and six
+   rejected for four different reasons. The number check passing "16" and
    rejecting "24" at 88% overlap is the moment that lands.
 2. **Run it against real output.** Take thirty answers from any
    documentation assistant you can query, and check them. Count the fused

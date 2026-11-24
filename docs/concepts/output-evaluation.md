@@ -13,7 +13,7 @@ tags: [ai, core]
 
 > Measuring whether LLM output in your content workflows is accurate and usable.
 
-**Prerequisites:** [Grounding and citation](grounding.md), [Retrieval evaluation](retrieval-evaluation.md)
+**Prerequisites:** [Grounding and citation](grounding.md), [Evaluating retrieval](retrieval-evaluation.md)
 
 **Leads to:** [Hallucination and guardrails](hallucination-guardrails.md), [Measuring AI answer quality](ai-answer-quality.md)
 
@@ -52,7 +52,7 @@ is why the labeled set exists.
 ## The golden path
 
 Build a labeled set, score two prompt versions against it, and find the
-tradeoff that eyeballing hides. Fifty minutes, dependency-free.
+tradeoff that eyeballing hides. Fifty minutes, with one dependency, PyYAML.
 
 **Step 1: the task and the labels**
 

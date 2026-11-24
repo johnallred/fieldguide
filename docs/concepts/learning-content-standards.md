@@ -235,7 +235,7 @@ all at once. SCORM 1.2 is old and limited, and it is also the format every LMS
 imports without argument. Move content whose data you need outside the LMS,
 and leave the rest until there is a reason.
 
-**The tradeoff to name.** Standards buy portability and cost control. A SCORM
+**The tradeoff to name.** Standards buy portability and cost you control. A SCORM
 package can only report what its data model allows, and an LTI tool keeps the
 detail of what learners did in the tool, not the LMS. Anything richer means
 running an LRS or building the reporting yourself, which is real

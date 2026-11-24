@@ -87,7 +87,7 @@ in the datasheet, and it is true: once a batch is running, each request's share
 of the work really is 0.11 ms.
 
 **The latency a request experiences rises 21x**, from 1.5 ms to 31.7 ms,
-because it spent 30 ms waiting for nineteen strangers to arrive. No request
+because it spent 30 ms waiting for fifteen strangers to arrive. No request
 anywhere in the system ever experienced 0.11 ms.
 
 **Step 3: find the knee**
@@ -120,7 +120,7 @@ arithmetically true, which is what makes it the most effective misleading
 number in this field.
 
 **What you built.** A measured latency-throughput curve on a real runtime, a
-saturation knee past which batching is pure loss, and three defensible ways to
+saturation knee past which batching is pure loss, and two defensible ways to
 state the result instead of one flattering one.
 
 ## Reference
@@ -198,7 +198,7 @@ single-threaded Python, and is absent from every published figure.
 service has a throughput number and a latency number and batching trades one
 for the other. I measured it on ONNX Runtime: going from batch 1 to 16 bought
 14x throughput, 662 to 9,400 requests a second, and cost 21x latency, 1.5 ms to
-31.7, because at 500 arrivals a second a request waits 30 ms for nineteen
+31.7, because at 500 arrivals a second a request waits 30 ms for fifteen
 strangers before any compute happens."
 
 **Then the number that is true and misleading.** Per-request compute falls from

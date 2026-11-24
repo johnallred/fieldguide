@@ -48,7 +48,7 @@ A metadata field is a fact about both.
 
 The second reason this is `core`: information architecture is the concept that
 makes every later concept in this guide tractable. [Chunking](chunking.md) is a
-structural decision. [RAG packaging](rag.md) is a structural decision with
+structural decision. Packaging for [RAG](rag.md) is a structural decision with
 embeddings attached. [llms.txt](llms-txt.md) is a navigation artifact for
 machines. If the corpus has no structure, all of those are operating on mush,
 and no amount of retrieval sophistication recovers from it.

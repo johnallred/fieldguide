@@ -289,4 +289,4 @@ story: it proves the examples are load-bearing rather than decorative.
 - [Code-sample validation](code-sample-validation.md), the same idea for Markdown pages
 - [Building a doc test harness](doc-test-harness.md), when one flag is no longer enough
 - [Generated API reference](api-reference-generation.md), what doctests keep honest
-- [Automating docs with Python](python-for-content.md), the tooling underneath
+- [Python for content automation](python-for-content.md), the tooling underneath

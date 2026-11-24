@@ -78,7 +78,8 @@ find build -name "*.html" | wc -l
 28
 ```
 
-28 pages in about 10 seconds. Per page that is the slowest of the three by a
+28 pages in about 10 seconds, on the machine this first ran on; the measured
+table below is the figure to quote. Per page that is the slowest of the three by a
 wide margin, because it is compiling and pre-rendering a React application
 rather than templating HTML.
 

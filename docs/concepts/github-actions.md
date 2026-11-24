@@ -143,10 +143,11 @@ python3 drift.py
 
 ```
 DRIFT  CI runs but `make check` does not: pip install -e ".[dev,docs]"
-FAIL: 4 CI command(s), 3 local, 1 drifted
+DRIFT  CI runs but `make check` does not: python3 gate_links.py
+FAIL: 4 CI command(s), 2 local, 2 drifted
 ```
 
-A false positive. `pip install` belongs only in CI, and the detector has no way
+One of those is a false positive. `pip install` belongs only in CI, and the detector has no way
 to tell a setup step from a gate. You could teach it a list of exceptions, and
 then the exception list becomes the third definition that drifts.
 
@@ -216,11 +217,11 @@ make -k check
 
 ```
 Aborted with 1 warnings in strict mode!
-make: *** [Makefile:10: gate-build] Error 1
+make: *** [Makefile:6: gate-build] Error 1
 STYLE: 1 hedge(s) ['docs/index.md:3']
-make: *** [Makefile:13: gate-style] Error 1
+make: *** [Makefile:9: gate-style] Error 1
 LINKS: pretend one is dead
-make: *** [Makefile:16: gate-links] Error 1
+make: *** [Makefile:12: gate-links] Error 1
 ```
 
 All three gates reported, overall exit non-zero. One entry point *and*

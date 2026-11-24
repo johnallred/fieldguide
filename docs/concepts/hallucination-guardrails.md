@@ -54,7 +54,7 @@ page's `run.py` in one go. Two tests hold it to the page: the five files must
 still match what is written here, and the results table below must still be
 the matrix the code produces.
 
-**Step 1: five answers, each wrong in a different way**
+**Step 1: eight answers, one of them correct**
 
 ```bash
 mkdir -p guard-drill && cd guard-drill

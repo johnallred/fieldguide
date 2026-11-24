@@ -52,7 +52,7 @@ cheap thing.
 ## The golden path
 
 Build a golden set, score a retriever on it, and use it to make one real
-decision. Fifty minutes, dependency-free.
+decision. Fifty minutes, with one dependency, PyYAML.
 
 **Step 1: write the golden set, with the conventions that keep it alive**
 

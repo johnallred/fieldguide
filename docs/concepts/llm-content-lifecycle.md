@@ -47,7 +47,7 @@ target was recall and the binding constraint was reviewer attention.
 
 Build the three stages, with the human placed deliberately, and discover that
 the constraint is review capacity rather than model quality. Fifty minutes,
-dependency-free.
+with one dependency, PyYAML.
 
 **Step 1: a corpus in the state corpora are actually in**
 
@@ -407,7 +407,7 @@ a diff a reviewer might approve.**
 | Activity | Mechanism | Model? |
 |---|---|---|
 | Freshness check | A date comparison | **No** |
-| Code accuracy | Claims against [generated ground truth](reading-code-to-verify.md) | **No** |
+| Code accuracy | Claims against [generated ground truth](api-reference-generation.md) | **No** |
 | Terminology drift | A substitution list | **No** |
 | Finding hedges and style issues | A [linter](prose-linting.md) | **No** |
 | **Drafting a replacement for a located finding** | Prompt plus validation | **Yes** |
@@ -416,7 +416,7 @@ a diff a reviewer might approve.**
 | Deciding what to retire | Judgment | **Never** |
 | Confirming a page is accurate | Needs the implementation | **Never** |
 
-Three of the four checks involve no model at all. That is the most
+None of the four checks involves a model at all. That is the most
 useful thing on this page: **"automate the content lifecycle with LLMs" is
 mostly automation, with an LLM at two specific points.** A pipeline that uses a
 model for the freshness check is slower, more expensive and less reliable than
@@ -543,7 +543,7 @@ step that batches and rations, and queue-depth numbers over a few weeks.
    precision problem, and that diagnosis is the whole value.
 
 **How to tell it is working.** "We use AI to maintain our docs" is a slogan. The
-working version is a pipeline where three of four checks are deterministic,
+working version is a pipeline where every check is deterministic,
 drafting is bounded to located findings, mechanical findings batch into one
 approval, and queue depth is a tracked metric that stays flat or falls.
 

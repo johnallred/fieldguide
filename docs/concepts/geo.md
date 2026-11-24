@@ -303,20 +303,21 @@ depends on the phrasing**:
 | "what is the default retry count" | `Configure retries > Changes in 2.5` | **No**, says "changed from 3 to 5" |
 
 Neither passage is usable. The first is stale. The second is *correct* and
-phrased as a change rather than a statement, so a reader quoted it gets history
-instead of an answer. **You do not control which phrasing a developer uses**,
+phrased as a change rather than a statement, so a reader who is quoted it gets
+history instead of an answer. **You do not control which phrasing a developer uses**,
 and the page is a coin flip between two bad passages.
 
 `after.md` returns the same correct passage for both phrasings, because the
 value, its qualifier and the subject sit in one chunk.
 
-The checker reports three problems on `before.md` and none on `after.md`:
+The checker reports three problems on `before.md` and none on `after.md`
+(its headers and totals trimmed):
 
 ```
 contradiction: default is given as ['3', '5']
   (Configure retries: 3; Configure retries > Changes in 2.5: 5)
-unqualified-claim: 'Configure retries' states a value with no version
-unqualified-claim: 'Configure retries > Limits' states a value with no version
+unqualified-claim: 'Configure retries' states a value with no version or condition
+unqualified-claim: 'Configure retries > Limits' states a value with no version or condition
 ```
 
 ### The contradiction check almost did not work

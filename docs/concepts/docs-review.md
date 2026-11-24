@@ -13,7 +13,7 @@ tags: [qa, supporting]
 
 > Reviewing documentation pull requests for accuracy, structure and style.
 
-**Prerequisites:** [Git authoring workflows for writers](git-authoring.md), [Style guides](style-guide.md)
+**Prerequisites:** [Git authoring workflows for writers](git-authoring.md), [Style guides and terminology management](style-guide.md)
 
 **Leads to:** [Working with engineers as sources](working-with-engineers.md)
 
@@ -75,18 +75,21 @@ config file exists.
 The first looks like a job for CI. The second looks like a job for a reviewer
 who knows the product.
 
-**Step 2: confirm CI catches the first and not the second**
+**Step 2: see what the build says about each**
 
 ```bash
-mkdocs build --strict 2>&1 | grep -E "INFO.*anchor"
+mkdocs build --strict 2>&1 | grep -E "INFO.*anchor"; echo "exit=${PIPESTATUS[0]}"
 ```
 
 ```
 INFO - Doc file 'setup.md' contains a link 'setup.md#tuning', but there is no
        such anchor on this page.
+exit=0
 ```
 
-A [link checker](link-checking.md) reports the dead anchor precisely. Nothing
+The build notices the dead anchor and passes anyway: MkDocs reports it at
+`INFO`, which `--strict` does not fail on. A [link checker](link-checking.md)
+that resolves anchors is what turns it into a failure. Nothing
 in any linter has an opinion about whether step 1 should precede step 2, and no
 amount of pattern matching will acquire one.
 
@@ -116,7 +119,10 @@ Now run the documented steps in the documented order, as
 [cold-start testing](coldstart-testing.md) would:
 
 ```bash
-widget start; widget init; widget status
+n=0
+for step in "widget start" "widget init" "widget status"; do
+  n=$((n + 1)); $step || echo "  step $n FAILED"
+done
 ```
 
 ```

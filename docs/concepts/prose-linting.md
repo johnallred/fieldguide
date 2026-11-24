@@ -13,7 +13,7 @@ tags: [qa, core]
 
 > Enforcing your style guide automatically with Vale, so reviews argue with a rule rather than a person.
 
-**Prerequisites:** [Style guides](style-guide.md)
+**Prerequisites:** [Style guides and terminology management](style-guide.md)
 
 **Leads to:** [Detecting terminology drift](terminology-drift.md), [Writing custom linters](custom-linters.md)
 

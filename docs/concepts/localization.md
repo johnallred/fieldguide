@@ -13,7 +13,7 @@ tags: [dac, supporting]
 
 > Getting content translated and keeping translations in step with the source as it changes.
 
-**Prerequisites:** [Content models](content-model.md), [Single-sourcing](single-sourcing.md)
+**Prerequisites:** [Content models](content-model.md), [Single-sourcing and content reuse](single-sourcing.md)
 
 ## What it is
 
@@ -69,7 +69,7 @@ The command prints the new token. See [the configuration guide](configure.md).
 EOF
 ````
 
-Four hazards in eleven lines: front matter with translatable values, an inline
+Four hazards in thirteen lines: front matter with translatable values, an inline
 code span that must survive untouched, a link whose text is translatable and
 whose target is not, and an admonition whose marker is syntax and whose body is
 prose.
@@ -77,7 +77,8 @@ prose.
 **Step 2: segment and protect**
 
 ```python
-# extract.py
+# extract.py, excerpt: the protection step. The segmenter that walks page.md
+# and prints the segments below is not shown.
 import itertools
 import re
 
@@ -251,7 +252,7 @@ change.
 |---|---|
 | Docusaurus | Built in: per-locale builds and a translation directory |
 | Sphinx | `gettext` builder, a mature and conventional workflow |
-| MkDocs | Plugin, and the least mature of the three |
+| MkDocs | Plugin, less mature than Sphinx or Docusaurus |
 | Antora | Component-based; a locale is usually a separate component |
 
 If localization is known to be coming, it belongs in the

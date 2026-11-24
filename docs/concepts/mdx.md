@@ -36,7 +36,9 @@ code.
 
 The judgment that matters is understanding the costs. MDX is
 genuinely better for a developer-facing site that needs interactive examples,
-and it moves a class of error from your build into your reader's browser. An
+and with a compiler alone it can move a class of error from your build into
+your reader's browser; whether it does depends on the generator, as step 4
+shows. An
 engineer who has only read about it tends to describe the first half.
 
 ## The golden path
@@ -215,7 +217,7 @@ Either way, content expressed as components is harder to
 | `<!-- comment -->` | Build error; convert to `{/* comment */}` |
 | `<a@b.com>` autolink | Build error; write a normal link |
 | Raw HTML with attributes | Often needs JSX attribute names, `className` not `class` |
-| `{` in prose | Usually fine in MDX 3, historically not |
+| `{` in prose | Parsed as a JavaScript expression since MDX 2; escape it as `\{` |
 | Unclosed HTML tags | Build error; JSX requires closure |
 
 The first two are the ones that will actually bite you, and both are verified

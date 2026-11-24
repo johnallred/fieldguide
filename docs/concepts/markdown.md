@@ -114,8 +114,9 @@ markdown-it commonmark    -         -         -         -         -
 markdown-it gfm-like      yes       -         yes       -         -
 ```
 
-**No two rows are the same.** Five implementations, five answers, one source
-file. CommonMark, the actual standard, supports none of the five features,
+**Four different answers from five implementations of one source file.** The
+two that agree, python-markdown core and markdown-it in CommonMark mode, agree
+by supporting nothing. CommonMark, the actual standard, supports none of the five features,
 because every one of them is an extension. And task lists render nowhere by
 default, including in the GitHub-flavored configuration.
 
@@ -274,8 +275,8 @@ somebody writes outside it.
 
 **Three things to do, in order:**
 
-1. Run the golden path. The five-row table is the thing to internalize: no two
-   implementations agree.
+1. Run the golden path. The five-row table is the thing to internalize: the only
+   implementations that agree are the two that support nothing.
 2. Run your own site's extension list over the sample file and write down the
    answer. Most teams cannot tell you whether their site supports footnotes.
 3. Grep your corpus for `~~` and `- [ ]` outside code fences. If you find any,

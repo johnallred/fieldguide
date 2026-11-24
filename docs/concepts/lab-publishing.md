@@ -327,4 +327,4 @@ answered with a version number and a decision, the same day.
 - [Documentation CI](documentation-ci.md), the same gates for prose
 - [Release readiness](release-readiness.md), content ready on the day a product ships
 - [Versioning](versioning.md), versioning documentation rather than labs
-- [Content retirement](content-retirement.md), what pulling a lab permanently becomes
+- [Retiring content](content-retirement.md), what pulling a lab permanently becomes

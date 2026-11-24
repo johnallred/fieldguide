@@ -254,6 +254,6 @@ theme duplication and that the hard part is deciding what not to version.
 ## Related
 
 - [Choosing a static site generator](static-site-generators.md), which decides the mechanism
-- [Content retirement](content-retirement.md), what to do with versions you stop supporting
+- [Retiring content](content-retirement.md), what to do with versions you stop supporting
 - [Crawlability](crawlability.md), why old versions need canonical tags
 - [Single-sourcing](single-sourcing.md), the alternative to copying a page per version

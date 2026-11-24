@@ -66,8 +66,8 @@ The three elementwise operations all land near 9 to 16 GB/s and achieve about
 one GFLOP/s. The matmul achieves **123 GFLOP/s, over a hundred times more
 compute**, on the same arrays, on the same chip, in the same library.
 
-The reason is the last column. Matmul reuses each byte it loads 341 times;
-`add` uses each byte once and a bit. The elementwise operations are not
+The reason is the last column. Matmul does 341 flops for each byte it
+moves; `add` does one flop for every twelve. The elementwise operations are not
 compute-limited at all, they are waiting for memory, and a processor with more
 arithmetic units would not help them.
 
@@ -199,8 +199,8 @@ part on a CPU, which is where the lesson is visible without a device."
 
 **Then the measurement.** On the same arrays with the same library, elementwise
 operations hit about one GFLOP/s and a matmul hit 123, a hundredfold
-difference, because matmul reuses each loaded byte 341 times and `add` uses it
-once. So the elementwise work is not compute-limited, it is waiting for memory,
+difference, because matmul does 341 flops per byte moved and `add` does one per
+twelve bytes. So the elementwise work is not compute-limited, it is waiting for memory,
 and moving it to a device with more arithmetic units does nearly nothing. "Will
 the GPU help" is a division a reader can do before porting anything, and most
 documentation teaches kernel launches instead.

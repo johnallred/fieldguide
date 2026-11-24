@@ -133,7 +133,7 @@ enough to test the closed vocabulary.
 | Honestly two audiences | 180 |
 | Audience not in the vocabulary (partners) | 40 |
 
-69% of pages cannot satisfy the field as written. Examples:
+85% of pages (220 of 260) cannot satisfy the field as written. Examples:
 - `install/requirements.md` is read by new users and by operators, and the
   page is correct for both.
 - `partners/certification.md` has no available value.
@@ -169,8 +169,8 @@ wc -l report.md
 cat > test.md <<'EOF'
 Can the lead decide from this without talking to me?
 
-[x] Is there a number?                      69% of 260 pages
-[x] Can they see the actual pages?          two examples per case
+[x] Is there a number?                      85% of 260 pages
+[x] Can they see the actual pages?          an example per case
 [x] Is my diagnosis separable from the data? "What I think is happening"
 [x] Are the options costed?                  table, with who pays
 [x] Is my recommendation last and labelled?  "What I would do"
@@ -238,7 +238,7 @@ works, breaks, and scales" is three things.
 
 **How to explain it.** Tell it as a report, with the number
 first. "The content model required one audience per page. Applying it to 260
-pages, 69 percent either had two honest audiences or had none in the
+pages, 85 percent either had two honest audiences or had none in the
 vocabulary. I wrote it up with the counts, example pages, three options with
 their costs, and my recommendation last, and I kept the other corpora moving
 while the lead decided. We ended up splitting the field into a primary and an

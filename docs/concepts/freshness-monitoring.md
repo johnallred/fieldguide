@@ -13,7 +13,7 @@ tags: [qa, core]
 
 > Checking automatically that content is still current, and routing what is not to a human.
 
-**Prerequisites:** [Content lifecycle](content-lifecycle.md), [Documentation CI](documentation-ci.md)
+**Prerequisites:** [Content lifecycle and governance](content-lifecycle.md), [Documentation CI](documentation-ci.md)
 
 ## What it is
 
@@ -79,9 +79,11 @@ GIT_AUTHOR_DATE="2026-09-01T10:00:00" GIT_COMMITTER_DATE="2026-09-01T10:00:00" \
 ````
 
 `docs/retries.md` now says the default is 3 and the software says 5. Add two
-more pages: one documenting something genuinely unchanged, and a bulk commit
-that touches every page's front matter, which is the kind of thing that happens
-when a team adds a metadata field.
+more pages, one of them documenting something genuinely unchanged, then a bulk
+commit that touches the front matter of the other two, which is the kind of
+thing that happens when a team adds a metadata field. Those pages, the commit
+and `freshness.py` are not printed here, so this step is a worked example
+rather than one to paste.
 
 **Step 2: three ways to ask the question**
 
@@ -125,8 +127,8 @@ January. It is old and it is true. Meanwhile `retries.md` is actively lying to
 readers and the clock says it is fine.
 
 **Comparing against the last edit flags nothing at all.** The metadata commit
-on 2026-10-20 touched every page, so every page's edit date is now newer than
-the code change. One bulk commit defeated the entire check. This is not a
+on 2026-10-20 touched both pages about the changed subject, so their edit dates
+are now newer than the code change. One bulk commit defeated the entire check. This is not a
 contrived scenario: adding a front-matter field, running a formatter, or fixing
 a license header across a corpus all do exactly this.
 
@@ -275,6 +277,6 @@ reading.
 ## Related
 
 - [Content lifecycle](content-lifecycle.md), the process this measures
-- [Content retirement](content-retirement.md), what happens to pages that cannot be saved
+- [Retiring content](content-retirement.md), what happens to pages that cannot be saved
 - [Detecting terminology drift](terminology-drift.md), the same auditing shape for vocabulary
 - [LLM content lifecycle](llm-content-lifecycle.md), automating the review the queue asks for

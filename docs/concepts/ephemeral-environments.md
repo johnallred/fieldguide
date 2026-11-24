@@ -253,7 +253,7 @@ in hours, and a teardown verdict that a tag index cannot fool.
 
 Neither of the first two is enough. In coldlab, 8 of the stack's 15 resources
 carry the lab tags, because generated policies and the S3 auto-delete
-provider do not, so the tag check alone misses most of the stack, and the stack check misses
+provider do not, so the tag check alone misses seven of them, and the stack check misses
 anything created outside it.
 
 ### Flake rate as a signal

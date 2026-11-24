@@ -232,10 +232,9 @@ published page. The fix was one more gate, comparing fenced source against the
 `<pre>` content of the built HTML, and it found 127 defects the day it was
 written.
 
-That sentence used to give the gate count and the new gate's ordinal, which is
-a figure with no way to stay right: gates have been added since and the
-arithmetic quietly stopped working. `.github/workflows/docs.yml` is the count,
-and this paragraph is a story about a blind spot. The lesson is not
+This paragraph gives no gate count on purpose. Gates keep being added, so any
+number here would quietly go wrong; `.github/workflows/docs.yml` is the count,
+and this is a story about a blind spot. The lesson is not
 "add more gates". It is that every green pipeline has blind spots, and the
 useful question in a review is which failure mode nothing here would catch.
 

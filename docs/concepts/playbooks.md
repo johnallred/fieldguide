@@ -13,7 +13,7 @@ tags: [ia, core]
 
 > Turning tribal knowledge from engineering, product and operations into playbooks and decision guides.
 
-**Prerequisites:** [Interviewing subject-matter experts](sme-interviews.md)
+**Prerequisites:** [Extracting tribal knowledge](sme-interviews.md)
 
 ## What it is
 
@@ -338,7 +338,7 @@ answerable. Being clear about which half a tool covers is the point.
 
 ## Related
 
-- [Interviewing subject-matter experts](sme-interviews.md), where the branches come from
+- [Extracting tribal knowledge](sme-interviews.md), where the branches come from
 - [Knowledge architecture](knowledge-architecture.md), the graph shapes compared
 - [Agent skills and context kits](agent-skills.md), where a traversable playbook pays off
 - [Golden paths](golden-paths.md), the opposite shape for a different problem

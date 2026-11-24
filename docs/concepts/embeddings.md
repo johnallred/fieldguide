@@ -21,7 +21,8 @@ tags: [ai, core]
 
 A function from text to a fixed-length list of numbers, trained so that text
 with similar meaning produces vectors that are close together. Closeness is
-usually cosine similarity, which is the angle between two vectors.
+usually cosine similarity, which is the cosine of the angle between two
+vectors.
 
 That is the whole idea. Everything interesting is in what "similar meaning"
 turns out to mean in practice, which is not always what you want.
@@ -96,14 +97,15 @@ print(f"cosine(a, [-x for x in a]) = {cosine(a, [-x for x in a]):.6f}   (opposit
 PY
 ```
 
-That is why every vector store normalizes at write time: it turns similarity
+That is why many vector stores normalize at write time, or do it for you when
+you choose cosine: it turns similarity
 into one multiply-add per dimension, with no division and no square roots at
 query time.
 
 **Step 1: install a local embedding model**
 
 ```bash
-mkdir -p embed-drill && cd embed-drill
+# still in embed-drill from step 0
 python3 -m venv .venv && source .venv/bin/activate
 pip install --quiet "sentence-transformers>=3.0"
 python -c "import sentence_transformers; print(sentence_transformers.__version__)"
@@ -148,7 +150,7 @@ python3 embed.py
 
 Normalizing at encode time is worth understanding: once every vector has length
 1, cosine similarity is just the dot product, which is one multiply-add per
-dimension and no division. Every vector store does this.
+dimension and no division. Many vector stores do this for you.
 
 **Step 3: see what similarity actually ranks**
 
@@ -165,7 +167,7 @@ chunks, vectors = data["chunks"], data["vectors"]
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
 QUERIES = [
-    "my p99 latency is too high",          # no shared words with the answer
+    "my p99 latency is too high",          # shares one word with the answer
     "how do I install it",
     "it ran out of memory in production",
     "what does the argument error mean",
@@ -188,8 +190,8 @@ PY
 python3 search.py
 ```
 
-Look at the first query. "my p99 latency is too high" shares **no words** with
-"If latency matters, use a batch size of 1 or 2" except "latency", and it ranks
+Look at the first query. "my p99 latency is too high" shares **one word**,
+"latency", with "If latency matters, use a batch size of 1 or 2", and it ranks
 first on meaning rather than overlap. That is what embeddings buy, and lexical
 search cannot do it.
 
@@ -264,7 +266,7 @@ vocabulary. Step 1 of "Putting it into practice" below is where that matters.
 |---|---|
 | Embedding | The vector produced from a piece of text |
 | Dimensions | Length of the vector. 384 to 3,072 typical |
-| Cosine similarity | Angle between vectors, in [-1, 1]. The usual metric |
+| Cosine similarity | Cosine of the angle between vectors, in [-1, 1]. The usual metric |
 | Dot product | Equals cosine similarity when both vectors are normalized |
 | Normalization | Scaling a vector to length 1, so similarity is one dot product |
 | Bi-encoder | Query and document embedded independently. Fast, indexable |
@@ -330,7 +332,7 @@ chunk identity is a design decision rather than an implementation detail.
 **How to explain it.** Lead with the failure modes, because
 everyone can describe what embeddings do and far fewer can say where they break.
 "They buy you paraphrase matching, so a question about high p99 latency finds a
-chunk that never uses the word 'performance'. What they do not buy is polarity
+chunk that never says 'p99' or 'too high'. What they do not buy is polarity
 or exact identifiers: 'supported in version 2' and 'deprecated in version 2'
 embed close together, and `max_memory_gb` and `max_memory_mb` are nearly
 identical vectors. Since developer questions turn on exactly those things, I
@@ -386,7 +388,8 @@ adopting it.
 
 ### How this would be demonstrated elsewhere
 
-Nothing on this page was run. This environment has no model access and the
+None of the model steps on this page were run; only the arithmetic in step 0
+was. This environment has no model access and the
 package network allows registries only, so no weights can be fetched. What
 follows is what the demonstration needs, what you would run, and what you would
 see, so that the gap is a specification rather than an absence.
@@ -430,9 +433,9 @@ corpus whose distinguishing terms are near-identical, is the judgment the table
 buys you.
 
 **How you would know it had failed rather than surprised you.** Three
-signatures. Unnormalized vectors make every cosine implausibly high, usually
-above 0.9 for everything, so check that the norms are 1.0 before believing any
-score. A model loaded with the wrong pooling returns near-identical vectors for
+signatures. A raw dot product treated as cosine, on vectors that were never
+normalized, gives scores outside [-1, 1] or uniformly high ones, so check that
+the norms are 1.0 before believing any score. A model loaded with the wrong pooling returns near-identical vectors for
 every input, which shows up as a similarity matrix that is uniform rather than
 merely high. And if `hit@1` is at chance level, the chunk order and the vector
 order have come apart, which is an indexing bug rather than a model result.

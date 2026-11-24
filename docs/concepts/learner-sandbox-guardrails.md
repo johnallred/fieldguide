@@ -14,7 +14,7 @@ tags: [qa, supporting]
 > Letting a learner do everything the lab needs in a real cloud account, and nothing that breaks the account, the bill or the lab.
 
 !!! warning "Evaluated offline, against a simplified model"
-    The golden path evaluates requests with a small model of AWS's documented policy evaluation logic: identity policy, permissions boundary and service control policy in one account, with no resource-based policies, session policies or full condition language. It runs no AWS call. The policies and requests are invented. The coldlab material in step 5 is real configuration, read rather than tested against a learner.
+    The golden path evaluates requests with a small model of AWS's documented policy evaluation logic: identity policy, permissions boundary and service control policy in one account, with no resource-based policies, session policies or full condition language. It runs no AWS call. The policies and requests are invented. The coldlab material under "What coldlab shows" is real configuration, read rather than tested against a learner.
 
 **Prerequisites:** [Ephemeral lab environments](ephemeral-environments.md), [Security guidance as encoded standard](security-documentation.md)
 
@@ -155,7 +155,7 @@ It exits 1, because two requests that should be denied were allowed.
 **Step 4: read the layers**
 
 The identity policy stops nothing, by design. The boundary and the SCP each
-stop three of the six, and they overlap on one, so together they stop four. The
+stop three of the six, and they overlap on two, so together they stop four. The
 boundary caps instance types, which the SCP does not know about. The SCP caps
 regions and protects the audit trail for every role in the account, including
 roles that have no boundary.
@@ -227,7 +227,7 @@ role at coldlab-named resources in one region, with no IAM.
 learner must be able to do and ten they must never do. `harness/sandbox.py`
 asks AWS's policy simulator about every line for the deployed role, and adds the
 one finding the simulator cannot see: the lab has learners run `cdk deploy`,
-which reaches the administrator deployer described below. Its CI identity has
+which reaches the administrator deployer described above. Its CI identity has
 the same layers, and they are worth reading too:
 
 - `bootstrap/oidc-role.yaml` scopes the CI role by resource wherever the
