@@ -60,9 +60,8 @@ sentences: 4847   mean 19.6 words
 longest sentence per page: mean 50   max 103 (tutorial-design)
 ```
 
-(Steps 1 and 2 were run when the corpus was 82 pages. They are kept as the
-pair that exposed the bug; every figure from step 3 onward is the finished
-106-page corpus.)
+(Steps 1 to 3b record runs over 82 and then 106 pages, kept because each one
+exposed a defect. Step 4 onward is the corpus as it stands, at 120 pages.)
 
 A 103-word sentence would be remarkable. Look at it:
 
@@ -102,7 +101,7 @@ the bug the solution exists for.
 **Step 3: the summary statistic is fine and it is useless**
 
 The original run, when the corpus held 7,178 sentences rather than today's
-8,541:
+9,759:
 
 ```
 mean 17.1 words, median 15
@@ -171,8 +170,8 @@ independent. So `fieldguide audit` now reports the longest sentence *inside*
 list items alongside the prose figure:
 
 ```
-    in list items: longest mean 21, max 34
-                   45+ on   0/106 pages
+    in list items: longest mean 21, max 35
+                   45+ on   0/120 pages
 ```
 
 No list item in this corpus hides a long sentence, which is worth knowing
@@ -187,7 +186,7 @@ Sentence length is the cheap half. Count what a page asks the reader to hold
 by way of cross-references:
 
 ```
-distinct concepts linked per page: mean 6.3   max 15 (systems-mindset)   min 4
+distinct concepts linked per page: mean 6.5   max 15 (systems-mindset)   min 4
 ```
 
 Then ask whether those links point at anything the reader has been prepared
@@ -195,36 +194,39 @@ for. For each [learning path](learning-paths.md), classify every link on its
 pages as backward (already read), forward (later in this path), or off-path:
 
 ```
-  first-week           backward   9  forward  14  off-path  52
-  content-architect    backward  15  forward  18  off-path  45
-  docs-engineer        backward  34  forward  35  off-path  39
-  knowledgeops         backward  44  forward  38  off-path  49
-  developer-educator   backward  22  forward  27  off-path  32
-  writer-who-builds    backward   4  forward   8  off-path  60
-  prove-it             backward  22  forward  20  off-path  55
-  prove-the-outcomes   backward  15  forward  15  off-path  32
-  domain-context       backward   9  forward   7  off-path   8
+  first-week              backward   9  forward  14  off-path  57
+  prove-it                backward  22  forward  20  off-path  66
+  content-architect       backward  21  forward  24  off-path  62
+  docs-engineer           backward  37  forward  31  off-path  49
+  reference-and-releases  backward   6  forward   7  off-path  32
+  knowledgeops            backward  51  forward  38  off-path  57
+  answer-engines          backward  13  forward  16  off-path  34
+  developer-educator      backward  28  forward  35  off-path  52
+  lab-engineer            backward  16  forward  13  off-path  32
+  writer-who-builds       backward  16  forward  16  off-path  84
+  prove-the-outcomes      backward  18  forward  15  off-path  37
+  domain-context          backward   9  forward   7  off-path   8
 ```
 
 ```
-backward 174   forward 182   off-path 372
-links pointing at material the reader has not read: 76%
+backward 246   forward 236   off-path 570
+links pointing at material the reader has not read: 77%
 ```
 
-Nine paths, where this measurement first ran over seven. Two paths were added
-after it, and the per-path rows moved as well as the totals, because pages
-gained cross-references. The 76 per cent did not move at all, which is the
-useful thing about a ratio: it is the shape of the corpus rather than its size,
-and it is why that figure is the one quoted elsewhere.
+Twelve paths, where this measurement first ran over seven and then nine. The
+per-path rows moved each time, because paths were added and pages gained
+cross-references, and the ratio moved by one point, from 76 to 77 per cent.
+That is the useful thing about a ratio: it is the shape of the corpus rather
+than its size, and it is why that figure is the one quoted elsewhere.
 
-On `first-week`, a reader meets 75 concept links and **nine** of them point at
-something they have already read. The other 66 are an invitation to leave, each
+On `first-week`, a reader meets 80 concept links and **nine** of them point at
+something they have already read. The other 71 are an invitation to leave, each
 one carrying a small decision: is this a prerequisite I am missing, or an
 aside?
 
 That decision is pure extraneous load, and it is invisible to every readability
 measure. The corpus reads well sentence by sentence and asks its readers to
-make sixty-six unnecessary judgments per path.
+make seventy-one unnecessary judgments on that one path.
 
 **Step 5: what to do about each half**
 
@@ -236,12 +238,12 @@ cross-reference is a worse guide. It is fixed by making the *kind* of link visib
 made for them. A prerequisites line is a link you must follow. A "related"
 list at the foot is a link you may ignore. An inline link is neither, which is
 why the inline ones generate the load.
-This corpus has the first and the last and uses inline links for both jobs,
+This corpus has the first two and uses inline links for both jobs as well,
 which is the finding.
 
 **What you built.** A load measurement that uses the corpus's own fence parser,
 a per-page maximum that replaced a useless mean, and a cross-reference census
-showing 78 per cent of links point at unread material.
+showing 77 per cent of links point at unread material.
 
 ## Reference
 
@@ -317,16 +319,17 @@ result' is a claim about working memory, not about word count."
 **The follow-up is how you measure it, and this is where to bring the
 numbers.** Mean sentence length on my corpus is 15.6 words, which is healthy
 and useless. A reader never meets an average, so the metric I act on is the
-per-page maximum: 59 of 106 pages carried a sentence over 45 words and six
-carried one over 60. After an editing pass, 27 pages and none. The honest part
+per-page maximum: 59 of 106 pages once carried a sentence over 45 words and six
+carried one over 60. After an editing pass, 27 pages and none, and today 36 of
+120 with none over 55. The honest part
 of that story is that fixing the sentence splitter accounted for as much of the
 improvement as the editing did, because it had never treated a sentence ending
 in bold as a sentence ending.
 
 **The stronger half, if there is time for one more thing.** I classified every
-cross-reference by whether the reader had reached it yet, and 76 per cent of
+cross-reference by whether the reader had reached it yet, and 77 per cent of
 links point at material they have not read. On the first-week path, nine links
-of 75 point backwards. Each of the other 66 is a decision about whether
+of 80 point backwards. Each of the other 71 is a decision about whether
 something is a missing prerequisite or an aside, which is invisible to every
 readability score. The fix is not fewer links, it is making the kind of link
 visible, because a prerequisites line and a "related" footer make the decision

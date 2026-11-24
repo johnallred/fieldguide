@@ -146,14 +146,14 @@ command, or skim in forty seconds, can.
 **Step 6: the measurement that decides this for a corpus**
 
 ```
-pages with code:  106
-fenced blocks:    727
-lines of code and output: 9982
+pages with code:  120
+fenced blocks:    824
+lines of code and output: 11118
 ```
 
-Every one of those 727 blocks is checked: it renders as code, its structure is
+Every one of those 824 blocks is checked: it renders as code, its structure is
 validated, and the samples with assertions are executed. The equivalent video
-corpus would have nine thousand lines of commands with nothing checking any of
+corpus would have eleven thousand lines of commands with nothing checking any of
 them, and no way to fix one without re-recording.
 
 A screencast collection is only maintainable at a size where you are willing
@@ -248,7 +248,7 @@ recording, an upstream output change twelve seconds in, which the check flagged
 by timestamp, so a stale-video audit is a report instead of an afternoon
 rewatching your own back catalogue.
 
-**The scale point.** My corpus has 727 code blocks over 9,982 lines, all
+**The scale point.** My corpus has 824 code blocks over 11,118 lines, all
 checked. A video corpus of that size would have nothing checking any of it and
 no way to fix one line. Screencasts are maintainable only at a size you are
 willing to re-record, that number is small, and deciding it before you start is
@@ -286,7 +286,7 @@ narration, plus a CI job that runs every beat and reports drift by timestamp.
 **How to tell it is working.** The script checker above was
 executed, caught a beat that was never true, passed cleanly after the flag was
 implemented, and caught the upstream output change by timestamp; the corpus
-figures of 727 blocks and 9,982 lines come from this guide's own pages. What
+figures of 824 blocks and 11,118 lines come from this guide's own pages. What
 does not exist is a screencast: no video has been recorded, so the production
 guidance is conventional practice rather than measured, and the
 [demonstrated](../demonstrated.md) page records screencasts as a partial

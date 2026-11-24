@@ -45,7 +45,8 @@ defaults you probably never looked at.
 
 Open your own search index, find out what is missing from it, and fix the
 cause. About thirty-five minutes. The measurement in step 3 was wrong the
-first time, which is part of the lesson.
+first time, which is part of the lesson. The figures are from one run, when
+the site held 121 pages and forty of them were placeholders.
 
 **Step 1: open the index**
 
@@ -111,13 +112,13 @@ summary present in the search index: 1
 absent: 72
 ```
 
-**Seventy-two of 73.** Every page in this guide carries a one-line `summary`
-in its front matter, and on all but one of them that sentence was not
+**Seventy-two of 73.** Every written page in this guide carried a one-line
+`summary` in its front matter, and on all but one of them that sentence was not
 searchable, because front matter is not page content and the search plugin
 never saw it.
 
-The summary is the single most retrieval-useful sentence on a page. It was
-written 121 times and indexed once.
+The summary is the single most retrieval-useful sentence on a page. It had
+been written 73 times and indexed once.
 
 **Step 4: find out who else was not reading it**
 
@@ -192,8 +193,8 @@ zero, and a gate that fails if the wiring is removed.
 | Are generated pages in it? | They may dominate results while saying nothing |
 
 The last row is worth checking on any corpus with stubs or auto-generated
-indexes. Forty placeholder pages in a 121-page index is a third of the results
-competing with real content.
+indexes. When this guide still had forty placeholder pages, they were a third
+of a 121-page index, competing with real content.
 
 ### The three findability mechanisms
 

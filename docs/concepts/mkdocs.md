@@ -125,7 +125,7 @@ So an MkDocs project needs three gates that are not optional:
 
 **Step 4: measure what the theme costs**
 
-Same generator, same 121 pages, two configurations:
+Same generator, same pages (121 when this ran), two configurations:
 
 ```
 default theme, no extensions    0.6 s
@@ -223,7 +223,7 @@ gates, and then the easy adoption is a free win."
 
 **The follow-up is often about scale.** Be specific: there is no incremental
 build, and the theme dominates build time. Twenty-seven times on the same 121
-pages in my own measurement, bare theme against Material plus a dozen
+pages when I measured it, bare theme against Material plus a dozen
 extensions. That is the number that decides whether contributors build locally.
 
 **The tradeoff to name.** Material's extensions are excellent and they

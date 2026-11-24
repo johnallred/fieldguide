@@ -76,6 +76,10 @@ for p in sorted(Path("docs").rglob("*.md")):
             values[k][str(v)] += 1
 ```
 
+When this ran, the tree held 121 pages, 53 of them generated placeholders for
+concepts not yet written. The figures are that run's, kept because the defect
+it found is the lesson; step 4 fixed it.
+
 ```
 121 pages
 

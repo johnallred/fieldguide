@@ -45,7 +45,8 @@ is not, and a wrong parse produces a plausible number rather than an error.
 ## The golden path
 
 One task, five implementations, each correcting the last. Count the words a
-reader would actually read across all 106 pages. About twenty-five minutes,
+reader would actually read across every page (106 when this ran). About
+twenty-five minutes,
 and the interesting part is which corrections turn out to matter.
 
 **Step 1: the obvious one**
@@ -162,8 +163,8 @@ freshly scaffolded pages (9):
   of those, inside comments:    2601   (82%)
 ```
 
-The first block is current and moves whenever a page is edited. The second
-cannot be re-run: all 106 pages are written now, so that sample no longer
+The first block is the corpus at 106 pages and moves whenever a page is
+edited. The second cannot be re-run: every page is written now, so that sample no longer
 exists, and it is kept because it is the whole point of the step.
 
 **The same term in the same measurement: 0.03 per cent on one sample and 82 per
@@ -313,7 +314,7 @@ and 153 tests operating on a documentation tree as data, and this guide's own
 `src/fieldguide/fences.py` exists because three successive naive versions
 returned plausible wrong answers; every figure above is reproducible from the
 two repositories. What is not demonstrated is scale: the largest corpus here is
-106 pages, and nothing on this page has been tested against the tens of
+120 pages, and nothing on this page has been tested against the tens of
 thousands where streaming, incremental parsing and caching would start to
 matter.
 

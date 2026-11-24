@@ -112,9 +112,9 @@ labels in use after the pass: {'Prerequisites:': 74}
 prereq coverage: 73/73
 ```
 
-On the finished corpus: 90 occurrences, 89 of 89 concepts that have
-prerequisites. One page states the label twice, which is a cosmetic
-inconsistency the check does not care about and a reader would not notice.
+On the corpus as it stands: 106 occurrences, 103 of 103 concepts that have
+prerequisites. The other three are the label quoted in prose or code, on this
+page and on the templates page, which the check rightly ignores.
 
 **What this fix got wrong**, which took a while to see. It standardised the
 label that had surfaced and asserted that one label in a test, and that is

@@ -49,7 +49,7 @@ produces nobody who can do the task.
 ## The golden path
 
 Assess a corpus's own assessment. This guide ends every page with three things
-to do, so there are 318 of them to examine. About thirty minutes, and the
+to do, so there are 360 of them to examine. About thirty minutes, and the
 measurement is wrong twice before it is right.
 
 **Step 1: find the instrument**
@@ -68,7 +68,8 @@ Forty-seven, when the page contract makes that section mandatory and a separate
 check had already reported 82 of 82. One of the two is wrong.
 
 (Steps 1 to 3 were run when the corpus was 82 pages, and are kept because they
-are what exposed the defect. Step 4 onward is the finished 106-page corpus.)
+are what exposed the defect. Step 4 records the 106-page corpus where the
+classifier was corrected, then the corpus as it stands, at 120 pages.)
 
 **Step 2: it is two labels again**
 
@@ -193,6 +194,18 @@ pass moved the measured rate from 33 to 40; the correction moved it from 17 to
 33. **The instrument was worth more than the work**, which is not the lesson
 anybody sets out to demonstrate on a page about assessment.
 
+On the corpus as it stands, the same classifier reports:
+
+```
+tasks: 360 across 120 pages, exactly 3 each
+tasks beginning with an imperative:            340/360 (94%)
+tasks naming an inspectable artifact:          228/360 (63%)
+tasks stating how the learner knows it worked: 141/360 (39%)
+```
+
+The rate held as fourteen pages were added, which is the evidence that the
+clause became a habit rather than a one-off pass.
+
 Two of the clauses written during that pass were invisible to the classifier
 the moment they were written: "you will know the gate is wired when..." and
 "more than roughly one suppression per ten pages means...". Both are criteria,
@@ -222,7 +235,7 @@ Here there is a number, the reader produces it before being told it, and a
 wrong answer is visible to the reader themselves. That is the entire
 difference, and it costs one clause.
 
-**Step 5: what a seventeen per cent calls for**
+**Step 5: what a thirty-nine per cent calls for**
 
 Not quizzes. A quiz over this corpus would test recall of its wording, which is
 the thing nobody needs.
@@ -238,7 +251,7 @@ substitutes. That limit belongs in the claim: this guide can say its tasks are
 well formed and cannot say they teach, and the distance between those two
 sentences is the distance between construct and criterion validity.
 
-**What you built.** An assessment of 318 practice tasks, a second instance of
+**What you built.** An assessment of 360 practice tasks, a second instance of
 the two-label defect, a classifier corrected twice, and one number worth acting
 on.
 
@@ -252,7 +265,7 @@ on.
 | Says what counts as done | No | Yes |
 | Who judges | Nobody | The criterion, or a reader |
 | Tells the writer anything | No | Yes |
-| In this corpus | 318 | 128 |
+| In this corpus | 360 | 141 |
 
 The bottom row is this page in one line. The gap is cheap to close on the tasks
 that matter and not worth closing on all of them.
@@ -289,7 +302,7 @@ that sound instructive and have no determinate result.
 
 | Question | Name | This guide's evidence |
 |---|---|---|
-| Is the instrument well formed? | Construct | 318 tasks, 95% imperative, 64% producing an artifact |
+| Is the instrument well formed? | Construct | 360 tasks, 94% imperative, 63% producing an artifact |
 | Does it predict real ability? | Criterion | None |
 
 Reporting the first while implying the second is the usual overreach in
@@ -312,9 +325,9 @@ first and treats page views and the absence of complaints as the second, which
 is the weakest evidence available and the most commonly cited."
 
 **The follow-up is what you measured.** My corpus ends every page with three
-things to do, 318 tasks in all, and 95 per cent begin with an imperative while
-40 per cent state how the reader would know it worked. More practice than
-assessment, and the forty is after a deliberate pass. The honest part of that
+things to do, 360 tasks in all, and 94 per cent begin with an imperative while
+39 per cent state how the reader would know it worked. More practice than
+assessment, and that figure followed a deliberate pass. The honest part of that
 story is that the first measurement said seventeen and was wrong: the
 classifier matched the word "against" and missed every conditional, so the
 instrument was worth more than the writing it prompted. The fix on the tasks
@@ -356,8 +369,8 @@ state a success criterion, and one task rewritten into predict-then-check.
    and it will contradict at least one thing you believe.
 
 **How to tell it is working.** The measurement above runs
-against this guide's 106 pages as they stood and is reproducible from the repository;
-what it establishes is that 318 tasks are well formed and that 128 of them are
+against this guide's 120 pages and is reproducible from the repository;
+what it establishes is that 360 tasks are well formed and that 141 of them are
 assessable, against a classifier scored on sixty hand-labelled tasks rather
 than trusted. What it cannot establish is that any of them teach
 anybody anything, because no reader has been observed, and the

@@ -260,9 +260,9 @@ they can measure nothing, and they are wrong by a wide margin."
 
 **The follow-up is what corpus-side analytics actually caught.** On a corpus
 with no readers: every page reachable, nine in ten exactly two clicks from the
-front door, nothing missing from the search index, 27 of 106 pages carrying a
-sentence over 45 words, and 56 concepts whose claims have no
-demonstration anywhere. Each of those points at a page, which is the property
+front door, nothing missing from the search index, about three pages in ten
+carrying a sentence over 45 words, and about a quarter of concepts whose
+claims have no demonstration anywhere. Each of those points at a page, which is the property
 reader-side numbers mostly lack.
 
 **The thing to volunteer, and the best point here.** The most important failure

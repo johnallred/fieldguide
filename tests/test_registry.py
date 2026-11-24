@@ -581,9 +581,10 @@ def test_pages_that_state_the_corpus_size_state_it_correctly():
         # stood, so the figure is a record of that run rather than a claim
         # about the corpus now.
         ("concepts/assessment.md", 106): "the 106-page corpus its measurements ran over",
-        ("concepts/cognitive-load.md", 106): "the 106-page corpus its measurements ran over",
         ("concepts/python-for-content.md", 106): "the 106-page corpus its measurements ran over",
     }
+    # `("concepts/cognitive-load.md", 106)` went the same way when that page's
+    # census was re-run over 120 pages and its prose stopped stating 106.
     # `("concepts/docs-analytics.md", 121)` was here and is gone. It was added
     # while the pattern still had the "all N pages" arm, which matched that
     # page's "the tree held 121 pages"; when that arm was removed for flagging
