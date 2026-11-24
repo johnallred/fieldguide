@@ -42,6 +42,16 @@ STATUSES = ("planned", "drafted", "complete")
 #: Difficulty is an ordinal, not a number to average.
 DIFFICULTIES = (1, 2, 3)
 
+#: The kinds of learning path, in the order the index presents them. A path
+#: names its group; paths are listed in concepts.yaml in this group order, and
+#: the index prints one heading per group, so the order explains itself.
+PATH_GROUPS = {
+    "start": "Where to start",
+    "role": "Paths by role",
+    "later": "Once the work is real",
+    "context": "Background, at any time",
+}
+
 #: Closed vocabulary for a page's `diataxis` front-matter field, plus one value
 #: the framework does not have.
 #:
@@ -236,6 +246,7 @@ class LearningPath:
     audience: str
     summary: str
     concepts: tuple[str, ...]
+    group: str | None = None
 
 
 @dataclass(frozen=True)
@@ -343,12 +354,18 @@ def _parse_path(raw: Any, index: int) -> LearningPath:
     concepts = _require(raw, "concepts", label)
     if not isinstance(concepts, list) or len(concepts) < 2:
         raise RegistryError(f"{label}: a path needs at least two concepts")
+    group = raw.get("group")
+    if group is not None and group not in PATH_GROUPS:
+        raise RegistryError(
+            f"{label}: group must be one of {list(PATH_GROUPS)}, got {group!r}"
+        )
     return LearningPath(
         id=str(_require(raw, "id", label)),
         name=str(_require(raw, "name", label)),
         audience=str(_require(raw, "audience", label)),
         summary=str(_require(raw, "summary", label)),
         concepts=tuple(str(c) for c in concepts),
+        group=None if group is None else str(group),
     )
 
 

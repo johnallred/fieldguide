@@ -14,7 +14,7 @@ from __future__ import annotations
 import yaml
 
 from .demos import CEILING_REASONS, TRIAGE_REASONS
-from .registry import REQUIRED_SECTIONS, Registry, topological_order
+from .registry import PATH_GROUPS, REQUIRED_SECTIONS, Registry, topological_order
 
 TIER_BLURB = {
     "core": "You cannot do this job without it.",
@@ -218,10 +218,19 @@ def paths_index_page(registry: Registry) -> str:
         "Paths overlap on purpose. A concept that appears in four of them is load-bearing,",
         "and that is worth knowing before you pick where to start.\n",
     ]
+    # One heading per group, in PATH_GROUPS order, so the order of the paths
+    # explains itself. A registry whose paths name no group gets one flat
+    # list, which is what the test fixtures use.
+    grouped = any(p.group for p in registry.paths)
+    level = "###" if grouped else "##"
+    current = None
     for learning_path in registry.paths:
+        if grouped and learning_path.group != current:
+            current = learning_path.group
+            out.append(f"## {PATH_GROUPS.get(current, 'Other paths')}\n")
         hours = _total_hours(registry, learning_path.concepts)
         out += [
-            f"## [{learning_path.name}]({learning_path.id}.md)\n",
+            f"{level} [{learning_path.name}]({learning_path.id}.md)\n",
             f"*{learning_path.audience}*\n",
             f"{learning_path.summary}\n",
             f"{len(learning_path.concepts)} concepts, roughly {hours} hours.\n",

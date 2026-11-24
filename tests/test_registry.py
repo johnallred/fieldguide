@@ -1224,3 +1224,38 @@ def test_every_page_header_links_match_the_registry():
             if got != want:
                 wrong.append(f"{concept.id} {label}: page {got}, registry {want}")
     assert not wrong, "header links disagree with concepts.yaml:\n  " + "\n  ".join(wrong)
+
+
+def test_the_site_menu_lists_the_paths_as_the_registry_does():
+    """The menu in mkdocs.yml is written by hand; the paths are not.
+
+    They drifted: the menu had the last two paths in the opposite order to
+    the generated index, and called one path by a name its own page did not
+    use. Same paths, same order, same names, or this fails.
+    """
+    import yaml
+
+    class Loader(yaml.SafeLoader):
+        pass
+
+    Loader.add_multi_constructor("", lambda loader, suffix, node: None)
+    config = yaml.load((REPO / "mkdocs.yml").read_text(encoding="utf-8"), Loader=Loader)
+    section = next(item["Learning paths"] for item in config["nav"]
+                   if isinstance(item, dict) and "Learning paths" in item)
+    menu = [(name, target) for entry in section if isinstance(entry, dict)
+            for name, target in entry.items()]
+    registry = load_registry(REAL_REGISTRY)
+    expected = [(p.name, f"paths/{p.id}.md") for p in registry.paths]
+    assert menu == expected
+
+
+def test_every_path_has_a_group_and_the_groups_are_in_order():
+    from fieldguide.registry import PATH_GROUPS
+
+    registry = load_registry(REAL_REGISTRY)
+    groups = [p.group for p in registry.paths]
+    assert None not in groups, "a path with no group falls outside the index headings"
+    order = list(PATH_GROUPS)
+    assert groups == sorted(groups, key=order.index), (
+        f"paths must be listed in group order {order}, got {groups}"
+    )

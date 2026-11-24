@@ -1426,6 +1426,7 @@ concepts:
 paths:
 
   - id: first-week
+    group: start
     name: The first week
     audience: Someone who has just started in this kind of work and needs to be useful by Friday.
     summary: The shortest route to shipping a documentation change with confidence.
@@ -1441,7 +1442,30 @@ paths:
       - link-checking
       - documentation-ci
 
+  - id: prove-it
+    group: start
+    name: A working result in a weekend
+    audience: Someone who needs to ship something their team can review by Monday.
+    summary: The shortest path through the concepts that produce something reviewable.
+    concepts:
+      - docs-as-code
+      - diataxis
+      - content-model
+      - mkdocs
+      - documentation-ci
+      - link-checking
+      - prose-linting
+      - code-sample-validation
+      - doc-test-harness
+      - coldstart-testing
+      - llms-txt
+      - chunking
+      - mcp
+      - retrieval-evaluation
+      - publishing-in-public
+
   - id: content-architect
+    group: role
     name: The content architect
     audience: A writer or engineer who owns structure across a growing corpus.
     summary: From a folder of Markdown to a modelled, governed, machine-readable corpus.
@@ -1463,6 +1487,7 @@ paths:
       - knowledge-architecture
 
   - id: docs-engineer
+    group: role
     name: The documentation engineer
     audience: Someone building the pipeline rather than writing the pages.
     summary: Every automated gate that stops documentation rotting, in the order worth adding them.
@@ -1489,6 +1514,7 @@ paths:
       - release-notes
 
   - id: knowledgeops
+    group: role
     name: The KnowledgeOps path
     audience: Someone responsible for making a knowledge base usable by AI assistants and agents.
     summary: Making a corpus answerable by machines, and knowing whether it worked.
@@ -1512,6 +1538,7 @@ paths:
       - ai-answer-quality
 
   - id: developer-educator
+    group: role
     name: The developer educator
     audience: Someone who owns developer onboarding, tutorials and curriculum.
     summary: Taking a developer from a clean environment to a working result, repeatably.
@@ -1536,6 +1563,7 @@ paths:
       - field-enablement
 
   - id: lab-engineer
+    group: role
     name: The lab engineer
     audience: Someone who builds, tests and publishes hands-on labs that run in real cloud accounts.
     summary: Taking a lab from a working draft to one that is tested nightly, published on evidence, safe for learners and portable.
@@ -1551,6 +1579,7 @@ paths:
       - isolated-region-labs
 
   - id: writer-who-builds
+    group: role
     name: The writer who builds
     audience: >-
       A writer who also builds tooling, and needs the half of the work that is
@@ -1568,28 +1597,8 @@ paths:
       - ai-trust-judgment
       - partner-documentation
 
-  - id: prove-it
-    name: A working result in a weekend
-    audience: Someone who needs to ship something their team can review by Monday.
-    summary: The shortest path through the concepts that produce something reviewable.
-    concepts:
-      - docs-as-code
-      - diataxis
-      - content-model
-      - mkdocs
-      - documentation-ci
-      - link-checking
-      - prose-linting
-      - code-sample-validation
-      - doc-test-harness
-      - coldstart-testing
-      - llms-txt
-      - chunking
-      - mcp
-      - retrieval-evaluation
-      - publishing-in-public
-
   - id: prove-the-outcomes
+    group: later
     name: Prove the outcomes
     audience: Someone whose documentation work is real and who has been asked, probably in a review, to show what it achieved.
     summary: Write the programs that measure a corpus, then measure the four outcomes that matter most.
@@ -1606,6 +1615,7 @@ paths:
       - developer-feedback-loops
 
   - id: domain-context
+    group: context
     name: Enough domain to not be lost
     audience: Someone doing documentation work at a company whose product is graphics, simulation, robotics or AI infrastructure.
     summary: Six technical domains, at the depth where you can follow an engineer and know which questions are not yours to answer.

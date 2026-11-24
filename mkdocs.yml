@@ -65,15 +65,15 @@ nav:
   - Learning paths:
       - paths/index.md
       - The first week: paths/first-week.md
+      - A working result in a weekend: paths/prove-it.md
       - The content architect: paths/content-architect.md
       - The documentation engineer: paths/docs-engineer.md
       - The KnowledgeOps path: paths/knowledgeops.md
       - The developer educator: paths/developer-educator.md
       - The lab engineer: paths/lab-engineer.md
       - The writer who builds: paths/writer-who-builds.md
-      - A working result in a weekend: paths/prove-it.md
-      - The domain context: paths/domain-context.md
       - Prove the outcomes: paths/prove-the-outcomes.md
+      - Enough domain to not be lost: paths/domain-context.md
   - About this guide:
       - explanation/why-a-registry.md
       - explanation/the-page-contract.md

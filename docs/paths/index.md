@@ -17,7 +17,9 @@ is somebody else's opinion about the order.
 Paths overlap on purpose. A concept that appears in four of them is load-bearing,
 and that is worth knowing before you pick where to start.
 
-## [The first week](first-week.md)
+## Where to start
+
+### [The first week](first-week.md)
 
 *Someone who has just started in this kind of work and needs to be useful by Friday.*
 
@@ -25,55 +27,7 @@ The shortest route to shipping a documentation change with confidence.
 
 10 concepts, roughly 34 hours.
 
-## [The content architect](content-architect.md)
-
-*A writer or engineer who owns structure across a growing corpus.*
-
-From a folder of Markdown to a modelled, governed, machine-readable corpus.
-
-15 concepts, roughly 53 hours.
-
-## [The documentation engineer](docs-engineer.md)
-
-*Someone building the pipeline rather than writing the pages.*
-
-Every automated gate that stops documentation rotting, in the order worth adding them.
-
-20 concepts, roughly 76 hours.
-
-## [The KnowledgeOps path](knowledgeops.md)
-
-*Someone responsible for making a knowledge base usable by AI assistants and agents.*
-
-Making a corpus answerable by machines, and knowing whether it worked.
-
-17 concepts, roughly 83 hours.
-
-## [The developer educator](developer-educator.md)
-
-*Someone who owns developer onboarding, tutorials and curriculum.*
-
-Taking a developer from a clean environment to a working result, repeatably.
-
-18 concepts, roughly 73 hours.
-
-## [The lab engineer](lab-engineer.md)
-
-*Someone who builds, tests and publishes hands-on labs that run in real cloud accounts.*
-
-Taking a lab from a working draft to one that is tested nightly, published on evidence, safe for learners and portable.
-
-9 concepts, roughly 43 hours.
-
-## [The writer who builds](writer-who-builds.md)
-
-*A writer who also builds tooling, and needs the half of the work that is judgement and collaboration rather than tooling.*
-
-The craft and the working relationships, which no pipeline substitutes for.
-
-10 concepts, roughly 37 hours.
-
-## [A working result in a weekend](prove-it.md)
+### [A working result in a weekend](prove-it.md)
 
 *Someone who needs to ship something their team can review by Monday.*
 
@@ -81,7 +35,59 @@ The shortest path through the concepts that produce something reviewable.
 
 15 concepts, roughly 59 hours.
 
-## [Prove the outcomes](prove-the-outcomes.md)
+## Paths by role
+
+### [The content architect](content-architect.md)
+
+*A writer or engineer who owns structure across a growing corpus.*
+
+From a folder of Markdown to a modelled, governed, machine-readable corpus.
+
+15 concepts, roughly 53 hours.
+
+### [The documentation engineer](docs-engineer.md)
+
+*Someone building the pipeline rather than writing the pages.*
+
+Every automated gate that stops documentation rotting, in the order worth adding them.
+
+20 concepts, roughly 76 hours.
+
+### [The KnowledgeOps path](knowledgeops.md)
+
+*Someone responsible for making a knowledge base usable by AI assistants and agents.*
+
+Making a corpus answerable by machines, and knowing whether it worked.
+
+17 concepts, roughly 83 hours.
+
+### [The developer educator](developer-educator.md)
+
+*Someone who owns developer onboarding, tutorials and curriculum.*
+
+Taking a developer from a clean environment to a working result, repeatably.
+
+18 concepts, roughly 73 hours.
+
+### [The lab engineer](lab-engineer.md)
+
+*Someone who builds, tests and publishes hands-on labs that run in real cloud accounts.*
+
+Taking a lab from a working draft to one that is tested nightly, published on evidence, safe for learners and portable.
+
+9 concepts, roughly 43 hours.
+
+### [The writer who builds](writer-who-builds.md)
+
+*A writer who also builds tooling, and needs the half of the work that is judgement and collaboration rather than tooling.*
+
+The craft and the working relationships, which no pipeline substitutes for.
+
+10 concepts, roughly 37 hours.
+
+## Once the work is real
+
+### [Prove the outcomes](prove-the-outcomes.md)
 
 *Someone whose documentation work is real and who has been asked, probably in a review, to show what it achieved.*
 
@@ -89,7 +95,9 @@ Write the programs that measure a corpus, then measure the four outcomes that ma
 
 10 concepts, roughly 37 hours.
 
-## [Enough domain to not be lost](domain-context.md)
+## Background, at any time
+
+### [Enough domain to not be lost](domain-context.md)
 
 *Someone doing documentation work at a company whose product is graphics, simulation, robotics or AI infrastructure.*
 
