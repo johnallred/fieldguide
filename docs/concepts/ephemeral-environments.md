@@ -14,7 +14,7 @@ tags: [gp, supporting]
 > Standing up a real cloud environment for every lab run, checking the lab against it, and proving the teardown left nothing running.
 
 !!! warning "One lab, one account, a young record"
-    The lifecycle on this page was demonstrated by [coldlab](https://github.com/johnallred/coldlab), which runs one lab against one personal AWS account. Its record is `health/health.jsonl`, which grows with every run, and its summary is generated into `health/HEALTH.md`; every figure below names the run it was read at. The cost of a run has not been measured, so this page gives time and not money. Account vending, a catalog of labs, multiple regions and the rest of what coldlab's README lists under "What it deliberately does not prove" are described here and were not built. The drill runs offline on a dated copy of the record; it does not touch AWS.
+    The lifecycle on this page was demonstrated by [coldlab](https://github.com/johnallred/coldlab), which runs one lab against one personal AWS account. Its record is `health/health.jsonl`, which grows with every run, and its summary is generated into `health/HEALTH.md`; every figure below names the run it was read at. Cost per run was measured once, on 2026-11-23, from usage times published prices rather than from a bill, and carries the caveats given with it. Account vending, a catalog of labs, multiple regions and the rest of what coldlab's README lists under "What it deliberately does not prove" are described here and were not built. The drill runs offline on a dated copy of the record; it does not touch AWS.
 
 **Prerequisites:** [Reproducible environments](reproducible-environments.md), [Cold-start testing](coldstart-testing.md)
 
@@ -51,7 +51,7 @@ tells you how often it works, how long it takes, and which check is unreliable.
 
 ## The golden path
 
-Read a lab's health record, size what a nightly catalog would cost in time,
+Read a lab's health record, size what a nightly catalog would cost,
 and verify a teardown against the services rather than against a tag index.
 About thirty minutes.
 
@@ -171,7 +171,7 @@ never a real expectation. It was retired in favour of a floor, which gates,
 and the values ever seen, `[5, 4]`, became a drift detector that flags a new
 one without failing the run.
 
-**Step 5: size a catalog**
+**Step 5: size a catalog, in time and then in money**
 
 In this snapshot the median over all runs is 453 seconds, the figure
 coldlab's generated summary showed after the run of 2026-11-23T23:53Z; the
@@ -182,13 +182,38 @@ run one after another, so the first decision a catalog forces is concurrency,
 not cost: seven at once to fit a four-hour window, and seven at once means
 seven stacks, seven sets of quotas and seven teardowns in flight.
 
-Money is deliberately absent. coldlab's README gives the reasons, and its
-wording is the one to keep: "Free tier covers SQS and Lambda at this volume,
-so the billed figure on a personal account would be near zero and would
-understate a catalog by whatever free tier is worth. And billing data lags
-about a day, so the runs recorded so far are not fully priced yet." And: "A
-dollar figure goes here when it has been measured and recorded, and not
-before."
+Then cost, in four parts: what the resources cost, what the CI costs, which
+dominates, and where that says to spend effort. coldlab's README section "What
+a run costs" measured it on 2026-11-23 from four recorded runs.
+
+- **Resources.** Lambda compute and requests plus SQS requests came to about
+  $0.00003 a run.
+- **CI.** The same run took 8.5 minutes of a Linux 2-core GitHub-hosted
+  runner, at $0.006 a minute: $0.051.
+- **Which dominates.** The runner, by about seventeen hundred times. At two
+  hundred labs a night that is roughly $0.18 a month of AWS against $306 a
+  month of CI, and on public repositories the CI line is zero, because standard
+  runners are free there.
+- **Where to spend effort.** Not on the lab's infrastructure, which is close to
+  free, but on duration: the wall clock is the bill, and on a public repository
+  it is the only bill. Measured in runner minutes, two hundred labs is about 28
+  hours a night, a little more than the 26.6 above because the runner also
+  spends time setting up the job.
+
+Why it tracks duration: of the roughly 78 SQS requests a run makes that
+CloudWatch counts, 68 are empty receives, the event source mapping polling an
+empty queue for as long as the stack exists. The lab itself sends two messages.
+Resource cost follows stack lifetime, not lab activity, and so do runner
+minutes.
+
+The caveats travel with the figures. The AWS lines are measured usage
+multiplied by published unit prices, not a bill. The Lambda rates come from
+worked examples on AWS's pricing page, which are stated for N. Virginia rather
+than Ohio, where the lab runs, because the page's rate tables did not render.
+The SQS rate is the one coldlab used, and its published table did not render
+either, so treat that line as approximate. None of this moves the conclusion,
+because the gap is three orders of magnitude. If you quote one thing, quote the
+ratio.
 
 **Step 6: read the teardown three ways**
 
@@ -263,7 +288,20 @@ the run they were read at.
 | One personal account, isolated by stack name and tag | A throwaway account per learner or per run, provisioned through the organisation and closed afterwards |
 | One lab | A catalog, run concurrently in a window |
 | One region | The regions learners use |
-| Time per run | Time and measured cost per run |
+| Cost from usage times published prices | Cost attributed per lab by cost allocation tags, activated in the management account |
+
+### Why the bill could not answer
+
+Two reasons, and the second is the one that carries over. Free tier absorbs a
+run at this volume, so a personal account bills a catalog at nothing. And
+coldlab's account is a linked account in an AWS Organization, where
+`aws ce update-cost-allocation-tags-status` is refused: activating a cost
+allocation tag needs the management account. coldlab tags every resource it
+creates and still gets no cost attribution. The team that runs labs is usually
+not the team that owns the management account, so "tag everything and read
+Cost Explorer" is advice that fails in the common case. Usage from CloudWatch,
+which is attributable by resource name and needs no billing access, multiplied
+by published prices, is what works.
 
 AWS calls its account-provisioning service Account Factory, part of Control
 Tower: it provisions member accounts in an organisation and can close or
@@ -272,18 +310,20 @@ working.
 
 ### Sources
 
-Opened and checked on 2026-11-23, all in the coldlab repository at commit
-c03a824:
+Opened and checked on 2026-11-23, all in the coldlab repository:
 
-- [`README.md`](https://github.com/johnallred/coldlab/blob/main/README.md): the `finally` teardown, the five measured behaviours, gating and advisory checks, and the reasons cost is not yet measured ("What does not exist yet"). Its section "What it deliberately does not prove" covers account vending, one lab rather than a catalog, and a single region and account.
+- [`README.md`](https://github.com/johnallred/coldlab/blob/main/README.md): the `finally` teardown, the five measured behaviours, gating and advisory checks, and "What a run costs": the per-run figures, the method and why the bill could not be used. Its section "What it deliberately does not prove" covers account vending, one lab rather than a catalog, and a single region and account.
 - [`health/HEALTH.md`](https://github.com/johnallred/coldlab/blob/main/health/HEALTH.md): the generated summary (runs, pass rate, median duration, flaky checks), current as of its last run.
 - [`lab/sqs-retry/expected.yaml`](https://github.com/johnallred/coldlab/blob/main/lab/sqs-retry/expected.yaml): the stale tag index, the two required teardown checks and 8 of 15 resources tagged. It keeps `receive_count_observed` as an expectation and leaves redrive observations to the record.
 - [`harness/arns.py`](https://github.com/johnallred/coldlab/blob/main/harness/arns.py) and [`harness/checks.py`](https://github.com/johnallred/coldlab/blob/main/harness/checks.py): resolution of each ARN against its service, and the three teardown checks.
 - [`health/health.jsonl`](https://github.com/johnallred/coldlab/blob/main/health/health.jsonl): the five run records this drill reshapes.
 
-And one outside source, opened the same day:
+And outside sources, opened the same day:
 
 - AWS, [Provision and manage accounts with Account Factory](https://docs.aws.amazon.com/controltower/latest/userguide/account-factory.html), AWS Control Tower User Guide.
+- AWS, [AWS Lambda pricing](https://aws.amazon.com/lambda/pricing/): the $0.0000166667 per GB-second and $0.20 per million requests rates appear in worked examples stated for N. Virginia; the rate table did not render.
+- AWS, [Amazon SQS pricing](https://aws.amazon.com/sqs/pricing/): the request-tier table did not render, so the SQS rate was not checked here.
+- GitHub, [Actions runner pricing](https://docs.github.com/en/billing/reference/actions-runner-pricing): $0.006 a minute for a standard Linux 2-core runner; and [GitHub Actions billing](https://docs.github.com/en/billing/concepts/product-billing/github-actions): standard runners in public repositories are free.
 
 ## Explaining it to your team
 
@@ -301,10 +341,16 @@ already been deleted, and it never sees the untagged half of the stack. A leak
 detector that cries wolf gets ignored, and then the real leak is ignored with
 it, so every ARN the index returns is checked against the service that owns it.
 
-**The tradeoff to name.** Real environments cost real money and real time,
-and the record takes weeks to mean anything. A handful of runs proves the
-loop closes; it says nothing yet about reliability. Do not promise a flake rate, or a cost
-per run, until the record holds enough runs to state one.
+**The tradeoff to name.** Most of a run is `cdk deploy` and `cdk destroy`,
+so the obvious saving is a warm stack, reset between runs. It would cut the
+dominant cost, runner time, and it would delete the check that found the stale
+tag index, because a stack that is never destroyed has no teardown to verify.
+coldlab keeps deploy and destroy per run, deliberately. Present it as a
+decision with a cost on both sides rather than as an optimisation, because
+asking for teardown as an assertion and for a low cost per run is exactly where
+the two pull apart. Separately: a handful of runs proves the loop closes and
+says nothing yet about reliability, so do not promise a flake rate until the
+record holds enough runs to state one.
 
 **One sharper point.** The lab document should be the step list. When the
 harness runs the commands a student is told to type, instead of its own copy
@@ -330,7 +376,7 @@ that says how often the lab passes and how long it takes.
 
 **How to tell it is working.** The drill above runs in this guide's test suite
 and its output is the output quoted here. The lifecycle itself runs in coldlab
-against a real account, with one lab, a young record and no measured cost,
+against a real account, with one lab, a young record and one cost measurement,
 so the [demonstrated](../demonstrated.md) page records the concept as partial.
 In your own work, the sign is that a lab breaks in the record before it breaks
 in front of learners, and that nobody has opened the billing console to find
