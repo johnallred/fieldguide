@@ -115,10 +115,41 @@ ratio measured at one corpus size is not a property of the tools. The old
 figure here was reproducible in direction, overstated in magnitude, and
 describes a regime this guide's own corpus has nearly grown out of.
 
-Docusaurus itself is not in that table. Re-measuring it needs an `npm install`
-of a few hundred megabytes, so the 10 seconds above remains one unverified run
-and is labelled as such rather than quietly standing beside two measured
-numbers.
+Docusaurus is now in a table of its own. `drills/docusaurus_build.py` builds
+the *same* Markdown files under Docusaurus 3.10.2 and MkDocs 1.6.1, so the
+toolchain is the only variable. Cold clears `build`, `.docusaurus` and the
+webpack cache, as a fresh CI container would; warm is a second build with
+those caches in place:
+
+```
+  pages   mkdocs   docusaurus cold   docusaurus warm   cold/mkdocs   warm/mkdocs
+    121     0.48             46.15              7.35           96x         15.4x
+    240     1.10             48.54              9.29           44x          8.4x
+    480     2.81             57.80             14.52           21x          5.2x
+    960     8.75             84.20             26.11           10x          3.0x
+```
+
+121 and 240 are the best of two builds; 480 and 960 are one build each,
+because a 960-page run takes most of three minutes. Read the shape:
+
+- **Docusaurus is mostly a fixed cost.** About 45 seconds of a cold build is
+  starting webpack and bundling the application, whatever the page count, so
+  the cold build barely moves between 121 and 240 pages. The webpack cache
+  takes that to about 6 seconds warm, which is why the warm column is the one
+  an author feels.
+- **MkDocs is not linear.** It goes from 0.48 to 8.75 seconds for eight times
+  the pages. The default theme writes the whole navigation into every page,
+  so the work grows with pages times pages. With `nav:` cut to one entry the
+  same 960 pages build in about 2 seconds. A large MkDocs site that feels slow
+  is often paying for its nav, not its Markdown.
+- **So the gap closes as the corpus grows**, from 15 times at 121 pages to 3
+  times at 960, warm. It did not cross inside the range measured, and this
+  drill does not extrapolate where it would.
+
+The 28-page `npm run build` above, at about 10 seconds, was a first build on
+a different machine and was never committed. It does not fit a 45-second cold
+floor measured here, so it stays as that machine's one run and the table is
+the figure to quote.
 
 **Step 3: a broken link**
 
@@ -269,8 +300,8 @@ reason you chose it.
 repositories uses Docusaurus, which the [demonstrated](../demonstrated.md) page
 records. What travels is the measured comparison: fails on a broken link by
 default where MkDocs needs `--strict`, catches a missing component where the
-compiler alone cannot, and costs 771 packages and the slowest per-page build to
-do it.
+compiler alone cannot, and costs 771 packages and a fixed build cost of about
+45 seconds cold and 6 warm to do it.
 
 ## Related
 

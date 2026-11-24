@@ -610,12 +610,14 @@ def test_every_committed_drill_is_covered():
     committed = {
         path.name for path in DRILLS.glob("*.py") if not path.name.startswith("_")
     }
-    # These eight report timings rather than constants, so their pages state
+    # These nine report timings rather than constants, so their pages state
     # the figures as one run on one machine and the shape as the claim. They
     # cannot join the page-figure contract: asserting a figure that moves by
     # 30% between runs would make the suite flaky and teach nothing. Three of
-    # them are covered by `test_a_drill_runs_at_all` below; the other five
+    # them are covered by `test_a_drill_runs_at_all` below; the other six
     # need a dependency this guide does not have, and say so on their pages.
+    # `docusaurus_build.py` needs an npm install of Docusaurus; the test
+    # after this one checks that it says so rather than failing obscurely.
     # `sphinx_autodoc.py` reports no timings but belongs with them: its
     # dependencies are not installed by default, so the suite cannot run it.
     timing_dependent = {
@@ -623,6 +625,7 @@ def test_every_committed_drill_is_covered():
         "deadline_sweep.py",
         "frames.py",
         "generator_build.py",
+        "docusaurus_build.py",
         "inference_sweep.py",
         "sphinx_autodoc.py",
         "onnx_compat.py",
@@ -630,6 +633,31 @@ def test_every_committed_drill_is_covered():
     }
     uncovered = committed - set(EXPECTED) - timing_dependent
     assert not uncovered, f"committed drills with no assertion: {sorted(uncovered)}"
+
+
+def test_the_docusaurus_drill_names_its_install(tmp_path):
+    """Without Docusaurus it must say what to install, and both corpora match."""
+    import importlib.util
+    import os
+    import subprocess
+    import sys
+
+    env = {k: v for k, v in os.environ.items() if k != "DOCUSAURUS_HOME"}
+    result = subprocess.run(
+        [sys.executable, str(DRILLS / "docusaurus_build.py"), "121"],
+        capture_output=True, text=True, env=env, timeout=60,
+    )
+    assert result.returncode != 0
+    assert "DOCUSAURUS_HOME" in result.stderr + result.stdout
+
+    spec = importlib.util.spec_from_file_location("docusaurus_build", DRILLS / "docusaurus_build.py")
+    drill = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(drill)
+    (tmp_path / "home" / "node_modules").mkdir(parents=True)
+    mkdocs, docusaurus = drill.write_projects(tmp_path, 7, tmp_path / "home")
+    for page in sorted((mkdocs / "docs").iterdir()):
+        assert page.read_text() == (docusaurus / "docs" / page.name).read_text()
+    assert len(list((docusaurus / "docs").iterdir())) == 8
 
 
 @pytest.mark.parametrize(
@@ -641,8 +669,8 @@ def test_every_committed_drill_is_covered():
 def test_a_drill_runs_at_all(name):
     """For the drills whose numbers are machine-dependent, at least assert they run.
 
-    The five excluded from this list need `usd-core`, `onnx`, `onnxruntime`,
-    `sphinx` or `myst-parser`,
+    The six excluded from this list need `usd-core`, `onnx`, `onnxruntime`,
+    `sphinx`, `myst-parser` or an npm install of Docusaurus,
     which the guide does not depend on; their pages say so and name the install.
     """
     result = run_drill(name)

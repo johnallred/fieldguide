@@ -111,9 +111,9 @@ jobs:
       # these, and the pages that need them say so and name the install.
       - run: python -m pip install sphinx myst-parser onnx onnxruntime usd-core
 
-      # The suite covers fourteen of the nineteen drills. These five were
-      # excluded from `test_a_drill_runs_at_all` because they need the
-      # dependencies installed above, so until now nothing ever executed them.
+      # Five drills need the dependencies installed above, so they are
+      # excluded from `test_a_drill_runs_at_all` and until now nothing ever
+      # executed them.
       # That is how `usd_composition.py` came to be broken: a chained
       # `Usd.Stage.Open()` left no reference to the stage, Python collected it,
       # and the prim expired before it was read. The page had been right the
@@ -121,8 +121,8 @@ jobs:
       #
       # Three of them used to write their fixtures into whatever directory
       # they were run from, which for a reader following the page is the
-      # repository root. They build under `tempfile` now, like the other
-      # sixteen, so the scratch directory below is no longer a workaround: it
+      # repository root. They build under `tempfile` now, like the
+      # rest, so the scratch directory below is no longer a workaround: it
       # is the assertion. Each drill gets an empty directory and has to leave
       # it empty.
       - name: The domain drills run on their real dependencies

@@ -24,6 +24,8 @@ an `Added` heading.
 - An accessibility gate over every page of the built site (`scripts/a11y_check.py`).
 - How this guide ships: the pipeline as a diagram, generated from the workflow
   file by `fieldguide build`.
+- A Docusaurus build drill (`drills/docusaurus_build.py`), measuring
+  Docusaurus 3.10.2 against MkDocs 1.6.1 on the same Markdown, cold and warm.
 
 ### Changed
 
@@ -33,6 +35,9 @@ an `Added` heading.
 - The lab publishing and learner sandbox guardrails pages describe what
   `coldlab` now does: versioned promotion to learners on evidence, and a
   learner role tested against what a learner must and must never be able to do.
+
+- The Docusaurus page replaces its one unverified build time with that
+  measurement, and says why MkDocs slows faster than linearly.
 
 ### Fixed
 

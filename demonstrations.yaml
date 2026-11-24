@@ -491,7 +491,7 @@ demonstrates:
     project: fieldguide
     artifact: drills/generator_build.py
     extent: partial
-    note: "An identical corpus built under bare MkDocs and bare Sphinx at three sizes, cold and warm. It found that the build-time figure quoted on two pages described CI rather than authoring and inverted above about 120 pages, since MkDocs rebuilds everything and Sphinx rebuilds what changed. Docusaurus is not in the comparison; re-measuring it needs an npm install this environment will not do."
+    note: "An identical corpus built under bare MkDocs and bare Sphinx at three sizes, cold and warm. It found that the build-time figure quoted on two pages described CI rather than authoring and inverted above about 120 pages, since MkDocs rebuilds everything and Sphinx rebuilds what changed. drills/docusaurus_build.py adds Docusaurus 3.10.2 on the same Markdown at 121 to 960 pages: a fixed cost of about 45 seconds cold and 6 warm, and MkDocs growing faster than linearly because every page carries the whole nav, so the warm gap closes from 15x to 3x without crossing. Partial because the generators are measured, not adopted."
 
   - concept: playbooks
     project: fieldguide
