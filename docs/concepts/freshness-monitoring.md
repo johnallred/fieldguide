@@ -264,6 +264,14 @@ other 26 still held, and each got a `reviewed:` date rather than a reworded
 note, so the next run measures from the review. A clock would have flagged all
 101 or none.
 
+It has a blind spot worth knowing. It compares a note with the one file the
+note names, and some claims depend on more than that file. A note quoting how
+many of twenty retrieval questions find the right page cites the question set,
+but the answer also moves when the pages being searched change, and the monitor
+did not flag it when a docs edit moved the score from 13 to 14. A reviewer found
+it. Name every input a claim depends on, or expect to find some of these by
+reading.
+
 ## Related
 
 - [Content lifecycle](content-lifecycle.md), the process this measures

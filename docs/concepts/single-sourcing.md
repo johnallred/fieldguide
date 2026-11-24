@@ -264,9 +264,17 @@ enabled, and a duplication measurement that justified choosing it.
 
 **How to tell it is working.** `docpack` single-sources
 page summaries through `hooks/seo.py`, so one front-matter field feeds the
-page, the meta description and the retrieval artifacts, which is recorded as a
-partial demonstration. This guide's own generation is the stronger example:
-four views and 40-odd placeholders from one registry, with
+page, the meta description and the retrieval artifacts. It now has topic-level
+reuse too, and it met the failure mode this page warns about. The allowed
+values of its two closed vocabularies became one snippet included in two
+pages, with the build set to fail on a missing include. The site rendered it,
+but the retrieval artifacts are built from the Markdown, not the site, so every
+chunk and the published sources would have carried the include line instead of
+the text. The packer now expands includes the same way, a missing snippet
+raises, and a test holds the snippet to the vocabularies the code enforces.
+Moving the values into the explanation page also lifted the retrieval
+evaluation's hit@1 from 65% to 70%. This guide's own generation is the
+generation example: four views and 40-odd placeholders from one registry, with
 `fieldguide build --check` failing in CI when committed output is stale.
 
 ## Related

@@ -27,8 +27,9 @@ an `Added` heading.
 
 ### Changed
 
-- Freshness monitoring, API integration, accessibility and diagrams as code are
-  recorded as fully demonstrated.
+- Freshness monitoring, API integration, accessibility, diagrams as code, the
+  style guide and single-sourcing are recorded as fully demonstrated, the last
+  two by `docpack`.
 - The lab publishing and learner sandbox guardrails pages describe what
   `coldlab` now does: versioned promotion to learners on evidence, and a
   learner role tested against what a learner must and must never be able to do.

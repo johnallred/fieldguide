@@ -264,6 +264,16 @@ one of them caught the author's own hedge word in the README. That is the
 story to tell: not that the rules exist, but that one fired on the person who
 wrote it, which is the only proof that a rule is live.
 
+It now has the other half as well. `STYLE.md` is the written guide: a table of
+what Vale enforces, at what level and why, and the editorial rules a reviewer
+reads for, such as one Diataxis type per page and summaries written in a
+stranger's words. A test holds the written guide and the rules together. The
+first time it ran it found a dead rule: a bulk spelling change had rewritten
+both sides of the Diataxis substitution, so it swapped the word for itself and
+had caught nothing for weeks while CI stayed green. A rule that cannot fire
+looks exactly like a rule nothing has broken, which is the case for testing the
+rules themselves.
+
 ## Related
 
 - [Prose linting with Vale](prose-linting.md), the implementation

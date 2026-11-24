@@ -110,6 +110,7 @@ demonstrates:
     artifact: src/docpack/pack.py
     extent: full
     note: Every chunk record carries the page's type, audience, summary, tags and review date, so a retriever can filter before ranking.
+    reviewed: 2026-11-24
 
   - concept: diataxis
     project: docpack
@@ -120,9 +121,9 @@ demonstrates:
 
   - concept: single-sourcing
     project: docpack
-    artifact: hooks/seo.py
-    extent: partial
-    note: One `summary` field feeds the meta description, Open Graph, JSON-LD, llms.txt and the retrieval snippet. Field-level reuse, not topic-level.
+    artifact: snippets/vocabularies.md
+    extent: full
+    note: "Field-level and topic-level reuse: one summary field feeds the meta description, Open Graph, JSON-LD, llms.txt and the retrieval snippet; the allowed diataxis and audience values are one snippet included in two pages, with check_paths making a missing include fail the build; and the packer and the published Markdown sources expand includes the same way, so no retrieval artifact carries the directive instead of the fact. Tests hold the snippet to the code's vocabularies. Moving the values into the explanation page lifted hit@1 from 65% to 70%."
 
   - concept: findability
     project: docpack
@@ -144,6 +145,7 @@ demonstrates:
     artifact: .github/workflows/docs.yml
     extent: full
     note: "Ten gates on every pull request, nine checks plus the cold start, each failing independently so one problem does not mask another."
+    reviewed: 2026-11-24
 
   - concept: markdown
     project: docpack
@@ -185,6 +187,7 @@ demonstrates:
     artifact: .github/workflows/docs.yml
     extent: full
     note: "Four jobs: the checks, a separate cold start so the slow check does not hold up fast feedback, then a build job and a deploy job, split so the deploy does not race its own upload."
+    reviewed: 2026-11-24
 
   - concept: prose-linting
     project: docpack
@@ -249,10 +252,9 @@ demonstrates:
 
   - concept: style-guide
     project: docpack
-    artifact: styles/Showcase/Terms.yml
-    extent: partial
-    note: The style guide exists only as enforced rules. There is no prose document for a human to read.
-    reviewed: 2026-11-24
+    artifact: STYLE.md
+    extent: full
+    note: "Both halves: STYLE.md is the written guide, listing what Vale enforces and the editorial rules no linter can check, and the Vale rules enforce the mechanical half in CI. A test keeps the two in step, and writing it found the terminology rule had swapped Diataxis for itself since a bulk spelling change, so it could never fire; it now flags the accented form. One rule caught the author's own hedge word in the README."
 
   - concept: link-checking
     project: docpack
@@ -331,12 +333,14 @@ demonstrates:
     artifact: src/docpack/pack.py
     extent: full
     note: Three outputs for three consumers, with the argument for why one file serves none of them.
+    reviewed: 2026-11-24
 
   - concept: llms-txt
     project: docpack
     artifact: src/docpack/pack.py
     extent: full
     note: "`to_llms_txt` and `to_llms_full_txt`, generated from front matter and grouped by Diátaxis type, so the index cannot go stale."
+    reviewed: 2026-11-24
 
   - concept: chunking
     project: docpack
@@ -349,6 +353,7 @@ demonstrates:
     artifact: src/docpack/pack.py
     extent: partial
     note: Emits chunks with stable ids and filterable metadata. No embedding, no vector store, no retrieval loop; the README argues that is the replaceable part.
+    reviewed: 2026-11-24
 
   - concept: retrieval-evaluation
     project: docpack
@@ -392,19 +397,20 @@ demonstrates:
     project: docpack
     artifact: src/docpack/
     extent: full
-    note: Seven modules, 134 tests, operating on a documentation tree as data.
+    note: Seven modules and 153 tests at the time of writing, operating on a documentation tree as data.
 
   - concept: content-data-transformation
     project: docpack
     artifact: src/docpack/pack.py
     extent: full
-    note: A Markdown tree to JSONL, llms.txt and llms-full.txt, deterministically, so diffs stay small. Keeps 89, 5 and 99 per cent of source; the seven per cent round-trip gap resolves into relocated headings and blank lines.
+    note: "A Markdown tree to JSONL, llms.txt and llms-full.txt, deterministically, so diffs stay small, with included snippets expanded so no artifact carries an include line. When measured on the twelve-page corpus, it kept 89, 5 and 99 per cent of source; the seven per cent round-trip gap resolved into relocated headings and blank lines."
 
   - concept: learning-paths
     project: fieldguide
     artifact: src/fieldguide/generate.py
     extent: partial
     note: "Ten paths generated from the registry in four groups, ordering and grouping enforced in CI, the site menu tested against them, entry state computed; no reader has walked one."
+    reviewed: 2026-11-24
 
   - concept: developer-advocacy
     project: fieldguide
@@ -448,7 +454,7 @@ demonstrates:
     project: docpack
     artifact: evals/golden.yaml
     extent: partial
-    note: Deflection capability computed as answerable against findable, 20/20 and 13/20. Deflection achieved needs a ticket queue and a baseline, and has neither.
+    note: Deflection capability computed as answerable against findable, 20/20 and 14/20 at the time of writing. Deflection achieved needs a ticket queue and a baseline, and has neither.
 
   - concept: repeat-questions
     project: docpack
