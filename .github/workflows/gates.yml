@@ -169,8 +169,14 @@ jobs:
           python-version: "3.13"
       - run: python -m pip install -e '.[dev,docs]'
       - run: mkdocs build
+      # Named per attempt. Every attempt of a run uploads its own copy, and
+      # deploy-pages refuses to choose between two copies with one name, so a
+      # re-run of a failed deploy would otherwise always fail.
       - uses: actions/upload-pages-artifact@v5
         with:
+          name: github-pages-${{ github.run_attempt }}
           path: site
       - id: deployment
         uses: actions/deploy-pages@v5
+        with:
+          artifact_name: github-pages-${{ github.run_attempt }}
