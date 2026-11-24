@@ -15,11 +15,24 @@ an `Added` heading.
 
 ## [Unreleased]
 
+### Added
+
+- A weekly freshness monitor (`scripts/freshness.py`) comparing each
+  demonstration note with the file it describes, keeping one GitHub issue
+  current, and the GitHub API client it uses (`scripts/github_api.py`).
+- An optional `reviewed:` date on demonstration entries.
+
 ### Changed
 
+- Freshness monitoring and API integration are recorded as fully demonstrated.
 - The lab publishing and learner sandbox guardrails pages describe what
   `coldlab` now does: versioned promotion to learners on evidence, and a
   learner role tested against what a learner must and must never be able to do.
+
+### Fixed
+
+- Seven demonstration notes the monitor found stale on its first run, including
+  two that still described 106 concepts and one that counted seven paths.
 
 ## [0.2.0] - 2026-11-24
 

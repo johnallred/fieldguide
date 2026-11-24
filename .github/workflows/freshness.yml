@@ -1,0 +1,34 @@
+name: Freshness
+
+# Weekly: which demonstration notes describe a file that has changed since the
+# note was written? scripts/freshness.py compares each note's date (git blame,
+# or its `reviewed:` line) with its evidence's last change (git log here, the
+# GitHub API for docpack and coldlab), and keeps one issue labelled
+# `freshness` in step with the answer. Not a gate: nothing about a pull
+# request makes an older note wrong.
+
+on:
+  schedule:
+    # Mondays at 15:23 UTC, early morning in the Pacific time zone.
+    - cron: "23 15 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # The notes' dates come from git blame, which needs the history.
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      # Standard library only, so nothing is installed.
+      - run: python scripts/freshness.py --issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

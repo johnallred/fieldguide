@@ -332,10 +332,19 @@ control fixed so that failure travels on one channel.
 stdio. The two server defects are fixed in that file with the reasoning left
 in comments. `tests/test_mcp_server.py` holds fourteen tests asserting on
 `isError` rather than on message text, including one that a bad filter value
-is distinguishable from an empty result. What is absent is any integration over a network: no
-authentication, no rate limiting, no pagination, no third-party service. The
-operational half of this concept is reasoned about rather than demonstrated, and
-the [demonstrated](../demonstrated.md) page records it as partial on that basis.
+is distinguishable from an empty result. That client involves no network: no
+authentication, no rate limiting, no pagination, no third-party service.
+
+The network half is in this guide. `scripts/github_api.py` is the client the
+[freshness monitor](freshness-monitoring.md) uses against the GitHub REST API
+every week. It sends a bearer token from the environment, and paginates by
+following the `Link` header rather than counting pages. It waits out a rate
+limit when the reset is near and reports it when it is not, obeys
+`Retry-After`, and retries server errors with backoff. It sends ETags back, so
+an unchanged answer costs nothing, and its errors carry GitHub's own message. Its first local run, unauthenticated,
+spent the 60-request hourly allowance and stopped with the reset time rather
+than retrying into it. Nine tests drive every branch through a scripted
+transport.
 
 ## Related
 

@@ -251,6 +251,19 @@ one, because a clock-based check is exactly what this page argues against.
 Naming the weakness of your own implementation is worth more to the people who
 rely on it than a stronger claim nobody can verify.
 
+This guide now runs the strong version on itself. `scripts/freshness.py`
+compares every note in `demonstrations.yaml` with the file it describes: the
+note's date comes from `git blame`, the file's from its own history, read
+through the GitHub API for the two companion repositories. A file that changed
+after its note is a candidate, and a weekly workflow keeps one issue listing
+them. Its first run flagged 33 of 101 notes. Reading them took twenty minutes,
+and seven were wrong: two still described a 106-concept registry that had
+grown to 120, one counted seven learning paths when there were ten, two quoted
+old audit figures, and two in `docpack` miscounted its gates and jobs. The
+other 26 still held, and each got a `reviewed:` date rather than a reworded
+note, so the next run measures from the review. A clock would have flagged all
+101 or none.
+
 ## Related
 
 - [Content lifecycle](content-lifecycle.md), the process this measures

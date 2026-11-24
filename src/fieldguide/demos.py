@@ -16,6 +16,8 @@ the parts of the work that a repository cannot prove.
 
 from __future__ import annotations
 
+import re
+
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -195,6 +197,11 @@ def load_demonstrations(path: Path, registry: Registry) -> Demonstrations:
         if extent not in EXTENTS:
             raise DemonstrationError(
                 f"{label}: extent must be one of {list(EXTENTS)}, got {extent!r}"
+            )
+        reviewed = item.get("reviewed")
+        if reviewed is not None and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(reviewed)):
+            raise DemonstrationError(
+                f"{label}: reviewed must be a date, YYYY-MM-DD, got {reviewed!r}"
             )
         if (concept, project) in seen:
             raise DemonstrationError(f"{label}: {concept!r} is already claimed by {project!r}")

@@ -80,8 +80,9 @@ complete pages: 82
   proof section      82/82   (100%)
 ```
 
-(The audit below ran when the corpus was 82 pages. On the finished 106 the
-same four commitments stand at 89/89, 106/106, 106/106 and 106/106.)
+(The audit below ran when the corpus was 82 pages. At version 0.2.0, with 120
+pages, the same four commitments stand at 103/103, 120/120, 120/120 and
+120/120.)
 
 Two of those four numbers are wrong, and working out which is the real lesson
 of this page.

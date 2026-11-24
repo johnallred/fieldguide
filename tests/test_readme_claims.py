@@ -34,7 +34,7 @@ WORKFLOWS = REPO / ".github" / "workflows"
 
 # Jobs that run after a change has landed. They are not gates, whatever they
 # check, because by the time they run the change is already on main.
-NOT_GATES = {"deploy", "publish", "live"}
+NOT_GATES = {"deploy", "publish", "live", "monitor"}
 
 NUMBER_WORDS = {
     1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",

@@ -116,6 +116,7 @@ demonstrates:
     artifact: docs/
     extent: full
     note: Four directories, one declared type per page, enforced rather than conventional.
+    reviewed: 2026-11-24
 
   - concept: single-sourcing
     project: docpack
@@ -128,6 +129,7 @@ demonstrates:
     artifact: mcp_server/server.py
     extent: partial
     note: "`list_pages` and `search_docs` filterable by type and audience. No faceted human navigation."
+    reviewed: 2026-11-24
 
   # ------------------------------------------------------- docs-as-code toolchain
   - concept: docs-as-code
@@ -135,30 +137,34 @@ demonstrates:
     artifact: .github/workflows/docs.yml
     extent: full
     note: "The whole repository is the demonstration: page source, style rules, content model and pipeline all under review."
+    reviewed: 2026-11-24
 
   - concept: git-authoring
     project: docpack
     artifact: .github/workflows/docs.yml
     extent: full
-    note: Eight gates on every pull request, each failing independently so one problem does not mask another.
+    note: "Ten gates on every pull request, nine checks plus the cold start, each failing independently so one problem does not mask another."
 
   - concept: markdown
     project: docpack
     artifact: docs/
     extent: full
     note: Twelve pages of Markdown with YAML front matter, parsed by the library rather than only rendered.
+    reviewed: 2026-11-24
 
   - concept: static-site-generators
     project: docpack
     artifact: README.md
     extent: partial
     note: Makes and backs the argument that the generator is the most replaceable part; the docs build unchanged against the stock theme.
+    reviewed: 2026-11-24
 
   - concept: mkdocs
     project: docpack
     artifact: mkdocs.yml
     extent: full
     note: Material plus mkdocstrings, built with `--strict` from the first commit.
+    reviewed: 2026-11-24
 
   - concept: api-reference-generation
     project: docpack
@@ -172,12 +178,13 @@ demonstrates:
     artifact: .github/workflows/docs.yml
     extent: full
     note: Content model, links, tests, doc samples, retrieval quality, prose, strict build, and a generated-page wiring check.
+    reviewed: 2026-11-24
 
   - concept: github-actions
     project: docpack
     artifact: .github/workflows/docs.yml
     extent: full
-    note: Three jobs, with the slow cold-start check separated so it does not gate fast feedback.
+    note: "Four jobs: the checks, a separate cold start so the slow check does not hold up fast feedback, then a build job and a deploy job, split so the deploy does not race its own upload."
 
   - concept: prose-linting
     project: docpack
@@ -190,6 +197,7 @@ demonstrates:
     artifact: styles/Showcase/
     extent: full
     note: Four hand-written Vale rules (Hedging, Terms, HeadingCase, FutureTense), one of which caught the author's own hedge word in the README.
+    reviewed: 2026-11-24
 
   - concept: custom-linters
     project: fieldguide
@@ -208,6 +216,7 @@ demonstrates:
     artifact: tests/test_generate.py
     extent: partial
     note: An audit of the built site found all seven path pages skipping h1 to h3; the generator was fixed and a property test now asserts no generated page skips a level. Five checks, not a compliance claim.
+    reviewed: 2026-11-24
 
   - concept: markdown
     project: fieldguide
@@ -225,7 +234,7 @@ demonstrates:
     project: fieldguide
     artifact: concepts.yaml
     extent: full
-    note: "106 concepts and 115 prerequisite edges, acyclic and enforced, with a topological order driving the writing sequence. The audit found four supporting concepts carrying more of the graph than the average core concept, and three core concepts correctly isolated because craft skills are not prerequisites."
+    note: "120 concepts and 138 prerequisite edges as of version 0.2.0, acyclic and enforced, with a topological order driving the writing sequence. The audit found four supporting concepts carrying more of the graph than the average core concept, and three core concepts correctly isolated because craft skills are not prerequisites."
 
   - concept: metadata
     project: fieldguide
@@ -244,6 +253,7 @@ demonstrates:
     artifact: styles/Showcase/Terms.yml
     extent: partial
     note: The style guide exists only as enforced rules. There is no prose document for a human to read.
+    reviewed: 2026-11-24
 
   - concept: link-checking
     project: docpack
@@ -274,12 +284,14 @@ demonstrates:
     artifact: scripts/coldstart.sh
     extent: full
     note: Fresh venv, installs the way a reader would, follows the tutorial literally, and asserts the exact output string the tutorial promises.
+    reviewed: 2026-11-24
 
   - concept: preview-deployments
     project: docpack
     artifact: .github/workflows/docs.yml
     extent: partial
     note: Publishes to GitHub Pages on main, and regenerates the retrieval artifacts alongside the site. No per-pull-request preview.
+    reviewed: 2026-11-24
 
   - concept: freshness-monitoring
     project: docpack
@@ -287,18 +299,26 @@ demonstrates:
     extent: partial
     note: "`PageMeta.is_stale` at 365 days, surfaced as a warning and as an `## Optional` section in llms.txt. A property, not a monitor."
 
+  - concept: freshness-monitoring
+    project: fieldguide
+    artifact: scripts/freshness.py
+    extent: full
+    note: "A weekly monitor that compares each demonstration note with the file it describes: the note's date from git blame or a reviewed line, the file's last change from git here and the GitHub API for docpack and coldlab. It keeps one issue labelled freshness current. Its first run flagged 33 of 101 notes, and seven were really stale: two still said 106 concepts, one said seven paths, two carried old audit figures, and two docpack notes miscounted gates and jobs."
+
   # --------------------------------------------- golden paths and developer onboarding
   - concept: golden-paths
     project: docpack
     artifact: docs/tutorials/getting-started.md
     extent: full
     note: Clean environment to four generated artifacts, with a deliberate failure step, verified by the cold-start harness on every push.
+    reviewed: 2026-11-24
 
   - concept: quickstarts
     project: docpack
     artifact: scripts/coldstart.sh
     extent: full
     note: The quickstart is tested rather than hoped about, including the promise that an invalid content model is rejected.
+    reviewed: 2026-11-24
 
   - concept: templates-scaffolding
     project: docpack
@@ -348,6 +368,7 @@ demonstrates:
     artifact: mcp_server/server.py
     extent: full
     note: JSON-RPC over stdio, dependency-free, three tools, sharing the same retriever the evaluation scores so the eval measures what ships.
+    reviewed: 2026-11-24
 
   - concept: seo-for-docs
     project: docpack
@@ -384,13 +405,14 @@ demonstrates:
     project: fieldguide
     artifact: src/fieldguide/generate.py
     extent: partial
-    note: Seven paths generated from the registry, ordering enforced in CI, entry state computed; no reader has walked one.
+    note: "Ten paths generated from the registry in four groups, ordering and grouping enforced in CI, the site menu tested against them, entry state computed; no reader has walked one."
 
   - concept: developer-advocacy
     project: fieldguide
     artifact: tests/test_registry.py
     extent: partial
     note: A docs gate at capability granularity, enumerating subcommands from the parser; the partnership half is undemonstrable in a one-person repository.
+    reviewed: 2026-11-24
 
   - concept: publishing-in-public
     project: fieldguide
@@ -415,6 +437,7 @@ demonstrates:
     artifact: scripts/coldstart.sh
     extent: partial
     note: Machine time from empty directory to asserted artifacts, 12.7s of which 11.6s is pip install; reader-side time is not instrumented.
+    reviewed: 2026-11-24
 
   - concept: search-log-analysis
     project: docpack
@@ -433,6 +456,7 @@ demonstrates:
     artifact: docs/explanation/evaluating-retrieval.md
     extent: partial
     note: Two repeat failures diagnosed as vocabulary gaps and fixed in one sentence each, with the score movement recorded; frequency data is absent, so these are candidates rather than a ranked backlog.
+    reviewed: 2026-11-24
 
   - concept: developer-feedback-loops
     project: docpack
@@ -445,6 +469,12 @@ demonstrates:
     artifact: tests/test_mcp_server.py
     extent: partial
     note: A client driven against the MCP server found two defects where failure bypassed the isError flag, now fixed and covered by 14 tests; no networked, authenticated or rate-limited service is involved.
+
+  - concept: api-integration
+    project: fieldguide
+    artifact: scripts/github_api.py
+    extent: full
+    note: "A GitHub REST client used every week by the freshness monitor: bearer-token authentication, pagination by Link header, waiting out or reporting a rate limit, obeying Retry-After, retrying server errors with backoff, ETag caching, and errors carrying GitHub's own message. Its first unauthenticated run met the 60-an-hour limit for real and stopped cleanly; nine tests drive every branch through a scripted transport."
 
   - concept: sphinx
     project: fieldguide
@@ -529,6 +559,7 @@ demonstrates:
     artifact: harness/run.py
     extent: partial
     note: "The whole lifecycle against a real AWS account: deploy, run the lab document's own steps, assert, tear down in a finally block, verify the teardown three ways with every tagged ARN resolved against its service, and append the run to health/health.jsonl, with the summary in health/HEALTH.md generated from it. Partial because it is one lab in one personal account and region, with no account vending."
+    reviewed: 2026-11-24
 
   - concept: lab-publishing
     project: coldlab
@@ -583,6 +614,7 @@ demonstrates:
     artifact: CHANGELOG.md
     extent: full
     note: "A real changelog for this guide in Keep a Changelog form, held in CI by tests/test_changelog.py: only the six standard headings, ISO dates, versions descending with the newest equal to the package version, and every concept added since 0.1.0 named under Added. The coverage rule checks concepts rather than commits, because the guide's commits are not Conventional Commits; drills/release_notes.py still runs the page's commit-based check on invented commits."
+    reviewed: 2026-11-24
 
   - concept: diagrams-as-code
     project: fieldguide
@@ -637,18 +669,21 @@ demonstrates:
     artifact: drills/usd_composition.py
     extent: partial
     note: "Real USD composition with usd-core: an override leaving its base file untouched, the resolution order printed from the API, and the first-sublayer-wins ordering most newcomers get backwards. No Omniverse, Kit or production pipeline."
+    reviewed: 2026-11-24
 
   - concept: inference-serving
     project: fieldguide
     artifact: drills/inference_sweep.py
     extent: partial
     note: A latency-throughput sweep on ONNX Runtime including queue wait, showing 14x throughput for 21x latency and a saturation knee past which batching is pure loss. CPU only, no server, no real traffic.
+    reviewed: 2026-11-24
 
   - concept: ai-stack
     project: fieldguide
     artifact: drills/onnx_compat.py
     extent: partial
     note: "The newest onnx writes IR 14 and the newest onnxruntime refuses it; four outcomes from one Relu across two version axes. The accelerator layers are read about, not run."
+    reviewed: 2026-11-24
 
   - concept: realtime-systems
     project: fieldguide
@@ -667,30 +702,33 @@ demonstrates:
     artifact: docs/tutorials/getting-started.md
     extent: full
     note: Five steps, nine code blocks, one route, no choices before first success; scripts/coldstart.sh runs it from an empty virtual environment and asserts the exact output it promises.
+    reviewed: 2026-11-24
 
   - concept: information-architecture
     project: fieldguide
     artifact: concepts.yaml
     extent: full
-    note: "All three decisions made and enforced: 106 units with a closed vocabulary for category, tier and Diataxis type, a prerequisite DAG with a cycle check, and generated routes (nine paths, coverage, a topological study plan). No audience, so findability itself is unevidenced."
+    note: "All three decisions made and enforced: units with a closed vocabulary for category, tier and Diataxis type (120 concepts at version 0.2.0), a prerequisite DAG with a cycle check, and generated routes (ten paths in four groups, coverage, a topological study plan). No audience, so findability itself is unevidenced."
 
   - concept: instructional-design
     project: fieldguide
     artifact: src/fieldguide/audit.py
     extent: partial
-    note: "`fieldguide audit` prints the four structural commitments on demand: 89/89 prerequisite lines, 106/106 durations, results and proof sections. Since then the commitments became enforceable rather than measurable: STRUCTURAL_LABELS declares the wording of all fourteen labelled elements, the scaffold emits them so a new page cannot invent a fifteenth, and the audit reports every repeated label nobody declared. That last check is the one that matters, because this page's own fix had standardised the label that surfaced and asserted that one string, which could not have found the three other variant pairs in use at the time. Ceiling: no-audience."
+    note: "`fieldguide audit` prints the four structural commitments on demand: at version 0.2.0, 103/103 prerequisite lines and 120/120 durations, results and proof sections. Since then the commitments became enforceable rather than measurable: STRUCTURAL_LABELS declares the wording of all fourteen labelled elements, the scaffold emits them so a new page cannot invent a fifteenth, and the audit reports every repeated label nobody declared. That last check is the one that matters, because this page's own fix had standardised the label that surfaced and asserted that one string, which could not have found the three other variant pairs in use at the time. Ceiling: no-audience."
 
   - concept: cognitive-load
     project: fieldguide
     artifact: src/fieldguide/audit.py
     extent: partial
     note: "Sentence distribution, per-page maxima and the backward/forward/off-path link census, committed as a subcommand with a test fixture for each of the three fence-parsing bugs that preceded it. The loop is now closed rather than open: the corpus was measured, 59 pages carried a sentence over 45 words and six over 60, the worst were edited, and a test holds the ceiling at 55 so it cannot drift back. Two defects fell out of acting on it. The splitter did not treat a sentence ending in bold as a sentence ending, which accounted for as much of the improvement as the editing did, and the metric excluded list items, so a long sentence became compliant the moment somebody bulleted it; both are fixed and both are published beside the result. The effect on a reader is still unmeasured. Ceiling: no-audience."
+    reviewed: 2026-11-24
 
   - concept: reproducible-environments
     project: docpack
     artifact: scripts/coldstart.sh
     extent: partial
     note: A fresh virtual environment installed the way a reader would, which is level 2 of the five in the page's own table and the right level for a pure-Python project. It would not catch a system library or a platform difference.
+    reviewed: 2026-11-24
 
   - concept: gpu-computing
     project: fieldguide
@@ -702,7 +740,7 @@ demonstrates:
     project: fieldguide
     artifact: src/fieldguide/audit.py
     extent: partial
-    note: "318 proof tasks measured across 106 pages, 95 per cent imperative and 40 per cent stating a success criterion. That second figure was published as 17 per cent for months and the classifier was wrong: it matched the preposition in \"run it against a corpus you own\" and recognised no conditional, predicted value or author comparison, so the guide's self-declared weakest number was about half the real one. It is now scored against sixty tasks hand-labelled before it was written, held in tests/fixtures/criterion_labels.json. The 40 is after a pass that added a criterion to every core page that had none; the correction was worth more than the pass. It establishes that the instrument is well formed and nothing about whether anyone learns. Ceiling: no-audience."
+    note: "360 proof tasks measured across 120 pages at version 0.2.0, 94 per cent imperative and 39 per cent stating a success criterion. That second figure was published as 17 per cent for months and the classifier was wrong: it matched the preposition in \"run it against a corpus you own\" and recognised no conditional, predicted value or author comparison, so the guide's self-declared weakest number was about half the real one. It is now scored against sixty tasks hand-labelled before it was written, held in tests/fixtures/criterion_labels.json. The figure reached 40 after a pass that added a criterion to every core page that had none, and stood at 39 as later pages were added; the correction was worth more than the pass. It establishes that the instrument is well formed and nothing about whether anyone learns. Ceiling: no-audience."
 
 #: Why every other concept has no demonstration. Validated: an unknown id, an
 #: unknown reason, a concept that is both demonstrated and triaged, or a concept
