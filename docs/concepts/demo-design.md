@@ -32,7 +32,7 @@ there is no second attempt.
 
 ## How this applies to your role
 
-Because developer education and enablement teams own demos, and demos are the
+This matters because developer education and enablement teams own demos, and demos are the
 documentation most often seen by the people who decide whether to adopt the
 product.
 

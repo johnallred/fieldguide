@@ -30,7 +30,7 @@ disagrees, and that is where integrations are actually written.
 
 ## How this applies to your role
 
-Because the content a documentation team needs is almost never in the
+This matters because the content a documentation team needs is almost never in the
 repository. It is in the issue tracker, the CMS, the analytics product and the
 localisation vendor, and the only way to ask a question spanning two of them is
 a program.

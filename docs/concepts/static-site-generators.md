@@ -29,7 +29,7 @@ being able to say what each one's build does and does not verify.
 
 ## How this applies to your role
 
-Because the choice is close to irreversible and it is usually made by whoever
+This matters because the choice is close to irreversible and it is usually made by whoever
 set up the repository in week one.
 
 Migrating a mature corpus between generators means rewriting every
@@ -135,7 +135,8 @@ extension set matter far more to build time than your choice of generator.**
 Anyone comparing generators on speed without holding the theme constant is
 measuring the wrong thing.
 
-**What you learned.** The real axis is how much the build verifies, the real
+**What you built.** The same defects built under two generators, then timed.
+The real axis is how much the build verifies, the real
 cost of verification is a doctree and some seconds, and the headline speed
 numbers people quote are mostly about themes.
 

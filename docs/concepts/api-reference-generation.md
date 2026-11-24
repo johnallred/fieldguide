@@ -184,7 +184,8 @@ Caught, and the good one resolved to `href="#pkg.widget.attempt"`. The dead
 one was left as literal `[gone][pkg.widget.retry]` in the output, which is the
 usual Markdown failure mode and the reason the warning matters.
 
-**What you learned.** Generation fixes signatures. Cross-references into the
+**What you built.** A generated reference and two renames run against it.
+Generation fixes signatures. Cross-references into the
 reference are a separate problem with a separate fix, and the fix is to use the
 symbol-reference syntax instead of hand-written anchors. Two different gates,
 and most teams have only the first.

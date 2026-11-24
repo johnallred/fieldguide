@@ -31,7 +31,8 @@ mistake is designing one and assuming it covers the other.
 
 ## How this applies to your role
 
-Because the retrieval half is new and most corpora do not have it.
+This matters because retrieval metadata is the new half, and most corpora do
+not have it.
 
 Navigation metadata is well understood: a title, a position, a section. It has
 existed as long as documentation sites have. Retrieval metadata is what makes a
@@ -144,8 +145,9 @@ all pages by diataxis: {'how-to': 22, 'explanation': 46, 'placeholder': 53}
   FIRES: diataxis is 'refrence', which is not one of [...]
 ```
 
-**What you learned.** Metadata health has three questions and most audits ask
-only the first: is it present, is it true, and does anything read it.
+**What you built.** A metadata audit that asks all three questions of
+metadata health: is it present, is it true, and does anything read it. Most
+audits ask only the first.
 
 ## Reference
 

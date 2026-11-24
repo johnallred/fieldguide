@@ -29,7 +29,7 @@ absence.
 
 ## How this applies to your role
 
-Because a quickstart is the only page whose author is structurally incapable of
+This matters because a quickstart is the only page whose author is structurally incapable of
 testing it. The author has the SDK installed, the token exported, the
 repository cloned, a Python with the right version, and three dependencies they
 installed last March for something else. They run their own quickstart, it

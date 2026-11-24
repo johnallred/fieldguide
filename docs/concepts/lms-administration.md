@@ -31,7 +31,7 @@ relationship is left implicit and people edit the output directly.
 
 ## How this applies to your role
 
-Because training and lab teams deliver through an LMS, and the LMS is where a
+This matters because training and lab teams deliver through an LMS, and the LMS is where a
 well-designed course quietly stops working.
 
 On a Tuesday it looks like this. A manager asks why only three of twenty people

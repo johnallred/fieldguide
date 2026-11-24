@@ -29,7 +29,7 @@ which is a performance skill and has to be practised and checked as one.
 
 ## How this applies to your role
 
-Because developer education teams build the demos, labs and guides the field
+This matters because developer education teams build the demos, labs and guides the field
 uses, and the measure of that work is whether the field can use them without
 calling you.
 

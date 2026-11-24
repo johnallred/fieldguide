@@ -30,7 +30,7 @@ reason this concept is tier `context` rather than core.
 
 ## How this applies to your role
 
-Because some things genuinely do not survive being written down, and because
+This matters because some things genuinely do not survive being written down, and because
 people ask for video regardless.
 
 The legitimate case is narrow and real: an unfamiliar interface where the hard

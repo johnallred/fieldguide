@@ -25,7 +25,8 @@ describes who you have to work with to make that true.
 
 ## How this applies to your role
 
-Because the alternative does not scale and everyone knows it.
+This matters because a documentation team that writes everything itself does
+not scale, and everyone knows it.
 
 A documentation team that writes everything is a queue. Features ship, the
 queue lengthens, the docs describe the product of six months ago, and the team

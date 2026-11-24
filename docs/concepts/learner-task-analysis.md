@@ -31,7 +31,7 @@ their setting, and what they are trying to get done.
 
 ## How this applies to your role
 
-Because objectives written from the product's feature list describe what the
+This matters because objectives written from the product's feature list describe what the
 product can do, not what readers need to do with it, and the difference shows
 up later as support tickets.
 

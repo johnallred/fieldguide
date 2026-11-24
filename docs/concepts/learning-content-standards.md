@@ -29,7 +29,7 @@ treating them as competing versions of one thing.
 
 ## How this applies to your role
 
-Because the course or lab you build is only useful if the platform can launch
+This matters because the course or lab you build is only useful if the platform can launch
 it and report on it, and both of those are governed by these standards.
 
 On a Tuesday it looks like this. A lab you built works perfectly from its own

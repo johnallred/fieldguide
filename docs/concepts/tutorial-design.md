@@ -31,7 +31,7 @@ working?**
 
 ## How this applies to your role
 
-Because a tutorial is where a reader decides whether the product is for them,
+This matters because a tutorial is where a reader decides whether the product is for them,
 and because its failures are structural rather than stylistic.
 
 The common structural failure is sequencing. An author who knows the

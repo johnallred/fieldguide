@@ -30,7 +30,7 @@ automating.
 
 ## How this applies to your role
 
-Because a corpus without a lifecycle has exactly one state, which is
+This matters because a corpus without a lifecycle has exactly one state, which is
 "published", and therefore no mechanism for anything. A page cannot be known to
 be a draft, cannot be flagged for review, and cannot be retired, so the corpus
 only ever grows.

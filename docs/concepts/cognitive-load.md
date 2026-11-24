@@ -29,7 +29,7 @@ makes it worse.
 
 ## How this applies to your role
 
-Because "a developer reaches a working result in fifteen minutes" is a claim
+This matters because "a developer reaches a working result in fifteen minutes" is a claim
 about working memory, not about word count.
 
 A reader following a quickstart is holding several things at once: what they

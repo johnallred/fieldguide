@@ -34,7 +34,7 @@ that passed every lab check and left a resource behind has failed.
 
 ## How this applies to your role
 
-Because hands-on labs are only as good as the account they run in, and labs
+This matters because hands-on labs are only as good as the account they run in, and labs
 against cloud services rot without anyone editing them. A service changes a
 default, a quota tightens, an organisation adds a policy, and the lab that
 worked at launch fails on step four for every learner who tries it.

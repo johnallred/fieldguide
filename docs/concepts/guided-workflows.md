@@ -30,7 +30,7 @@ an item, decides whether it is done, and ticks it.
 
 ## How this applies to your role
 
-Because a checklist asks a question the reader is badly placed to answer.
+This matters because a checklist asks a question the reader is badly placed to answer.
 
 "Every page has a summary" is an item on a release checklist. The person
 reading it has to decide whether that is true, which means either checking 121

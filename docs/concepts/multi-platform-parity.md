@@ -30,7 +30,7 @@ on that platform.
 
 ## How this applies to your role
 
-Because the reader on a cloud platform reads the same page as everyone else
+This matters because the reader on a cloud platform reads the same page as everyone else
 and follows it exactly, and the page was written and tested against the
 first-party API.
 

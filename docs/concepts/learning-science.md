@@ -28,7 +28,7 @@ is where those commitments come from, and what to do when two of them disagree.
 
 ## How this applies to your role
 
-Because every tutorial you review is a set of claims about how people learn,
+This matters because every tutorial you review is a set of claims about how people learn,
 and without the research those claims get settled by taste.
 
 On a Tuesday it looks like this. An engineer hands you a tutorial: three

@@ -28,7 +28,7 @@ configured.
 
 ## How this applies to your role
 
-Because the interesting defects in a documentation corpus are structural, and
+This matters because the interesting defects in a documentation corpus are structural, and
 structure is exactly what a text matcher cannot see.
 
 Consider three rules. "Do not write *simply*" is a pattern, and Vale does it in

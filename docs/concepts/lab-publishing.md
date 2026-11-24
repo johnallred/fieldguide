@@ -32,7 +32,7 @@ than for software, because a lab can break without anyone changing it.
 
 ## How this applies to your role
 
-Because the people writing labs are usually not the people running the
+This matters because the people writing labs are usually not the people running the
 pipeline, and the pipeline is what turns their drafts into something an
 instructor can rely on in front of a room.
 

@@ -31,7 +31,7 @@ worth your time.
 
 ## How this applies to your role
 
-Because a gallery is where a corpus's maintenance debt becomes visible to
+This matters because a gallery is where a corpus's maintenance debt becomes visible to
 readers.
 
 A documentation page that goes stale misleads whoever reads it. A sample app

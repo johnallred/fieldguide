@@ -35,7 +35,7 @@ fail on arrival somewhere else.
 
 ## How this applies to your role
 
-Because labs for isolated or government regions are written by people who
+This matters because labs for isolated or government regions are written by people who
 mostly work in commercial ones, and the cost of an assumption is paid by an
 instructor in a room you cannot enter.
 

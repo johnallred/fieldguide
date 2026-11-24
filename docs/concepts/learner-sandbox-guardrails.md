@@ -35,7 +35,7 @@ reach.
 
 ## How this applies to your role
 
-Because a lab that gives learners too little fails on step three, and a lab
+This matters because a lab that gives learners too little fails on step three, and a lab
 that gives them too much is the one that turns up in a security review, an
 invoice, or a broken shared account the next morning.
 

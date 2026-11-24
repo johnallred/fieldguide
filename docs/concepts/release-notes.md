@@ -28,7 +28,7 @@ change? Everything in a good entry serves that question.
 
 ## How this applies to your role
 
-Because release notes are the page most likely to be read at the exact moment
+This matters because release notes are the page most likely to be read at the exact moment
 a mistake is expensive, and the page most often generated from a commit log
 and shipped unread.
 

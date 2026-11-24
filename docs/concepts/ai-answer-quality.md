@@ -31,7 +31,7 @@ quality**, and the bound is measurable without a model in the loop at all.
 
 ## How this applies to your role
 
-Because readers have stopped arriving at documentation and started arriving at
+This matters because readers have stopped arriving at documentation and started arriving at
 answers about it.
 
 A corpus is now consumed by assistants more often than many teams realise, and

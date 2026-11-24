@@ -28,7 +28,7 @@ readers' own words, of content you do not have.
 
 ## How this applies to your role
 
-Because every other way of deciding what readers want is the author guessing.
+This matters because every other way of deciding what readers want is the author guessing.
 
 A documentation roadmap is usually assembled from support escalations, the
 loudest internal stakeholder, and what the team believes is missing. Queries

@@ -29,7 +29,7 @@ support load in this field.
 
 ## How this applies to your role
 
-Because whoever runs and validates AI samples will spend their first month on
+This matters because whoever runs and validates AI samples will spend their first month on
 version errors.
 
 A documentation engineer in this space does not debug kernels. They do

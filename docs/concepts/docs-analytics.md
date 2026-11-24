@@ -37,7 +37,7 @@ a dashboard.
 
 ## How this applies to your role
 
-Because without it every statement about documentation is an assertion, and
+This matters because without analytics every statement about documentation is an assertion, and
 documentation people make a great many statements.
 
 "The quickstart is too long." "Nobody can find the auth page." "That tutorial

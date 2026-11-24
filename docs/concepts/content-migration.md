@@ -30,7 +30,7 @@ mapped their URL.
 
 ## How this applies to your role
 
-Because a move to docs-as-code is often the first large project in this kind
+This matters because a move to docs-as-code is often the first large project in this kind
 of work, and it is the one time every page in the corpus gets touched.
 
 On a Tuesday it looks like this. The team has agreed to leave the wiki. Someone

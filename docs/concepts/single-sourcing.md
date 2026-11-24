@@ -160,8 +160,10 @@ broken include can delete a page's content, and by default nobody is told.
 `check_paths: true` is not an optimisation, it is the thing that makes the
 mechanism safe.
 
-**What you learned.** Measure duplication before adopting a mechanism, and
-when you adopt one, turn on its integrity check in the same commit.
+**What you built.** A duplication measurement and an include, broken twice to
+see which configuration notices. Measure duplication before adopting a
+mechanism, and when you adopt one, turn on its integrity check in the same
+commit.
 
 ## Reference
 

@@ -26,7 +26,7 @@ in this domain most often gets wrong.
 
 ## How this applies to your role
 
-Because the metric conventions a documentation writer brings from web services
+This matters because the metric conventions a documentation writer brings from web services
 are actively misleading here, and graphics, simulation, robotics and real-time systems all share
 this property.
 

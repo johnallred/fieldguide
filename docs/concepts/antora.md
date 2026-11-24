@@ -168,8 +168,9 @@ multi-repository Antora build needs published Git sources rather than local
 directories. The playbook above is the shape of the configuration, not a
 verified run, and this page says so rather than implying otherwise.
 
-**What you learned.** Which of AsciiDoc's advantages are in the base language,
-measured rather than claimed, and where the honest limit of this exercise sits.
+**What you built.** One page converted with no extensions configured, which
+shows which of AsciiDoc's advantages are in the base language, measured rather
+than claimed, and where the honest limit of this exercise sits.
 
 ## Reference
 

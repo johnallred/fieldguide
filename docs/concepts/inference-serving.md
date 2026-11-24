@@ -28,7 +28,7 @@ service rather than a library.
 
 ## How this applies to your role
 
-Because the thing a reader has to get right is a tradeoff, and tradeoffs are
+This matters because the thing a reader has to get right is a tradeoff, and tradeoffs are
 where documentation either earns its keep or misleads at scale.
 
 An inference service has two performance numbers that move in opposite

@@ -185,7 +185,8 @@ return:
 ok: every page's front matter parses as YAML
 ```
 
-**What you learned.** A content model is judged by the lies it prevents, and
+**What you built.** A set of attacks on a content model. A content model is
+judged by the lies it prevents, and
 the useful question about any model is which lie is still possible. This one
 prevented twelve and was blind to the thirteenth, which was the one that
 mattered most for machine readability.

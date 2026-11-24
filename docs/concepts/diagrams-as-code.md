@@ -28,7 +28,7 @@ pasted from a drawing tool never allows.
 
 ## How this applies to your role
 
-Because diagrams are the part of the documentation that goes wrong most
+This matters because diagrams are the part of the documentation that goes wrong most
 quietly. A wrong sentence gets noticed and fixed; a wrong box-and-arrow picture
 gets trusted, because readers look at diagrams to orient themselves and rarely
 read them closely.

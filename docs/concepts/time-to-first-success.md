@@ -32,7 +32,7 @@ wrong: when the clock starts, and what counts as success.
 
 ## How this applies to your role
 
-Because every other documentation metric can be green while nobody can get
+This matters because every other documentation metric can be green while nobody can get
 started.
 
 A corpus can be complete, correct, linked, linted, searchable, fully tested,

@@ -32,7 +32,7 @@ the world and needs a comparison almost nobody sets up.
 
 ## How this applies to your role
 
-Because it is the one documentation outcome that converts directly into money,
+This matters because deflection is the one documentation outcome that converts directly into money,
 which makes it the number a documentation team is funded by and the number it is
 most tempted to overstate.
 

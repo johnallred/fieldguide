@@ -177,7 +177,8 @@ Plus a regression test asserting that no generated page claims a type it has
 not earned. The field now has a consumer, so a typo or a hardcoded default
 fails a build.
 
-**What you learned.** Closing a vocabulary stops illegal values. Only a
+**What you built.** An honest value for one field and a reader that consumes
+it. Closing a vocabulary stops illegal values. Only a
 consumer stops untrue ones, and a field nothing reads drifts immediately and
 silently.
 

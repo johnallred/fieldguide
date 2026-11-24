@@ -28,7 +28,7 @@ The mechanics are easy. The reason corpora only ever grow is not technical.
 
 ## How this applies to your role
 
-Because an unretired corpus degrades in a way that no amount of writing fixes.
+This matters because an unretired corpus degrades in a way that no amount of writing fixes.
 Every stale page competes with a current one in search, dilutes
 [retrieval](rag.md), and costs a reviewer attention. Past a certain size the
 most valuable documentation work available is deletion, and nobody is

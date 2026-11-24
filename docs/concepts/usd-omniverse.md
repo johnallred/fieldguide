@@ -31,7 +31,7 @@ not know, not to ship scene code.
 
 ## How this applies to your role
 
-Because USD underpins a growing share of simulation and graphics tooling, and
+This matters because USD underpins a growing share of simulation and graphics tooling, and
 because the documentation failure around it is unusually clear-cut.
 
 USD's reference material describes composition as a set of **arcs**:

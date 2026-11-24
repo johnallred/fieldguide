@@ -30,7 +30,7 @@ diffs are reviewable and whether two writers editing one page collide.
 
 ## How this applies to your role
 
-Because the objection to [docs-as-code](docs-as-code.md) is always the same:
+This matters because the objection to [docs-as-code](docs-as-code.md) is always the same:
 that it does not work for people whose job is writing. Most of the time the
 complaint is correct, and the cause is not Git. It is that the repository was
 set up by engineers who hard-wrapped the prose at 80 columns, so every edit

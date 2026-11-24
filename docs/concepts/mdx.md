@@ -166,7 +166,8 @@ The risk is real for any pipeline that compiles MDX without rendering it, or
 that renders only in the browser, and it is not a problem on a conventional
 Docusaurus build.
 
-**What you learned.** MDX rejects two common Markdown constructs outright, and
+**What you built.** A compiler run over six inputs and a render check. MDX
+rejects two common Markdown constructs outright, and
 whether an undefined component is a build error or a reader-facing crash
 depends on your generator rather than on MDX. Check which yours does rather
 than assuming.

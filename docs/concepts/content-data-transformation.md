@@ -28,7 +28,7 @@ this drop, and who finds out?**
 
 ## How this applies to your role
 
-Because the artifacts a documentation platform ships are mostly derived, and
+This matters because the artifacts a documentation platform ships are mostly derived, and
 derived artifacts fail quietly.
 
 A broken page is visible to whoever opens it. A chunk record missing a field is

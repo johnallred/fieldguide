@@ -31,7 +31,7 @@ state and worth saying out loud rather than disguising.
 
 ## How this applies to your role
 
-Because every claim a documentation team makes about outcomes is an assessment
+This matters because every claim a documentation team makes about outcomes is an assessment
 claim wearing other clothes.
 
 "A developer reaches a working result in fifteen minutes" is a measurement of

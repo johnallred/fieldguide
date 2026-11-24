@@ -31,7 +31,7 @@ descriptions disagree, and the disagreement is deliberate.
 
 ## How this applies to your role
 
-Because the concept that costs readers the most is a choice between two things
+This matters because the concept that costs readers the most is a choice between two things
 that both look correct.
 
 Robotics sits with graphics, simulation and real-time systems, and documentation

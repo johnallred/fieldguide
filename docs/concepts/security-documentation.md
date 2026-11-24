@@ -31,7 +31,7 @@ the quickstart.
 
 ## How this applies to your role
 
-Because a documentation site is a distribution channel for patterns.
+This matters because a documentation site is a distribution channel for patterns.
 
 An engineer who writes `verify=False` in their own code has made a local
 mistake. A documentation page that writes `verify=False` has made that mistake

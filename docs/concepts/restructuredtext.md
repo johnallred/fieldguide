@@ -144,7 +144,8 @@ come from Sphinx *core*, not from third-party extensions, which is the detail
 that makes the boundary confusing: you do not opt into them, you get them by
 using Sphinx at all.
 
-**What you learned.** "RST" in common usage means reStructuredText plus
+**What you built.** The same file run through docutils and then Sphinx. "RST"
+in common usage means reStructuredText plus
 Sphinx's directive and role vocabulary. The language on its own is a structured
 text format with admonitions and tables. Everything that makes it attractive
 for API documentation is the tool.

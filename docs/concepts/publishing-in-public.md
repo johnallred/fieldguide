@@ -27,7 +27,7 @@ repository a stranger clones, installs and tests in five minutes is evidence.
 
 ## How this applies to your role
 
-Because developer-facing teams increasingly publish their tooling, samples and
+This matters because developer-facing teams increasingly publish their tooling, samples and
 pipelines, and published work has a reader you cannot brief. Internal work can
 lean on context: the reader knows the team, the history and whom to ask.
 Published work is judged by a stranger who has only what is in the repository,

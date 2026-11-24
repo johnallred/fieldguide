@@ -30,8 +30,8 @@ answered without being used.
 
 ## How this applies to your role
 
-Because it is the only measurement in this category that no instrument
-produces.
+This matters because developer feedback is the only measurement in this
+category that no instrument produces.
 
 Everything else here, [deflection](support-deflection.md),
 [repeat questions](repeat-questions.md),

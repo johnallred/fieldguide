@@ -31,7 +31,7 @@ carry. A repeat tells you **which sentence to write**.
 
 ## How this applies to your role
 
-Because a repeat question is the cheapest high-quality signal in this entire
+This matters because a repeat question is the cheapest high-quality signal in this entire
 field, and almost nobody acts on it.
 
 It belongs among the things to measure, alongside deflection and answer
