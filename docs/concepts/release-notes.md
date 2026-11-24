@@ -257,11 +257,17 @@ on every release branch.
    under a minor version.
 
 **How to tell it is working.** The drill above runs in this guide's test suite
-and its output is the output quoted here. The commits are invented and the
-check reads a simplified commit format, so the
-[demonstrated](../demonstrated.md) page records the concept as partial. In your
-own releases, the sign is that upgrade questions after a release are about
-edge cases, not about changes the notes never mentioned.
+and its output is the output quoted here. The guide also keeps a real
+changelog, [`CHANGELOG.md`](https://github.com/johnallred/fieldguide/blob/main/CHANGELOG.md),
+held by `tests/test_changelog.py` to this page's rules: Keep a Changelog
+headings only, ISO dates, versions in descending order with the newest equal to
+the package version, and an `Unreleased` section first. The coverage rule is
+adapted to a curriculum: the guide's commits are not Conventional Commits, so
+instead of checking every feature commit, the test checks that every concept
+added since 0.1.0 is named under `Added`, which is the change a returning
+reader most needs to find. In your own releases, the sign is that upgrade
+questions after a release are about edge cases, not about changes the notes
+never mentioned.
 
 ## Related
 

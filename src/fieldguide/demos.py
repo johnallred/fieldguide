@@ -52,9 +52,13 @@ CEILING_REASONS = {
         "the corpus-side half is built and measured; the reader-side half "
         "needs readers, and this project has none"
     ),
-    "not-published": (
-        "the mechanism runs and gates, but nothing is deployed, so no "
-        "post-publication behaviour exists to observe"
+    # Was "not-published" until the repositories went public in November
+    # 2026. Publishing in public then reached `full`, and release readiness
+    # turned out never to have been held back by publication at all: its
+    # missing half is somebody else accepting the gate.
+    "single-author": (
+        "the mechanism runs and gates; the half that needs another person to "
+        "review or accept it cannot happen in a one-person project"
     ),
 }
 

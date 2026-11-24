@@ -395,8 +395,8 @@ demonstrates:
   - concept: publishing-in-public
     project: fieldguide
     artifact: scripts/prepublication.py
-    extent: partial
-    note: A pre-publication gate at full precision on two repositories; neither is published, so there is no audience yet.
+    extent: full
+    note: "Both repositories are public with published sites, and the pre-publication gate exits 0 on both. The defining property, that a stranger can run it, was checked on 2026-11-24 with a clean clone from the public URL: 67 seconds to 244 passing tests here, 13 seconds to 142 in docpack. No stranger's reaction has been observed."
 
   - concept: docs-analytics
     project: docpack
@@ -502,9 +502,9 @@ demonstrates:
 
   - concept: crawlability
     project: fieldguide
-    artifact: drills/crawlability.py
-    extent: partial
-    note: "A six-check audit over a site with five planted defects, run by writing the page's own crawl.py to a temp directory, so the demonstration and the published code are one artifact. Committing it found the page had quoted no output at all, that five defects yield ten findings, and that the word-count check false-positives on a sixteen-word static page. No real site, no crawler, no search engine."
+    artifact: scripts/crawl_site.py
+    extent: full
+    note: "The page's audit pointed at this guide's own published site: text without JavaScript, canonical, distinct descriptions, resolving links, sitemap agreement and llms.txt, as a gate on every build and again against the live site after each deploy. Its first real run found the guide had no llms.txt, now generated from the registry by a build hook, and that a project site under a path cannot have a robots.txt at all. drills/crawlability.py still runs the page's golden path over the planted-defect site. Search-engine indexing itself is not observed."
 
   - concept: terminology-drift
     project: fieldguide
@@ -580,9 +580,9 @@ demonstrates:
 
   - concept: release-notes
     project: fieldguide
-    artifact: drills/release_notes.py
-    extent: partial
-    note: "A draft release section checked against a Conventional Commits log: a breaking change shipped as a minor version, no upgrade instruction, a missing fix, an internal refactor, a non-standard heading and a non-ISO date, all six cleared by a revision. The commits are invented and the commit format is simplified."
+    artifact: CHANGELOG.md
+    extent: full
+    note: "A real changelog for this guide in Keep a Changelog form, held in CI by tests/test_changelog.py: only the six standard headings, ISO dates, versions descending with the newest equal to the package version, and every concept added since 0.1.0 named under Added. The coverage rule checks concepts rather than commits, because the guide's commits are not Conventional Commits; drills/release_notes.py still runs the page's commit-based check on invented commits."
 
   - concept: diagrams-as-code
     project: fieldguide
@@ -742,8 +742,7 @@ ceilings:
     - reproducible-environments
     - sample-apps
     - demo-design
-  not-published:
-    - publishing-in-public
+  single-author:
     - release-readiness
 
 triage:

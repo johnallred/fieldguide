@@ -32,6 +32,7 @@ plugins:
 
 hooks:
   - hooks/summary.py
+  - hooks/llms.py
 
 markdown_extensions:
   - admonition

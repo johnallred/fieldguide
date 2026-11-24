@@ -5,4 +5,4 @@ the pages that describe it are generated from that file. See `registry` for the
 model and `generate` for the views over it.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"

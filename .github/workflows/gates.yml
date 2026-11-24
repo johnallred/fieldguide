@@ -61,6 +61,11 @@ jobs:
       - name: Every fenced sample renders as code
         run: fieldguide render site
 
+      # The crawlability page's audit, pointed at this guide's own build: what
+      # a crawler or an agent meets, including the generated llms.txt.
+      - name: The built site passes the crawl audit
+        run: python scripts/crawl_site.py site
+
   release:
     name: Release
     runs-on: ubuntu-latest
@@ -184,6 +189,8 @@ jobs:
       contents: read
       pages: write
       id-token: write
+    outputs:
+      url: ${{ steps.deployment.outputs.page_url }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -195,3 +202,19 @@ jobs:
         uses: actions/deploy-pages@v5
         with:
           artifact_name: ${{ needs.pages.outputs.artifact }}
+
+  # After the deploy, the same audit against what GitHub Pages actually serves.
+  # Not a gate: the change has already landed. It is the check that the site on
+  # disk and the site on the network are the same site.
+  live:
+    name: Check the live site
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      # GitHub Pages can take a short while to serve a new deployment.
+      - run: sleep 30
+      - run: python scripts/crawl_site.py --live "${{ needs.deploy.outputs.url }}"

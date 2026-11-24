@@ -410,14 +410,23 @@ your history.
    against an actual 119, stale for the project's entire life, and nothing had
    ever looked.
 
-**How to tell it is working.** `scripts/prepublication.py`
-is in this repository, runs on it and on `docpack`, and currently exits 1 with
-two findings: the placeholder `site_url` and `repo_url` in `mkdocs.yml`, which
-stay open until the repositories have real homes. Neither repository has been
-published, so the claims above about what a stranger concludes in ninety
-seconds are reasoning about readers rather than observation of them, and the
-[demonstrated](../demonstrated.md) page records this concept as having the
-gate but not the audience.
+**How to tell it is working.** Both repositories are now public, at
+[github.com/johnallred/fieldguide](https://github.com/johnallred/fieldguide)
+and [github.com/johnallred/docpack](https://github.com/johnallred/docpack),
+each with a published site. `scripts/prepublication.py` ran on both before
+they were published and exits 0 on both; it spent most of its life exiting 1
+on placeholder URLs, which is what it is for.
+
+The defining property was then checked the way a stranger would meet it, on
+2026-11-24: a clean clone from the public URL into an empty directory, a fresh
+virtual environment, the documented install and the test suite. This guide
+took 67 seconds from `git clone` to 244 passing tests (one skipped because it
+reads a built site); `docpack` took 13 seconds to 142. That is the "clone,
+install and test in five minutes" bar this page sets, met with room to spare.
+
+What it still does not show is a stranger's reaction. The claims above about
+what a reader concludes in ninety seconds are reasoning about readers, not
+observation of them.
 
 ## Related
 

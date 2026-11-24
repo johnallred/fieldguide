@@ -535,6 +535,20 @@ text-without-JavaScript, run in CI, with a count of how many of its findings
 are invisible to a human, and a team that runs it before the interesting work
 rather than after the silent failure.
 
+This guide now does that to its own site. `scripts/crawl_site.py` is the audit
+above adapted to a real MkDocs build: text without JavaScript, a canonical
+link naming the page's own URL, a distinct description, internal links that
+resolve, a sitemap that matches what is served, and an `llms.txt` whose links
+all resolve. It runs as a gate on every change, against the files about to be
+published, and again after each deploy against what GitHub Pages actually
+serves. Its first run over the real site found one problem, and it was the
+front door: the guide had no `llms.txt`, though it has a page arguing for one.
+A build hook now generates it from the registry. It also found a limit worth
+knowing. A project site served under a path, as this one is under
+`/fieldguide/`, cannot have a `robots.txt`, because crawlers read that file
+only at the root of the host; its sitemap has to be submitted to search engines
+directly.
+
 ## Related
 
 - [SEO for documentation](seo-for-docs.md), what crawlability is a precondition for
