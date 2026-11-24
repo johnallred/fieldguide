@@ -78,6 +78,15 @@ index, and that file was not in the set the check reads. The
 reasoning, because scoping a check by a file's role is right and is only as
 complete as your list of the files that carry it.
 
+**Publishing your own copy.** The repository's own address appears in three
+kinds of place. `mkdocs.yml` names the site (`site_name`, `site_url`,
+`repo_url`); change those, and GitHub Pages publishes your copy from the same
+workflow. `demonstrations.yaml` and the pages that cite `docpack` and `coldlab`
+link to the original repositories on purpose, because they are evidence about
+those repositories. The `curl` lines in the golden paths fetch each drill from
+the original too; they keep working in a copy, and point them at yours only if
+you change the drills.
+
 ## Changing the curriculum
 
 [`concepts.yaml`](concepts.yaml) is the source of truth for the concept list,
