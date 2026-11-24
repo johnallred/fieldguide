@@ -224,7 +224,7 @@ storing, keep a short retention window, and do not log queries alongside an
 identity unless someone agreed to that. None of this is a reason to skip
 collection; it is a reason to collect the aggregate rather than the transcript.
 
-### Why this concept is adjacent rather than quoted
+### Why the other measurements depend on this one
 
 Few teams name search logs, and most of the measurement they want depends on
 them. AI answer quality and repeat questions are each evaluation over a

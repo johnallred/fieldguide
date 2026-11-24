@@ -29,8 +29,8 @@ on.
 
 ## How this applies to your role
 
-Nobody will assign it to you as a task, and this page says so in its own
-banner. It is on the curriculum for two reasons.
+Nobody will assign it to you as a task, and it applies to every page you ship
+anyway. It is on the curriculum for two reasons.
 
 The first is that documentation at a large company is published content subject
 to the same obligations as the rest of the site, whether or not anyone on your

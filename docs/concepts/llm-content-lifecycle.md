@@ -26,7 +26,7 @@ The work is deciding where that is.
 
 ## How this applies to your role
 
-The work fits in one sentence. It has three activities
+The work has three activities
 (drafting, updating, auditing), three checks (freshness, code accuracy,
 terminology drift), and one constraint (human review where judgement matters).
 Every other page in this category is a piece of it.
@@ -490,8 +490,8 @@ audited.
 ## Explaining it to your team
 
 **How to explain it.** Lead with how little of it needs a
-model, then with the capacity constraint. "Three of the four checks in that
-bullet are not model work: freshness is a date comparison, code accuracy is
+model, then with the capacity constraint. "The three checks are not model
+work: freshness is a date comparison, code accuracy is
 claims against ground truth generated in CI, terminology drift is a
 substitution list. The model does two things, drafting a replacement for a
 finding something else already located, and ranking the queue. And the thing

@@ -33,8 +33,8 @@ will ever check it.
 
 ## How this applies to your role
 
-The work asks you to be as comfortable in Git, CI or Python as in a style
-guide, which is a claim about range rather than about style guides
+This work needs you to be as comfortable in Git, CI or Python as in a style
+guide, which is a point about range rather than about style guides
 specifically. You write the rules and you implement them.
 
 The thing that distinguishes experience here is knowing which rules are worth

@@ -34,7 +34,7 @@ one that makes the other two sustainable**, and it belongs on the list
 explicitly.
 
 On a Tuesday this is the thing that decides whether you are useful. A
-documentation backlog at a company this size has a few hundred items: requests
+documentation backlog at a large company has a few hundred items: requests
 from engineers, gaps you found, support escalations, a migration somebody
 promised, and forty pages marked for review. You can do maybe three things this
 week. Without a basis, the three you do are whichever came with the most senior

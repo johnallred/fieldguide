@@ -28,7 +28,7 @@ expect and a content problem that no tool solves.
 
 ## How this applies to your role
 
-Nobody may ask for it, and the banner says so. But most platforms you will
+Nobody may ask for it by name. But most platforms you will
 document ship releases, and documentation for a platform that ships releases needs
 versioning the moment a reader can be on an older one.
 

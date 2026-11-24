@@ -28,9 +28,8 @@ model. Translation itself is somebody else's job.
 
 ## How this applies to your role
 
-You may never run a localization pipeline, and the banner says so. The case
-for knowing it is that
-localization is the most unforgiving test of a content model that exists.
+You may never run a localization pipeline yourself. The case for knowing it is
+that localization is the most unforgiving test of a content model that exists.
 
 A corpus with inconsistent structure, inline HTML, text baked into screenshots
 and sentences that assemble themselves out of fragments can be published in

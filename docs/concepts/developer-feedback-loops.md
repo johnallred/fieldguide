@@ -23,8 +23,8 @@ the translation: a complaint is evidence about an experience, and turning it
 into an edit means deciding what it is evidence *of*, which is usually not what
 the complaint names.
 
-The work is to translate feedback into documentation, samples and product
-improvements, all three in one sentence, which is the right scope. The same report frequently calls for all
+The work is to translate feedback into all three: documentation, samples and
+product improvements. That is the right scope. The same report frequently calls for all
 three, and routing it only to the documentation queue is how feedback gets
 answered without being used.
 
@@ -123,7 +123,7 @@ this do".
 | README reordered, making before checking | Documentation | The ordering was the reported symptom |
 | Three tests on the new command | Tests | So it cannot silently rot |
 
-The work calls for exactly that split, and the product change is the one
+That split is the point, and the product change is the one
 that gets missed by treating a README complaint as a README task.
 
 ```

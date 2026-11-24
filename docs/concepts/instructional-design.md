@@ -32,8 +32,8 @@ which is a claim about the *reader* rather than about the page.
 
 ## How this applies to your role
 
-The concept fits in one line: take a developer "from a clean environment to a
-working result". That is an instructional objective written in behavioural
+A good objective for this work fits in one line: take a developer "from a
+clean environment to a working result". That is an instructional objective written in behavioural
 terms, with its starting state named. It describes design, not writing.
 
 It matters on an ordinary Tuesday because most developer documentation is

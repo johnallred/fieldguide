@@ -19,9 +19,8 @@ tags: [ia, core]
 
 ## What it is
 
-The structured data attached to each page, usually in front matter. The useful
-phrasing is precise and worth taking literally: metadata **for both navigation
-and machine retrieval**. Those are two audiences with different
+The structured data attached to each page, usually in front matter. It is worth
+stating precisely: metadata **for both navigation and machine retrieval**. Those are two audiences with different
 needs, and a single field set rarely serves both well.
 
 Navigation metadata answers "where does this page belong and what do I call
@@ -37,7 +36,7 @@ not have it.
 Navigation metadata is well understood: a title, a position, a section. It has
 existed as long as documentation sites have. Retrieval metadata is what makes a
 filtered search possible, what lets a chunk carry its context into a vector
-store, and what an assistant uses to decide where to look. Naming both in one phrase is a reminder that the second is a separate design
+store, and what an assistant uses to decide where to look. Naming both together is a reminder that the second is a separate design
 problem.
 
 The uncomfortable part, and the subject of the golden path, is that adding

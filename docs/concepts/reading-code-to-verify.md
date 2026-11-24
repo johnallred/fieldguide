@@ -25,9 +25,9 @@ an unfamiliar codebase well enough to answer one factual question, then get out.
 
 ## How this applies to your role
 
-The bar is precise: enough technical depth to read code and APIs, verify
-accuracy, and write working examples. The word doing the work is **enough**.
-You do not need to contribute to the simulation engine. You need to stop being
+The bar is worth stating precisely: enough technical depth to read code and
+APIs, verify accuracy, and write working examples. The word doing the work is **enough**.
+You do not need to contribute to the product's core code. You need to stop being
 dependent on an engineer's memory.
 
 That dependency is the thing to understand. Here is the default workflow in a

@@ -29,7 +29,7 @@ has almost none.
 
 ## How this applies to your role
 
-Nobody may call it OpenAPI work, and the banner says so. But reference
+Nobody may call it OpenAPI work. But reference
 documentation for an HTTP surface is OpenAPI work in practice, and reference
 documentation is part of nearly every documentation role.
 

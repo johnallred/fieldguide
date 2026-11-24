@@ -36,7 +36,7 @@ This matters because deflection is the one documentation outcome that converts d
 which makes it the number a documentation team is funded by and the number it is
 most tempted to overstate.
 
-The careful way to state the goal is "measurable reductions in support load". Not
+State the goal carefully, as measurable reductions in support load. Not
 "fewer tickets", which any release can produce by shipping fewer features, and
 not "a self-service portal", which is an artifact rather than an outcome. The
 word doing the work is *measurable*, and the honest answer in most organisations

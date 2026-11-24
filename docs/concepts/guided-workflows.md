@@ -39,7 +39,7 @@ that means "I did not look". A guided workflow answers the question instead of
 asking it, and the difference is not convenience: it is whether the record is
 true.
 
-The phrase that matters is again **rather than static documents**. The standard that
+The words that matter are **rather than static documents**. The standard that
 exists as a page is a standard whose compliance is self-reported.
 
 ## The golden path

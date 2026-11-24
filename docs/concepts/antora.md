@@ -27,7 +27,7 @@ three generators do.
 
 ## How this applies to your role
 
-Rarely directly, which the banner above records honestly. This page is
+Rarely directly, and the line at the top of this page says so. This page is
 `context` tier for two reasons.
 
 The first is recognition. AsciiDoc shows up in enterprise and Java-adjacent

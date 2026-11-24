@@ -28,10 +28,10 @@ should take, and the second part is where most of the value is.
 
 ## How this applies to your role
 
-It shows up in two forms. One is the overall goal: turning documentation,
+It shows up in two forms. One is the larger aim: turning documentation,
 standards and tribal knowledge into tooling, templates and self-service paths,
 so fewer people have to ask "how do I". The other is the day-to-day
-responsibility: capturing tribal knowledge from engineering, product and
+work: capturing tribal knowledge from engineering, product and
 operations, and turning it into playbooks, decision guides and self-service
 paths.
 
@@ -321,7 +321,7 @@ that genuinely recurred. Not an overview.
    the knowledge is not a fact.
 2. **Count the interruptions before and after.** Ask the expert, a month later,
    whether the question stopped. That number is the whole argument, and it is
-   what "measurable reductions in support load" means at the smallest scale.
+   what a measurable reduction in support load means at the smallest scale.
 3. **Find one case where the answer was code.** A judgement that could be a
    default, a warning, or a validator. Propose it. Being the documentation person
    who argues for changing a default rather than documenting it changes how

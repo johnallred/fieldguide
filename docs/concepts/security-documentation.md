@@ -20,9 +20,8 @@ tags: [ia, supporting]
 ## What it is
 
 Turning the security rules your documentation must follow into checks that run,
-rather than a page telling authors to be careful. The preference is
-explicit: templates, validators and guided workflows **rather than static
-documents**.
+rather than a page telling authors to be careful. The aim is
+templates, validators and guided workflows **rather than static documents**.
 
 The specific problem is that documentation code samples are the most
 copy-pasted code in any organisation. A sample is read as a recommendation, so
@@ -323,5 +322,5 @@ catch exactly that.
 
 - [Style guides and terminology management](style-guide.md), the same mechanical-versus-editorial split
 - [Writing custom linters](custom-linters.md), how to build the checks
-- [Release readiness](release-readiness.md), another standard from the same bullet
+- [Release readiness](release-readiness.md), another standard encoded as a check rather than a page
 - [Code-sample validation](code-sample-validation.md), which checks samples run rather than whether they are safe
