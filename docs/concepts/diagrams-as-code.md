@@ -34,14 +34,14 @@ gets trusted, because readers look at diagrams to orient themselves and rarely
 read them closely.
 
 On a Tuesday it looks like this. A new engineer asks why their change waited
-for a link check before deploying, when the pipeline diagram on the
+for a [link check](link-checking.md) before deploying, when the pipeline diagram on the
 contributing page shows lint, build, test, deploy. The diagram was right a
 year ago. Since then the test job was split in two and a link check was added,
 and nobody updated a PNG that only one person could edit. It was not anybody's
 job, and nothing could have caught it.
 
 As text, the same diagram is three lines in the page's source, reviewed with
-the change that made it wrong, and checkable in CI against the workflow file
+the change that made it wrong, and checkable in [CI](documentation-ci.md) against the workflow file
 it describes. It also gains something a PNG rarely has: a title and
 description that a screen reader can announce, which is the
 [accessibility](accessibility.md) requirement most diagrams quietly fail.
@@ -159,8 +159,8 @@ request that added it instead of misleading a new engineer a year later.
 **Step 4: render it**
 
 Rendering is not part of this drill, because it needs a JavaScript runtime.
-GitHub renders a `mermaid` code block in Markdown files, issues and pull
-requests directly. Material for MkDocs renders one after a `custom_fences`
+GitHub renders a `mermaid` code block in [Markdown](markdown.md) files, issues and pull
+requests directly. Material for [MkDocs](mkdocs.md) renders one after a `custom_fences`
 entry for `mermaid` under `pymdownx.superfences`. To produce an image file
 instead, save the diagram on its own as `pipeline.mmd` and run
 `mmdc -i pipeline.mmd -o pipeline.svg` with the Mermaid CLI.

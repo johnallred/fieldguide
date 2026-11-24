@@ -36,7 +36,7 @@ product can do, not what readers need to do with it, and the difference shows
 up later as support tickets.
 
 On a Tuesday it looks like this. You are asked to write a tutorial on retries.
-The engineer who built the feature walks you through it in ten minutes, and it
+The [engineer who built](sme-interviews.md) the feature walks you through it in ten minutes, and it
 sounds complete: set the argument, pick a value, done. Then you sit with a
 developer who is actually using it and watch them stop three times, each time
 at a decision the engineer never mentioned: is anyone waiting on this request,

@@ -190,7 +190,7 @@ a run costs" measured it on 2026-11-23 from four recorded runs.
 
 - **Resources.** Lambda compute and requests plus SQS requests came to about
   $0.00003 a run.
-- **CI.** The same run took 8.5 minutes of a Linux 2-core GitHub-hosted
+- **CI.** The same run took 8.5 minutes of a Linux 2-core [GitHub-hosted](github-actions.md)
   runner, at $0.006 a minute: $0.051.
 - **Which dominates.** The runner, by about seventeen hundred times. At two
   hundred labs a night that is roughly $0.18 a month of AWS against $306 a
@@ -289,7 +289,7 @@ the run they were read at.
 |---|---|
 | One personal account, isolated by stack name and tag | A throwaway account per learner or per run, provisioned through the organization and closed afterwards |
 | One lab | A catalog, run concurrently in a window |
-| One region | The regions learners use |
+| One region | The [regions learners use](isolated-region-labs.md) |
 | Cost from usage times published prices | Cost attributed per lab by cost allocation tags, activated in the management account |
 
 ### Why the bill could not answer

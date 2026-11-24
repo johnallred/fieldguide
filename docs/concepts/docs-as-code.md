@@ -18,7 +18,7 @@ tags: [dac, core]
 ## What it is
 
 Documentation kept in the same version control as the code, written in plain
-text, reviewed through pull requests, and built and published by CI. The
+text, reviewed through pull requests, and built and published by [CI](documentation-ci.md). The
 opposite is documentation kept in a CMS, a wiki, or a shared drive, edited
 through a web form, and published by someone clicking a button.
 
@@ -28,7 +28,7 @@ long chain of tooling decisions afterwards.
 ## How this applies to your role
 
 Most of the daily work in this field assumes it, even where nobody uses the
-phrase: Git authoring, CI/CD builds, linting, link validation, publishing, and
+phrase: [Git authoring](git-authoring.md), CI/CD builds, linting, link validation, publishing, and
 standards encoded into validators. Those are all things you can only do to
 documentation that lives in a repository.
 
@@ -139,17 +139,17 @@ file.
 | Navigation and site config | `mkdocs.yml`, `docusaurus.config.js` | Pull request |
 | Style rules | `.vale.ini`, `styles/` | Pull request |
 | The build and publish pipeline | `.github/workflows/` | Pull request |
-| Content model and templates | Front-matter schema, scaffolding | Pull request |
+| [Content model](content-model.md) and templates | Front-matter schema, [scaffolding](templates-scaffolding.md) | Pull request |
 
 ### The vocabulary
 
 | Term | Meaning |
 |---|---|
-| Single source of truth | One canonical location per fact, with everything else referencing it |
+| [Single source](single-sourcing.md) of truth | One canonical location per fact, with everything else referencing it |
 | Drift | Documentation and implementation disagreeing, silently |
 | Gate | A check that can fail a pull request |
 | Strict build | Warnings treated as errors |
-| Preview deployment | A built copy of the site for one pull request, so reviewers read rendered pages |
+| [Preview deployment](preview-deployments.md) | A built copy of the site for one pull request, so reviewers read rendered pages |
 | Docs-adjacent code | Scripts in the docs repo that validate, generate or package content |
 
 ### What it is commonly confused with
@@ -157,7 +157,7 @@ file.
 | Not the same as | Difference |
 |---|---|
 | Markdown | An authoring format. You can keep Markdown in a wiki and get none of this |
-| Static site generators | A build tool. Necessary, not sufficient |
+| [Static site generators](static-site-generators.md) | A build tool. Necessary, not sufficient |
 | Having docs on GitHub | Storage is not review, and review is not CI |
 | Writing docs in the code | That is docstrings and [generated reference](api-reference-generation.md), one part of a larger corpus |
 
@@ -217,7 +217,7 @@ one that disappoints.
 
 **How to tell it is working.** A repository where the docs
 build is green and nothing would fail if the content were wrong has installed
-MkDocs and nothing more. A repository with a check that has *caught* something,
+[MkDocs](mkdocs.md) and nothing more. A repository with a check that has *caught* something,
 visible in the history as a red build followed by a fix, has a gate that does
 work. Keep that commit; it is the most useful thing in the project.
 

@@ -29,7 +29,7 @@ noticed and fixed.
 ## How this applies to your role
 
 You meet assistants from two sides. Sometimes you build or feed one, usually
-alongside RAG pipelines and MCP servers. More often your documentation is the
+alongside RAG pipelines and [MCP](mcp.md) servers. More often your documentation is the
 corpus someone else's assistant reads, and it has to be discoverable and usable
 by that assistant as well as by developers.
 
@@ -45,7 +45,7 @@ logs: 40% of questions get a refusal, almost all because they are follow-ups
 that lost the subject ("what about for quantised models?"), and the refusals are
 indistinguishable from "we have no documentation on this". **Nobody filed a bug,
 they just stopped asking**, which is the characteristic failure of this product
-category and it is invisible without instrumentation.
+category and it is invisible without [instrumentation](docs-analytics.md).
 
 ## The golden path
 
@@ -517,7 +517,7 @@ lengthen.
 |---|---|---|
 | Refusal rate | 5 to 20% | Near zero means fabrication; over 40% means people will leave |
 | Gap refusals per week | declining | Whether the backlog is being worked |
-| Repeat question rate | declining | Whether answers are landing |
+| [Repeat question](repeat-questions.md) rate | declining | Whether answers are landing |
 | Citation click-through | nonzero | Whether anyone verifies, and whether the pages are good |
 | Turns per conversation | over 1 | If it is 1.0, follow-ups are failing silently |
 

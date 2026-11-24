@@ -29,8 +29,8 @@ the glossary, or accept that the term you chose lost.
 
 ## How this applies to your role
 
-It sits alongside freshness and code accuracy as one of three things the
-content lifecycle should be audited for. All three share a shape: the
+It sits alongside [freshness](freshness-monitoring.md) and code accuracy as one of three things the
+[content lifecycle](content-lifecycle.md) should be audited for. All three share a shape: the
 individual page was correct when written, and the world moved.
 
 Terminology drift is the one that damages trust fastest, because it is
@@ -41,7 +41,7 @@ things or one. Nothing is wrong; the corpus is just no longer speaking with one
 voice, and a reader who cannot tell whether two names mean the same thing stops
 trusting any of them.
 
-It also breaks retrieval, which is why it sits next to the AI-readiness work. A
+It also breaks retrieval, which is why it sits next to the [AI-readiness](agent-ready-content.md) work. A
 search for `access token` cannot rank a page that calls it an API key, and
 [embeddings](embeddings.md) blur the distinction without resolving it. Three
 names for one concept means a retriever has three weaker clusters instead of
@@ -247,7 +247,7 @@ are not being changed.
 | Below 60% | The glossary lost | Reconsider the canonical term |
 | 0% with usages | The canonical name is aspirational | Someone renamed it in a document and nowhere else |
 
-That last row happens more than it should. A term is changed in a style guide,
+That last row happens more than it should. A term is changed in a [style guide](style-guide.md),
 nobody updates the corpus, and a year later the canonical name exists only in
 the glossary. The measurement makes that visible in one run.
 
@@ -274,7 +274,7 @@ degrades search and assistant answers before anyone complains about style."
 
 **The follow-up is how you decide what the canonical term is**, and the honest
 answer involves usage data rather than preference: what the product calls it in
-the UI, what support tickets call it, what the search logs show people typing.
+the UI, what support tickets call it, what the [search logs](search-log-analysis.md) show people typing.
 A glossary that disagrees with all three will lose.
 
 **The tradeoff to name.** A drift report is only as good as its glossary,

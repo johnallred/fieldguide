@@ -22,7 +22,7 @@ language, which is the ordinary standard library and nothing exotic, but a
 specialism in the data: **documentation is text that carries structure, and
 structure is invisible to the tools text invites you to reach for.**
 
-Every interesting bug in this area comes from that sentence. A Markdown file
+Every interesting bug in this area comes from that sentence. A [Markdown](markdown.md) file
 looks like lines, so you process lines; the meaning lives in nesting, fences
 and front matter, which lines cannot see.
 
@@ -34,7 +34,7 @@ two have pages of their own because they fail differently.
 
 The reason it is a necessity rather than a nice-to-have is arithmetic. A
 corpus of a hundred pages has a few hundred cross-references, a few hundred
-code samples and a metadata field on every page, and every claim anybody makes
+code samples and a [metadata](metadata.md) field on every page, and every claim anybody makes
 about it ("every page has a summary", "no sample is broken", "this concept is
 unreachable") is a loop over files. Without that, the claims are assertions
 somebody remembers checking once.
@@ -150,7 +150,7 @@ error.
 **Step 6: the correction from step 3, measured on a different sample**
 
 HTML comments were a few dozen words, three hundredths of one percent. At the
-time the corpus still held nine pages the scaffold had generated and nobody had
+time the corpus still held nine pages the [scaffold](templates-scaffolding.md) had generated and nobody had
 written, so the identical measurement had a second sample to run over:
 
 ```

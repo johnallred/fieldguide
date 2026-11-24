@@ -28,9 +28,9 @@ and the difficulty.
 
 ## How this applies to your role
 
-Agentic workflows are the third consumer of AI-ready content, alongside RAG and
-internal assistants. On the developer-relations side, the same thing shows up
-as an agentic toolkit to document and as coding agents reading your
+Agentic workflows are the third consumer of [AI-ready](agent-ready-content.md) content, alongside [RAG](rag.md) and
+[internal assistants](ai-assistants.md). On the developer-relations side, the same thing shows up
+as an agentic toolkit to document and as [coding agents](coding-agents.md) reading your
 documentation.
 
 What makes it `core` and difficulty 3 is that **the usual review model stops

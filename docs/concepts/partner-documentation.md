@@ -39,8 +39,8 @@ outputs can it appear in?
 
 The reason it belongs in the guide at all is the fourth audience. **An agent
 inherits the access of whoever it acts for, and a retrieval corpus does not
-inherit anything unless somebody built that.** A single vector index over all
-three tiers, queried by an assistant, is an access-control failure waiting to
+inherit anything unless somebody built that.** A single [vector index](vector-stores.md) over all
+three tiers, queried by an [assistant](ai-assistants.md), is an access-control failure waiting to
 happen, and it is a new failure mode that the navigation-era version of this
 problem did not have.
 
@@ -49,7 +49,7 @@ problem did not have.
 Build a corpus with three tiers and a publish step that physically cannot leak.
 Thirty minutes.
 
-**Step 1: declare the tier as a field, with a closed vocabulary**
+**Step 1: declare the tier as a field, with a [closed vocabulary](taxonomy.md)**
 
 ```bash
 mkdir -p partner-drill && cd partner-drill
@@ -252,7 +252,7 @@ Worth saying plainly, since this is `context` tier:
 - Authentication for a partner portal is platform engineering's.
 - Whether a customer can be named is a commercial question.
 
-Your job is that the content model carries the distinction, the publish step
+Your job is that the [content model](content-model.md) carries the distinction, the publish step
 fails closed, and the retrieval layer respects it.
 
 ## Explaining it to your team
@@ -265,7 +265,7 @@ part I would want to check at a company with partners is the retrieval layer: a
 single index over all tiers will answer a public question with internal content,
 and nothing about that failure is visible."
 
-**The follow-up is likely about the single-source argument**, meaning why not
+**The follow-up is likely about the [single-source](single-sourcing.md) argument**, meaning why not
 keep internal content in a separate repository entirely. That is a legitimate
 design and often the right one. The honest comparison: separate repositories
 make a leak nearly impossible and make reuse nearly impossible too, so the same
@@ -284,7 +284,7 @@ the common case needs no decision, and it is a real weakening of the model in
 exchange for authors not being blocked.
 
 **One sharper point.** The strongest thing to say is that **publishing a corpus for
-retrieval converts an information-architecture field into an access-control
+retrieval converts an [information-architecture](information-architecture.md) field into an access-control
 boundary**, and almost nobody notices the moment it happens. An `audience` field
 used for navigation is a convenience; the same field used to partition a vector
 index is a security control, and it was designed as the former. Raising that

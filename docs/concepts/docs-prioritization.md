@@ -25,7 +25,7 @@ crucially a **retire** column, which most documentation backlogs do not have.
 ## How this applies to your role
 
 Measurement exists to feed one decision. You measure outcomes such as
-time-to-first-success, support deflection, repeat questions and AI answer
+[time-to-first-success](time-to-first-success.md), [support deflection](support-deflection.md), repeat questions and AI answer
 quality, and you use the data to decide what to build, fix or retire.
 
 The three verbs are the content. Most documentation prioritization has two
@@ -177,7 +177,7 @@ individually:
 | It appears in search results and in retrieval | Every reader who gets it instead of the right page |
 | It is included in every audit and migration | You, repeatedly |
 | It must be reviewed to stay in compliance with the model | The review cycle |
-| It dilutes [llms.txt](llms-txt.md) and the chunk corpus | Every assistant answer |
+| It dilutes [llms.txt](llms-txt.md) and the [chunk](chunking.md) corpus | Every assistant answer |
 | It can be found and followed, and be wrong | A reader, expensively |
 
 The fourth row is new and is the one worth raising with your team. In a corpus
@@ -192,7 +192,7 @@ ago.
 | Page views | Demand | Satisfaction. A heavily viewed page may be heavily re-read because it is bad |
 | Support tickets | Real failures | Only covers people who asked. Most do not |
 | Repeat questions | Documentation gaps | Biased toward whoever is loudest in a channel |
-| Zero-click searches | Gaps in the reader's words | Volume is low, so weak on frequency |
+| [Zero-click](search-log-analysis.md) searches | Gaps in the reader's words | Volume is low, so weak on frequency |
 | Staleness | Risk | Harm. An old page about something stable is fine |
 | Engineer requests | What a colleague noticed | Impact. Usually reflects their week |
 

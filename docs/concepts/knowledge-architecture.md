@@ -30,7 +30,7 @@ A dependency graph will.
 ## How this applies to your role
 
 The relationship is usually precise: you **collaborate** with documentation
-leads on it, and your contribution is **implementation feedback**, what works,
+leads on it, and your contribution is **[implementation feedback](implementation-feedback.md)**, what works,
 breaks and scales. The architecture is owned jointly; what you bring is
 evidence from having built it.
 
@@ -167,8 +167,8 @@ Two concepts are marked `core`, the highest importance, and sit entirely
 outside the graph. By the logic of steps 2 and 4 that looks like a
 contradiction.
 
-It is not. Both are craft skills: reading code to verify a claim, and treating
-documentation as a product. Technical writing was a third until release notes
+It is not. Both are craft skills: [reading code](reading-code-to-verify.md) to verify a claim, and treating
+documentation as a product. [Technical writing](technical-writing.md) was a third until release notes
 named it as a prerequisite, which is fair: a changelog is writing. They are among the most important
 things on the curriculum and they are not *prerequisites* for anything,
 because you do not learn them once and build on them. You get better at them
@@ -194,7 +194,7 @@ looked like a defect and was a property of the domain.
 | Artifact | Navigation, URL structure, taxonomy | A concept graph with dependencies |
 | Question it answers | Where does this page go? | What must a reader already know? |
 | Failure | A reader cannot find the page | A reader finds it and cannot follow it |
-| Validated by | Card sorting, tree testing, search logs | Graph properties, and reader drop-off |
+| Validated by | Card sorting, tree testing, [search logs](search-log-analysis.md) | Graph properties, and reader drop-off |
 | Who owns it | Often the docs team alone | Jointly, with documentation leads |
 
 ### What a knowledge graph lets you compute

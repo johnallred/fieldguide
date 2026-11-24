@@ -24,7 +24,7 @@ staleness and the two are only loosely correlated.
 
 ## How this applies to your role
 
-Freshness belongs with code accuracy and terminology drift as the three things
+Freshness belongs with [code accuracy](reading-code-to-verify.md) and [terminology drift](terminology-drift.md) as the three things
 content auditing should cover. They share a shape: correct when written,
 falsified by something that happened elsewhere.
 
@@ -182,8 +182,8 @@ publishing nothing.
 | A source file | API reference, configuration pages | Coarse; any change in the file flags the page |
 | A symbol or function | Reference pages for one function | Needs parsing, or a convention |
 | A dependency version | Install and compatibility pages | Easy, from the lockfile |
-| A release tag | Release notes, upgrade guides | Easy |
-| An OpenAPI path | Endpoint documentation | Easy if the spec is in the repo |
+| A release tag | [Release notes](release-notes.md), upgrade guides | Easy |
+| An [OpenAPI](openapi.md) path | Endpoint documentation | Easy if the spec is in the repo |
 | Nothing trackable | Conceptual explanation | Fall back to review cadence by importance |
 
 Conceptual pages have no mechanical subject, and pretending otherwise produces
@@ -247,7 +247,7 @@ than a pass or fail, with a tracked subject per page.
 
 **How to tell it is working.** `docpack` implements the
 weak version honestly and says so: `PageMeta.is_stale` fires at 365 days and is
-surfaced as a warning and as an `## Optional` section in `llms.txt`. That is
+surfaced as a warning and as an `## Optional` section in [`llms.txt`](llms-txt.md). That is
 recorded as a **partial** demonstration rather than written up as a complete
 one, because a clock-based check is exactly what this page argues against.
 Naming the weakness of your own implementation is worth more to the people who

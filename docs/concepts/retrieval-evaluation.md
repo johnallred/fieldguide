@@ -30,7 +30,7 @@ is **useful** rather than whether it is **correct**.
 ## How this applies to your role
 
 Evaluation sets for answer accuracy sit beside the other AI-ready outputs:
-chunk records, llms.txt and an MCP server. They are the rarest of these in
+chunk records, [llms.txt](llms-txt.md) and an [MCP](mcp.md) server. They are the rarest of these in
 practice and the most diagnostic of whether a team is serious.
 
 Here is why it matters more than it sounds. Every other gate in this guide,
@@ -43,7 +43,7 @@ that, and without measuring it you cannot tell an improvement from a
 coincidence.
 
 On a Tuesday it is the thing that settles arguments. Somebody proposes adding
-embeddings. Somebody else proposes a reranker. A third person wants to rewrite
+[embeddings](embeddings.md). Somebody else proposes a [reranker](vector-stores.md). A third person wants to rewrite
 the chunker. All three are plausible, all three cost weeks, and without an eval
 set the decision is made by whoever argues hardest. With one, you measure the
 lexical baseline, see that routing is the gap rather than ranking, and build the
@@ -491,7 +491,7 @@ cases, and pretending otherwise is how teams make choices out of noise.
 |---|---|---|
 | Search queries with no click | **best**: gaps in the reader's words | an export |
 | Support ticket subject lines | real failures, biased to people who ask | an export |
-| Repeat questions in channels | real, biased to the loudest | a search |
+| [Repeat questions](repeat-questions.md) in channels | real, biased to the loudest | a search |
 | Assistant conversation logs | exactly your traffic | needs the assistant running |
 | Hand-written by the author | available today, reflects author assumptions | an afternoon |
 

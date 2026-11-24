@@ -38,7 +38,7 @@ What distinguishes someone who has operated it from someone who has installed
 it is knowing what its build does not verify. MkDocs will happily publish a
 dead heading anchor and an unreachable page in its strictest mode, which is
 measured below, so an MkDocs corpus of any size needs gates that an equivalent
-Sphinx project would get for free.
+[Sphinx](sphinx.md) project would get for free.
 
 ## The golden path
 
@@ -137,7 +137,7 @@ pays the full cost. At 121 pages that is sixteen seconds and tolerable; at a
 thousand it is the reason your contributors stop running the build locally.
 
 `mkdocs serve` mitigates it for authoring, because it rebuilds on change and
-reloads, but CI pays full price every time.
+reloads, but [CI](documentation-ci.md) pays full price every time.
 
 **Step 5: the extension point people miss**
 
@@ -196,9 +196,9 @@ three gates you now owe, and a measured reason to care about your theme.
 
 | Plugin | Does |
 |---|---|
-| `mkdocstrings` | API reference from Python docstrings |
+| `mkdocstrings` | [API reference](api-reference-generation.md) from Python docstrings |
 | `mike` | [Versioned](versioning.md) deployments |
-| `mkdocs-redirects` | URL stability when pages move |
+| `mkdocs-redirects` | URL stability when [pages move](content-retirement.md) |
 | `mkdocs-minify-plugin` | Smaller output |
 | `mkdocs-git-revision-date-localized` | Page dates from Git, with the caveats on [freshness](freshness-monitoring.md) |
 

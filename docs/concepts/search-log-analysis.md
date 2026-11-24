@@ -91,7 +91,7 @@ total such competing entries: 1
 **One.** There is no duplication problem. The 7-of-90 figure came from my own
 length normalization: dividing term frequency by document length rewards short
 sections, and a path page's one-line entry for a concept is about as short as a
-document gets. MkDocs Material uses lunr, with boosted title fields and
+document gets. [MkDocs](mkdocs.md) Material uses lunr, with boosted title fields and
 different length handling, and does not rank this way.
 
 I had built a proxy for search in order to avoid needing query logs, and the
@@ -131,7 +131,7 @@ The disambiguating information exists: every entry carries its `location`, so
 the page is recoverable, and Material's search UI uses it and shows the parent
 page, so a human browsing the site is fine. Any consumer using `title` alone is
 not, and that now includes retrieval pipelines and assistants reading an index
-directly. It is the same defect as a grounding report naming the page when it
+directly. It is the same defect as a [grounding](grounding.md) report naming the page when it
 checked the chunk: the identifier has to carry the section, or a hundred and
 seven things look like one thing.
 
@@ -227,7 +227,7 @@ collection; it is a reason to collect the aggregate rather than the transcript.
 ### Why the other measurements depend on this one
 
 Few teams name search logs, and most of the measurement they want depends on
-them. AI answer quality and repeat questions are each evaluation over a
+them. [AI answer quality](ai-answer-quality.md) and repeat questions are each evaluation over a
 question set, and a question set without query data is the author's
 guess about readers, which is exactly the gap step 4 measures.
 

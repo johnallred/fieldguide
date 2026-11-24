@@ -103,7 +103,7 @@ link targets that are not pages in this tree: 14 distinct
 
 Those fourteen are filenames inside golden-path code samples, belonging to the
 fictional corpora the exercises build. Correct content, and not links, which is
-why the link checker had never flagged them.
+why the [link checker](link-checking.md) had never flagged them.
 
 A measurement that counts one population and reports it as another is the most
 common analytics defect there is, and the hardest to notice, because the number
@@ -229,7 +229,7 @@ The top two are worth more than everything below them combined, which is why
 | A terminal, via `--help` | None |
 | An IDE hover or completion | None |
 | A package registry page | Vendor-dependent |
-| An assistant answering from the corpus | None, unless you built the assistant |
+| An [assistant](ai-assistants.md) answering from the corpus | None, unless you built the assistant |
 | A snippet copied into somebody's codebase | None |
 
 Only the first row is instrumented, and it is not obviously the largest. Any

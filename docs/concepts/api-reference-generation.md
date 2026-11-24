@@ -32,7 +32,7 @@ the reference unless you use the right reference syntax.
 ## How this applies to your role
 
 You will maintain reference documentation that assumes no prior context,
-alongside tutorials and sample walkthroughs. Reference is the layer where hand-authoring
+alongside tutorials and [sample walkthroughs](sample-walkthroughs.md). Reference is the layer where hand-authoring
 fails first and worst: a corpus with two hundred functions cannot be
 hand-maintained through a refactor, and the failure is silent.
 
@@ -152,7 +152,7 @@ exit=0
 
 Exit 0. The link is dead twice over, because the real anchor mkdocstrings emits
 is `pkg.widget.retry` with the dots, and that symbol no longer exists anyway.
-MkDocs logs `INFO` and publishes it, exactly as on the
+[MkDocs](mkdocs.md) logs `INFO` and publishes it, exactly as on the
 [link checking](link-checking.md) page.
 
 So generating the reference did not protect the references *into* it.
@@ -227,7 +227,7 @@ corpus plus `intersphinx`.
 |---|---|---|
 | Google | `Args:` and `Returns:` sections | `napoleon`, or mkdocstrings default |
 | NumPy | Underlined sections | `napoleon` |
-| reStructuredText | `:param x:` | Nothing extra in Sphinx |
+| [reStructuredText](restructuredtext.md) | `:param x:` | Nothing extra in Sphinx |
 | Plain prose | No structure | Nothing, and you get no parameter table |
 
 Pick one and enforce it with a [linter](custom-linters.md). A corpus with three
@@ -292,7 +292,7 @@ symbol fails the build, plus the use of symbol references rather than anchors.
 reference with `mkdocstrings` and runs `--doctest-modules` across the package,
 so the docstrings that feed the reference are themselves executed. The
 combination is the thing to point at: generation keeps the signature honest,
-and doctests keep the examples in it honest, which are two different kinds of
+and [doctests](doctests.md) keep the examples in it honest, which are two different kinds of
 lie.
 
 ## Related

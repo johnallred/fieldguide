@@ -401,7 +401,7 @@ page, which is worth having regardless of whether any model ever reads the file.
 **The tradeoff to name.** A hand-written `llms.txt` is worse than none.
 Committed once and forgotten, it actively misinforms a model about what your
 corpus contains, and unlike a stale page nothing in your site contradicts it.
-So the real commitment is a build step and a CI gate that fails when the
+So the real commitment is a build step and a [CI](documentation-ci.md) gate that fails when the
 committed file does not match the corpus. A team not ready for that should skip
 the file.
 
@@ -410,7 +410,7 @@ has nothing to do with models. **It makes the quality of your page summaries
 suddenly legible.** Forty summaries in one file, side by side, is a brutal
 review: the vague ones are obvious at a glance in a way they never are
 scattered across forty pages of front matter. Several teams have found their
-content model's weakest field this way, and that is a real benefit independent
+[content model](content-model.md)'s weakest field this way, and that is a real benefit independent
 of whether the convention survives.
 
 ## Putting it into practice

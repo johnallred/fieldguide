@@ -48,7 +48,7 @@ subject of step 5.
 Build an extractor, discover the state problem, add a skip convention, then
 find out that your passing harness is lying to you. About forty-five minutes.
 
-**Step 1: a tutorial and the library it documents**
+**Step 1: a [tutorial](tutorial-design.md) and the library it documents**
 
 ````bash
 mkdir -p samples-demo/docs && cd samples-demo

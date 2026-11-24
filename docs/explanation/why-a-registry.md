@@ -50,7 +50,7 @@ status.
 
 The [coverage matrix](../coverage.md), the [learning paths](../paths/index.md),
 and [the full ordering](../study-plan.md) are all generated from the registry.
-They are views, not copies, so there is no state in them that can drift. CI
+They are views, not copies, so there is no state in them that can drift. [CI](../concepts/documentation-ci.md)
 runs the generator with `--check` and fails if a committed view is stale, which
 closes the last gap: changing the registry without regenerating.
 
@@ -59,8 +59,8 @@ closes the last gap: changing the registry without regenerating.
 This is the part that justifies the machinery rather than merely describing it.
 
 **Two learning paths taught a prerequisite too late.** The first-week path
-taught link checking before documentation CI, and the educator path taught
-reproducible environments before cold-start testing. Both were flagged on the
+taught [link checking](../concepts/link-checking.md) before documentation CI, and the educator path taught
+[reproducible environments](../concepts/reproducible-environments.md) before [cold-start testing](../concepts/coldstart-testing.md). Both were flagged on the
 first run.
 
 **Both turned out to be wrong dependencies, not wrong orders.** Thinking about

@@ -20,7 +20,7 @@ tags: [qa, supporting]
 A check you write yourself because the rule you need is not a pattern. Vale and
 its relatives match text. Some of the most valuable documentation rules require
 *parsing*: knowing which lines are code, which are heredoc data, whether a
-front-matter field is a member of a closed vocabulary, whether the version
+front-matter field is a member of a [closed vocabulary](taxonomy.md), whether the version
 mentioned in a sentence is the one in the lockfile.
 
 The useful phrase is "content quality automation you have built." Built, not
@@ -40,8 +40,8 @@ silently broke seven pages of this guide.
 
 The deeper reason is that a custom linter encodes a decision. Once a rule is
 code, the convention it enforces becomes explicit, testable and arguable in a
-pull request, which is what it means to encode standards into templates, validators and
-guided workflows rather than static documents.
+pull request, which is what it means to encode standards into [templates](templates-scaffolding.md), validators and
+[guided workflows](guided-workflows.md) rather than static documents.
 
 ## The golden path
 
@@ -52,7 +52,7 @@ the measurement, not the code.
 **Step 1: the rule that sounds obviously right**
 
 Every code fence should declare its language, so syntax highlighting works.
-A reasonable house rule, and not expressible in Vale, which excludes code
+A reasonable [house rule](style-guide.md), and not expressible in Vale, which excludes code
 blocks from its analysis by design.
 
 ```python

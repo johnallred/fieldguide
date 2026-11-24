@@ -27,8 +27,8 @@ the cheapest thing they can give is worth more than being well liked.
 
 ## How this applies to your role
 
-You work with five partner functions, Engineering, Product, Security,
-Developer Relations and Partner Programs, and the partnership has an outcome:
+You work with five partner functions, Engineering, Product, [Security](security-documentation.md),
+[Developer Relations](developer-advocacy.md) and [Partner Programs](partner-documentation.md), and the partnership has an outcome:
 every release ships documented, discoverable and supportable. The
 developer-relations version is that each new capability ships with tested
 documentation.

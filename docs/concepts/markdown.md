@@ -222,10 +222,10 @@ its rules differ from everything else on this page.
 |---|---|---|
 | CommonMark | The specification | Strict, small, unambiguous |
 | GFM | GitHub, and much tooling | Tables, strikethrough, task lists, autolinks |
-| Python-Markdown | MkDocs, Material | Extension ecosystem, including PyMdown |
-| MyST | Sphinx with `myst-parser` | Markdown with reStructuredText's directive power |
-| MDX | Docusaurus and friends | Markdown plus JSX; see [MDX](mdx.md) |
-| AsciiDoc | Antora | Not Markdown; a different language with a real spec |
+| Python-Markdown | [MkDocs](mkdocs.md), Material | Extension ecosystem, including PyMdown |
+| MyST | [Sphinx](sphinx.md) with `myst-parser` | Markdown with reStructuredText's directive power |
+| MDX | [Docusaurus](docusaurus.md) and friends | Markdown plus JSX; see [MDX](mdx.md) |
+| AsciiDoc | [Antora](antora.md) | Not Markdown; a different language with a real spec |
 
 ### Choosing what to allow
 

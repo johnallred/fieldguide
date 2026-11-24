@@ -35,7 +35,7 @@ For thirty years information architecture meant navigation design: menus,
 breadcrumbs, sitemaps, card sorting, where things go so humans can click to
 them. That work still exists. But a documentation corpus in 2026 has a second
 audience that does not navigate at all. A retrieval system never sees your menu.
-An assistant answering a developer's question does not traverse your hierarchy;
+An [assistant](ai-assistants.md) answering a developer's question does not traverse your hierarchy;
 it matches a fragment of text and returns it with whatever context traveled
 alongside. **Structure that only exists in the navigation is invisible to that
 reader.**

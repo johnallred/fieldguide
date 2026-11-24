@@ -250,10 +250,10 @@ change.
 
 | Generator | Support |
 |---|---|
-| Docusaurus | Built in: per-locale builds and a translation directory |
-| Sphinx | `gettext` builder, a mature and conventional workflow |
-| MkDocs | Plugin, less mature than Sphinx or Docusaurus |
-| Antora | Component-based; a locale is usually a separate component |
+| [Docusaurus](docusaurus.md) | Built in: per-locale builds and a translation directory |
+| [Sphinx](sphinx.md) | `gettext` builder, a mature and conventional workflow |
+| [MkDocs](mkdocs.md) | Plugin, less mature than Sphinx or Docusaurus |
+| [Antora](antora.md) | Component-based; a locale is usually a separate component |
 
 If localization is known to be coming, it belongs in the
 [generator choice](static-site-generators.md), because retrofitting it is

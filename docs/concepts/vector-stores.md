@@ -524,7 +524,7 @@ nothing, while the right answer sat at rank 150.
 | Changing the embedding model | Every stored vector is incomparable; full re-embed |
 | Changing the chunker | Same, plus every id changes unless ids are content-derived |
 | Thresholding on absolute score | Scores are not comparable across queries |
-| No `updated` in the metadata | Cannot discount stale content at query time |
+| No `updated` in the metadata | Cannot discount [stale content](freshness-monitoring.md) at query time |
 | Re-indexing on every commit | Avoidable with [stable chunk ids](chunking.md) |
 
 ## Explaining it to your team
@@ -551,7 +551,7 @@ infrastructure for a gain that is invisible on the queries you tested with.
 There is also a subtler cost: fusion makes results harder to explain. With BM25
 alone you can say which terms matched; with RRF over two retrievers the answer
 is "it was third in one list and first in the other", which satisfies nobody
-when a stakeholder asks why the assistant said something wrong.
+when a stakeholder asks why the [assistant](ai-assistants.md) said something wrong.
 
 **One sharper point.** The strongest framing is that **a vector store is a cache of
 a decision you made earlier.** Every vector in it is downstream of a chunking

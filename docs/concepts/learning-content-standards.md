@@ -261,7 +261,7 @@ decision about which standard each kind of content uses.
    zip, or one statement template with two identifiers.
 2. Write the one-page decision: which standard for courses, which for labs,
    which for activity outside the LMS, and why.
-3. Add the checker to the pipeline that builds your packages, so a defect fails
+3. Add the checker to the [pipeline that builds your packages](lab-publishing.md), so a defect fails
    the build instead of a learner.
 
 **How to tell it is working.** The drill above runs in this guide's test suite

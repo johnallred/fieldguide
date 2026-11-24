@@ -172,7 +172,7 @@ result.
 **Step 5: the finding that only appeared in a test**
 
 Writing the test for that empty result produced a surprise. A query of apparent
-gibberish returned four confident matches, because BM25 tokenizes "zzzqqq no
+gibberish returned four confident matches, because [BM25](vector-stores.md) tokenizes "zzzqqq no
 such term anywhere" and matches on `term` and `anywhere`. A genuinely empty
 result needs out-of-vocabulary tokens throughout.
 

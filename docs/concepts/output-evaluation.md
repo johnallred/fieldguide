@@ -20,7 +20,7 @@ tags: [ai, core]
 ## What it is
 
 Scoring generated text against examples you labeled yourself, so that a change
-to a prompt or a model produces a number instead of an impression.
+to a [prompt](prompting.md) or a model produces a number instead of an impression.
 
 [Retrieval evaluation](retrieval-evaluation.md) asks whether the right page came
 back. This asks whether the text produced from it was any good, which is a
@@ -28,7 +28,7 @@ harder question because there is no single correct output to compare against.
 
 ## How this applies to your role
 
-It is the third part of applying LLMs to content work, after prompting, and
+It is the third part of applying [LLMs](llm-content-lifecycle.md) to content work, after prompting, and
 retrieval and grounding. The ordering is the pipeline, and this is the
 stage that tells you whether the first two worked.
 
@@ -586,7 +586,7 @@ refused  = looks_like_refusal(answer)
 
 The third row is the finding worth building the harness for. Add five questions
 whose answers are deliberately absent from your corpus, and measure how often
-the system invents something instead of saying it does not know. A system that
+the system [invents](hallucination-guardrails.md) something instead of saying it does not know. A system that
 never refuses is not accurate, it is confident, and no retrieval metric exposes
 that at all.
 

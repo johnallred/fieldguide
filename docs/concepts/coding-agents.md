@@ -19,8 +19,8 @@ tags: [ai, core]
 ## What it is
 
 Writing documentation for a reader that will take your code sample and put it
-into a file. Not an assistant answering a question, and not an agent running a
-multi-step task: a coding agent in someone's editor, reading your page to write
+into a file. Not an [assistant](ai-assistants.md) answering a question, and not an agent running a
+[multi-step task](agentic-workflows.md): a coding agent in someone's editor, reading your page to write
 code with your library.
 
 The distinguishing property is that **it acts on your examples directly and
@@ -511,7 +511,7 @@ control for your readers.
 | Prose polish, tone, hedging | none measurable | The thing writers spend time on |
 
 The last two rows are the uncomfortable finding, and the reason this concept
-is separate from ordinary technical writing. The effort that improves a page
+is separate from ordinary [technical writing](technical-writing.md). The effort that improves a page
 for a person is close to orthogonal to the effort that improves it for an
 agent, and a team can only find that out by measuring both.
 

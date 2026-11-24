@@ -244,7 +244,7 @@ documentation defect with a larger audience than any page in the docs.
 ## Putting it into practice
 
 **The work product.** A changelog in Keep a Changelog form, release notes for
-the next release written for the reader, and the drill's check running in CI
+the next release written for the reader, and the drill's check running in [CI](documentation-ci.md)
 on every release branch.
 
 **Three things to do, in order:**

@@ -43,7 +43,7 @@ needs to ask a specific question, get a specific answer, and ask a follow-up,
 with filters it chooses.
 
 On a Tuesday this is the difference between two failure modes. With a flat
-context dump, a coding agent gets 40,000 characters of your docs and uses the
+context dump, a [coding agent](coding-agents.md) gets 40,000 characters of your docs and uses the
 wrong page because it was first. With an MCP server, the agent calls
 `search_docs(query="batch size", diataxis="how-to")`, gets three chunks, and
 if they are wrong it can call again with a different filter. **The second
@@ -399,7 +399,7 @@ attempt that fails safely instead of serving a file outside the corpus.
 | `tools/list` | What this server can do, with JSON Schema per tool | Yes |
 | `tools/call` | Invoke a tool, return content blocks | Yes |
 | `resources/list`, `resources/read` | Expose documents as addressable resources | Optional |
-| `prompts/list`, `prompts/get` | Reusable prompt templates | Optional |
+| `prompts/list`, `prompts/get` | Reusable [prompt](prompting.md) templates | Optional |
 
 Tools are enough for a documentation server. Resources are an alternative model
 where the client browses rather than queries, and for a large corpus querying
@@ -475,7 +475,7 @@ against your docs, which is exactly what agentic workflows are, and is not every
 **One sharper point.** The strongest observation is that **MCP makes your content
 model externally visible, and therefore externally tested.** The `kind` enum
 appears in the tool schema, so a model's filter choices become a measurable
-signal about whether your taxonomy makes sense. If agents consistently pick
+signal about whether your [taxonomy](taxonomy.md) makes sense. If agents consistently pick
 `reference` for questions your corpus answers in `how-to` pages, that is
 evidence about your [content model](content-model.md) that no internal review
 would produce. Treating the MCP schema as a probe into your information

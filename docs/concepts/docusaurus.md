@@ -20,7 +20,7 @@ tags: [dac, supporting]
 A React-based static site generator aimed specifically at documentation,
 originally from Meta. Pages are [MDX](mdx.md), so prose can contain components,
 and the things that are plugins or conventions elsewhere are first-class here:
-[versioned docs](versioning.md), internationalization, a blog, search
+[versioned docs](versioning.md), [internationalization](localization.md), a blog, search
 integration and a sidebar model.
 
 It produces a React application that is pre-rendered to static HTML, and that
@@ -64,7 +64,7 @@ du -sh node_modules && ls node_modules | wc -l
 
 Seven hundred and seventy-one packages, 349 megabytes, for a documentation
 site. That is not an argument against it, but it is a number worth saying out
-loud when someone asks why the build is slower than MkDocs.
+loud when someone asks why the build is slower than [MkDocs](mkdocs.md).
 
 **Step 2: build**
 
@@ -83,7 +83,7 @@ table below is the figure to quote. Per page that is the slowest of the three by
 wide margin, because it is compiling and pre-rendering a React application
 rather than templating HTML.
 
-This page used to put a MkDocs and a Sphinx figure beside that one, from a
+This page used to put a MkDocs and a [Sphinx](sphinx.md) figure beside that one, from a
 measurement that ran once and was never committed.
 `drills/generator_build.py` now builds an identical corpus under both, and the
 comparison is more interesting than the numbers were:

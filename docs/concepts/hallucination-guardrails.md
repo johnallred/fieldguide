@@ -343,7 +343,7 @@ You already have it, which is why this check is cheaper than it sounds:
 | Source | Gives you |
 |---|---|
 | `--help` output, parsed | Every real flag |
-| An OpenAPI document | Every real endpoint and parameter |
+| An [OpenAPI](openapi.md) document | Every real endpoint and parameter |
 | `inspect.signature` over the public API | Every real function and keyword |
 | Git tags | Every real version |
 | The [content model's](content-model.md) closed vocabularies | Every real page type and audience |

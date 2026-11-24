@@ -17,7 +17,7 @@ tags: [edu, supporting]
 
 Putting your team's documentation tooling, samples and writing where a
 stranger can run it: open-source contributions, public repositories, published
-write-ups on docs-as-code, AI-assisted documentation or knowledge engineering.
+write-ups on [docs-as-code](docs-as-code.md), AI-assisted documentation or knowledge engineering.
 Its defining property is that it is verifiable: a reader can clone the thing
 and find out.
 
@@ -33,8 +33,8 @@ lean on context: the reader knows the team, the history and whom to ask.
 Published work is judged by a stranger who has only what is in the repository,
 and that is the most demanding review your work will get.
 
-It is also how other teams adopt what you built. A linter, a doc test harness
-or a sample gallery that another team can clone and run spreads without a
+It is also how other teams adopt what you built. A linter, a [doc test harness](doc-test-harness.md)
+or a [sample gallery](sample-apps.md) that another team can clone and run spreads without a
 meeting. One that only works on your machine does not spread at all.
 
 There is a third reason, specific to this field. Documentation work is mostly
@@ -323,7 +323,7 @@ what you chose to leave out, and whether you wrote down the limits.
 | Section | Answers |
 |---|---|
 | One line at the top | What is this |
-| Quick start, copy-pasteable | Can I run it |
+| [Quick start](quickstarts.md), copy-pasteable | Can I run it |
 | What it is for, honestly scoped | Should I |
 | How it is organized | Where do I look |
 | What it does not do | Can I trust the rest |

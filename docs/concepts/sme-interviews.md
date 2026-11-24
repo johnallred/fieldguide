@@ -321,7 +321,7 @@ that genuinely recurred. Not an overview.
    the knowledge is not a fact.
 2. **Count the interruptions before and after.** Ask the expert, a month later,
    whether the question stopped. That number is the whole argument, and it is
-   what a measurable reduction in support load means at the smallest scale.
+   what a measurable reduction in [support load](support-deflection.md) means at the smallest scale.
 3. **Find one case where the answer was code.** A judgment that could be a
    default, a warning, or a validator. Propose it. Being the documentation person
    who argues for changing a default rather than documenting it changes how

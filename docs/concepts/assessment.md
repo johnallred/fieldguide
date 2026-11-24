@@ -34,8 +34,8 @@ state and worth saying out loud rather than disguising.
 This matters because every claim a documentation team makes about outcomes is an assessment
 claim wearing other clothes.
 
-"A developer reaches a working result in fifteen minutes" is a measurement of
-readers. So is "our quickstart reduced support tickets". So is every sentence
+"A developer reaches a working result in [fifteen minutes](time-to-first-success.md)" is a measurement of
+readers. So is "our quickstart reduced [support tickets](support-deflection.md)". So is every sentence
 in a performance review about improving onboarding. If nothing in the system
 observes a reader succeeding or failing, those claims rest on page views and on
 the absence of complaints, which is the weakest evidence available and the most

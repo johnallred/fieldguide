@@ -20,7 +20,7 @@ tags: [ia, supporting]
 Moving an existing body of documentation from one system to another, most
 often from a wiki or CMS into a [docs-as-code](docs-as-code.md) repository.
 It has three parts: an inventory and audit that decide what happens to every
-page, a conversion that turns the old format into Markdown, and a redirect map
+page, a conversion that turns the old format into [Markdown](markdown.md), and a redirect map
 that keeps every old URL leading somewhere useful.
 
 The conversion is the part people plan for and the easy part. A migration
@@ -54,7 +54,7 @@ people still read and the markup the converter left behind, fix both, and
 produce the redirect map. About thirty-five minutes.
 
 The audit is committed as `drills/migration_audit.py`, which holds every file
-below and a test that keeps them identical to this page. The pages and traffic
+below and a test that keeps them identical to this page. The pages and [traffic](docs-analytics.md)
 are invented. The converted files stand in for what a converter such as
 pandoc produces from a wiki export.
 
@@ -224,13 +224,13 @@ lose something, which is why the residue check exists.
 
 | Rule | Why |
 |---|---|
-| Map every old URL to its final destination | Chains slow readers down and lose ranking signal |
+| Map every old URL to its final destination | Chains slow readers down and lose [ranking signal](seo-for-docs.md) |
 | Use server-side permanent redirects (301 or 308) where possible | Client-side redirects are the fallback, not the plan |
 | Never send many old pages to one unrelated page | A home page is not an answer to "where did this go?" |
 | Keep redirects for at least a year, ideally indefinitely | Old links live in bookmarks, tickets and other people's pages |
 | Update internal links to the new URLs | Redirects are for outsiders, not for your own pages |
 
-For MkDocs sites without control over the server, the `mkdocs-redirects`
+For [MkDocs](mkdocs.md) sites without control over the server, the `mkdocs-redirects`
 plugin writes a static page at each old path that sends readers to the new
 one. That is a client-side redirect, so treat it as the fallback the table
 describes.

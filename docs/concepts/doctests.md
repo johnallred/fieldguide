@@ -221,7 +221,7 @@ the file and provides none.
 | Small, pure functions with a clear return | Anything needing setup or fixtures |
 | Showing a return value's exact shape | Floating point, unless you round |
 | Documenting edge cases, as `split(10, 3)` does | Dict or set ordering |
-| Keeping a generated reference honest | Multi-step workflows, which belong in a tutorial |
+| Keeping a generated reference honest | Multi-step workflows, which belong in a [tutorial](tutorial-design.md) |
 | Error messages a user will see | Anything slow, networked or stateful |
 
 When a doctest wants fixtures, it has stopped being documentation and become a

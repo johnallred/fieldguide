@@ -23,8 +23,8 @@ output appeared in, how long the build actually took, what the error looked
 like before it was tidied into a code block.
 
 It is also the only format in this guide that cannot be diffed, searched by
-phrase, copy-pasted from, link-checked, or corrected without being remade. Each
-of those is a property the rest of a docs-as-code toolchain depends on, so a
+phrase, copy-pasted from, [link-checked](link-checking.md), or corrected without being remade. Each
+of those is a property the rest of a [docs-as-code](docs-as-code.md) toolchain depends on, so a
 screencast sits outside every mechanism described elsewhere here, which is the
 reason this concept is tier `context` rather than core.
 
@@ -218,13 +218,13 @@ the page is what people arrive at and the video is what some of them play.
 | Show the failure | Yes, briefly; it is the tacit knowledge video is for |
 | Terminal size and font | Large enough for a phone, which is where it is watched |
 | Narration | Scripted; unscripted costs more in edit than it saves |
-| Captions | Always, and they double as the transcript |
+| [Captions](accessibility.md) | Always, and they double as the transcript |
 
 ### When to refuse
 
 | Request | Better answer |
 |---|---|
-| "Can we have a video of the quickstart?" | Fix the quickstart |
+| "Can we have a video of the [quickstart](quickstarts.md)?" | Fix the quickstart |
 | "A video series for the whole product" | One video, then count plays |
 | "Video because the docs are confusing" | The confusion will be in the video too |
 | "Record the workshop and publish it" | Publish the handout; the recording is three hours long |

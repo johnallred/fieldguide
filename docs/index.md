@@ -12,9 +12,9 @@ audience: new-user
 The work goes by many titles: documentation engineer, developer education lead,
 content engineer, KnowledgeOps, docs and learning experience, lab development
 engineer. The day-to-day work underneath them is largely the same. You design
-golden paths and curriculum, run documentation CI and cold-start tests, model
+[golden paths](concepts/golden-paths.md) and [curriculum](concepts/learning-paths.md), run documentation CI and cold-start tests, model
 content and metadata so people and machines can find it, package knowledge for
-RAG and agents, measure whether any of it worked, and automate the publishing,
+[RAG](concepts/rag.md) and agents, measure whether any of it worked, and automate the publishing,
 testing and monitoring that keep it true.
 
 It is a real discipline with no agreed curriculum, no textbook, and almost no
@@ -76,7 +76,7 @@ costs you nothing to navigate, because you learned the shape on the first.
 
 ## This guide is also an example of its own subject
 
-A guide about information architecture that was itself a folder of unstructured
+A guide about [information architecture](concepts/information-architecture.md) that was itself a folder of unstructured
 Markdown would be an argument against its own content.
 
 So the curriculum is a validated data file, `concepts.yaml`, and the pages that

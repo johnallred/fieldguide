@@ -181,7 +181,7 @@ does not convert at all without choosing replacements.
 | A directive model | Extensions are first-class, not per-tool syntax hacks |
 | Domains | Separate namespaces for Python, C++, JavaScript symbols |
 | A real specification | docutils is the reference implementation, not one dialect of many |
-| Substitutions and includes | Single-sourcing without a plugin |
+| Substitutions and includes | [Single-sourcing](single-sourcing.md) without a plugin |
 
 The first row is the strongest argument for it and the one to cite. A
 cross-reference to a symbol is checkable in a way that a Markdown link to a

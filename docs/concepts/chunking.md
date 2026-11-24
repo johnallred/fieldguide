@@ -30,7 +30,7 @@ destroys is usually the thing that made the text findable.
 
 Structuring and packaging content for RAG comes down to this. It is the
 lowest-level decision in the whole AI-ready stack and the one that
-constrains everything above it: no reranker recovers information the chunker
+constrains everything above it: no [reranker](vector-stores.md) recovers information the chunker
 threw away.
 
 On a Tuesday it is a debugging question with three possible answers. An
@@ -407,7 +407,7 @@ chunk.
 | Page type ([Diátaxis](diataxis.md)) | So a retriever can filter by the kind of answer required |
 | Audience | Same, for [multi-audience corpora](partner-documentation.md) |
 | The page summary | Often the closest text in the corpus to how a reader phrases things |
-| A freshness date | So a consumer can discount stale content |
+| A [freshness](freshness-monitoring.md) date | So a consumer can discount stale content |
 | A stable id | So an edit does not force a full re-index |
 
 ### Stable identifiers
@@ -455,8 +455,8 @@ architecture decision wearing an engineering costume.** The question "what is a
 retrievable unit of meaning" is the same question as "what is a page", asked at a
 finer grain, and a corpus with good page boundaries chunks well almost for free.
 Teams that treat chunking as a tuning parameter are usually compensating for an
-information architecture problem one layer up, which is why
-[Diátaxis](diataxis.md) turned out to be the most useful metadata field anyone
+[information architecture](information-architecture.md) problem one layer up, which is why
+[Diátaxis](diataxis.md) turned out to be the most useful [metadata](metadata.md) field anyone
 had.
 
 ## Putting it into practice

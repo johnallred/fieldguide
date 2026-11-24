@@ -195,7 +195,7 @@ from an opinion into a finding, plus the testing argument that makes it matter.
 | To a stated, checkable result | "You should see `synced 0 records`" |
 | Every command copy-pasteable | No placeholders the reader must resolve |
 | No decisions | A decision is a branch, and a branch is untested surface |
-| Tested in CI | [Cold-start testing](coldstart-testing.md) |
+| Tested in [CI](documentation-ci.md) | [Cold-start testing](coldstart-testing.md) |
 | Minutes, and the number is known | The acceptance criterion above |
 
 ### Where the alternatives go

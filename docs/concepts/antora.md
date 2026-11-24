@@ -35,7 +35,7 @@ documentation estates, and in the Red Hat ecosystem in particular, so you will
 meet it if you work across a large organization's content.
 
 The second is more useful. Antora solves the one problem that genuinely has no
-good answer in MkDocs, Sphinx or Docusaurus: documentation that lives next to
+good answer in [MkDocs](mkdocs.md), [Sphinx](sphinx.md) or [Docusaurus](docusaurus.md): documentation that lives next to
 the code in a dozen repositories and has to publish as one coherent site with
 one navigation and one search index. If you are ever asked how you would do
 that, Antora is the usual answer, and knowing it exists is worth more than fluency in
@@ -214,7 +214,7 @@ remains a minority choice despite being the better language.
 
 You do not need Antora. You need
 [single-sourcing](single-sourcing.md) in whatever generator you already have:
-a snippet include plugin on MkDocs, `.. include::` on Sphinx, or MDX imports on
+a snippet include plugin on MkDocs, `.. include::` on Sphinx, or [MDX](mdx.md) imports on
 Docusaurus. Reaching for Antora to get includes is a large change for a small
 feature.
 

@@ -30,14 +30,14 @@ turns out to mean in practice, which is not always what you want.
 ## How this applies to your role
 
 You may never be asked to choose an embedding model, but you will own content
-that goes through one. There is no RAG pipeline without an embedding step.
+that goes through one. There is no [RAG](rag.md) pipeline without an embedding step.
 
 What makes this `core` rather than a detail is that embeddings are where
 **documentation people usually stop understanding their own system.** The
 chunker is readable code. The vector store is a database. The embedding model is
 a black box that turns text into 1,536 numbers, and the temptation is to treat
 it as magic and move on. That is how you end up unable to explain why your
-assistant returned the wrong page.
+[assistant](ai-assistants.md) returned the wrong page.
 
 On a Tuesday it is a diagnosis. An assistant answered a question about
 *deprecating* a flag using the page about *adding* one. Lexical search would

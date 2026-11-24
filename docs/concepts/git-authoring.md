@@ -183,7 +183,7 @@ workflow exists to prevent.
 | Unreadable prose diffs | Semantic line breaks, word diffs |
 | Conflicts on concurrent edits | Semantic line breaks |
 | No local toolchain | Web editing in GitHub or GitLab for small fixes |
-| Reviewing Markdown instead of pages | [Preview deployments](preview-deployments.md) |
+| Reviewing [Markdown](markdown.md) instead of pages | [Preview deployments](preview-deployments.md) |
 | Git itself | Real, and smaller than people assume once the above are fixed |
 
 Git is usually blamed and is usually the smallest of these. The first two are
@@ -219,7 +219,7 @@ meanwhile, and reflow a page when you are substantially rewriting it anyway.
 **The tradeoff to name.** Semantic line breaks make the source look
 ragged and make some editors' formatting commands actively harmful, since a
 "reflow paragraph" keystroke undoes it silently. You need the convention
-documented and ideally a lint rule, or it decays one well-meaning editor at a
+documented and ideally a [lint rule](prose-linting.md), or it decays one well-meaning editor at a
 time.
 
 **One sharper point.** Git is the usual scapegoat for documentation

@@ -194,7 +194,7 @@ silently.
 |---|---|---|
 | Page type (`diataxis`) | Yes | Three or four values, and filters depend on it |
 | Audience | Yes | Small set; open produces "devs", "developer", "Developers" |
-| Status or lifecycle stage | Yes | A workflow with unlimited states is not a workflow |
+| Status or [lifecycle stage](content-lifecycle.md) | Yes | A workflow with unlimited states is not a workflow |
 | Product area or component | Yes, from the product's own list | It must match what engineering calls it |
 | Tags or keywords | Usually open, and therefore mostly useless | See below |
 | Title, summary | Open | They are prose |

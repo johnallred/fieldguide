@@ -34,7 +34,7 @@ than for software, because a lab can break without anyone changing it.
 
 This matters because the people writing labs are usually not the people running the
 pipeline, and the pipeline is what turns their drafts into something an
-instructor can rely on in front of a room.
+instructor can rely on [in front of a room](workshops.md).
 
 On a Tuesday it looks like this. A curriculum developer merges an edit to a
 lab: a `sleep 120` where a wait used to be declared, and a `pip install` added

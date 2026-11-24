@@ -27,8 +27,8 @@ The work is deciding where that is.
 ## How this applies to your role
 
 The work has three activities
-(drafting, updating, auditing), three checks (freshness, code accuracy,
-terminology drift), and one constraint (human review where judgment matters).
+(drafting, updating, auditing), three checks ([freshness](freshness-monitoring.md), code accuracy,
+[terminology drift](terminology-drift.md)), and one constraint (human review where judgment matters).
 Every other page in this category is a piece of it.
 
 What makes it `core` and difficulty 3 is that **the lifecycle is where the
@@ -412,8 +412,8 @@ a diff a reviewer might approve.**
 | Finding hedges and style issues | A [linter](prose-linting.md) | **No** |
 | **Drafting a replacement for a located finding** | Prompt plus validation | **Yes** |
 | **Ranking a review queue** | Classification | **Yes** |
-| Summarising a changelog into release notes | Prompt plus review | Yes |
-| Deciding what to retire | Judgment | **Never** |
+| Summarising a changelog into [release notes](release-notes.md) | Prompt plus review | Yes |
+| Deciding what to [retire](content-retirement.md) | Judgment | **Never** |
 | Confirming a page is accurate | Needs the implementation | **Never** |
 
 None of the four checks involves a model at all. That is the most
@@ -519,7 +519,7 @@ here touches them.
 **One sharper point.** The strongest observation is that **the lifecycle pipeline's
 real output is a list of defect classes to fix at the source.** If the audit
 reports forty wrong version references every quarter, the answer is not a better
-audit, it is a single source of truth for the version plus a
+audit, it is a [single source](single-sourcing.md) of truth for the version plus a
 [gate](release-readiness.md), after which that finding never appears again.
 Findings-per-page should fall over time, and if it is flat you are paying for a
 treadmill. That is [the systems mindset](systems-mindset.md) applied to your own

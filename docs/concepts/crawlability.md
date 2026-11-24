@@ -39,9 +39,9 @@ documentation site looks perfect in your browser, which is running JavaScript,
 following your redirects, and already signed in.
 
 On a Tuesday it is a discovery that invalidates a quarter. Somebody asks why
-the assistant never cites the API reference. The reference is
-client-rendered, so a fetch returns an empty `<div id="root">`. Every chunk, every
-embedding and every llms.txt entry for those pages has been built from nothing.
+the [assistant](ai-assistants.md) never cites the [API reference](api-reference-generation.md). The reference is
+client-rendered, so a fetch returns an empty `<div id="root">`. Every [chunk](chunking.md), every
+[embedding](embeddings.md) and every llms.txt entry for those pages has been built from nothing.
 **No error was raised anywhere** because an empty page is a valid page.
 
 ## The golden path
@@ -495,7 +495,7 @@ your retrieval corpus, your llms.txt and your assistant, and those are yours.
 The check belongs with whoever owns the machine-facing artifacts, which is
 usually the documentation team.
 
-**The tradeoff to name.** An audit over a built site is a second CI job on
+**The tradeoff to name.** An audit over a built site is a second [CI](documentation-ci.md) job on
 output that already passed its own tests, and it will produce findings that are
 deliberate: a page genuinely excluded, a description shared between two
 near-identical generated pages. So it needs an allowlist, and an allowlist
@@ -510,7 +510,7 @@ badly degrades retrieval; being unfetchable eliminates it, quietly, for a
 subset of pages that nobody enumerates. So this unglamorous audit should be the
 *first* thing built, before llms.txt or embeddings or an assistant, and it
 almost never is, because the other things are more interesting to work on. That
-ordering argument is worth making to a lead who is being asked to fund a RAG
+ordering argument is worth making to a lead who is being asked to fund a [RAG](rag.md)
 pipeline.
 
 ## Putting it into practice
@@ -536,7 +536,7 @@ are invisible to a human, and a team that runs it before the interesting work
 rather than after the silent failure.
 
 This guide now does that to its own site. `scripts/crawl_site.py` is the audit
-above adapted to a real MkDocs build: text without JavaScript, a canonical
+above adapted to a real [MkDocs](mkdocs.md) build: text without JavaScript, a canonical
 link naming the page's own URL, a distinct description, internal links that
 resolve, a sitemap that matches what is served, and an `llms.txt` whose links
 all resolve. It runs as a gate on every change, against the files about to be

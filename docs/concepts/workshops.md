@@ -25,7 +25,7 @@ content, it is **synchrony**: everyone has to be at the same place at the same
 time, so the slowest person sets the pace and any environment failure strands
 one attendee while the room moves on without them.
 
-Everything that makes workshop design different from writing a tutorial
+Everything that makes workshop design different from writing a [tutorial](tutorial-design.md)
 follows from that constraint.
 
 ## How this applies to your role
@@ -35,11 +35,11 @@ Two reasons, and only one of them is about teaching.
 The honest teaching reason is that a room is the only place you can watch
 people fail. [Assessment](assessment.md) over a corpus tells you whether your
 tasks are well formed; it cannot tell you where readers get stuck. Twenty
-people attempting your quickstart in front of you produces that information in
+people attempting your [quickstart](quickstarts.md) in front of you produces that information in
 forty minutes, and it is the highest-quality signal available anywhere in this
 job.
 
-The other reason is that workshops are a developer-relations deliverable with a
+The other reason is that workshops are a [developer-relations](developer-advocacy.md) deliverable with a
 conference schedule attached, which means the date is fixed before the content
 exists. Worth naming, because it drives the characteristic failure: a workshop
 scoped as though it were a tutorial, discovered on the morning to be three
@@ -223,7 +223,7 @@ rather than any individual mistake inside them.
 | "Install these four packages" | 15 to 40 minutes | None | Always, for somebody |
 | Wheelhouse on a stick or local server | Under a minute | High | Someone has the wrong Python |
 | Container image, pre-pulled | Under a minute | Very high | Docker is absent or disallowed |
-| Hosted environment per attendee | Zero | Total | The venue wifi dies |
+| [Hosted environment](ephemeral-environments.md) per attendee | Zero | Total | The venue wifi dies |
 | Attendees set up beforehand | Zero, for the prepared | None | Half of them do not |
 
 The last row is the plan most workshops actually have, and the honest reading

@@ -27,11 +27,11 @@ pipeline with a human in a specific place, not a better prompt.
 
 ## How this applies to your role
 
-It shows up in two places. One is the practical skill of applying LLMs to
-content workflows: prompting, retrieval and grounding, output evaluation. The
+It shows up in two places. One is the practical skill of applying [LLMs](llm-content-lifecycle.md) to
+content workflows: prompting, retrieval and [grounding](grounding.md), output evaluation. The
 other is the responsibility of automating the content lifecycle, from drafting
-and updating to auditing, with checks for freshness, code accuracy and
-terminology drift, **and human review where judgment matters**.
+and updating to auditing, with checks for [freshness](freshness-monitoring.md), code accuracy and
+[terminology drift](terminology-drift.md), **and human review where judgment matters**.
 
 That last clause is the job. The hard question is not whether you can get an
 LLM to write a page. It is where you put the human, and that is a question
@@ -239,7 +239,7 @@ well, ask whether the task is a generation problem at all.
 |---|---|
 | **LLM owns it** | Title suggestions, summaries, clarity rewrites, finding candidates, classifying pages, proposing review queues |
 | **LLM drafts, human disposes** | Release notes from a changelog, first drafts of how-tos, terminology audits, freshness triage, test-case generation |
-| **Never an LLM** | Parameter references, default values, version requirements, security instructions, anything about data handling, retirement decisions, anything a generator can produce |
+| **Never an LLM** | Parameter references, default values, version requirements, [security](security-documentation.md) instructions, anything about data handling, [retirement](content-retirement.md) decisions, anything a generator can produce |
 
 ### Why "never" for the last group
 

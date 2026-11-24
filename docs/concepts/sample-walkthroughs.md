@@ -48,7 +48,7 @@ Catch a drifted walkthrough, fix it with transclusion, then find out how the
 fix fails. About thirty minutes.
 
 Committed as `drills/walkthrough_transclusion.py`, which runs all five states
-with a real MkDocs build behind the three that render. A test asserts it still
+with a real [MkDocs](mkdocs.md) build behind the three that render. A test asserts it still
 prints what this page quotes.
 
 Committing it corrected a count. This page used to report three quoted blocks
@@ -129,7 +129,7 @@ coherent and the code looks plausible.
 
 **Step 3: remove the possibility instead of checking for it**
 
-Transclude the lines rather than copying them:
+[Transclude](single-sourcing.md) the lines rather than copying them:
 
 ````bash
 cat > mkdocs.yml <<'EOF'

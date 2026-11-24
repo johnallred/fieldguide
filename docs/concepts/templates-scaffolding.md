@@ -32,7 +32,7 @@ in what it knows, which on a corpus with a
 ## How this applies to your role
 
 The point is templates **rather than static documents**, which is the whole
-argument. A style guide tells an author what a page should contain, and
+argument. A [style guide](style-guide.md) tells an author what a page should contain, and
 is read once. A scaffold hands them a page that already contains it, and is
 used every time.
 

@@ -210,10 +210,10 @@ language inside your documentation.
 | [Chunking](chunking.md) | A source consumer sees the include directive, not the text |
 | [Localization](localization.md) | Reuse cuts translation cost proportionally; it is the biggest single lever |
 | [Link checking](link-checking.md) | Links inside an include resolve relative to the including page |
-| Review | A reviewer sees a one-line diff whose effect is on 40 pages |
+| [Review](docs-review.md) | A reviewer sees a one-line diff whose effect is on 40 pages |
 | [Freshness](freshness-monitoring.md) | An included block's age is not the page's age |
 
-The chunking row deserves attention in an AI-ready corpus. Anything reading
+The chunking row deserves attention in an [AI-ready](agent-ready-content.md) corpus. Anything reading
 your Markdown source rather than your built HTML sees `--8<-- "prereqs.md"`
 instead of the prerequisite, so retrieval pipelines should be built on the
 rendered output when includes are in play.

@@ -29,7 +29,7 @@ the first.
 
 ## How this applies to your role
 
-A docs-as-code pipeline is CI/CD builds, linting, link and code-sample
+A [docs-as-code](docs-as-code.md) pipeline is CI/CD builds, [linting](prose-linting.md), link and [code-sample](code-sample-validation.md)
 validation, and publishing. In most repositories you will work in, those are
 the steps in a GitHub Actions workflow file.
 

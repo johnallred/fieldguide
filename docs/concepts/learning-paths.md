@@ -37,7 +37,7 @@ A corpus sorted into tutorials, how-to guides, reference and explanation is
 navigable and gives no answer to "I started on Monday, what do I read first".
 The four quadrants are an authoring discipline and a filing system; a path is
 the reading order that the filing system deliberately does not encode. Structured
-learning paths sit next to golden paths and quickstarts because those are the
+learning paths sit next to [golden paths](golden-paths.md) and [quickstarts](quickstarts.md) because those are the
 three shapes of the same obligation at three scales: one
 command, one page, a newcomer's first fortnight.
 

@@ -22,8 +22,8 @@ page that cannot be stated as one story is usually more than one page.
 
 ## How this applies to your role
 
-User stories come first among the standards worth encoding "into templates,
-validators, and guided workflows rather than static documents". That placement
+User stories come first among the standards worth encoding "into [templates](templates-scaffolding.md),
+validators, and [guided workflows](guided-workflows.md) rather than static documents". That placement
 is the interesting part. User stories are normally a product-planning
 artifact, and here they are something a *template* enforces.
 

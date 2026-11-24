@@ -148,7 +148,7 @@ message replaces.
 | Exchange format | ONNX | Opset and IR version |
 | Runtime | ONNX Runtime, OpenVINO, TensorRT | Unsupported operator |
 | Kernel library | cuDNN, oneDNN, cuBLAS | Version pinned to the runtime |
-| Driver and toolkit | CUDA, ROCm, Level Zero | Minimum driver version |
+| Driver and toolkit | [CUDA](gpu-computing.md), ROCm, Level Zero | Minimum driver version |
 | Hardware | GPU, CPU, accelerator | Compute capability |
 
 A single sample exercises every row, and an error from any row arrives at the
@@ -174,7 +174,7 @@ gets the fix into the message has done more good than a dozen pages.
 |---|---|
 | Pin every layer in the sample's requirements | A floating version breaks the sample on a schedule |
 | State the tested combination in the page | The reader's combination will differ |
-| Run the sample in CI on the pinned set | Otherwise the page's claim rots silently |
+| Run the sample in [CI](documentation-ci.md) on the pinned set | Otherwise the page's claim rots silently |
 | Test the newest set too, and let it fail loudly | So you learn before the reader does |
 | Record the fix next to the symptom text | Readers search symptoms, not causes |
 

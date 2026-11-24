@@ -31,8 +31,8 @@ It is the closest thing this field has to a standard.
 ## How this applies to your role
 
 Few teams say "Diátaxis", but nearly all of them describe the problem it
-solves. Developer-education work produces golden paths, curriculum, tutorials,
-sample walkthroughs and reference documentation as *separate deliverables*,
+solves. Developer-education work produces golden paths, [curriculum](learning-paths.md), tutorials,
+[sample walkthroughs](sample-walkthroughs.md) and reference documentation as *separate deliverables*,
 which is a Diátaxis decomposition written out without the name. KnowledgeOps
 work models content and structures it for machine retrieval, and the type of a
 page is the single most useful field in that model.
@@ -53,7 +53,7 @@ you explain, without it sounding like an aesthetic preference, that this is four
 pages, and which four.
 
 The retrieval argument is the newer and stronger one. A page with four jobs
-produces chunks with four jobs, and a retriever that returns the
+produces [chunks](chunking.md) with four jobs, and a retriever that returns the
 architecture-overview paragraph to someone who asked "how do I set the batch
 size" has failed in a way no ranking improvement will fix. **Type separation is
 retrieval hygiene**, not just navigation hygiene.
@@ -258,9 +258,9 @@ goal belongs to the reader, who arrived with it already.
 
 Worth knowing, because being asked is likely:
 
-- **Release notes and changelogs.** Chronological, not topical. Outside the model.
+- **[Release notes](release-notes.md) and changelogs.** Chronological, not topical. Outside the model.
 - **Troubleshooting pages.** Usually a how-to guide indexed by symptom rather than goal, which the model handles awkwardly.
-- **API reference generated from source.** Reference, but the type is determined by the generator rather than a choice.
+- **[API reference](api-reference-generation.md) generated from source.** Reference, but the type is determined by the generator rather than a choice.
 - **Landing and orientation pages.** Navigation, not content.
 
 ## Explaining it to your team
@@ -302,7 +302,7 @@ what makes retrieval filterable. If every page declares one of four types, a
 retrieval system can be told to return only how-to content for a "how do I"
 question, which is a hard constraint rather than a hope that the embedding
 noticed the genre. Diátaxis was proposed years before anyone was packaging docs
-for language models, and it turned out to be the most useful metadata field in
+for language models, and it turned out to be the most useful [metadata](metadata.md) field in
 the corpus. That is worth saying out loud.
 
 ## Putting it into practice

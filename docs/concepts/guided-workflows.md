@@ -212,7 +212,7 @@ The third and fourth rows are the common case and the one people get wrong.
 
 | Process | Workflow replaces |
 |---|---|
-| Release readiness | A checklist page |
+| [Release readiness](release-readiness.md) | A checklist page |
 | Writer onboarding | "Getting started for contributors" |
 | New integration or service | A wiki page of steps |
 | Incident response | A [playbook](playbooks.md), when the steps are mechanical |

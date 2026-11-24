@@ -20,7 +20,7 @@ tags: [ai, supporting]
 
 ## What it is
 
-Making a documentation page findable by someone who searches the problem rather
+Making a documentation page [findable](findability.md) by someone who searches the problem rather
 than the product. Most developers do not navigate to your docs; they search an
 error message, a symptom, or a task, and land deep inside.
 
@@ -31,7 +31,7 @@ rather than hand-tuned per page.
 
 ## How this applies to your role
 
-Optimizing technical content for search (SEO and GEO) and for AI assistants is
+Optimizing technical content for search (SEO and [GEO](geo.md)) and for [AI assistants](ai-assistants.md) is
 part of developer-facing documentation work. That is unusual for
 engineering-adjacent work, and it tells you something about the job: the front
 door is a search result page you do not own.
@@ -303,7 +303,7 @@ and a person.
 |---|---|---|---|
 | `<title>` | under ~60 chars | `title` + site name | Distinctive part first; it gets truncated |
 | `<meta name="description">` | 50 to 160 chars | `summary` | Not a ranking factor; decides the click |
-| `<link rel="canonical">` | n/a | page URL | Essential with versioned docs |
+| `<link rel="canonical">` | n/a | page URL | Essential with [versioned docs](versioning.md) |
 | H1 | one per page | the page title | Must match the title's intent |
 | H2/H3 | n/a | the page's own structure | Where task phrasing belongs |
 | URL slug | short | filename | Stable; a renamed URL loses its ranking |
@@ -330,7 +330,7 @@ In order of weight:
 | Versioned docs | Multiple URLs per page; canonical must point at the current version or you split your own ranking |
 | Deep landing | Most arrivals are on an interior page, so every page needs orientation and a route onward |
 | Error messages | Developers search the literal string. A page containing the exact message outranks a general one |
-| Generated reference | Thousands of near-identical pages; thin-content risk, and canonicalisation matters |
+| [Generated reference](api-reference-generation.md) | Thousands of near-identical pages; thin-content risk, and canonicalisation matters |
 | Retired versions | [Retired pages](content-retirement.md) that stay indexed outrank current ones |
 
 The error-message row is the cheapest high-value action in documentation SEO and
@@ -359,7 +359,7 @@ queries and reports which pages lack the reader's words in their title,
 headings and summary."
 
 **The follow-up is "how do you get the real queries",** and the honest answer is
-that most teams have them and nobody exports them. Site search logs, support
+that most teams have them and nobody exports them. Site [search logs](search-log-analysis.md), support
 ticket subject lines, and the zero-click queries from Search Console are all
 cheap and all underused. A list of fifty real phrasings is worth more than any
 amount of SEO advice, and gathering it is an afternoon.
@@ -377,7 +377,7 @@ than a free win.
 [retrieval](rag.md) want the same thing for the same reason.** Both are
 vocabulary-matching problems between a reader's phrasing and an author's. A
 summary written in the reader's words improves the search snippet, the retrieval
-snippet, the [llms.txt](llms-txt.md) annotation and the embedding, all at once,
+snippet, the [llms.txt](llms-txt.md) annotation and the [embedding](embeddings.md), all at once,
 from one edit. That is why the content model's `summary` field is load-bearing
 far out of proportion to its size, and why "optimize for SEO and GEO" is one task rather than two.
 

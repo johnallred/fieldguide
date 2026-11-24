@@ -21,12 +21,12 @@ tags: [ia, supporting]
 
 Turning the security rules your documentation must follow into checks that run,
 rather than a page telling authors to be careful. The aim is
-templates, validators and guided workflows **rather than static documents**.
+[templates](templates-scaffolding.md), validators and [guided workflows](guided-workflows.md) **rather than static documents**.
 
 The specific problem is that documentation code samples are the most
 copy-pasted code in any organization. A sample is read as a recommendation, so
 an insecure sample propagates the insecurity into every project that follows
-the quickstart.
+the [quickstart](quickstarts.md).
 
 ## How this applies to your role
 
@@ -218,7 +218,7 @@ copy, and a corrected quickstart.
 | World-writable permissions | `chmod 777` |
 | Public bucket or object ACLs | `--acl public-read` |
 | Long-lived credentials where short-lived exist | A static key where OIDC is available |
-| `latest` tags in a security context | Unpinned base images in a sample |
+| `latest` tags in a security context | [Unpinned](reproducible-environments.md) base images in a sample |
 | Secrets in a URL | `https://user:pass@host` |
 
 Use `(?i)` on all of them. Environment variables are uppercase, Go field names

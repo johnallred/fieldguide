@@ -304,7 +304,7 @@ volume.
 1. Run the golden path. Step 2's entrypoint check takes a minute to write and
    finds real things.
 2. Tag your existing samples with what they teach, then rank your support
-   topics by volume. The gap is your backlog, and it will not look like your
+   topics by volume. The gap is your [backlog](docs-prioritization.md), and it will not look like your
    roadmap.
 3. Pick the oldest sample nobody has verified and run it. Whatever happens is
    information.

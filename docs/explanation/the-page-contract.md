@@ -32,7 +32,7 @@ fifth section, and they can skip directly. That is the entire benefit, and it on
 exists if the order is actually reliable, which is why it is a build failure
 rather than a style note.
 
-This is Diátaxis logic applied inside a page instead of across a tree. Diátaxis
+This is [Diátaxis](../concepts/diataxis.md) logic applied inside a page instead of across a tree. Diátaxis
 separates the four kinds of documentation into separate documents because
 mixing them serves nobody. A concept page in a study guide is a deliberate
 exception: the reader wants orientation, a tutorial, reference, and
@@ -68,7 +68,7 @@ and what the reader should see after each one.
 
 Three rules, and they are rules rather than preferences:
 
-- **It starts from a clean environment.** The commonest documentation failure
+- **It starts from a [clean environment](../concepts/coldstart-testing.md).** The commonest documentation failure
   in existence is a quickstart that works because the author installed
   something months ago and forgot.
 - **It ends in something observable.** Not "you now understand chunking", but a
@@ -99,7 +99,7 @@ The work product the concept produces when it is done well: a repository, a
 file, a measured number, a commit. Then three tasks to do next, in order, and
 how to tell the result is working.
 
-**It has to be specific enough to act on today.** "Build a RAG pipeline" is not
+**It has to be specific enough to act on today.** "Build a [RAG](../concepts/rag.md) pipeline" is not
 a task. "Write twenty questions with their expected source pages, score
 recall@3, and publish the number including the bad one" is.
 
@@ -115,12 +115,12 @@ recall@3, and publish the number including the bad one" is.
 The word count is a crude proxy and is meant to be. It does not detect a bad
 page; it detects a page marked `complete` that is obviously a stub, which is
 the specific dishonesty worth automating against. Judging whether a page is
-*good* is a review problem, and no linter is going to take it over.
+*good* is a [review](../concepts/docs-review.md) problem, and no linter is going to take it over.
 
 ## The honest limitation
 
 **A contract this rigid is wrong for some concepts.** Several of the
-domain-context entries, such as OpenUSD or robotics simulation, do not have a
+domain-context entries, such as [OpenUSD](../concepts/usd-omniverse.md) or [robotics](../concepts/robotics-sim.md) simulation, do not have a
 meaningful golden path at this guide's level of detail: the useful content is
 orientation and vocabulary so you are not lost in a room full of specialists.
 Those pages have a "golden path" section because the contract demands one, and

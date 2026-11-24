@@ -165,14 +165,14 @@ numbers people quote are mostly about themes.
 
 The second and third rows are what you have to replace with your own gates on
 MkDocs. The fourth row needs a tool that collects symbols: Sphinx natively,
-or MkDocs with `mkdocstrings` and its `[text][symbol]` references, which are
+or MkDocs with [`mkdocstrings`](api-reference-generation.md) and its `[text][symbol]` references, which are
 checked. Plain Markdown links to generated anchors are not.
 
 ### The four, in one table
 
 | | MkDocs | Sphinx | Docusaurus | Antora |
 |---|---|---|---|---|
-| Source | Markdown | RST, or Markdown via MyST | MDX | AsciiDoc |
+| Source | Markdown | [RST](restructuredtext.md), or Markdown via MyST | [MDX](mdx.md) | AsciiDoc |
 | Runtime | Python | Python | Node | Node |
 | Cross-reference checking | Pages only | Pages, anchors, symbols | Pages | Pages, across repos |
 | Versioning | A plugin | A convention plus builds | Built in | Built in, first-class |
@@ -201,7 +201,7 @@ someone asks which to use.
 | Anchor checking | Little; the build covers it |
 | Orphan page detection | Little |
 | Versioned docs, via a plugin | A build-per-version convention |
-| A content model validator | A content model validator |
+| A [content model](content-model.md) validator | A content model validator |
 | Sample execution | Sample execution |
 
 Both still need [sample validation](code-sample-validation.md) and

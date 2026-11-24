@@ -28,9 +28,9 @@ failure, this proposal.
 ## How this applies to your role
 
 This is the most distinctive part of KnowledgeOps work and the easiest to
-overlook. You collaborate with documentation leads on knowledge architecture,
+overlook. You collaborate with documentation leads on [knowledge architecture](knowledge-architecture.md),
 and you share implementation feedback (what works, breaks and scales) to refine
-content models, information architecture and AI-readiness patterns. You turn
+[content models](content-model.md), [information architecture](information-architecture.md) and AI-readiness patterns. You turn
 design intent into working systems and give leads clear, constructive feedback
 grounded in implementation.
 
@@ -46,7 +46,7 @@ On a Tuesday this is a specific recurring moment. The content model requires an
 simulation-platform corpus and find 180 pages that are genuinely for two audiences at once, and
 another 40 where the honest answer is a fifth value nobody anticipated. You can
 pick the closest value and move on, which corrupts the data quietly. You can
-block on it, which stops the migration. Or you can report it in a form the lead
+block on it, which stops the [migration](content-migration.md). Or you can report it in a form the lead
 can decide from, which is the job.
 
 The reason this is `core`: the quality of this feedback loop determines whether

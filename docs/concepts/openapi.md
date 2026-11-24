@@ -37,7 +37,7 @@ The reason it belongs in a documentation-engineering curriculum rather than an
 API-design one is that the spec is a documentation artifact with the same decay
 problem as any other page, plus one special property: because it is machine
 readable, people assume it is machine *verified*. It usually is not. A spec in
-a repository with a validator in CI feels trustworthy and may describe an API
+a repository with a validator in [CI](documentation-ci.md) feels trustworthy and may describe an API
 that no longer exists.
 
 ## The golden path

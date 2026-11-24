@@ -22,10 +22,10 @@ tags: [gp, supporting]
 The "clean environment" half of taking a developer from a clean environment to a
 working result. Making it true requires three
 decisions: what level of isolation a reader is asked to create, whether
-dependencies are pinned, and what your CI reproduces.
+dependencies are pinned, and what your [CI](documentation-ci.md) reproduces.
 
 They look like infrastructure decisions and they are documentation decisions,
-because each one changes what your quickstart can honestly promise.
+because each one changes what your [quickstart](quickstarts.md) can honestly promise.
 
 ## How this applies to your role
 

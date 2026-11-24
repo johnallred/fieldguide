@@ -18,7 +18,7 @@ tags: [auto, core]
 ## What it is
 
 Converting documentation from the form people write into the forms machines
-consume: Markdown into chunk records, front matter into a search index, a tree
+consume: Markdown into [chunk](chunking.md) records, front matter into a search index, a tree
 of pages into one flat file for a context window. The
 [content model](content-model.md) is what makes it possible, because a
 transformation can only carry fields that reliably exist.
@@ -33,7 +33,7 @@ derived artifacts fail quietly.
 
 A broken page is visible to whoever opens it. A chunk record missing a field is
 visible to nobody until a retrieval returns something unhelpful, and then it
-looks like a ranking problem. The team spends a quarter evaluating embedding
+looks like a ranking problem. The team spends a quarter evaluating [embedding](embeddings.md)
 models for a defect introduced by a transformation that ran correctly.
 
 Transforming data sits between automating content tasks and integrating with
@@ -61,7 +61,7 @@ stage                     files  chars     of source
 ```
 
 Three outputs with three quite different jobs. `llms-full.txt` keeps 99 per
-cent, so it is close to a concatenation. `llms.txt` keeps five, because it is a
+cent, so it is close to a concatenation. [`llms.txt`](llms-txt.md) keeps five, because it is a
 map rather than a copy: titles, summaries and links, grouped by type. Neither is
 surprising.
 
@@ -125,7 +125,7 @@ from the field people reach for.
 
 **Step 4: measure what that costs the careless consumer**
 
-The grounding check joins the breadcrumb back on before testing. Run it both
+The [grounding](grounding.md) check joins the breadcrumb back on before testing. Run it both
 ways:
 
 ```

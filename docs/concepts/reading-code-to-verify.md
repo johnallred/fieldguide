@@ -335,7 +335,7 @@ distinction is invisible unless somebody reads both.
 **What competence looks like.** A correction with a file and line in it. A
 documented value that now matches a named constant. A claim rewritten from "is
 idempotent" to "is idempotent for the documented endpoint; the bulk path is
-not". And, most persuasive, a generated reference that removed the need for the
+not". And, most persuasive, a [generated reference](api-reference-generation.md) that removed the need for the
 exercise entirely.
 
 **Why it does not commit.** The correction commits; the reading does not. A

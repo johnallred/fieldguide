@@ -30,7 +30,7 @@ model will happily attach `[c3]` to a sentence `c3` does not support.
 
 ## How this applies to your role
 
-Applying LLMs to content work has three parts: prompting, retrieval and
+Applying LLMs to content work has three parts: [prompting](prompting.md), retrieval and
 grounding, output evaluation. The ordering is the pipeline, and
 grounding is the stage that makes the other two auditable.
 
@@ -426,7 +426,7 @@ that looks correct. The fused example is the one to share with your team.
 2. **Run it against real output.** Take thirty answers from any
    documentation assistant you can query, and check them. Count the fused
    claims. That number is a finding nobody has.
-3. **Put it in CI on a golden set.** The checker plus twenty
+3. **Put it in CI on a [golden set](retrieval-evaluation.md).** The checker plus twenty
    question-and-expected-source pairs, failing the build when the grounded rate
    drops. That is the step from a script to a gate.
 

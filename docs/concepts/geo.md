@@ -34,7 +34,7 @@ What makes it `core` despite being one of the newest ideas here is that the mech
 is concrete even though the branding is not. An assistant answering a developer
 question retrieves a passage, not a page, and whether your passage is usable
 depends on properties you control: whether it stands alone, whether the claim
-and its qualifier are in the same chunk, whether the exact identifier appears
+and its qualifier are in the same [chunk](chunking.md), whether the exact identifier appears
 as text.
 
 On a Tuesday it looks like a complaint with an unfamiliar shape. A developer
@@ -439,7 +439,7 @@ audiences always want the same thing has not tried it.
 
 **One sharper point.** The strongest observation is that **GEO is mostly a
 rediscovery of standalone writing.** "Do not open a section with a pronoun" and
-"state the condition with the claim" are decades-old technical-writing advice
+"state the condition with the claim" are decades-old [technical-writing](technical-writing.md) advice
 that got skipped because a human reader could recover from violating them.
 Retrieval removed that slack. So the work is less a new optimization discipline
 than an old quality bar that finally has a failure mode visible enough to fund,

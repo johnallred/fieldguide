@@ -21,7 +21,7 @@ tags: [ia, core]
 
 A schema for your content: what kinds of page exist, what fields each kind
 carries, which of those fields are required, and which draw from a
-[closed vocabulary](taxonomy.md). In a docs-as-code project it usually lives in
+[closed vocabulary](taxonomy.md). In a [docs-as-code](docs-as-code.md) project it usually lives in
 front matter plus a validator.
 
 The way to judge one is not by how elegant the schema is. It is by asking **what
@@ -36,12 +36,12 @@ model is the thing the other two attach to.
 
 The reason it is engineering rather than documentation theory is that a model
 without a validator is a convention, and conventions decay silently. Every
-corpus has a style guide saying how pages should be structured. Very few can
+corpus has a [style guide](style-guide.md) saying how pages should be structured. Very few can
 tell you which pages currently violate it.
 
 It is also the foundation of everything in the
 [AI-ready](agent-ready-content.md) category. Filtering retrieval by page type,
-chunking by section, assembling an `llms.txt` by audience: all of those read
+[chunking](chunking.md) by section, assembling an [`llms.txt`](llms-txt.md) by audience: all of those read
 fields. If the fields are optional, inconsistent or unparseable, none of it
 works, and the failure looks like a bad retriever rather than a bad schema.
 
@@ -152,7 +152,7 @@ placeholder generator assembled it with f-strings, so the generated summary
 read `summary: Outline only: Measuring AI answer quality is ...` and the
 unquoted colon started a mapping.
 
-Every check above passed on that corpus. The build passed too, because MkDocs'
+Every check above passed on that corpus. The build passed too, because [MkDocs](mkdocs.md)'
 own metadata parser is more forgiving than YAML. The visible consequence was
 silent:
 
@@ -223,7 +223,7 @@ them.
 |---|---|---|
 | A data file plus a validator | A corpus with structure worth enforcing | You write the validator |
 | JSON Schema on front matter | Standard tooling, editor integration | Awkward for cross-page rules |
-| A linter with custom rules | Teams already running Vale | Rules are per-field, not relational |
+| A linter with custom rules | Teams already running [Vale](prose-linting.md) | Rules are per-field, not relational |
 | A documented convention | Nothing; it decays | Zero to write, high to maintain |
 
 Cross-page rules are the deciding factor. A schema validates one page at a

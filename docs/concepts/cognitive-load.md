@@ -32,7 +32,7 @@ makes it worse.
 This matters because "a developer reaches a working result in fifteen minutes" is a claim
 about working memory, not about word count.
 
-A reader following a quickstart is holding several things at once: what they
+A reader following a [quickstart](quickstarts.md) is holding several things at once: what they
 are trying to achieve, where they are in the sequence, what the last command
 printed, which of three similar-looking names they are supposed to use, and
 whether the thing that just appeared on screen is a problem. Every item the
@@ -266,7 +266,7 @@ reports the same confusion about a longer page.
 | Long sentences | Re-reading | Per-page maximum, not the mean |
 | Unprepared cross-references | A decision per link | The backward/forward/off-path census |
 | Split attention | Scrolling between code and its explanation | Code and prose adjacency |
-| Near-identical names | Using the wrong one | A terminology inventory |
+| Near-identical names | Using the wrong one | A [terminology inventory](terminology-drift.md) |
 | Unstated prerequisites | Failure three steps later | [Cold-start testing](coldstart-testing.md) |
 | Options presented before a default | Paralysis at step 1 | Counting choices before first success |
 | Output not shown | Uncertainty whether it worked | Expected output per command |
@@ -291,7 +291,7 @@ a maximum or a count of pages, never a central tendency.
 
 Breaking a long procedure into named steps genuinely reduces load, because the
 reader can discard the contents of a completed step and keep only its name.
-That is why golden paths in this guide are numbered and named.
+That is why [golden paths](golden-paths.md) in this guide are numbered and named.
 
 The limit is that chunking only helps when the chunks are independent. Steps
 that require holding state from three steps back are not chunked, they are

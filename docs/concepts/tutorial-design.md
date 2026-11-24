@@ -19,7 +19,7 @@ tags: [gp, core]
 
 ## What it is
 
-A lesson. The reader follows it to learn, and the working thing at the end is
+[A lesson](instructional-design.md). The reader follows it to learn, and the working thing at the end is
 evidence that they learned rather than the point of the exercise. That is what
 separates it from a [quickstart](quickstarts.md), which optimizes for the
 working thing and teaches as little as it can get away with.

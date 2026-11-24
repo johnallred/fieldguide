@@ -189,7 +189,7 @@ heading structure a screen reader can navigate.
 | Link text from a vague list | Whether link text makes sense in context |
 | Colour contrast ratios | Whether colour is the only carrier of meaning |
 | Missing form labels | Whether the reading order is sensible |
-| No `lang` attribute | Whether a diagram's content is available another way |
+| No `lang` attribute | Whether a [diagram](diagrams-as-code.md)'s content is available another way |
 
 Automated tools are usually reckoned to cover something like a third of
 accessibility criteria. Treat the gate as a floor that stops regressions, never
@@ -201,7 +201,7 @@ as a claim of compliance, and say so in that order when asked.
 |---|---|---|
 | The theme | Contrast, focus states, landmarks, `lang` | Theme config or an override |
 | Generated pages | Heading structure, as above | The generator |
-| Authors | Missing alt text, vague link text | A lint rule and review |
+| Authors | Missing alt text, vague link text | A [lint rule](prose-linting.md) and [review](docs-review.md) |
 | Diagrams and screenshots | No text alternative | Authoring guidance, and a check that flags images with no alt |
 | Code samples | Nothing much; `<pre>` is fine | Not a concern |
 

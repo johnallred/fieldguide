@@ -18,7 +18,7 @@ tags: [craft, core]
 
 Owning the whole route from a developer arriving to a developer succeeding,
 rather than owning the pages along it. Setup instructions, the install script,
-the sample repository and the tutorial are one deliverable with one success
+the [sample repository](sample-apps.md) and the tutorial are one deliverable with one success
 criterion, even when three different teams maintain them.
 
 ## How this applies to your role
@@ -34,7 +34,7 @@ page does not mention, and no single owner is responsible for the seam. Each
 team passes its own tests.
 
 On a Tuesday this is mostly about **who owns the seams**. A developer reports
-that the quickstart does not work. Investigating, the cause is that the sample
+that the [quickstart](quickstarts.md) does not work. Investigating, the cause is that the sample
 repo pinned a dependency three weeks ago and the docs page predates the pin. In
 a page-ownership model, that is nobody's defect, and the conversation is about
 whose ticket it is. In a product-ownership model it is yours, and the fix is
@@ -283,7 +283,7 @@ about documentation" to "this check is red and here is the commit".
 
 Where it is not enough, the escalation is
 [release readiness](release-readiness.md): getting documentation into the
-definition of done, which is a political project rather than a technical one.
+[definition of done](developer-advocacy.md), which is a political project rather than a technical one.
 
 **The tradeoff to name.** Claiming the whole route means owning failures
 you cannot fix. You will be the person who reports that the model download
@@ -352,7 +352,7 @@ quickstart, it is the conversation that happens when it blocks something.
 | A feature shipped without docs, and the record of why | Honest exceptions beat a perfect claim |
 
 **What this guide and its companion can point at.** `docpack` builds its
-samples, its site, its `llms.txt` and its chunk artifacts from one command and
+samples, its site, its [`llms.txt`](llms-txt.md) and its chunk artifacts from one command and
 gates all of them on one CI run, and its tutorial is executed from an empty
 virtual environment on every change. That is the product half made real.
 

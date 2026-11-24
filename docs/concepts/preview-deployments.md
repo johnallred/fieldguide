@@ -20,11 +20,11 @@ tags: [qa, supporting]
 Two related things that are usually built at once. **Publishing** is the job
 that puts the built site somewhere readers can reach it when a change lands on
 the default branch. **Preview deployments** build the site for a pull request
-and give reviewers a URL, so review happens against a rendered page rather
+and give reviewers a URL, so [review](docs-review.md) happens against a rendered page rather
 than against Markdown in a diff.
 
 Publishing is nearly free once a build exists. Previews are where the real
-decisions are, and most of them are about permissions and search engines
+decisions are, and most of them are about permissions and [search engines](seo-for-docs.md)
 rather than about building.
 
 ## How this applies to your role

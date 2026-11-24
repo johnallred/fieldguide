@@ -27,9 +27,9 @@ visible to something that fetches your HTML and does not run your search index.
 
 ## How this applies to your role
 
-Nobody may ask you for JSON-LD by name, but they will ask for a crawlable,
-agent-ready front door and for content optimized for search (SEO and GEO) and
-for AI assistants and coding agents. Structured data is the
+Nobody may ask you for JSON-LD by name, but they will ask for a [crawlable](crawlability.md),
+agent-ready front door and for content optimized for search (SEO and [GEO](geo.md)) and
+for [AI assistants](ai-assistants.md) and [coding agents](coding-agents.md). Structured data is the
 mechanism that makes a page's type machine-readable to a consumer that is not
 your retriever.
 
@@ -311,7 +311,7 @@ information nothing else in the HTML does.
 | `isPartOf` | site config | Groups the corpus |
 
 Every one is derived. **Nobody hand-writes a structured-data block**, for the
-same reason nobody hand-writes an API reference.
+same reason nobody hand-writes an [API reference](api-reference-generation.md).
 
 ### Why `about` carries the Diátaxis type
 
@@ -353,7 +353,7 @@ abused enough that search engines discount it.
 **The last row is the one to build first.** A site serving its site-wide
 description on every page looks completely correct in a browser, passes every
 other check, and destroys every search snippet and every link preview. It is
-also the default behavior of several static site generators unless you wire the
+also the default behavior of several [static site generators](static-site-generators.md) unless you wire the
 per-page field through, which is a mistake this guide made in its companion
 project and only caught by looking at the rendered HTML.
 
@@ -420,7 +420,7 @@ specifically the distinct-descriptions check.
    pages of any documentation site and compare their meta descriptions. It is
    two minutes and the hit rate is high.
 3. **Generate the block from front matter and gate it.** Not hand-written, with
-   the validator in CI. That is the difference between structured data and a
+   the validator in [CI](documentation-ci.md). That is the difference between structured data and a
    snippet somebody pasted into a template once.
 
 **How to tell it is working.** A generated block, a validator whose first check is

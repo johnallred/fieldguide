@@ -157,10 +157,10 @@ per-version cost is your theme rather than your prose.
 
 | Generator | Mechanism |
 |---|---|
-| MkDocs | `mike`, deploys a directory per version to `gh-pages` |
-| Sphinx | Build per tag or branch, assembled by convention or `sphinx-multiversion` |
-| Docusaurus | Built in: `npm run docusaurus docs:version 2.4` snapshots into the repository |
-| Antora | Versions *are* branches; its model is version-first |
+| [MkDocs](mkdocs.md) | `mike`, deploys a directory per version to `gh-pages` |
+| [Sphinx](sphinx.md) | Build per tag or branch, assembled by convention or `sphinx-multiversion` |
+| [Docusaurus](docusaurus.md) | Built in: `npm run docusaurus docs:version 2.4` snapshots into the repository |
+| [Antora](antora.md) | Versions *are* branches; its model is version-first |
 
 Docusaurus and Antora make this ordinary. The other two bolt it on, and the
 difference shows up in whether a version is a directory in your source tree or

@@ -19,7 +19,7 @@ tags: [meas, core]
 
 The elapsed time between a developer deciding to try something and that
 developer having it work. Developer-education teams state it as a design
-goal, "from a clean environment to a working result", and KnowledgeOps teams
+goal, "from a [clean environment](coldstart-testing.md) to a working result", and KnowledgeOps teams
 state it as a metric. It is the same quantity from two sides.
 
 It is the best single number in developer documentation, because it is the only
@@ -42,7 +42,7 @@ which is precisely why it is uncomfortable to adopt: it is the one number that
 can make a quarter of good work look insufficient.
 
 It belongs first of the four outcome measures, ahead of deflection, repeat
-questions and answer quality, and that ordering is defensible. Deflection measures the load you removed from someone
+questions and [answer quality](ai-answer-quality.md), and that ordering is defensible. Deflection measures the load you removed from someone
 else. First success measures whether the thing works for the person in front of
 you.
 
@@ -131,7 +131,7 @@ the reader.
 **Step 3: find out why the instrument missed it**
 
 The cold-start script runs **the tutorial's** command sequence. The reader
-followed **the README's quick start**, which is a different sequence entirely:
+followed **the README's [quick start](quickstarts.md)**, which is a different sequence entirely:
 
 ```
 quick start, in the order a reader meets it:

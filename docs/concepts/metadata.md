@@ -116,7 +116,7 @@ front matter INVALID: 46 pages
 ```
 
 Forty-six pages whose front matter no YAML parser could read, because a
-generated summary contained an unquoted colon. MkDocs' own metadata parser is
+generated summary contained an unquoted colon. [MkDocs](mkdocs.md)' own metadata parser is
 more forgiving than YAML, so the build was green and the pages looked fine.
 
 The visible symptom was in the wrong place entirely:

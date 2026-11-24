@@ -37,7 +37,7 @@ objects with their own namespaces.
 The thing worth knowing is what it buys. Anyone can describe
 Sphinx as "the Python one with RST". The useful answer is that its build is a
 correctness gate on the relationship between documentation and code. The honest
-version adds that `mkdocstrings` achieves the same gate for Python on MkDocs,
+version adds that `mkdocstrings` achieves the same gate for Python on [MkDocs](mkdocs.md),
 and that what stays distinctively Sphinx is multi-language domains and
 cross-project checking through `intersphinx`.
 
@@ -207,7 +207,7 @@ This page used to quote a single row of that table, 0.58 against 3.52 seconds,
 and conclude "six times slower cold". The direction survives and the magnitude
 does not: cold Sphinx measures two to three times MkDocs in steady state here,
 and the 3.52 was most likely a first-ever build paying for imports that were
-not yet in the filesystem cache. CI pays that first number on every run and a
+not yet in the filesystem cache. [CI](documentation-ci.md) pays that first number on every run and a
 laptop pays it once, which is a distinction a single figure cannot carry.
 
 The authoring loop, which is what the cost actually feels like:

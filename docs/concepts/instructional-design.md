@@ -54,7 +54,7 @@ your own writing actually costs. About thirty-five minutes.
 |---|---|---|
 | Objective | What the exercise produces | A stated result at its end |
 | Entry state | What the reader must already know | A prerequisites line |
-| Practice | Something to do, not to read | The golden path itself |
+| Practice | Something to do, not to read | The [golden path](golden-paths.md) itself |
 | Verification | How the reader knows it worked | A "Putting it into practice" section |
 
 These are not the only possible commitments. They are four that a program can
@@ -98,7 +98,7 @@ concepts with no prerequisites at all: 9
 
 Coverage was already complete. The corpus was using **two labels for one
 structural element**: hand-written pages said "Prerequisites", pages that began
-in the scaffold said "Read first", because that is the string the scaffold
+in the [scaffold](templates-scaffolding.md) said "Read first", because that is the string the scaffold
 emitted.
 
 A real defect, just not the one the number suggested. A reader meeting both
@@ -231,7 +231,7 @@ the first row. The others need a human reader, which is why
 |---|---|
 | Making content friendlier | Tone is not structure |
 | Adding more explanation | Usually raises [load](cognitive-load.md) |
-| A learning management system | That is delivery |
+| A [learning management system](lms-administration.md) | That is delivery |
 | Quizzes | One kind of [assessment](assessment.md), often the weakest |
 | Writing for beginners | It applies at every level of expertise |
 
@@ -282,7 +282,7 @@ answer before any of its numbers are believed.
 
 ## Putting it into practice
 
-**The work product.** A corpus whose structural commitments are checked in CI,
+**The work product.** A corpus whose structural commitments are checked in [CI](documentation-ci.md),
 plus the audit and the fixtures that make the audit trustworthy.
 
 **Three things to do, in order:**

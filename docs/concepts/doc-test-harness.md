@@ -263,7 +263,7 @@ does nothing on a small corpus.
 
 **The tradeoff to name.** A harness that runs real shell commands is
 running untrusted-ish code from pull requests. It needs a scratch directory, no
-credentials in its environment, and ideally a container, and that means
+credentials in its environment, and ideally a [container](reproducible-environments.md), and that means
 contributors cannot easily reproduce the sandbox locally. You are trading
 reproducibility for safety, and the mitigation is to make the sandbox a script
 rather than a CI-only incantation.

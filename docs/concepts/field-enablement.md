@@ -58,7 +58,7 @@ questions and resources are invented.
 
 **Step 1: who did what**
 
-A teach-back here means the person delivered the demo back, unassisted, to
+A [teach-back](assessment.md) here means the person delivered the demo back, unassisted, to
 someone who checked it. It is the deliverer's version of a test.
 
 ```bash
@@ -141,7 +141,7 @@ step 3: what the field is telling product
 
 **Step 4: read it as three decisions**
 
-Everyone attended and a third can deliver. Practice with feedback, not
+Everyone attended and a third can deliver. Practice with [feedback](developer-feedback-loops.md), not
 attendance, is where the drop happens: half the roster never practiced, and
 none of the people who skipped practice reached the teach-back. Partners are
 at zero, so the next session goes to them, not to another round for everyone.
@@ -164,7 +164,7 @@ wrongly, then change the material, not the person: a teach-back checks how
 well the material explained the demo. Repeat until they give it unassisted.
 
 **What you built.** A readiness measure based on delivering, not attending, a
-self-service backlog ranked by real questions, one resource to retire, and a
+self-service backlog ranked by real questions, one resource to [retire](content-retirement.md), and a
 product gap with evidence from the people closest to customers.
 
 ## Reference
@@ -186,10 +186,10 @@ product gap with evidence from the people closest to customers.
 | Rehearsal with a reviewer | Feedback on delivery: what was skipped, where it ran long |
 | Teach-back | Proof that the person can deliver alone, and a test of the material |
 | Office hours | Questions the material did not answer, collected as data |
-| Recorded examples | A model of a good delivery, for people who cannot attend |
+| [Recorded examples](screencasts.md) | A model of a good delivery, for people who cannot attend |
 
 The evidence for practice is strong but less dramatic than often claimed. The
-original deliberate-practice research described structured activity designed
+original [deliberate-practice](learning-science.md) research described structured activity designed
 to improve performance, often designed by a teacher. A 2019 replication did
 not reproduce its core finding, and a 2020 review concluded that practice is
 an important predictor of expertise but probably not as important as proposed.

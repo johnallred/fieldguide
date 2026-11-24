@@ -29,7 +29,7 @@ the toolchain's compatibility rules are the largest source of reader pain.
 
 ## How this applies to your role
 
-Documentation in graphics, simulation, robotics and real-time systems all sits
+Documentation in graphics, simulation, [robotics](robotics-sim.md) and [real-time systems](realtime-systems.md) all sits
 on CUDA. The work is writing for people whose code already works and is
 slower than they expected, or does not build at all.
 

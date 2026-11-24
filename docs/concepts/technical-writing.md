@@ -27,7 +27,7 @@ feedback, and that people who are good at it can say *why* a sentence is wrong.
 ## How this applies to your role
 
 Everything else in this guide rests on it. Strong technical writing goes hand
-in hand with information architecture, and the people who do this work best
+in hand with [information architecture](information-architecture.md), and the people who do this work best
 are usually writers who build: technical writers and developer-documentation
 specialists who also own the tooling.
 
@@ -261,7 +261,7 @@ part a team can learn from.
    page.
 2. **Encode one of your own rules as a linter.** Take a habit you care about,
    hedge words or synonym drift, and write the [Vale rule](prose-linting.md). A
-   writer who ships their style guide as code has made the standard impersonal,
+   writer who ships their [style guide](style-guide.md) as code has made the standard impersonal,
    which is what makes it stick.
 3. **Watch someone follow one of your pages without helping them.** Note where
    they stop, then fix the page rather than explaining it. That note teaches

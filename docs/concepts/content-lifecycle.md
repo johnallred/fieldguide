@@ -50,7 +50,7 @@ Define a lifecycle, then make each state claim falsifiable. About thirty
 minutes. This uses this guide's own registry, where the lifecycle is three
 states and every one of them is checked.
 
-**Step 1: the states, as a closed vocabulary**
+**Step 1: the states, as a [closed vocabulary](taxonomy.md)**
 
 ```python
 STATUSES = ("planned", "drafted", "complete")
@@ -155,9 +155,9 @@ The four activities, with the honest division:
 
 | Activity | Automatable | What stays human |
 |---|---|---|
-| Drafting | Partly; an LLM can produce a first pass against a template | Whether the page should exist |
+| Drafting | Partly; an LLM can produce a first pass against a [template](templates-scaffolding.md) | Whether the page should exist |
 | Updating | Partly; a mechanical change can be proposed | Whether the change is correct |
-| Auditing | Yes; freshness, drift, code accuracy are all measurable | Which findings matter |
+| Auditing | Yes; freshness, drift, [code accuracy](reading-code-to-verify.md) are all measurable | Which findings matter |
 | Review | No | All of it |
 | Retiring | The mechanics | The decision |
 
@@ -198,7 +198,7 @@ checks existed, `complete` was an opinion."
 
 **The follow-up is usually where the human review goes**, and the division to
 offer is that measurement automates and judgment does not.
-Freshness, terminology drift and code accuracy are all measurable; whether a
+Freshness, [terminology drift](terminology-drift.md) and code accuracy are all measurable; whether a
 page should exist, and whether a proposed correction is right, are not.
 
 **The tradeoff to name.** Every state is overhead, and a lifecycle with

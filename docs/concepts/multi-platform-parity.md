@@ -214,8 +214,8 @@ when to stop single-sourcing.
 
 | Mechanism | How | Good for |
 |---|---|---|
-| Build-time conditions | Sphinx `only` with tags set by `--tag` or `conf.py`; one build per platform | Separate sites per platform |
-| Linked tabs | Material for MkDocs content tabs with `content.tabs.link`, so a reader's platform choice applies across the site | Short deltas inside one page |
+| Build-time conditions | [Sphinx](sphinx.md) `only` with tags set by `--tag` or `conf.py`; one build per platform | Separate sites per platform |
+| Linked tabs | Material for [MkDocs](mkdocs.md) content tabs with `content.tabs.link`, so a reader's platform choice applies across the site | Short deltas inside one page |
 | Separate pages | One page per platform, linking to shared concept pages | Deltas that outweigh the shared text |
 | A capability matrix | One table, generated from the same data the checks read | Readers comparing platforms before choosing |
 
@@ -264,7 +264,7 @@ features most readers use and the platforms most readers arrive on.
 **One sharper point.** Parity work has a direction. The first-party API usually
 gets features first, so most deltas are about something missing or later on a
 platform, and they go stale the day the platform catches up. A delta that says
-"not available on Cloud B" needs the same freshness check as any other claim,
+"not available on Cloud B" needs the same [freshness](freshness-monitoring.md) check as any other claim,
 or it will keep sending readers to a workaround they no longer need.
 
 ## Putting it into practice

@@ -33,7 +33,7 @@ queue lengthens, the docs describe the product of six months ago, and the team
 is measured on throughput against an inflow it does not control. The structural
 fix is to move authorship to the point where the knowledge already exists, and
 that is an organisational change rather than a writing one, which is why it
-is described as partnering with engineering, product and developer advocates.
+is described as partnering with [engineering](working-with-engineers.md), product and developer advocates.
 
 The reason it needs a mechanism rather than goodwill is that goodwill does not
 survive a deadline. A definition of done that includes documentation, enforced
@@ -126,7 +126,7 @@ subcommands = sorted(next(a.choices for a in build_parser()._actions
 
 A real finding, apparently: a shipped command documented nowhere. Except the
 gate searched `docs/` and the README has listed `fieldguide status` in its
-quick start since the first commit.
+[quick start](quickstarts.md) since the first commit.
 
 Three gates, three wrong answers, and the third was wrong about *scope* rather
 than granularity: documentation is not only the thing in the docs directory.
@@ -206,7 +206,7 @@ anything.
 | The capability is named in user-facing docs | The gate above | Yes |
 | An example exists | A sample manifest | Yes |
 | The example runs and asserts its output | CI | Yes |
-| The changelog mentions it | A release check | Yes |
+| The [changelog](release-notes.md) mentions it | A release check | Yes |
 | A page explains when to use it | Nothing; needs a person | No |
 
 The bottom row is the honest limit of mechanization, and pretending otherwise

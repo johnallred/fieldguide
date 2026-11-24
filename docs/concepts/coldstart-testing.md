@@ -19,7 +19,7 @@ tags: [qa, core]
 
 ## What it is
 
-Running the quickstart from an environment that has nothing: a fresh virtual
+Running the [quickstart](quickstarts.md) from an environment that has nothing: a fresh virtual
 environment, a clean container, no caches, no credentials the instructions did
 not mention. The test is not whether the commands work. It is whether the
 *document* is complete.
@@ -41,7 +41,7 @@ document that was never true for anyone but its author.
 
 The goal is usually stated as "first success in minutes with zero help."
 Cold-start testing is the only mechanism that measures whether that claim
-holds, and it is why setup, samples and docs have to be treated as one product. A quickstart is not prose
+holds, and it is why setup, samples and docs have to be treated as [one product](docs-as-product.md). A quickstart is not prose
 with code in it. It is an executable artifact that happens to be readable.
 
 ## The golden path
@@ -177,7 +177,7 @@ sample execution only (no fresh env):  ~0.04s
 
 Two orders of magnitude on a toy. On a real project, where the install pulls a
 compiled dependency or a container image, it is minutes against milliseconds.
-That ratio is why this runs as its own CI job rather than alongside the fast
+That ratio is why this runs as its own [CI](documentation-ci.md) job rather than alongside the fast
 gates.
 
 **What you built.** A check that reads the quickstart as a reader would, with

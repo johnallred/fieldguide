@@ -34,7 +34,7 @@ descriptions disagree, and the disagreement is deliberate.
 This matters because the concept that costs readers the most is a choice between two things
 that both look correct.
 
-Robotics sits with graphics, simulation and real-time systems, and documentation
+Robotics sits with graphics, simulation and [real-time systems](realtime-systems.md), and documentation
 in all four has to explain a model before it can explain an API.
 In robotics, the model is the transform tree, and the specific thing that bites
 is which frame to read a position from. Getting it wrong produces software that

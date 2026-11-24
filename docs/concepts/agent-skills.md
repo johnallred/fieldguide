@@ -49,7 +49,7 @@ and a reviewer spends longer fixing it than writing it would have taken.
 On a Tuesday it is a recurring cost you can see in review comments. Every agent
 pull request against the docs repo gets the same four notes: the page is missing
 front matter, it uses "repo" instead of "repository", it was put in `guides/`
-instead of by Diátaxis type, and the code sample is not runnable so CI fails.
+instead of by [Diátaxis](diataxis.md) type, and the code sample is not runnable so CI fails.
 Those four notes are **tribal knowledge about a repository**, they are the same
 four every time, and they are a context kit that nobody has written.
 
@@ -362,7 +362,7 @@ that has nothing to do with release notes.
 
 | Include | Why |
 |---|---|
-| The closed vocabularies, listed in full | Otherwise it invents a value |
+| The [closed vocabularies](taxonomy.md), listed in full | Otherwise it invents a value |
 | Where files go, as a rule not examples | A rule generalizes; examples get pattern-matched |
 | The commands CI runs | So it can check its own work before opening a pull request |
 | Terminology the linter enforces | Cheapest possible review-comment elimination |

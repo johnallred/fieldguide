@@ -130,7 +130,7 @@ This is the gap the rest of the page closes.
 
 **Step 3: write the checker**
 
-The useful version is about sixty lines, because it has to do two things MkDocs
+The useful version is about sixty lines, because it has to do two things [MkDocs](mkdocs.md)
 does not: resolve anchors against the heading slugs a page actually generates,
 and ignore link-shaped text inside code samples.
 
@@ -298,7 +298,7 @@ and it is exactly the case the build cannot see."
 non-determinism in a required check trains people to retry until green.
 
 **The tradeoff to name.** Slug generation is tool-specific. Your checker
-reimplements the slug rules of your static site generator, and if those rules
+reimplements the slug rules of your [static site generator](static-site-generators.md), and if those rules
 drift your checker produces false reports. The honest mitigation is to
 unit-test `slugify` against real headings from your own corpus. The better
 long-term answer is to check rendered HTML, where the `id` attributes are

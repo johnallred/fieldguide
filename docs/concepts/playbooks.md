@@ -17,7 +17,7 @@ tags: [ia, core]
 
 ## What it is
 
-A page that branches. A tutorial takes one reader down one path; a playbook
+A page that branches. A [tutorial](tutorial-design.md) takes one reader down one path; a playbook
 asks what situation you are in and routes you accordingly. It is the right
 shape for troubleshooting, for incident response, and for any question whose
 honest answer is "it depends", because it makes the *depends* explicit.
@@ -40,7 +40,7 @@ discriminating questions are the knowledge. Writing a linear how-to for each
 branch loses the part that made the expert valuable, which is the routing.
 
 It is also the output of [SME interviews](sme-interviews.md), which is why that
-is the prerequisite rather than information architecture. You cannot write the
+is the prerequisite rather than [information architecture](information-architecture.md). You cannot write the
 branches without having asked somebody "how do you know which one it is?"
 
 ## The golden path

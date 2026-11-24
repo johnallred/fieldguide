@@ -18,7 +18,7 @@ tags: [edu, core]
 ## What it is
 
 The research on how people acquire skills, reduced to the few results that
-change how you build a tutorial. Most of it fits in five ideas: start from a
+change how you build a [tutorial](tutorial-design.md). Most of it fits in five ideas: start from a
 whole task, show before asking, fade the support, align what you teach with
 what you check, and make the reader retrieve rather than reread.
 
@@ -241,7 +241,7 @@ audit cannot measure: expertise reversal and learning itself.
 | Worked examples and fading | Removing worked steps gradually, from a complete example to a full problem, improved near transfer over example-then-problem pairs | Worked example, then a blank to fill, then an unsupported problem |
 | Expertise reversal | Techniques that help novices can lose their effect, or harm learning, for more experienced learners | Give experienced readers a route past the scaffolding |
 | Testing effect | Tested students retained more after two days and a week than students who restudied, while restudying made them more confident | End with questions answered from memory, not a summary to reread |
-| Multimedia principles | Cut extraneous material, signal structure, keep words beside the thing they describe, segment, pre-train vocabulary | Fewer asides, headings that say what is below, code next to its explanation |
+| Multimedia principles | Cut [extraneous](cognitive-load.md) material, signal structure, keep words beside the thing they describe, segment, pre-train vocabulary | Fewer asides, headings that say what is below, code next to its explanation |
 
 ### What the research does not settle
 
@@ -321,7 +321,7 @@ expert route added and a retrieval check at the end.
 2. Replace the closing summary of one tutorial with three questions answered
    from memory. Record how often readers get them right.
 3. Add a one-line route for experienced readers to the tutorial with the most
-   scaffolding. Check its analytics a month later to see how many take it.
+   scaffolding. Check its [analytics](docs-analytics.md) a month later to see how many take it.
 
 **How to tell it is working.** The drill above runs in this guide's test suite
 and its output is the output quoted here, so the structural half is

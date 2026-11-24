@@ -162,9 +162,9 @@ avoid, and it is close to universal.
 |---|---|---|
 | The corpus lacks the answer | The answerable check fails | Writing |
 | The answer exists, ranked badly | The findable check fails | [Ranking or vocabulary](repeat-questions.md) |
-| The answer exists, phrased in house terms | Grounding fails on the right page | One sentence, usually |
+| The answer exists, phrased in house terms | [Grounding](grounding.md) fails on the right page | One sentence, usually |
 | The reader never searched | Nothing in the corpus | Support workflow, not docs |
-| The reader did not trust it | Nothing in the corpus | Freshness signals, examples |
+| The reader did not trust it | Nothing in the corpus | [Freshness](freshness-monitoring.md) signals, examples |
 | The answer is wrong | A reader complaining | [Code-sample validation](code-sample-validation.md) |
 
 The first three are a documentation role's work and are separable by

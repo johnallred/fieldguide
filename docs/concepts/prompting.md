@@ -26,7 +26,7 @@ looks like: it has to work on the four hundredth input as well as the first.
 ## How this applies to your role
 
 It is the first of three parts of applying LLMs to content work: prompting,
-retrieval and grounding, output evaluation. The ordering is the pipeline, and prompting is
+retrieval and [grounding](grounding.md), output evaluation. The ordering is the pipeline, and prompting is
 the part people think is the whole thing.
 
 What makes it `core` in a documentation role rather than a general skill is the
@@ -414,7 +414,7 @@ demonstrations are usually run on tasks whose output can only be judged by
 reading it, which is how everyone concludes their favorite prompt is best.
 
 **What you would run.** Pick a content task with a mechanical check, such as
-"rewrite this page's front matter to the content model" where a validator can
+"rewrite this page's front matter to the [content model](content-model.md)" where a validator can
 score it, or "extract every flag name from this reference page" where the true
 list is known. Then run three or four prompt variants, twenty inputs each, and
 score with the validator rather than by eye.

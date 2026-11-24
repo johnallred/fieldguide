@@ -30,7 +30,7 @@ responsible for. It is a file. You can open it.
 
 ## How this applies to your role
 
-Documentation has to be discoverable by developers and by AI assistants, and
+Documentation has to be discoverable by developers and by [AI assistants](ai-assistants.md), and
 those belong together: both are retrieval
 over the same corpus, and both fail for the same reasons.
 
@@ -161,7 +161,7 @@ distinct meta descriptions:         121 / 121 pages
 And the reader now sees it as a standfirst under the title. One field, three
 consumers, where it previously had none.
 
-**Step 6: assert it in CI, because the unit tests cannot**
+**Step 6: assert it in [CI](documentation-ci.md), because the unit tests cannot**
 
 A hook's tests pass whether or not it is wired into `mkdocs.yml`. So the gate
 has to read the built output:
@@ -215,7 +215,7 @@ problem and differ in what they do with the results.
 | Headings that name what a reader would type | Headings are the index's unit |
 | A summary in the body | What a reader would type is often the summary, not the prose |
 | Real terms rather than internal names | Your search cannot match a word nobody uses |
-| Synonyms somewhere on the page | Lexical search has no concept of similarity |
+| Synonyms somewhere on the page | [Lexical](vector-stores.md) search has no concept of similarity |
 | Code identifiers present as text | So searching a flag name finds the page |
 
 The synonym row is the one lexical search makes unavoidable. A page about
@@ -276,8 +276,8 @@ and one concrete thing you found missing and fixed.
    `mkdocs.yml` edit silently reverts the whole thing.
 
 **How to tell it is working.** `docpack` exposes its corpus
-through an MCP server with a BM25 index, recorded as a partial demonstration of
-this concept, and its retrieval evaluation caught `summary` being unindexed
+through an [MCP](mcp.md) server with a BM25 index, recorded as a partial demonstration of
+this concept, and its [retrieval evaluation](retrieval-evaluation.md) caught `summary` being unindexed
 there too. The same defect existed in this guide, which is the part worth telling. I
 wrote the page about metadata having no readers while shipping a field with no
 readers, and found it by auditing the index. Every page now carries its own

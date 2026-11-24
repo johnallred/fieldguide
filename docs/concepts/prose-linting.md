@@ -19,7 +19,7 @@ tags: [qa, core]
 
 ## What it is
 
-A linter for prose. Vale reads Markdown, reStructuredText and a dozen other
+A linter for prose. Vale reads Markdown, [reStructuredText](restructuredtext.md) and a dozen other
 formats, applies rules you write in YAML, and reports violations with a file,
 line, column and severity, the same shape a compiler uses.
 
@@ -30,7 +30,7 @@ sentence in a wiki and becomes a failing build.
 
 ## How this applies to your role
 
-Vale belongs in the same family as custom linters and doc test harnesses. That
+Vale belongs in the same family as custom linters and [doc test harnesses](doc-test-harness.md). That
 grouping tells you what the work is: not installing a linter, but *building*
 content quality automation.
 
@@ -42,7 +42,7 @@ when every individual page is correct. A linter is the only mechanism that
 applies the same standard to a pull request from someone who has never read
 your style guide.
 
-The second reason is review bandwidth. A reviewer who spends their attention
+The second reason is [review](docs-review.md) bandwidth. A reviewer who spends their attention
 on serial commas has none left for whether the procedure is correct. Automating
 the mechanical layer is what makes human review about substance.
 

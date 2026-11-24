@@ -21,13 +21,13 @@ tags: [craft, core]
 ## What it is
 
 Making documentation part of the definition of done for a release, enforced by
-something other than goodwill. The output is a check, a template field, or a
+something other than goodwill. The output is a check, a [template](templates-scaffolding.md) field, or a
 gate in the release pipeline, not a policy document.
 
 ## How this applies to your role
 
 Release readiness is one of the standards worth encoding "into templates,
-validators, and guided workflows **rather than static documents**". That
+validators, and [guided workflows](guided-workflows.md) **rather than static documents**". That
 phrasing rules out the usual artifact, which is
 a wiki page titled "Definition of Done" that everyone agreed to in a meeting two
 years ago.
@@ -232,7 +232,7 @@ the *old* behavior, which is the failure a simple existence check misses.
 |---|---|
 | A page exists at this path | The page is good |
 | The page declares `since: 2.4.0` | The page is up to date |
-| The example is covered by sample validation | The example is realistic |
+| The example is covered by [sample validation](code-sample-validation.md) | The example is realistic |
 | The page is in the navigation | The page is discoverable |
 | A changelog entry has a `docs:` annotation | Documentation was considered |
 

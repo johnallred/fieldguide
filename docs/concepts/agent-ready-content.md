@@ -28,7 +28,7 @@ way to fail the other two.
 ## How this applies to your role
 
 The clearest statement of this work is a list of outputs: structure and package
-content for RAG, internal assistants and agentic workflows, including
+content for RAG, [internal assistants](ai-assistants.md) and [agentic workflows](agentic-workflows.md), including
 `llms.txt`, MCP-accessible sources, agent skills and context kits, and
 evaluation sets for answer accuracy.
 
@@ -38,7 +38,7 @@ formats of the same thing; they are four different artifacts for different
 consumption patterns, and the work needs all of them because no one of them
 covers the others.
 
-The same requirement seen from the developer-relations side is a crawlable,
+The same requirement seen from the developer-relations side is a [crawlable](crawlability.md),
 agent-ready front door: content that an LLM can digest as easily as a person.
 
 On a Tuesday this is a question you answer repeatedly: an assistant gave a

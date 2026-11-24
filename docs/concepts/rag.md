@@ -30,7 +30,7 @@ instead of to a person.
 
 RAG shows up in three forms: content you structure and package for it, the
 pipelines themselves, and the internal assistants built on them. It is the
-single most common technical artifact in AI-ready documentation work.
+single most common technical artifact in [AI-ready](agent-ready-content.md) documentation work.
 
 What makes it `core` and difficulty 3 is not the code, which is a few hundred
 lines. It is that **a RAG pipeline has five distinct failure modes that all
@@ -438,8 +438,8 @@ and adding them later means losing the traffic you needed.
 
 | Claim | Reality |
 |---|---|
-| "It stops hallucination" | It reduces it. A model can still contradict its context |
-| "It keeps answers current" | Only if the index is rebuilt. A stale index is a confident liar |
+| "It stops [hallucination](hallucination-guardrails.md)" | It reduces it. A model can still contradict its context |
+| "It keeps answers current" | Only if the index is rebuilt. A [stale index](freshness-monitoring.md) is a confident liar |
 | "It replaces writing" | Failure mode 1 is unfixable by any amount of engineering |
 | "It replaces search" | It *is* search, with the results read aloud |
 | "More chunks is better" | Past a point, relevant content gets diluted |

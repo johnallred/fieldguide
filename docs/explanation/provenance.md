@@ -30,11 +30,11 @@ do it: developer relations, developer education, cloud training labs and
 KnowledgeOps. The titles differed and the work overlapped heavily, which is the
 premise of the whole guide.
 
-Some concepts are named directly in that work: docs-as-code pipelines, Git
-authoring, documentation CI, content modeling, `llms.txt`, evaluation sets.
+Some concepts are named directly in that work: [docs-as-code](../concepts/docs-as-code.md) pipelines, [Git](../concepts/git-authoring.md)
+authoring, [documentation CI](../concepts/documentation-ci.md), [content modeling](../concepts/content-model.md), [`llms.txt`](../concepts/llms-txt.md), evaluation sets.
 Others are here because the named work is impossible without them, and their
-lines say so in those terms. Diátaxis is one of those, and so is every
-embedding concept underneath RAG.
+lines say so in those terms. [Diátaxis](../concepts/diataxis.md) is one of those, and so is every
+[embedding](../concepts/embeddings.md) concept underneath [RAG](../concepts/rag.md).
 
 ## What a second pass changed
 

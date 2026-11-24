@@ -49,7 +49,7 @@ someone with access to the target, for problems a scan could have listed in
 seconds before anything was sent.
 
 There is a second, quieter problem. Even when the lab is fixed, the system
-that tests it usually is not portable: hosted CI runners, a public identity
+that tests it usually is not portable: hosted [CI](documentation-ci.md) runners, a public identity
 provider, packages installed from public indexes on every run. A lab can be
 ready for an isolated region while its health checks cannot follow it there.
 
@@ -190,7 +190,7 @@ groups the results by what the file is for. Run over
   explaining a past mistake. Nothing to change. The CDK constructs and the
   bootstrap templates already build ARNs from `${AWS::Partition}`.
 - **What tests and publishes it** (the harness, workflows, runbook and
-  bootstrap): about forty hits. GitHub-hosted runners, GitHub's OIDC provider,
+  bootstrap): about forty hits. [GitHub-hosted](github-actions.md) runners, GitHub's OIDC provider,
   `pip install` and `npm install` on every run, and `us-east-2` throughout the
   runbook.
 

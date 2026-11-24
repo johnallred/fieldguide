@@ -30,7 +30,7 @@ building a system for every instance is its own failure.
 
 The short version is: you fix the class of problem, not just the instance. The
 goals around it explain why: build systems where the right way is easier than
-the wrong way, and turn documentation, standards and tribal knowledge into
+the wrong way, and turn documentation, standards and [tribal knowledge](sme-interviews.md) into
 tooling, templates and self-service paths, so fewer people have to ask "how do
 I".
 
@@ -175,8 +175,8 @@ increment is obvious.
 | A broken link | Any unresolvable internal link | [Link checking](link-checking.md) |
 | A sample that no longer runs | Any sample drifting from the API | [Code-sample validation](code-sample-validation.md) |
 | A quickstart that fails on a clean machine | Any undeclared dependency | [Cold-start testing](coldstart-testing.md) |
-| A page using "repo" where the glossary says "repository" | Terminology drift | [Prose linting](prose-linting.md) |
-| A page with no owner and no review date | Unmaintainable content | [Content model](content-model.md) with a required `updated` |
+| A page using "repo" where the glossary says "repository" | [Terminology drift](terminology-drift.md) | [Prose linting](prose-linting.md) |
+| A page with no owner and no [review](docs-review.md) date | Unmaintainable content | [Content model](content-model.md) with a required `updated` |
 | A page nobody can find | Structure invisible to search | [Metadata](metadata.md) and [findability](findability.md) |
 | The same question in support three times | Missing self-service path | [Repeat-question analysis](repeat-questions.md) |
 | A release shipped undocumented | Docs outside the definition of done | [Release readiness](release-readiness.md) |

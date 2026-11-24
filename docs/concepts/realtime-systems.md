@@ -27,7 +27,7 @@ in this domain most often gets wrong.
 ## How this applies to your role
 
 This matters because the metric conventions a documentation writer brings from web services
-are actively misleading here, and graphics, simulation, robotics and real-time systems all share
+are actively misleading here, and graphics, simulation, [robotics](robotics-sim.md) and real-time systems all share
 this property.
 
 In a web service, a slow request is a degraded request and the mean is a

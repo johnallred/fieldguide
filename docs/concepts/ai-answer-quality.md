@@ -17,7 +17,7 @@ tags: [meas, core]
 
 ## What it is
 
-Measuring whether an assistant answering from your corpus answers correctly.
+Measuring whether an [assistant](ai-assistants.md) answering from your corpus answers correctly.
 Documentation teams are increasingly asked to own it as a metric, which makes
 documentation partly responsible for a system it does not control: the model is someone else's, the
 prompt is often someone else's, and the only input the documentation team owns
@@ -36,8 +36,8 @@ answers about it.
 
 A corpus is now consumed by assistants more often than many teams realize, and
 the failure mode is new: a confident, fluent, wrong answer, delivered without
-the reader ever seeing the page that would have corrected it. Link checking,
-sample execution and prose linting say nothing about this. The page can be
+the reader ever seeing the page that would have corrected it. [Link checking](link-checking.md),
+[sample execution](code-sample-validation.md) and [prose linting](prose-linting.md) say nothing about this. The page can be
 perfect and unretrieved, and the answer is still wrong.
 
 The second reason is defensive. When an assistant answers wrongly from your
@@ -49,7 +49,7 @@ senior. With one, it is settled by the number.
 
 Measure the ceiling, find the point at which more context stops helping, and
 fix what is left. About forty minutes, on the companion repository's twenty-case
-golden set.
+[golden set](retrieval-evaluation.md).
 
 **Step 1: the ceiling, at one chunk**
 
@@ -83,8 +83,8 @@ No real system passes one chunk. Measure the same property across the top *k*:
 Ten points between one chunk and three, then **nothing at all out to ten**.
 
 That plateau is the most useful shape in this measurement. While widening the
-window still helps, the failures are ranking failures, and a reranker or a
-better embedding model would address them. Once it stops helping, the remaining
+window still helps, the failures are ranking failures, and a [reranker](vector-stores.md) or a
+better [embedding](embeddings.md) model would address them. Once it stops helping, the remaining
 failures are not retrieval failures at all, and no amount of model or
 infrastructure will touch them.
 

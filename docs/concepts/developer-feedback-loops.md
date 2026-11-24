@@ -56,7 +56,7 @@ nothing to install.
 **Step 1: the report**
 
 The companion repository had been built, tested and packaged. Its first reader
-worked through the README's quick start on his own machine, then said:
+worked through the README's [quick start](quickstarts.md) on his own machine, then said:
 
 > I ran all the commands and I have no idea what the result is or what I should
 > be looking at. The readme didn't clarify this for me.
@@ -80,7 +80,7 @@ Cold-start the quickstart           pass
 
 **Ten gates, ten passes, and the artifact was incomprehensible to its reader.**
 
-The cold-start gate is the painful one, because it exists precisely to catch "a
+The [cold-start](coldstart-testing.md) gate is the painful one, because it exists precisely to catch "a
 quickstart that does not work for a stranger". It runs the *tutorial's*
 commands. The reader had followed the *README's* quick start, a different
 sequence. The repository had two front doors and one of them was instrumented.
@@ -137,7 +137,7 @@ handling is a judgment skill rather than a throughput problem.
 
 **Step 5: the second loop, which started from a number**
 
-A different shape, worth contrasting. The retrieval evaluation reported two
+A different shape, worth contrasting. The [retrieval evaluation](retrieval-evaluation.md) reported two
 cases whose top chunk lacked the terms an answer needs. That is a measurement
 rather than a complaint, and it named its own cause: the reader's everyday word
 was absent from the page documenting the thing.
@@ -182,7 +182,7 @@ product change, a documentation change and a test.
 | CI gates | Breakage, drift, regressions | Whether any of it makes sense | Every commit |
 | Cold-start test | A quickstart that fails for a stranger | The quickstart you did not instrument | Every commit |
 | Retrieval evaluation | Unfindable answers, vocabulary gaps | Whether the corpus is worth finding | Every commit |
-| Search logs | The words readers use | Why they wanted them | Continuous, with an audience |
+| [Search logs](search-log-analysis.md) | The words readers use | Why they wanted them | Continuous, with an audience |
 | Support tickets | Problems bad enough to report | Everything people gave up on | Continuous, with an audience |
 | A person reading it cold | Structural incomprehension | Anything needing aggregation | Once per person |
 

@@ -117,7 +117,7 @@ FAIL: 1 style problem(s)
 build gate exit=1   style gate exit=1
 ```
 
-Both defects, one run. In a GitHub Actions workflow this is the difference between one `run:` with
+Both defects, one run. In a [GitHub Actions](github-actions.md) workflow this is the difference between one `run:` with
 `&&` in it and two `run:` steps, and it is worth more than it looks. A
 contributor who gets every problem at once fixes them in one commit. A
 contributor who gets them one at a time learns that the pipeline wastes their
@@ -171,7 +171,7 @@ This is the real deliverable. The pipeline is downstream of this table.
 | A link goes nowhere | [Link checking](link-checking.md) | Yes |
 | A sample no longer runs | [Code-sample validation](code-sample-validation.md) | Yes |
 | The quickstart fails from scratch | [Cold-start testing](coldstart-testing.md) | Yes, in its own job |
-| A required metadata field is missing | Content model validation | Yes |
+| A required metadata field is missing | [Content model](content-model.md) validation | Yes |
 | A term drifted from the glossary | [Terminology drift](terminology-drift.md) | Yes |
 | The prose hedges or is passive | [Prose linting](prose-linting.md) | Warn only |
 | A page is older than its subject | [Freshness monitoring](freshness-monitoring.md) | Warn, or a scheduled report |

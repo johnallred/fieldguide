@@ -81,7 +81,7 @@ print(re.search(r'<meta[^>]*refresh[^>]*>', h).group(0))
 A generated page containing a **client-side** meta refresh. Note what that is
 not: it is not an HTTP 301. The distinction matters, because a 301 transfers
 accumulated ranking signals to the new URL and a meta refresh is a weaker,
-slower signal that search engines treat with more suspicion. On static hosting
+slower signal that [search engines](seo-for-docs.md) treat with more suspicion. On static hosting
 this is often all you can do; if you control the server or the CDN, prefer a
 real 301 and keep the meta refresh as the fallback.
 
@@ -145,16 +145,16 @@ target fail, and a rule about internal links that keeps chains from forming.
 
 | Step | Why |
 |---|---|
-| Decide, with evidence | Traffic, support deflection, repeat questions |
+| Decide, with evidence | Traffic, [support deflection](support-deflection.md), [repeat questions](repeat-questions.md) |
 | Pick the successor, or accept there is none | A redirect needs a target |
 | Rewrite internal links to the successor | Prevents redirect chains |
 | Add the redirect | External links and bookmarks |
 | Remove it from navigation and any index | Otherwise it is reachable and gone |
-| Remove it from retrieval artifacts | A deleted page still in a vector store still answers |
+| Remove it from retrieval artifacts | A deleted page still in a [vector store](vector-stores.md) still answers |
 | Note the retirement somewhere | So the decision is not relitigated annually |
 
 The retrieval row is new and easy to miss. A page removed from the site but
-still present in an index or an `llms.txt` keeps answering questions from
+still present in an index or an [`llms.txt`](llms-txt.md) keeps answering questions from
 beyond the grave, and the answer looks authoritative.
 
 ### When not to redirect
@@ -190,7 +190,7 @@ is governance, not tooling, which is why this page sits downstream of
 | Signal | Threshold worth discussing |
 |---|---|
 | Page views | Near zero over a full release cycle |
-| Search exits | People find it and immediately leave |
+| [Search exits](search-log-analysis.md) | People find it and immediately leave |
 | Support tickets citing it | Readers are being misled by it |
 | Its subject no longer exists | Automatic candidate |
 | Its [freshness](freshness-monitoring.md) queue age | Perpetually overdue and never claimed |

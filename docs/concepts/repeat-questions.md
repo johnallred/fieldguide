@@ -66,7 +66,7 @@ survived widening the retrieved window from one chunk to ten:
   grounded@10   18/20  (90%)
 ```
 
-A plateau. More context stops helping, so no reranker and no embedding model
+A plateau. More context stops helping, so no reranker and no [embedding](embeddings.md) model
 would touch the remaining two. Something else is wrong with them.
 
 **Step 2: measure the corpus's vocabulary against the questions'**
@@ -211,7 +211,7 @@ term with theirs loses precision; putting them side by side loses nothing.
 | A chatbot over the same corpus | Inherits the vocabulary gap exactly |
 
 The last row is the current version of this mistake and worth saying out loud:
-a retrieval-augmented assistant over a corpus that lacks the reader's word
+a [retrieval-augmented](rag.md) [assistant](ai-assistants.md) over a corpus that lacks the reader's word
 fails the same query the same way, with more confidence.
 
 ### Repeats against deflection
@@ -258,7 +258,7 @@ weights, and until they exist this is a method rather than a prioritization.
 
 ## Putting it into practice
 
-**The work product.** A vocabulary-coverage measurement over your own golden set or
+**The work product.** A vocabulary-coverage measurement over your own [golden set](retrieval-evaluation.md) or
 query log, and one page edited to carry a reader's word beside your own.
 
 **Three things to do, in order:**
