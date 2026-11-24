@@ -470,6 +470,17 @@ concepts:
       - "Making a lab that runs in one AWS partition run in another, including isolated regions with no route to the public internet."
     status: complete
 
+  - id: learner-sandbox-guardrails
+    name: Learner sandbox guardrails
+    category: qa
+    tier: supporting
+    difficulty: 3
+    time: 5h
+    prerequisites: [ephemeral-environments, security-documentation]
+    in_practice:
+      - "Letting a learner do everything the lab needs in a real cloud account, and nothing that breaks the account, the bill or the lab."
+    status: complete
+
   # =========================================================================
   # Golden paths and developer onboarding
   # =========================================================================
@@ -1520,6 +1531,7 @@ paths:
       - ephemeral-environments
       - lab-publishing
       - isolated-region-labs
+      - learner-sandbox-guardrails
       - learning-paths
       - lms-administration
       - learning-content-standards

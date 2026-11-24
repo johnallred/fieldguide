@@ -315,7 +315,7 @@ more or wider paths, which worsens the prerequisite gaps. I do not think there
 is a clean answer. What I would not defend is where this started, with both
 gaps unmeasured and a promise on every page that the data contradicted.
 
-**One sharper point.** Seventy-five of the 119 concepts sit in exactly one path.
+**One sharper point.** Seventy-six of the 120 concepts sit in exactly one path.
 A path that is the sole route to a third of a corpus is doing navigation work
 rather than curriculum work, and calling it curriculum obscures that the real
 need was [findability](findability.md).
@@ -335,7 +335,7 @@ check and a coverage report in CI, and an entry state computed per path.
 3. Count how many paths each item appears in. Anything appearing once is
    navigation, not curriculum, and should probably be solved by search instead.
 
-**How to tell it is working.** This guide holds nine paths over 119 concepts in `concepts.yaml`, generates every path page from them, and
+**How to tell it is working.** This guide holds nine paths over 120 concepts in `concepts.yaml`, generates every path page from them, and
 fails CI on an ordering violation; the entry-state paragraph and its test were
 added by the exercise above. The honest limits: no reader has completed any of
 these paths, so there is no evidence the orders are *good*, only that they are

@@ -1,6 +1,6 @@
 # Which concepts have a working demonstration, and in which file.
 #
-# This guide is 119 concepts of prose about how to do a job. Prose is cheap.
+# This guide is 120 concepts of prose about how to do a job. Prose is cheap.
 # `docpack` is a companion repository that actually does a chunk of the work,
 # and this file records exactly which chunk, down to the file that does it.
 #
@@ -522,6 +522,12 @@ demonstrates:
     artifact: drills/partition_audit.py
     extent: partial
     note: "A portability audit for partition, endpoint, region and account literals, downloads at lab time, and services a target region does not offer, with partition facts checked against AWS documentation and the SDK's partition data. Run over coldlab at d38115f it found the lab and its CDK infrastructure close to portable and the test tooling (hosted runners, a public OIDC provider, per-run installs) not. The target service list is invented, and nothing was deployed outside a commercial region."
+
+  - concept: learner-sandbox-guardrails
+    project: fieldguide
+    artifact: drills/sandbox_guardrails.py
+    extent: partial
+    note: "Ten learner requests evaluated through an identity policy, a permissions boundary and an SCP with a simplified model of AWS's documented evaluation logic: the identity policy alone stops none of six forbidden requests, the boundary and SCP together stop four, and the two gaps (PassRole on everything, S3 on everything) are traced to their statements. coldlab's scoped CI role, region-denying organization policy and forecast budget are read as real examples. Nothing calls AWS and no learner has used such a sandbox here."
 
   - concept: demo-design
     project: fieldguide

@@ -14,7 +14,7 @@ This guide is prose about how to do the work, and prose is cheap. This page
 records which concepts are also *implemented* somewhere you can open, down to
 the file that does the work.
 
-**90 of 119 concepts have a demonstration**, 37 of them in full.
+**91 of 120 concepts have a demonstration**, 37 of them in full.
 The rest of this page is the other side of that number, which is the half worth
 reading.
 
@@ -32,7 +32,7 @@ A Python library and the documentation site that documents it, where the site is
 
 The repository you are reading. It earns entries here only where it does the work rather than describing it: a two-part fence gate that compares fenced source against the rendered code blocks of the built HTML, and an accessibility property test over generated pages. The fence gate found 127 defects across seven pages that every other check had passed.
 
-[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 48 concepts
+[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 49 concepts
 
 ## What is demonstrated
 
@@ -77,7 +77,7 @@ embeds them.
 
 ### Quality automation and documentation CI
 
-15 of 16.
+16 of 17.
 
 | Concept | Extent | Artifact | What it does |
 |---|---|---|---|
@@ -94,6 +94,7 @@ embeds them.
 | [Doctests and executable docstrings](concepts/doctests.md) | :material-check-circle: full | `pyproject.toml` | `--doctest-modules` across the package, so every docstring example is executed. One broke a strict build and had to be rewritten. |
 | [Lab publishing pipelines](concepts/lab-publishing.md) | :material-circle-half-full: partial | `drills/lab_publish.py` | A gate over a lab document using coldlab's directive syntax (five blocking problems: an unnamed step, a bare sleep, a reasonless exit exception, a download at lab time, a hardcoded partition and account), promotion counted per immutable version rather than per lab, and rollback separated from fix-forward by whether the content changed. The labs, versions and runs are invented; the real gates behind it are coldlab's extract.py and this guide's own deploy, which needs five gate jobs. No lab catalog is published through such a pipeline here. |
 | [Labs for isolated regions](concepts/isolated-region-labs.md) | :material-circle-half-full: partial | `drills/partition_audit.py` | A portability audit for partition, endpoint, region and account literals, downloads at lab time, and services a target region does not offer, with partition facts checked against AWS documentation and the SDK's partition data. Run over coldlab at d38115f it found the lab and its CDK infrastructure close to portable and the test tooling (hosted runners, a public OIDC provider, per-run installs) not. The target service list is invented, and nothing was deployed outside a commercial region. |
+| [Learner sandbox guardrails](concepts/learner-sandbox-guardrails.md) | :material-circle-half-full: partial | `drills/sandbox_guardrails.py` | Ten learner requests evaluated through an identity policy, a permissions boundary and an SCP with a simplified model of AWS's documented evaluation logic: the identity policy alone stops none of six forbidden requests, the boundary and SCP together stop four, and the two gaps (PassRole on everything, S3 on everything) are traced to their statements. coldlab's scoped CI role, region-denying organization policy and forecast budget are read as real examples. Nothing calls AWS and no learner has used such a sandbox here. |
 | [Preview deployments and publishing](concepts/preview-deployments.md) | :material-circle-half-full: partial | `.github/workflows/docs.yml` | Publishes to GitHub Pages on main, and regenerates the retrieval artifacts alongside the site. No per-pull-request preview. |
 | [Writing custom linters](concepts/custom-linters.md) | :material-check-circle: full | `src/fieldguide/fences.py` | A rule no pattern matcher can express, because it models shell heredocs to decide which fence markers are markup and which are data. |
 
@@ -209,7 +210,7 @@ Coverage by category, including the categories at zero.
 |---|---|---|
 | Information and knowledge architecture | 12/14 | 0 |
 | Docs-as-code toolchain | 8/15 | 0 |
-| Quality automation and documentation CI | 15/16 | 0 |
+| Quality automation and documentation CI | 16/17 | 0 |
 | Golden paths and developer onboarding | 9/9 | 0 |
 | AI-ready content and agents | 13/21 | 8 |
 | Measurement and feedback | 7/7 | 0 |

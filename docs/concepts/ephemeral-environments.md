@@ -18,7 +18,7 @@ tags: [gp, supporting]
 
 **Prerequisites:** [Reproducible environments](reproducible-environments.md), [Cold-start testing](coldstart-testing.md)
 
-**Leads to:** [Lab publishing pipelines](lab-publishing.md)
+**Leads to:** [Lab publishing pipelines](lab-publishing.md), [Learner sandbox guardrails](learner-sandbox-guardrails.md)
 
 ## What it is
 

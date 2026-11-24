@@ -105,6 +105,11 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         "<<'DATA'\n",
         ("TEMPLATE", "LAB", "TARGET"),
     ),
+    "sandbox_guardrails.py": (
+        "docs/concepts/learner-sandbox-guardrails.md",
+        "<<'DATA'\n",
+        ("POLICIES", "REQUESTS"),
+    ),
     "demo_check.py": (
         "docs/concepts/demo-design.md",
         "<<'DATA'\n",
@@ -261,6 +266,18 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "7 thing(s) to fix before this lab runs in another partition or an isolated region",
         ),
     ),
+    "sandbox_guardrails.py": (
+        "docs/concepts/learner-sandbox-guardrails.md",
+        1,
+        (
+            "  GAP  ALLOW  iam:PassRole role/LabHarnessAdmin (us-east-1)",
+            "  GAP  ALLOW  s3:DeleteBucket lab-health-records (us-east-2)",
+            "              scp: explicit deny (!iam:*, region!=us-east-2)",
+            "  identity  alone stops 0 of 6",
+            "  together  stop 4 of 6",
+            "    the boundary allows iam:PassRole on *: scope it to the lab's own resources",
+        ),
+    ),
     "demo_check.py": (
         "docs/concepts/demo-design.md",
         0,
@@ -373,7 +390,7 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         (
             "two hours against the 34-hour first-week path: 6%",
             "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
-            "concepts in this corpus of 3h or less: 51/119",
+            "concepts in this corpus of 3h or less: 51/120",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",
         ),

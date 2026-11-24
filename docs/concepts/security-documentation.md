@@ -15,6 +15,8 @@ tags: [ia, supporting]
 
 **Prerequisites:** [Style guides and terminology management](style-guide.md)
 
+**Leads to:** [Learner sandbox guardrails](learner-sandbox-guardrails.md)
+
 ## What it is
 
 Turning the security rules your documentation must follow into checks that run,
