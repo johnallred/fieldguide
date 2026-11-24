@@ -27,7 +27,8 @@ an `Added` heading.
 - Two learning paths: Reference and releases, and Found by search and answer
   engines.
 - A "Not on any path" section on the paths index, listing the concepts that
-  are deliberately on no path and when to read them anyway.
+  are deliberately on no path and when to read them anyway. A test keeps each
+  of them linked from at least one concept that is on a path.
 - A Docusaurus build drill (`drills/docusaurus_build.py`), measuring
   Docusaurus 3.10.2 against MkDocs 1.6.1 on the same Markdown, cold and warm.
 

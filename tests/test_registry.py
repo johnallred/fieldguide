@@ -1299,3 +1299,27 @@ def test_no_real_core_concept_is_off_every_path():
     registry = load_registry(REAL_REGISTRY)
     core_off = sorted(cid for cid in registry.off_path if registry.by_id[cid].tier == "core")
     assert not core_off, f"core concepts must be on a path: {core_off}"
+
+
+def test_every_real_off_path_concept_is_linked_from_a_concept_on_a_path():
+    """A concept on no path is still reachable from one that is.
+
+    The paths never teach these, so the only way a path reader meets them is a
+    link on a page they do read. Most of those links are hand-written, in the
+    text or a Related list, so nothing else keeps them.
+    """
+    import re
+
+    registry = load_registry(REAL_REGISTRY)
+    on_a_path = {cid for p in registry.paths for cid in p.concepts}
+    unreachable = []
+    for target in registry.off_path:
+        link = re.compile(r"\]\((?:\.\./concepts/)?" + re.escape(target) + r"\.md[)#]")
+        sources = [
+            cid
+            for cid in sorted(on_a_path)
+            if link.search((REAL_DOCS / "concepts" / f"{cid}.md").read_text(encoding="utf-8"))
+        ]
+        if not sources:
+            unreachable.append(target)
+    assert not unreachable, f"on no path and linked from no concept on one: {unreachable}"
