@@ -426,17 +426,23 @@ def demonstrated_page(registry: Registry, demonstrations) -> str:
         out += [
             f"### {label}\n",
             f"{len(hits)} of {len(group)}.\n",
-            "| Concept | Extent | Artifact | What it does |",
-            "|---|---|---|---|",
+            "| Concept | Extent | Repository | Artifact | What it does |",
+            "|---|---|---|---|---|",
         ]
+        # Every entry, not one per concept. A dict keyed by concept kept only
+        # the last entry, which hid the others: docpack's custom linters
+        # behind fieldguide's, and two of coldlab's entries once it joined.
+        # The repository column is there because an artifact path such as
+        # harness/run.py says nothing about which repository holds it.
         for concept in hits:
-            demo = by_concept[concept.id]
-            mark = ":material-check-circle:" if demo.is_full else ":material-circle-half-full:"
-            note = demo.note.replace("|", "\\|")
-            out.append(
-                f"| {_link(concept, 'concepts/')} | {mark} {demo.extent} "
-                f"| `{demo.artifact}` | {note} |"
-            )
+            for demo in (d for d in demonstrations.entries if d.concept == concept.id):
+                mark = ":material-check-circle:" if demo.is_full else ":material-circle-half-full:"
+                note = demo.note.replace("|", "\\|")
+                project = demonstrations.projects[demo.project]
+                out.append(
+                    f"| {_link(concept, 'concepts/')} | {mark} {demo.extent} "
+                    f"| [{project.name}]({project.url}) | `{demo.artifact}` | {note} |"
+                )
         out.append("")
 
     # The inverse, by category, so the empty categories are impossible to miss.

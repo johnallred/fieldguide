@@ -1173,7 +1173,11 @@ def test_every_demonstration_names_a_file_that_exists():
     registry = load_registry(root / "concepts.yaml")
     demos = load_demonstrations(root / "demonstrations.yaml", registry)
 
-    siblings = {"fieldguide": root, "docpack": root.parent / "docpack"}
+    siblings = {
+        "fieldguide": root,
+        "docpack": root.parent / "docpack",
+        "coldlab": root.parent / "coldlab",
+    }
     missing, skipped = [], 0
     for entry in demos.entries:
         base = siblings.get(entry.project)

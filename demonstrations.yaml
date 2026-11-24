@@ -1,8 +1,8 @@
 # Which concepts have a working demonstration, and in which file.
 #
 # This guide is 120 concepts of prose about how to do a job. Prose is cheap.
-# `docpack` is a companion repository that actually does a chunk of the work,
-# and this file records exactly which chunk, down to the file that does it.
+# `docpack` and `coldlab` are companion repositories that actually do a chunk of
+# the work, and this file records exactly which chunk, down to the file that does it.
 #
 # It exists for two reasons, and the second one is the honest one.
 #
@@ -76,6 +76,19 @@ projects:
       accessibility property test over generated pages. The fence gate found
       127 defects across seven pages that every other check had passed.
     url: https://johnallred.github.io/fieldguide/
+
+  coldlab:
+    name: coldlab
+    tagline: Provisions a hands-on AWS lab, runs it, checks it and proves the teardown.
+    summary: >-
+      A harness that deploys one lab with the AWS CDK, runs the commands the
+      lab document tells a student to type, asserts on what AWS actually did,
+      tears the stack down in a finally block and resolves every tagged ARN
+      against its owning service. It runs nightly in GitHub Actions through an
+      OIDC role and commits each run to a health record. One lab, one personal
+      account and one region; account vending and a catalogue were
+      deliberately not built.
+    url: https://github.com/johnallred/coldlab
 
 demonstrates:
 
@@ -510,6 +523,24 @@ demonstrates:
     artifact: drills/lab_lifecycle.py
     extent: partial
     note: "The full lifecycle (provision, run the lab's own steps, assert, tear down in a finally block, resolve every tagged ARN against its owning service, record) runs in the companion repository coldlab against a real AWS account; this drill reads a dated snapshot of its record (five runs, to 2026-11-24T00:01Z) offline, traces the one flaky check to a misread exit code, sizes a 200-lab catalogue at 26.6 serial hours, and verifies a teardown three ways. It stops at one lab, one personal account and one region: account vending was deliberately not built, no catalogue exists, the record is days old, and cost per run was measured once, from usage times published prices: the CI runner costs about seventeen hundred times the AWS resources."
+
+  - concept: ephemeral-environments
+    project: coldlab
+    artifact: harness/run.py
+    extent: partial
+    note: "The whole lifecycle against a real AWS account: deploy, run the lab document's own steps, assert, tear down in a finally block, verify the teardown three ways with every tagged ARN resolved against its service, and append the run to health/health.jsonl, with the summary in health/HEALTH.md generated from it. Partial because it is one lab in one personal account and region, with no account vending."
+
+  - concept: lab-publishing
+    project: coldlab
+    artifact: harness/extract.py
+    extent: partial
+    note: "The gate half: the harness runs the lab document rather than its own copy of the commands, and refuses a document that would weaken the test, such as a bare sleep, a short-polled read or a directive with no reason. No versions, channels or promotion; the nightly run tests what is on main."
+
+  - concept: learner-sandbox-guardrails
+    project: coldlab
+    artifact: bootstrap/oidc-role.yaml
+    extent: partial
+    note: "The guardrails for the harness's own identity rather than a learner's: a CI role scoped by resource wherever the service allows, deploying only by assuming the CDK bootstrap roles, an organisation policy that denied a wrong-region deploy, and a low budget with a forecast alert. The stacks still deploy through the CDK's default administrator role, and there are no learners."
 
   - concept: lab-publishing
     project: fieldguide

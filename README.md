@@ -187,8 +187,8 @@ standard for the rest:
   do, and the robotics one simulates the two frame properties ROS REP 105
   specifies rather than running ROS. Both pages open with a banner saying so.
 - [`demonstrations.yaml`](demonstrations.yaml) records, per concept, which of
-  the two repositories demonstrates it and how far, including the concepts
-  neither one demonstrates at all.
+  the three repositories (this one, `docpack` and `coldlab`) demonstrates it
+  and how far, including the concepts none of them demonstrates at all.
 - Sixteen concepts cannot be demonstrated here, ten because they need a model
   and six because the evidence is a conversation in someone else's repository.
   Each of those pages says what environment the demonstration needs, what you
