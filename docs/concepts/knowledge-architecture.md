@@ -88,14 +88,15 @@ for cid, n in outdeg.most_common(6):
 
 ```
  8 dependents   content-model              [core]
- 6 dependents   docs-as-code               [core]
+ 8 dependents   docs-as-code               [core]
+ 6 dependents   documentation-ci           [core]
  5 dependents   metadata                   [core]
  5 dependents   static-site-generators     [core]
- 5 dependents   documentation-ci           [core]
- 5 dependents   agent-ready-content        [core]
+ 5 dependents   code-sample-validation     [core]
 ```
 
-These six are the architecture's spine. The practical consequence is about
+These six are the architecture's spine, and two more, agent-ready content and
+docs analytics, tie the last of them at five. The practical consequence is about
 sequencing: writing a leaf before its prerequisites exist produces a page that
 has to re-explain its own foundations, and the dependency count tells you which
 pages to write first without guessing.
@@ -118,7 +119,8 @@ information-architecture -> content-model -> metadata -> agent-ready-content
 ```
 
 Eleven. A reader who wants hallucination guardrails and takes the architecture
-literally has ten concepts to get through first.
+literally has ten concepts to get through first, and measuring AI answer quality
+ties it through the same ten.
 
 That is a finding requiring judgment rather than a fix. Either the chain is
 real, in which case the honest answer is that this material is genuinely deep
@@ -133,8 +135,8 @@ about structure, computed. If the claim is sound they should correlate:
 
 ```
 mean dependents by tier:
-   core        n= 64  mean=1.53  max=8
-   supporting  n= 33  mean=0.45  max=3
+   core        n= 66  mean=1.65  max=8
+   supporting  n= 45  mean=0.60  max=3
    context     n=  9  mean=0.22  max=1
 ```
 
@@ -146,10 +148,11 @@ context-tier concepts that something depends on:
    usd-omniverse (1), inference-serving (1)
 
 supporting concepts with more dependents than the core mean:
-   content-lifecycle (3), style-guide (3), reproducible-environments (2), seo-for-docs (2)
+   content-lifecycle (3), style-guide (3), reproducible-environments (3),
+   single-sourcing (2), ephemeral-environments (2), seo-for-docs (2)
 ```
 
-Four supporting concepts carry more of the graph than the average core
+Six supporting concepts carry more of the graph than the average core
 concept. They are promotion candidates, identified mechanically rather than by
 argument.
 
@@ -157,15 +160,16 @@ argument.
 
 ```
 core concepts that are isolated (no prerequisites, no dependents):
-   technical-writing, reading-code-to-verify, docs-as-product
+   reading-code-to-verify, docs-as-product
 ```
 
-Three concepts are marked `core`, the highest importance, and sit entirely
+Two concepts are marked `core`, the highest importance, and sit entirely
 outside the graph. By the logic of steps 2 and 4 that looks like a
 contradiction.
 
-It is not. All three are craft skills: writing well, reading code to verify a
-claim, treating documentation as a product. They are among the most important
+It is not. Both are craft skills: reading code to verify a claim, and treating
+documentation as a product. Technical writing was a third until release notes
+named it as a prerequisite, which is fair: a changelog is writing. They are among the most important
 things on the curriculum and they are not *prerequisites* for anything,
 because you do not learn them once and build on them. You get better at them
 across everything else.
@@ -177,7 +181,7 @@ judgment, because judgment has no prerequisites and therefore no place in a
 tree.
 
 **What you built.** An architecture you can interrogate: a spine, a depth
-measurement, four promotion candidates found mechanically, and one finding that
+measurement, six promotion candidates found mechanically, and one finding that
 looked like a defect and was a property of the domain.
 
 ## Reference
@@ -248,7 +252,7 @@ met. The second one is a graph, which means you can compute over it."
 bring implementation feedback. So the description of your part is not "I
 design the architecture", it is "I implement it, measure it, and tell the leads
 what breaks". Then give an example of a measurement: depth of
-eleven, four supporting concepts carrying more of the graph than the average
+eleven, six supporting concepts carrying more of the graph than the average
 core concept.
 
 **The tradeoff to name.** Making relationships explicit is real ongoing
@@ -259,10 +263,10 @@ this is overhead for nothing; it starts paying somewhere in the low hundreds.
 
 **One sharper point.** A dependency graph ranks
 sequence, not importance, and conflating them is how curricula end up
-teaching tooling thoroughly and never mentioning judgment. Three of the most
+teaching tooling thoroughly and never mentioning judgment. Two of the most
 important concepts in my own registry are isolated nodes, because craft skills
-are not prerequisites for anything: you do not learn to write well once and
-build on it. An architecture that cannot represent those will quietly drop
+are not prerequisites for anything: you do not learn to verify a claim once
+and build on it. An architecture that cannot represent those will quietly drop
 them.
 
 ## Putting it into practice

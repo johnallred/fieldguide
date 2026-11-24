@@ -47,9 +47,9 @@ prerequisites that anything verifies.
 
 ## The golden path
 
-Validate a real curriculum: nine paths over 106 concepts. Find that the
-ordering claim holds, the coverage claim does not, and the promise made at the
-top of every path page is false. About thirty-five minutes.
+Validate a real curriculum: twelve paths over 120 concepts. Find that the
+ordering claim holds, that coverage did not hold until it was measured, and
+that the promise made at the top of every path page was false. About thirty-five minutes.
 
 **Step 1: the paths as data, not as pages**
 
@@ -57,7 +57,7 @@ top of every path page is false. About thirty-five minutes.
 paths:
   - id: first-week
     name: The first week
-    audience: Someone who has just taken one of these roles and needs to be useful by Friday.
+    audience: Someone who has just started in this kind of work and needs to be useful by Friday.
     concepts: [technical-writing, docs-as-product, docs-as-code, markdown,
                git-authoring, diataxis, static-site-generators, mkdocs,
                link-checking, documentation-ci]
@@ -69,13 +69,18 @@ cannot link to a concept that does not exist, and the sequence can be checked
 against the [prerequisite graph](knowledge-architecture.md).
 
 ```
-  first-week             10 steps  34h
-  content-architect      13 steps  43h
-  docs-engineer          18 steps  70h
-  knowledgeops           17 steps  83h
-  developer-educator     15 steps  60h
-  writer-who-builds      10 steps  37h
-  prove-it               15 steps  59h
+  first-week              10 steps  34h
+  prove-it                15 steps  59h
+  content-architect       17 steps  60h
+  docs-engineer           18 steps  69h
+  reference-and-releases   8 steps  29h
+  knowledgeops            18 steps  87h
+  answer-engines           8 steps  24h
+  developer-educator      19 steps  77h
+  lab-engineer             9 steps  43h
+  writer-who-builds       15 steps  55h
+  prove-the-outcomes      11 steps  40h
+  domain-context           6 steps  24h
 ```
 
 **Step 2: check the ordering claim**
@@ -96,7 +101,7 @@ for learning_path in reg.paths:
 learning paths that teach a concept before its prerequisite: 0
 ```
 
-Zero across nine paths and 114 steps, and not because the paths were written
+Zero across twelve paths and 154 steps, and not because the paths were written
 carefully. They were reordered twice to satisfy this check when it was first
 added. That is the check paying for itself: a curriculum nobody validates
 drifts out of order the first time a concept gains a prerequisite.
@@ -114,15 +119,20 @@ if prerequisite in learning_path.concepts and prerequisite not in seen:
 A defensible decision, and an unmeasured one. Count the pairs it permits:
 
 ```
-  first-week           steps assuming something the path never teaches:  1
-  content-architect                                                      1
-  docs-engineer                                                          5
-  knowledgeops                                                           3
-  developer-educator                                                     4
-  writer-who-builds                                                      3
-  prove-it                                                              10
+  first-week              steps assuming something the path never teaches:  1
+  prove-it                                                                 10
+  content-architect                                                         4
+  docs-engineer                                                             6
+  reference-and-releases                                                    7
+  knowledgeops                                                              3
+  answer-engines                                                            2
+  developer-educator                                                        3
+  lab-engineer                                                              5
+  writer-who-builds                                                         4
+  prove-the-outcomes                                                        6
+  domain-context                                                            0
 
-total step-prerequisite pairs pointing outside their path: 27
+total step-prerequisite pairs pointing outside their path: 53
 ```
 
 Ten of `prove-it`'s fifteen steps depend on something the path does not cover.
@@ -169,34 +179,35 @@ information is the one the reader sees while deciding.
 A path makes a claim about a subset. Ask what the subsets add up to:
 
 ```
-concepts reachable through some path: 84/106
-concepts in no path at all:           22
-   of those, written:                 22
-   of those, core tier:                4
+concepts reachable through some path: 117/120
+concepts in no path at all:             3
+   of those, core tier:                 0
+   of those, with a recorded reason:    3
 ```
 
-**Four core-tier concepts are in no path.** Not thin pages: core means the
-curriculum asserts you cannot do the job without them, and every one of the
-twenty-two is written. They are reachable by search and by the dependency
-graph, and no curated route goes through them.
+**No core concept is outside every path, and the three that are say why.**
+MDX, Docusaurus and Antora are alternatives to the toolchain the paths teach,
+and `concepts.yaml` lists each under `off_path` with the reason a reader is
+told. Tests fail if a concept is on no path without a reason, or if a core
+concept is off every path.
 
-That was eleven of thirty-seven when this measurement was first run, over seven
-paths. Two paths were added afterwards, one over measurement and automation and
-one over domain context, which is what moved it. The figures here are the
-current ones and `fieldguide audit` is where to read them; this page was wrong
-about them for a while, which is the hazard of a page whose subject is a
-measurement of the thing it lives in.
+It took three runs to get here. The first, over seven paths, found eleven core
+concepts among thirty-seven unreached. Two more paths brought that to four
+among twenty-two, while this page described its figures as current. Placing
+the rest, and writing down why three stay off, is what closed the gap; the
+tests are what stop it reopening. That is the hazard of a page whose subject is
+a measurement of the thing it lives in.
 
 Then the mirror image:
 
 ```
-concepts in exactly one path: 62
-most reused: diataxis 4, docs-as-product 3, docs-as-code 3, link-checking 3
+concepts in exactly one path: 92
+most reused: diataxis 4, documentation-ci 4, docs-as-product 3, docs-as-code 3
 ```
 
-Sixty-two concepts carry one path each. A path that is the sole route to well
-over half the corpus is doing navigation work, not curriculum work, and that is
-the honest reading of what nine paths over 106 concepts produces.
+Ninety-two concepts carry one path each. A path that is the sole route to
+three quarters of the corpus is doing navigation work, not curriculum work, and
+that is the honest reading of what twelve paths over 120 concepts produce.
 
 **Step 6: which of the two gaps to fix**
 
@@ -207,15 +218,15 @@ prerequisite gaps.
 
 The resolution is to stop treating them as the same defect. Prerequisite gaps
 are a **disclosure** problem, fixed in step 4 at the cost of one computed
-paragraph. Coverage is a **curriculum** problem, and eleven uncovered core
-concepts is a decision about whether every core concept deserves a route, which
-is a judgment the numbers inform and do not make.
+paragraph. Coverage is a **curriculum** problem: whether every core concept
+deserves a route is a judgment the numbers inform and do not make. This guide
+decided that it does, and the coverage tests hold it there.
 
 What is not defensible is the state before this exercise: both gaps present,
 neither measured, and a promise at the top of every page that the data
 contradicted.
 
-**What you built.** Seven validated paths, an ordering check at zero
+**What you built.** Twelve validated paths, an ordering check at zero
 violations, an entry state stated before step 1 and asserted by a test, and two
 measured gaps that pull in opposite directions.
 
@@ -229,11 +240,11 @@ measured gaps that pull in opposite directions.
 | Covers | Everything, filed | A chosen subset | Everything |
 | Written by | The content model | Judgment | A topological sort |
 | Claims | This is a how-to | This subset, this order | No cycles |
-| Fails by | Miscategorising | Omitting, or over-including | Being 106 steps long |
+| Fails by | Miscategorising | Omitting, or over-including | Being 120 steps long |
 
 This guide generates all three from one registry, which is the argument for
-keeping a path as data. The study plan is the honest fallback for the 37
-concepts no path reaches.
+keeping a path as data. The study plan is the honest fallback for the three
+concepts no path reaches, and for a reader who wants all of it.
 
 ### What a path has to declare
 
@@ -300,10 +311,10 @@ and generate the pages, which means a path cannot point at a concept that does
 not exist, and the order can be checked against the prerequisite graph."
 
 **The follow-up is what the check actually caught, and here the numbers are
-worth stating precisely.** Ordering came out at zero violations across nine
-paths and 114 steps, and only because two paths were reordered when the check
+worth stating precisely.** Ordering came out at zero violations across twelve
+paths and 154 steps, and only because two paths were reordered when the check
 was added. The interesting number is the one the validator deliberately does
-not check: 32 step-prerequisite pairs point outside their path, and on
+not check: 53 step-prerequisite pairs point outside their path, and on
 `prove-it` ten of fifteen steps depend on something it never teaches.
 
 **Then the finding that changed the generator.** Every path page promised that
@@ -316,13 +327,12 @@ visible while deciding whether to start.
 
 **The tradeoff to name.** The two gaps pull in opposite directions.
 Closing the prerequisite gaps lengthens paths past the point anyone finishes
-them; closing the coverage gap, four core concepts currently in no path, means
-more or wider paths, which worsens the prerequisite gaps. I do not think there
+them; closing the coverage gap means more or wider paths, which worsens the prerequisite gaps. I do not think there
 is a clean answer. What I would not defend is where this started, with both
 gaps unmeasured and a promise on every page that the data contradicted.
 
-**One sharper point.** Seventy-six of the 120 concepts sit in exactly one path.
-A path that is the sole route to a third of a corpus is doing navigation work
+**One sharper point.** Ninety-two of the 120 concepts sit in exactly one path.
+A path that is the sole route to most of a corpus is doing navigation work
 rather than curriculum work, and calling it curriculum obscures that the real
 need was [findability](findability.md).
 
@@ -341,7 +351,7 @@ check and a coverage report in CI, and an entry state computed per path.
 3. Count how many paths each item appears in. Anything appearing once is
    navigation, not curriculum, and should probably be solved by search instead.
 
-**How to tell it is working.** This guide holds ten paths over 120 concepts in `concepts.yaml`, generates every path page from them, and
+**How to tell it is working.** This guide holds twelve paths over 120 concepts in `concepts.yaml`, generates every path page from them, and
 fails CI on an ordering violation; the entry-state paragraph and its test were
 added by the exercise above. The honest limits: no reader has completed any of
 these paths, so there is no evidence the orders are *good*, only that they are
