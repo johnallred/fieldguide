@@ -219,9 +219,16 @@ role that can pass or assume the deployer's roles inherits that.
 
 ### What coldlab shows
 
-[coldlab](https://github.com/johnallred/coldlab) at commit 1fca32e has no
-learners, but it has the same layers for its own CI identity, and they are
-worth reading:
+[coldlab](https://github.com/johnallred/coldlab) now has a learner role built
+the way this page describes. `bootstrap/learner-role.yaml` grants the lab's
+steps on the lab's resources and attaches a boundary that caps every learner
+role at coldlab-named resources in one region, with no IAM.
+`lab/sqs-retry/sandbox.yaml` is the two-column requirement list: eight things a
+learner must be able to do and ten they must never do. `harness/sandbox.py`
+asks AWS's policy simulator about every line for the deployed role, and adds the
+one finding the simulator cannot see: the lab has learners run `cdk deploy`,
+which reaches the administrator deployer described below. Its CI identity has
+the same layers, and they are worth reading too:
 
 - `bootstrap/oidc-role.yaml` scopes the CI role by resource wherever the
   service supports it, and its comments say why: conflating "deploy" with "run

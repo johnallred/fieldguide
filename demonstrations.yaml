@@ -532,15 +532,15 @@ demonstrates:
 
   - concept: lab-publishing
     project: coldlab
-    artifact: harness/extract.py
+    artifact: harness/publish.py
     extent: partial
-    note: "The gate half: the harness runs the lab document rather than its own copy of the commands, and refuses a document that would weaken the test, such as a bare sleep, a short-polled read or a directive with no reason. No versions, channels or promotion; the nightly run tests what is on main."
+    note: "The whole pipeline for one lab: extract.py gates the lab document, every run records the content version it tested, and publish.py promotes a version into published/ for learners after three consecutive passing runs on that exact content, run by the nightly workflow itself, with rollback and a status that tells an environment failure from a broken promotion. Partial until the first promotion is on record: runs before versioning carry no version, so it waits for three nightly runs."
 
   - concept: learner-sandbox-guardrails
     project: coldlab
-    artifact: bootstrap/oidc-role.yaml
+    artifact: harness/sandbox.py
     extent: partial
-    note: "The guardrails for the harness's own identity rather than a learner's: a CI role scoped by resource wherever the service allows, deploying only by assuming the CDK bootstrap roles, an organisation policy that denied a wrong-region deploy, and a low budget with a forecast alert. The stacks still deploy through the CDK's default administrator role, and there are no learners."
+    note: "A learner role with an attached permissions boundary (bootstrap/learner-role.yaml), a requirement list of eight things a learner must do and ten they must never do, and a check that asks AWS's policy simulator about each line for the deployed role, plus the finding the simulator cannot see: learners run cdk deploy, which deploys through the CDK's default administrator execution role. The template is checked against the list offline; partial until the check has run against the deployed role, and there are still no real learners."
 
   - concept: lab-publishing
     project: fieldguide

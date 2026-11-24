@@ -237,6 +237,18 @@ sleep, and raises rather than running fewer steps than the document claims.
 It also names an unnamed block after its heading rather than refusing it; the
 gate in this drill is stricter.
 
+coldlab also has the promotion half. `harness/publish.py` names a lab version
+by a hash of the files a learner uses, and every nightly run records the
+version it tested. A version is copied into `published/` for learners only
+after three consecutive passing runs against that exact content. The nightly
+workflow runs the promotion itself, so it happens on evidence rather than by
+decision.
+Because a published version must already have passed with its content, a
+published version that later fails points at the environment, and the tool's
+status says to fix forward; a rollback command points learners back at the
+previous copy for the rarer case. The first promotion waits for three nightly
+runs, because runs recorded before versioning carry no version.
+
 ### Roll back or fix forward
 
 | Pattern | Means | Do |

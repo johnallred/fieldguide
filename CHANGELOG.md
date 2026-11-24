@@ -15,6 +15,12 @@ an `Added` heading.
 
 ## [Unreleased]
 
+### Changed
+
+- The lab publishing and learner sandbox guardrails pages describe what
+  `coldlab` now does: versioned promotion to learners on evidence, and a
+  learner role tested against what a learner must and must never be able to do.
+
 ## [0.2.0] - 2026-11-24
 
 ### Added
