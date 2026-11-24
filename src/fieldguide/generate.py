@@ -290,6 +290,24 @@ def path_page(registry: Registry, path_id: str) -> str:
             "Each step below repeats what it assumes.\n"
         )
 
+    # Paths overlap on purpose, so a reader taking a second path meets steps
+    # they have already done, and the hour total above counts them again.
+    # Name the other paths on each shared step, and say up front how much of
+    # this path is shared, so that reader can skip rather than redo.
+    others = {
+        concept_id: [p for p in registry.paths if p.id != path_id and concept_id in p.concepts]
+        for concept_id in learning_path.concepts
+    }
+    shared = [cid for cid, paths in others.items() if paths]
+    if shared:
+        out.append(
+            f"**Shared with other paths.** {len(shared)} of these steps, roughly "
+            f"{_total_hours(registry, shared)} hours, also "
+            + ("appears" if len(shared) == 1 else "appear")
+            + " in another path. "
+            "Each is marked below; if you have done it there, skip it here.\n"
+        )
+
     for position, concept_id in enumerate(learning_path.concepts, 1):
         concept = by_id[concept_id]
         inside = [p for p in concept.prerequisites if p in learning_path.concepts]
@@ -309,6 +327,9 @@ def path_page(registry: Registry, path_id: str) -> str:
         if outside:
             names = ", ".join(_link(by_id[p], "../concepts/") for p in outside)
             out.append(f"Assumes, from outside this path: {names}.\n")
+        if others[concept_id]:
+            names = ", ".join(f"[{p.name}]({p.id}.md)" for p in others[concept_id])
+            out.append(f"Also in: {names}.\n")
 
     return "\n".join(out)
 

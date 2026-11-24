@@ -18,11 +18,15 @@ each step assumes the ones above it.
 
 **Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Code-sample validation](../concepts/code-sample-validation.md), [Reproducible environments](../concepts/reproducible-environments.md). Each step below repeats what it assumes.
 
+**Shared with other paths.** 3 of these steps, roughly 10 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
+
 ## 1. [Treating docs, setup and samples as one product](../concepts/docs-as-product.md)
 
 `core` · practise it · 3h
 
 Treating setup, runnable samples and documentation as one product the developer experiences.
+
+Also in: [The first week](first-week.md), [The writer who builds](writer-who-builds.md).
 
 ## 2. [Learning science for developer education](../concepts/learning-science.md)
 
@@ -62,6 +66,8 @@ Deciding whether a page is a tutorial, a how-to, reference or explanation, and k
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
+Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md), [The content architect](content-architect.md).
+
 ## 7. [Designing tutorials](../concepts/tutorial-design.md)
 
 `core` · practise it · 4h
@@ -77,6 +83,8 @@ Builds on, earlier in this path: Diátaxis.
 Designing and maintaining the routes that take a developer from a clean environment to a working result.
 
 Builds on, earlier in this path: Diátaxis.
+
+Also in: [The documentation engineer](docs-engineer.md).
 
 ## 9. [Quickstarts that survive contact](../concepts/quickstarts.md)
 

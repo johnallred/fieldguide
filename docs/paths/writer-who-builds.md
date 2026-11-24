@@ -18,11 +18,15 @@ each step assumes the ones above it.
 
 **Assumed before step 1.** This path does not teach [Documentation CI](../concepts/documentation-ci.md), [Prompting for content work](../concepts/prompting.md), [Metadata for navigation and retrieval](../concepts/metadata.md). Each step below repeats what it assumes.
 
+**Shared with other paths.** 3 of these steps, roughly 15 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
+
 ## 1. [Technical writing as a craft](../concepts/technical-writing.md)
 
 `core` · practise it · 8h
 
 Writing developer documentation a reader can act on without asking you a question.
+
+Also in: [The first week](first-week.md).
 
 ## 2. [Reading code to verify accuracy](../concepts/reading-code-to-verify.md)
 
@@ -35,6 +39,8 @@ Reading code and APIs to verify a page is accurate, and writing examples that wo
 `core` · practise it · 3h
 
 Treating setup, runnable samples and documentation as one product the developer experiences.
+
+Also in: [The first week](first-week.md), [The developer educator](developer-educator.md).
 
 ## 4. [A systems mindset](../concepts/systems-mindset.md)
 
@@ -69,6 +75,8 @@ Turning user stories into a documentation standard that templates can enforce.
 Making documentation part of what "ready to release" means, enforced rather than remembered.
 
 Assumes, from outside this path: [Documentation CI](../concepts/documentation-ci.md).
+
+Also in: [The documentation engineer](docs-engineer.md).
 
 ## 9. [Judging where AI can be trusted](../concepts/ai-trust-judgment.md)
 

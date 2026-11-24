@@ -19,6 +19,8 @@ each step assumes the ones above it.
 
 **Assumed before step 1.** This path does not teach [Content models](../concepts/content-model.md), [Documentation CI](../concepts/documentation-ci.md), [Golden paths](../concepts/golden-paths.md), [Findability and search design](../concepts/findability.md), [Output evaluation](../concepts/output-evaluation.md). Each step below repeats what it assumes.
 
+**Shared with other paths.** 1 of these steps, roughly 5 hours, also appears in another path. Each is marked below; if you have done it there, skip it here.
+
 ## 1. [Python for content automation](../concepts/python-for-content.md)
 
 `core` · practise it · 5h
@@ -96,6 +98,8 @@ Measuring how often an AI assistant answers correctly from your documentation.
 Builds on, earlier in this path: Documentation analytics.
 
 Assumes, from outside this path: [Output evaluation](../concepts/output-evaluation.md).
+
+Also in: [The KnowledgeOps path](knowledgeops.md).
 
 ## 10. [Turning developer feedback into changes](../concepts/developer-feedback-loops.md)
 

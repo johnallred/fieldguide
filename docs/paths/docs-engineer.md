@@ -19,11 +19,15 @@ each step assumes the ones above it.
 
 **Assumed before step 1.** This path does not teach [Style guides and terminology management](../concepts/style-guide.md), [Diátaxis](../concepts/diataxis.md), [Reproducible environments](../concepts/reproducible-environments.md), [Content lifecycle and governance](../concepts/content-lifecycle.md), [Content models](../concepts/content-model.md), [Technical writing as a craft](../concepts/technical-writing.md). Each step below repeats what it assumes.
 
+**Shared with other paths.** 10 of these steps, roughly 40 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
+
 ## 1. [Docs-as-code](../concepts/docs-as-code.md)
 
 `core` · read it · 2h
 
 Running documentation through Git, CI builds, linting, link and sample checks, and automated publishing.
+
+Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md).
 
 ## 2. [Git authoring workflows for writers](../concepts/git-authoring.md)
 
@@ -33,6 +37,8 @@ Writing in Git: branches, pull requests and review, in Markdown or RST, built by
 
 Builds on, earlier in this path: Docs-as-code.
 
+Also in: [The first week](first-week.md).
+
 ## 3. [Documentation CI](../concepts/documentation-ci.md)
 
 `core` · practise it · 4h
@@ -40,6 +46,8 @@ Builds on, earlier in this path: Docs-as-code.
 Running automated checks on every documentation change before it merges.
 
 Builds on, earlier in this path: Docs-as-code, Git authoring workflows for writers.
+
+Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md), [The lab engineer](lab-engineer.md).
 
 ## 4. [GitHub Actions for docs](../concepts/github-actions.md)
 
@@ -57,6 +65,8 @@ Catching broken links before readers do, in CI and on the published site.
 
 Builds on, earlier in this path: Docs-as-code.
 
+Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md).
+
 ## 6. [Prose linting with Vale](../concepts/prose-linting.md)
 
 `core` · practise it · 3h
@@ -64,6 +74,8 @@ Builds on, earlier in this path: Docs-as-code.
 Enforcing your style guide automatically with Vale, so reviews argue with a rule rather than a person.
 
 Assumes, from outside this path: [Style guides and terminology management](../concepts/style-guide.md).
+
+Also in: [A working result in a weekend](prove-it.md).
 
 ## 7. [Writing custom linters](../concepts/custom-linters.md)
 
@@ -80,6 +92,8 @@ Builds on, earlier in this path: Prose linting with Vale.
 Proving every code sample in the docs still runs and still produces what the page says.
 
 Builds on, earlier in this path: Docs-as-code.
+
+Also in: [A working result in a weekend](prove-it.md), [The lab engineer](lab-engineer.md).
 
 ## 9. [Diagrams as code](../concepts/diagrams-as-code.md)
 
@@ -105,6 +119,8 @@ Building a harness that runs documentation as tests, so broken pages fail the bu
 
 Builds on, earlier in this path: Code-sample validation.
 
+Also in: [A working result in a weekend](prove-it.md).
+
 ## 12. [Generated API reference](../concepts/api-reference-generation.md)
 
 `core` · practise it · 4h
@@ -121,6 +137,8 @@ Designing and maintaining the routes that take a developer from a clean environm
 
 Assumes, from outside this path: [Diátaxis](../concepts/diataxis.md).
 
+Also in: [The developer educator](developer-educator.md).
+
 ## 14. [Cold-start testing](../concepts/coldstart-testing.md)
 
 `core` · build something · 5h
@@ -130,6 +148,8 @@ Testing quickstarts from a clean environment, the way a new developer meets them
 Builds on, earlier in this path: Code-sample validation.
 
 Assumes, from outside this path: [Reproducible environments](../concepts/reproducible-environments.md).
+
+Also in: [A working result in a weekend](prove-it.md), [The lab engineer](lab-engineer.md).
 
 ## 15. [Freshness monitoring](../concepts/freshness-monitoring.md)
 
@@ -172,6 +192,8 @@ Builds on, earlier in this path: Templates and scaffolding.
 Making documentation part of what "ready to release" means, enforced rather than remembered.
 
 Builds on, earlier in this path: Documentation CI.
+
+Also in: [The writer who builds](writer-who-builds.md).
 
 ## 20. [Release notes and changelogs](../concepts/release-notes.md)
 

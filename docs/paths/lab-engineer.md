@@ -19,6 +19,8 @@ each step assumes the ones above it.
 
 **Assumed before step 1.** This path does not teach [Docs-as-code](../concepts/docs-as-code.md), [Git authoring workflows for writers](../concepts/git-authoring.md), [Golden paths](../concepts/golden-paths.md), [Security guidance as encoded standard](../concepts/security-documentation.md), [Single-sourcing and content reuse](../concepts/single-sourcing.md). Each step below repeats what it assumes.
 
+**Shared with other paths.** 4 of these steps, roughly 18 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
+
 ## 1. [Code-sample validation](../concepts/code-sample-validation.md)
 
 `core` · build something · 5h
@@ -27,6 +29,8 @@ Proving every code sample in the docs still runs and still produces what the pag
 
 Assumes, from outside this path: [Docs-as-code](../concepts/docs-as-code.md).
 
+Also in: [A working result in a weekend](prove-it.md), [The documentation engineer](docs-engineer.md).
+
 ## 2. [Documentation CI](../concepts/documentation-ci.md)
 
 `core` · practise it · 4h
@@ -34,6 +38,8 @@ Assumes, from outside this path: [Docs-as-code](../concepts/docs-as-code.md).
 Running automated checks on every documentation change before it merges.
 
 Assumes, from outside this path: [Docs-as-code](../concepts/docs-as-code.md), [Git authoring workflows for writers](../concepts/git-authoring.md).
+
+Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md), [The documentation engineer](docs-engineer.md).
 
 ## 3. [Reproducible environments](../concepts/reproducible-environments.md)
 
@@ -50,6 +56,8 @@ Assumes, from outside this path: [Golden paths](../concepts/golden-paths.md).
 Testing quickstarts from a clean environment, the way a new developer meets them.
 
 Builds on, earlier in this path: Code-sample validation, Reproducible environments.
+
+Also in: [A working result in a weekend](prove-it.md), [The documentation engineer](docs-engineer.md).
 
 ## 5. [Ephemeral lab environments](../concepts/ephemeral-environments.md)
 
@@ -86,6 +94,8 @@ Documenting one product that developers reach through a first-party API and seve
 Builds on, earlier in this path: Code-sample validation.
 
 Assumes, from outside this path: [Single-sourcing and content reuse](../concepts/single-sourcing.md).
+
+Also in: [The content architect](content-architect.md).
 
 ## 9. [Labs for isolated regions](../concepts/isolated-region-labs.md)
 

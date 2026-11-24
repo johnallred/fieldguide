@@ -18,6 +18,8 @@ each step assumes the ones above it.
 
 **Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Templates and scaffolding](../concepts/templates-scaffolding.md), [Documentation analytics](../concepts/docs-analytics.md). Each step below repeats what it assumes.
 
+**Shared with other paths.** 7 of these steps, roughly 30 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
+
 ## 1. [Content models](../concepts/content-model.md)
 
 `core` · practise it · 4h
@@ -26,6 +28,8 @@ Defining the types of content your team writes and the fields each one must carr
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
+Also in: [A working result in a weekend](prove-it.md), [The content architect](content-architect.md).
+
 ## 2. [Metadata for navigation and retrieval](../concepts/metadata.md)
 
 `core` · practise it · 3h
@@ -33,6 +37,8 @@ Assumes, from outside this path: [Information architecture](../concepts/informat
 Tagging content so navigation, search and AI retrieval can all find the right page.
 
 Builds on, earlier in this path: Content models.
+
+Also in: [The content architect](content-architect.md).
 
 ## 3. [Agent-ready content](../concepts/agent-ready-content.md)
 
@@ -50,6 +56,8 @@ Publishing machine-readable entry points to your docs, such as llms.txt, for AI 
 
 Builds on, earlier in this path: Agent-ready content.
 
+Also in: [A working result in a weekend](prove-it.md).
+
 ## 5. [Documentation for coding agents](../concepts/coding-agents.md)
 
 `core` · practise it · 4h
@@ -65,6 +73,8 @@ Builds on, earlier in this path: Agent-ready content.
 Splitting content into pieces a RAG system, internal assistant or agent can retrieve on their own.
 
 Builds on, earlier in this path: Agent-ready content.
+
+Also in: [A working result in a weekend](prove-it.md).
 
 ## 7. [Embeddings](../concepts/embeddings.md)
 
@@ -114,6 +124,8 @@ Building question sets that measure whether retrieval finds the right content.
 
 Builds on, earlier in this path: RAG pipelines.
 
+Also in: [A working result in a weekend](prove-it.md).
+
 ## 13. [Output evaluation](../concepts/output-evaluation.md)
 
 `core` · build something · 6h
@@ -129,6 +141,8 @@ Builds on, earlier in this path: Grounding and citation, Evaluating retrieval.
 Exposing documentation and tools to AI assistants through Model Context Protocol servers.
 
 Builds on, earlier in this path: Agent-ready content.
+
+Also in: [A working result in a weekend](prove-it.md).
 
 ## 15. [Agent skills and context kits](../concepts/agent-skills.md)
 
@@ -157,3 +171,5 @@ Measuring how often an AI assistant answers correctly from your documentation.
 Builds on, earlier in this path: Output evaluation.
 
 Assumes, from outside this path: [Documentation analytics](../concepts/docs-analytics.md).
+
+Also in: [Prove the outcomes](prove-the-outcomes.md).

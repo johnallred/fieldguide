@@ -18,6 +18,8 @@ each step assumes the ones above it.
 
 **Assumed before step 1.** This path does not teach [Code-sample validation](../concepts/code-sample-validation.md), [Docs-as-code](../concepts/docs-as-code.md), [Extracting tribal knowledge](../concepts/sme-interviews.md). Each step below repeats what it assumes.
 
+**Shared with other paths.** 4 of these steps, roughly 13 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
+
 ## 1. [Information architecture](../concepts/information-architecture.md)
 
 `core` · practise it · 4h
@@ -32,6 +34,8 @@ Deciding whether a page is a tutorial, a how-to, reference or explanation, and k
 
 Builds on, earlier in this path: Information architecture.
 
+Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md), [The developer educator](developer-educator.md).
+
 ## 3. [Content models](../concepts/content-model.md)
 
 `core` · practise it · 4h
@@ -39,6 +43,8 @@ Builds on, earlier in this path: Information architecture.
 Defining the types of content your team writes and the fields each one must carry.
 
 Builds on, earlier in this path: Information architecture.
+
+Also in: [A working result in a weekend](prove-it.md), [The KnowledgeOps path](knowledgeops.md).
 
 ## 4. [Taxonomy and controlled vocabularies](../concepts/taxonomy.md)
 
@@ -55,6 +61,8 @@ Builds on, earlier in this path: Content models.
 Tagging content so navigation, search and AI retrieval can all find the right page.
 
 Builds on, earlier in this path: Content models.
+
+Also in: [The KnowledgeOps path](knowledgeops.md).
 
 ## 6. [Style guides and terminology management](../concepts/style-guide.md)
 
@@ -89,6 +97,8 @@ Documenting one product that developers reach through a first-party API and seve
 Builds on, earlier in this path: Single-sourcing and content reuse.
 
 Assumes, from outside this path: [Code-sample validation](../concepts/code-sample-validation.md).
+
+Also in: [The lab engineer](lab-engineer.md).
 
 ## 10. [Content lifecycle and governance](../concepts/content-lifecycle.md)
 

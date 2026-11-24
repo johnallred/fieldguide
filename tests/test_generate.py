@@ -575,3 +575,19 @@ def test_the_demonstrated_page_names_its_actual_sources(registry, demos):
 
     text = demonstrated_page(registry, demos)
     assert "Generated page" not in text
+
+
+def test_a_path_page_marks_steps_shared_with_other_paths(registry):
+    """A step in more than one path names the others, and the total says how much."""
+    for learning_path in registry.paths:
+        text = path_page(registry, learning_path.id)
+        shared = [
+            cid
+            for cid in learning_path.concepts
+            if any(p.id != learning_path.id and cid in p.concepts for p in registry.paths)
+        ]
+        assert text.count("Also in: ") == len(shared), learning_path.id
+        if shared:
+            assert f"**Shared with other paths.** {len(shared)} of these steps" in text
+        else:
+            assert "Shared with other paths" not in text

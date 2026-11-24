@@ -36,6 +36,9 @@ an `Added` heading.
   `coldlab` now does: versioned promotion to learners on evidence, and a
   learner role tested against what a learner must and must never be able to do.
 
+- Each learning path marks the steps it shares with other paths and names
+  them, and says up front how many steps and hours are shared, so a reader on
+  a second path can skip what they have done.
 - The Docusaurus page replaces its one unverified build time with that
   measurement, and says why MkDocs slows faster than linearly.
 
