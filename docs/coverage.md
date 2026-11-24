@@ -18,7 +18,7 @@ Each row names the concept and the day-to-day work that needs it.
 
 - **120 of 120** concepts name the work that needs them.
 
-That line is printed next to each concept, so a reader can judge whether it
+Each concept's work line is printed next to it, so a reader can judge whether it
 earns their time rather than taking the list on trust.
 
 ## Information and knowledge architecture
@@ -33,7 +33,7 @@ earns their time rather than taking the list on trust.
 | [Playbooks and decision guides](concepts/playbooks.md) | core | practice it | 4h | :material-check: complete | Turning tribal knowledge from engineering, product and operations into playbooks and decision guides. |
 | [Taxonomy and controlled vocabularies](concepts/taxonomy.md) | core | practice it | 3h | :material-check: complete | Agreeing the terms content is classified by, and keeping that vocabulary closed and consistent. |
 | [Content lifecycle and governance](concepts/content-lifecycle.md) | supporting | practice it | 3h | :material-check: complete | Running content from draft to update to audit to retirement, increasingly with LLM help at each stage. |
-| [Content migration](concepts/content-migration.md) | supporting | build something | 6h | :material-check: complete | Moving a documentation corpus from a wiki or CMS into docs-as-code, deciding page by page what moves, merges or goes,... |
+| [Content migration](concepts/content-migration.md) | supporting | build something | 6h | :material-check: complete | Moving a documentation corpus from a wiki or CMS into docs-as-code, deciding page by page what moves, merges or goes, and keeping every old link working. |
 | [Findability and search design](concepts/findability.md) | supporting | practice it | 3h | :material-check: complete | Making sure developers and AI assistants can both find and use the page they need. |
 | [Retiring content](concepts/content-retirement.md) | supporting | practice it | 3h | :material-check: complete | Deciding what to retire, and removing it without breaking what links to it. |
 | [Security guidance as encoded standard](concepts/security-documentation.md) | supporting | practice it | 3h | :material-check: complete | Encoding security guidance into templates, validators and workflows rather than static pages. |
@@ -51,7 +51,7 @@ earns their time rather than taking the list on trust.
 | [Markdown and its dialects](concepts/markdown.md) | core | read it | 2h | :material-check: complete | Writing in Markdown every day, and knowing which dialect your build pipeline actually speaks. |
 | [MkDocs and Material](concepts/mkdocs.md) | core | practice it | 4h | :material-check: complete | Building and maintaining a documentation site on MkDocs with the Material theme. |
 | [Sphinx](concepts/sphinx.md) | core | build something | 6h | :material-check: complete | Building and maintaining documentation with Sphinx, especially for Python projects. |
-| [Diagrams as code](concepts/diagrams-as-code.md) | supporting | practice it | 3h | :material-check: complete | Keeping architecture and pipeline diagrams in the repository as text, reviewed like code and checked against the syst... |
+| [Diagrams as code](concepts/diagrams-as-code.md) | supporting | practice it | 3h | :material-check: complete | Keeping architecture and pipeline diagrams in the repository as text, reviewed like code and checked against the system they describe. |
 | [Docusaurus](concepts/docusaurus.md) | supporting | practice it | 5h | :material-check: complete | Building and maintaining a documentation site on Docusaurus. |
 | [Localization and translation pipelines](concepts/localization.md) | supporting | build something | 4h | :material-check: complete | Getting content translated and keeping translations in step with the source as it changes. |
 | [MDX](concepts/mdx.md) | supporting | practice it | 3h | :material-check: complete | Authoring pages that mix Markdown with components, inside a docs-as-code workflow with CI. |
@@ -75,9 +75,9 @@ earns their time rather than taking the list on trust.
 | [Accessibility checks](concepts/accessibility.md) | supporting | practice it | 3h | :material-check: complete | Making sure published content is usable by everyone, which applies to every page you ship. |
 | [Detecting terminology drift](concepts/terminology-drift.md) | supporting | practice it | 3h | :material-check: complete | Detecting when the words in your docs drift away from the words in the product. |
 | [Doctests and executable docstrings](concepts/doctests.md) | supporting | practice it | 2h | :material-check: complete | Keeping examples in docstrings executable, so they fail when the code changes. |
-| [Lab publishing pipelines](concepts/lab-publishing.md) | supporting | build something | 5h | :material-check: complete | Shipping hands-on labs through gates, versions and channels, so a broken lab is stopped before learners meet it and a... |
-| [Labs for isolated regions](concepts/isolated-region-labs.md) | supporting | build something | 5h | :material-check: complete | Making a lab that runs in one AWS partition run in another, including isolated regions with no route to the public in... |
-| [Learner sandbox guardrails](concepts/learner-sandbox-guardrails.md) | supporting | build something | 5h | :material-check: complete | Letting a learner do everything the lab needs in a real cloud account, and nothing that breaks the account, the bill ... |
+| [Lab publishing pipelines](concepts/lab-publishing.md) | supporting | build something | 5h | :material-check: complete | Shipping hands-on labs through gates, versions and channels, so a broken lab is stopped before learners meet it and a published one can be pulled or rolled back. |
+| [Labs for isolated regions](concepts/isolated-region-labs.md) | supporting | build something | 5h | :material-check: complete | Making a lab that runs in one AWS partition run in another, including isolated regions with no route to the public internet. |
+| [Learner sandbox guardrails](concepts/learner-sandbox-guardrails.md) | supporting | build something | 5h | :material-check: complete | Letting a learner do everything the lab needs in a real cloud account, and nothing that breaks the account, the bill or the lab. |
 | [Preview deployments and publishing](concepts/preview-deployments.md) | supporting | practice it | 3h | :material-check: complete | Previewing every documentation change as a built site, and publishing it when it merges. |
 | [Reviewing documentation](concepts/docs-review.md) | supporting | practice it | 3h | :material-check: complete | Reviewing documentation pull requests for accuracy, structure and style. |
 | [Writing custom linters](concepts/custom-linters.md) | supporting | build something | 5h | :material-check: complete | Writing your own content checks when an off-the-shelf linter cannot express the rule. |
@@ -92,7 +92,7 @@ earns their time rather than taking the list on trust.
 | [Quickstarts that survive contact](concepts/quickstarts.md) | core | practice it | 3h | :material-check: complete | Writing quickstarts that still work when a new developer follows them cold. |
 | [Sample walkthroughs](concepts/sample-walkthroughs.md) | core | practice it | 3h | :material-check: complete | Writing walkthroughs that explain a sample line by line, without drifting from the sample. |
 | [Templates and scaffolding](concepts/templates-scaffolding.md) | core | practice it | 3h | :material-check: complete | Encoding team standards into templates and scaffolds, so the right shape is the default. |
-| [Ephemeral lab environments](concepts/ephemeral-environments.md) | supporting | build something | 6h | :material-check: complete | Standing up a real cloud environment for every lab run, checking the lab against it, and proving the teardown left no... |
+| [Ephemeral lab environments](concepts/ephemeral-environments.md) | supporting | build something | 6h | :material-check: complete | Standing up a real cloud environment for every lab run, checking the lab against it, and proving the teardown left nothing running. |
 | [Reproducible environments](concepts/reproducible-environments.md) | supporting | build something | 4h | :material-check: complete | Making sure every exercise starts from an environment a reader can recreate exactly. |
 | [Sample applications and galleries](concepts/sample-apps.md) | supporting | build something | 6h | :material-check: complete | Building and maintaining the sample applications, and the gallery developers browse them from. |
 
@@ -106,7 +106,7 @@ earns their time rather than taking the list on trust.
 | [Chunking strategies](concepts/chunking.md) | core | build something | 5h | :material-check: complete | Splitting content into pieces a RAG system, internal assistant or agent can retrieve on their own. |
 | [Documentation for coding agents](concepts/coding-agents.md) | core | practice it | 4h | :material-check: complete | Making documentation usable by coding agents as well as by search engines and people. |
 | [Documentation-backed AI assistants](concepts/ai-assistants.md) | core | build something | 8h | :material-check: complete | Building and feeding assistants that answer questions from your documentation. |
-| [Embeddings](concepts/embeddings.md) | core | practice it | 4h | :material-check: complete | Turning content into vectors so it can be searched by meaning, the first step of any RAG pipeline. |
+| [Embeddings](concepts/embeddings.md) | core | practice it | 4h | :material-check: complete | Turning content into vectors so it can be searched by meaning, a core step of any RAG pipeline. |
 | [Evaluating retrieval](concepts/retrieval-evaluation.md) | core | build something | 6h | :material-check: complete | Building question sets that measure whether retrieval finds the right content. |
 | [Generative engine optimization](concepts/geo.md) | core | practice it | 3h | :material-check: complete | Making documentation the source AI-generated answers draw on and cite. |
 | [Grounding and citation](concepts/grounding.md) | core | practice it | 4h | :material-check: complete | Making AI answers cite and stay within the documentation they draw on. |
@@ -140,15 +140,15 @@ earns their time rather than taking the list on trust.
 |---|---|---|---|---|---|
 | [Cognitive load in technical content](concepts/cognitive-load.md) | core | practice it | 3h | :material-check: complete | Cutting what a reader has to hold in their head, so they reach first success sooner. |
 | [Instructional design for developers](concepts/instructional-design.md) | core | practice it | 5h | :material-check: complete | Designing curriculum so a developer learns what they need, in the order they need it. |
-| [Learner and task analysis](concepts/learner-task-analysis.md) | core | practice it | 5h | :material-check: complete | Finding out who your readers are and what they actually do before deciding what any tutorial, lab or course should te... |
+| [Learner and task analysis](concepts/learner-task-analysis.md) | core | practice it | 5h | :material-check: complete | Finding out who your readers are and what they actually do before deciding what any tutorial, lab or course should teach. |
 | [Learning paths and curriculum](concepts/learning-paths.md) | core | build something | 5h | :material-check: complete | Sequencing content into structured learning paths a reader can follow start to finish. |
 | [Learning science for developer education](concepts/learning-science.md) | core | practice it | 6h | :material-check: complete | Applying what research says about how people learn to every tutorial, lab and learning path you design. |
 | [Assessment and checks for understanding](concepts/assessment.md) | supporting | practice it | 3h | :material-check: complete | Checking that a learner actually learned: how you know the curriculum worked. |
-| [Demo design](concepts/demo-design.md) | supporting | practice it | 3h | :material-check: complete | Building demos that show the result first, fit their slot, adapt to the audience, and still work when someone other t... |
+| [Demo design](concepts/demo-design.md) | supporting | practice it | 3h | :material-check: complete | Building demos that show the result first, fit their slot, adapt to the audience, and still work when someone other than their author runs them. |
 | [Developer advocacy](concepts/developer-advocacy.md) | supporting | practice it | 3h | :material-check: complete | Working with engineering, product and advocates so each new capability ships with tested documentation. |
-| [Field enablement](concepts/field-enablement.md) | supporting | practice it | 4h | :material-check: complete | Teaching the people who demo, sell and support the product until they can deliver without you, and turning what they ... |
-| [LMS administration](concepts/lms-administration.md) | supporting | practice it | 4h | :material-check: complete | Keeping the courses in a learning management system true to their source, enrolled correctly, and reporting completio... |
-| [Learning content standards](concepts/learning-content-standards.md) | supporting | practice it | 5h | :material-check: complete | Packaging courses and labs so any learning platform can launch them, and getting the tracking data back out in a form... |
+| [Field enablement](concepts/field-enablement.md) | supporting | practice it | 4h | :material-check: complete | Teaching the people who demo, sell and support the product until they can deliver without you, and turning what they hear into changes. |
+| [LMS administration](concepts/lms-administration.md) | supporting | practice it | 4h | :material-check: complete | Keeping the courses in a learning management system true to their source, enrolled correctly, and reporting completion you can act on. |
+| [Learning content standards](concepts/learning-content-standards.md) | supporting | practice it | 5h | :material-check: complete | Packaging courses and labs so any learning platform can launch them, and getting the tracking data back out in a form someone can use. |
 | [Publishing in public](concepts/publishing-in-public.md) | supporting | read it | 4h | :material-check: complete | Publishing your documentation tooling and work openly, and doing it safely. |
 | [Workshops and hands-on labs](concepts/workshops.md) | supporting | practice it | 4h | :material-check: complete | Running hands-on workshops and labs, a standard developer-relations deliverable. |
 | [Screencasts and video](concepts/screencasts.md) | context | practice it | 4h | :material-check: complete | Producing short videos that show a task, and keeping them accurate as the product changes. |
@@ -184,9 +184,9 @@ earns their time rather than taking the list on trust.
 | [Release readiness for documentation](concepts/release-readiness.md) | core | practice it | 4h | :material-check: complete | Making documentation part of what "ready to release" means, enforced rather than remembered. |
 | [Technical writing as a craft](concepts/technical-writing.md) | core | practice it | 8h | :material-check: complete | Writing developer documentation a reader can act on without asking you a question. |
 | [Treating docs, setup and samples as one product](concepts/docs-as-product.md) | core | practice it | 3h | :material-check: complete | Treating setup, runnable samples and documentation as one product the developer experiences. |
-| [Multi-platform parity](concepts/multi-platform-parity.md) | supporting | build something | 4h | :material-check: complete | Documenting one product that developers reach through a first-party API and several cloud platforms, so each reader l... |
+| [Multi-platform parity](concepts/multi-platform-parity.md) | supporting | build something | 4h | :material-check: complete | Documenting one product that developers reach through a first-party API and several cloud platforms, so each reader learns what is true on their route. |
 | [Prioritizing documentation work](concepts/docs-prioritization.md) | supporting | practice it | 3h | :material-check: complete | Using data to decide what to build, fix or retire next. |
-| [Release notes and changelogs](concepts/release-notes.md) | supporting | practice it | 3h | :material-check: complete | Writing what changed in each release for the people who have to act on it, and making sure the version number tells t... |
+| [Release notes and changelogs](concepts/release-notes.md) | supporting | practice it | 3h | :material-check: complete | Writing what changed in each release for the people who have to act on it, and making sure the version number tells them how much. |
 | [User stories as a documentation standard](concepts/user-stories.md) | supporting | read it | 2h | :material-check: complete | Turning user stories into a documentation standard that templates can enforce. |
 | [Working with engineers as sources](concepts/working-with-engineers.md) | supporting | practice it | 3h | :material-check: complete | Working with engineering, product, security and partner teams so every release ships documented. |
 | [Documentation for partners and internal teams](concepts/partner-documentation.md) | context | practice it | 3h | :material-check: complete | Delivering knowledge to developers, partners, internal teams and the AI agents between them. |

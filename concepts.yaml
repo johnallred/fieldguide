@@ -629,7 +629,7 @@ concepts:
     time: 4h
     prerequisites: [chunking]
     in_practice:
-      - "Turning content into vectors so it can be searched by meaning, the first step of any RAG pipeline."
+      - "Turning content into vectors so it can be searched by meaning, a core step of any RAG pipeline."
     status: complete
 
   - id: vector-stores

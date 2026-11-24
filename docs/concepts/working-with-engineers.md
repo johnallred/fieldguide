@@ -49,7 +49,7 @@ most reliable way is [reading the code yourself](reading-code-to-verify.md). A
 writer who arrives with "the page says 30, the constructor says None, which is
 right?" is asking for ten seconds. A writer who arrives with "can you explain
 timeouts to me" is asking for forty minutes. Same page, same outcome, two
-hundred times the cost.
+hundred and forty times the cost.
 
 ## The golden path
 

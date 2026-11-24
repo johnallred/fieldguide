@@ -113,8 +113,7 @@ subLayerPaths = ['./b.usda', './a.usda']   the same two files, reordered
 **The first sublayer wins.** Not the last.
 
 That is the opposite of nearly every ordering a developer already knows. CSS
-later-wins, a shell `source` later-wins, `#include` later-wins, a dict update
-later-wins, a Docker layer later-wins. Here the list is strongest-first, and a
+later-wins, a shell `source` later-wins, a dict update later-wins, a Docker layer later-wins. Here the list is strongest-first, and a
 reader who assumes otherwise has a scene that silently uses the wrong value,
 with no error anywhere.
 
@@ -129,10 +128,11 @@ reference only:          mass = 100
 local opinion added:     mass = 7   <- local beats the reference
 ```
 
-This is the LIVRPS ordering: **L**ocal, **I**nherits, **V**ariant sets,
-**R**eferences, **P**ayloads, **S**pecialises, strongest first. Six arcs, one
-order, and knowing the acronym answers the override question that the six
-individual arc pages do not.
+This is the LIVERPS ordering, long written LIVRPS: **L**ocal, **I**nherits,
+**V**ariant sets, r**E**locates, **R**eferences, **P**ayloads, **S**pecializes,
+strongest first. The E is recent, for relocates, a namespace remapping, and
+both spellings are still in use. One order, and knowing the acronym answers the
+override question that the individual arc pages do not.
 
 **Step 4: what this says about documenting it**
 
@@ -229,8 +229,8 @@ updates. The format is the easy half."
 
 **The concrete thing to bring.** The first sublayer wins, not the last. I
 checked it by building two layers that disagree and reordering them, and the
-resolved value flips. That is the opposite of CSS, `#include`, shell `source`
-and Docker layers, so a developer's existing intuition is reliably wrong in one
+resolved value flips. That is the opposite of CSS, shell `source` and Docker
+layers, so a developer's existing intuition is reliably wrong in one
 specific direction, and they get a silently incorrect scene rather than an
 error.
 

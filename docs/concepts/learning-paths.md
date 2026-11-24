@@ -146,7 +146,8 @@ assumed to know seven more.
 each step assumes the ones above it.
 ```
 
-"Each step assumes the ones above it" is false for ten of those fifteen steps.
+"Each step assumes the ones above it" was false for ten of those fifteen steps,
+and the generator no longer prints it.
 Each step did disclose its own outside prerequisites further down the page, so
 the information was present and arrived after the reader had committed.
 

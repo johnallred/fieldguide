@@ -67,8 +67,7 @@ drifts toward whatever the author already believed.
 
 A concept resting on an inference is not thereby unimportant. Diátaxis is one
 of them, and it is the single most useful thing on this list: few teams name
-it, and all of them describe at length the problem it solves. Markdown is
-another, and you will not get through a day of this work without it.
+it, and all of them describe at length the problem it solves.
 
 What the line tells you is **what the concept is for**. Whether that earns your
 time is a decision only you can make, and you can only make it if somebody

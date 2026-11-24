@@ -207,9 +207,12 @@ python3 drift.py
 ```
 
 ```
+canonical        conformant  total   rate  variants
 widget                    3      3   100%
 data set                  2      2   100%
 access token              3      3   100%
+
+worst pages:
 
 ok: 0 deprecated usage(s)
 ```

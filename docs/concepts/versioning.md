@@ -120,7 +120,7 @@ for k in sorted(tot):
 Two megabytes per version for a **one-page site**. Split it by kind:
 
 ```
-  HTML content:       11591 bytes (0%)
+  HTML content:       11591 bytes (1%)
   theme assets:     1981667 bytes (99%)
 ```
 

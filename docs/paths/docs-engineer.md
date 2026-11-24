@@ -15,9 +15,9 @@ generated: true
 Every automated gate that stops documentation rotting, in the order worth adding them.
 
 **18 concepts, roughly 69 hours.** The order matters:
-each step assumes the ones above it.
+where a step builds on an earlier one, it says so.
 
-**Assumed before step 1.** This path does not teach [Style guides and terminology management](../concepts/style-guide.md), [Diátaxis](../concepts/diataxis.md), [Reproducible environments](../concepts/reproducible-environments.md), [Content lifecycle and governance](../concepts/content-lifecycle.md), [Content models](../concepts/content-model.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Style guides and terminology management](../concepts/style-guide.md), [Diátaxis](../concepts/diataxis.md), [Reproducible environments](../concepts/reproducible-environments.md), [Content lifecycle and governance](../concepts/content-lifecycle.md) and [Content models](../concepts/content-model.md). Each step below repeats what it assumes.
 
 **Shared with other paths.** 10 of these steps, roughly 39 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
 
@@ -27,7 +27,7 @@ each step assumes the ones above it.
 
 Running documentation through Git, CI builds, linting, link and sample checks, and automated publishing.
 
-Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md).
+Also in: [The first week](first-week.md) and [A working result in a weekend](prove-it.md).
 
 ## 2. [Git authoring workflows for writers](../concepts/git-authoring.md)
 
@@ -45,9 +45,9 @@ Also in: [The first week](first-week.md).
 
 Running automated checks on every documentation change before it merges.
 
-Builds on, earlier in this path: Docs-as-code, Git authoring workflows for writers.
+Builds on, earlier in this path: Docs-as-code and Git authoring workflows for writers.
 
-Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md), [The lab engineer](lab-engineer.md).
+Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md) and [The lab engineer](lab-engineer.md).
 
 ## 4. [GitHub Actions for docs](../concepts/github-actions.md)
 
@@ -65,7 +65,7 @@ Catching broken links before readers do, in CI and on the published site.
 
 Builds on, earlier in this path: Docs-as-code.
 
-Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md).
+Also in: [The first week](first-week.md) and [A working result in a weekend](prove-it.md).
 
 ## 6. [Prose linting with Vale](../concepts/prose-linting.md)
 
@@ -101,7 +101,7 @@ Proving every code sample in the docs still runs and still produces what the pag
 
 Builds on, earlier in this path: Docs-as-code.
 
-Also in: [A working result in a weekend](prove-it.md), [The lab engineer](lab-engineer.md).
+Also in: [A working result in a weekend](prove-it.md) and [The lab engineer](lab-engineer.md).
 
 ## 10. [Diagrams as code](../concepts/diagrams-as-code.md)
 
@@ -141,7 +141,7 @@ Builds on, earlier in this path: Code-sample validation.
 
 Assumes, from outside this path: [Reproducible environments](../concepts/reproducible-environments.md).
 
-Also in: [A working result in a weekend](prove-it.md), [The lab engineer](lab-engineer.md).
+Also in: [A working result in a weekend](prove-it.md) and [The lab engineer](lab-engineer.md).
 
 ## 14. [Freshness monitoring](../concepts/freshness-monitoring.md)
 

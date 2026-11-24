@@ -14,9 +14,9 @@ generated: true
 Making a corpus answerable by machines, and knowing whether it worked.
 
 **18 concepts, roughly 87 hours.** The order matters:
-each step assumes the ones above it.
+where a step builds on an earlier one, it says so.
 
-**Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Templates and scaffolding](../concepts/templates-scaffolding.md), [Documentation analytics](../concepts/docs-analytics.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Templates and scaffolding](../concepts/templates-scaffolding.md) and [Documentation analytics](../concepts/docs-analytics.md). Each step below repeats what it assumes.
 
 **Shared with other paths.** 8 of these steps, roughly 34 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
 
@@ -28,7 +28,7 @@ Defining the types of content your team writes and the fields each one must carr
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
-Also in: [A working result in a weekend](prove-it.md), [The content architect](content-architect.md).
+Also in: [A working result in a weekend](prove-it.md) and [The content architect](content-architect.md).
 
 ## 2. [Metadata for navigation and retrieval](../concepts/metadata.md)
 
@@ -38,7 +38,7 @@ Tagging content so navigation, search and AI retrieval can all find the right pa
 
 Builds on, earlier in this path: Content models.
 
-Also in: [The content architect](content-architect.md), [Found by search and answer engines](answer-engines.md).
+Also in: [The content architect](content-architect.md) and [Found by search and answer engines](answer-engines.md).
 
 ## 3. [Agent-ready content](../concepts/agent-ready-content.md)
 
@@ -46,7 +46,7 @@ Also in: [The content architect](content-architect.md), [Found by search and ans
 
 Structuring knowledge so AI assistants and agents can use it as reliably as people can.
 
-Builds on, earlier in this path: Content models, Metadata for navigation and retrieval.
+Builds on, earlier in this path: Content models and Metadata for navigation and retrieval.
 
 Also in: [Found by search and answer engines](answer-engines.md).
 
@@ -58,7 +58,7 @@ Publishing machine-readable entry points to your docs, such as llms.txt, for AI 
 
 Builds on, earlier in this path: Agent-ready content.
 
-Also in: [A working result in a weekend](prove-it.md), [Found by search and answer engines](answer-engines.md).
+Also in: [A working result in a weekend](prove-it.md) and [Found by search and answer engines](answer-engines.md).
 
 ## 5. [Documentation for coding agents](../concepts/coding-agents.md)
 
@@ -82,7 +82,7 @@ Also in: [A working result in a weekend](prove-it.md).
 
 `core` · practice it · 4h
 
-Turning content into vectors so it can be searched by meaning, the first step of any RAG pipeline.
+Turning content into vectors so it can be searched by meaning, a core step of any RAG pipeline.
 
 Builds on, earlier in this path: Chunking strategies.
 
@@ -100,7 +100,7 @@ Builds on, earlier in this path: Embeddings.
 
 Building and maintaining pipelines that answer questions from your documentation.
 
-Builds on, earlier in this path: Chunking strategies, Vector stores and hybrid search.
+Builds on, earlier in this path: Chunking strategies and Vector stores and hybrid search.
 
 ## 10. [Grounding and citation](../concepts/grounding.md)
 
@@ -126,7 +126,7 @@ Also in: [A working result in a weekend](prove-it.md).
 
 Measuring whether LLM output in your content workflows is accurate and usable.
 
-Builds on, earlier in this path: Grounding and citation, Evaluating retrieval.
+Builds on, earlier in this path: Grounding and citation and Evaluating retrieval.
 
 ## 13. [Documentation-backed AI assistants](../concepts/ai-assistants.md)
 
@@ -134,7 +134,7 @@ Builds on, earlier in this path: Grounding and citation, Evaluating retrieval.
 
 Building and feeding assistants that answer questions from your documentation.
 
-Builds on, earlier in this path: RAG pipelines, Grounding and citation.
+Builds on, earlier in this path: RAG pipelines and Grounding and citation.
 
 ## 14. [Hallucination and guardrails](../concepts/hallucination-guardrails.md)
 
@@ -142,7 +142,7 @@ Builds on, earlier in this path: RAG pipelines, Grounding and citation.
 
 Catching and limiting AI answers that are confident and wrong.
 
-Builds on, earlier in this path: Grounding and citation, Output evaluation.
+Builds on, earlier in this path: Grounding and citation and Output evaluation.
 
 ## 15. [Model Context Protocol](../concepts/mcp.md)
 
@@ -170,7 +170,7 @@ Assumes, from outside this path: [Templates and scaffolding](../concepts/templat
 
 Structuring content so agents can carry out multi-step tasks from it.
 
-Builds on, earlier in this path: Model Context Protocol, Agent skills and context kits.
+Builds on, earlier in this path: Model Context Protocol and Agent skills and context kits.
 
 ## 18. [Measuring AI answer quality](../concepts/ai-answer-quality.md)
 

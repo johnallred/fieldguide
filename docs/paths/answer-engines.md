@@ -14,7 +14,7 @@ generated: true
 From metadata to being cited, making a public corpus discoverable and quotable.
 
 **8 concepts, roughly 24 hours.** The order matters:
-each step assumes the ones above it.
+where a step builds on an earlier one, it says so.
 
 **Assumed before step 1.** This path does not teach [Content models](../concepts/content-model.md). Each step below repeats what it assumes.
 
@@ -28,7 +28,7 @@ Tagging content so navigation, search and AI retrieval can all find the right pa
 
 Assumes, from outside this path: [Content models](../concepts/content-model.md).
 
-Also in: [The content architect](content-architect.md), [The KnowledgeOps path](knowledgeops.md).
+Also in: [The content architect](content-architect.md) and [The KnowledgeOps path](knowledgeops.md).
 
 ## 2. [Findability and search design](../concepts/findability.md)
 
@@ -76,7 +76,7 @@ Publishing machine-readable entry points to your docs, such as llms.txt, for AI 
 
 Builds on, earlier in this path: Agent-ready content.
 
-Also in: [A working result in a weekend](prove-it.md), [The KnowledgeOps path](knowledgeops.md).
+Also in: [A working result in a weekend](prove-it.md) and [The KnowledgeOps path](knowledgeops.md).
 
 ## 7. [Crawlability and the agent-ready front door](../concepts/crawlability.md)
 
@@ -92,4 +92,4 @@ Builds on, earlier in this path: SEO for documentation.
 
 Making documentation the source AI-generated answers draw on and cite.
 
-Builds on, earlier in this path: SEO for documentation, Agent-ready content.
+Builds on, earlier in this path: SEO for documentation and Agent-ready content.

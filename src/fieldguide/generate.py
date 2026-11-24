@@ -162,7 +162,7 @@ def coverage_page(registry: Registry) -> str:
         "## Where this list comes from\n",
         f"- **{total} of {total}** concepts name the work that needs them.",
         "",
-        "That line is printed next to each concept, so a reader can judge whether it",
+        "Each concept's work line is printed next to it, so a reader can judge whether it",
         "earns their time rather than taking the list on trust.\n",
     ]
 
@@ -180,8 +180,6 @@ def coverage_page(registry: Registry) -> str:
             )
             link = _link(concept, "concepts/")
             quote = practice.text.replace("|", "\\|")
-            if len(quote) > 120:
-                quote = quote[:117] + "..."
             out.append(
                 f"| {link} | {concept.tier} | {DIFFICULTY_LABEL[concept.difficulty]} "
                 f"| {concept.time} | {mark} {concept.status} "
@@ -246,8 +244,8 @@ def paths_index_page(registry: Registry) -> str:
     if shared:
         out += [
             "## What every path shares\n",
-            "Concepts that appear in three or more paths. If you only have a weekend,",
-            "this is the list.\n",
+            "Concepts that appear in three or more paths. If you only have time for a few,",
+            "start with these.\n",
             "| Concept | Paths |",
             "|---|---|",
         ]
@@ -269,6 +267,14 @@ def paths_index_page(registry: Registry) -> str:
     return "\n".join(out)
 
 
+def _and_join(items: list[str]) -> str:
+    """Join a list as prose: "a", "a and b", "a, b and c"."""
+    items = list(items)
+    if len(items) <= 1:
+        return "".join(items)
+    return ", ".join(items[:-1]) + " and " + items[-1]
+
+
 def path_page(registry: Registry, path_id: str) -> str:
     """Render one learning path as an ordered, annotated sequence."""
     learning_path = next(p for p in registry.paths if p.id == path_id)
@@ -281,7 +287,7 @@ def path_page(registry: Registry, path_id: str) -> str:
         f"{learning_path.summary}\n",
         f"**{len(learning_path.concepts)} concepts, roughly "
         f"{_total_hours(registry, learning_path.concepts)} hours.** The order matters:",
-        "each step assumes the ones above it.\n",
+        "where a step builds on an earlier one, it says so.\n",
     ]
 
     # A path is a route through the graph, not a self-contained curriculum, so
@@ -296,7 +302,7 @@ def path_page(registry: Registry, path_id: str) -> str:
             if prerequisite not in learning_path.concepts and prerequisite not in assumed:
                 assumed.append(prerequisite)
     if assumed:
-        names = ", ".join(_link(by_id[p], "../concepts/") for p in assumed)
+        names = _and_join([_link(by_id[p], "../concepts/") for p in assumed])
         out.append(
             f"**Assumed before step 1.** This path does not teach {names}. "
             "Each step below repeats what it assumes.\n"
@@ -334,13 +340,13 @@ def path_page(registry: Registry, path_id: str) -> str:
         )
         out.append(f"{concept.in_practice[0].text}\n")
         if inside:
-            names = ", ".join(by_id[p].name for p in inside)
+            names = _and_join([by_id[p].name for p in inside])
             out.append(f"Builds on, earlier in this path: {names}.\n")
         if outside:
-            names = ", ".join(_link(by_id[p], "../concepts/") for p in outside)
+            names = _and_join([_link(by_id[p], "../concepts/") for p in outside])
             out.append(f"Assumes, from outside this path: {names}.\n")
         if others[concept_id]:
-            names = ", ".join(f"[{p.name}]({p.id}.md)" for p in others[concept_id])
+            names = _and_join([f"[{p.name}]({p.id}.md)" for p in others[concept_id]])
             out.append(f"Also in: {names}.\n")
 
     return "\n".join(out)
@@ -355,7 +361,17 @@ def study_plan_page(registry: Registry) -> str:
     """
     by_id = registry.by_id
     order = topological_order(registry)
-    core = [cid for cid in order if by_id[cid].tier == "core"]
+    # The core concepts plus everything they depend on. A core-only list would
+    # put Sphinx before reStructuredText, which this page promises never to do.
+    needed: set[str] = set()
+    stack = [cid for cid in order if by_id[cid].tier == "core"]
+    while stack:
+        cid = stack.pop()
+        if cid not in needed:
+            needed.add(cid)
+            stack.extend(by_id[cid].prerequisites)
+    core = [cid for cid in order if cid in needed]
+    added = sum(1 for cid in core if by_id[cid].tier != "core")
 
     out = [
         _front_matter(
@@ -369,13 +385,15 @@ def study_plan_page(registry: Registry) -> str:
         "It is longer and less useful than a path. It is here because a complete ordering",
         "is the thing a reader asks for once they have decided to do all of it, and",
         "because generating it proves the graph has no cycles.\n",
-        f"## Core only ({len(core)} concepts)\n",
+        f"## Core, and what it depends on ({len(core)} concepts)\n",
         "The shortest complete route. Skip this at your peril and skip everything else",
-        "without much cost.\n",
+        f"without much cost. {added} of these are not `core` themselves; they are here",
+        "because a core concept assumes them, and they are marked.\n",
     ]
     for position, concept_id in enumerate(core, 1):
         concept = by_id[concept_id]
-        out.append(f"{position}. {_link(concept, 'concepts/')} · {concept.time}")
+        mark = "" if concept.tier == "core" else f" · `{concept.tier}`, needed by a core concept"
+        out.append(f"{position}. {_link(concept, 'concepts/')} · {concept.time}{mark}")
     out.append("")
 
     out.append(f"## Everything ({len(order)} concepts)\n")

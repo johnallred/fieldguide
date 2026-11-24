@@ -14,9 +14,9 @@ generated: true
 Taking a developer from a clean environment to a working result, repeatably.
 
 **19 concepts, roughly 77 hours.** The order matters:
-each step assumes the ones above it.
+where a step builds on an earlier one, it says so.
 
-**Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Code-sample validation](../concepts/code-sample-validation.md), [Reproducible environments](../concepts/reproducible-environments.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Code-sample validation](../concepts/code-sample-validation.md) and [Reproducible environments](../concepts/reproducible-environments.md). Each step below repeats what it assumes.
 
 **Shared with other paths.** 3 of these steps, roughly 10 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
 
@@ -26,7 +26,7 @@ each step assumes the ones above it.
 
 Treating setup, runnable samples and documentation as one product the developer experiences.
 
-Also in: [The first week](first-week.md), [The writer who builds](writer-who-builds.md).
+Also in: [The first week](first-week.md) and [The writer who builds](writer-who-builds.md).
 
 ## 2. [Learning science for developer education](../concepts/learning-science.md)
 
@@ -48,7 +48,7 @@ Builds on, earlier in this path: Learning science for developer education.
 
 Designing curriculum so a developer learns what they need, in the order they need it.
 
-Builds on, earlier in this path: Learning science for developer education, Learner and task analysis.
+Builds on, earlier in this path: Learning science for developer education and Learner and task analysis.
 
 ## 5. [Cognitive load in technical content](../concepts/cognitive-load.md)
 
@@ -66,7 +66,7 @@ Deciding whether a page is a tutorial, a how-to, reference or explanation, and k
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
-Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md), [The content architect](content-architect.md).
+Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md) and [The content architect](content-architect.md).
 
 ## 7. [Designing tutorials](../concepts/tutorial-design.md)
 
@@ -116,7 +116,7 @@ Builds on, earlier in this path: Designing tutorials.
 
 Sequencing content into structured learning paths a reader can follow start to finish.
 
-Builds on, earlier in this path: Instructional design for developers, Diátaxis.
+Builds on, earlier in this path: Instructional design for developers and Diátaxis.
 
 ## 13. [LMS administration](../concepts/lms-administration.md)
 
@@ -176,4 +176,4 @@ Assumes, from outside this path: [Reproducible environments](../concepts/reprodu
 
 Teaching the people who demo, sell and support the product until they can deliver without you, and turning what they hear into changes.
 
-Builds on, earlier in this path: Workshops and hands-on labs, Demo design.
+Builds on, earlier in this path: Workshops and hands-on labs and Demo design.

@@ -569,8 +569,9 @@ your own corpus, with the per-query losses visible.
 
 **Three things to do, in order:**
 
-1. **Run the golden path.** The six-query table is the deliverable: it shows the
-   two methods failing on disjoint sets, which is the argument.
+1. **Run the golden path.** The six-query table is the deliverable: lexical wins
+   on the exact identifier that dense ranks third, which is the argument for
+   fusing them.
 2. **Redo it with your product's identifiers.** Your flag names, your error
    codes, your version strings. The dense column gets worse and the case for
    hybrid gets stronger.

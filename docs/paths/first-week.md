@@ -14,7 +14,7 @@ generated: true
 The shortest route to shipping a documentation change with confidence.
 
 **10 concepts, roughly 34 hours.** The order matters:
-each step assumes the ones above it.
+where a step builds on an earlier one, it says so.
 
 **Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md). Each step below repeats what it assumes.
 
@@ -34,7 +34,7 @@ Also in: [The writer who builds](writer-who-builds.md).
 
 Treating setup, runnable samples and documentation as one product the developer experiences.
 
-Also in: [The developer educator](developer-educator.md), [The writer who builds](writer-who-builds.md).
+Also in: [The developer educator](developer-educator.md) and [The writer who builds](writer-who-builds.md).
 
 ## 3. [Docs-as-code](../concepts/docs-as-code.md)
 
@@ -42,7 +42,7 @@ Also in: [The developer educator](developer-educator.md), [The writer who builds
 
 Running documentation through Git, CI builds, linting, link and sample checks, and automated publishing.
 
-Also in: [A working result in a weekend](prove-it.md), [The documentation engineer](docs-engineer.md).
+Also in: [A working result in a weekend](prove-it.md) and [The documentation engineer](docs-engineer.md).
 
 ## 4. [Markdown and its dialects](../concepts/markdown.md)
 
@@ -70,7 +70,7 @@ Deciding whether a page is a tutorial, a how-to, reference or explanation, and k
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
-Also in: [A working result in a weekend](prove-it.md), [The content architect](content-architect.md), [The developer educator](developer-educator.md).
+Also in: [A working result in a weekend](prove-it.md), [The content architect](content-architect.md) and [The developer educator](developer-educator.md).
 
 ## 7. [Choosing a static site generator](../concepts/static-site-generators.md)
 
@@ -98,7 +98,7 @@ Catching broken links before readers do, in CI and on the published site.
 
 Builds on, earlier in this path: Docs-as-code.
 
-Also in: [A working result in a weekend](prove-it.md), [The documentation engineer](docs-engineer.md).
+Also in: [A working result in a weekend](prove-it.md) and [The documentation engineer](docs-engineer.md).
 
 ## 10. [Documentation CI](../concepts/documentation-ci.md)
 
@@ -106,6 +106,6 @@ Also in: [A working result in a weekend](prove-it.md), [The documentation engine
 
 Running automated checks on every documentation change before it merges.
 
-Builds on, earlier in this path: Docs-as-code, Git authoring workflows for writers.
+Builds on, earlier in this path: Docs-as-code and Git authoring workflows for writers.
 
-Also in: [A working result in a weekend](prove-it.md), [The documentation engineer](docs-engineer.md), [The lab engineer](lab-engineer.md).
+Also in: [A working result in a weekend](prove-it.md), [The documentation engineer](docs-engineer.md) and [The lab engineer](lab-engineer.md).

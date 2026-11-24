@@ -18,10 +18,11 @@ It is longer and less useful than a path. It is here because a complete ordering
 is the thing a reader asks for once they have decided to do all of it, and
 because generating it proves the graph has no cycles.
 
-## Core only (66 concepts)
+## Core, and what it depends on (71 concepts)
 
 The shortest complete route. Skip this at your peril and skip everything else
-without much cost.
+without much cost. 5 of these are not `core` themselves; they are here
+because a core concept assumes them, and they are marked.
 
 1. [A systems mindset](concepts/systems-mindset.md) · 2h
 2. [Docs-as-code](concepts/docs-as-code.md) · 2h
@@ -46,49 +47,54 @@ without much cost.
 21. [Cognitive load in technical content](concepts/cognitive-load.md) · 3h
 22. [Diátaxis](concepts/diataxis.md) · 2h
 23. [Golden paths](concepts/golden-paths.md) · 5h
-24. [Cold-start testing](concepts/coldstart-testing.md) · 5h
-25. [Designing tutorials](concepts/tutorial-design.md) · 4h
-26. [Sample walkthroughs](concepts/sample-walkthroughs.md) · 3h
-27. [Taxonomy and controlled vocabularies](concepts/taxonomy.md) · 3h
-28. [Prose linting with Vale](concepts/prose-linting.md) · 3h
-29. [Documentation analytics](concepts/docs-analytics.md) · 4h
-30. [Documentation for coding agents](concepts/coding-agents.md) · 4h
-31. [Embeddings](concepts/embeddings.md) · 4h
-32. [Vector stores and hybrid search](concepts/vector-stores.md) · 5h
-33. [RAG pipelines](concepts/rag.md) · 8h
-34. [Grounding and citation](concepts/grounding.md) · 4h
-35. [Documentation-backed AI assistants](concepts/ai-assistants.md) · 8h
-36. [Evaluating retrieval](concepts/retrieval-evaluation.md) · 6h
-37. [Extracting tribal knowledge](concepts/sme-interviews.md) · 3h
-38. [Learning paths and curriculum](concepts/learning-paths.md) · 5h
-39. [Freshness monitoring](concepts/freshness-monitoring.md) · 4h
-40. [Generated API reference](concepts/api-reference-generation.md) · 4h
-41. [Generative engine optimization](concepts/geo.md) · 3h
-42. [GitHub Actions for docs](concepts/github-actions.md) · 4h
-43. [Giving architecture owners implementation feedback](concepts/implementation-feedback.md) · 3h
-44. [Guided workflows](concepts/guided-workflows.md) · 5h
-45. [Output evaluation](concepts/output-evaluation.md) · 6h
-46. [Python for content automation](concepts/python-for-content.md) · 5h
-47. [Integrating with APIs](concepts/api-integration.md) · 4h
-48. [Prompting for content work](concepts/prompting.md) · 3h
-49. [Judging where AI can be trusted](concepts/ai-trust-judgment.md) · 4h
-50. [Knowledge architecture](concepts/knowledge-architecture.md) · 6h
-51. [LLMs in the content lifecycle](concepts/llm-content-lifecycle.md) · 6h
-52. [Link checking](concepts/link-checking.md) · 2h
-53. [Measuring AI answer quality](concepts/ai-answer-quality.md) · 5h
-54. [MkDocs and Material](concepts/mkdocs.md) · 4h
-55. [Playbooks and decision guides](concepts/playbooks.md) · 4h
-56. [Support deflection](concepts/support-deflection.md) · 3h
-57. [Repeat-question analysis](concepts/repeat-questions.md) · 3h
-58. [Quickstarts that survive contact](concepts/quickstarts.md) · 3h
-59. [Reading code to verify accuracy](concepts/reading-code-to-verify.md) · 5h
-60. [Release readiness for documentation](concepts/release-readiness.md) · 4h
-61. [Technical writing as a craft](concepts/technical-writing.md) · 8h
-62. [Sphinx](concepts/sphinx.md) · 6h
-63. [Time to first success](concepts/time-to-first-success.md) · 3h
-64. [Transforming content as data](concepts/content-data-transformation.md) · 4h
-65. [Treating docs, setup and samples as one product](concepts/docs-as-product.md) · 3h
-66. [llms.txt and llms-full.txt](concepts/llms-txt.md) · 2h
+24. [Reproducible environments](concepts/reproducible-environments.md) · 4h · `supporting`, needed by a core concept
+25. [Cold-start testing](concepts/coldstart-testing.md) · 5h
+26. [Content lifecycle and governance](concepts/content-lifecycle.md) · 3h · `supporting`, needed by a core concept
+27. [SEO for documentation](concepts/seo-for-docs.md) · 3h · `supporting`, needed by a core concept
+28. [Designing tutorials](concepts/tutorial-design.md) · 4h
+29. [Sample walkthroughs](concepts/sample-walkthroughs.md) · 3h
+30. [Taxonomy and controlled vocabularies](concepts/taxonomy.md) · 3h
+31. [Style guides and terminology management](concepts/style-guide.md) · 2h · `supporting`, needed by a core concept
+32. [Prose linting with Vale](concepts/prose-linting.md) · 3h
+33. [Documentation analytics](concepts/docs-analytics.md) · 4h
+34. [Documentation for coding agents](concepts/coding-agents.md) · 4h
+35. [Embeddings](concepts/embeddings.md) · 4h
+36. [Vector stores and hybrid search](concepts/vector-stores.md) · 5h
+37. [RAG pipelines](concepts/rag.md) · 8h
+38. [Grounding and citation](concepts/grounding.md) · 4h
+39. [Documentation-backed AI assistants](concepts/ai-assistants.md) · 8h
+40. [Evaluating retrieval](concepts/retrieval-evaluation.md) · 6h
+41. [Extracting tribal knowledge](concepts/sme-interviews.md) · 3h
+42. [Learning paths and curriculum](concepts/learning-paths.md) · 5h
+43. [Freshness monitoring](concepts/freshness-monitoring.md) · 4h
+44. [Generated API reference](concepts/api-reference-generation.md) · 4h
+45. [Generative engine optimization](concepts/geo.md) · 3h
+46. [GitHub Actions for docs](concepts/github-actions.md) · 4h
+47. [Giving architecture owners implementation feedback](concepts/implementation-feedback.md) · 3h
+48. [Guided workflows](concepts/guided-workflows.md) · 5h
+49. [Output evaluation](concepts/output-evaluation.md) · 6h
+50. [Python for content automation](concepts/python-for-content.md) · 5h
+51. [Integrating with APIs](concepts/api-integration.md) · 4h
+52. [Prompting for content work](concepts/prompting.md) · 3h
+53. [Judging where AI can be trusted](concepts/ai-trust-judgment.md) · 4h
+54. [Knowledge architecture](concepts/knowledge-architecture.md) · 6h
+55. [LLMs in the content lifecycle](concepts/llm-content-lifecycle.md) · 6h
+56. [Link checking](concepts/link-checking.md) · 2h
+57. [Measuring AI answer quality](concepts/ai-answer-quality.md) · 5h
+58. [MkDocs and Material](concepts/mkdocs.md) · 4h
+59. [Playbooks and decision guides](concepts/playbooks.md) · 4h
+60. [Support deflection](concepts/support-deflection.md) · 3h
+61. [Repeat-question analysis](concepts/repeat-questions.md) · 3h
+62. [Quickstarts that survive contact](concepts/quickstarts.md) · 3h
+63. [Reading code to verify accuracy](concepts/reading-code-to-verify.md) · 5h
+64. [Release readiness for documentation](concepts/release-readiness.md) · 4h
+65. [Technical writing as a craft](concepts/technical-writing.md) · 8h
+66. [reStructuredText](concepts/restructuredtext.md) · 3h · `supporting`, needed by a core concept
+67. [Sphinx](concepts/sphinx.md) · 6h
+68. [Time to first success](concepts/time-to-first-success.md) · 3h
+69. [Transforming content as data](concepts/content-data-transformation.md) · 4h
+70. [Treating docs, setup and samples as one product](concepts/docs-as-product.md) · 3h
+71. [llms.txt and llms-full.txt](concepts/llms-txt.md) · 2h
 
 ## Everything (120 concepts)
 

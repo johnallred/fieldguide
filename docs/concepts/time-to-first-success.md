@@ -103,13 +103,13 @@ TOTAL 12.7s
 
 **Of 12.7 seconds, 11.6 are `pip install`: 91 percent.** Everything the
 tutorial actually teaches, creating a tree, packing it, inspecting the
-artifacts and breaking it on purpose, takes 0.4 seconds in total.
+artifacts and breaking it on purpose, takes under a second in total.
 
 Two things follow, and the second is the one worth keeping. The headline figure
 is machine-dependent, nine seconds here and 12.7 there, so quoting it to two
 significant figures is false precision; the composition is stable and the total
 is not. And the only lever on this number is the dependency install, because
-rewriting every word of the tutorial could not move four tenths of a second.
+rewriting every word of the tutorial could not move the last second.
 A metric whose single component you cannot influence by doing your own job well
 is a metric about somebody else's work.
 

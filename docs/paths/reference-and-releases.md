@@ -15,9 +15,9 @@ generated: true
 Reference generated from the source, checked against it, and versioned with each release.
 
 **8 concepts, roughly 29 hours.** The order matters:
-each step assumes the ones above it.
+where a step builds on an earlier one, it says so.
 
-**Assumed before step 1.** This path does not teach [Markdown and its dialects](../concepts/markdown.md), [Choosing a static site generator](../concepts/static-site-generators.md), [Docs-as-code](../concepts/docs-as-code.md), [Code-sample validation](../concepts/code-sample-validation.md), [Documentation CI](../concepts/documentation-ci.md), [Technical writing as a craft](../concepts/technical-writing.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Markdown and its dialects](../concepts/markdown.md), [Choosing a static site generator](../concepts/static-site-generators.md), [Docs-as-code](../concepts/docs-as-code.md), [Code-sample validation](../concepts/code-sample-validation.md), [Documentation CI](../concepts/documentation-ci.md) and [Technical writing as a craft](../concepts/technical-writing.md). Each step below repeats what it assumes.
 
 **Shared with other paths.** 1 of these steps, roughly 4 hours, also appears in another path. Each is marked below; if you have done it there, skip it here.
 

@@ -14,9 +14,9 @@ generated: true
 The craft and the working relationships, which no pipeline substitutes for.
 
 **15 concepts, roughly 55 hours.** The order matters:
-each step assumes the ones above it.
+where a step builds on an earlier one, it says so.
 
-**Assumed before step 1.** This path does not teach [Git authoring workflows for writers](../concepts/git-authoring.md), [Style guides and terminology management](../concepts/style-guide.md), [Documentation CI](../concepts/documentation-ci.md), [Content lifecycle and governance](../concepts/content-lifecycle.md), [Metadata for navigation and retrieval](../concepts/metadata.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Git authoring workflows for writers](../concepts/git-authoring.md), [Style guides and terminology management](../concepts/style-guide.md), [Documentation CI](../concepts/documentation-ci.md), [Content lifecycle and governance](../concepts/content-lifecycle.md) and [Metadata for navigation and retrieval](../concepts/metadata.md). Each step below repeats what it assumes.
 
 **Shared with other paths.** 4 of these steps, roughly 18 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
 
@@ -40,7 +40,7 @@ Reading code and APIs to verify a page is accurate, and writing examples that wo
 
 Treating setup, runnable samples and documentation as one product the developer experiences.
 
-Also in: [The first week](first-week.md), [The developer educator](developer-educator.md).
+Also in: [The first week](first-week.md) and [The developer educator](developer-educator.md).
 
 ## 4. [A systems mindset](../concepts/systems-mindset.md)
 
@@ -68,7 +68,7 @@ Getting tribal knowledge out of experts' heads and into tooling, templates and s
 
 Reviewing documentation pull requests for accuracy, structure and style.
 
-Assumes, from outside this path: [Git authoring workflows for writers](../concepts/git-authoring.md), [Style guides and terminology management](../concepts/style-guide.md).
+Assumes, from outside this path: [Git authoring workflows for writers](../concepts/git-authoring.md) and [Style guides and terminology management](../concepts/style-guide.md).
 
 Also in: [The documentation engineer](docs-engineer.md).
 
@@ -78,7 +78,7 @@ Also in: [The documentation engineer](docs-engineer.md).
 
 Working with engineering, product, security and partner teams so every release ships documented.
 
-Builds on, earlier in this path: Extracting tribal knowledge, Reviewing documentation.
+Builds on, earlier in this path: Extracting tribal knowledge and Reviewing documentation.
 
 ## 9. [Developer advocacy](../concepts/developer-advocacy.md)
 

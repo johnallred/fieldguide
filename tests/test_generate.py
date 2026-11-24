@@ -321,11 +321,27 @@ def test_the_study_plan_respects_prerequisites(registry):
             )
 
 
-def test_the_study_plan_core_section_only_lists_core(registry):
+def test_the_study_plan_core_section_keeps_its_ordering_promise(registry):
+    """Every core concept, everything they depend on, and nothing out of order.
+
+    It used to list core concepts only, which put a concept ahead of a
+    supporting prerequisite the list never mentioned, breaking the page's one
+    promise. Supporting prerequisites are now included, and marked.
+    """
+    import re
+
     text = study_plan_page(registry)
-    core_block = text.split("## Core only")[1].split("## Everything")[0]
-    for concept in registry.of_tier("supporting") + registry.of_tier("context"):
-        assert f" {concept.name} ·" not in core_block
+    block = text.split("## Core, and what it depends on")[1].split("## Everything")[0]
+    listed = re.findall(r"^\d+\. \[[^\]]+\]\(concepts/([\w-]+)\.md\)(.*)$", block, re.M)
+    ids = [cid for cid, _ in listed]
+    position = {cid: i for i, cid in enumerate(ids)}
+    by_id = registry.by_id
+    for concept in registry.of_tier("core"):
+        assert concept.id in position, f"core concept missing: {concept.id}"
+    for cid, rest in listed:
+        for prerequisite in by_id[cid].prerequisites:
+            assert prerequisite in position and position[prerequisite] < position[cid], (cid, prerequisite)
+        assert ("needed by a core concept" in rest) == (by_id[cid].tier != "core"), cid
 
 
 # -------------------------------------------------------------- placeholders

@@ -15,7 +15,7 @@ generated: true
 Six technical domains, at the depth where you can follow an engineer and know which questions are not yours to answer.
 
 **6 concepts, roughly 24 hours.** The order matters:
-each step assumes the ones above it.
+where a step builds on an earlier one, it says so.
 
 ## 1. [GPU computing and CUDA](../concepts/gpu-computing.md)
 

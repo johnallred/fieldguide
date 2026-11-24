@@ -15,9 +15,9 @@ generated: true
 Taking a lab from a working draft to one that is tested nightly, published on evidence, safe for learners and portable.
 
 **9 concepts, roughly 43 hours.** The order matters:
-each step assumes the ones above it.
+where a step builds on an earlier one, it says so.
 
-**Assumed before step 1.** This path does not teach [Docs-as-code](../concepts/docs-as-code.md), [Git authoring workflows for writers](../concepts/git-authoring.md), [Golden paths](../concepts/golden-paths.md), [Security guidance as encoded standard](../concepts/security-documentation.md), [Single-sourcing and content reuse](../concepts/single-sourcing.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Docs-as-code](../concepts/docs-as-code.md), [Git authoring workflows for writers](../concepts/git-authoring.md), [Golden paths](../concepts/golden-paths.md), [Security guidance as encoded standard](../concepts/security-documentation.md) and [Single-sourcing and content reuse](../concepts/single-sourcing.md). Each step below repeats what it assumes.
 
 **Shared with other paths.** 4 of these steps, roughly 18 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
 
@@ -29,7 +29,7 @@ Proving every code sample in the docs still runs and still produces what the pag
 
 Assumes, from outside this path: [Docs-as-code](../concepts/docs-as-code.md).
 
-Also in: [A working result in a weekend](prove-it.md), [The documentation engineer](docs-engineer.md).
+Also in: [A working result in a weekend](prove-it.md) and [The documentation engineer](docs-engineer.md).
 
 ## 2. [Documentation CI](../concepts/documentation-ci.md)
 
@@ -37,9 +37,9 @@ Also in: [A working result in a weekend](prove-it.md), [The documentation engine
 
 Running automated checks on every documentation change before it merges.
 
-Assumes, from outside this path: [Docs-as-code](../concepts/docs-as-code.md), [Git authoring workflows for writers](../concepts/git-authoring.md).
+Assumes, from outside this path: [Docs-as-code](../concepts/docs-as-code.md) and [Git authoring workflows for writers](../concepts/git-authoring.md).
 
-Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md), [The documentation engineer](docs-engineer.md).
+Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md) and [The documentation engineer](docs-engineer.md).
 
 ## 3. [Reproducible environments](../concepts/reproducible-environments.md)
 
@@ -55,9 +55,9 @@ Assumes, from outside this path: [Golden paths](../concepts/golden-paths.md).
 
 Testing quickstarts from a clean environment, the way a new developer meets them.
 
-Builds on, earlier in this path: Code-sample validation, Reproducible environments.
+Builds on, earlier in this path: Code-sample validation and Reproducible environments.
 
-Also in: [A working result in a weekend](prove-it.md), [The documentation engineer](docs-engineer.md).
+Also in: [A working result in a weekend](prove-it.md) and [The documentation engineer](docs-engineer.md).
 
 ## 5. [Ephemeral lab environments](../concepts/ephemeral-environments.md)
 
@@ -65,7 +65,7 @@ Also in: [A working result in a weekend](prove-it.md), [The documentation engine
 
 Standing up a real cloud environment for every lab run, checking the lab against it, and proving the teardown left nothing running.
 
-Builds on, earlier in this path: Reproducible environments, Cold-start testing.
+Builds on, earlier in this path: Reproducible environments and Cold-start testing.
 
 ## 6. [Lab publishing pipelines](../concepts/lab-publishing.md)
 
@@ -73,7 +73,7 @@ Builds on, earlier in this path: Reproducible environments, Cold-start testing.
 
 Shipping hands-on labs through gates, versions and channels, so a broken lab is stopped before learners meet it and a published one can be pulled or rolled back.
 
-Builds on, earlier in this path: Ephemeral lab environments, Documentation CI.
+Builds on, earlier in this path: Ephemeral lab environments and Documentation CI.
 
 ## 7. [Learner sandbox guardrails](../concepts/learner-sandbox-guardrails.md)
 
@@ -103,4 +103,4 @@ Also in: [The content architect](content-architect.md).
 
 Making a lab that runs in one AWS partition run in another, including isolated regions with no route to the public internet.
 
-Builds on, earlier in this path: Lab publishing pipelines, Multi-platform parity.
+Builds on, earlier in this path: Lab publishing pipelines and Multi-platform parity.

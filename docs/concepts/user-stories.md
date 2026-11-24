@@ -108,7 +108,7 @@ reader with a question, and demanding one role for it would be false.
 
 The check is deliberately shallow. It cannot tell whether the story is
 honest, only whether somebody was made to write one, which is most of the
-value: the format's benefit is the thirty seconds of thought at authoring
+value: the format's benefit is the ninety seconds of thought at authoring
 time, not the stored text.
 """
 import sys

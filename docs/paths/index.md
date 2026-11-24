@@ -123,8 +123,8 @@ Six technical domains, at the depth where you can follow an engineer and know wh
 
 ## What every path shares
 
-Concepts that appear in three or more paths. If you only have a weekend,
-this is the list.
+Concepts that appear in three or more paths. If you only have time for a few,
+start with these.
 
 | Concept | Paths |
 |---|---|

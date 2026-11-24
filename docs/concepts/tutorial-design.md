@@ -170,13 +170,9 @@ python -m src.cli
 NameError: name 'run' is not defined
 ```
 
-A second defect: step 7's `cli.py` never imports `run` from `sync.py`. And
-behind it sits a third, which only surfaces after that one is fixed, because
-`config.py` as written would be imported for a name it does define but
-`sync.py` imports under a different spelling in the typo variant of this
-exercise.
+A second defect: step 7's `cli.py` never imports `run` from `sync.py`.
 
-**Three independent defects, stacked across seven unverified steps, and the
+**Two independent defects, stacked across seven unverified steps, and the
 first symptom was silence.** Any one of them would have been obvious the moment
 the reader ran something. The sequencing is what let them accumulate.
 
@@ -259,7 +255,7 @@ hide; only a real learner tells you whether the explanation lands.
 sequencing. An author who knows the architecture builds it in architectural
 order, so the reader types for twenty minutes before anything can produce
 output. I measure the longest run of steps with no observable result: on an
-eight-step tutorial written that way it was seven, and three independent
+eight-step tutorial written that way it was seven, and two independent
 defects were hiding in it with silence as the only symptom."
 
 **The follow-up is the difference from a quickstart**, and the answer is the
@@ -277,7 +273,7 @@ elegance in a document whose readers are guaranteed to make mistakes.
 
 **One sharper point.** Silence is not success. A tutorial whose final command
 produces no output cannot tell the reader anything, and it will hide real
-defects indefinitely: mine exited zero with three bugs in it. Every step that
+defects indefinitely: mine exited zero with two bugs in it. Every step that
 runs something should show what the reader will see, and the final step most of
 all.
 
@@ -300,8 +296,9 @@ test, and a measured blind-run length.
 [demonstrated](../demonstrated.md) page: five steps, nine code blocks, one
 route, no choice offered before first success, with `scripts/coldstart.sh`
 running the whole thing in a fresh virtual environment and asserting the exact
-output it promises. What is missing is a reader: the blind-run count is zero. The number is the claim worth
-making, because it is checkable by anyone who disagrees.
+output it promises. What is missing is a reader: nobody has yet run it blind,
+so the blind-run count is zero. That number is the claim worth making, because
+it is checkable by anyone who disagrees.
 
 ## Related
 

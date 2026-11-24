@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 2 · 4h
 
-> Turning content into vectors so it can be searched by meaning, the first step of any RAG pipeline.
+> Turning content into vectors so it can be searched by meaning, a core step of any RAG pipeline.
 
 **Prerequisites:** [Chunking strategies](chunking.md)
 

@@ -14,9 +14,9 @@ generated: true
 The shortest path through the concepts that produce something reviewable.
 
 **15 concepts, roughly 59 hours.** The order matters:
-each step assumes the ones above it.
+where a step builds on an earlier one, it says so.
 
-**Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Choosing a static site generator](../concepts/static-site-generators.md), [Git authoring workflows for writers](../concepts/git-authoring.md), [Style guides and terminology management](../concepts/style-guide.md), [Reproducible environments](../concepts/reproducible-environments.md), [Agent-ready content](../concepts/agent-ready-content.md), [RAG pipelines](../concepts/rag.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Choosing a static site generator](../concepts/static-site-generators.md), [Git authoring workflows for writers](../concepts/git-authoring.md), [Style guides and terminology management](../concepts/style-guide.md), [Reproducible environments](../concepts/reproducible-environments.md), [Agent-ready content](../concepts/agent-ready-content.md) and [RAG pipelines](../concepts/rag.md). Each step below repeats what it assumes.
 
 **Shared with other paths.** 14 of these steps, roughly 55 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
 
@@ -26,7 +26,7 @@ each step assumes the ones above it.
 
 Running documentation through Git, CI builds, linting, link and sample checks, and automated publishing.
 
-Also in: [The first week](first-week.md), [The documentation engineer](docs-engineer.md).
+Also in: [The first week](first-week.md) and [The documentation engineer](docs-engineer.md).
 
 ## 2. [Diátaxis](../concepts/diataxis.md)
 
@@ -36,7 +36,7 @@ Deciding whether a page is a tutorial, a how-to, reference or explanation, and k
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
-Also in: [The first week](first-week.md), [The content architect](content-architect.md), [The developer educator](developer-educator.md).
+Also in: [The first week](first-week.md), [The content architect](content-architect.md) and [The developer educator](developer-educator.md).
 
 ## 3. [Content models](../concepts/content-model.md)
 
@@ -46,7 +46,7 @@ Defining the types of content your team writes and the fields each one must carr
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
-Also in: [The content architect](content-architect.md), [The KnowledgeOps path](knowledgeops.md).
+Also in: [The content architect](content-architect.md) and [The KnowledgeOps path](knowledgeops.md).
 
 ## 4. [MkDocs and Material](../concepts/mkdocs.md)
 
@@ -68,7 +68,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 Assumes, from outside this path: [Git authoring workflows for writers](../concepts/git-authoring.md).
 
-Also in: [The first week](first-week.md), [The documentation engineer](docs-engineer.md), [The lab engineer](lab-engineer.md).
+Also in: [The first week](first-week.md), [The documentation engineer](docs-engineer.md) and [The lab engineer](lab-engineer.md).
 
 ## 6. [Link checking](../concepts/link-checking.md)
 
@@ -78,7 +78,7 @@ Catching broken links before readers do, in CI and on the published site.
 
 Builds on, earlier in this path: Docs-as-code.
 
-Also in: [The first week](first-week.md), [The documentation engineer](docs-engineer.md).
+Also in: [The first week](first-week.md) and [The documentation engineer](docs-engineer.md).
 
 ## 7. [Prose linting with Vale](../concepts/prose-linting.md)
 
@@ -98,7 +98,7 @@ Proving every code sample in the docs still runs and still produces what the pag
 
 Builds on, earlier in this path: Docs-as-code.
 
-Also in: [The documentation engineer](docs-engineer.md), [The lab engineer](lab-engineer.md).
+Also in: [The documentation engineer](docs-engineer.md) and [The lab engineer](lab-engineer.md).
 
 ## 9. [Building a doc test harness](../concepts/doc-test-harness.md)
 
@@ -120,7 +120,7 @@ Builds on, earlier in this path: Code-sample validation.
 
 Assumes, from outside this path: [Reproducible environments](../concepts/reproducible-environments.md).
 
-Also in: [The documentation engineer](docs-engineer.md), [The lab engineer](lab-engineer.md).
+Also in: [The documentation engineer](docs-engineer.md) and [The lab engineer](lab-engineer.md).
 
 ## 11. [llms.txt and llms-full.txt](../concepts/llms-txt.md)
 
@@ -130,7 +130,7 @@ Publishing machine-readable entry points to your docs, such as llms.txt, for AI 
 
 Assumes, from outside this path: [Agent-ready content](../concepts/agent-ready-content.md).
 
-Also in: [The KnowledgeOps path](knowledgeops.md), [Found by search and answer engines](answer-engines.md).
+Also in: [The KnowledgeOps path](knowledgeops.md) and [Found by search and answer engines](answer-engines.md).
 
 ## 12. [Chunking strategies](../concepts/chunking.md)
 

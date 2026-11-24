@@ -14,9 +14,9 @@ generated: true
 From a folder of Markdown to a modeled, governed, machine-readable corpus.
 
 **17 concepts, roughly 60 hours.** The order matters:
-each step assumes the ones above it.
+where a step builds on an earlier one, it says so.
 
-**Assumed before step 1.** This path does not teach [Prose linting with Vale](../concepts/prose-linting.md), [Code-sample validation](../concepts/code-sample-validation.md), [Docs-as-code](../concepts/docs-as-code.md), [Extracting tribal knowledge](../concepts/sme-interviews.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Prose linting with Vale](../concepts/prose-linting.md), [Code-sample validation](../concepts/code-sample-validation.md), [Docs-as-code](../concepts/docs-as-code.md) and [Extracting tribal knowledge](../concepts/sme-interviews.md). Each step below repeats what it assumes.
 
 **Shared with other paths.** 5 of these steps, roughly 16 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
 
@@ -34,7 +34,7 @@ Deciding whether a page is a tutorial, a how-to, reference or explanation, and k
 
 Builds on, earlier in this path: Information architecture.
 
-Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md), [The developer educator](developer-educator.md).
+Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md) and [The developer educator](developer-educator.md).
 
 ## 3. [Content models](../concepts/content-model.md)
 
@@ -44,7 +44,7 @@ Defining the types of content your team writes and the fields each one must carr
 
 Builds on, earlier in this path: Information architecture.
 
-Also in: [A working result in a weekend](prove-it.md), [The KnowledgeOps path](knowledgeops.md).
+Also in: [A working result in a weekend](prove-it.md) and [The KnowledgeOps path](knowledgeops.md).
 
 ## 4. [Taxonomy and controlled vocabularies](../concepts/taxonomy.md)
 
@@ -62,7 +62,7 @@ Tagging content so navigation, search and AI retrieval can all find the right pa
 
 Builds on, earlier in this path: Content models.
 
-Also in: [The KnowledgeOps path](knowledgeops.md), [Found by search and answer engines](answer-engines.md).
+Also in: [The KnowledgeOps path](knowledgeops.md) and [Found by search and answer engines](answer-engines.md).
 
 ## 6. [Style guides and terminology management](../concepts/style-guide.md)
 
@@ -104,7 +104,7 @@ Builds on, earlier in this path: Content models.
 
 Getting content translated and keeping translations in step with the source as it changes.
 
-Builds on, earlier in this path: Content models, Single-sourcing and content reuse.
+Builds on, earlier in this path: Content models and Single-sourcing and content reuse.
 
 ## 11. [Multi-platform parity](../concepts/multi-platform-parity.md)
 
