@@ -29,7 +29,7 @@ present it internally.
 
 ## How this applies to your role
 
-It is one of the four standard AI-ready outputs, and it is a `core` concept for
+It is one of the standard AI-ready outputs, and it is a `core` concept for
 a cheaper reason than most: it takes an afternoon and it is the single most visible signal that a
 documentation team has thought about machine consumers at all.
 

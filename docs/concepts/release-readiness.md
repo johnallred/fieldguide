@@ -46,8 +46,9 @@ The reason this is `core` rather than a process nicety: without it, every other
 mechanism in this guide is reactive. You can have excellent
 [cold-start testing](coldstart-testing.md) and
 [freshness monitoring](freshness-monitoring.md) and still be permanently behind,
-because they tell you about content that exists. Release readiness is the only
-mechanism that acts *before* the gap is created.
+because they tell you about content that exists. Release readiness, with the
+capability gate in [developer advocacy](developer-advocacy.md), is what acts
+*before* the gap is created.
 
 The honest difficulty: this is the most political concept in the guide. The
 others are things you can build alone. This one requires someone else to accept
@@ -277,7 +278,7 @@ months is much easier to promote, because by then everyone has seen the number.
 
 The third row is the real residual risk, and it is why
 [freshness monitoring](freshness-monitoring.md) and
-[claim checking](working-with-engineers.md) are not optional complements to
+[claim checking](reading-code-to-verify.md) are not optional complements to
 this.
 
 ## Explaining it to your team

@@ -36,7 +36,7 @@ operations, and turning it into playbooks, decision guides and self-service
 paths.
 
 Notice what the two have in common. Neither says "write it down". Both
-specify an *output form*, and none of the forms is a page. That is the distinctive thing about this work, and the thing most technical
+specify an *output form*, and neither form is a page of prose. That is the distinctive thing about this work, and the thing most technical
 writers get wrong. The deliverable for tribal knowledge is often a template, a
 validator, or a decision tree. The knowledge in question is usually a
 judgment rather than a fact, and a page describing a judgment gets read once

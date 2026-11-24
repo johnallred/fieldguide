@@ -78,7 +78,7 @@ wc -w before.md
 ```
 
 Nothing in that paragraph is false. A reader who needs to set a retry count has
-to read 150 words and do arithmetic.
+to read 140 words and do arithmetic.
 
 **Step 2: four passes, in this order**
 
@@ -137,17 +137,27 @@ act.
 python3 - <<'PY'
 import pathlib
 
-def words_before_the_answer(path, marker="retries"):
+# where each page first states the retry default the reader came for
+ANSWER = {"before.md": "retry count of 3", "after.md": "The default is 3"}
+
+def words_before_the_answer(path):
     text = pathlib.Path(path).read_text()
-    index = text.find(marker)
+    index = text.find(ANSWER[path])
+    assert index >= 0, f"{path}: answer not found"
     return len(text[:index].split())
 
-for name in ("before.md", "after.md"):
+for name in ANSWER:
     print(f"{name:<12} {words_before_the_answer(name):>3} words before the answer")
 PY
 ```
 
-**What you built.** The same facts, with the reader reaching the answer in a
+```
+before.md     83 words before the answer
+after.md       9 words before the answer
+```
+
+**What you built.** The same facts and the default the original never stated,
+with the reader reaching the answer in a
 fraction of the distance, plus two things the original lacked entirely: a table
 for choosing a value, and a statement of what goes wrong.
 
@@ -208,7 +218,7 @@ link between this page and the automation half of the job.
 
 **How to explain it.** Do not call your writing clear and
 concise; everyone does. Describe a specific edit and its cost. "The page
-documented a flag accurately in 150 words of history. I moved the history to an
+documented a flag accurately in 140 words of history. I moved the history to an
 explanation page, put the default in the first sentence, added a table for
 choosing a value and a line on what happens if you set it too high. The reader
 reaches the answer in one sentence instead of five, and nothing true was lost."
@@ -250,7 +260,7 @@ part a team can learn from.
    on what each pass removed. Twenty minutes, and the most useful habit on this
    page.
 2. **Encode one of your own rules as a linter.** Take a habit you care about,
-   hedge words or synonym drift, and write the [Vale rule](custom-linters.md). A
+   hedge words or synonym drift, and write the [Vale rule](prose-linting.md). A
    writer who ships their style guide as code has made the standard impersonal,
    which is what makes it stick.
 3. **Watch someone follow one of your pages without helping them.** Note where

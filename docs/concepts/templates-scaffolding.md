@@ -59,7 +59,7 @@ fieldguide new docs-analytics --dry-run
 ```
 ---
 title: Documentation analytics
-summary: 'TODO: one sentence on what documentation analytics is and why this role needs it.'
+summary: 'TODO: one sentence on what documentation analytics is and where the work needs it.'
 diataxis: explanation
 audience: developer
 concept: docs-analytics
@@ -70,15 +70,17 @@ tags: [meas, core]
 
 `core` · difficulty 2 · 4h
 
-> Instrument documentation analytics and convert findings into improvements to
-> docs, samples, and tooling
-
+> Instrumenting documentation and turning what the data shows into fixes to docs, samples and tooling.
 
 **Prerequisites:** [Documentation CI](documentation-ci.md)
 
-query log analysis](search-log-analysis.md), [Support deflection](support-deflection.md),
-[Time to first success](time-to-first-success.md), ...
+**Leads to:** [Measuring AI answer quality](ai-answer-quality.md), [Search and query log analysis](search-log-analysis.md), [Support deflection](support-deflection.md), [Time to first success](time-to-first-success.md), [Turning developer feedback into changes](developer-feedback-loops.md)
+...
 ```
+
+That page exists now, so the command refuses with `already exists`; run it on a
+concept you have just added to the registry. The output above is what the same
+scaffold produces today.
 
 Four things were computed rather than typed: the tags from category and tier,
 the work line verbatim from the registry, the prerequisites, and the

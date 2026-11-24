@@ -339,7 +339,7 @@ not". And, most persuasive, a generated reference that removed the need for the
 exercise entirely.
 
 **Why it does not commit.** The correction commits; the reading does not. A
-reviewer sees "fix timeout default: 30s not 60s" and cannot tell whether it came
+reviewer sees "fix timeout default: 60s not 30s" and cannot tell whether it came
 from the source, a ticket or a guess that happened to be right. The strongest
 available evidence is a habit of citing the file in the commit message, which is
 cheap and still only evidence of a habit.

@@ -112,10 +112,11 @@ EOF
 wc -l v2.txt
 ```
 
-**Step 4: test it against the four failures with a mock model**
+**Step 4: test it against three failures with a mock model**
 
-The mock is not a toy. It encodes the four ways a real model fails on this task,
-so you can see which ones the prompt closes.
+The mock is not a toy. It encodes three ways a real model fails on this task,
+plus a fourth mode that obeys, so you can see which failures the prompt
+closes.
 
 ````bash
 mkdir -p docs

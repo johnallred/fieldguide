@@ -343,7 +343,7 @@ fixes them.
 |---|---|
 | Keyword density | Write for the reader; the vocabulary check above is sufficient |
 | Link building | Your docs rank on relevance and site authority you already have |
-| Content refresh for its own sake | A `updated` date you bumped without changing anything is dishonest |
+| Content refresh for its own sake | An `updated` date you bumped without changing anything is dishonest |
 | Long-form padding | A reference page should be exactly as long as the interface |
 
 ## Explaining it to your team

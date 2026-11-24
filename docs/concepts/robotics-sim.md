@@ -80,7 +80,7 @@ that document.)*
 Two frames, both required, with contradictory properties. That is the model a
 page has to land before any API appears.
 
-**Step 2: why those properties are the way round**
+**Step 2: why those properties are the way round they are**
 
 Simulate twenty meters of travel with two percent wheel slip and a
 localization fix every twenty-five steps:

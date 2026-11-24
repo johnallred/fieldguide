@@ -1,6 +1,6 @@
 ---
 title: Documentation for partners and internal teams
-summary: One corpus serving three audiences with different access, different trust, and different consequences for a leak.
+summary: One corpus serving four audiences across three access tiers, with different trust and different consequences for a leak.
 diataxis: explanation
 audience: operator
 concept: partner-documentation
@@ -40,7 +40,7 @@ outputs can it appear in?
 The reason it belongs in the guide at all is the fourth audience. **An agent
 inherits the access of whoever it acts for, and a retrieval corpus does not
 inherit anything unless somebody built that.** A single vector index over all
-four tiers, queried by an assistant, is an access-control failure waiting to
+three tiers, queried by an assistant, is an access-control failure waiting to
 happen, and it is a new failure mode that the navigation-era version of this
 problem did not have.
 
@@ -294,7 +294,7 @@ rather than a hypothetical.
 
 ## Putting it into practice
 
-**The work product.** The whitelist publish step plus the failing cases. It is forty lines and it turns an access policy into something a build enforces.
+**The work product.** The whitelist publish step plus the failing cases. It is about sixty lines and it turns an access policy into something a build enforces.
 
 **Three things to do, in order:**
 

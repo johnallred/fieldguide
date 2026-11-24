@@ -64,7 +64,7 @@ generated      53       43%
 ```
 
 Coverage is the first question because an optional field cannot be built on. A
-filter on `tags` here would silently exclude 48 percent of the corpus, and the
+filter on `tags` here would silently exclude 47 percent of the corpus, and the
 result would look like a retrieval problem rather than a metadata problem.
 
 **Step 2: check that the populated fields are true**

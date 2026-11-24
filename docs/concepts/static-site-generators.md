@@ -47,13 +47,13 @@ in what the build catches are large and measurable.
 Build identical content in two generators and compare what each one is willing
 to fail on. About thirty-five minutes.
 
-**Step 1: the same three defects in both**
+**Step 1: the same two defects in both**
 
 ````bash
 mkdir -p ssg/mk/docs ssg/sx/src && cd ssg
 
 # MkDocs
-printf 'site_name: W\n' > mk/mkdocs.yml
+printf 'site_name: W\nnav:\n  - index.md\n  - guide.md\n' > mk/mkdocs.yml
 cat > mk/docs/index.md <<'EOF'
 # Widget
 
@@ -100,12 +100,23 @@ WARNING: local id not found in doc 'guide': 'tuning' [myst.xref_missing]
 WARNING: document isn't included in any toctree [toc.not_included]
 ```
 
-MkDocs's strictest mode passes a corpus with a dead heading anchor and an
-unreachable page. Sphinx fails on both, and names them.
+MkDocs's strict mode, as configured by default, passes a corpus with a dead
+heading anchor and an unreachable page. Sphinx fails on both, and names them.
+Since MkDocs 1.6 you can close both gaps in configuration:
+
+```yaml
+validation:
+  anchors: warn
+  nav:
+    omitted_files: warn
+```
+
+With those lines `--strict` fails on both defects, which is worth knowing before
+you write a checker for them.
 
 This is the measured version of the gap that
 [link checking](link-checking.md) exists to close: the custom anchor checker on
-that page is necessary on MkDocs and redundant on Sphinx.
+that page is necessary on MkDocs's defaults and redundant on Sphinx.
 
 **Step 3: measure what the stricter build costs**
 
@@ -208,8 +219,8 @@ suite you are going to write yourself."
 **The follow-up is usually about speed**, and the honest answer corrects the
 premise. Sphinx is slower cold and has incremental rebuilds, but holding the
 generator constant and swapping a bare theme for Material and a dozen
-extensions cost twenty-seven times more than the generator choice did. Theme
-weight dominates.
+extensions slowed the build twenty-seven times, far more than the generator
+choice did. Theme weight dominates.
 
 **The tradeoff to name.** Sphinx's correctness comes from a doctree, and
 the doctree is also its difficulty: `conf.py` is a Python program, errors are

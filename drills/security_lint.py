@@ -56,6 +56,7 @@ Install, verifying the download first:
 
 ```bash
 curl -sSLO https://example.com/install.sh
+curl -sSLO https://example.com/install.sh.sha256
 sha256sum -c install.sh.sha256
 bash install.sh
 export WIDGET_TOKEN="$(cat ~/.config/widget/token)"

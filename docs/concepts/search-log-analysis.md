@@ -50,7 +50,7 @@ About thirty minutes. The first measurement gets published nowhere.
 
 With no query logs, the obvious move is to simulate the reader. Take the most
 basic query anyone would type, a page's own name, and check whether that page
-comes back first. Score it over the site's real search index of 1,358 entries:
+comes back first. Score it over the site's real search index, 1,358 entries when this ran:
 
 ```python
 def search(q, limit=5):
@@ -132,8 +132,8 @@ the page is recoverable, and Material's search UI uses it and shows the parent
 page, so a human browsing the site is fine. Any consumer using `title` alone is
 not, and that now includes retrieval pipelines and assistants reading an index
 directly. It is the same defect as a grounding report naming the page when it
-checked the chunk: the identifier has to carry the section, or ninety-one
-things look like one thing.
+checked the chunk: the identifier has to carry the section, or a hundred and
+seven things look like one thing.
 
 **Step 4: the test logs would have passed**
 
@@ -168,7 +168,7 @@ else measures the content you do.
 
 **What you built.** A retrieval proxy that produced a plausible wrong finding,
 the structural check that disproved it, three measurements that survive without
-a scorer including 47 percent of an index sharing seven titles, and a
+a scorer including half of an index sharing seven titles, and a
 demonstration that a hand-written query set missed the first real question it
 met.
 
@@ -212,7 +212,7 @@ writing a new page is the expensive way to fix it.
 | Does each page rank first for its own name | **Yes, see step 2** |
 | Which of two retrievers is better | **Yes** |
 
-Everything above the line is worth doing on day zero. Everything below needs
+The rows marked No are worth doing on day zero. The rows marked Yes need
 either the real search engine or real queries, and a scorer you wrote yourself
 will answer confidently and wrongly.
 
@@ -253,7 +253,7 @@ corrupted by a scorer: every page contains its own key terms, every page is in
 the index, and 751 of 1,505 entries carry one of seven titles because the page
 contract gives every page the same seven sections. A human browsing Material is
 fine, since the UI shows the parent page, but anything consuming `title` alone,
-a retrieval pipeline included, sees ninety-one identical things.
+a retrieval pipeline included, sees a hundred and seven identical things.
 
 **The point to close on.** My golden set has twenty hand-written questions and
 was meant to be representative. The first real reader asked what the thing

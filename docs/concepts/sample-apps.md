@@ -52,13 +52,11 @@ Build a gallery with a manifest, verify every entry, then ask whether the
 gallery covers anything readers need. About forty minutes. The second
 measurement is the one that changes what you build.
 
-Committed as `drills/gallery_audit.py`, and that is not a convenience here. The
-page below shows the manifest in full and the checker in fragments, and quotes
-output from a `check_gallery.py` whose source it never prints, against three
-sample programs it never writes. The output block was unreachable: a reader
-could follow every step and have nothing to run. The drill is the complete
-version, the manifest in it is the one above, and a test holds the two
-together.
+Committed as `drills/gallery_audit.py`, which is the complete version. This
+page shows the manifest in full and the checker in fragments; the drill also
+writes the sample programs and runs the check whose output is quoted below, so
+run it from a clone of this guide. A test holds the drill's manifest and this
+page's together.
 
 One row order changed when it was committed. The three zero-ticket topics used
 to be listed in the order a Python set happened to iterate them, which is to
@@ -116,7 +114,7 @@ for s in gallery["samples"]:
 ```
 
 ```bash
-python3 check_gallery.py
+python3 drills/gallery_audit.py   # from a clone of this guide
 ```
 
 ```

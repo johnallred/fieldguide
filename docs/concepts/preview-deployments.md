@@ -151,13 +151,34 @@ cat > overrides/main.html <<'EOF'
   {% endif %}
 {% endblock %}
 EOF
-printf 'User-agent: *\nDisallow: /\n' > docs/robots.txt
-echo "built previews now carry noindex when extra.preview is set"
+cat > mkdocs.preview.yml <<'EOF'
+INHERIT: mkdocs.yml
+theme:
+  custom_dir: overrides
+extra:
+  preview: true
+EOF
+mkdocs build -q -f mkdocs.preview.yml -d site-pr
+
+for d in site site-pr; do
+  printf "%-8s noindex=%s\n" "$d" "$(grep -c 'noindex' $d/index.html)"
+done
 ```
 
-Two independent controls, because either alone can be bypassed: a `noindex`
-meta tag on every page, and a `robots.txt` that disallows everything. Set
-`extra.preview` only in the preview job.
+```
+site     noindex=0
+site-pr  noindex=1
+```
+
+The preview build carries a `noindex` tag on every page and the production
+build does not, because only the preview job uses `mkdocs.preview.yml`. A
+`robots.txt` is the wrong tool here, for two reasons. Crawlers read it only at
+the root of a host, so one under `/widget/pr-123/` is never consulted, and one
+placed in `docs/` would ship with production and block the real site. And a
+`Disallow` that did apply would stop crawlers fetching the page, so they would
+never see the `noindex` and could still list the URL. If your host can set
+response headers, an `X-Robots-Tag: noindex` header on the preview path is a
+good second control.
 
 **What you built.** A preview that reviewers can read and search engines will
 not index. That is the whole job, and the hard part was never the base URL.
@@ -201,6 +222,10 @@ permissions:
 jobs:
   publish:
     if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       contents: read
       pages: write
@@ -213,7 +238,8 @@ jobs:
       - uses: actions/upload-pages-artifact@v5
         with:
           path: site
-      - uses: actions/deploy-pages@v5
+      - id: deployment
+        uses: actions/deploy-pages@v5
 ```
 
 Read-only at the top, write only in this job, and gated on the default branch

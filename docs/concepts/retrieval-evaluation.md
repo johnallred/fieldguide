@@ -1,5 +1,5 @@
 ---
-title: Retrieval evaluation
+title: Evaluating retrieval
 summary: A golden set of questions with expected sources, scored in CI, because every other check asks whether the docs are correct rather than useful.
 diataxis: explanation
 audience: developer
@@ -7,7 +7,7 @@ concept: retrieval-evaluation
 tags: [ai, core]
 ---
 
-# Retrieval evaluation
+# Evaluating retrieval
 
 `core` · difficulty 3 · 6h
 
@@ -29,9 +29,9 @@ is **useful** rather than whether it is **correct**.
 
 ## How this applies to your role
 
-Evaluation sets for answer accuracy are one of the four AI-ready outputs,
-alongside llms.txt and MCP. It is the rarest of
-the four in practice and the most diagnostic of whether a team is serious.
+Evaluation sets for answer accuracy sit beside the other AI-ready outputs:
+chunk records, llms.txt and an MCP server. They are the rarest of these in
+practice and the most diagnostic of whether a team is serious.
 
 Here is why it matters more than it sounds. Every other gate in this guide,
 [link checking](link-checking.md),

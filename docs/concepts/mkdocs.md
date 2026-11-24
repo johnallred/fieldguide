@@ -158,7 +158,7 @@ hooks:
   - hooks/seo.py
 ```
 
-That nine-line hook fixes a real defect: Material falls back to `site_description`
+That six-line hook fixes a real defect: Material falls back to `site_description`
 for the meta description unless a page sets `description` explicitly, so
 per-page summaries in your front matter do nothing for
 [search](seo-for-docs.md) until something maps them across. Hooks are the right
@@ -233,9 +233,9 @@ another generator without a rewrite. That is usually an acceptable bet, and it
 should be a conscious one.
 
 **One sharper point.** The hooks mechanism is underused. Most teams reach for a
-plugin or live with the gap, when a nine-line function in the repository
+plugin or live with the gap, when a six-line function in the repository
 solves it and gets reviewed alongside the content. The `description`
-fallback above is a good example: a real SEO defect, fixed in nine lines,
+fallback above is a good example: a real SEO defect, fixed in six lines,
 with no dependency added.
 
 ## Putting it into practice

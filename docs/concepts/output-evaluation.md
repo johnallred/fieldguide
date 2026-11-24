@@ -405,7 +405,7 @@ negative is an absence. Only an answer key sees it.
 Worth recording, because this is the ordinary experience of building one.
 
 The first run reported false positives on `p01` and `p02` for `no_example`, and
-the auditor was right both times. `p01` was mislabeled: it is a how-to whose
+neither was simply the auditor's fault. `p01` was mislabeled: it is a how-to whose
 only backticked text is `cache_mode`, a flag name, so it genuinely has no
 example. And `no_example` had never been *defined* precisely enough to label
 against: does an inline `` `widget keys rotate` `` count as an example? The
@@ -543,13 +543,13 @@ the measurement contradicted the spot check.
 3. **Measure your own agreement with yourself.** Label ten pages, wait a week,
    label them again blind, and count the disagreements. That number is your
    ceiling, and reporting it alongside a precision figure stops anyone over-reading the precision. Expect to disagree with yourself on at least one page in ten.
-   A perfect second pass means you are remembering your labels rather than re-
-   deriving them, and the week was not long enough.
+   A perfect second pass means you are remembering your labels rather than
+   re-deriving them, and the week was not long enough.
 
 **How to tell it is working.** A labeled set containing deliberately ambiguous
 cases, per-type metrics, and every prompt change run against it before it ships.
 When the set catches a change that looked better on a spot check, like the one
-that halved recall while F1 stayed flat, it is working.
+that kept perfect precision while recall fell by more than half, it is working.
 
 ### How this would be demonstrated elsewhere
 

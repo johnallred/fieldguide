@@ -134,9 +134,21 @@ services actually end up:
 # app.py, the implementation
 # drift: retries is 3 here and the spec says 5,
 # and there is an extra field the spec never mentions
-self.wfile.write(json.dumps(
-    {"id": "w1", "name": "Widget One", "retries": 3, "beta": True}
-).encode())
+import json
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
+
+class Handler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json")
+        self.end_headers()
+        self.wfile.write(json.dumps(
+            {"id": "w1", "name": "Widget One", "retries": 3, "beta": True}
+        ).encode())
+
+
+HTTPServer(("127.0.0.1", 8731), Handler).serve_forever()
 ```
 
 ```bash
@@ -184,6 +196,10 @@ for f in findings:
     print(f"CONTRACT  {f}")
 print(f"{'FAIL' if findings else 'ok'}: {len(findings)} mismatch(es)")
 raise SystemExit(1 if findings else 0)
+```
+
+```bash
+python3 contract.py; echo "exit=$?"
 ```
 
 ```

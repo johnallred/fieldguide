@@ -1,6 +1,6 @@
 ---
 title: Real-time and graphics systems
-summary: "The median completion time barely moved while the deadline miss rate went from zero to thirty percent, and then the system fell off a cliff."
+summary: "The median completion time barely moved while the deadline miss rate went from zero to a quarter, and then the system fell off a cliff."
 diataxis: explanation
 audience: developer
 concept: realtime-systems
@@ -101,8 +101,8 @@ Three things were stable across every run:
 
 ```
 a loose deadline (10 ms)   0 misses, always
-a tight one (1 ms)         250/250, always
-the median                 stayed between 1.4 and 4 ms throughout
+a tight one (1.5 ms)       250/250, always
+the median, before the cliff  stayed between 1.4 and 4 ms
 ```
 
 The median never tracked the miss rate, in any run. That is the transferable
@@ -137,7 +137,7 @@ Three consequences, each a concrete documentation decision:
 ```
 state the deadline, not the average      "16.6 ms at 60 Hz", never "fast"
 publish the miss rate                    the mean cannot express failure
-publish the tail, p99 and max            the mean hides a 15 ms max at p50 1.5
+publish the tail, p99 and max            the median hides a 22.9 ms p99 at p50 1.5
 ```
 
 And one more that is easy to miss. In the run above, the work took 2.07 ms and
@@ -172,7 +172,7 @@ writing because it decides whether the correct advice is "guarantee it" or
 | Statistic | Says | Verdict here |
 |---|---|---|
 | Mean | Typical throughput | Nearly useless; see step 2 |
-| Median | Typical experience | Actively misleading; it was flat at 30% misses |
+| Median | Typical experience | Actively misleading; it was flat at 27% misses |
 | p99, p99.9 | The tail that fails | Essential |
 | Max over a run | The worst case observed | Essential, and not a bound |
 | Deadline miss rate | The failure rate | The number that matters |
@@ -193,7 +193,7 @@ cannot express the failure mode.
 | 144 Hz | 6.9 ms |
 
 The budget covers everything: simulation, culling, draw submission, present,
-and the scheduling overhead from step 4. Documentation that gives a per-feature
+and the scheduling overhead from step 5. Documentation that gives a per-feature
 cost without saying what the budget is leaves the reader unable to add up.
 
 ### Why a general-purpose OS is not real-time
@@ -282,9 +282,9 @@ rate and a tail rather than an average.
 2. Take any latency claim in your own documentation and work out whether it
    could be true while the system fails a third of the time. If the claim is a
    mean or a median, it can.
-3. Add the scheduling or framework overhead to one published cost figure. On an
-   idle machine it was a third again here, and readers budget with the number
-   you give them.
+3. Add the scheduling or framework overhead to one published cost figure. Here it
+   varied with what else the machine was doing, which is the point: readers
+   budget with the number you give them.
 
 **How to tell it is working.** The sweep ran on this
 machine and the script is a dozen lines, so the flat median against a 30 per

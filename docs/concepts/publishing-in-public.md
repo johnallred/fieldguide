@@ -78,11 +78,12 @@ PLACEHOLDERS = {
   TODO or FIXME        7 hits in 5 files
 ```
 
-Twenty-two hits. The two useful results are the clean rows: no unfilled license
+Thirty-two hits, twenty-two of them in `fieldguide`. The two useful results are
+the clean rows: no unfilled license
 fields, and no container paths, the second being the one that would have been
 genuinely embarrassing.
 
-**Step 2: read the hits, and find that four of twenty-two are real**
+**Step 2: read `fieldguide`'s twenty-two hits, and find that four are real**
 
 ```
 src/fieldguide/scaffold.py:101   summary: 'TODO: one sentence on ...'
@@ -163,9 +164,10 @@ not ready to publish, 9 finding(s):
   mkdocs.yml:4                  placeholder URL in this repository's own identity
 ```
 
-The role-scoped check traveled perfectly: two findings, both real, on a
-repository it had never seen. The allowlist-scoped check did not travel at all,
-producing seven false hits immediately, because the allowlist named
+That output is both checks together. The role-scoped check traveled perfectly:
+its two findings, the placeholder URLs in `mkdocs.yml`, are both real, on a
+repository it had never seen. The allowlist-scoped check did not travel at all:
+the seven TODO hits are its false positives, because the allowlist named
 `fieldguide`'s paths.
 
 That is the general lesson and it is not about publishing. **A check scoped by
@@ -353,7 +355,8 @@ higher bar than most published repositories clear."
 
 **The follow-up is what you would check before publishing, and the useful
 answer is about the checker.** My first pre-publication audit produced
-twenty-two hits across two repositories, four of them real: the rest were a
+thirty-two hits across two repositories, and of `fieldguide`'s twenty-two,
+four were real: the rest were a
 scaffold that deliberately writes TODO placeholders, prose about TODO markers,
 and `example.com`, which RFC 2606 reserves for exactly that use. Eighty-two per
 cent noise, and an audit that noisy is one nobody runs twice.

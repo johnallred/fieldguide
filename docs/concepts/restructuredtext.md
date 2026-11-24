@@ -99,9 +99,11 @@ sample.rst:10: (ERROR/3) Unknown interpreted text role "py:func".
 sample.rst:17: (ERROR/3) Error in "code-block" directive:
 ```
 
-Four of the five constructs are unknown to reStructuredText itself. Only
-`.. note::` is part of the language. `versionadded`, `ref`, `py:func` and
-`code-block` are all **Sphinx**, not RST.
+Four of the six constructs fail. `.. note::` and the internal label are part
+of the language. `versionadded`, `ref` and `py:func` are **Sphinx**, not RST,
+and so is `code-block`'s `:emphasize-lines:` option: docutils has a
+`code-block` directive, as an alias of `code`, and rejects the option rather
+than the directive.
 
 **Step 3: notice how docutils failed**
 
@@ -165,7 +167,7 @@ for API documentation is the tool.
 | `:py:func:`, `:py:class:` and the domains | | Yes |
 | `.. versionadded::`, `.. deprecated::` | | Yes |
 | `.. toctree::` | | Yes |
-| `.. autodoc`, `automodule` | | Yes, an extension |
+| `.. automodule::`, `.. autofunction::` (autodoc) | | Yes, an extension |
 
 The second column is the migration cost. A corpus using only the first column
 converts to Markdown almost mechanically. A corpus using domains and `toctree`
@@ -175,7 +177,7 @@ does not convert at all without choosing replacements.
 
 | Feature | Why it matters |
 |---|---|
-| Typed cross-references | `:py:func:\`widget.retry\`` resolves to the right symbol and fails the build if it moves |
+| Typed cross-references | `:py:func:\`widget.retry\`` resolves to the right symbol, and with `nitpicky` and `-W` fails the build if it moves |
 | A directive model | Extensions are first-class, not per-tool syntax hacks |
 | Domains | Separate namespaces for Python, C++, JavaScript symbols |
 | A real specification | docutils is the reference implementation, not one dialect of many |
@@ -193,7 +195,7 @@ maintainable.
 | Contributor friction | Directive syntax, indentation sensitivity, and inline markup rules that surprise people |
 | Inline markup is fussy | Nested emphasis and adjacent punctuation need escapes |
 | Smaller tooling ecosystem | Fewer editors, linters and preview tools than Markdown |
-| Errors can be invisible | As step 3 shows, docutils renders errors into the page |
+| Errors can be invisible to the build | As step 3 shows, docutils exits 0 and renders errors into the page |
 | Onboarding | Most new contributors arrive knowing Markdown |
 
 ### If you have an RST corpus and want Markdown
@@ -212,8 +214,8 @@ so the migration question stops being all-or-nothing.
 ## Explaining it to your team
 
 **Lead with the boundary.** "Most of what people call RST is Sphinx. The
-language gives you admonitions, tables and substitutions; `code-block`, `ref`,
-the Python domain and `toctree` all come from Sphinx core. That matters because
+language gives you admonitions, tables and substitutions; `ref`, the Python
+domain, `toctree` and most `code-block` options all come from Sphinx core. That matters because
 the migration cost of an RST corpus is entirely in the Sphinx half."
 
 **The follow-up is whether you would migrate**, and the strong answer is MyST
@@ -223,7 +225,8 @@ nobody wants to lose and most conversions throw away.
 
 **The tradeoff to name.** Typed cross-references are the real feature, and
 they are worth friction on an API corpus of any size, because a reference to a
-symbol that moved becomes a build failure instead of a dead link. They are not
+symbol that moved becomes a build failure, with `nitpicky` and `-W`, instead of
+a dead link. They are not
 worth it for a dozen conceptual pages, where the directive syntax is pure cost
 and Markdown is the right answer.
 
@@ -250,8 +253,8 @@ migration question concretely, with the two-column table above.
 repositories uses reStructuredText, and the [demonstrated](../demonstrated.md)
 page counts it among the concepts declined, because adopting it here would be
 for show. What travels instead is the boundary
-itself: knowing that `code-block` is Sphinx rather than reStructuredText is a
-small thing that saves a migration from a wrong estimate.
+itself: knowing that `:ref:` and `versionadded` are Sphinx rather than
+reStructuredText is a small thing that saves a migration from a wrong estimate.
 
 ## Related
 

@@ -732,7 +732,7 @@ demonstrates:
     project: docpack
     artifact: scripts/coldstart.sh
     extent: partial
-    note: A fresh virtual environment installed the way a reader would, which is level 2 of the five in the page's own table and the right level for a pure-Python project. It would not catch a system library or a platform difference.
+    note: A fresh virtual environment installed the way a reader would, which is level 2 of the four in the page's own table and the right level for a pure-Python project. It would not catch a system library or a platform difference.
     reviewed: 2026-11-24
 
   - concept: gpu-computing

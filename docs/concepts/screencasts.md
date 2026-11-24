@@ -124,7 +124,7 @@ compare what that detection is worth in each medium:
 
 | | A page | A screencast |
 |---|---|---|
-| What is wrong | Three characters | Four seconds of footage |
+| What is wrong | One line | Four seconds of footage |
 | Cost to fix | An edit | Re-record, or re-record everything after it |
 | Until then | Fix it in the next commit | It is live and wrong |
 | Reader's experience | None | Follows along, output differs, loses confidence |
@@ -188,7 +188,7 @@ Everything else is a page that someone wanted to be a video.
 | Not copy-pasteable | Viewers retype commands and mistype them |
 | Not diffable | No review, no history of what changed |
 | Not link-checkable | A URL on screen rots silently |
-| Not patchable | A three-character fix means re-recording |
+| Not patchable | A one-line fix means re-recording |
 | Not skimmable | No way to find the one part you need |
 | Not [agent-readable](agent-ready-content.md) | Absent from every retrieval pipeline |
 
@@ -236,7 +236,7 @@ does not fix unclear material, it embeds it in a format you cannot edit.
 
 **Lead with the asymmetry.** "A screencast script is a code sample with
 timestamps, so I test it in CI like any other sample. What that buys is not a
-corrected video: a three-character change to a tool means four seconds of
+corrected video: a one-line change to a tool means four seconds of
 footage are wrong, and the fix is re-recording. The detection is identical to a
 page's and the remedy is not, which is the whole argument about when video is
 worth it."
@@ -280,7 +280,7 @@ narration, plus a CI job that runs every beat and reports drift by timestamp.
    before recording anything. Step 2 above caught a narration describing a flag
    that did not exist, which is the defect this prevents for free.
 3. Count the videos you currently publish and ask honestly whether you would
-   re-record all of them for a three-character output change. The number you
+   re-record all of them for a one-line output change. The number you
    would re-record is the number you should maintain.
 
 **How to tell it is working.** The script checker above was

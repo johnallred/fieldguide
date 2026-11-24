@@ -64,6 +64,8 @@ for p in sorted(Path("docs").rglob("*.md")):
 dupes = {k: v for k, v in seen.items() if len(set(v)) > 1}
 ```
 
+When this ran, forty concepts were still generated placeholders:
+
 ```
 prose sentences (8+ words): 3654
 appearing on more than one page: 27
@@ -105,6 +107,13 @@ cat > docs/a.md <<'EOF'
 --8<-- "prereqs.md"
 
 Then run the installer.
+EOF
+cat > docs/b.md <<'EOF'
+# Upgrade
+
+--8<-- "prereqs.md"
+
+Then run the upgrade.
 EOF
 ```
 
@@ -176,8 +185,8 @@ commit.
 | Generation | A whole page | Indexes, API reference, matrices | The generator becomes software you own |
 
 Generation is the most powerful and the most underused. This guide's coverage
-matrix, study plan, learning paths and 40-odd placeholders are all generated
-from one registry, which is why `fieldguide build --check` can fail when a
+matrix, study plan, learning paths and demonstration register are all
+generated from one registry, which is why `fieldguide build --check` can fail when a
 committed view is stale.
 
 ### When reuse is wrong
@@ -276,7 +285,7 @@ the text. The packer now expands includes the same way, a missing snippet
 raises, and a test holds the snippet to the vocabularies the code enforces.
 Moving the values into the explanation page also lifted the retrieval
 evaluation's hit@1 from 65% to 70%. This guide's own generation is the
-generation example: four views and 40-odd placeholders from one registry, with
+generation example: sixteen generated pages from one registry, with
 `fieldguide build --check` failing in CI when committed output is stale.
 
 ## Related

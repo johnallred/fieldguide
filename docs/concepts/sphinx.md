@@ -205,7 +205,7 @@ build is nearly flat, and the two cross just above a hundred and twenty pages.
 
 This page used to quote a single row of that table, 0.58 against 3.52 seconds,
 and conclude "six times slower cold". The direction survives and the magnitude
-does not: cold Sphinx measures about three times MkDocs in steady state here,
+does not: cold Sphinx measures two to three times MkDocs in steady state here,
 and the 3.52 was most likely a first-ever build paying for imports that were
 not yet in the filesystem cache. CI pays that first number on every run and a
 laptop pays it once, which is a distinction a single figure cannot carry.
@@ -256,8 +256,9 @@ Worth it, but do not turn it on an hour before a release.
 
 `intersphinx` deserves attention. It lets a reference to `str` or to another
 library's class resolve to that project's documentation, which means
-cross-project references are also checked. Nothing in the Markdown world has an
-equivalent.
+cross-project references are also checked. mkdocstrings can read the same
+inventories, so the Markdown world has a partial equivalent; Sphinx does it for
+every domain.
 
 ### Domains, which is the concept under the feature
 
@@ -291,9 +292,10 @@ set coherent.
 
 **Lead with the rename.** "Sphinx's build fails when a function referenced in
 the docs is renamed in the code, because references are typed and resolve
-against a symbol table rather than a URL. That is not available in any Markdown
-generator, and on an API corpus it is the difference between documentation that
-drifts and documentation that cannot."
+against a symbol table rather than a URL. MkDocs with mkdocstrings can do the
+same for Python; Sphinx does it across several languages in one build. On an API
+corpus it is the difference between documentation that drifts and documentation
+that cannot."
 
 **The follow-up is whether that means RST**, and the answer is no: `myst_parser`
 lets contributors write Markdown while keeping domains, `toctree` and typed

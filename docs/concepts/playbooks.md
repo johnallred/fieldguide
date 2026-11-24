@@ -151,7 +151,7 @@ own.
 **Step 3: run it**
 
 ```bash
-python3 check_playbook.py
+python3 drills/playbook.py   # the complete version, from a clone of this guide
 ```
 
 ```
@@ -268,7 +268,7 @@ skipped branches are exactly where a newcomer gets lost.
 | Output | From the same file |
 |---|---|
 | A rendered page | Generated, so prose and structure cannot disagree |
-| Structural validation | The four checks above |
+| Structural validation | The five checks above |
 | An interactive widget | Optional; the data supports it |
 | An [agent skill](agent-skills.md) | A model can walk the graph rather than guess |
 | Coverage measurement | Which outcomes fire most, from incident records |
@@ -297,7 +297,8 @@ tutorials."
 
 **The follow-up is how you keep one correct**, and the answer is to write the
 branches as data and validate the graph: no dangling targets, no cycles, no
-dead-end options, no unreachable outcomes. Four checks that catch failures no
+dead-end options, no orphaned outcomes, no unreachable nodes. Five checks that
+catch failures no
 amount of reading will, because reading follows one path and these are
 properties of the whole structure.
 
@@ -318,7 +319,7 @@ who wrote them.
 ## Putting it into practice
 
 **The work product.** A playbook for something you actually know, as data, with the
-four structural checks and a rendered page from the same source.
+five structural checks and a rendered page from the same source.
 
 **Three things to do, in order:**
 

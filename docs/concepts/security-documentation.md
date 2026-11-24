@@ -151,9 +151,8 @@ SEC  docs/quickstart.md:22: public-acl: granting public access to a bucket
 FAIL: 6 finding(s)
 ```
 
-This is the third time case sensitivity has silently disabled a rule in this
-guide: once in a Vale rule on the [style guide](style-guide.md) page, and twice
-here counting the rule and the finding it hid. For security rules it matters
+This is the second time case sensitivity has silently disabled a rule in this
+guide, after a Vale rule on the [style guide](style-guide.md) page. For security rules it matters
 more, because the failure mode is a green build on a page that teaches a
 credential leak.
 
@@ -167,6 +166,7 @@ Install, verifying the download first:
 
 ```bash
 curl -sSLO https://example.com/install.sh
+curl -sSLO https://example.com/install.sh.sha256
 sha256sum -c install.sh.sha256
 bash install.sh
 export WIDGET_TOKEN="$(cat ~/.config/widget/token)"

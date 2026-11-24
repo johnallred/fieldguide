@@ -42,8 +42,8 @@ difficulty 3.
 
 ## The golden path
 
-Measure the four isolation levels, then find out what each one can and cannot
-catch. About thirty-five minutes.
+Run the cheaper isolation levels, then compare all four on what each can and
+cannot catch. About thirty-five minutes.
 
 **Step 1: measure the cost of isolation**
 

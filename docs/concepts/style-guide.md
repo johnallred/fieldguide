@@ -187,7 +187,7 @@ this decision lives in each rule file rather than in a CI flag.
 | No fixture | A dead rule is indistinguishable from a clean corpus | Ship a failing example |
 | Rules about code | Vale excludes code by design | A [custom linter](custom-linters.md) |
 
-Three of those five fail *silently*. That is the character of style automation:
+Four of those five fail *silently*. That is the character of style automation:
 the failure mode is not noise, it is quiet absence.
 
 ### Terminology management
