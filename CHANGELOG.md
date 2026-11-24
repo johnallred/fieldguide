@@ -24,6 +24,10 @@ an `Added` heading.
 - An accessibility gate over every page of the built site (`scripts/a11y_check.py`).
 - How this guide ships: the pipeline as a diagram, generated from the workflow
   file by `fieldguide build`.
+- Two learning paths: Reference and releases, and Found by search and answer
+  engines.
+- A "Not on any path" section on the paths index, listing the concepts that
+  are deliberately on no path and when to read them anyway.
 - A Docusaurus build drill (`drills/docusaurus_build.py`), measuring
   Docusaurus 3.10.2 against MkDocs 1.6.1 on the same Markdown, cold and warm.
 
@@ -36,6 +40,10 @@ an `Added` heading.
   `coldlab` now does: versioned promotion to learners on evidence, and a
   learner role tested against what a learner must and must never be able to do.
 
+- Every concept is now on a learning path except MDX, Docusaurus and Antora.
+  Twenty-two were on none, four of them core (Sphinx, prompting, LLM content
+  lifecycle, GEO), and nineteen of those are now placed. The documentation engineer path is 18 steps and KnowledgeOps
+  18, after the reference and discoverability concepts became their own paths.
 - Each learning path marks the steps it shares with other paths and names
   them, and says up front how many steps and hours are shared, so a reader on
   a second path can skip what they have done.

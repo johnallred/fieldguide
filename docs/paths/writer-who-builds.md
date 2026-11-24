@@ -13,12 +13,12 @@ generated: true
 
 The craft and the working relationships, which no pipeline substitutes for.
 
-**10 concepts, roughly 37 hours.** The order matters:
+**15 concepts, roughly 55 hours.** The order matters:
 each step assumes the ones above it.
 
-**Assumed before step 1.** This path does not teach [Documentation CI](../concepts/documentation-ci.md), [Prompting for content work](../concepts/prompting.md), [Metadata for navigation and retrieval](../concepts/metadata.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Git authoring workflows for writers](../concepts/git-authoring.md), [Style guides and terminology management](../concepts/style-guide.md), [Documentation CI](../concepts/documentation-ci.md), [Content lifecycle and governance](../concepts/content-lifecycle.md), [Metadata for navigation and retrieval](../concepts/metadata.md). Each step below repeats what it assumes.
 
-**Shared with other paths.** 3 of these steps, roughly 15 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
+**Shared with other paths.** 4 of these steps, roughly 18 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
 
 ## 1. [Technical writing as a craft](../concepts/technical-writing.md)
 
@@ -62,13 +62,37 @@ Builds on, earlier in this path: A systems mindset.
 
 Getting tribal knowledge out of experts' heads and into tooling, templates and self-service paths.
 
-## 7. [User stories as a documentation standard](../concepts/user-stories.md)
+## 7. [Reviewing documentation](../concepts/docs-review.md)
+
+`supporting` · practise it · 3h
+
+Reviewing documentation pull requests for accuracy, structure and style.
+
+Assumes, from outside this path: [Git authoring workflows for writers](../concepts/git-authoring.md), [Style guides and terminology management](../concepts/style-guide.md).
+
+Also in: [The documentation engineer](docs-engineer.md).
+
+## 8. [Working with engineers as sources](../concepts/working-with-engineers.md)
+
+`supporting` · practise it · 3h
+
+Working with engineering, product, security and partner teams so every release ships documented.
+
+Builds on, earlier in this path: Extracting tribal knowledge, Reviewing documentation.
+
+## 9. [Developer advocacy](../concepts/developer-advocacy.md)
+
+`supporting` · practise it · 3h
+
+Working with engineering, product and advocates so each new capability ships with tested documentation.
+
+## 10. [User stories as a documentation standard](../concepts/user-stories.md)
 
 `supporting` · read it · 2h
 
 Turning user stories into a documentation standard that templates can enforce.
 
-## 8. [Release readiness for documentation](../concepts/release-readiness.md)
+## 11. [Release readiness for documentation](../concepts/release-readiness.md)
 
 `core` · practise it · 4h
 
@@ -76,17 +100,33 @@ Making documentation part of what "ready to release" means, enforced rather than
 
 Assumes, from outside this path: [Documentation CI](../concepts/documentation-ci.md).
 
-Also in: [The documentation engineer](docs-engineer.md).
+Also in: [Reference and releases](reference-and-releases.md).
 
-## 9. [Judging where AI can be trusted](../concepts/ai-trust-judgment.md)
+## 12. [Prompting for content work](../concepts/prompting.md)
+
+`core` · practise it · 3h
+
+Writing prompts for drafting, rewriting and checking content, and knowing where they fail.
+
+## 13. [Judging where AI can be trusted](../concepts/ai-trust-judgment.md)
 
 `core` · practise it · 4h
 
 Deciding where AI output can be trusted and where a human must check it.
 
-Assumes, from outside this path: [Prompting for content work](../concepts/prompting.md).
+Builds on, earlier in this path: Prompting for content work.
 
-## 10. [Documentation for partners and internal teams](../concepts/partner-documentation.md)
+## 14. [LLMs in the content lifecycle](../concepts/llm-content-lifecycle.md)
+
+`core` · build something · 6h
+
+Using LLMs to draft, update and audit content, with human review where judgement matters.
+
+Builds on, earlier in this path: Prompting for content work.
+
+Assumes, from outside this path: [Content lifecycle and governance](../concepts/content-lifecycle.md).
+
+## 15. [Documentation for partners and internal teams](../concepts/partner-documentation.md)
 
 `context` · practise it · 3h
 

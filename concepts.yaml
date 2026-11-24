@@ -1476,8 +1476,10 @@ paths:
       - taxonomy
       - metadata
       - style-guide
+      - terminology-drift
       - security-documentation
       - single-sourcing
+      - localization
       - multi-platform-parity
       - content-lifecycle
       - content-retirement
@@ -1494,22 +1496,35 @@ paths:
     concepts:
       - docs-as-code
       - git-authoring
+      - docs-review
       - documentation-ci
       - github-actions
       - link-checking
       - prose-linting
       - custom-linters
+      - accessibility
       - code-sample-validation
       - diagrams-as-code
-      - doctests
       - doc-test-harness
-      - api-reference-generation
       - golden-paths
       - coldstart-testing
       - freshness-monitoring
       - preview-deployments
       - templates-scaffolding
       - guided-workflows
+
+  - id: reference-and-releases
+    group: role
+    name: Reference and releases
+    audience: Someone who owns the API reference and the versioned docs for a product that ships releases.
+    summary: Reference generated from the source, checked against it, and versioned with each release.
+    concepts:
+      - api-reference-generation
+      - openapi
+      - restructuredtext
+      - sphinx
+      - doctests
+      - versioning
       - release-readiness
       - release-notes
 
@@ -1532,10 +1547,26 @@ paths:
       - ai-assistants
       - retrieval-evaluation
       - output-evaluation
+      - hallucination-guardrails
       - mcp
       - agent-skills
       - agentic-workflows
       - ai-answer-quality
+
+  - id: answer-engines
+    group: role
+    name: Found by search and answer engines
+    audience: Someone responsible for whether people, search engines and AI answer engines can find the documentation at all.
+    summary: From metadata to being cited, making a public corpus discoverable and quotable.
+    concepts:
+      - metadata
+      - findability
+      - structured-data
+      - seo-for-docs
+      - crawlability
+      - agent-ready-content
+      - llms-txt
+      - geo
 
   - id: developer-educator
     group: role
@@ -1550,6 +1581,7 @@ paths:
       - cognitive-load
       - diataxis
       - tutorial-design
+      - screencasts
       - golden-paths
       - quickstarts
       - sample-walkthroughs
@@ -1592,9 +1624,14 @@ paths:
       - systems-mindset
       - implementation-feedback
       - sme-interviews
+      - docs-review
+      - working-with-engineers
+      - developer-advocacy
       - user-stories
       - release-readiness
+      - prompting
       - ai-trust-judgment
+      - llm-content-lifecycle
       - partner-documentation
 
   - id: prove-the-outcomes
@@ -1613,6 +1650,7 @@ paths:
       - search-log-analysis
       - ai-answer-quality
       - developer-feedback-loops
+      - docs-prioritization
 
   - id: domain-context
     group: context
@@ -1626,3 +1664,18 @@ paths:
       - realtime-systems
       - usd-omniverse
       - robotics-sim
+
+# Concepts on no learning path, each with the reason a reader is told. Every
+# concept is on a path or listed here, and a core concept is never listed
+# here: tests/test_registry.py holds both, so a concept cannot drop off every
+# path without someone writing down why.
+off_path:
+  mdx: >-
+    An alternative to the Markdown the paths teach, met when a site is built on
+    Docusaurus or another React-based generator.
+  docusaurus: >-
+    An alternative generator. The paths teach MkDocs; read this when the site
+    you inherit is built on Docusaurus.
+  antora: >-
+    An alternative generator for multi-repository AsciiDoc sites. Read it when
+    the site you inherit is built on Antora.

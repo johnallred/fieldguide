@@ -389,7 +389,7 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         0,
         (
             "two hours against the 34-hour first-week path: 6%",
-            "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
+            "shortest path in the guide: answer-engines, 8 concepts, 24h (8%)",
             "concepts in this corpus of 3h or less: 51/120",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",

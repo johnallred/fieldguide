@@ -270,11 +270,14 @@ authoring order is a valid order. It is just never the right one.
 | Over 18 steps | A syllabus | Abandoned partway, invisibly |
 | Over 60 hours | A qualification | Needs checkpoints and a reason |
 
-This guide's longest paths are 20 steps (the documentation engineer) and 83
+This guide's longest paths are 19 steps (the developer educator) and 87
 hours (KnowledgeOps), both over the line, and the mitigation is that every step
 is independently useful. That is a weaker answer than splitting, which is what
-happened when the developer educator path reached 25 steps and 108 hours: its
-lab concepts became the lab engineer path, and both are now under 20 steps.
+happened twice. When the developer educator path reached 25 steps and 108
+hours, its lab concepts became the lab engineer path. When placing every
+concept on a path would have taken the documentation engineer to 26 steps and
+KnowledgeOps to 24, the reference and release concepts became their own path,
+and so did search and answer-engine discoverability.
 
 ### Keeping it honest
 
@@ -284,6 +287,7 @@ lab concepts became the lab engineer path, and both are now under 20 steps.
 | Ordering is checked in CI | A new prerequisite silently invalidates an order |
 | The entry state is computed, not written | Hand-written assumptions go stale |
 | Coverage is reported | Orphaned core concepts are invisible otherwise |
+| A concept on no path says why | Twenty-two had dropped off every path, four of them core, and nothing said so |
 | Reuse is reported | A concept in four paths is load-bearing |
 
 ## Explaining it to your team

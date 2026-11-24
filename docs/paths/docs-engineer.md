@@ -14,12 +14,12 @@ generated: true
 
 Every automated gate that stops documentation rotting, in the order worth adding them.
 
-**20 concepts, roughly 76 hours.** The order matters:
+**18 concepts, roughly 69 hours.** The order matters:
 each step assumes the ones above it.
 
-**Assumed before step 1.** This path does not teach [Style guides and terminology management](../concepts/style-guide.md), [Diátaxis](../concepts/diataxis.md), [Reproducible environments](../concepts/reproducible-environments.md), [Content lifecycle and governance](../concepts/content-lifecycle.md), [Content models](../concepts/content-model.md), [Technical writing as a craft](../concepts/technical-writing.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Style guides and terminology management](../concepts/style-guide.md), [Diátaxis](../concepts/diataxis.md), [Reproducible environments](../concepts/reproducible-environments.md), [Content lifecycle and governance](../concepts/content-lifecycle.md), [Content models](../concepts/content-model.md). Each step below repeats what it assumes.
 
-**Shared with other paths.** 10 of these steps, roughly 40 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
+**Shared with other paths.** 10 of these steps, roughly 39 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
 
 ## 1. [Docs-as-code](../concepts/docs-as-code.md)
 
@@ -39,7 +39,19 @@ Builds on, earlier in this path: Docs-as-code.
 
 Also in: [The first week](first-week.md).
 
-## 3. [Documentation CI](../concepts/documentation-ci.md)
+## 3. [Reviewing documentation](../concepts/docs-review.md)
+
+`supporting` · practise it · 3h
+
+Reviewing documentation pull requests for accuracy, structure and style.
+
+Builds on, earlier in this path: Git authoring workflows for writers.
+
+Assumes, from outside this path: [Style guides and terminology management](../concepts/style-guide.md).
+
+Also in: [The writer who builds](writer-who-builds.md).
+
+## 4. [Documentation CI](../concepts/documentation-ci.md)
 
 `core` · practise it · 4h
 
@@ -49,7 +61,7 @@ Builds on, earlier in this path: Docs-as-code, Git authoring workflows for write
 
 Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md), [The lab engineer](lab-engineer.md).
 
-## 4. [GitHub Actions for docs](../concepts/github-actions.md)
+## 5. [GitHub Actions for docs](../concepts/github-actions.md)
 
 `core` · practise it · 4h
 
@@ -57,7 +69,7 @@ Writing and maintaining the CI workflows that build, check and publish your docu
 
 Builds on, earlier in this path: Documentation CI.
 
-## 5. [Link checking](../concepts/link-checking.md)
+## 6. [Link checking](../concepts/link-checking.md)
 
 `core` · read it · 2h
 
@@ -67,7 +79,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md).
 
-## 6. [Prose linting with Vale](../concepts/prose-linting.md)
+## 7. [Prose linting with Vale](../concepts/prose-linting.md)
 
 `core` · practise it · 3h
 
@@ -77,7 +89,7 @@ Assumes, from outside this path: [Style guides and terminology management](../co
 
 Also in: [A working result in a weekend](prove-it.md).
 
-## 7. [Writing custom linters](../concepts/custom-linters.md)
+## 8. [Writing custom linters](../concepts/custom-linters.md)
 
 `supporting` · build something · 5h
 
@@ -85,7 +97,15 @@ Writing your own content checks when an off-the-shelf linter cannot express the 
 
 Builds on, earlier in this path: Prose linting with Vale.
 
-## 8. [Code-sample validation](../concepts/code-sample-validation.md)
+## 9. [Accessibility checks](../concepts/accessibility.md)
+
+`supporting` · practise it · 3h
+
+Making sure published content is usable by everyone, which applies to every page you ship.
+
+Builds on, earlier in this path: Documentation CI.
+
+## 10. [Code-sample validation](../concepts/code-sample-validation.md)
 
 `core` · build something · 5h
 
@@ -95,7 +115,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 Also in: [A working result in a weekend](prove-it.md), [The lab engineer](lab-engineer.md).
 
-## 9. [Diagrams as code](../concepts/diagrams-as-code.md)
+## 11. [Diagrams as code](../concepts/diagrams-as-code.md)
 
 `supporting` · practise it · 3h
 
@@ -103,15 +123,7 @@ Keeping architecture and pipeline diagrams in the repository as text, reviewed l
 
 Builds on, earlier in this path: Docs-as-code.
 
-## 10. [Doctests and executable docstrings](../concepts/doctests.md)
-
-`supporting` · practise it · 2h
-
-Keeping examples in docstrings executable, so they fail when the code changes.
-
-Builds on, earlier in this path: Code-sample validation.
-
-## 11. [Building a doc test harness](../concepts/doc-test-harness.md)
+## 12. [Building a doc test harness](../concepts/doc-test-harness.md)
 
 `core` · build something · 6h
 
@@ -120,14 +132,6 @@ Building a harness that runs documentation as tests, so broken pages fail the bu
 Builds on, earlier in this path: Code-sample validation.
 
 Also in: [A working result in a weekend](prove-it.md).
-
-## 12. [Generated API reference](../concepts/api-reference-generation.md)
-
-`core` · practise it · 4h
-
-Producing reference documentation from the code itself, so it assumes no prior context and stays current.
-
-Builds on, earlier in this path: Docs-as-code.
 
 ## 13. [Golden paths](../concepts/golden-paths.md)
 
@@ -184,23 +188,3 @@ Assumes, from outside this path: [Content models](../concepts/content-model.md).
 Replacing static instructions with workflows that guide a person through a standard.
 
 Builds on, earlier in this path: Templates and scaffolding.
-
-## 19. [Release readiness for documentation](../concepts/release-readiness.md)
-
-`core` · practise it · 4h
-
-Making documentation part of what "ready to release" means, enforced rather than remembered.
-
-Builds on, earlier in this path: Documentation CI.
-
-Also in: [The writer who builds](writer-who-builds.md).
-
-## 20. [Release notes and changelogs](../concepts/release-notes.md)
-
-`supporting` · practise it · 3h
-
-Writing what changed in each release for the people who have to act on it, and making sure the version number tells them how much.
-
-Builds on, earlier in this path: Release readiness for documentation.
-
-Assumes, from outside this path: [Technical writing as a craft](../concepts/technical-writing.md).

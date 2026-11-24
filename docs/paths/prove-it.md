@@ -130,7 +130,7 @@ Publishing machine-readable entry points to your docs, such as llms.txt, for AI 
 
 Assumes, from outside this path: [Agent-ready content](../concepts/agent-ready-content.md).
 
-Also in: [The KnowledgeOps path](knowledgeops.md).
+Also in: [The KnowledgeOps path](knowledgeops.md), [Found by search and answer engines](answer-engines.md).
 
 ## 12. [Chunking strategies](../concepts/chunking.md)
 

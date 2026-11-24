@@ -141,7 +141,7 @@ hands-on time.
 
 ```
 two hours against the 34-hour first-week path: 6%
-shortest path in the guide: domain-context, 6 concepts, 24h (8%)
+shortest path in the guide: answer-engines, 8 concepts, 24h (8%)
 concepts in this corpus of 3h or less: 51/120
 ```
 
@@ -151,7 +151,9 @@ domain path was added and took the title by ten hours. The claim was prose, the
 answer was in `concepts.yaml`, and nothing connected them, so the page was
 wrong for as long as it took somebody to compute it. The drill now prints the
 shortest path by name and a test compares it to this block, which is the only
-reason the sentence you are reading is true.
+reason the sentence you are reading is true. It has already moved once more:
+the answer-engines path, added later, ties the domain path at twenty-four
+hours and is listed first, so the drill now names it.
 
 Note which direction the correction goes. The shortest path in the guide is
 twenty-four hours, so two hours of hands-on time is eight percent of it rather

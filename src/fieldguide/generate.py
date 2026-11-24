@@ -254,6 +254,18 @@ def paths_index_page(registry: Registry) -> str:
         for n, _name, cid in sorted(shared, reverse=True):
             out.append(f"| {_link(registry.by_id[cid], '../concepts/')} | {n} |")
         out.append("")
+
+    if registry.off_path:
+        out += [
+            "## Not on any path\n",
+            "These concepts are on no path, on purpose, and each says when you would",
+            "want it anyway. Every other concept is on at least one path.\n",
+            "| Concept | When to read it |",
+            "|---|---|",
+        ]
+        for cid, reason in registry.off_path.items():
+            out.append(f"| {_link(registry.by_id[cid], '../concepts/')} | {reason} |")
+        out.append("")
     return "\n".join(out)
 
 

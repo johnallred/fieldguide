@@ -62,7 +62,7 @@ mkdocs build                       # the built site the next line reads
 fieldguide render site             # every fenced sample reaches the built HTML as code
 fieldguide audit                   # every figure the pages quote about the corpus
 fieldguide release-check           # the release workflow, one named step at a time
-python3 -m pytest -q                # 281 tests
+python3 -m pytest -q                # 286 tests
 mkdocs serve                       # read it; not run by the cold start, it never exits
 
 python3 scripts/prepublication.py .   # before publishing, not in CI; see below
@@ -120,7 +120,7 @@ verifies generated pages are current without rewriting them; CI runs that check.
 ## How it is organised
 
 ```
-concepts.yaml            the curriculum: 120 concepts, 10 paths, the checklist
+concepts.yaml            the curriculum: 120 concepts, 12 paths, the checklist
 src/fieldguide/
   registry.py              the model and every validator
   generate.py              coverage, paths, study plan, placeholders
@@ -130,12 +130,12 @@ docs/
   index.md                 three ways in
   coverage.md              GENERATED: every concept and the line behind it
   study-plan.md            GENERATED: topological sort of all 120
-  paths/                   GENERATED: ten learning paths
+  paths/                   GENERATED: twelve learning paths
   concepts/                120 pages, all written
   explanation/             why a registry, the page contract, provenance, the pipeline
 drills/                  thirty-two runnable scripts behind figures the pages quote
-tests/                   274 tests, including tests against the real registry
-                         (281 with the src/ doctests pytest also collects)
+tests/                   279 tests, including tests against the real registry
+                         (286 with the src/ doctests pytest also collects)
 .github/workflows/       eleven gates on every pull request, plus the deploy
 CHANGELOG.md             what changed in each version, held to its rules by a test
 ```

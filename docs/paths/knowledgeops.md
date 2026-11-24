@@ -13,12 +13,12 @@ generated: true
 
 Making a corpus answerable by machines, and knowing whether it worked.
 
-**17 concepts, roughly 83 hours.** The order matters:
+**18 concepts, roughly 87 hours.** The order matters:
 each step assumes the ones above it.
 
 **Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Templates and scaffolding](../concepts/templates-scaffolding.md), [Documentation analytics](../concepts/docs-analytics.md). Each step below repeats what it assumes.
 
-**Shared with other paths.** 7 of these steps, roughly 30 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
+**Shared with other paths.** 8 of these steps, roughly 34 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
 
 ## 1. [Content models](../concepts/content-model.md)
 
@@ -38,7 +38,7 @@ Tagging content so navigation, search and AI retrieval can all find the right pa
 
 Builds on, earlier in this path: Content models.
 
-Also in: [The content architect](content-architect.md).
+Also in: [The content architect](content-architect.md), [Found by search and answer engines](answer-engines.md).
 
 ## 3. [Agent-ready content](../concepts/agent-ready-content.md)
 
@@ -48,6 +48,8 @@ Structuring knowledge so AI assistants and agents can use it as reliably as peop
 
 Builds on, earlier in this path: Content models, Metadata for navigation and retrieval.
 
+Also in: [Found by search and answer engines](answer-engines.md).
+
 ## 4. [llms.txt and llms-full.txt](../concepts/llms-txt.md)
 
 `core` · read it · 2h
@@ -56,7 +58,7 @@ Publishing machine-readable entry points to your docs, such as llms.txt, for AI 
 
 Builds on, earlier in this path: Agent-ready content.
 
-Also in: [A working result in a weekend](prove-it.md).
+Also in: [A working result in a weekend](prove-it.md), [Found by search and answer engines](answer-engines.md).
 
 ## 5. [Documentation for coding agents](../concepts/coding-agents.md)
 
@@ -134,7 +136,15 @@ Measuring whether LLM output in your content workflows is accurate and usable.
 
 Builds on, earlier in this path: Grounding and citation, Evaluating retrieval.
 
-## 14. [Model Context Protocol](../concepts/mcp.md)
+## 14. [Hallucination and guardrails](../concepts/hallucination-guardrails.md)
+
+`supporting` · build something · 4h
+
+Catching and limiting AI answers that are confident and wrong.
+
+Builds on, earlier in this path: Grounding and citation, Output evaluation.
+
+## 15. [Model Context Protocol](../concepts/mcp.md)
 
 `core` · build something · 5h
 
@@ -144,7 +154,7 @@ Builds on, earlier in this path: Agent-ready content.
 
 Also in: [A working result in a weekend](prove-it.md).
 
-## 15. [Agent skills and context kits](../concepts/agent-skills.md)
+## 16. [Agent skills and context kits](../concepts/agent-skills.md)
 
 `core` · practise it · 4h
 
@@ -154,7 +164,7 @@ Builds on, earlier in this path: Model Context Protocol.
 
 Assumes, from outside this path: [Templates and scaffolding](../concepts/templates-scaffolding.md).
 
-## 16. [Agentic workflows](../concepts/agentic-workflows.md)
+## 17. [Agentic workflows](../concepts/agentic-workflows.md)
 
 `core` · build something · 6h
 
@@ -162,7 +172,7 @@ Structuring content so agents can carry out multi-step tasks from it.
 
 Builds on, earlier in this path: Model Context Protocol, Agent skills and context kits.
 
-## 17. [Measuring AI answer quality](../concepts/ai-answer-quality.md)
+## 18. [Measuring AI answer quality](../concepts/ai-answer-quality.md)
 
 `core` · build something · 5h
 

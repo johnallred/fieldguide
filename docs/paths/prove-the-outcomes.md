@@ -14,10 +14,10 @@ generated: true
 
 Write the programs that measure a corpus, then measure the four outcomes that matter most.
 
-**10 concepts, roughly 37 hours.** The order matters:
+**11 concepts, roughly 40 hours.** The order matters:
 each step assumes the ones above it.
 
-**Assumed before step 1.** This path does not teach [Content models](../concepts/content-model.md), [Documentation CI](../concepts/documentation-ci.md), [Golden paths](../concepts/golden-paths.md), [Findability and search design](../concepts/findability.md), [Output evaluation](../concepts/output-evaluation.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Content models](../concepts/content-model.md), [Documentation CI](../concepts/documentation-ci.md), [Golden paths](../concepts/golden-paths.md), [Findability and search design](../concepts/findability.md), [Output evaluation](../concepts/output-evaluation.md), [A systems mindset](../concepts/systems-mindset.md). Each step below repeats what it assumes.
 
 **Shared with other paths.** 1 of these steps, roughly 5 hours, also appears in another path. Each is marked below; if you have done it there, skip it here.
 
@@ -108,3 +108,13 @@ Also in: [The KnowledgeOps path](knowledgeops.md).
 Turning developer feedback into changes to documentation, samples and the product.
 
 Builds on, earlier in this path: Documentation analytics.
+
+## 11. [Prioritizing documentation work](../concepts/docs-prioritization.md)
+
+`supporting` · practise it · 3h
+
+Using data to decide what to build, fix or retire next.
+
+Builds on, earlier in this path: Repeat-question analysis.
+
+Assumes, from outside this path: [A systems mindset](../concepts/systems-mindset.md).

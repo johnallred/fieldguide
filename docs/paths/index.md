@@ -43,7 +43,7 @@ The shortest path through the concepts that produce something reviewable.
 
 From a folder of Markdown to a modelled, governed, machine-readable corpus.
 
-15 concepts, roughly 53 hours.
+17 concepts, roughly 60 hours.
 
 ### [The documentation engineer](docs-engineer.md)
 
@@ -51,7 +51,15 @@ From a folder of Markdown to a modelled, governed, machine-readable corpus.
 
 Every automated gate that stops documentation rotting, in the order worth adding them.
 
-20 concepts, roughly 76 hours.
+18 concepts, roughly 69 hours.
+
+### [Reference and releases](reference-and-releases.md)
+
+*Someone who owns the API reference and the versioned docs for a product that ships releases.*
+
+Reference generated from the source, checked against it, and versioned with each release.
+
+8 concepts, roughly 29 hours.
 
 ### [The KnowledgeOps path](knowledgeops.md)
 
@@ -59,7 +67,15 @@ Every automated gate that stops documentation rotting, in the order worth adding
 
 Making a corpus answerable by machines, and knowing whether it worked.
 
-17 concepts, roughly 83 hours.
+18 concepts, roughly 87 hours.
+
+### [Found by search and answer engines](answer-engines.md)
+
+*Someone responsible for whether people, search engines and AI answer engines can find the documentation at all.*
+
+From metadata to being cited, making a public corpus discoverable and quotable.
+
+8 concepts, roughly 24 hours.
 
 ### [The developer educator](developer-educator.md)
 
@@ -67,7 +83,7 @@ Making a corpus answerable by machines, and knowing whether it worked.
 
 Taking a developer from a clean environment to a working result, repeatably.
 
-18 concepts, roughly 73 hours.
+19 concepts, roughly 77 hours.
 
 ### [The lab engineer](lab-engineer.md)
 
@@ -83,7 +99,7 @@ Taking a lab from a working draft to one that is tested nightly, published on ev
 
 The craft and the working relationships, which no pipeline substitutes for.
 
-10 concepts, roughly 37 hours.
+15 concepts, roughly 55 hours.
 
 ## Once the work is real
 
@@ -93,7 +109,7 @@ The craft and the working relationships, which no pipeline substitutes for.
 
 Write the programs that measure a corpus, then measure the four outcomes that matter most.
 
-10 concepts, roughly 37 hours.
+11 concepts, roughly 40 hours.
 
 ## Background, at any time
 
@@ -114,9 +130,22 @@ this is the list.
 |---|---|
 | [Documentation CI](../concepts/documentation-ci.md) | 4 |
 | [Diátaxis](../concepts/diataxis.md) | 4 |
+| [llms.txt and llms-full.txt](../concepts/llms-txt.md) | 3 |
 | [Treating docs, setup and samples as one product](../concepts/docs-as-product.md) | 3 |
+| [Metadata for navigation and retrieval](../concepts/metadata.md) | 3 |
 | [Link checking](../concepts/link-checking.md) | 3 |
 | [Docs-as-code](../concepts/docs-as-code.md) | 3 |
 | [Content models](../concepts/content-model.md) | 3 |
 | [Cold-start testing](../concepts/coldstart-testing.md) | 3 |
 | [Code-sample validation](../concepts/code-sample-validation.md) | 3 |
+
+## Not on any path
+
+These concepts are on no path, on purpose, and each says when you would
+want it anyway. Every other concept is on at least one path.
+
+| Concept | When to read it |
+|---|---|
+| [MDX](../concepts/mdx.md) | An alternative to the Markdown the paths teach, met when a site is built on Docusaurus or another React-based generator. |
+| [Docusaurus](../concepts/docusaurus.md) | An alternative generator. The paths teach MkDocs; read this when the site you inherit is built on Docusaurus. |
+| [Antora and AsciiDoc](../concepts/antora.md) | An alternative generator for multi-repository AsciiDoc sites. Read it when the site you inherit is built on Antora. |

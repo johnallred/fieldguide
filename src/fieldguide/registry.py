@@ -256,6 +256,8 @@ class Registry:
     categories: dict[str, str]
     concepts: tuple[Concept, ...]
     paths: tuple[LearningPath, ...]
+    #: Concepts deliberately on no path, mapped to the reason a reader is told.
+    off_path: dict[str, str] = field(default_factory=dict)
 
     @property
     def by_id(self) -> dict[str, Concept]:
@@ -428,7 +430,24 @@ def load_registry(path: Path) -> Registry:
         if len(set(learning_path.concepts)) != len(learning_path.concepts):
             raise RegistryError(f"path {learning_path.id!r}: lists a concept twice")
 
-    registry = Registry(categories=dict(categories), concepts=concepts, paths=paths)
+    off_path = raw.get("off_path") or {}
+    if not isinstance(off_path, dict):
+        raise RegistryError(f"{path}: off_path must be a mapping of concept id to reason")
+    on_a_path = {cid for p in paths for cid in p.concepts}
+    for concept_id, reason in off_path.items():
+        if concept_id not in seen:
+            raise RegistryError(f"off_path: {concept_id!r} is not a concept")
+        if concept_id in on_a_path:
+            raise RegistryError(f"off_path: {concept_id!r} is on a path, so it cannot be off one")
+        if not isinstance(reason, str) or not reason.strip():
+            raise RegistryError(f"off_path: {concept_id!r} needs a reason a reader can act on")
+
+    registry = Registry(
+        categories=dict(categories),
+        concepts=concepts,
+        paths=paths,
+        off_path={str(k): " ".join(str(v).split()) for k, v in off_path.items()},
+    )
 
     cycles = find_cycles(registry)
     if cycles:

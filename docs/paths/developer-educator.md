@@ -13,7 +13,7 @@ generated: true
 
 Taking a developer from a clean environment to a working result, repeatably.
 
-**18 concepts, roughly 73 hours.** The order matters:
+**19 concepts, roughly 77 hours.** The order matters:
 each step assumes the ones above it.
 
 **Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Code-sample validation](../concepts/code-sample-validation.md), [Reproducible environments](../concepts/reproducible-environments.md). Each step below repeats what it assumes.
@@ -76,7 +76,15 @@ Designing tutorials that teach by having the reader build something real.
 
 Builds on, earlier in this path: Diátaxis.
 
-## 8. [Golden paths](../concepts/golden-paths.md)
+## 8. [Screencasts and video](../concepts/screencasts.md)
+
+`context` · practise it · 4h
+
+Producing short videos that show a task, and keeping them accurate as the product changes.
+
+Builds on, earlier in this path: Designing tutorials.
+
+## 9. [Golden paths](../concepts/golden-paths.md)
 
 `core` · build something · 5h
 
@@ -86,7 +94,7 @@ Builds on, earlier in this path: Diátaxis.
 
 Also in: [The documentation engineer](docs-engineer.md).
 
-## 9. [Quickstarts that survive contact](../concepts/quickstarts.md)
+## 10. [Quickstarts that survive contact](../concepts/quickstarts.md)
 
 `core` · practise it · 3h
 
@@ -94,7 +102,7 @@ Writing quickstarts that still work when a new developer follows them cold.
 
 Builds on, earlier in this path: Golden paths.
 
-## 10. [Sample walkthroughs](../concepts/sample-walkthroughs.md)
+## 11. [Sample walkthroughs](../concepts/sample-walkthroughs.md)
 
 `core` · practise it · 3h
 
@@ -102,7 +110,7 @@ Writing walkthroughs that explain a sample line by line, without drifting from t
 
 Builds on, earlier in this path: Designing tutorials.
 
-## 11. [Learning paths and curriculum](../concepts/learning-paths.md)
+## 12. [Learning paths and curriculum](../concepts/learning-paths.md)
 
 `core` · build something · 5h
 
@@ -110,7 +118,7 @@ Sequencing content into structured learning paths a reader can follow start to f
 
 Builds on, earlier in this path: Instructional design for developers, Diátaxis.
 
-## 12. [LMS administration](../concepts/lms-administration.md)
+## 13. [LMS administration](../concepts/lms-administration.md)
 
 `supporting` · practise it · 4h
 
@@ -118,7 +126,7 @@ Keeping the courses in a learning management system true to their source, enroll
 
 Builds on, earlier in this path: Learning paths and curriculum.
 
-## 13. [Learning content standards](../concepts/learning-content-standards.md)
+## 14. [Learning content standards](../concepts/learning-content-standards.md)
 
 `supporting` · practise it · 5h
 
@@ -126,7 +134,7 @@ Packaging courses and labs so any learning platform can launch them, and getting
 
 Builds on, earlier in this path: LMS administration.
 
-## 14. [Assessment and checks for understanding](../concepts/assessment.md)
+## 15. [Assessment and checks for understanding](../concepts/assessment.md)
 
 `supporting` · practise it · 3h
 
@@ -134,7 +142,7 @@ Checking that a learner actually learned: how you know the curriculum worked.
 
 Builds on, earlier in this path: Instructional design for developers.
 
-## 15. [Sample applications and galleries](../concepts/sample-apps.md)
+## 16. [Sample applications and galleries](../concepts/sample-apps.md)
 
 `supporting` · build something · 6h
 
@@ -144,7 +152,7 @@ Builds on, earlier in this path: Sample walkthroughs.
 
 Assumes, from outside this path: [Code-sample validation](../concepts/code-sample-validation.md).
 
-## 16. [Demo design](../concepts/demo-design.md)
+## 17. [Demo design](../concepts/demo-design.md)
 
 `supporting` · practise it · 3h
 
@@ -152,7 +160,7 @@ Building demos that show the result first, fit their slot, adapt to the audience
 
 Builds on, earlier in this path: Sample applications and galleries.
 
-## 17. [Workshops and hands-on labs](../concepts/workshops.md)
+## 18. [Workshops and hands-on labs](../concepts/workshops.md)
 
 `supporting` · practise it · 4h
 
@@ -162,7 +170,7 @@ Builds on, earlier in this path: Learning paths and curriculum.
 
 Assumes, from outside this path: [Reproducible environments](../concepts/reproducible-environments.md).
 
-## 18. [Field enablement](../concepts/field-enablement.md)
+## 19. [Field enablement](../concepts/field-enablement.md)
 
 `supporting` · practise it · 4h
 

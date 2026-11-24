@@ -1259,3 +1259,43 @@ def test_every_path_has_a_group_and_the_groups_are_in_order():
     assert groups == sorted(groups, key=order.index), (
         f"paths must be listed in group order {order}, got {groups}"
     )
+
+
+# --------------------------------------------------- concepts on no path
+
+
+def test_an_off_path_concept_must_be_a_concept(tmp_path):
+    with pytest.raises(RegistryError, match="off_path: 'gamma' is not a concept"):
+        load_registry(write(tmp_path, MINIMAL + "off_path:\n  gamma: Because.\n"))
+
+
+def test_an_off_path_concept_cannot_be_on_a_path(tmp_path):
+    with pytest.raises(RegistryError, match="is on a path"):
+        load_registry(write(tmp_path, MINIMAL + "off_path:\n  beta: Because.\n"))
+
+
+def test_an_off_path_concept_needs_a_reason(tmp_path):
+    gamma = MINIMAL[MINIMAL.index("  - id: beta"):MINIMAL.index("paths:")].replace("beta", "gamma")
+    body = MINIMAL.replace("paths:", gamma + "paths:") + "off_path:\n  gamma: '  '\n"
+    with pytest.raises(RegistryError, match="needs a reason"):
+        load_registry(write(tmp_path, body))
+
+
+def test_every_real_concept_is_on_a_path_or_says_why_not():
+    """A concept that drops off every path should be a decision, not an accident.
+
+    Twenty-two had, including four core ones, and nothing said so: a reader
+    following the paths never met them, and the guide never told them that.
+    """
+    registry = load_registry(REAL_REGISTRY)
+    on_a_path = {cid for p in registry.paths for cid in p.concepts}
+    unaccounted = sorted(
+        c.id for c in registry.concepts if c.id not in on_a_path and c.id not in registry.off_path
+    )
+    assert not unaccounted, f"on no path and no reason given: {unaccounted}"
+
+
+def test_no_real_core_concept_is_off_every_path():
+    registry = load_registry(REAL_REGISTRY)
+    core_off = sorted(cid for cid in registry.off_path if registry.by_id[cid].tier == "core")
+    assert not core_off, f"core concepts must be on a path: {core_off}"

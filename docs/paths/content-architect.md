@@ -13,12 +13,12 @@ generated: true
 
 From a folder of Markdown to a modelled, governed, machine-readable corpus.
 
-**15 concepts, roughly 53 hours.** The order matters:
+**17 concepts, roughly 60 hours.** The order matters:
 each step assumes the ones above it.
 
-**Assumed before step 1.** This path does not teach [Code-sample validation](../concepts/code-sample-validation.md), [Docs-as-code](../concepts/docs-as-code.md), [Extracting tribal knowledge](../concepts/sme-interviews.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Prose linting with Vale](../concepts/prose-linting.md), [Code-sample validation](../concepts/code-sample-validation.md), [Docs-as-code](../concepts/docs-as-code.md), [Extracting tribal knowledge](../concepts/sme-interviews.md). Each step below repeats what it assumes.
 
-**Shared with other paths.** 4 of these steps, roughly 13 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
+**Shared with other paths.** 5 of these steps, roughly 16 hours, also appear in another path. Each is marked below; if you have done it there, skip it here.
 
 ## 1. [Information architecture](../concepts/information-architecture.md)
 
@@ -62,7 +62,7 @@ Tagging content so navigation, search and AI retrieval can all find the right pa
 
 Builds on, earlier in this path: Content models.
 
-Also in: [The KnowledgeOps path](knowledgeops.md).
+Also in: [The KnowledgeOps path](knowledgeops.md), [Found by search and answer engines](answer-engines.md).
 
 ## 6. [Style guides and terminology management](../concepts/style-guide.md)
 
@@ -72,7 +72,17 @@ Keeping voice and terminology consistent across many authors, and enforcing it i
 
 Builds on, earlier in this path: Taxonomy and controlled vocabularies.
 
-## 7. [Security guidance as encoded standard](../concepts/security-documentation.md)
+## 7. [Detecting terminology drift](../concepts/terminology-drift.md)
+
+`supporting` · practise it · 3h
+
+Detecting when the words in your docs drift away from the words in the product.
+
+Builds on, earlier in this path: Taxonomy and controlled vocabularies.
+
+Assumes, from outside this path: [Prose linting with Vale](../concepts/prose-linting.md).
+
+## 8. [Security guidance as encoded standard](../concepts/security-documentation.md)
 
 `supporting` · practise it · 3h
 
@@ -80,7 +90,7 @@ Encoding security guidance into templates, validators and workflows rather than 
 
 Builds on, earlier in this path: Style guides and terminology management.
 
-## 8. [Single-sourcing and content reuse](../concepts/single-sourcing.md)
+## 9. [Single-sourcing and content reuse](../concepts/single-sourcing.md)
 
 `supporting` · practise it · 3h
 
@@ -88,7 +98,15 @@ Writing a fact once and reusing it wherever it appears, so documentation scales 
 
 Builds on, earlier in this path: Content models.
 
-## 9. [Multi-platform parity](../concepts/multi-platform-parity.md)
+## 10. [Localization and translation pipelines](../concepts/localization.md)
+
+`supporting` · build something · 4h
+
+Getting content translated and keeping translations in step with the source as it changes.
+
+Builds on, earlier in this path: Content models, Single-sourcing and content reuse.
+
+## 11. [Multi-platform parity](../concepts/multi-platform-parity.md)
 
 `supporting` · build something · 4h
 
@@ -100,7 +118,7 @@ Assumes, from outside this path: [Code-sample validation](../concepts/code-sampl
 
 Also in: [The lab engineer](lab-engineer.md).
 
-## 10. [Content lifecycle and governance](../concepts/content-lifecycle.md)
+## 12. [Content lifecycle and governance](../concepts/content-lifecycle.md)
 
 `supporting` · practise it · 3h
 
@@ -108,7 +126,7 @@ Running content from draft to update to audit to retirement, increasingly with L
 
 Builds on, earlier in this path: Content models.
 
-## 11. [Retiring content](../concepts/content-retirement.md)
+## 13. [Retiring content](../concepts/content-retirement.md)
 
 `supporting` · practise it · 3h
 
@@ -116,7 +134,7 @@ Deciding what to retire, and removing it without breaking what links to it.
 
 Builds on, earlier in this path: Content lifecycle and governance.
 
-## 12. [Content migration](../concepts/content-migration.md)
+## 14. [Content migration](../concepts/content-migration.md)
 
 `supporting` · build something · 6h
 
@@ -126,7 +144,7 @@ Builds on, earlier in this path: Retiring content.
 
 Assumes, from outside this path: [Docs-as-code](../concepts/docs-as-code.md).
 
-## 13. [Findability and search design](../concepts/findability.md)
+## 15. [Findability and search design](../concepts/findability.md)
 
 `supporting` · practise it · 3h
 
@@ -134,7 +152,9 @@ Making sure developers and AI assistants can both find and use the page they nee
 
 Builds on, earlier in this path: Metadata for navigation and retrieval.
 
-## 14. [Playbooks and decision guides](../concepts/playbooks.md)
+Also in: [Found by search and answer engines](answer-engines.md).
+
+## 16. [Playbooks and decision guides](../concepts/playbooks.md)
 
 `core` · practise it · 4h
 
@@ -142,7 +162,7 @@ Turning tribal knowledge from engineering, product and operations into playbooks
 
 Assumes, from outside this path: [Extracting tribal knowledge](../concepts/sme-interviews.md).
 
-## 15. [Knowledge architecture](../concepts/knowledge-architecture.md)
+## 17. [Knowledge architecture](../concepts/knowledge-architecture.md)
 
 `core` · build something · 6h
 
