@@ -18,6 +18,8 @@ tags: [gp, supporting]
 
 **Prerequisites:** [Reproducible environments](reproducible-environments.md), [Cold-start testing](coldstart-testing.md)
 
+**Leads to:** [Lab publishing pipelines](lab-publishing.md)
+
 ## What it is
 
 A lab that runs against real infrastructure, tested the way a learner meets it:

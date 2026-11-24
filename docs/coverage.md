@@ -10,13 +10,13 @@ generated: true
 
 # Coverage
 
-**117 of 117 concepts written.** 0 drafted, 0 planned.
+**118 of 118 concepts written.** 0 drafted, 0 planned.
 
 Each row names the concept and the day-to-day work that needs it.
 
 ## Where this list comes from
 
-- **117 of 117** concepts name the work that needs them.
+- **118 of 118** concepts name the work that needs them.
 
 That line is printed next to each concept, so a reader can judge whether it
 earns their time rather than taking the list on trust.
@@ -75,6 +75,7 @@ earns their time rather than taking the list on trust.
 | [Accessibility checks](concepts/accessibility.md) | supporting | practise it | 3h | :material-check: complete | Making sure published content is usable by everyone, which applies to every page you ship. |
 | [Detecting terminology drift](concepts/terminology-drift.md) | supporting | practise it | 3h | :material-check: complete | Detecting when the words in your docs drift away from the words in the product. |
 | [Doctests and executable docstrings](concepts/doctests.md) | supporting | practise it | 2h | :material-check: complete | Keeping examples in docstrings executable, so they fail when the code changes. |
+| [Lab publishing pipelines](concepts/lab-publishing.md) | supporting | build something | 5h | :material-check: complete | Shipping hands-on labs through gates, versions and channels, so a broken lab is stopped before learners meet it and a... |
 | [Preview deployments and publishing](concepts/preview-deployments.md) | supporting | practise it | 3h | :material-check: complete | Previewing every documentation change as a built site, and publishing it when it merges. |
 | [Reviewing documentation](concepts/docs-review.md) | supporting | practise it | 3h | :material-check: complete | Reviewing documentation pull requests for accuracy, structure and style. |
 | [Writing custom linters](concepts/custom-linters.md) | supporting | build something | 5h | :material-check: complete | Writing your own content checks when an off-the-shelf linter cannot express the rule. |

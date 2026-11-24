@@ -14,7 +14,7 @@ This guide is prose about how to do the work, and prose is cheap. This page
 records which concepts are also *implemented* somewhere you can open, down to
 the file that does the work.
 
-**88 of 117 concepts have a demonstration**, 37 of them in full.
+**89 of 118 concepts have a demonstration**, 37 of them in full.
 The rest of this page is the other side of that number, which is the half worth
 reading.
 
@@ -32,7 +32,7 @@ A Python library and the documentation site that documents it, where the site is
 
 The repository you are reading. It earns entries here only where it does the work rather than describing it: a two-part fence gate that compares fenced source against the rendered code blocks of the built HTML, and an accessibility property test over generated pages. The fence gate found 127 defects across seven pages that every other check had passed.
 
-[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 46 concepts
+[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 47 concepts
 
 ## What is demonstrated
 
@@ -77,7 +77,7 @@ embeds them.
 
 ### Quality automation and documentation CI
 
-13 of 14.
+14 of 15.
 
 | Concept | Extent | Artifact | What it does |
 |---|---|---|---|
@@ -92,6 +92,7 @@ embeds them.
 | [Accessibility checks](concepts/accessibility.md) | :material-circle-half-full: partial | `tests/test_generate.py` | An audit of the built site found all seven path pages skipping h1 to h3; the generator was fixed and a property test now asserts no generated page skips a level. Five checks, not a compliance claim. |
 | [Detecting terminology drift](concepts/terminology-drift.md) | :material-circle-half-full: partial | `drills/terminology_drift.py` | Conformance measured against a glossary two ways, to show that the obvious way flatters: a word-boundary search for the canonical term matches inside its own deprecated variants, scoring drift as conformance, so widget reads 60% when the true figure is 33%. Masking variants before counting fixes it. Three pages, not a corpus, and no team or review process is involved. |
 | [Doctests and executable docstrings](concepts/doctests.md) | :material-check-circle: full | `pyproject.toml` | `--doctest-modules` across the package, so every docstring example is executed. One broke a strict build and had to be rewritten. |
+| [Lab publishing pipelines](concepts/lab-publishing.md) | :material-circle-half-full: partial | `drills/lab_publish.py` | A gate over a lab document using coldlab's directive syntax (five blocking problems: an unnamed step, a bare sleep, a reasonless exit exception, a download at lab time, a hardcoded partition and account), promotion counted per immutable version rather than per lab, and rollback separated from fix-forward by whether the content changed. The labs, versions and runs are invented; the real gates behind it are coldlab's extract.py and this guide's own deploy, which needs five gate jobs. No lab catalog is published through such a pipeline here. |
 | [Preview deployments and publishing](concepts/preview-deployments.md) | :material-circle-half-full: partial | `.github/workflows/docs.yml` | Publishes to GitHub Pages on main, and regenerates the retrieval artifacts alongside the site. No per-pull-request preview. |
 | [Writing custom linters](concepts/custom-linters.md) | :material-check-circle: full | `src/fieldguide/fences.py` | A rule no pattern matcher can express, because it models shell heredocs to decide which fence markers are markup and which are data. |
 
@@ -207,7 +208,7 @@ Coverage by category, including the categories at zero.
 |---|---|---|
 | Information and knowledge architecture | 12/14 | 0 |
 | Docs-as-code toolchain | 8/15 | 0 |
-| Quality automation and documentation CI | 13/14 | 0 |
+| Quality automation and documentation CI | 14/15 | 0 |
 | Golden paths and developer onboarding | 9/9 | 0 |
 | AI-ready content and agents | 13/21 | 8 |
 | Measurement and feedback | 7/7 | 0 |

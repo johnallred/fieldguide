@@ -95,6 +95,11 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         "<<'DATA'\n",
         ("RUNS", "CHECKS", "TEARDOWN"),
     ),
+    "lab_publish.py": (
+        "docs/concepts/lab-publishing.md",
+        "<<'DATA'\n",
+        ("CANDIDATE", "VERSIONS", "RUNS"),
+    ),
     "demo_check.py": (
         "docs/concepts/demo-design.md",
         "<<'DATA'\n",
@@ -227,6 +232,19 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "  FAIL  teardown.all_tagged_resolved  (stateMachine:ColdlabRetry)",
         ),
     ),
+    "lab_publish.py": (
+        "docs/concepts/lab-publishing.md",
+        1,
+        (
+            "  BLOCKED  Wait for the redrive: bare sleep; declare what the harness waits for instead",
+            "  BLOCKED  confirm absent: '# exits 1:' gives no reason, so the exception becomes permanent",
+            "  BLOCKED  inspect worker: hardcodes a partition or account, which fails in any other",
+            "  sqs-retry   v3 PROMOTE: 3 passing beta runs on this exact content",
+            "  vpc-basics  v2 stays in beta: 1 of 3 passing runs on its content",
+            "              v1 still passes: ROLL BACK prod to v1, then fix v2",
+            "              the environment changed, not the lab: rolling back cannot help;",
+        ),
+    ),
     "demo_check.py": (
         "docs/concepts/demo-design.md",
         0,
@@ -339,7 +357,7 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         (
             "two hours against the 34-hour first-week path: 6%",
             "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
-            "concepts in this corpus of 3h or less: 51/117",
+            "concepts in this corpus of 3h or less: 51/118",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",
         ),

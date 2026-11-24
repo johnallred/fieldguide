@@ -448,6 +448,17 @@ concepts:
       - "Reviewing documentation pull requests for accuracy, structure and style."
     status: complete
 
+  - id: lab-publishing
+    name: Lab publishing pipelines
+    category: qa
+    tier: supporting
+    difficulty: 3
+    time: 5h
+    prerequisites: [ephemeral-environments, documentation-ci]
+    in_practice:
+      - "Shipping hands-on labs through gates, versions and channels, so a broken lab is stopped before learners meet it and a published one can be pulled or rolled back."
+    status: complete
+
   # =========================================================================
   # Golden paths and developer onboarding
   # =========================================================================
@@ -1496,6 +1507,7 @@ paths:
       - reproducible-environments
       - coldstart-testing
       - ephemeral-environments
+      - lab-publishing
       - learning-paths
       - lms-administration
       - learning-content-standards
