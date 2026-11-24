@@ -1496,7 +1496,6 @@ paths:
     concepts:
       - docs-as-code
       - git-authoring
-      - docs-review
       - documentation-ci
       - github-actions
       - link-checking
@@ -1510,6 +1509,7 @@ paths:
       - coldstart-testing
       - freshness-monitoring
       - preview-deployments
+      - docs-review
       - templates-scaffolding
       - guided-workflows
 
@@ -1563,9 +1563,9 @@ paths:
       - findability
       - structured-data
       - seo-for-docs
-      - crawlability
       - agent-ready-content
       - llms-txt
+      - crawlability
       - geo
 
   - id: developer-educator

@@ -56,15 +56,7 @@ Making documentation rank for the searches developers actually run.
 
 Builds on, earlier in this path: Metadata for navigation and retrieval.
 
-## 5. [Crawlability and the agent-ready front door](../concepts/crawlability.md)
-
-`supporting` · practise it · 3h
-
-Making sure crawlers and agents can reach and read every page, starting from the front door.
-
-Builds on, earlier in this path: SEO for documentation.
-
-## 6. [Agent-ready content](../concepts/agent-ready-content.md)
+## 5. [Agent-ready content](../concepts/agent-ready-content.md)
 
 `core` · practise it · 4h
 
@@ -76,7 +68,7 @@ Assumes, from outside this path: [Content models](../concepts/content-model.md).
 
 Also in: [The KnowledgeOps path](knowledgeops.md).
 
-## 7. [llms.txt and llms-full.txt](../concepts/llms-txt.md)
+## 6. [llms.txt and llms-full.txt](../concepts/llms-txt.md)
 
 `core` · read it · 2h
 
@@ -85,6 +77,14 @@ Publishing machine-readable entry points to your docs, such as llms.txt, for AI 
 Builds on, earlier in this path: Agent-ready content.
 
 Also in: [A working result in a weekend](prove-it.md), [The KnowledgeOps path](knowledgeops.md).
+
+## 7. [Crawlability and the agent-ready front door](../concepts/crawlability.md)
+
+`supporting` · practise it · 3h
+
+Making sure crawlers and agents can reach and read every page, starting from the front door.
+
+Builds on, earlier in this path: SEO for documentation.
 
 ## 8. [Generative engine optimization](../concepts/geo.md)
 

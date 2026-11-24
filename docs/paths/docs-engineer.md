@@ -39,19 +39,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 Also in: [The first week](first-week.md).
 
-## 3. [Reviewing documentation](../concepts/docs-review.md)
-
-`supporting` · practise it · 3h
-
-Reviewing documentation pull requests for accuracy, structure and style.
-
-Builds on, earlier in this path: Git authoring workflows for writers.
-
-Assumes, from outside this path: [Style guides and terminology management](../concepts/style-guide.md).
-
-Also in: [The writer who builds](writer-who-builds.md).
-
-## 4. [Documentation CI](../concepts/documentation-ci.md)
+## 3. [Documentation CI](../concepts/documentation-ci.md)
 
 `core` · practise it · 4h
 
@@ -61,7 +49,7 @@ Builds on, earlier in this path: Docs-as-code, Git authoring workflows for write
 
 Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md), [The lab engineer](lab-engineer.md).
 
-## 5. [GitHub Actions for docs](../concepts/github-actions.md)
+## 4. [GitHub Actions for docs](../concepts/github-actions.md)
 
 `core` · practise it · 4h
 
@@ -69,7 +57,7 @@ Writing and maintaining the CI workflows that build, check and publish your docu
 
 Builds on, earlier in this path: Documentation CI.
 
-## 6. [Link checking](../concepts/link-checking.md)
+## 5. [Link checking](../concepts/link-checking.md)
 
 `core` · read it · 2h
 
@@ -79,7 +67,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 Also in: [The first week](first-week.md), [A working result in a weekend](prove-it.md).
 
-## 7. [Prose linting with Vale](../concepts/prose-linting.md)
+## 6. [Prose linting with Vale](../concepts/prose-linting.md)
 
 `core` · practise it · 3h
 
@@ -89,7 +77,7 @@ Assumes, from outside this path: [Style guides and terminology management](../co
 
 Also in: [A working result in a weekend](prove-it.md).
 
-## 8. [Writing custom linters](../concepts/custom-linters.md)
+## 7. [Writing custom linters](../concepts/custom-linters.md)
 
 `supporting` · build something · 5h
 
@@ -97,7 +85,7 @@ Writing your own content checks when an off-the-shelf linter cannot express the 
 
 Builds on, earlier in this path: Prose linting with Vale.
 
-## 9. [Accessibility checks](../concepts/accessibility.md)
+## 8. [Accessibility checks](../concepts/accessibility.md)
 
 `supporting` · practise it · 3h
 
@@ -105,7 +93,7 @@ Making sure published content is usable by everyone, which applies to every page
 
 Builds on, earlier in this path: Documentation CI.
 
-## 10. [Code-sample validation](../concepts/code-sample-validation.md)
+## 9. [Code-sample validation](../concepts/code-sample-validation.md)
 
 `core` · build something · 5h
 
@@ -115,7 +103,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 Also in: [A working result in a weekend](prove-it.md), [The lab engineer](lab-engineer.md).
 
-## 11. [Diagrams as code](../concepts/diagrams-as-code.md)
+## 10. [Diagrams as code](../concepts/diagrams-as-code.md)
 
 `supporting` · practise it · 3h
 
@@ -123,7 +111,7 @@ Keeping architecture and pipeline diagrams in the repository as text, reviewed l
 
 Builds on, earlier in this path: Docs-as-code.
 
-## 12. [Building a doc test harness](../concepts/doc-test-harness.md)
+## 11. [Building a doc test harness](../concepts/doc-test-harness.md)
 
 `core` · build something · 6h
 
@@ -133,7 +121,7 @@ Builds on, earlier in this path: Code-sample validation.
 
 Also in: [A working result in a weekend](prove-it.md).
 
-## 13. [Golden paths](../concepts/golden-paths.md)
+## 12. [Golden paths](../concepts/golden-paths.md)
 
 `core` · build something · 5h
 
@@ -143,7 +131,7 @@ Assumes, from outside this path: [Diátaxis](../concepts/diataxis.md).
 
 Also in: [The developer educator](developer-educator.md).
 
-## 14. [Cold-start testing](../concepts/coldstart-testing.md)
+## 13. [Cold-start testing](../concepts/coldstart-testing.md)
 
 `core` · build something · 5h
 
@@ -155,7 +143,7 @@ Assumes, from outside this path: [Reproducible environments](../concepts/reprodu
 
 Also in: [A working result in a weekend](prove-it.md), [The lab engineer](lab-engineer.md).
 
-## 15. [Freshness monitoring](../concepts/freshness-monitoring.md)
+## 14. [Freshness monitoring](../concepts/freshness-monitoring.md)
 
 `core` · practise it · 4h
 
@@ -165,13 +153,25 @@ Builds on, earlier in this path: Documentation CI.
 
 Assumes, from outside this path: [Content lifecycle and governance](../concepts/content-lifecycle.md).
 
-## 16. [Preview deployments and publishing](../concepts/preview-deployments.md)
+## 15. [Preview deployments and publishing](../concepts/preview-deployments.md)
 
 `supporting` · practise it · 3h
 
 Previewing every documentation change as a built site, and publishing it when it merges.
 
 Builds on, earlier in this path: GitHub Actions for docs.
+
+## 16. [Reviewing documentation](../concepts/docs-review.md)
+
+`supporting` · practise it · 3h
+
+Reviewing documentation pull requests for accuracy, structure and style.
+
+Builds on, earlier in this path: Git authoring workflows for writers.
+
+Assumes, from outside this path: [Style guides and terminology management](../concepts/style-guide.md).
+
+Also in: [The writer who builds](writer-who-builds.md).
 
 ## 17. [Templates and scaffolding](../concepts/templates-scaffolding.md)
 

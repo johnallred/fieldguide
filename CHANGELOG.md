@@ -45,6 +45,9 @@ an `Added` heading.
   Twenty-two were on none, four of them core (Sphinx, prompting, LLM content
   lifecycle, GEO), and nineteen of those are now placed. The documentation engineer path is 18 steps and KnowledgeOps
   18, after the reference and discoverability concepts became their own paths.
+- Docs review moves after the automated gates on the documentation engineer
+  path, and llms.txt before crawlability on the answer-engines path, so each
+  page comes after the ones it points at most.
 - Each learning path marks the steps it shares with other paths and names
   them, and says up front how many steps and hours are shared, so a reader on
   a second path can skip what they have done.
