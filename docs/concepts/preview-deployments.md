@@ -206,14 +206,14 @@ jobs:
       pages: write
       id-token: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: pip install -e ".[docs]"
       - run: mkdocs build --strict
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: site
-      - uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v5
 ```
 
 Read-only at the top, write only in this job, and gated on the default branch
