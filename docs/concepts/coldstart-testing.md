@@ -95,6 +95,7 @@ cat > coldstart.sh <<'EOF'
 #!/usr/bin/env bash
 # Follow the quickstart literally, from an empty virtual environment.
 set -euo pipefail
+export DOCS="$PWD/docs/quickstart.md"   # resolve before leaving the repository
 WORK="$(mktemp -d)"; trap 'rm -rf "$WORK"' EXIT
 cd "$WORK"
 
@@ -104,11 +105,12 @@ source .venv/bin/activate
 # Extract the bash blocks from the quickstart, in order, and run them as one
 # shell so that cd and exported variables persist.
 python3 - <<'PY' > script.sh
+import os
 import re
 from pathlib import Path
 FENCE = re.compile(r"^```(\w+)?\s*$")
 out, cur, lang = [], None, None
-for line in Path("DOCS").read_text().splitlines():
+for line in Path(os.environ["DOCS"]).read_text().splitlines():
     m = FENCE.match(line)
     if m and cur is None:
         cur, lang = [], m.group(1)
@@ -133,7 +135,7 @@ order as a single shell.
 **Step 4: run it**
 
 ```bash
-./coldstart.sh
+./coldstart.sh; echo "exit=$?"
 ```
 
 ```
@@ -151,7 +153,7 @@ environment with nothing in it can say so.
 
 ```bash
 sed -i 's|pip install cowsay|pip install cowsay requests|' docs/quickstart.md
-./coldstart.sh
+./coldstart.sh; echo "exit=$?"
 ```
 
 ```

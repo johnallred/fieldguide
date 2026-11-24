@@ -212,7 +212,7 @@ both; hashing the position gets neither.
 
 | Scheme | Survives an edit elsewhere | Changes on a real edit |
 |---|---|---|
-| Position index | No | Yes |
+| Position index | No | No |
 | Hash of text | Yes | Yes |
 | Hash of text and breadcrumb | Yes | Yes, and on a retitle |
 | `hash()` builtin | No; salted per process | Unusable |

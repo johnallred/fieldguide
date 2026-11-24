@@ -162,7 +162,8 @@ Rendering is not part of this drill, because it needs a JavaScript runtime.
 GitHub renders a `mermaid` code block in Markdown files, issues and pull
 requests directly. Material for MkDocs renders one after a `custom_fences`
 entry for `mermaid` under `pymdownx.superfences`. To produce an image file
-instead, `mmdc -i pipeline.mmd -o pipeline.svg` with the Mermaid CLI.
+instead, save the diagram on its own as `pipeline.mmd` and run
+`mmdc -i pipeline.mmd -o pipeline.svg` with the Mermaid CLI.
 
 **What you built.** A diagram check that found seven drifted edges and nodes
 and two missing text alternatives, and a generated diagram, with a generated

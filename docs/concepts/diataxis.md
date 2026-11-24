@@ -212,7 +212,8 @@ missing a "what this costs you" section. A page whose only job is to explain a
 decision invites the question "and what is the downside", and a page where that
 argument is buried under an installation command does not.
 
-**What you built.** One mixed page split into four, and the evidence for why:
+**What you built.** One mixed page split into five pages across the four
+types, and the evidence for why:
 each piece became checkable in a way the combined page was not, and one of
 them revealed a section that had been missing all along.
 

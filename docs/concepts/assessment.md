@@ -148,8 +148,8 @@ unmatched: If 3, On 2, For 1, When 1, Redo 1, Use 1, Publish 1, Track 1
 ```
 
 Four of the fourteen remaining, `Redo`, `Use`, `Publish` and `Track`, are
-imperatives the verb list omitted, which is the word-list bug from the duration
-audit in miniature. The real figure is about 96 percent, and the honest
+imperatives the verb list omitted, which is the word-list bug from the [duration
+audit](instructional-design.md) in miniature. The real figure is about 96 percent, and the honest
 summary is that the corpus is good at telling a reader what to do.
 
 **Step 4: the number that matters**
@@ -265,7 +265,7 @@ on.
 | Says what counts as done | No | Yes |
 | Who judges | Nobody | The criterion, or a reader |
 | Tells the writer anything | No | Yes |
-| In this corpus | 360 | 141 |
+| In this corpus | 219 | 141 |
 
 The bottom row is this page in one line. The gap is cheap to close on the tasks
 that matter and not worth closing on all of them.

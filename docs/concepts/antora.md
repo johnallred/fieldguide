@@ -99,7 +99,7 @@ table.
 **Step 2: convert it with no extensions configured**
 
 ```javascript
-// t.mjs
+// t.cjs
 const asciidoctor = require('@asciidoctor/core')()
 const html = asciidoctor.convertFile('sample.adoc',
   { to_file: false, safe: 'unsafe', standalone: false })
@@ -163,9 +163,8 @@ cannot be found.
 
 **What was and was not executed here.** Steps 1 and 2 ran, with
 `@asciidoctor/core` 3.0.4, and the six results are measured. Step 3 was not
-executed: `rubygems.org` is not reachable from this environment, and a real
-multi-repository Antora build needs published Git sources rather than local
-directories. The playbook above is the shape of the configuration, not a
+executed: a real multi-repository Antora build needs published Git sources
+rather than local directories. The playbook above is the shape of the configuration, not a
 verified run, and this page says so rather than implying otherwise.
 
 **What you built.** One page converted with no extensions configured, which
@@ -260,8 +259,7 @@ question without reaching for submodules.
 
 **How to tell it is working.** Saying plainly which parts
 you have run. Steps 1 and 2 are measured here with `@asciidoctor/core` 3.0.4;
-the Antora playbook is not, because this environment cannot reach
-`rubygems.org` and a real build needs remote Git sources. Someone who separates
+the Antora playbook is not, because a real build needs remote Git sources. Someone who separates
 those two things, in a design review or a recommendation, is more trustworthy
 than one who presents a configuration file as experience.
 

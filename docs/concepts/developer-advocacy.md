@@ -241,7 +241,7 @@ thinner.
 
 | Not | Belongs to |
 |---|---|
-| Conference talks | [Developer relations](publishing-in-public.md), a different job |
+| Conference talks | Developer relations, a different job; see [publishing in public](publishing-in-public.md) for the nearest concept here |
 | Writing all the documentation | The queue this is meant to replace |
 | Reviewing every pull request for docs | Does not scale; gate it |
 | Persuasion | Mechanism outlives persuasion |

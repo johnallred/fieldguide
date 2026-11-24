@@ -314,7 +314,7 @@ def score(rows, query, expect, use_breadcrumb):
 
 
 for label, path, use_crumb in [
-    ("naive (fixed 320c)", "naive.jsonl", False),
+    ("naive (fixed 200c)", "naive.jsonl", False),
     ("heading-aware", "aware.jsonl", True),
 ]:
     rows = load(path)
@@ -424,8 +424,8 @@ everything on each commit and re-embedding three chunks.
 **How to explain it.** Lead with the thing the window destroys
 and the measured result. "Fixed-size windows split tables from their headers and
 drop the heading that said what the text was about. On a five-query test against
-one configuration page, the heading-aware chunker routed every query to the
-right section and the fixed-size one got most of them wrong, because the words a
+one configuration page, the heading-aware chunker routed four of five queries
+to the right section and the fixed-size one got all five wrong, because the words a
 reader uses often appear only in the heading. I keep the heading trail, the page
 type and the summary on every chunk, and derive the chunk id from the heading
 trail so an edit does not force a full re-index."

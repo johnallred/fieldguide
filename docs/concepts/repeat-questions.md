@@ -1,6 +1,6 @@
 ---
 title: Repeat-question analysis
-summary: "A question repeats because the corpus answers it in the corpus's words; two words missing from a 1,159-term vocabulary moved four of five retrieval scores."
+summary: "A question repeats because the corpus answers it in the corpus's words; two words missing from a 1,159-term vocabulary moved five of six retrieval scores."
 diataxis: explanation
 audience: developer
 concept: repeat-questions
@@ -55,8 +55,8 @@ minutes.
 **Step 1: the questions that fail when the answer exists**
 
 From the [deflection ceiling](support-deflection.md): every one of twenty
-questions is answered somewhere in the corpus, and the right page comes back
-first for thirteen. Two of the failures were not ranking failures at all. They
+questions is answered somewhere in the corpus, and when this ran the right page
+came back first for twelve. Two of the failures were not ranking failures at all. They
 survived widening the retrieved window from one chunk to ten:
 
 ```
@@ -88,7 +88,7 @@ corpus vocabulary: 1159 distinct terms
 
   chunk-size        5/6   83%   term absent from the corpus: ['smaller']
   prose-linting     6/7   86%   term absent from the corpus: ['hedge']
-  ...the other 18 cases: 100%
+  ...five more cases below 100%, thirteen at 100%
 
   mean question-vocabulary coverage: 95%
   questions fully covered: 13 of 20
@@ -115,7 +115,7 @@ grounded@3     90%    100%
 headroom      +15%    +10%
 ```
 
-Four of five scores moved, and the ceiling reached 100 percent at three
+Five of six scores moved, and the ceiling reached 100 percent at three
 chunks. Two sentences.
 
 **Step 4: confirm the mechanism rather than the coincidence**
@@ -152,7 +152,7 @@ pairs out in a table and gave back five points of `hit@1`, because the
 explanation outranked the two how-to pages for their own questions. Name the case, not its wording.
 
 **What you built.** Two repeat failures diagnosed as vocabulary rather than
-ranking, a two-sentence fix worth four of five scores, and a before-and-after
+ranking, a two-sentence fix worth five of six scores, and a before-and-after
 on the vocabulary metric itself that ties the fix to the movement.
 
 ## Reference
@@ -234,7 +234,7 @@ the more actionable of the two."
 assumption is that a repeat means a missing answer. On my corpus both residual
 failures had the answer present and correct: the words `smaller` and `hedge`
 were absent from 1,159 distinct terms. One sentence per page putting the
-reader's word beside the corpus's moved four of five retrieval scores, and took
+reader's word beside the corpus's moved five of six retrieval scores, and took
 grounding to 100 percent at three chunks.
 
 **How you know it was the vocabulary and not luck.** I re-measured vocabulary
@@ -248,7 +248,7 @@ stop reaching for ranking. Mine went 80 percent at one chunk, 90 at three, and
 then flat out to ten. Once widening the window stops helping, the remaining
 failures are not ranking failures, and no reranker or embedding upgrade will
 touch them. That is a ten-point gap that looks like a business case for a
-reranker, and half of it was a synonym.
+reranker, and all of it was vocabulary.
 
 **The tradeoff to name.** Repeat analysis without frequency data finds
 candidates and cannot rank them. My twenty cases are unweighted, so a question

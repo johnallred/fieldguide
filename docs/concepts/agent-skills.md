@@ -237,9 +237,11 @@ matters. A kit is read by something that cannot ask a follow-up question, so
 a stale instruction in it is not a confusing sentence, it is a wrong action
 taken confidently.
 
-Three checks:
+Five checks:
   VOCABULARY  every value the kit lists must be in the validator
   COMPLETE    every value the validator accepts must be in the kit
+  REQUIRED    the kit's required fields match the validator's
+  MAPPING     the kit's directory mapping matches the validator's
   COMMANDS    every command the kit tells an agent to run must exist
 """
 import re

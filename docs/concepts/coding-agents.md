@@ -338,7 +338,8 @@ every one is invisible to human review:
 
 After fix A on `retries.md` (self-contained) and fix B on `batching.md`
 (marked fragment with a named prerequisite), both pass. `streaming.md` is left
-broken on purpose so the checker still fails.
+broken on purpose, and `quickstart.md` still declares no version, so the
+checker still fails.
 
 ### The bug the checker found in itself
 
@@ -348,8 +349,8 @@ placeholder, so **the checker silently exempted the exact page it was written to
 catch.**
 
 That is the characteristic failure of substring matching over code, and it is
-why `undefined_names` uses an AST walk rather than a regex: an ellipsis counts
-only as a statement on its own line. The fix moved `retries.md` from one finding
+why `is_marked` now counts an ellipsis only as a statement on its own line,
+and why `undefined_names` uses an AST walk rather than a regex. The fix moved `retries.md` from one finding
 to three.
 
 A checker that passes the case it was built for is the most dangerous kind,
@@ -464,7 +465,7 @@ complete example that sample validation executes.
 
 **Three things to do, in order:**
 
-1. **Run the golden path.** The checker flagging three of four reasonable-looking
+1. **Run the golden path.** The checker flagging all four reasonable-looking
    pages is the demonstration, and the AST walk is what makes it more than a
    regex.
 2. **Point it at a real library's documentation.** Yours, or an open-source

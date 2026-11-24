@@ -209,7 +209,7 @@ linter is a measurement of whether your standard is real.
 | Nothing | The rule is already satisfied, or it is broken | Break a page on purpose and confirm it fires |
 | A handful of real defects | The rule is right and the corpus drifted | Fix the pages, add the gate |
 | Hundreds of findings | The convention was never adopted | Decide the convention first, or do not ship the rule |
-| Findings that are all legitimate | The rule encodes a convention that does not exist | Change the convention or drop the rule |
+| Findings that are mostly false positives | The rule encodes a convention the corpus rightly does not follow | Change the convention or drop the rule |
 
 The last row is the one this page's golden path lands in, and it is the most
 common outcome for a rule invented in the abstract.
@@ -284,8 +284,10 @@ a number: how many real defects it found on first run.
 **How to tell it is working.** A linter that has never
 caught anything is a loop. A linter with a commit history showing a red build
 followed by a real fix is a rule about something.
-`docpack` has four hand-written Vale rules, and the one worth discussing is the
-one that caught the author's own prose.
+`docpack` has four hand-written Vale rules (future tense, heading case,
+hedging and terms) that run on every pull request. They sit closer to
+[prose linting](prose-linting.md) than to a custom linter, and this guide's own
+checks in `src/fieldguide/` are the custom linters.
 
 ## Related
 

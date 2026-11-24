@@ -151,7 +151,7 @@ grounded@1     80%     90%
 grounded@3     90%    100%
 ```
 
-Two sentences, four of five scores moved, no code at all.
+Two sentences, all five scores moved, no code at all.
 
 **Step 6: what the two loops say together**
 
@@ -252,7 +252,7 @@ which was the real finding.
 
 **Contrast it with the measured loop.** The same day, the retrieval evaluation
 found two cases where the reader's word was missing from the page documenting
-the thing, and two sentences moved four of five scores. That is a precise, small
+the thing, and two sentences moved all five scores. That is a precise, small
 defect an instrument finds daily and a person never would, against a structural
 failure a person finds and an instrument never will. The difference is supply:
 instruments run on every commit, the first reader happens once.

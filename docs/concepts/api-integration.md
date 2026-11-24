@@ -102,8 +102,8 @@ still alive after all of that: True
 ```
 
 The server survives everything, refuses the path traversal, and reports one
-case as a protocol error. Five come back as **successful calls whose text
-begins "Error:"**, which would mean a client can detect failure only by
+case as a protocol error. Five come back as **successful calls**, three of
+them with text beginning "Error:", which would mean a client can detect failure only by
 string-matching prose.
 
 That reading is wrong, and the mistake is the useful part of this page.

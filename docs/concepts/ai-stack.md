@@ -58,11 +58,18 @@ onnxruntime   1.29.0
 
 Both current, both installed today, nothing pinned.
 
-**Step 2: write a two-line model and load it**
+**Step 2: write a one-node model and load it**
 
 A single `Relu`. There is no simpler model.
 
 ```python
+import onnx
+import onnxruntime as ort
+from onnx import TensorProto, helper
+
+x = helper.make_tensor_value_info("x", TensorProto.FLOAT, [1])
+y = helper.make_tensor_value_info("y", TensorProto.FLOAT, [1])
+graph = helper.make_graph([helper.make_node("Relu", ["x"], ["y"])], "g", [x], [y])
 m = helper.make_model(graph, opset_imports=[helper.make_opsetid("", 17)])
 onnx.save(m, "d.onnx")
 ort.InferenceSession("d.onnx")

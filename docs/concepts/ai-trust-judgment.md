@@ -259,7 +259,7 @@ Not squeamishness. Three specific reasons:
 | [Doc test harness](doc-test-harness.md) | Generated examples in prose |
 | [Link checking](link-checking.md) | Generated cross-references |
 | A human review queue with a reject reason | Any high-volume audit |
-| [Evaluation sets](retrieval-evaluation.md) | Assistant answers, from unmeasured to measured |
+| [Output evaluation](output-evaluation.md) | Assistant answers, from unmeasured to measured |
 
 A gate only counts if it **fails loudly and nobody can merge past it.** A gate
 that produces a warning promotes nothing, because warnings are ignored.

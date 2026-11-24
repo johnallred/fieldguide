@@ -317,7 +317,7 @@ docs as one product".
    demonstration of product ownership than any page.
 
 **How to tell it is working.** "I think of docs as a product" is a slogan. A table
-of eight artifacts, four owners, and a measured twenty minutes off-path is not.
+of eight artifacts, five owners, and a measured twenty minutes off-path is not.
 
 ### How this would be demonstrated elsewhere
 

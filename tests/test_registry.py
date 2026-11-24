@@ -1324,3 +1324,24 @@ def test_every_real_off_path_concept_is_linked_from_a_concept_on_a_path():
         if not sources:
             unreachable.append(target)
     assert not unreachable, f"on no path and linked from no concept on one: {unreachable}"
+
+
+def test_every_page_header_matches_the_registry():
+    """The tier, difficulty and time line under each title is the registry, printed.
+
+    Two pages said `core` where the registry said `supporting`, and nothing
+    compared them, so the generated coverage page and the page itself
+    disagreed about the same concept.
+    """
+    import re
+
+    registry = load_registry(REAL_REGISTRY)
+    header = re.compile(r"^`(\w+)` · difficulty (\d) · (\S+)$", re.M)
+    wrong = []
+    for concept in registry.concepts:
+        text = (REAL_DOCS / "concepts" / f"{concept.id}.md").read_text(encoding="utf-8")
+        found = header.search(text)
+        stated = (found.group(1), int(found.group(2)), found.group(3)) if found else None
+        if stated != (concept.tier, concept.difficulty, concept.time):
+            wrong.append((concept.id, stated))
+    assert not wrong, f"page header disagrees with concepts.yaml: {wrong}"

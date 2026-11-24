@@ -84,7 +84,9 @@ for start, code in blocks(page, "bash"):
   block@8: exit=1 err='cat: config.toml: No such file or directory'
 ```
 
-Same failure as the Python case: a quickstart is a sequence. Isolation tests a
+Same failure as the Python case in
+[code-sample validation](code-sample-validation.md): a quickstart is a
+sequence. Isolation tests a
 document nobody wrote.
 
 **Step 3: share the directory, and watch it still fail**
@@ -215,7 +217,7 @@ stays under 25 percent.
 The honest limitation, measured in
 [code-sample validation](code-sample-validation.md), is that a ratio budget is
 meaningless on a small corpus: with three blocks the ratio can only be 0, 33,
-67 or 100 percent, so the cap fires on a clean corpus. Budgets start meaning
+67 or 100 percent, so one legitimate skip trips a 25 percent cap. Budgets start meaning
 something in the low hundreds of blocks. Before that, require the reason and
 read it in review.
 

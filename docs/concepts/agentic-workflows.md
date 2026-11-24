@@ -52,7 +52,7 @@ somebody read the diff, not because any check did.**
 
 Build an agentic documentation workflow with checkpoints, then watch a wrong
 decision at step 2 propagate into confident work at every later step. Fifty
-minutes, dependency-free.
+minutes, with one dependency, PyYAML.
 
 **Step 1: a corpus with traps in it**
 
@@ -334,15 +334,15 @@ python3 run.py --ignore-pins; echo "exit=$?"
 ```
 
 **What you built.** A five-step workflow where every step records its decision,
-and a tripwire that catches a wrong early decision after four later steps did
+and a tripwire that catches a wrong early decision after the later steps did
 competent work on top of it.
 
 ### The correct run
 
 Step 2 selects two pages and records why it rejected the other two: one has no
 version reference, one is `pinned_versions: true`. Step 3 then finds two
-updatable lines in `install.md` and **excludes two lines in `errors.md` as
-quoted program output**. Step 5 passes, and the diff is two lines.
+updatable lines in `install.md` and **excludes the version strings in `errors.md`
+as quoted program output**. Step 5 passes, and the diff is two lines.
 
 Note that step 3's exclusion is as important as its inclusions. The version
 inside `error: client widget 2.2 is older than server widget 2.4` is the
@@ -385,7 +385,7 @@ that mattered.
 | Wrong is visible | Wrong looks like competent work on the wrong input |
 | [Grounding](grounding.md) applies | Nothing to ground against; it is an action, not a claim |
 | Cheap to re-run | Expensive, and the state has changed |
-| Failure is one bad answer | Failure is nine correct edits and two harmful ones |
+| Failure is one bad answer | Failure is seven correct edits and two harmful ones |
 
 **The asymmetry is the problem.** The agent's judgment is concentrated in one
 or two early steps, and everything after is executed well regardless. So the

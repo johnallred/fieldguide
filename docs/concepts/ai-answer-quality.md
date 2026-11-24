@@ -119,7 +119,7 @@ grounded@3     90%    100%
 headroom      +15%    +10%
 ```
 
-**Four of five scores moved, and the ceiling reached 100 percent at three
+**Five of six scores moved, and the ceiling reached 100 percent at three
 chunks.** The narrowing headroom is the subtle part: routing headroom measures
 accuracy sitting unclaimed behind a query router, and some of that gap turned
 out never to have been a routing problem. It was a word the corpus did not use.
@@ -146,7 +146,7 @@ early wins are.
 
 **What you built.** A grounding ceiling measured across the context window, a
 plateau that distinguishes ranking failures from vocabulary failures, a
-two-sentence corpus fix that moved four metrics, and an explicit statement of
+two-sentence corpus fix that moved five metrics, and an explicit statement of
 what the measurement does not cover.
 
 ## Reference

@@ -62,7 +62,7 @@ mkdocs build                       # the built site the next line reads
 fieldguide render site             # every fenced sample reaches the built HTML as code
 fieldguide audit                   # every figure the pages quote about the corpus
 fieldguide release-check           # the release workflow, one named step at a time
-python3 -m pytest -q                # 287 tests
+python3 -m pytest -q                # 288 tests
 mkdocs serve                       # read it; not run by the cold start, it never exits
 
 python3 scripts/prepublication.py .   # before publishing, not in CI; see below
@@ -134,8 +134,8 @@ docs/
   concepts/                120 pages, all written
   explanation/             why a registry, the page contract, provenance, the pipeline
 drills/                  thirty-two runnable scripts behind figures the pages quote
-tests/                   280 tests, including tests against the real registry
-                         (287 with the src/ doctests pytest also collects)
+tests/                   281 tests, including tests against the real registry
+                         (288 with the src/ doctests pytest also collects)
 .github/workflows/       eleven gates on every pull request, plus the deploy
 CHANGELOG.md             what changed in each version, held to its rules by a test
 ```

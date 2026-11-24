@@ -92,7 +92,7 @@ cat > docs/index.md <<'EOF'
 ::: pkg.widget.retry
 EOF
 
-python3 -m mkdocs build --strict && echo "exit=$?"
+python3 -m mkdocs build --strict; echo "exit=$?"
 ````
 
 The output contains the signature, pulled from the code:
@@ -115,7 +115,7 @@ Both read the real signature. Neither can publish a stale one.
 
 ```bash
 sed -i 's/^def retry(/def attempt(/' pkg/widget.py
-python3 -m mkdocs build --strict
+python3 -m mkdocs build --strict; echo "exit=$?"
 ```
 
 ```
@@ -209,7 +209,7 @@ and most teams have only the first.
 
 | Tool | Reads | Checks symbol references |
 |---|---|---|
-| Sphinx `autodoc` plus `napoleon` | Python docstrings, annotations | Yes, `py:func` and the domains |
+| Sphinx `autodoc` plus `napoleon` | Python docstrings, annotations | Yes, `py:func` and the domains, with `nitpicky = True` |
 | `mkdocstrings` plus `mkdocstrings-python` | The same | Yes, `[text][symbol]` autorefs |
 | `sphinx.ext.intersphinx` | Other projects' inventories | Yes, across projects |
 | `typedoc` | TypeScript | Yes, within the project |

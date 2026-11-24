@@ -160,15 +160,16 @@ Add a skip convention for the destructive block, declare the expected output of
 block two, and check it:
 
 ````bash
-cat >> docs/tutorial.md <<'EOF'
-EOF
-# edit the destructive block to carry a reason
+# declare block two's output in an untagged fence after it, and give the
+# destructive block a skip marker with a reason
 python3 - <<'PY'
 from pathlib import Path
 p = Path("docs/tutorial.md")
-p.write_text(p.read_text().replace(
-    "client.delete_everything()",
-    "# docs: skip (destructive)\nclient.delete_everything()"))
+t = p.read_text()
+t = t.replace("print(len(sets))\n```\n", "print(len(sets))\n```\n\n```\n3\n```\n", 1)
+t = t.replace("client.delete_everything()",
+              "# docs: skip (destructive)\nclient.delete_everything()")
+p.write_text(t)
 PY
 ````
 
@@ -279,8 +280,8 @@ mitigations, both cheap:
 | Cap the skip ratio | The suite fails if too much of the corpus is exempt |
 
 A budget has one honest limitation, visible in step 5: on three blocks, the
-ratio can only be 0, 33, 67 or 100 percent, so the cap fired on a corpus with
-nothing wrong with it. Budgets mean something at a hundred blocks and nothing
+ratio can only be 0, 33, 67 or 100 percent, so a 25 percent cap trips on a
+corpus with nothing wrong with it. Budgets mean something at a hundred blocks and nothing
 at ten. Until then, require the reason and read it in review.
 
 ## Explaining it to your team

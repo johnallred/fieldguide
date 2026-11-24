@@ -9,7 +9,7 @@ tags: [craft, supporting]
 
 # Working with engineers as sources
 
-`core` · difficulty 2 · 3h
+`supporting` · difficulty 2 · 3h
 
 > Working with engineering, product, security and partner teams so every release ships documented.
 

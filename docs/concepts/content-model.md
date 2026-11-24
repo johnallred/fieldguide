@@ -26,7 +26,7 @@ front matter plus a validator.
 
 The way to judge one is not by how elegant the schema is. It is by asking **what
 specific lies it makes impossible**, and then checking that each of those lies
-actually fails a build. The golden path does exactly that, twelve times.
+actually fails a build. The golden path does exactly that, eleven times.
 
 ## How this applies to your role
 
@@ -47,7 +47,7 @@ works, and the failure looks like a bad retriever rather than a bad schema.
 
 ## The golden path
 
-Take a real content model and attack it. Twelve defects, one at a time, and
+Take a real content model and attack it. Eleven defects, one at a time, and
 check what survives. About forty minutes.
 
 **Step 1: the model under test**
@@ -114,10 +114,10 @@ The remaining defects are about the relationship between the registry and the
 files, so they are caught later, by a validator that reads both:
 
 ```
-  CAUGHT check  complete concept, page deleted
-  CAUGHT check  complete page truncated below 450 words
-  CAUGHT check  complete page missing a required section
-  CAUGHT check  an orphan page with no concept
+  CAUGHT at check  complete concept, page deleted
+  CAUGHT at check  complete page truncated below 450 words
+  CAUGHT at check  complete page missing a required section
+  CAUGHT at check  an orphan page with no concept
 ```
 
 Four for four. Note the last one: a page nobody registered is as much a model
@@ -126,7 +126,7 @@ direction lets the corpus grow pages that no index knows about.
 
 **Step 4: find the defect the model did not cover**
 
-Twelve caught is a good result, and it is not the interesting part. The
+Eleven caught is a good result, and it is not the interesting part. The
 interesting part is what was missing from the list.
 
 Parse the front matter of every page with a real YAML parser:
@@ -188,7 +188,7 @@ ok: every page's front matter parses as YAML
 **What you built.** A set of attacks on a content model. A content model is
 judged by the lies it prevents, and
 the useful question about any model is which lie is still possible. This one
-prevented twelve and was blind to the thirteenth, which was the one that
+prevented eleven and was blind to the twelfth, which was the one that
 mattered most for machine readability.
 
 ## Reference
@@ -252,7 +252,7 @@ use it for anything.
 it makes impossible. On this guide's own registry I could not mark a concept
 complete without a page, could not add a prerequisite that does not exist,
 could not create a cycle, and could not ship a complete page under 450 words or
-missing a required section. Twelve defect classes, each one a failing build."
+missing a required section. Eleven defect classes, each one a failing build."
 
 **The follow-up is about contributor friction**, and the honest answer is that
 every required field is a tax and the right number is small. Four required
@@ -289,11 +289,11 @@ catches, each with a test.
    check, with a test that proves it fires.
 
 **How to tell it is working.** `docpack` validates five
-required front-matter fields, two of them closed vocabularies, rejected by
-`docpack docs --check`. This guide's registry adds the relational rules a
+required front-matter fields, two of them closed vocabularies, and
+`docpack docs --check` rejects a page that breaks them. This guide's registry adds the relational rules a
 per-page schema cannot express. The part worth explaining to your team is
-step 4: the model that caught twelve things and missed the thirteenth, and how
-the thirteenth was found.
+step 4: the model that caught eleven things and missed the twelfth, and how
+the twelfth was found.
 
 ## Related
 

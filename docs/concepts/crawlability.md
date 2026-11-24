@@ -458,7 +458,7 @@ A machine arriving with no context needs somewhere to start:
 | [`/llms.txt`](llms-txt.md) | A model choosing where to look |
 | [`/llms-full.txt`](llms-txt.md) | A model wanting one fetch |
 | Markdown sources beside the HTML | A model that would rather not parse your nav |
-| [`robots.txt`](crawlability.md) permitting the docs | Everything above |
+| `robots.txt` permitting the docs | Everything above |
 
 Serving the Markdown next to the rendered site is one line in a publish job and
 removes the render-mode problem entirely for consumers that prefer it.

@@ -34,7 +34,7 @@ documentation that lives in a repository.
 
 The practical reason this matters on a Tuesday is **drift**. Documentation
 stored away from the code it describes has no mechanism connecting the two. An
-engineer changes a function signature and the page describing it stays correct
+engineer changes a function signature and the page describing it stays unchanged
 in the CMS forever, because nothing in the engineer's workflow ever touched it.
 
 Docs-as-code does not solve drift. It creates the *opportunity* to solve drift,

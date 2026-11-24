@@ -90,7 +90,7 @@ real 301 and keep the meta refresh as the fallback.
 ```bash
 sed -i 's/new-guide.md$/gone.md/' mkdocs.yml
 python3 -m mkdocs build 2>&1 | grep -i redirect
-echo "exit=$?"
+echo "exit=${PIPESTATUS[0]}"   # the build's status, not grep's
 ```
 
 ```

@@ -9,7 +9,7 @@ tags: [craft, supporting]
 
 # Prioritizing documentation work
 
-`core` · difficulty 2 · 3h
+`supporting` · difficulty 2 · 3h
 
 > Using data to decide what to build, fix or retire next.
 
@@ -40,7 +40,7 @@ promised, and forty pages marked for review. You can do maybe three things this
 week. Without a basis, the three you do are whichever came with the most senior
 request attached, which is a reasonable heuristic and an expensive one.
 
-The reason it is `core`: the backlog in this field is unbounded. The product
+The reason it matters every week: the backlog in this field is unbounded. The product
 ships continuously, every release creates potential gaps, and the corpus ages
 whether you touch it or not. Prioritization is not an occasional planning
 activity, it is the mechanism that converts an infinite queue into a finite week.

@@ -537,8 +537,8 @@ and people learned not to try.
 
 ## Explaining it to your team
 
-**How to explain it.** Lead with the two refusals, because it
-is the design decision that shows you have operated one. "The retrieval is the
+**How to explain it.** Lead with the two refusals, because they
+are the design decision that shows you have operated one. "The retrieval is the
 easy half. The thing that decided whether ours was useful was separating two
 refusals: out of scope, which points you elsewhere, and low confidence, which
 says we should cover this and do not and logs your exact wording. Conflating
