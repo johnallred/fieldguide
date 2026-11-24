@@ -13,8 +13,6 @@ tags: [qa, core]
 
 > Testing quickstarts from a clean environment, the way a new developer meets them.
 
-    "Treats setup, runnable samples, and docs as one product ... so a developer reaches first success in minutes with zero help"
-
 **Prerequisites:** [Code-sample validation](code-sample-validation.md), [Reproducible environments](reproducible-environments.md)
 
 ## What it is

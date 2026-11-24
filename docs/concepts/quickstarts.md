@@ -13,8 +13,6 @@ tags: [gp, core]
 
 > Writing quickstarts that still work when a new developer follows them cold.
 
-    "so a developer reaches first success in minutes with zero help"
-
 **Prerequisites:** [Golden paths](golden-paths.md)
 
 ## What it is

@@ -13,8 +13,6 @@ tags: [dac, core]
 
 > Writing in Markdown every day, and knowing which dialect your build pipeline actually speaks.
 
-    "Git, Markdown or MDX, and doc build pipelines"
-
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 
 **Leads to:** [MDX](mdx.md), [reStructuredText](restructuredtext.md), [Choosing a static site generator](static-site-generators.md)

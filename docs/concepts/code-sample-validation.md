@@ -13,8 +13,6 @@ tags: [qa, core]
 
 > Proving every code sample in the docs still runs and still produces what the page says.
 
-    "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
-
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 
 **Leads to:** [Multi-platform parity](multi-platform-parity.md)

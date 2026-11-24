@@ -13,8 +13,6 @@ tags: [gp, core]
 
 > Designing and maintaining the routes that take a developer from a clean environment to a working result.
 
-    "Treats setup, runnable samples, and docs as one product, engineering docs-as-code with cold-start and link CI so a developer reaches first success in minutes with zero help"
-
 **Prerequisites:** [Diátaxis](diataxis.md)
 
 **Leads to:** [Quickstarts that survive contact](quickstarts.md), [Reproducible environments](reproducible-environments.md)

@@ -13,8 +13,6 @@ tags: [dac, core]
 
 > Writing in Git: branches, pull requests and review, in Markdown or RST, built by a static site generator.
 
-    "Hands on experience with docs-as-code workflows and documentation CI, including Git, Markdown or MDX, and doc build pipelines"
-
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 
 **Leads to:** [Reviewing documentation](docs-review.md)

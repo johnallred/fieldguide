@@ -13,8 +13,6 @@ tags: [qa, core]
 
 > Running automated checks on every documentation change before it merges.
 
-    "Build and run docs-as-code pipelines: Git authoring, CI/CD builds, linting, link and code-sample validation, and publishing"
-
 **Prerequisites:** [Docs-as-code](docs-as-code.md), [Git authoring workflows for writers](git-authoring.md)
 
 ## What it is
