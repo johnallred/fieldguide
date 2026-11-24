@@ -34,7 +34,7 @@ Pull request review belongs with Git and CI, as part of the same workflow. That
 grouping is the point: review is one stage of a pipeline, not a substitute for
 one.
 
-The failure mode in most organisations is a review checklist that grew by
+The failure mode in most organizations is a review checklist that grew by
 accretion. A reviewer is asked to verify terminology, link validity, heading
 case, sample correctness and British spelling, all of which a machine does
 better. By the time they reach the only question that matters, whether the
@@ -138,7 +138,7 @@ checklist written two years ago is asking humans to do work a machine now does.
 
 Executing the steps proves the sequence *runs*. It says nothing about whether
 this is the sequence a real user needs, whether step 3 is reassuring or
-patronising, whether the page should exist at all, or whether it answers the
+patronizing, whether the page should exist at all, or whether it answers the
 question people actually arrive with. Those are the review questions, and
 there are fewer of them than most checklists contain.
 
@@ -257,7 +257,7 @@ prevents it.
 ### How this would be demonstrated elsewhere
 
 Review is two people and a diff, so a single-author repository removes it by
-construction. The mechanisable part is here, as linters and a page contract;
+construction. The mechanizable part is here, as linters and a page contract;
 the part that matters is what a human catches that no check can.
 
 **What you need.** Someone else's draft, and the standing to comment on it.

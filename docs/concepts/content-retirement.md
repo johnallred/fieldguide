@@ -32,7 +32,7 @@ This matters because an unretired corpus degrades in a way that no amount of wri
 Every stale page competes with a current one in search, dilutes
 [retrieval](rag.md), and costs a reviewer attention. Past a certain size the
 most valuable documentation work available is deletion, and nobody is
-authorised to do it.
+authorized to do it.
 
 Treating retirement as a measurement outcome is the important part. The
 decision to retire needs evidence, which means it needs the
@@ -113,7 +113,7 @@ exit=1
 ```
 
 With `--strict`, a dangling redirect target fails the build. Measured
-behaviour, all three cases:
+behavior, all three cases:
 
 | Case | Build | Result |
 |---|---|---|
@@ -227,7 +227,7 @@ retirement checklist written before 2023.
 ## Putting it into practice
 
 **The work product.** A retirement that happened: a redirect, the internal links
-rewritten in the same commit, and a written policy that authorised it.
+rewritten in the same commit, and a written policy that authorized it.
 
 **Three things to do, in order:**
 
@@ -241,7 +241,7 @@ rewritten in the same commit, and a written policy that authorised it.
 **How to tell it is working.** Neither of this guide's
 repositories has retired anything, which the [demonstrated](../demonstrated.md)
 page records, and a project with no readers has no retirement evidence to act
-on. What travels is the measured behaviour of the mechanism and the
+on. What travels is the measured behavior of the mechanism and the
 retrieval-index point, which is the part of the checklist most teams are
 currently missing.
 

@@ -22,7 +22,7 @@ each step assumes the ones above it.
 
 ## 1. [Content models](../concepts/content-model.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Defining the types of content your team writes and the fields each one must carry.
 
@@ -32,7 +32,7 @@ Also in: [A working result in a weekend](prove-it.md), [The content architect](c
 
 ## 2. [Metadata for navigation and retrieval](../concepts/metadata.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Tagging content so navigation, search and AI retrieval can all find the right page.
 
@@ -42,7 +42,7 @@ Also in: [The content architect](content-architect.md), [Found by search and ans
 
 ## 3. [Agent-ready content](../concepts/agent-ready-content.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Structuring knowledge so AI assistants and agents can use it as reliably as people can.
 
@@ -62,7 +62,7 @@ Also in: [A working result in a weekend](prove-it.md), [Found by search and answ
 
 ## 5. [Documentation for coding agents](../concepts/coding-agents.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Making documentation usable by coding agents as well as by search engines and people.
 
@@ -80,7 +80,7 @@ Also in: [A working result in a weekend](prove-it.md).
 
 ## 7. [Embeddings](../concepts/embeddings.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Turning content into vectors so it can be searched by meaning, the first step of any RAG pipeline.
 
@@ -104,7 +104,7 @@ Builds on, earlier in this path: Chunking strategies, Vector stores and hybrid s
 
 ## 10. [Grounding and citation](../concepts/grounding.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Making AI answers cite and stay within the documentation they draw on.
 
@@ -156,7 +156,7 @@ Also in: [A working result in a weekend](prove-it.md).
 
 ## 16. [Agent skills and context kits](../concepts/agent-skills.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Packaging instructions and context so agents can do a task the way your team does it.
 

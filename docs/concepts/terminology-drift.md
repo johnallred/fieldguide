@@ -100,7 +100,7 @@ data set                  0      2     0%  dataset(1), data-set(1)
 access token              1      3    33%  API key(1), auth token(1)
 ```
 
-Sixty per cent conformance on `widget`. That number is wrong, and wrong in the
+Sixty percent conformance on `widget`. That number is wrong, and wrong in the
 flattering direction.
 
 **Step 3: find out why**
@@ -194,7 +194,7 @@ worst pages: docs/b.md (3), docs/c.md (3)
 FAIL: 6 deprecated usage(s)
 ```
 
-`widget` drops from 60 per cent to 33 per cent, which is the true figure. The
+`widget` drops from 60 percent to 33 percent, which is the true figure. The
 masking also gives you the two outputs that make this actionable: a per-term
 rate, and a ranked list of which pages to fix first.
 

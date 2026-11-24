@@ -29,7 +29,7 @@ content auditing should cover. They share a shape: correct when written,
 falsified by something that happened elsewhere.
 
 Freshness is the hardest of the three to measure honestly, which is why most
-implementations are theatre. A "last updated" date in a footer tells a reader
+implementations are theater. A "last updated" date in a footer tells a reader
 almost nothing: a page edited yesterday to fix a typo is no more accurate than
 it was the day before, and a page untouched for three years documenting
 something that has not changed in three years is perfectly correct.

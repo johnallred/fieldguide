@@ -15,9 +15,9 @@
 #   name          display name.
 #   category      one of the closed set in `categories` below.
 #   tier          core      you cannot do this work without it
-#                 supporting you will be asked to do it, it is not the centre
+#                 supporting you will be asked to do it, it is not the center
 #                 context    you need to not be lost in the room
-#   difficulty    1 read it  2 practise it  3 build something non-trivial
+#   difficulty    1 read it  2 practice it  3 build something non-trivial
 #   time          honest estimate to working competence, not to familiarity
 #   prerequisites concept ids that should come first. Validated as a DAG.
 #   in_practice   one line naming the day-to-day work that needs this concept
@@ -59,7 +59,7 @@ concepts:
     time: 4h
     prerequisites: []
     in_practice:
-      - "Deciding how content is modelled, classified and tagged so people can navigate it and machines can retrieve it."
+      - "Deciding how content is modeled, classified and tagged so people can navigate it and machines can retrieve it."
     status: complete
 
   - id: knowledge-architecture
@@ -70,7 +70,7 @@ concepts:
     time: 6h
     prerequisites: [information-architecture]
     in_practice:
-      - "Working with documentation leads on how knowledge is organised across products, teams and sources."
+      - "Working with documentation leads on how knowledge is organized across products, teams and sources."
     status: complete
 
   - id: diataxis
@@ -283,7 +283,7 @@ concepts:
     time: 3h
     prerequisites: [static-site-generators]
     in_practice:
-      - "Recognising and maintaining Antora and AsciiDoc sites you inherit; rarely the choice for a new one."
+      - "Recognizing and maintaining Antora and AsciiDoc sites you inherit; rarely the choice for a new one."
     status: complete
 
   - id: api-reference-generation
@@ -368,7 +368,7 @@ concepts:
     status: complete
 
   # The individual checks come before the practice of automating them. You run
-  # a link checker on a tree long before you own a pipeline, and modelling it
+  # a link checker on a tree long before you own a pipeline, and modeling it
   # the other way round made the first-week path teach CI before the thing CI
   # runs. `fieldguide check` caught that as a path ordering violation.
   - id: link-checking
@@ -706,7 +706,7 @@ concepts:
     time: 6h
     prerequisites: [prompting, content-lifecycle]
     in_practice:
-      - "Using LLMs to draft, update and audit content, with human review where judgement matters."
+      - "Using LLMs to draft, update and audit content, with human review where judgment matters."
     status: complete
 
   - id: mcp
@@ -1468,7 +1468,7 @@ paths:
     group: role
     name: The content architect
     audience: A writer or engineer who owns structure across a growing corpus.
-    summary: From a folder of Markdown to a modelled, governed, machine-readable corpus.
+    summary: From a folder of Markdown to a modeled, governed, machine-readable corpus.
     concepts:
       - information-architecture
       - diataxis
@@ -1615,7 +1615,7 @@ paths:
     name: The writer who builds
     audience: >-
       A writer who also builds tooling, and needs the half of the work that is
-      judgement and collaboration rather than tooling.
+      judgment and collaboration rather than tooling.
     summary: The craft and the working relationships, which no pipeline substitutes for.
     concepts:
       - technical-writing

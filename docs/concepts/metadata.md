@@ -64,7 +64,7 @@ generated      53       43%
 ```
 
 Coverage is the first question because an optional field cannot be built on. A
-filter on `tags` here would silently exclude 48 per cent of the corpus, and the
+filter on `tags` here would silently exclude 48 percent of the corpus, and the
 result would look like a retrieval problem rather than a metadata problem.
 
 **Step 2: check that the populated fields are true**
@@ -77,7 +77,7 @@ generated pages by diataxis: {'reference': 53}
 hand-written by diataxis:    {'how-to': 22, 'explanation': 46}
 ```
 
-`diataxis` had 100 per cent coverage, three legal values, and was **wrong on 53
+`diataxis` had 100 percent coverage, three legal values, and was **wrong on 53
 pages**. The placeholder generator hardcoded `reference`, so that value meant
 "not written yet" while no real page used it.
 
@@ -127,14 +127,14 @@ meta description: A validated curriculum for documentation engineering, ...
 
 Every one of those 46 pages fell back to the site description, because its own
 `summary` was unreadable. A navigation-and-SEO symptom caused by a
-serialisation bug, which is why this check belongs next to the metadata work
+serialization bug, which is why this check belongs next to the metadata work
 rather than in the SEO work.
 
 **Step 5: fix all three classes**
 
 | Problem | Fix |
 |---|---|
-| Unparseable front matter | Serialise with `yaml.safe_dump`, never f-strings |
+| Unparseable front matter | Serialize with `yaml.safe_dump`, never f-strings |
 | A field that lies | Add the honest value: `diataxis: placeholder` |
 | A field with no reader | Give it one, so drift fails a build |
 
@@ -220,7 +220,7 @@ of it."
 
 **The follow-up is how you keep it honest**, and the answer is reader count. A
 field with more writers than readers will be wrong and nothing will report it.
-I had a fully populated, closed-vocabulary field that was wrong on 44 per cent
+I had a fully populated, closed-vocabulary field that was wrong on 44 percent
 of pages for exactly that reason.
 
 **The tradeoff to name.** Every required field is a tax on contribution
@@ -253,8 +253,8 @@ value distribution per field, and reader count per field.
 through into its retrieval artifacts, so each chunk keeps its source, heading
 trail and page type, and `summary` is indexed for search after an evaluation
 showed it was being ignored. The more useful story is the audit above: a field
-at 100 per cent coverage, legal values, zero readers, wrong on 44 per cent of
-pages, and the serialisation bug underneath it.
+at 100 percent coverage, legal values, zero readers, wrong on 44 percent of
+pages, and the serialization bug underneath it.
 
 ## Related
 

@@ -31,7 +31,7 @@ Also in: [The first week](first-week.md), [A working result in a weekend](prove-
 
 ## 2. [Git authoring workflows for writers](../concepts/git-authoring.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Writing in Git: branches, pull requests and review, in Markdown or RST, built by a static site generator.
 
@@ -41,7 +41,7 @@ Also in: [The first week](first-week.md).
 
 ## 3. [Documentation CI](../concepts/documentation-ci.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Running automated checks on every documentation change before it merges.
 
@@ -51,7 +51,7 @@ Also in: [The first week](first-week.md), [A working result in a weekend](prove-
 
 ## 4. [GitHub Actions for docs](../concepts/github-actions.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Writing and maintaining the CI workflows that build, check and publish your documentation.
 
@@ -69,7 +69,7 @@ Also in: [The first week](first-week.md), [A working result in a weekend](prove-
 
 ## 6. [Prose linting with Vale](../concepts/prose-linting.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Enforcing your style guide automatically with Vale, so reviews argue with a rule rather than a person.
 
@@ -87,7 +87,7 @@ Builds on, earlier in this path: Prose linting with Vale.
 
 ## 8. [Accessibility checks](../concepts/accessibility.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Making sure published content is usable by everyone, which applies to every page you ship.
 
@@ -105,7 +105,7 @@ Also in: [A working result in a weekend](prove-it.md), [The lab engineer](lab-en
 
 ## 10. [Diagrams as code](../concepts/diagrams-as-code.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Keeping architecture and pipeline diagrams in the repository as text, reviewed like code and checked against the system they describe.
 
@@ -145,7 +145,7 @@ Also in: [A working result in a weekend](prove-it.md), [The lab engineer](lab-en
 
 ## 14. [Freshness monitoring](../concepts/freshness-monitoring.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Checking automatically that content is still current, and routing what is not to a human.
 
@@ -155,7 +155,7 @@ Assumes, from outside this path: [Content lifecycle and governance](../concepts/
 
 ## 15. [Preview deployments and publishing](../concepts/preview-deployments.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Previewing every documentation change as a built site, and publishing it when it merges.
 
@@ -163,7 +163,7 @@ Builds on, earlier in this path: GitHub Actions for docs.
 
 ## 16. [Reviewing documentation](../concepts/docs-review.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Reviewing documentation pull requests for accuracy, structure and style.
 
@@ -175,7 +175,7 @@ Also in: [The writer who builds](writer-who-builds.md).
 
 ## 17. [Templates and scaffolding](../concepts/templates-scaffolding.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Encoding team standards into templates and scaffolds, so the right shape is the default.
 

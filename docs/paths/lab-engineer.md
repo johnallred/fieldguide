@@ -33,7 +33,7 @@ Also in: [A working result in a weekend](prove-it.md), [The documentation engine
 
 ## 2. [Documentation CI](../concepts/documentation-ci.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Running automated checks on every documentation change before it merges.
 

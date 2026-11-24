@@ -228,13 +228,13 @@ you cannot test in CI is a route that will be broken and unnoticed, which
 makes it a worse default than a slightly less popular route you can verify
 every night.
 
-### Golden path against its neighbours
+### Golden path against its neighbors
 
 | Concept | Is |
 |---|---|
-| Golden path | The one supported route, the organising decision |
+| Golden path | The one supported route, the organizing decision |
 | [Quickstart](quickstarts.md) | The page that implements it, usually the shortest one |
-| [Tutorial](tutorial-design.md) | Teaching; a golden path optimises for working, not learning |
+| [Tutorial](tutorial-design.md) | Teaching; a golden path optimizes for working, not learning |
 | [Sample walkthrough](sample-walkthroughs.md) | Explaining existing code, not building up to it |
 | How-to | One task, assumes you are already set up |
 

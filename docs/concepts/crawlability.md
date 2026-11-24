@@ -33,7 +33,7 @@ you own rather than something you know, which tells you it is operational work:
 redirects, sitemaps, render modes, robots rules.
 
 What makes this `supporting` rather than `core` is that it is mostly checks
-rather than judgement. It earns a page because **it is the failure that makes
+rather than judgment. It earns a page because **it is the failure that makes
 every other investment worthless**, and it is invisible from inside. Your
 documentation site looks perfect in your browser, which is running JavaScript,
 following your redirects, and already signed in.

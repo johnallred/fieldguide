@@ -89,7 +89,7 @@ total such competing entries: 1
 ```
 
 **One.** There is no duplication problem. The 7-of-90 figure came from my own
-length normalisation: dividing term frequency by document length rewards short
+length normalization: dividing term frequency by document length rewards short
 sections, and a path page's one-line entry for a concept is about as short as a
 document gets. MkDocs Material uses lunr, with boosted title fields and
 different length handling, and does not rank this way.
@@ -168,7 +168,7 @@ else measures the content you do.
 
 **What you built.** A retrieval proxy that produced a plausible wrong finding,
 the structural check that disproved it, three measurements that survive without
-a scorer including 47 per cent of an index sharing seven titles, and a
+a scorer including 47 percent of an index sharing seven titles, and a
 demonstration that a hand-written query set missed the first real question it
 met.
 
@@ -244,7 +244,7 @@ it wrong.** I built a scorer over my own search index to check whether each page
 ranks first for its own name, and got seven of ninety, which looked like a
 catastrophe with a tidy explanation about generated pages competing for terms.
 The explanation was structural, so I checked it, and exactly one competing
-entry existed. The seven-of-ninety was my own length normalisation rewarding
+entry existed. The seven-of-ninety was my own length normalization rewarding
 short sections. I had built a proxy for search to avoid needing query data, and
 measured the proxy.
 

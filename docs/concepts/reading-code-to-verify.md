@@ -70,7 +70,7 @@ posts, and small enough to navigate.
 
 **Step 2: pick claims that are checkable**
 
-A claim is checkable when it names a value, a type, or a behaviour on a
+A claim is checkable when it names a value, a type, or a behavior on a
 specific input. "Requests is user-friendly" is not checkable.
 
 ```bash
@@ -122,7 +122,7 @@ An earlier draft of this page asserted that `requests.get` shows
 
 **Step 4: when the signature is not enough, read the body**
 
-Claim 3 is about behaviour, so the signature cannot answer it.
+Claim 3 is about behavior, so the signature cannot answer it.
 
 ```bash
 python3 - <<'PY'
@@ -181,7 +181,7 @@ first answers in thirty seconds what otherwise becomes a Slack thread.
 | Read the docstring, then distrust it | What the author intended | Seconds |
 | Grep for the constant | Where a magic number really comes from | A minute |
 | Read the function body's conditionals | Boundaries, error paths | Minutes |
-| Read the tests | Intended behaviour, including edge cases | Minutes |
+| Read the tests | Intended behavior, including edge cases | Minutes |
 | Run it | The truth | Minutes |
 
 **The tests are the most underrated row.** A test suite is executable
@@ -244,7 +244,7 @@ That last clause is the one that gets remembered, because it is
 compiled component, a service you have no access to, a C++ simulation kernel.
 This is a real situation at any company with a large native codebase. The honest answer has three
 parts. Read the public API surface and the tests, which are usually available
-even when the implementation is not. Verify behaviour by running it and
+even when the implementation is not. Verify behavior by running it and
 observing, which is slower but authoritative. And when neither is possible,
 **document the claim's provenance in the page**, so a future reader knows it
 came from an engineer's statement in 2026 rather than from the code. The failure
@@ -254,7 +254,7 @@ verified one.
 **The tradeoff to name.** Verification is slow, and the slowness is not
 distributed evenly: it is most expensive exactly when you are new, which is when
 you have the most pages to write. A writer who verifies every claim on every
-page ships very little. The judgement is about which claims are worth it, and
+page ships very little. The judgment is about which claims are worth it, and
 the useful heuristic is **verify anything a reader will paste, and anything
 numeric.** A conceptual sentence being slightly imprecise costs a reader some
 confusion. A wrong default costs them an afternoon.
@@ -276,7 +276,7 @@ maintain is full of opportunities for it.
 **Three things to do, in order:**
 
 1. **Run the golden path, then do it for real.** Pick a library you use, choose
-   five documented claims about defaults or error behaviour, and check them. In
+   five documented claims about defaults or error behavior, and check them. In
    a mature project you will find at least one wrong. File it.
 2. **Write the check that would have caught it.** If the claim was a default
    value, write twenty lines that compare documented defaults against
@@ -326,7 +326,7 @@ is a claim the documentation should not have made in that form.
 | Claim correct, hard to verify | common | The value is now indirect; say where it comes from |
 | Claim stale: true of an older version | a few | The commonest documentation defect of all |
 | Claim true of one path, false of another | a few | The most dangerous kind |
-| Claim unverifiable from source alone | some | Runtime or deployment behaviour |
+| Claim unverifiable from source alone | some | Runtime or deployment behavior |
 
 The fourth row is the one worth hunting. "Idempotent" is usually true of the
 documented endpoint and false of a code path reached under retry, and that

@@ -90,7 +90,7 @@ something continuous. A concept that is genuinely between `core` and
 `supporting` gets rounded, and the rounding is invisible to a reader.
 
 **A hundred and twenty concepts in one flat namespace is near the limit of
-what this model carries well.** There is no sub-categorisation and no notion of a concept
+what this model carries well.** There is no sub-categorization and no notion of a concept
 that is a special case of another. At two hundred concepts this file would need
 to become a directory, and the generator would need to grow a notion of
 hierarchy it currently does not have.

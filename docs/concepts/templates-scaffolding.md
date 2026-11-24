@@ -39,7 +39,7 @@ used every time.
 The deeper reason is that it makes the standard the path of least resistance,
 or, put another way, it builds a system where the right way is easier than the
 wrong way. An author who runs `fieldguide new` gets the contract for
-free. An author who copies a neighbouring page gets whatever that page had.
+free. An author who copies a neighboring page gets whatever that page had.
 
 The failure mode this page is really about is more interesting: a scaffold is
 so helpful that it can accidentally satisfy the checks that were supposed to
@@ -161,7 +161,7 @@ was counting them. So the arithmetic an author faced was:
 real prose required to cross the 450-word gate: ~74 words
 ```
 
-Seventy-four. A gate meant to require a substantial page was 84 per cent
+Seventy-four. A gate meant to require a substantial page was 84 percent
 pre-satisfied by the template's own instructions, so two paragraphs and a
 status change would mark a page complete with most of its prompts unanswered.
 
@@ -278,7 +278,7 @@ weaken your quality gates. Mine put 289 of roughly 380 words into prompt
 comments, and because the word-count gate counted raw words, an author needed
 only 74 words of real prose to mark a page complete. The fix was to count
 prose rather than instructions, which left the threshold unchanged and changed
-what it meant from 74 words to 363. The lesson generalises: when you add a
+what it meant from 74 words to 363. The lesson generalizes: when you add a
 generator, re-derive every metric that counts the generated artifact.
 
 ## Putting it into practice
@@ -296,11 +296,11 @@ own text.
    the worst writing. It is the cheapest editorial intervention available.
 
 **How to tell it is working.** `docpack` has
-`docpack new <type> --title`, which serialises front matter with
+`docpack new <type> --title`, which serializes front matter with
 `yaml.safe_dump` after an f-string version broke on its own default
 placeholder, and this guide's `fieldguide new` is checked against the
 validator in CI. The story to tell is step 4: the
-scaffold was quietly supplying 84 per cent of a gate meant to hold authors to
+scaffold was quietly supplying 84 percent of a gate meant to hold authors to
 a standard, and nothing was wrong with either piece on its own.
 
 ## Related

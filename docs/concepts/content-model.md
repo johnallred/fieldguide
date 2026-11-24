@@ -30,7 +30,7 @@ actually fails a build. The golden path does exactly that, twelve times.
 
 ## How this applies to your role
 
-Content modelling comes first in information architecture work, ahead of
+Content modeling comes first in information architecture work, ahead of
 taxonomy and metadata, which is the right order: the
 model is the thing the other two attach to.
 
@@ -203,7 +203,7 @@ mattered most for machine readability.
 | Relationships | `prerequisites`, acyclic | Graph check |
 | Structural contract | Seven required sections, 450 words | File check |
 | Both-directions coverage | No page without a concept, no concept without a page | File check |
-| Serialisation validity | Front matter parses as YAML | The check added in step 5 |
+| Serialization validity | Front matter parses as YAML | The check added in step 5 |
 
 The last row is the one most models omit, and it is the cheapest of all of
 them.

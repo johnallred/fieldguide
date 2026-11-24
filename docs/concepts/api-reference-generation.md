@@ -26,7 +26,7 @@ construction.
 
 The part worth understanding precisely is which drift this removes and which it
 does not. Generation makes signatures correct automatically. It does nothing
-for prose that describes behaviour, and it does nothing for the links *into*
+for prose that describes behavior, and it does nothing for the links *into*
 the reference unless you use the right reference syntax.
 
 ## How this applies to your role
@@ -201,7 +201,7 @@ and most teams have only the first.
 | A default value changed | Yes |
 | A function removed | Yes, the build fails |
 | A link to a removed symbol | **No**, unless you use symbol references |
-| Prose describing behaviour | No |
+| Prose describing behavior | No |
 | An example that no longer runs | No; see [sample validation](code-sample-validation.md) |
 | Which functions deserve a tutorial | No |
 

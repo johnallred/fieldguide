@@ -31,7 +31,7 @@ rather than hand-tuned per page.
 
 ## How this applies to your role
 
-Optimising technical content for search (SEO and GEO) and for AI assistants is
+Optimizing technical content for search (SEO and GEO) and for AI assistants is
 part of developer-facing documentation work. That is unusual for
 engineering-adjacent work, and it tells you something about the job: the front
 door is a search result page you do not own.
@@ -292,7 +292,7 @@ Two honest residuals. `install widget cli` still wins on 1 of 3 terms, because
 headings: it wins by default rather than by merit, and a competing page would
 take it. And `how` is missing from the fixed page, which is correct, since
 reference pages should not be titled as questions. The check reports it; you
-decide it does not matter. That is the right division of labour between a linter
+decide it does not matter. That is the right division of labor between a linter
 and a person.
 
 ## Reference
@@ -364,7 +364,7 @@ ticket subject lines, and the zero-click queries from Search Console are all
 cheap and all underused. A list of fifty real phrasings is worth more than any
 amount of SEO advice, and gathering it is an afternoon.
 
-**The tradeoff to name.** Optimising for search vocabulary pulls titles
+**The tradeoff to name.** Optimizing for search vocabulary pulls titles
 toward symptoms and away from structure, and a corpus titled entirely by symptom
 is hard to navigate for someone browsing rather than searching. "Fix an
 out-of-memory error under load" is a better search result and a worse table-of-
@@ -379,7 +379,7 @@ vocabulary-matching problems between a reader's phrasing and an author's. A
 summary written in the reader's words improves the search snippet, the retrieval
 snippet, the [llms.txt](llms-txt.md) annotation and the embedding, all at once,
 from one edit. That is why the content model's `summary` field is load-bearing
-far out of proportion to its size, and why "optimise for SEO and GEO" is one task rather than two.
+far out of proportion to its size, and why "optimize for SEO and GEO" is one task rather than two.
 
 ## Putting it into practice
 
@@ -392,7 +392,7 @@ against real queries, plus one before-and-after page.
    especially the ones with no click. Ten minutes, and it is the input
    everything else needs.
 2. **Run the vocabulary check** and list the pages whose surface lacks their own
-   readers' words. That list is a prioritised backlog nobody else has.
+   readers' words. That list is a prioritized backlog nobody else has.
 3. **Generate the head tags from front matter** and add a CI check that the
    descriptions are not all identical. The commonest real-world failure is a
    site serving one site-wide description on every page, which looks fine and

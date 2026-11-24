@@ -196,7 +196,7 @@ each layer contributes, and two scoped fixes.
 | Budget | The account | n/a | How much, noticed in time |
 
 An explicit deny in any policy layer overrides every allow. An SCP does not
-apply to the organisation's management account or to service-linked roles, so
+apply to the organization's management account or to service-linked roles, so
 a sandbox account is never the management account.
 
 ### Common gaps
@@ -238,7 +238,7 @@ the same layers, and they are worth reading too:
   CDK's documented default the stacks themselves deploy with administrator
   access. A scoped CI role in front of an administrator deployer is the shape
   of most lab accounts, and the place a learner sandbox needs the most care.
-- An organisation service control policy denied a deploy that went to the
+- An organization service control policy denied a deploy that went to the
   wrong region, as `infra/app.py` records. The guardrail worked; the error it
   produced talked about bootstrap versions, not regions, which is a reminder to
   make guardrail denials legible to the people who hit them.

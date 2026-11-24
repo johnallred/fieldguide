@@ -236,7 +236,7 @@ is that it is not a plan. Pair it with one of the others.
 | Failure modes that are confusing | Anything that works first time |
 | Judgment calls with no single right answer | Mechanical procedure |
 | Work people will not start alone | Work they will happily read |
-| Anything where watching a neighbour helps | Reference material |
+| Anything where watching a neighbor helps | Reference material |
 | Material where *you* need to watch them | Material you already have feedback on |
 
 The bottom-right cell is the trap: well-understood material is the most

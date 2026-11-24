@@ -376,7 +376,7 @@ cp -r docs site/docs
 Adoption is real, including by several developer-tools companies, and
 scepticism about it is also real. Present it internally as cheap and
 low-risk rather than as an established standard, because somebody in the room
-will know it is contested and a claim of standardisation will cost you their
+will know it is contested and a claim of standardization will cost you their
 trust.
 
 ## Explaining it to your team

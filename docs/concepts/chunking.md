@@ -447,7 +447,7 @@ chunk per page and is worse than a window. That dependency is why
 And **section sizes vary enormously**, which means your chunks do too. A
 retrieval system tuned for uniform chunks will behave oddly: a 90-character
 chunk and a 1,200-character chunk do not compete fairly under most scoring
-functions, which is part of why BM25 length normalisation and similar corrections
+functions, which is part of why BM25 length normalization and similar corrections
 exist.
 
 **One sharper point.** The strongest framing is that **chunking is an information

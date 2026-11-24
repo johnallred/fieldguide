@@ -718,7 +718,7 @@ def test_every_unprovable_concept_says_how_it_would_be_shown():
     `BLOCKED_DEMONSTRATIONS` above predates the triage in
     `demonstrations.yaml` and is kept because it records *why* each one is
     blocked in a form a reader of this file can see. This check is the general
-    one: anything the register marks `blocked` or `needs-organisation` owes the
+    one: anything the register marks `blocked` or `needs-organization` owes the
     reader an account of how the skill would be demonstrated, because those are
     exactly the two reasons that no amount of work on this repository will fix.
     """
@@ -731,7 +731,7 @@ def test_every_unprovable_concept_says_how_it_would_be_shown():
     owed = {
         cid
         for cid, reason in demonstrations.triage.items()
-        if reason in ("blocked", "needs-organisation")
+        if reason in ("blocked", "needs-organization")
     }
     assert owed, "the register marks nothing unprovable, which cannot be right"
 

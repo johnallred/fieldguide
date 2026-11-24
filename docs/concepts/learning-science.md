@@ -35,14 +35,14 @@ On a Tuesday it looks like this. An engineer hands you a tutorial: three
 paragraphs explaining how retries work, a paragraph on choosing a value, and
 one exercise at the end. It is accurate. It also teaches in the order the
 engineer understands the system rather than the order a newcomer can absorb
-it, never says what the reader is building, gives them nothing to practise
+it, never says what the reader is building, gives them nothing to practice
 until the end, and never checks whether they could diagnose the failure the
 feature exists to handle. You can say "this does not work for learners", and
 the engineer can say "it reads fine to me", and both are true.
 
 Learning science is what turns that disagreement into something checkable.
 "The objective about diagnosing an exhausted retry budget is never demonstrated,
-practised or checked" is not a style preference. Nor is "the first practice is
+practiced or checked" is not a style preference. Nor is "the first practice is
 an unsupported problem, and novices learn more from a worked example first."
 Each of those has decades of research behind it, and each changes the page.
 
@@ -116,7 +116,7 @@ faded from worked to independent: no
 ```
 
 Three findings, each a principle the page violates. The task never appears,
-so nothing is problem-centred. No objective is demonstrated, practised and
+so nothing is problem-centred. No objective is demonstrated, practiced and
 checked, so nothing is aligned, and the third objective is not taught at all
 even though it is the reason retries exist. The only practice is an
 unsupported problem, with no worked example before it.
@@ -205,7 +205,7 @@ practice sequence: worked -> completion -> independent
 faded from worked to independent: yes
 ```
 
-Every objective is demonstrated, practised and checked, the task leads, and
+Every objective is demonstrated, practiced and checked, the task leads, and
 practice fades from worked to independent.
 
 **Step 5: read what the score cannot see**
@@ -255,13 +255,13 @@ audit cannot measure: expertise reversal and learning itself.
 ### Evaluation levels, and the documentation version of each
 
 The Kirkpatrick model names four levels of training outcome: reaction,
-learning, behaviour and results.
+learning, behavior and results.
 
 | Level | Classic measure | Documentation equivalent |
 |---|---|---|
 | Reaction | Satisfaction survey | Page feedback, "was this helpful" |
 | Learning | Test after training | A retrieval check, a [cold-start run](coldstart-testing.md) |
-| Behaviour | Changed practice on the job | The reader uses the feature correctly in their own code |
+| Behavior | Changed practice on the job | The reader uses the feature correctly in their own code |
 | Results | Business outcome | [Support deflection](support-deflection.md), [time to first success](time-to-first-success.md) |
 
 The testing effect is a warning about the first row: readers who reread feel
@@ -272,7 +272,7 @@ mislead you.
 
 Opened and checked on 2026-11-23:
 
-- Merrill, M. D. (2002). First principles of instruction. *Educational Technology Research and Development*, 50(3), 43–59. Principles as summarised by [MIT Open Learning](https://openlearning.mit.edu/first-principles-instruction).
+- Merrill, M. D. (2002). First principles of instruction. *Educational Technology Research and Development*, 50(3), 43–59. Principles as summarized by [MIT Open Learning](https://openlearning.mit.edu/first-principles-instruction).
 - Biggs, J. Constructive alignment in university teaching. *HERDSA Review of Higher Education*, 1. [PDF](https://www.tru.ca/__shared/assets/herdsa33493.pdf).
 - Renkl, A., Atkinson, R. K., Maier, U. H., & Staley, R. (2002). From example study to problem solving: Smooth transitions help learning. *The Journal of Experimental Education*, 70(4), 293–315.
 - Kalyuga, S., Ayres, P., Chandler, P., & Sweller, J. (2003). The expertise reversal effect. *Educational Psychologist*, 38(1), 23–31. [Record](https://ro.uow.edu.au/edupapers/136).
@@ -317,7 +317,7 @@ expert route added and a retrieval check at the end.
 **Three things to do, in order:**
 
 1. Run the golden path, then mark up one real tutorial you maintain and audit
-   it. Expect at least one objective that is promised and never practised.
+   it. Expect at least one objective that is promised and never practiced.
 2. Replace the closing summary of one tutorial with three questions answered
    from memory. Record how often readers get them right.
 3. Add a one-line route for experienced readers to the tutorial with the most

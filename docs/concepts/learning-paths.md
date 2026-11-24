@@ -30,7 +30,7 @@ lists of links with a heading.
 
 ## How this applies to your role
 
-This matters because [Diátaxis](diataxis.md) organises content by its kind, and a reader
+This matters because [Diátaxis](diataxis.md) organizes content by its kind, and a reader
 does not arrive with a kind. They arrive with a job.
 
 A corpus sorted into tutorials, how-to guides, reference and explanation is

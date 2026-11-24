@@ -128,7 +128,7 @@ exit=1
 
 Two defect classes, and they are different in kind.
 
-`stale` is **drift**: the sample runs and its behaviour changed, which only an
+`stale` is **drift**: the sample runs and its behavior changed, which only an
 output assertion catches, exactly as on the
 [code-sample validation](code-sample-validation.md) page. `missing` is worse:
 a gallery entry with a title, a description and no code. Somebody listed a
@@ -239,7 +239,7 @@ only whether it runs.
 | Failure | Cause | Detected by |
 |---|---|---|
 | A sample no longer runs | Dependency or API change | Running it in CI |
-| A sample runs and lies | Behaviour drifted | An output assertion |
+| A sample runs and lies | Behavior drifted | An output assertion |
 | A listed sample does not exist | Someone listed an intention | Entrypoint check |
 | The gallery covers nothing readers need | Samples follow feature launches | The demand measurement |
 | Forty samples, six broken | No per-sample ownership | All of the above, plus retirement |

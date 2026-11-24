@@ -29,7 +29,7 @@ artifact, and here they are something a *template* enforces.
 
 Read that way, the standard makes sense. The story format is a cheap test for
 the most common documentation defect, which is a page with no single reader in
-mind. "As a developer, I want to configure retry behaviour, so that transient
+mind. "As a developer, I want to configure retry behavior, so that transient
 upstream failures do not surface to my callers" is a page. "Retry and timeout
 configuration and the connection pool" is three.
 
@@ -40,7 +40,7 @@ size a deployment, and a developer who wants to send a request. Those are two
 pages and neither was going to be well served by one.
 
 This is tagged `supporting` rather than `core` because the underlying skill is
-[Diátaxis](diataxis.md) and [content modelling](content-model.md); the story
+[Diátaxis](diataxis.md) and [content modeling](content-model.md); the story
 format is a convenient front end to both. Worth two hours, not more.
 
 ## The golden path
@@ -242,7 +242,7 @@ I cross-check the role against the declared audience. It is a cheap test for the
 commonest defect, which is a page with two readers. The inference server page
 turned out to be three stories, so it became two pages and a reference."
 
-**The follow-up is likely to be sceptical**, some version of "is this not
+**The follow-up is likely to be skeptical**, some version of "is this not
 bureaucracy?" Agree partly. The honest position: the value is in the ninety
 seconds of thought at authoring time, and the stored field is mostly a way to
 make that thinking non-optional. If a team already scopes pages well, the field

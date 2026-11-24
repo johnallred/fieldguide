@@ -22,7 +22,7 @@ each step assumes the ones above it.
 
 ## 1. [Treating docs, setup and samples as one product](../concepts/docs-as-product.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Treating setup, runnable samples and documentation as one product the developer experiences.
 
@@ -30,13 +30,13 @@ Also in: [The first week](first-week.md), [The writer who builds](writer-who-bui
 
 ## 2. [Learning science for developer education](../concepts/learning-science.md)
 
-`core` · practise it · 6h
+`core` · practice it · 6h
 
 Applying what research says about how people learn to every tutorial, lab and learning path you design.
 
 ## 3. [Learner and task analysis](../concepts/learner-task-analysis.md)
 
-`core` · practise it · 5h
+`core` · practice it · 5h
 
 Finding out who your readers are and what they actually do before deciding what any tutorial, lab or course should teach.
 
@@ -44,7 +44,7 @@ Builds on, earlier in this path: Learning science for developer education.
 
 ## 4. [Instructional design for developers](../concepts/instructional-design.md)
 
-`core` · practise it · 5h
+`core` · practice it · 5h
 
 Designing curriculum so a developer learns what they need, in the order they need it.
 
@@ -52,7 +52,7 @@ Builds on, earlier in this path: Learning science for developer education, Learn
 
 ## 5. [Cognitive load in technical content](../concepts/cognitive-load.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Cutting what a reader has to hold in their head, so they reach first success sooner.
 
@@ -70,7 +70,7 @@ Also in: [The first week](first-week.md), [A working result in a weekend](prove-
 
 ## 7. [Designing tutorials](../concepts/tutorial-design.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Designing tutorials that teach by having the reader build something real.
 
@@ -78,7 +78,7 @@ Builds on, earlier in this path: Diátaxis.
 
 ## 8. [Screencasts and video](../concepts/screencasts.md)
 
-`context` · practise it · 4h
+`context` · practice it · 4h
 
 Producing short videos that show a task, and keeping them accurate as the product changes.
 
@@ -96,7 +96,7 @@ Also in: [The documentation engineer](docs-engineer.md).
 
 ## 10. [Quickstarts that survive contact](../concepts/quickstarts.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Writing quickstarts that still work when a new developer follows them cold.
 
@@ -104,7 +104,7 @@ Builds on, earlier in this path: Golden paths.
 
 ## 11. [Sample walkthroughs](../concepts/sample-walkthroughs.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Writing walkthroughs that explain a sample line by line, without drifting from the sample.
 
@@ -120,7 +120,7 @@ Builds on, earlier in this path: Instructional design for developers, Diátaxis.
 
 ## 13. [LMS administration](../concepts/lms-administration.md)
 
-`supporting` · practise it · 4h
+`supporting` · practice it · 4h
 
 Keeping the courses in a learning management system true to their source, enrolled correctly, and reporting completion you can act on.
 
@@ -128,7 +128,7 @@ Builds on, earlier in this path: Learning paths and curriculum.
 
 ## 14. [Learning content standards](../concepts/learning-content-standards.md)
 
-`supporting` · practise it · 5h
+`supporting` · practice it · 5h
 
 Packaging courses and labs so any learning platform can launch them, and getting the tracking data back out in a form someone can use.
 
@@ -136,7 +136,7 @@ Builds on, earlier in this path: LMS administration.
 
 ## 15. [Assessment and checks for understanding](../concepts/assessment.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Checking that a learner actually learned: how you know the curriculum worked.
 
@@ -154,7 +154,7 @@ Assumes, from outside this path: [Code-sample validation](../concepts/code-sampl
 
 ## 17. [Demo design](../concepts/demo-design.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Building demos that show the result first, fit their slot, adapt to the audience, and still work when someone other than their author runs them.
 
@@ -162,7 +162,7 @@ Builds on, earlier in this path: Sample applications and galleries.
 
 ## 18. [Workshops and hands-on labs](../concepts/workshops.md)
 
-`supporting` · practise it · 4h
+`supporting` · practice it · 4h
 
 Running hands-on workshops and labs, a standard developer-relations deliverable.
 
@@ -172,7 +172,7 @@ Assumes, from outside this path: [Reproducible environments](../concepts/reprodu
 
 ## 19. [Field enablement](../concepts/field-enablement.md)
 
-`supporting` · practise it · 4h
+`supporting` · practice it · 4h
 
 Teaching the people who demo, sell and support the product until they can deliver without you, and turning what they hear into changes.
 

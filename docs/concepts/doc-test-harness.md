@@ -210,12 +210,12 @@ time, which were in tension and did not have to be.
 Every harness needs a way to exempt a sample, and every exemption is a way to
 make a red build green without fixing anything. In `docpack`, the convention is
 `# docpack: skip`, the reason is required, and a test asserts the skip ratio
-stays under 25 per cent.
+stays under 25 percent.
 
 The honest limitation, measured in
 [code-sample validation](code-sample-validation.md), is that a ratio budget is
 meaningless on a small corpus: with three blocks the ratio can only be 0, 33,
-67 or 100 per cent, so the cap fires on a clean corpus. Budgets start meaning
+67 or 100 percent, so the cap fires on a clean corpus. Budgets start meaning
 something in the low hundreds of blocks. Before that, require the reason and
 read it in review.
 
@@ -237,7 +237,7 @@ the published HTML.
 
 | Half | Reads | Can be fooled by | Speed |
 |---|---|---|---|
-| Static | Markdown source | Anything that makes the source parse differently than you modelled | Instant |
+| Static | Markdown source | Anything that makes the source parse differently than you modeled | Instant |
 | Ground truth | Built HTML | Very little; it is what the reader gets | Needs a build |
 
 `src/fieldguide/fences.py` implements both. The second half compares every
@@ -290,7 +290,7 @@ a budget.
 
 **How to tell it is working.** `docpack`'s harness extracts
 every Python block, executes it, requires a reason on every skip, and asserts
-the skip ratio stays under 25 per cent. The number is the part to watch: a
+the skip ratio stays under 25 percent. The number is the part to watch: a
 harness with no budget and a dozen silent skips is a harness that stopped
 testing a while ago and did not mention it.
 

@@ -159,7 +159,7 @@ interview alone is not an analysis.
 
 Key rotation has six tickets and is not taught, which looks like the next
 tutorial to write. Five of the six are about the console: a hidden button, a
-page that times out, two unlabelled keys. That is an obstacle, not a knowledge
+page that times out, two unlabeled keys. That is an obstacle, not a knowledge
 gap, and the fix is a bug report to the console team with these tickets
 attached. The one knowledge ticket (revoking the old key first) becomes a
 single warning on an existing page.
@@ -181,7 +181,7 @@ O3  Diagnose a retry budget that is exhausted  (429 or 503? shared budget?)
 ```
 
 Those are the three objectives the [learning science](learning-science.md)
-drill audits. The survey changes one more thing: 72 per cent of readers have
+drill audits. The survey changes one more thing: 72 percent of readers have
 used retries before, so the tutorial needs a route past the basics for them,
 because support that helps a newcomer can slow down someone who already knows.
 
@@ -200,7 +200,7 @@ Five families, from the standard handbook on the subject:
 |---|---|---|
 | Job or behavioural analysis | Observable steps | The task is a procedure |
 | Learning analysis | Prerequisite skills in order | You need to sequence a path |
-| Cognitive task analysis | Decisions, cues and judgements | Experts disagree with novices about what is hard |
+| Cognitive task analysis | Decisions, cues and judgments | Experts disagree with novices about what is hard |
 | Activity-based analysis | The task in its real setting | Tools, people and constraints shape the work |
 | Subject matter analysis | Concepts and their relations | The content is knowledge rather than a task |
 
@@ -242,8 +242,8 @@ The performance-analysis questions, adapted to documentation:
 Opened and checked on 2026-11-23:
 
 - Jonassen, D. H., Tessmer, M., & Hannum, W. H. (1999). *Task Analysis Methods for Instructional Design*. Routledge. [Publisher page](https://www.routledge.com/Task-Analysis-Methods-for-Instructional-Design/Jonassen-Tessmer-Hannum/p/book/9780805830859).
-- "The use of cognitive task analysis to reveal the instructional limitations of experts in the teaching of procedural skills." *Academic Medicine*, 89(5), 811–816 (2014). Three experts teaching one procedure omitted 73 per cent of its decision steps. [PubMed](https://pubmed.ncbi.nlm.nih.gov/24667500/).
-- Yates, K. A., Feldon, D. F., & Clark, R. C. (2011). Using cognitive task analysis to capture expert knowledge and skills for research and instructional design. Workshop, AERA annual meeting. Its abstract states that experts omit about 70 per cent of their decisions; it is a workshop abstract, not a study. [Record](https://digitalcommons.usu.edu/itls_facpub/454).
+- "The use of cognitive task analysis to reveal the instructional limitations of experts in the teaching of procedural skills." *Academic Medicine*, 89(5), 811–816 (2014). Three experts teaching one procedure omitted 73 percent of its decision steps. [PubMed](https://pubmed.ncbi.nlm.nih.gov/24667500/).
+- Yates, K. A., Feldon, D. F., & Clark, R. C. (2011). Using cognitive task analysis to capture expert knowledge and skills for research and instructional design. Workshop, AERA annual meeting. Its abstract states that experts omit about 70 percent of their decisions; it is a workshop abstract, not a study. [Record](https://digitalcommons.usu.edu/itls_facpub/454).
 - Mager, R. F., & Pipe, P. *Analyzing Performance Problems* (2nd ed., 1984). Lake Publishing. Flowchart as adapted by [Nova Southeastern University](https://app.nova.edu/toolbox/instructionalproducts/8001/EDD8001/SUM12/perf_problems_flowchart.pdf).
 
 ## Explaining it to your team
@@ -265,7 +265,7 @@ page.
 **The tradeoff to name.** Every source is partial. Tickets come only from
 people who asked, surveys report what people believe about themselves, and
 observation of one or two people can mislead as easily as an interview. The
-defence is to combine sources and to treat the result as a hypothesis the
+defense is to combine sources and to treat the result as a hypothesis the
 tutorial's own [assessment](assessment.md) will test, not as a finding.
 
 **One sharper point.** The most valuable output of an analysis is often a

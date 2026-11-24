@@ -14,7 +14,7 @@ tags: [dom, context]
 > Documenting software that runs on GPUs, well enough to follow the engineers who build it.
 
 !!! warning "No GPU was available"
-    This machine has no NVIDIA device, so nothing on this page was run on a GPU. The measurement in step 1 is a CPU analogue of a GPU lesson and is labelled as such; the compatibility material in step 3 was verified by opening NVIDIA's own documentation. Where this page reasons rather than demonstrates, it says so.
+    This machine has no NVIDIA device, so nothing on this page was run on a GPU. The measurement in step 1 is a CPU analog of a GPU lesson and is labeled as such; the compatibility material in step 3 was verified by opening NVIDIA's own documentation. Where this page reasons rather than demonstrates, it says so.
 
 ## What it is
 
@@ -78,7 +78,7 @@ ten, and then the transfer across PCIe is subtracted from even that. The
 question "will the GPU help" is answerable with a division before anybody
 writes a kernel.
 
-The honest limits of the analogue: a GPU's bandwidth, its memory hierarchy,
+The honest limits of the analog: a GPU's bandwidth, its memory hierarchy,
 coalescing rules, occupancy and warp divergence are all absent here. The ratio
 argument transfers; none of the numbers do.
 
@@ -141,8 +141,8 @@ compressed.
 | Thread, block, grid | The launch hierarchy | Launch configuration questions |
 | Warp | 32 threads executing together | Divergence costs |
 | Occupancy | Active warps against the maximum | The usual tuning knob |
-| Coalescing | Neighbouring threads reading neighbouring memory | The usual performance bug |
-| Shared memory | Fast memory local to a block | The usual optimisation |
+| Coalescing | Neighboring threads reading neighboring memory | The usual performance bug |
+| Shared memory | Fast memory local to a block | The usual optimization |
 | Host and device | CPU and GPU, with separate memory | The usual correctness bug |
 | Stream | A queue of asynchronous work | Overlapping transfer and compute |
 | Compute capability | A device's feature level, such as `sm_90` | Build flags and support matrices |
@@ -156,11 +156,11 @@ compressed.
 | The work is too small | Launch overhead exceeds the work |
 | Uncoalesced access | A profiler, or the access pattern |
 | Warp divergence | Branches depending on thread index |
-| Synchronisation each step | Measure with the synchronise removed |
-| Timing without synchronising | The launch is asynchronous; the timer lies |
+| Synchronization each step | Measure with the synchronize removed |
+| Timing without synchronizing | The launch is asynchronous; the timer lies |
 
 The last row produces reports of impossibly fast kernels and belongs in any
-getting-started page, because a reader who measures wrongly will optimise
+getting-started page, because a reader who measures wrongly will optimize
 wrongly for a week.
 
 ### The version matrix a reader needs
@@ -184,7 +184,7 @@ twenty times slower with no error anywhere.
 |---|---|
 | The arithmetic for "will this help" | How to launch a kernel |
 | A support matrix with symptoms | A prose paragraph on compatibility |
-| How to time correctly, with synchronisation | Timings with no caveat |
+| How to time correctly, with synchronization | Timings with no caveat |
 | The transfer cost, separately | Kernel time only |
 | A detection snippet for silent CPU fallback | An assumption it worked |
 | The minimum driver, stated numerically | "A recent driver" |
@@ -215,7 +215,7 @@ so the page has to be a table keyed by symptom, since symptoms are what readers
 arrive with.
 
 **The thing I would add to any getting-started page.** Kernel launches are
-asynchronous, so a reader who times without synchronising measures the launch
+asynchronous, so a reader who times without synchronizing measures the launch
 rather than the work and reports an impossibly fast kernel. And a framework
 that cannot see the device often falls back to CPU and reports success, so the
 job runs correctly and twenty times slower with nothing in the logs. Both are
@@ -237,9 +237,9 @@ actually run, and a symptom-keyed compatibility matrix.
    and the matmul's before you look; a hundredfold gap surprises most people.
 2. Compute arithmetic intensity for one kernel your team is thinking of
    porting, and compare it with the device's flops-per-byte. That division has
-   cancelled porting projects.
+   canceled porting projects.
 3. Find a timing claim in GPU documentation you rely on and check whether it
-   synchronised. If the page does not say, assume it did not.
+   synchronized. If the page does not say, assume it did not.
 
 **How to tell it is working.** The intensity measurement ran
 here on CPU with numpy and is reproducible, and the compatibility figures were

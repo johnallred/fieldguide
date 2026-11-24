@@ -20,7 +20,7 @@ tags: [ia, supporting]
 ## What it is
 
 The agreed rules for how your documentation is written: terminology, voice,
-person, capitalisation, how to format a command, when to use a note versus a
+person, capitalization, how to format a command, when to use a note versus a
 warning. In practice it is two documents wearing one name, and separating them
 is most of the value.
 
@@ -250,7 +250,7 @@ cannot.
 
 **Three things to do, in order:**
 
-1. Run the golden path. Step 3 is the point, and the trap generalises past
+1. Run the golden path. Step 3 is the point, and the trap generalizes past
    Vale.
 2. Take your current style guide and sort every rule into mechanical or
    editorial. The mechanical pile is your backlog; the editorial pile is your

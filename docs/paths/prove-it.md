@@ -40,7 +40,7 @@ Also in: [The first week](first-week.md), [The content architect](content-archit
 
 ## 3. [Content models](../concepts/content-model.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Defining the types of content your team writes and the fields each one must carry.
 
@@ -50,7 +50,7 @@ Also in: [The content architect](content-architect.md), [The KnowledgeOps path](
 
 ## 4. [MkDocs and Material](../concepts/mkdocs.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Building and maintaining a documentation site on MkDocs with the Material theme.
 
@@ -60,7 +60,7 @@ Also in: [The first week](first-week.md).
 
 ## 5. [Documentation CI](../concepts/documentation-ci.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Running automated checks on every documentation change before it merges.
 
@@ -82,7 +82,7 @@ Also in: [The first week](first-week.md), [The documentation engineer](docs-engi
 
 ## 7. [Prose linting with Vale](../concepts/prose-linting.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Enforcing your style guide automatically with Vale, so reviews argue with a rule rather than a person.
 

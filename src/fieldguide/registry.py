@@ -209,7 +209,7 @@ class Concept:
         name: Display name.
         category: Key into the registry's `categories` map.
         tier: One of `TIERS`.
-        difficulty: 1 read it, 2 practise it, 3 build something non-trivial.
+        difficulty: 1 read it, 2 practice it, 3 build something non-trivial.
         time: Honest estimate to working competence, as a human string.
         prerequisites: Concept ids that come first.
         in_practice: Why this concept earns a page.

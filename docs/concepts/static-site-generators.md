@@ -24,7 +24,7 @@ The tool that turns a tree of source files into a website. It decides your
 extension mechanism, and, least discussed and most important, **how much of
 your corpus's correctness the build is willing to check**.
 
-Sphinx, MkDocs and Docusaurus are the three you will meet most. The useful skill is not having a favourite, it is
+Sphinx, MkDocs and Docusaurus are the three you will meet most. The useful skill is not having a favorite, it is
 being able to say what each one's build does and does not verify.
 
 ## How this applies to your role
@@ -242,7 +242,7 @@ with the gaps you closed and how.
 with Material, and it has a hand-written anchor checker, a fence gate and a
 render gate precisely because the build does not cover them. Being able to say
 "we chose this generator and here are the three checks we added to compensate"
-is judgement rather than preference.
+is judgment rather than preference.
 
 ## Related
 

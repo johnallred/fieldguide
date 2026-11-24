@@ -387,7 +387,7 @@ that mattered.
 | Cheap to re-run | Expensive, and the state has changed |
 | Failure is one bad answer | Failure is nine correct edits and two harmful ones |
 
-**The asymmetry is the problem.** The agent's judgement is concentrated in one
+**The asymmetry is the problem.** The agent's judgment is concentrated in one
 or two early steps, and everything after is executed well regardless. So the
 review has to target the decisions, not the output.
 
@@ -432,13 +432,13 @@ confidently wrong run passes every quality check and still trips a limit.
 | Sample runs after trusting it | low | Drift, eventually |
 
 Approving the selection is the best value by a wide margin: it is a short list,
-it is cheap to read, and it is where the agent's judgement actually was.
+it is cheap to read, and it is where the agent's judgment actually was.
 
 ### What makes a task suitable
 
 | Suitable | Unsuitable |
 |---|---|
-| Mechanical change, many files | A change needing product judgement |
+| Mechanical change, many files | A change needing product judgment |
 | Reversible | Deletion, publication, anything irreversible |
 | Verifiable by a gate | "Make the docs better" |
 | Scoped by a declared rule | Scoped by vibes |
@@ -527,13 +527,13 @@ first wrong decision happened* and what the agent did afterwards.
 
 **What you would see.**
 
-| Observation | Rough behaviour | What it tells you |
+| Observation | Rough behavior | What it tells you |
 |---|---|---|
 | Tasks completed with no wrong step | some fraction, never all | The baseline |
 | What happens after one wrong step | later steps build on it confidently | The failure this page is about |
 | Whether the agent reports uncertainty | rarely, unprompted | Why checkpoints are external, not asked for |
 | Cost of a checkpoint that a human reads | the whole saving | The real economics |
-| Behaviour when a trap is unflagged | the trap propagates silently | Why the corpus needs its own checks |
+| Behavior when a trap is unflagged | the trap propagates silently | Why the corpus needs its own checks |
 
 The second row is the point. A wrong step does not produce an error, it produces
 a premise, and every later step is executed competently against it. That is why
@@ -544,7 +544,7 @@ a review of the final output cannot tell which premise it rested on.
 correctly, the traps are too obvious and need to be subtler than a wrong word.
 If it fails at step one every time, the task is underspecified and you are
 measuring instruction quality. And if checkpoint review takes as long as doing
-the task, the workflow is theatre, which is a legitimate finding and worth
+the task, the workflow is theater, which is a legitimate finding and worth
 publishing.
 
 ## Related

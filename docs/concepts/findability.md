@@ -95,7 +95,7 @@ tested whether three stopword-stripped words from each summary appeared
 contiguously in the index text, which they essentially never would, so it
 reported 83 failures that were an artifact of the test.
 
-The correct test is simpler: normalise both sides and look for the whole
+The correct test is simpler: normalize both sides and look for the whole
 summary.
 
 ```python

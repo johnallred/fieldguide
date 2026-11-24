@@ -459,7 +459,7 @@ before it knows what exists."
 answer is the thing most people miss: **the tool description is a prompt.**
 Writing `"'how-to' for instructions, 'reference' for exact values,
 'explanation' for reasoning"` instead of `"filter by kind"` changes the model's
-behaviour, because that text is what it reads when deciding. Tool descriptions
+behavior, because that text is what it reads when deciding. Tool descriptions
 are documentation written for a model, which is a genuinely useful thing to point
 out to a documentation team.
 

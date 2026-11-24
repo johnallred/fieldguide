@@ -41,7 +41,7 @@ The shortest path through the concepts that produce something reviewable.
 
 *A writer or engineer who owns structure across a growing corpus.*
 
-From a folder of Markdown to a modelled, governed, machine-readable corpus.
+From a folder of Markdown to a modeled, governed, machine-readable corpus.
 
 17 concepts, roughly 60 hours.
 
@@ -95,7 +95,7 @@ Taking a lab from a working draft to one that is tested nightly, published on ev
 
 ### [The writer who builds](writer-who-builds.md)
 
-*A writer who also builds tooling, and needs the half of the work that is judgement and collaboration rather than tooling.*
+*A writer who also builds tooling, and needs the half of the work that is judgment and collaboration rather than tooling.*
 
 The craft and the working relationships, which no pipeline substitutes for.
 

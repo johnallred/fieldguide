@@ -24,7 +24,7 @@ rather than a page telling authors to be careful. The aim is
 templates, validators and guided workflows **rather than static documents**.
 
 The specific problem is that documentation code samples are the most
-copy-pasted code in any organisation. A sample is read as a recommendation, so
+copy-pasted code in any organization. A sample is read as a recommendation, so
 an insecure sample propagates the insecurity into every project that follows
 the quickstart.
 
@@ -222,14 +222,14 @@ copy, and a corrected quickstart.
 | Secrets in a URL | `https://user:pass@host` |
 
 Use `(?i)` on all of them. Environment variables are uppercase, Go field names
-are capitalised, and YAML keys vary.
+are capitalized, and YAML keys vary.
 
 ### What this is not
 
 | Not this | Why |
 |---|---|
 | A code scanner for the product | That is the security team's job on the real codebase |
-| A substitute for threat modelling | It checks patterns, not design |
+| A substitute for threat modeling | It checks patterns, not design |
 | A claim of security review | It is a floor; the pages may still advise badly |
 
 Be precise about that last one when you report it. The gate catches a list of
@@ -268,7 +268,7 @@ conversion is the part of the work nobody else will do for you.
 ## Explaining it to your team
 
 **Lead with blast radius.** "Documentation samples are the most copy-pasted
-code in an organisation, and a sample reads as a recommendation. An engineer
+code in an organization, and a sample reads as a recommendation. An engineer
 writing `verify=False` has made a local mistake; a quickstart doing it has made
 that mistake in every project that follows it, with official authority. So the
 security rules go in CI rather than in a page asking authors to be careful."

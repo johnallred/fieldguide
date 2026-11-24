@@ -137,7 +137,7 @@ Those are not code. They are **program output**, and there is no language tag
 that is correct for the stdout of a shell script. The rule is firing on exactly
 the case where no tag is the right answer.
 
-Sample the rest and the pattern holds. The rule has close to a 100 per cent
+Sample the rest and the pattern holds. The rule has close to a 100 percent
 false-positive rate on this corpus, and it would have cost an afternoon of
 edits that made every page slightly worse.
 

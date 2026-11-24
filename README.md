@@ -117,7 +117,7 @@ python3 -m pytest -q
 Commit the regenerated files with your registry change. `fieldguide build --check`
 verifies generated pages are current without rewriting them; CI runs that check.
 
-## How it is organised
+## How it is organized
 
 ```
 concepts.yaml            the curriculum: 120 concepts, 12 paths, the checklist
@@ -175,7 +175,7 @@ on every row of the coverage matrix.
 The scope comes from descriptions of this work across several kinds of teams.
 Some concepts are named directly in that work; others are here because the
 named work is impossible without them, and their lines say so in those terms
-rather than overstating it. The list is one person's judgement, made visible so
+rather than overstating it. The list is one person's judgment, made visible so
 a reader can disagree with it. See [Provenance](docs/explanation/provenance.md)
 for how it was checked.
 

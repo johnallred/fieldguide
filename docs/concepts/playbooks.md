@@ -324,7 +324,7 @@ four structural checks and a rendered page from the same source.
 
 1. Run the golden path. Step 4 is worth doing in full, because the cycle
    finding is the reader complaint you have probably received without
-   recognising it.
+   recognizing it.
 2. Take the thing colleagues ask you most often and write its branches. Not the
    procedure, the questions.
 3. Give it to someone who does not know the answer and watch where they stop.

@@ -28,7 +28,7 @@ visible to something that fetches your HTML and does not run your search index.
 ## How this applies to your role
 
 Nobody may ask you for JSON-LD by name, but they will ask for a crawlable,
-agent-ready front door and for content optimised for search (SEO and GEO) and
+agent-ready front door and for content optimized for search (SEO and GEO) and
 for AI assistants and coding agents. Structured data is the
 mechanism that makes a page's type machine-readable to a consumer that is not
 your retriever.
@@ -347,13 +347,13 @@ abused enough that search engines discount it.
 | `@context` is exactly `https://schema.org` | A typo makes the block inert |
 | Description length under 160 | Truncated snippets |
 | `about` is a known role | A typo in the type, which defeats the point |
-| JSON serialises | A date object that was never going to render |
+| JSON serializes | A date object that was never going to render |
 | **Descriptions differ across pages** | **The commonest real failure** |
 
 **The last row is the one to build first.** A site serving its site-wide
 description on every page looks completely correct in a browser, passes every
 other check, and destroys every search snippet and every link preview. It is
-also the default behaviour of several static site generators unless you wire the
+also the default behavior of several static site generators unless you wire the
 per-page field through, which is a mistake this guide made in its companion
 project and only caught by looking at the rendered HTML.
 
@@ -384,7 +384,7 @@ check I care about most is that descriptions differ across pages, because a
 site-wide description on every page looks fine and destroys every snippet."
 
 **The follow-up is "does any of this actually do anything",** and it deserves a
-straight answer rather than a defence. Structured data is not a ranking factor;
+straight answer rather than a defense. Structured data is not a ranking factor;
 it affects display eligibility and makes a page parseable without a crawler
 guessing from prose. The honest reason to do it is that it costs an afternoon,
 it is generated so it cannot rot, and it forces per-page descriptions, which is

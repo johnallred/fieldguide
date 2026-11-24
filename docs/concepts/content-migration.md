@@ -162,7 +162,7 @@ python3 migration_audit.py inventory.csv docs/
 0 finding(s); 4905/4920 views (99.7%) land on a new page
 ```
 
-The remaining 0.3 per cent is two pages nobody reads: an old version of a page
+The remaining 0.3 percent is two pages nobody reads: an old version of a page
 and some meeting notes. They are retired without a redirect, which is the
 right outcome for content with no readers.
 
@@ -187,7 +187,7 @@ home page. Load this into the old host's server-side rules, or into the new
 site's redirect plugin, before the wiki is switched off.
 
 **What you built.** An inventory with a decision for every page, a converted
-corpus free of the old system's markup, a redirect map covering 99.7 per cent
+corpus free of the old system's markup, a redirect map covering 99.7 percent
 of last quarter's traffic, and a check that blocks the switch-off until all
 three are true.
 
@@ -208,7 +208,7 @@ is worth. Do both before converting anything.
 
 | Residue | Looks like on the new site | Usual fix |
 |---|---|---|
-| Raw HTML from styling | Tags, or styling the theme cannot honour | Replace with Markdown or an admonition |
+| Raw HTML from styling | Tags, or styling the theme cannot honor | Replace with Markdown or an admonition |
 | Wiki macros | Literal `{info}`, `{code}` and friends | Map each macro to the generator's equivalent |
 | Wiki links | Literal `[[Page Name]]` | Rewrite to a relative Markdown link |
 | Links to the old host | Working until the switch-off, then dead | Rewrite to the new page |

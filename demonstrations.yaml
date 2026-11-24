@@ -86,7 +86,7 @@ projects:
       tears the stack down in a finally block and resolves every tagged ARN
       against its owning service. It runs nightly in GitHub Actions through an
       OIDC role and commits each run to a health record. One lab, one personal
-      account and one region; account vending and a catalogue were
+      account and one region; account vending and a catalog were
       deliberately not built.
     url: https://github.com/johnallred/coldlab
 
@@ -218,7 +218,7 @@ demonstrates:
     project: fieldguide
     artifact: scripts/a11y_check.py
     extent: full
-    note: "A gate over every page of the built site, theme included: language, title, one h1, no skipped heading levels, image alt attributes, named and meaningful links, table headers and labelled form controls. Its first run found 11,102 empty, focusable links, one on every line of every code sample, put there by a highlighter setting; turning it off cleared them. An earlier audit had found seven path pages skipping h1 to h3, fixed in the generator and held by a property test. The mechanical floor, not a conformance claim."
+    note: "A gate over every page of the built site, theme included: language, title, one h1, no skipped heading levels, image alt attributes, named and meaningful links, table headers and labeled form controls. Its first run found 11,102 empty, focusable links, one on every line of every code sample, put there by a highlighter setting; turning it off cleared them. An earlier audit had found seven path pages skipping h1 to h3, fixed in the generator and held by a property test. The mechanical floor, not a conformance claim."
 
   - concept: markdown
     project: fieldguide
@@ -248,7 +248,7 @@ demonstrates:
     project: fieldguide
     artifact: src/fieldguide/scaffold.py
     extent: full
-    note: "`fieldguide new` computes tags, the work line and both sets of graph links, and names a failure mode in every section prompt. CI asserts its output satisfies the validator for all planned concepts; a measurement showed the prompt comments were supplying 84 per cent of the 450-word gate, so word counts now exclude them."
+    note: "`fieldguide new` computes tags, the work line and both sets of graph links, and names a failure mode in every section prompt. CI asserts its output satisfies the validator for all planned concepts; a measurement showed the prompt comments were supplying 84 percent of the 450-word gate, so word counts now exclude them."
 
   - concept: style-guide
     project: docpack
@@ -304,7 +304,7 @@ demonstrates:
     project: fieldguide
     artifact: scripts/freshness.py
     extent: full
-    note: "A weekly monitor that compares each demonstration note with the file it describes: the note's date from git blame or a reviewed line, the file's last change from git here and the GitHub API for docpack and coldlab. It keeps one issue labelled freshness current. Its first run flagged 33 of 101 notes, and seven were really stale: two still said 106 concepts, one said seven paths, two carried old audit figures, and two docpack notes miscounted gates and jobs."
+    note: "A weekly monitor that compares each demonstration note with the file it describes: the note's date from git blame or a reviewed line, the file's last change from git here and the GitHub API for docpack and coldlab. It keeps one issue labeled freshness current. Its first run flagged 33 of 101 notes, and seven were really stale: two still said 106 concepts, one said seven paths, two carried old audit figures, and two docpack notes miscounted gates and jobs."
 
   # --------------------------------------------- golden paths and developer onboarding
   - concept: golden-paths
@@ -403,7 +403,7 @@ demonstrates:
     project: docpack
     artifact: src/docpack/pack.py
     extent: full
-    note: "A Markdown tree to JSONL, llms.txt and llms-full.txt, deterministically, so diffs stay small, with included snippets expanded so no artifact carries an include line. When measured on the twelve-page corpus, it kept 89, 5 and 99 per cent of source; the seven per cent round-trip gap resolved into relocated headings and blank lines."
+    note: "A Markdown tree to JSONL, llms.txt and llms-full.txt, deterministically, so diffs stay small, with included snippets expanded so no artifact carries an include line. When measured on the twelve-page corpus, it kept 89, 5 and 99 percent of source; the seven percent round-trip gap resolved into relocated headings and blank lines."
 
   - concept: learning-paths
     project: fieldguide
@@ -557,7 +557,7 @@ demonstrates:
     project: fieldguide
     artifact: drills/lab_lifecycle.py
     extent: partial
-    note: "The full lifecycle (provision, run the lab's own steps, assert, tear down in a finally block, resolve every tagged ARN against its owning service, record) runs in the companion repository coldlab against a real AWS account; this drill reads a dated snapshot of its record (five runs, to 2026-11-24T00:01Z) offline, traces the one flaky check to a misread exit code, sizes a 200-lab catalogue at 26.6 serial hours, and verifies a teardown three ways. It stops at one lab, one personal account and one region: account vending was deliberately not built, no catalogue exists, the record is days old, and cost per run was measured once, from usage times published prices: the CI runner costs about seventeen hundred times the AWS resources."
+    note: "The full lifecycle (provision, run the lab's own steps, assert, tear down in a finally block, resolve every tagged ARN against its owning service, record) runs in the companion repository coldlab against a real AWS account; this drill reads a dated snapshot of its record (five runs, to 2026-11-24T00:01Z) offline, traces the one flaky check to a misread exit code, sizes a 200-lab catalog at 26.6 serial hours, and verifies a teardown three ways. It stops at one lab, one personal account and one region: account vending was deliberately not built, no catalog exists, the record is days old, and cost per run was measured once, from usage times published prices: the CI runner costs about seventeen hundred times the AWS resources."
 
   - concept: ephemeral-environments
     project: coldlab
@@ -582,7 +582,7 @@ demonstrates:
     project: fieldguide
     artifact: drills/lab_publish.py
     extent: partial
-    note: "A gate over a lab document using coldlab's directive syntax (five blocking problems: an unnamed step, a bare sleep, a reasonless exit exception, a download at lab time, a hardcoded partition and account), promotion counted per immutable version rather than per lab, and rollback separated from fix-forward by whether the content changed. The labs, versions and runs are invented; the real gates behind it are coldlab's extract.py and this guide's own deploy, which needs five gate jobs. No lab catalogue is published through such a pipeline here."
+    note: "A gate over a lab document using coldlab's directive syntax (five blocking problems: an unnamed step, a bare sleep, a reasonless exit exception, a download at lab time, a hardcoded partition and account), promotion counted per immutable version rather than per lab, and rollback separated from fix-forward by whether the content changed. The labs, versions and runs are invented; the real gates behind it are coldlab's extract.py and this guide's own deploy, which needs five gate jobs. No lab catalog is published through such a pipeline here."
 
   - concept: isolated-region-labs
     project: fieldguide
@@ -594,7 +594,7 @@ demonstrates:
     project: fieldguide
     artifact: drills/sandbox_guardrails.py
     extent: partial
-    note: "Ten learner requests evaluated through an identity policy, a permissions boundary and an SCP with a simplified model of AWS's documented evaluation logic: the identity policy alone stops none of six forbidden requests, the boundary and SCP together stop four, and the two gaps (PassRole on everything, S3 on everything) are traced to their statements. coldlab's scoped CI role, region-denying organisation policy and forecast budget are read as real examples. Nothing calls AWS and no learner has used such a sandbox here."
+    note: "Ten learner requests evaluated through an identity policy, a permissions boundary and an SCP with a simplified model of AWS's documented evaluation logic: the identity policy alone stops none of six forbidden requests, the boundary and SCP together stop four, and the two gaps (PassRole on everything, S3 on everything) are traced to their statements. coldlab's scoped CI role, region-denying organization policy and forecast budget are read as real examples. Nothing calls AWS and no learner has used such a sandbox here."
 
   - concept: demo-design
     project: fieldguide
@@ -612,7 +612,7 @@ demonstrates:
     project: fieldguide
     artifact: drills/migration_audit.py
     extent: partial
-    note: "A migration inventory and its converted pages audited before switch-off: a retired page with 455 readers and no redirect, and six pieces of wiki residue, fixed in a second pass that lands 99.7 per cent of last quarter's traffic on a new page, plus the redirect map. The corpus is invented and no converter is run."
+    note: "A migration inventory and its converted pages audited before switch-off: a retired page with 455 readers and no redirect, and six pieces of wiki residue, fixed in a second pass that lands 99.7 percent of last quarter's traffic on a new page, plus the redirect map. The corpus is invented and no converter is run."
 
   - concept: release-notes
     project: fieldguide
@@ -719,7 +719,7 @@ demonstrates:
     project: fieldguide
     artifact: src/fieldguide/audit.py
     extent: partial
-    note: "`fieldguide audit` prints the four structural commitments on demand: at version 0.2.0, 103/103 prerequisite lines and 120/120 durations, results and proof sections. Since then the commitments became enforceable rather than measurable: STRUCTURAL_LABELS declares the wording of all fourteen labelled elements, the scaffold emits them so a new page cannot invent a fifteenth, and the audit reports every repeated label nobody declared. That last check is the one that matters, because this page's own fix had standardised the label that surfaced and asserted that one string, which could not have found the three other variant pairs in use at the time. Ceiling: no-audience."
+    note: "`fieldguide audit` prints the four structural commitments on demand: at version 0.2.0, 103/103 prerequisite lines and 120/120 durations, results and proof sections. Since then the commitments became enforceable rather than measurable: STRUCTURAL_LABELS declares the wording of all fourteen labeled elements, the scaffold emits them so a new page cannot invent a fifteenth, and the audit reports every repeated label nobody declared. That last check is the one that matters, because this page's own fix had standardized the label that surfaced and asserted that one string, which could not have found the three other variant pairs in use at the time. Ceiling: no-audience."
 
   - concept: cognitive-load
     project: fieldguide
@@ -745,7 +745,7 @@ demonstrates:
     project: fieldguide
     artifact: src/fieldguide/audit.py
     extent: partial
-    note: "360 proof tasks measured across 120 pages at version 0.2.0, 94 per cent imperative and 39 per cent stating a success criterion. That second figure was published as 17 per cent for months and the classifier was wrong: it matched the preposition in \"run it against a corpus you own\" and recognised no conditional, predicted value or author comparison, so the guide's self-declared weakest number was about half the real one. It is now scored against sixty tasks hand-labelled before it was written, held in tests/fixtures/criterion_labels.json. The figure reached 40 after a pass that added a criterion to every core page that had none, and stood at 39 as later pages were added; the correction was worth more than the pass. It establishes that the instrument is well formed and nothing about whether anyone learns. Ceiling: no-audience."
+    note: "360 proof tasks measured across 120 pages at version 0.2.0, 94 percent imperative and 39 percent stating a success criterion. That second figure was published as 17 percent for months and the classifier was wrong: it matched the preposition in \"run it against a corpus you own\" and recognized no conditional, predicted value or author comparison, so the guide's self-declared weakest number was about half the real one. It is now scored against sixty tasks hand-labeled before it was written, held in tests/fixtures/criterion_labels.json. The figure reached 40 after a pass that added a criterion to every core page that had none, and stood at 39 as later pages were added; the correction was worth more than the pass. It establishes that the instrument is well formed and nothing about whether anyone learns. Ceiling: no-audience."
 
 #: Why every other concept has no demonstration. Validated: an unknown id, an
 #: unknown reason, a concept that is both demonstrated and triaged, or a concept
@@ -794,7 +794,7 @@ triage:
   # Demonstrating these would mean adopting a second generator, a second markup
   # language, a release train or a translation pipeline in a twelve-page
   # single-author project. The measurements on those pages were executed; the
-  # adoption would be theatre, and each page says so.
+  # adoption would be theater, and each page says so.
   mdx: declined
   restructuredtext: declined
   docusaurus: declined
@@ -806,13 +806,13 @@ triage:
   # The evidence is a process, a conversation, or a decision in someone else's
   # repository. These pages carry an account of how the skill would be shown
   # instead, under "How this would be demonstrated elsewhere".
-  content-lifecycle: needs-organisation
-  content-retirement: needs-organisation
-  docs-review: needs-organisation
-  docs-prioritization: needs-organisation
-  working-with-engineers: needs-organisation
-  user-stories: needs-organisation
-  partner-documentation: needs-organisation
+  content-lifecycle: needs-organization
+  content-retirement: needs-organization
+  docs-review: needs-organization
+  docs-prioritization: needs-organization
+  working-with-engineers: needs-organization
+  user-stories: needs-organization
+  partner-documentation: needs-organization
 
   # Needs a model, weights or hardware this environment does not have. Each of
   # these pages carries "How this would be demonstrated elsewhere".
@@ -827,9 +827,9 @@ triage:
   ai-trust-judgment: blocked
 
   # A repository cannot evidence these at all. Same subsection.
-  technical-writing: needs-organisation
-  systems-mindset: needs-organisation
-  docs-as-product: needs-organisation
-  sme-interviews: needs-organisation
-  reading-code-to-verify: needs-organisation
-  implementation-feedback: needs-organisation
+  technical-writing: needs-organization
+  systems-mindset: needs-organization
+  docs-as-product: needs-organization
+  sme-interviews: needs-organization
+  reading-code-to-verify: needs-organization
+  implementation-feedback: needs-organization

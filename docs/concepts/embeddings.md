@@ -61,8 +61,8 @@ case where it fails. Forty minutes.
 
 **Step 0: confirm the one piece of arithmetic that matters**
 
-Everything in this page rests on cosine similarity equalling a dot product once
-vectors are normalised. That is checkable with no model and no network, and it
+Everything in this page rests on cosine similarity equaling a dot product once
+vectors are normalized. That is checkable with no model and no network, and it
 is worth seeing once so the rest stops being magic.
 
 ```bash
@@ -96,7 +96,7 @@ print(f"cosine(a, [-x for x in a]) = {cosine(a, [-x for x in a]):.6f}   (opposit
 PY
 ```
 
-That is why every vector store normalises at write time: it turns similarity
+That is why every vector store normalizes at write time: it turns similarity
 into one multiply-add per dimension, with no division and no square roots at
 query time.
 
@@ -146,7 +146,7 @@ PY
 python3 embed.py
 ```
 
-Normalising at encode time is worth understanding: once every vector has length
+Normalizing at encode time is worth understanding: once every vector has length
 1, cosine similarity is just the dot product, which is one multiply-add per
 dimension and no division. Every vector store does this.
 
@@ -265,8 +265,8 @@ vocabulary. Step 1 of "Putting it into practice" below is where that matters.
 | Embedding | The vector produced from a piece of text |
 | Dimensions | Length of the vector. 384 to 3,072 typical |
 | Cosine similarity | Angle between vectors, in [-1, 1]. The usual metric |
-| Dot product | Equals cosine similarity when both vectors are normalised |
-| Normalisation | Scaling a vector to length 1, so similarity is one dot product |
+| Dot product | Equals cosine similarity when both vectors are normalized |
+| Normalization | Scaling a vector to length 1, so similarity is one dot product |
 | Bi-encoder | Query and document embedded independently. Fast, indexable |
 | Cross-encoder | Query and document scored together. Accurate, cannot be pre-indexed |
 | Reranker | Usually a cross-encoder, applied to the top k from a fast search |
@@ -418,19 +418,19 @@ scores = vectors @ query.T          # cosine, because both are normalised
 
 The fourth row is the one that surprises people and the reason an evaluation
 set matters more than a model choice: a question is phrased unlike its answer,
-so the nearest neighbour of a question is often another question.
+so the nearest neighbor of a question is often another question.
 
 **The measurement that justifies the page's claim.** Take fifteen of your own
 product's flag, field or endpoint names, embed them, and print the pairwise
 similarity matrix. On most corpora you will find several pairs above 0.85 whose
 meanings are opposites, because they share surrounding vocabulary and differ by
-one token the tokeniser barely registers. That table is the artifact. The
+one token the tokenizer barely registers. That table is the artifact. The
 conclusion that follows, that you would not ship vector-only retrieval over a
 corpus whose distinguishing terms are near-identical, is the judgment the table
 buys you.
 
 **How you would know it had failed rather than surprised you.** Three
-signatures. Unnormalised vectors make every cosine implausibly high, usually
+signatures. Unnormalized vectors make every cosine implausibly high, usually
 above 0.9 for everything, so check that the norms are 1.0 before believing any
 score. A model loaded with the wrong pooling returns near-identical vectors for
 every input, which shows up as a similarity matrix that is uniform rather than

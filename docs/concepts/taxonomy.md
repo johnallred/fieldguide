@@ -30,13 +30,13 @@ built on.
 
 ## How this applies to your role
 
-Taxonomy sits between content modelling and metadata, which is where it
+Taxonomy sits between content modeling and metadata, which is where it
 belongs: the model says a field exists, the taxonomy says what may go in it,
 and metadata is the result.
 
 The practical stake is filtering. "Show me the how-to pages for operators" is
 answerable only if `diataxis` and `audience` are closed, because a query
-against an open field has to guess at spellings, synonyms and capitalisation.
+against an open field has to guess at spellings, synonyms and capitalization.
 Every retrieval feature in the [AI-ready](agent-ready-content.md) category is
 a filter over a vocabulary, so a corpus with open vocabularies caps how good
 retrieval can get no matter which model is behind it.
@@ -94,7 +94,7 @@ generated       53       43%  True(53)
 ```
 
 Two vocabularies look healthy: `diataxis` with three values and `audience`
-with four, both at full coverage. `tags` sits at 52 per cent, which means it
+with four, both at full coverage. `tags` sits at 52 percent, which means it
 cannot be depended on for anything, exactly as the
 [content model](content-model.md) page argues about optional fields.
 
@@ -117,7 +117,7 @@ Every generated page is `reference`. **No hand-written page is.**
 So in this corpus `diataxis: reference` did not mean reference documentation.
 It meant "generated stub", because the placeholder generator hardcoded the
 value. The vocabulary was closed, every value was legal, and the field was
-lying on 44 per cent of the pages.
+lying on 44 percent of the pages.
 
 A closed vocabulary guarantees values come from the list. It guarantees nothing
 about whether they are *true*.
@@ -202,7 +202,7 @@ silently.
 
 ### Why free tags disappoint
 
-`tags` above sits at 52 per cent coverage with eight distinct values. A tag
+`tags` above sits at 52 percent coverage with eight distinct values. A tag
 vocabulary fails in a predictable sequence: it is optional, so half the corpus
 omits it; it is open, so synonyms accumulate; nothing depends on it, because it
 is unreliable; and because nothing depends on it, nobody maintains it.
@@ -222,7 +222,7 @@ half-populated one implying a classification nobody can trust.
 All three, or you do not have a vocabulary. The third is the one teams skip,
 and the one this guide got wrong across 53 pages.
 
-### Taxonomy against its neighbours
+### Taxonomy against its neighbors
 
 | Concept | Is about |
 |---|---|
@@ -258,7 +258,7 @@ the model."
 
 **The follow-up that separates experience from theory** is what keeps a
 vocabulary honest, and the answer is a consumer. I had a closed, fully
-populated `diataxis` field whose value was wrong on 44 per cent of pages,
+populated `diataxis` field whose value was wrong on 44 percent of pages,
 because a generator hardcoded one value and nothing read the field.
 
 **The tradeoff to name.** Every closed vocabulary is an argument you have

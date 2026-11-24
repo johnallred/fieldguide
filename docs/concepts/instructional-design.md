@@ -22,7 +22,7 @@ tags: [edu, core]
 The practice of designing content so that a reader can *do* something
 afterwards, rather than having read about it. For developer documentation that
 reduces to a small number of structural commitments: say what the reader will
-be able to do, say what they need first, give them something to practise on,
+be able to do, say what they need first, give them something to practice on,
 and give them a way to know it worked.
 
 The reason this is not obvious is that documentation and instruction are
@@ -40,7 +40,7 @@ It matters on an ordinary Tuesday because most developer documentation is
 written by people who already know the thing, and expertise is the enemy of
 instruction. An expert cannot see which of their steps are inferential leaps,
 having stopped making those leaps years ago. Structural commitments are the
-defence: if every page must declare its prerequisites, the author is forced to
+defense: if every page must declare its prerequisites, the author is forced to
 notice what they were assuming.
 
 ## The golden path
@@ -103,8 +103,8 @@ emitted.
 
 A real defect, just not the one the number suggested. A reader meeting both
 labels does not infer two conventions, they experience inconsistency, and the
-entry-state commitment stops being recognisable as a commitment at all. Fixed
-by standardising on one label, changing the scaffold, and asserting it in a
+entry-state commitment stops being recognizable as a commitment at all. Fixed
+by standardizing on one label, changing the scaffold, and asserting it in a
 test so it cannot drift back.
 
 ```
@@ -116,7 +116,7 @@ On the corpus as it stands: 106 occurrences, 103 of 103 concepts that have
 prerequisites. The other three are the label quoted in prose or code, on this
 page and on the templates page, which the check rightly ignores.
 
-**What this fix got wrong**, which took a while to see. It standardised the
+**What this fix got wrong**, which took a while to see. It standardized the
 label that had surfaced and asserted that one label in a test, and that is
 exactly as far as it went. Three more elements were carrying two wordings each
 at the time, in other sections, and the test written here could not have seen
@@ -124,7 +124,7 @@ any of them, because it was a test about prerequisites rather than about
 labels.
 
 The [assessment](assessment.md) page found the second pair independently,
-months later, by measuring something else entirely. All four are standardised
+months later, by measuring something else entirely. All four are standardized
 now, against `STRUCTURAL_LABELS` in `registry.py` rather than against a string
 written into a test. **A fix applied to the instance is not applied to the
 class**, and the way to tell the difference is whether the check you add
@@ -140,7 +140,7 @@ docs/concepts/content-lifecycle.md:  "... falsifiable. About thirty
 ```
 
 The number and its unit were separated by a line break, and the pattern's
-`[- ]?` does not match a newline. Normalising whitespace before searching:
+`[- ]?` does not match a newline. Normalizing whitespace before searching:
 
 ```
 duration stated: 82/82
@@ -193,7 +193,7 @@ needs the same treatment: a fixture with a known answer before you believe any
 number it gives you about something you care about.
 
 **What you built.** Four structural commitments, measured honestly, four pages
-repaired, one label standardised, and a calibrated distrust of your own first
+repaired, one label standardized, and a calibrated distrust of your own first
 number.
 
 ## Reference
@@ -213,7 +213,7 @@ actual curricula.
 
 ### Where expertise hurts
 
-| Expert behaviour | Consequence for the reader |
+| Expert behavior | Consequence for the reader |
 |---|---|
 | Omitting a step that is automatic for them | A silent prerequisite |
 | Using the internal name for a thing | Unfindable and unsearchable |
@@ -221,7 +221,7 @@ actual curricula.
 | Choosing the elegant path over the common one | Correct and not useful |
 | Assuming the goal is obvious | The reader does not know what they are building |
 
-[Cold-start testing](coldstart-testing.md) is the mechanical defence against
+[Cold-start testing](coldstart-testing.md) is the mechanical defense against
 the first row. The others need a human reader, which is why
 [assessment](assessment.md) is a separate concept.
 
@@ -243,7 +243,7 @@ the first row. The others need a human reader, which is why
 | Every exercise states its duration | One phrase | Readers can decide whether to start |
 | Every exercise names its result | Two sentences | The author must know what it produced |
 | Every page says how to verify | A section | Separates informing from teaching |
-| One label per element | A standardisation pass, once | The commitments stay recognisable |
+| One label per element | A standardization pass, once | The commitments stay recognizable |
 
 The last row is the one this page learned the hard way, and the one most
 corpora get wrong without noticing, because each author is individually

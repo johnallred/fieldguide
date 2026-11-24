@@ -101,7 +101,7 @@ almost entirely one step. A second run on a different machine, with each
 TOTAL 12.7s
 ```
 
-**Of 12.7 seconds, 11.6 are `pip install`: 91 per cent.** Everything the
+**Of 12.7 seconds, 11.6 are `pip install`: 91 percent.** Everything the
 tutorial actually teaches, creating a tree, packing it, inspecting the
 artifacts and breaking it on purpose, takes 0.4 seconds in total.
 
@@ -216,10 +216,10 @@ Two choices do most of the work, and defaults tend to flatter.
 | Decision | Flattering default | Honest version |
 |---|---|---|
 | Clock starts | First command of the tutorial | Arrival at the front door |
-| Success means | The command exits zero | The reader has a result they recognise |
+| Success means | The command exits zero | The reader has a result they recognize |
 
 The second row is this whole page. Nine of nine commands exited zero, and the
-reader had no result he recognised, because exit codes are a property of
+reader had no result he recognized, because exit codes are a property of
 programs and recognition is a property of people.
 
 **What you built.** An automated cold-start measurement at nine seconds, a
@@ -240,7 +240,7 @@ closes it.
 
 | Success means | Strength | Weakness |
 |---|---|---|
-| A result the reader recognises | The real thing | Needs a judgment per task |
+| A result the reader recognizes | The real thing | Needs a judgment per task |
 | An asserted output | Automatable | Can pass with no comprehension |
 | Exit code zero | Trivial to measure | See step 2 |
 | The reader says they are done | Honest | Needs a reader |
@@ -251,7 +251,7 @@ closes it.
 | Failure | What it looks like | Fix |
 |---|---|---|
 | One route instrumented | A good number and unhappy readers | Instrument every entry point |
-| Success defined as exit zero | Green runs, confused people | Define success as a recognised result |
+| Success defined as exit zero | Green runs, confused people | Define success as a recognized result |
 | Measured only on the author's machine | Passes forever | A clean environment per run |
 | Measured once | Passes forever | In CI, on every change |
 | Averaged across audiences | Nothing actionable | Segment, or pick one |
@@ -315,7 +315,7 @@ entry points.
 start and fails unless the first command after install produces something; it
 fails on the old README and passes on the rewritten one. The tradeoff is that
 this is a proxy. It checks the ordering of a list, not whether a human
-recognises the result, and the only instrument that checks the second one is a
+recognizes the result, and the only instrument that checks the second one is a
 human. So the proxy goes in CI and the human channel stays open, because the
 proxy exists only because a person spoke up first.
 

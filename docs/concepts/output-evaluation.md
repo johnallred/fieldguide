@@ -1,6 +1,6 @@
 ---
 title: Output evaluation
-summary: Scoring generated text against labelled examples, so a prompt change is a measurement rather than a feeling.
+summary: Scoring generated text against labeled examples, so a prompt change is a measurement rather than a feeling.
 diataxis: explanation
 audience: developer
 concept: output-evaluation
@@ -19,7 +19,7 @@ tags: [ai, core]
 
 ## What it is
 
-Scoring generated text against examples you labelled yourself, so that a change
+Scoring generated text against examples you labeled yourself, so that a change
 to a prompt or a model produces a number instead of an impression.
 
 [Retrieval evaluation](retrieval-evaluation.md) asks whether the right page came
@@ -42,16 +42,16 @@ examples.
 
 On a Tuesday it is the thing that stops a bad change shipping. Somebody tightens
 the audit prompt to reduce false positives. On the three pages they tried, it
-looks better. Across the labelled set, precision held at 1.00 and recall fell from
+looks better. Across the labeled set, precision held at 1.00 and recall fell from
 1.00 to 0.43, which means the audit now misses eight of the fourteen real
 defects while every finding it does report is correct.
 
 **Only one of those two numbers is observable by reviewing the output**, which
-is why the labelled set exists.
+is why the labeled set exists.
 
 ## The golden path
 
-Build a labelled set, score two prompt versions against it, and find the
+Build a labeled set, score two prompt versions against it, and find the
 tradeoff that eyeballing hides. Fifty minutes, dependency-free.
 
 **Step 1: the task and the labels**
@@ -329,7 +329,7 @@ python3 score.py
 
 **Step 4: see what a reviewer can and cannot observe**
 
-A reviewer does not read the labelled set. They read the auditor's *findings*
+A reviewer does not read the labeled set. They read the auditor's *findings*
 and judge each one. That turns out to decide everything.
 
 ```bash
@@ -366,7 +366,7 @@ for name, auditor in AUDITORS.items():
 PY
 ```
 
-**What you built.** A labelled set with clean and ambiguous cases, precision and
+**What you built.** A labeled set with clean and ambiguous cases, precision and
 recall overall and per defect type, the per-page disagreements, and a
 demonstration of what review structurally cannot catch.
 
@@ -395,7 +395,7 @@ reviewer working through either one concludes the auditor is excellent. One of
 them is silently missing eight defects, and **nothing in the review queue
 refers to a defect that was never flagged.**
 
-That asymmetry is the entire argument for a labelled set. Human review can
+That asymmetry is the entire argument for a labeled set. Human review can
 measure precision, because false positives arrive in the queue and annoy
 someone. Human review **cannot measure recall at any volume**, because a false
 negative is an absence. Only an answer key sees it.
@@ -405,7 +405,7 @@ negative is an absence. Only an answer key sees it.
 Worth recording, because this is the ordinary experience of building one.
 
 The first run reported false positives on `p01` and `p02` for `no_example`, and
-the auditor was right both times. `p01` was mislabelled: it is a how-to whose
+the auditor was right both times. `p01` was mislabeled: it is a how-to whose
 only backticked text is `cache_mode`, a flag name, so it genuinely has no
 example. And `no_example` had never been *defined* precisely enough to label
 against: does an inline `` `widget keys rotate` `` count as an example? The
@@ -433,7 +433,7 @@ from 1.00 to 0.60, which correctly signals that something got worse but hides
 other direction, trading recall for precision, can leave F1 roughly flat. The
 two outcomes are not interchangeable: a reviewer drowning in false positives stops reviewing,
 and an audit that misses half the defects leaves a corpus that looks checked.
-Which failure you prefer is a judgement about who pays, and you can only make it
+Which failure you prefer is a judgment about who pays, and you can only make it
 if both numbers are on the table.
 
 ### Precision or recall, depending on the job
@@ -446,11 +446,11 @@ if both numbers are on the table.
 | Blocking a build | **precision** | A flaky gate gets disabled, and then nothing is checked |
 | Answering a user | **precision** | A confident wrong answer is worse than a refusal |
 
-### Building a labelled set that is worth having
+### Building a labeled set that is worth having
 
 | Rule | Why |
 |---|---|
-| Label by hand | A model-labelled set measures agreement with that model |
+| Label by hand | A model-labeled set measures agreement with that model |
 | Include clean cases, at least a third | Without them you cannot measure precision at all |
 | Include deliberately ambiguous cases | They expose where humans disagree, which bounds the achievable score |
 | Record a note per case | So nobody deletes a hard case for lowering the score |
@@ -458,7 +458,7 @@ if both numbers are on the table.
 | Never tune parameters against it | That makes it training data and the score meaningless |
 
 The ambiguous cases matter more than they look. `p07` uses "should" to describe
-expected behaviour rather than to hedge a claim, and two careful reviewers will
+expected behavior rather than to hedge a claim, and two careful reviewers will
 disagree about it. **That disagreement is the ceiling on your achievable
 score**, and a set with no ambiguous cases will tell you an auditor is worse
 than it is.
@@ -483,9 +483,9 @@ claim that precision improved by four points.
 | Whether readers succeeded | Needs an audience | [Time to first success](time-to-first-success.md) |
 | Whether an answer is helpful | Partly subjective | Thumbs, then sample and read |
 
-Two layers above this are worth naming. **LLM-as-judge** scales labelling by
+Two layers above this are worth naming. **LLM-as-judge** scales labeling by
 having a model grade outputs against a rubric, and introduces a second model
-whose agreement with humans you now have to measure, on a labelled set, which
+whose agreement with humans you now have to measure, on a labeled set, which
 is this concept again one level up. **Pairwise comparison** asks which of two
 outputs is better, which humans do far more reliably than absolute scoring and
 which is the right method when the task has no answer key at all.
@@ -493,10 +493,10 @@ which is the right method when the task has no answer key at all.
 ## Explaining it to your team
 
 **How to explain it.** Lead with the tradeoff that eyeballing
-hides. "I keep a hand-labelled set of pages, including clean ones, because
+hides. "I keep a hand-labeled set of pages, including clean ones, because
 without clean cases you cannot measure precision at all. When someone tightened
 our audit prompt, both versions looked perfect to a reviewer, because every
-finding in both queues was real. Against the labelled set the tightened one had
+finding in both queues was real. Against the labeled set the tightened one had
 dropped from 1.00 recall to 0.43: it was missing eight of fourteen defects, and
 version checking had gone to zero. A reviewer can never see that, because
 nothing in a review queue refers to a defect that was never flagged."
@@ -507,10 +507,10 @@ regression, and it is the resolution rather than the count that you should be
 honest about. And the way to grow it is to add a case every time a reviewer
 rejects a finding, so the set accumulates from real disagreements rather than
 from an afternoon of invention. If someone suggests having a model label the
-set, that is LLM-as-judge, and it needs its own human-labelled set to validate
-against, so it does not remove the labelling, it moves it.
+set, that is LLM-as-judge, and it needs its own human-labeled set to validate
+against, so it does not remove the labeling, it moves it.
 
-**The tradeoff to name.** A labelled set is a target, and the same
+**The tradeoff to name.** A labeled set is a target, and the same
 Goodhart problem as [retrieval evaluation](retrieval-evaluation.md) applies more
 sharply here because prompts are so cheap to iterate. Sweep a few prompt
 variants against the set and you have fitted the prompt to twenty pages and
@@ -522,13 +522,13 @@ scores well, and to hold back a few cases you do not look at.
 set the ceiling, and most teams never find out what their ceiling is.** If two
 careful reviewers disagree about `p07`, no prompt can score 1.0, and an
 auditor hitting 0.85 might already be at the limit of the task. Measuring
-inter-annotator agreement before optimising tells you whether you are chasing a
+inter-annotator agreement before optimizing tells you whether you are chasing a
 real gap or noise, and almost nobody does it. That observation separates someone
 who has run an evaluation from someone who has read about metrics.
 
 ## Putting it into practice
 
-**The work product.** A labelled set with clean and ambiguous cases, a scorer
+**The work product.** A labeled set with clean and ambiguous cases, a scorer
 reporting precision and recall per defect type, and one documented case where
 the measurement contradicted the spot check.
 
@@ -546,7 +546,7 @@ the measurement contradicted the spot check.
    A perfect second pass means you are remembering your labels rather than re-
    deriving them, and the week was not long enough.
 
-**How to tell it is working.** A labelled set containing deliberately ambiguous
+**How to tell it is working.** A labeled set containing deliberately ambiguous
 cases, per-type metrics, and every prompt change run against it before it ships.
 When the set catches a change that looked better on a spot check, like the one
 that halved recall while F1 stayed flat, it is working.

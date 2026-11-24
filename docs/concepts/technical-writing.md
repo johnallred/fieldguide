@@ -82,7 +82,7 @@ to read 150 words and do arithmetic.
 
 **Step 2: four passes, in this order**
 
-Order matters: reorganising sentences you are about to delete is wasted work.
+Order matters: reorganizing sentences you are about to delete is wasted work.
 
 ```bash
 cat > passes.md <<'EOF'
@@ -215,7 +215,7 @@ reaches the answer in one sentence instead of five, and nothing true was lost."
 
 **The follow-up is usually "how do you get engineers to write documentation".**
 The honest answer is that mostly you do not, and designing around that is
-the skill. You take their accurate, badly organised paragraph as a *source*
+the skill. You take their accurate, badly organized paragraph as a *source*
 rather than a draft, and you ask them to review for accuracy rather than for
 style. An engineer will happily confirm a number is right. They will not
 happily restructure a page.
@@ -255,7 +255,7 @@ part a team can learn from.
    which is what makes it stick.
 3. **Watch someone follow one of your pages without helping them.** Note where
    they stop, then fix the page rather than explaining it. That note teaches
-   you more about your judgement than any finished page. Predict where they
+   you more about your judgment than any finished page. Predict where they
    will stop before you watch. Being wrong about that is the point of doing it
    with a person rather than from the page.
 
@@ -298,12 +298,12 @@ addition, and the instinct to explain more is the instinct to resist.
 | Writing that survives a hostile review | Review is the nearest thing to a reader |
 
 **Why none of that commits to a repository.** The diff is in someone else's
-project. The acknowledgement is in a review thread. The support question that
+project. The acknowledgment is in a review thread. The support question that
 stopped is an absence, and absences do not appear in version control. This is
 the honest reason this concept has no demonstration here and would have none
 anywhere: the evidence exists, it is just not the kind of thing you can clone.
 
-What a corpus *can* show is the mechanisable part, which is why this guide
+What a corpus *can* show is the mechanizable part, which is why this guide
 enforces a page contract, a duration, a stated result and a verification
 section. Those are the floor. The craft is what happens above it, and the
 distance between a page that satisfies the contract and a page that works is

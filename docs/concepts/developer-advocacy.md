@@ -71,7 +71,7 @@ undocumented:
    cli.py::main
 ```
 
-Eighty-four per cent, and every failure in one module. Look at what it is
+Eighty-four percent, and every failure in one module. Look at what it is
 accusing:
 
 ```
@@ -209,7 +209,7 @@ anything.
 | The changelog mentions it | A release check | Yes |
 | A page explains when to use it | Nothing; needs a person | No |
 
-The bottom row is the honest limit of mechanisation, and pretending otherwise
+The bottom row is the honest limit of mechanization, and pretending otherwise
 is how a definition of done becomes a form.
 
 ### Who writes what

@@ -22,7 +22,7 @@ each step assumes the ones above it.
 
 ## 1. [Technical writing as a craft](../concepts/technical-writing.md)
 
-`core` · practise it · 8h
+`core` · practice it · 8h
 
 Writing developer documentation a reader can act on without asking you a question.
 
@@ -30,7 +30,7 @@ Also in: [The writer who builds](writer-who-builds.md).
 
 ## 2. [Treating docs, setup and samples as one product](../concepts/docs-as-product.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Treating setup, runnable samples and documentation as one product the developer experiences.
 
@@ -54,7 +54,7 @@ Builds on, earlier in this path: Docs-as-code.
 
 ## 5. [Git authoring workflows for writers](../concepts/git-authoring.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Writing in Git: branches, pull requests and review, in Markdown or RST, built by a static site generator.
 
@@ -74,7 +74,7 @@ Also in: [A working result in a weekend](prove-it.md), [The content architect](c
 
 ## 7. [Choosing a static site generator](../concepts/static-site-generators.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Choosing, configuring and living with the generator that turns your source into a site.
 
@@ -82,7 +82,7 @@ Builds on, earlier in this path: Markdown and its dialects.
 
 ## 8. [MkDocs and Material](../concepts/mkdocs.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Building and maintaining a documentation site on MkDocs with the Material theme.
 
@@ -102,7 +102,7 @@ Also in: [A working result in a weekend](prove-it.md), [The documentation engine
 
 ## 10. [Documentation CI](../concepts/documentation-ci.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Running automated checks on every documentation change before it merges.
 

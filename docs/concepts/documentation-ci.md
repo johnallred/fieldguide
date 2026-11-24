@@ -42,7 +42,7 @@ gate is how you make the wrong way harder.
 
 The hard part is **what you choose to block on**. Anyone can add checks.
 Deciding that a dead link blocks a merge while a style suggestion does not, and
-being able to defend the line to the people it blocks, is the judgement the
+being able to defend the line to the people it blocks, is the judgment the
 work actually turns on.
 
 ## The golden path
@@ -217,7 +217,7 @@ so style warns and correctness blocks.
 
 **The tradeoff to name.** Every gate is a tax on contribution, paid by the
 next person who wants to fix a typo. A pipeline with fifteen required checks on
-a corpus nobody contributes to has optimised the wrong thing. The honest
+a corpus nobody contributes to has optimized the wrong thing. The honest
 version is that you add gates in response to defects that actually shipped, not
 in anticipation of all possible defects.
 

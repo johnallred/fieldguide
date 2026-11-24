@@ -11,15 +11,15 @@ tags: [ia, core]
 
 `core` · difficulty 3 · 6h
 
-> Working with documentation leads on how knowledge is organised across products, teams and sources.
+> Working with documentation leads on how knowledge is organized across products, teams and sources.
 
 **Prerequisites:** [Information architecture](information-architecture.md)
 
 ## What it is
 
-[Information architecture](information-architecture.md) organises **pages**:
-where they live, how they are labelled, how a reader navigates between them.
-Knowledge architecture organises **what is known**: the concepts, their
+[Information architecture](information-architecture.md) organizes **pages**:
+where they live, how they are labeled, how a reader navigates between them.
+Knowledge architecture organizes **what is known**: the concepts, their
 relationships, which depend on which, and which are load-bearing.
 
 The distinction matters because the two can disagree. A page can sit in the
@@ -41,8 +41,8 @@ means the valuable skill is **measuring an architecture**, and that is what the
 golden path does.
 
 It also explains why this concept is difficulty 3 while information
-architecture is 2. Organising pages is a judgment you can make by reading them.
-Organising knowledge requires making the relationships explicit enough to
+architecture is 2. Organizing pages is a judgment you can make by reading them.
+Organizing knowledge requires making the relationships explicit enough to
 compute over, and then being willing to find out that your own structure
 disagrees with itself.
 
@@ -190,7 +190,7 @@ looked like a defect and was a property of the domain.
 
 | | Information architecture | Knowledge architecture |
 |---|---|---|
-| Organises | Pages and their labels | Concepts and their relationships |
+| Organizes | Pages and their labels | Concepts and their relationships |
 | Artifact | Navigation, URL structure, taxonomy | A concept graph with dependencies |
 | Question it answers | Where does this page go? | What must a reader already know? |
 | Failure | A reader cannot find the page | A reader finds it and cannot follow it |
@@ -224,7 +224,7 @@ making relationships explicit.
 
 Prerequisite graphs and taxonomies get confused most often. A taxonomy says
 what a thing *is*; a prerequisite graph says what you must know *first*. A
-corpus with only a taxonomy can be perfectly organised and still impossible to
+corpus with only a taxonomy can be perfectly organized and still impossible to
 read in order.
 
 ### Keeping it honest
@@ -243,8 +243,8 @@ result is a graph with no sequence in it.
 
 ## Explaining it to your team
 
-**Lead with the distinction.** "Information architecture organises pages;
-knowledge architecture organises what is known. They can disagree: a page can
+**Lead with the distinction.** "Information architecture organizes pages;
+knowledge architecture organizes what is known. They can disagree: a page can
 be in the obvious place while depending on four concepts the reader has not
 met. The second one is a graph, which means you can compute over it."
 

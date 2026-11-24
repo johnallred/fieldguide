@@ -23,13 +23,13 @@ each step assumes the ones above it.
 
 ## 1. [Python for content automation](../concepts/python-for-content.md)
 
-`core` · practise it · 5h
+`core` · practice it · 5h
 
 Using Python to automate content tasks, transform data and call APIs.
 
 ## 2. [Transforming content as data](../concepts/content-data-transformation.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Treating content as data: parsing, reshaping and generating it with scripts.
 
@@ -39,7 +39,7 @@ Assumes, from outside this path: [Content models](../concepts/content-model.md).
 
 ## 3. [Integrating with APIs](../concepts/api-integration.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Connecting your content tooling to other systems through their APIs.
 
@@ -47,7 +47,7 @@ Builds on, earlier in this path: Python for content automation.
 
 ## 4. [Documentation analytics](../concepts/docs-analytics.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Instrumenting documentation and turning what the data shows into fixes to docs, samples and tooling.
 
@@ -55,7 +55,7 @@ Assumes, from outside this path: [Documentation CI](../concepts/documentation-ci
 
 ## 5. [Search and query log analysis](../concepts/search-log-analysis.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Reading what people search for, so evaluation sets and fixes reflect real questions.
 
@@ -65,7 +65,7 @@ Assumes, from outside this path: [Findability and search design](../concepts/fin
 
 ## 6. [Time to first success](../concepts/time-to-first-success.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Measuring how long a new developer takes to reach a working result, and shortening it.
 
@@ -75,7 +75,7 @@ Assumes, from outside this path: [Golden paths](../concepts/golden-paths.md).
 
 ## 7. [Support deflection](../concepts/support-deflection.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Measuring how much support load and onboarding time self-service content removes.
 
@@ -83,7 +83,7 @@ Builds on, earlier in this path: Documentation analytics.
 
 ## 8. [Repeat-question analysis](../concepts/repeat-questions.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Finding the questions people keep asking, and fixing the content that keeps causing them.
 
@@ -103,7 +103,7 @@ Also in: [The KnowledgeOps path](knowledgeops.md).
 
 ## 10. [Turning developer feedback into changes](../concepts/developer-feedback-loops.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Turning developer feedback into changes to documentation, samples and the product.
 
@@ -111,7 +111,7 @@ Builds on, earlier in this path: Documentation analytics.
 
 ## 11. [Prioritizing documentation work](../concepts/docs-prioritization.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Using data to decide what to build, fix or retire next.
 

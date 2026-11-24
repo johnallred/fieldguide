@@ -139,7 +139,7 @@ Three things, none of which is a corrected video:
 It stops wrong recordings being made, which is where most of the value is. It
 tells you, by timestamp, exactly which recordings are now stale and how badly,
 so a stale-video audit becomes a report rather than an afternoon of watching
-your own back catalogue. And it is a text artifact: searchable, diffable,
+your own back catalog. And it is a text artifact: searchable, diffable,
 and the thing you publish next to the video so that readers who want to copy a
 command, or skim in forty seconds, can.
 
@@ -158,7 +158,7 @@ them, and no way to fix one without re-recording.
 
 A screencast collection is only maintainable at a size where you are willing
 to re-record it. That number is small, and knowing it before you start is the
-difference between a useful handful of videos and a back catalogue nobody dares
+difference between a useful handful of videos and a back catalog nobody dares
 audit.
 
 **What you built.** A script format that tests like a code sample, a drift
@@ -246,15 +246,15 @@ matters. Before recording, a beat whose narration described a flag that did not
 exist, which is the commonest video defect and is free to catch. After
 recording, an upstream output change twelve seconds in, which the check flagged
 by timestamp, so a stale-video audit is a report instead of an afternoon
-rewatching your own back catalogue.
+rewatching your own back catalog.
 
 **The scale point.** My corpus has 824 code blocks over 11,118 lines, all
 checked. A video corpus of that size would have nothing checking any of it and
 no way to fix one line. Screencasts are maintainable only at a size you are
 willing to re-record, that number is small, and deciding it before you start is
-what separates a useful handful from a back catalogue nobody dares audit.
+what separates a useful handful from a back catalog nobody dares audit.
 
-**The tradeoff to name.** I am sceptical of video and it does win
+**The tradeoff to name.** I am skeptical of video and it does win
 sometimes: an unfamiliar interface where knowing where to look is the hard
 part, or a workflow whose shape does not survive prose. For those, thirty
 seconds beats a page. What I would not do is answer "the docs are confusing"

@@ -23,7 +23,7 @@ use without them. Tribal knowledge is the subset of what a team knows that has
 never been written down, usually because the people who have it do not
 experience it as knowledge. It feels like common sense.
 
-The work is an interview technique plus a judgement about what shape the result
+The work is an interview technique plus a judgment about what shape the result
 should take, and the second part is where most of the value is.
 
 ## How this applies to your role
@@ -39,7 +39,7 @@ Notice what the two have in common. Neither says "write it down". Both
 specify an *output form*, and none of the forms is a page. That is the distinctive thing about this work, and the thing most technical
 writers get wrong. The deliverable for tribal knowledge is often a template, a
 validator, or a decision tree. The knowledge in question is usually a
-judgement rather than a fact, and a page describing a judgement gets read once
+judgment rather than a fact, and a page describing a judgment gets read once
 and forgotten.
 
 On a Tuesday it looks like this. A staff engineer is the only person who knows
@@ -53,7 +53,7 @@ them stops the questions.
 
 The second reason this matters: losing the knowledge is **the thing the work is
 protecting against**. A platform whose operational knowledge lives in four
-people's heads is one reorganisation away from losing it.
+people's heads is one reorganization away from losing it.
 
 ## The golden path
 
@@ -162,7 +162,7 @@ EOF
 cat choose.md
 ```
 
-This one is a judgement between known options, so it is a decision guide.
+This one is a judgment between known options, so it is a decision guide.
 
 ```bash
 cat > decision-guide.md <<'EOF'
@@ -242,13 +242,13 @@ a document and a captured claim.
 |---|---|
 | A fact | A reference entry |
 | A procedure | A how-to guide |
-| A judgement between known options | A [decision guide](playbooks.md) |
-| A judgement computable from inputs | A validator, or a better default in the tooling |
+| A judgment between known options | A [decision guide](playbooks.md) |
+| A judgment computable from inputs | A validator, or a better default in the tooling |
 | A sequence executed under pressure | A [playbook](playbooks.md) |
 | A convention people keep getting wrong | A [template](templates-scaffolding.md) |
 | A number that drifts | A [freshness check](freshness-monitoring.md) on the page |
 
-The fourth row is the one that distinguishes this work. If the judgement can be
+The fourth row is the one that distinguishes this work. If the judgment can be
 computed, **the right output is code, not prose.** If the tutorial's batch size
 is wrong for most workloads, the strongest fix is changing the default and
 warning on the bad combination, and the page becomes an explanation of a safe
@@ -271,7 +271,7 @@ default rather than a warning about a dangerous one.
 |---|---|
 | Interviewing the topic | A 2,000-word overview that answers nothing specific |
 | Capturing the answer, not the decision | "Use 16" with no account of when that is wrong |
-| Skipping the exception | A guide that is confidently wrong for quantised models |
+| Skipping the exception | A guide that is confidently wrong for quantized models |
 | Writing a page when the fix was a default | The questions keep coming because nobody reads the page |
 | No provenance | In two years nobody knows whether it is still true |
 | Interviewing one person | You have captured one person's opinion as doctrine |
@@ -282,7 +282,7 @@ default rather than a warning about a dangerous one.
 it. "An engineer was being asked monthly which batch size to use. The page that
 existed listed the options without ranking them, so I built a decision guide
 with the four questions she actually asks, in order, plus the failure modes and
-the quantised-model exception. Then I argued for changing the tutorial's default,
+the quantized-model exception. Then I argued for changing the tutorial's default,
 because the real problem was that the demo number was being copied into
 production."
 
@@ -303,7 +303,7 @@ with the interruption count rather than with documentation: "you get asked this
 three times a month, let me take thirty minutes and make it stop."
 
 **One sharper point.** Tribal knowledge is tribal for a *reason*, and the reason
-is usually that it is a judgement with exceptions, which is genuinely hard to
+is usually that it is a judgment with exceptions, which is genuinely hard to
 write down and easy to write down badly. A confidently wrong decision guide is
 worse than no guide, because people follow it. This is why question four exists
 and why provenance is non-negotiable. Understanding that is understanding why the knowledge was not already written down, which is a more sophisticated
@@ -322,7 +322,7 @@ that genuinely recurred. Not an overview.
 2. **Count the interruptions before and after.** Ask the expert, a month later,
    whether the question stopped. That number is the whole argument, and it is
    what a measurable reduction in support load means at the smallest scale.
-3. **Find one case where the answer was code.** A judgement that could be a
+3. **Find one case where the answer was code.** A judgment that could be a
    default, a warning, or a validator. Propose it. Being the documentation person
    who argues for changing a default rather than documenting it changes how
    engineers bring problems to you.

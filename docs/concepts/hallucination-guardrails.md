@@ -26,9 +26,9 @@ The useful framing is not "stop hallucination", which is not available. It is
 
 ## How this applies to your role
 
-Any team applying AI to content needs sound judgement about where AI can be
-trusted, and human review where judgement matters. Both are about this. The
-behaviour matters more than the vocabulary: you may never hear the word
+Any team applying AI to content needs sound judgment about where AI can be
+trusted, and human review where judgment matters. Both are about this. The
+behavior matters more than the vocabulary: you may never hear the word
 hallucination in a planning meeting, and you will deal with it every week.
 
 What makes this `supporting` rather than `core` is that most of the work lives in

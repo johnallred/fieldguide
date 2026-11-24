@@ -32,7 +32,7 @@ disagrees, and that is where integrations are actually written.
 
 This matters because the content a documentation team needs is almost never in the
 repository. It is in the issue tracker, the CMS, the analytics product and the
-localisation vendor, and the only way to ask a question spanning two of them is
+localization vendor, and the only way to ask a question spanning two of them is
 a program.
 
 There is a second reason that is newer, and it is why this concept is `core`
@@ -172,7 +172,7 @@ result.
 **Step 5: the finding that only appeared in a test**
 
 Writing the test for that empty result produced a surprise. A query of apparent
-gibberish returned four confident matches, because BM25 tokenises "zzzqqq no
+gibberish returned four confident matches, because BM25 tokenizes "zzzqqq no
 such term anywhere" and matches on `term` and `anywhere`. A genuinely empty
 result needs out-of-vocabulary tokens throughout.
 
@@ -300,7 +300,7 @@ assert on the flag rather than the prose.
 
 **One sharper point.** A search API almost never returns nothing. Writing the
 test for an empty result, my gibberish query matched four chunks because BM25
-tokenised it and hit on `term` and `anywhere`. So a client branching on
+tokenized it and hit on `term` and `anywhere`. So a client branching on
 `if not results` has a branch that practically never runs, and the real
 failure, a confident low-relevance match, has no branch at all. That is why
 retrieval needs [evaluation](retrieval-evaluation.md) rather than error
@@ -310,7 +310,7 @@ handling.
 with no auth, no network and no rate limit, which is the easiest integration
 there is. It taught the contract questions well and taught nothing about
 credentials expiring mid-run, pagination over a moving dataset, or a vendor
-whose staging and production behaviour differ. Those need the real service, and
+whose staging and production behavior differ. Those need the real service, and
 I would not claim them from a stdio pipe.
 
 ## Putting it into practice

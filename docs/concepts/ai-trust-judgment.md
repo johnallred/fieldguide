@@ -19,7 +19,7 @@ tags: [craft, core]
 ## What it is
 
 Deciding, per task, whether an LLM can own it, draft it for review, or must not
-be used on it at all. The judgement rests on one question: **what does a wrong
+be used on it at all. The judgment rests on one question: **what does a wrong
 output cost, and would anyone notice?**
 
 It is a design skill rather than a prompting skill. The output is usually a
@@ -31,7 +31,7 @@ It shows up in two places. One is the practical skill of applying LLMs to
 content workflows: prompting, retrieval and grounding, output evaluation. The
 other is the responsibility of automating the content lifecycle, from drafting
 and updating to auditing, with checks for freshness, code accuracy and
-terminology drift, **and human review where judgement matters**.
+terminology drift, **and human review where judgment matters**.
 
 That last clause is the job. The hard question is not whether you can get an
 LLM to write a page. It is where you put the human, and that is a question
@@ -42,11 +42,11 @@ auditing 400 pages for stale version references. An LLM can find candidates
 reliably and cannot decide which are actually wrong, so it proposes and you
 dispose. Then someone suggests using it to generate the reference tables from the
 source, and the right answer there is no. A reference table should be
-*generated from the code*, deterministically. An LLM that is right 97 per cent
+*generated from the code*, deterministically. An LLM that is right 97 percent
 of the time on parameter defaults is a worse tool than mkdocstrings being
 right every time.
 
-That second decision is the one that distinguishes judgement from enthusiasm.
+That second decision is the one that distinguishes judgment from enthusiasm.
 **The question is not "can the model do this", it is "is a model the right
 mechanism".** A deterministic generator beats a reliable LLM wherever one is
 available, and a great deal of documentation work has one available.
@@ -264,7 +264,7 @@ Not squeamishness. Three specific reasons:
 A gate only counts if it **fails loudly and nobody can merge past it.** A gate
 that produces a warning promotes nothing, because warnings are ignored.
 
-### Where this judgement usually goes wrong
+### Where this judgment usually goes wrong
 
 | Mistake | Consequence |
 |---|---|
@@ -277,7 +277,7 @@ that produces a warning promotes nothing, because warnings are ignored.
 ## Explaining it to your team
 
 **How to explain it.** Lead with a refusal, because the
-refusals are where the judgement is visible. "I use an LLM to find candidate pages
+refusals are where the judgment is visible. "I use an LLM to find candidate pages
 for a terminology audit and to pre-filter the false positives, with a human
 accepting each change. I do not use one to write parameter tables, because
 mkdocstrings generates them from the signatures and is right every time. A
@@ -301,7 +301,7 @@ golden path's script prints a reject reason prompt: a reviewer who has to think
 about why rejects less carelessly, and a reviewer facing 400 undifferentiated
 proposals accepts all of them.
 
-**One sharper point.** The strongest version of this judgement is that **an LLM is
+**One sharper point.** The strongest version of this judgment is that **an LLM is
 the right tool for tasks where the output is a proposal and the wrong tool for
 tasks where the output is a fact.** Proposals are cheap to reject; facts are
 expensive to be wrong about and nothing rejects them. Almost every good
@@ -319,13 +319,13 @@ list of tasks you decided not to automate, with reasons. The second half is rare
    is a table your team can use, and the "never" rows are the interesting part.
 2. **Build the proposal pipeline from the golden path** against a real corpus,
    with a real term list. Measure how many proposals a reviewer accepts; if it
-   is above 95 percent your filter is too loose and the review is theatre.
+   is above 95 percent your filter is too loose and the review is theater.
 3. **Write down one thing you refused to automate and why.** One paragraph. This
-   is the most direct record of the judgement this page is about, and almost
+   is the most direct record of the judgment this page is about, and almost
    nobody writes one down.
 
 **How to tell it is working.** Enthusiasm about LLMs is universal and tells you
-nothing. The sign that the judgement is working is a team that says "we would
+nothing. The sign that the judgment is working is a team that says "we would
 not use a model for that, here is the generator we use instead", and a review
 queue where reviewers still reject a meaningful share of proposals.
 

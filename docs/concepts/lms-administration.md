@@ -21,7 +21,7 @@ tags: [edu, supporting]
 
 The work of running courses inside a learning management system (LMS) such as
 Canvas, Moodle or a corporate platform: course shells and templates,
-enrolments and sections, publishing and availability, integrations, and the
+enrollments and sections, publishing and availability, integrations, and the
 completion data everyone eventually asks for.
 
 For a documentation engineer the useful framing is that an LMS is another
@@ -42,7 +42,7 @@ was added by hand, and that the partner section was enrolled but never sent an
 invitation. None of that is visible from the repository, and none of it is a
 content problem. It is administration, and it is the first place to look.
 
-The second reason is reporting. Completion data is how a training programme is
+The second reason is reporting. Completion data is how a training program is
 judged, and it is easy to misread. A drop-off at one module looks like a hard
 module until you notice the learners could not reach it. Reading LMS data well
 is the difference between rewriting a module and republishing it.
@@ -153,7 +153,7 @@ module would not have touched it.
 
 Step 3 adds a second one. Five of eight partners never started, against one of
 twelve in the spring cohort. A difference that large between sections is
-almost always enrolment or access (an invitation not sent, a login that does
+almost always enrollment or access (an invitation not sent, a login that does
 not work for external users), not motivation.
 
 **Step 5: fix it from the source**
@@ -166,7 +166,7 @@ blueprint can restrict editing in the copies so they cannot drift.
 
 **What you built.** A drift check between a course's source and its live copy,
 a completion funnel that separates administrative faults from content
-problems, and two fixes (a republished module and a partner enrolment) that no
+problems, and two fixes (a republished module and a partner enrollment) that no
 amount of rewriting would have found.
 
 ## Reference
@@ -176,7 +176,7 @@ amount of rewriting would have found.
 | Area | The work | Typical fault |
 |---|---|---|
 | Course structure | Shells, templates, modules, availability dates | Edited in the UI, drifted from source |
-| Enrolment | Sections, roles, cohorts, external users | Enrolled but never invited, or wrong role |
+| Enrollment | Sections, roles, cohorts, external users | Enrolled but never invited, or wrong role |
 | Publishing | What learners can see, and when | Unpublished module blocks everyone after it |
 | Integrations | LTI tools, SCORM and xAPI packages | A tool launch that fails for one role |
 | Copies | Course copy, templates, Blueprint sync | Fix applied to one copy of ten |
@@ -190,14 +190,14 @@ amount of rewriting would have found.
 | Module items come only with `include[]=items`, and may be omitted for large modules | Use the module items endpoint to be sure |
 | Lists are paginated through the `Link` header, ten per page by default | Unpaginated scripts silently see only the first page |
 | A Blueprint sync is a `POST` to the blueprint template's migrations endpoint | One source course updates every associated course |
-| Blueprint restrictions limit editing of content, points, due dates and availability in copies | The LMS-side defence against drift |
+| Blueprint restrictions limit editing of content, points, due dates and availability in copies | The LMS-side defense against drift |
 
 ### Reading completion data
 
 | Pattern | Usually means | Check first |
 |---|---|---|
 | A cliff at one module | It cannot be reached, or it is genuinely hard | Is it published and available? |
-| One section far behind another | Enrolment or access | Were they invited? Can they log in? |
+| One section far behind another | Enrollment or access | Were they invited? Can they log in? |
 | Many enrolled, no activity | The course was never announced | Who was told it exists? |
 | Steady small losses at every step | Normal attrition | Compare with the previous cohort |
 

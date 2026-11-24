@@ -37,7 +37,7 @@ grounding is the stage that makes the other two auditable.
 What makes it `core` rather than a nicety is the asymmetry described in
 [RAG](rag.md): a generated answer hides the ranking. A reader looking at a
 search results page judges five results themselves. A reader looking at a
-paragraph has no way to tell whether it synthesised two relevant chunks or
+paragraph has no way to tell whether it synthesized two relevant chunks or
 invented a bridge between two half-relevant ones. **Citation restores the
 reader's ability to check, and mechanical grounding restores yours.**
 
@@ -270,7 +270,7 @@ The fused answer is rejected for missing `max_memory_mb` and `cap`. The first
 is the finding; the second is a false positive, because `c3` says "caps" and
 this checker does no stemming. Worth noticing: **lexical support is a proxy
 with real noise in it**, which is why the threshold is 0.7 rather than 1.0 and
-why it has to be set from a labelled set rather than reasoned to.
+why it has to be set from a labeled set rather than reasoned to.
 
 **Step 4: the prompt side, which reduces the problem rather than solving it**
 
@@ -299,7 +299,7 @@ cat prompt.txt
 **What you built.** A checker that rejects three kinds of ungrounded answer, and
 the prompt that reduces how often they occur.
 
-The division of labour is the lesson. **The prompt makes grounded answers more
+The division of labor is the lesson. **The prompt makes grounded answers more
 likely; the checker makes ungrounded ones not ship.** Only the second is a
 guarantee, and the "split it into two sentences" rule exists specifically to
 make the checker's job possible: one citation covering three claims cannot be
@@ -389,7 +389,7 @@ overlap, which is above any threshold loose enough to allow paraphrase."
 
 **The follow-up is "what is your threshold and how did you pick it",** and the
 honest answer is that a fixed word-overlap threshold is crude and you pick it
-from a labelled set. Too strict and legitimate paraphrase gets rejected, which
+from a labeled set. Too strict and legitimate paraphrase gets rejected, which
 trains people to disable the check; too loose and fused claims pass. The
 threshold is a parameter you measure, not a number you reason to, which is why
 this concept leads directly into
@@ -408,8 +408,8 @@ mechanism that makes an assistant's failures legible to the documentation team.*
 An ungrounded-number rejection points at a specific chunk and a specific claim,
 which means your assistant's failure log is a list of pages where the content
 and the questions do not line up. Without grounding you have a pile of
-complaints; with it you have a prioritised content backlog. That reframes the
-work from AI safety into [documentation prioritisation](docs-prioritization.md),
+complaints; with it you have a prioritized content backlog. That reframes the
+work from AI safety into [documentation prioritization](docs-prioritization.md),
 and it is the framing a documentation lead will actually fund.
 
 ## Putting it into practice
@@ -431,7 +431,7 @@ that looks correct. The fused example is the one to share with your team.
 
 **How to tell it is working.** Saying "we require citations" is near-universal and
 means almost nothing. A checker that rejects a fused claim carrying a valid
-citation, with the threshold justified from a labelled set, is grounding. Fused
+citation, with the threshold justified from a labeled set, is grounding. Fused
 answers get caught before a reader sees them.
 
 ## Related

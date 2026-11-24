@@ -25,7 +25,7 @@ is the corpus.
 
 That constraint is clarifying rather than limiting, because the corpus sets a
 ceiling. If the retrieved context does not contain the fact, a correct answer
-requires the model to supply it from elsewhere, which is the behaviour you are
+requires the model to supply it from elsewhere, which is the behavior you are
 trying to prevent. **Retrieval quality is an upper bound on grounded answer
 quality**, and the bound is measurable without a model in the loop at all.
 
@@ -34,7 +34,7 @@ quality**, and the bound is measurable without a model in the loop at all.
 This matters because readers have stopped arriving at documentation and started arriving at
 answers about it.
 
-A corpus is now consumed by assistants more often than many teams realise, and
+A corpus is now consumed by assistants more often than many teams realize, and
 the failure mode is new: a confident, fluent, wrong answer, delivered without
 the reader ever seeing the page that would have corrected it. Link checking,
 sample execution and prose linting say nothing about this. The page can be
@@ -119,7 +119,7 @@ grounded@3     90%    100%
 headroom      +15%    +10%
 ```
 
-**Four of five scores moved, and the ceiling reached 100 per cent at three
+**Four of five scores moved, and the ceiling reached 100 percent at three
 chunks.** The narrowing headroom is the subtle part: routing headroom measures
 accuracy sitting unclaimed behind a query router, and some of that gap turned
 out never to have been a routing problem. It was a word the corpus did not use.
@@ -192,7 +192,7 @@ Neither metric contains the other. Cross them over the twenty cases:
   the two metrics agree on 15 of 20 cases (75%)
 ```
 
-`grounded@1` is 90 per cent and `hit@1` is 65, so grounding looks like the
+`grounded@1` is 90 percent and `hit@1` is 65, so grounding looks like the
 healthier number, and the top-right cell explains why that is misleading.
 **Five cases are grounded while retrieving the wrong page**: a chunk from a
 page the question was not about still happened to contain every term the answer
@@ -261,7 +261,7 @@ grounding is an upper bound on grounded answer quality, and I can measure that
 bound with no model in the loop and no cost per run."
 
 **The measurement worth describing is the curve, not the number.** Grounding at
-one chunk was 80 per cent, at three 90, and then flat all the way to ten. That
+one chunk was 80 percent, at three 90, and then flat all the way to ten. That
 plateau is diagnostic: while widening the window still helps, the failures are
 ranking failures and a reranker would address them; once it stops helping, the
 failures are not retrieval failures and no model or infrastructure will touch
@@ -272,7 +272,7 @@ surviving failures were vocabulary gaps: the reader's everyday word was missing
 from the page that documents the thing, while the page used a precise term the
 reader had no reason to know. The fix was one sentence per page. It moved
 `hit@1` five points, MRR from 0.742 to 0.775, routing five points, grounding at
-one chunk from 80 to 90 per cent and at three chunks to 100, and it narrowed the
+one chunk from 80 to 90 percent and at three chunks to 100, and it narrowed the
 routing headroom, which means part of what looked like a routing opportunity was
 never a routing problem. A ten-point gap looked like a case for a reranker and
 five points of it was a synonym.

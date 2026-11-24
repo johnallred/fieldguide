@@ -68,7 +68,7 @@ CEILING_REASONS = {
 TRIAGE_REASONS = {
     "planned": "demonstrable, and on the backlog to build",
     "declined": "demonstrating it would mean adopting a tool or process this project does not need",
-    "needs-organisation": "the evidence is a process, a conversation or a decision in someone else's repository",
+    "needs-organization": "the evidence is a process, a conversation or a decision in someone else's repository",
     "blocked": "needs a model, weights or hardware this environment does not have",
 }
 

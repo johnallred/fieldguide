@@ -338,11 +338,11 @@ the finding. Step 5 is. Asked for `max_memory_mb`, the dense retriever returns:
 | Rank | Chunk | Score | Text |
 |---|---|---|---|
 | 1 | `c3` | 0.928 | Set **`max_memory_gb`** to cap GPU memory |
-| 2 | `c5` | 0.707 | Quantised models tolerate larger batches |
+| 2 | `c5` | 0.707 | Quantized models tolerate larger batches |
 | 3 | `c4` | 0.408 | Set **`max_memory_mb`** on the legacy 1.x client |
 
 **The correct answer is third, behind a chunk about a different flag and a
-chunk about quantisation.** Lexical search puts it first, alone, at 2.06, and
+chunk about quantization.** Lexical search puts it first, alone, at 2.06, and
 fusion recovers it.
 
 That is a developer asking about a flag and being told about a different flag,
@@ -365,7 +365,7 @@ over 4000 chunks in 64 dimensions with an IVF index, clustering the vectors and
 probing only some clusters.
 
 The vectors there are **hashed, not learned**: each chunk's tokens are feature
-hashed into 64 dimensions with a signed hash and L2-normalised. No model, no
+hashed into 64 dimensions with a signed hash and L2-normalized. No model, no
 weights, nothing downloaded.
 
 ```
@@ -389,7 +389,7 @@ full-probe recall. Milliseconds and speedup also vary by machine.
 Three things in that table are worth more than the headline.
 
 **The knee.** Recall climbs steeply and then flattens: probing 8 of 64
-clusters scans 13 per cent of the corpus and recovers 98.8 per cent of the
+clusters scans 13 percent of the corpus and recovers 98.8 percent of the
 exact answer. That ratio, not the absolute numbers, is what makes an
 approximate index worth operating, and it is why `nprobe` is the first dial to
 look at when retrieval quality is disappointing.
@@ -446,7 +446,7 @@ identifiers; that failure is most of what this page is about. It scores well
 because feature hashing sends one token to one dimension, so a one-identifier
 query is a near-one-hot vector and the search is a lexical lookup wearing
 vector clothes. **A stand-in that accidentally reproduces the opposite of the
-behaviour you are demonstrating is worse than no stand-in**, which is why the
+behavior you are demonstrating is worse than no stand-in**, which is why the
 hybrid argument above uses the cue-based toy, which at least has a topic space,
 and why any real quality claim needs a real model.
 
@@ -474,7 +474,7 @@ hybrid search solves negation has not tested it.
 | Method | How | When |
 |---|---|---|
 | Reciprocal rank fusion | Sum of `1/(k+rank)` per retriever | The default. No score calibration needed |
-| Weighted score sum | `a * bm25 + b * cosine` | Only after normalising; needs retuning constantly |
+| Weighted score sum | `a * bm25 + b * cosine` | Only after normalizing; needs retuning constantly |
 | Cascade | Lexical to shortlist, dense to rerank | Large corpora, latency budget |
 | Rerank the union | Cross-encoder over the top k of both | Highest quality, slowest, most expensive |
 
@@ -623,8 +623,8 @@ approx.set_ef(ef)                             # the recall/latency dial
 | Build time for the index | seconds to minutes | Why reindexing is an operational event |
 | Hybrid lexical-plus-vector `hit@1` | better than either alone | The result this page exists to argue for |
 
-The third row is the one to internalise: an approximate index returns the wrong
-neighbour a measurable fraction of the time, and no amount of evaluation of your
+The third row is the one to internalize: an approximate index returns the wrong
+neighbor a measurable fraction of the time, and no amount of evaluation of your
 *model* will reveal it, because the defect is in the index.
 
 **The measurement that matters most.** Run a query whose answer depends on an

@@ -49,7 +49,7 @@ it specifies it. About twenty-five minutes.
 
 **Step 1: the specification, opened and read**
 
-ROS standardises this in REP 105, which names four frames and a strict
+ROS standardizes this in REP 105, which names four frames and a strict
 single-parent tree:
 
 ```
@@ -68,7 +68,7 @@ map    the map frame is not continuous; its pose can change in discrete
 ```
 
 And each transform has an owner: an odometry source publishes
-`odom` → `base_link`; the localisation component publishes `map` → `odom`,
+`odom` → `base_link`; the localization component publishes `map` → `odom`,
 deliberately **not** `map` → `base_link`, by taking the odometry transform and
 correcting it; `earth` → `map` is static.
 
@@ -82,8 +82,8 @@ page has to land before any API appears.
 
 **Step 2: why those properties are the way round**
 
-Simulate twenty metres of travel with two per cent wheel slip and a
-localisation fix every twenty-five steps:
+Simulate twenty meters of travel with two percent wheel slip and a
+localization fix every twenty-five steps:
 
 ```python
 odom += V * DT * (1 + rng.normal(0, 0.02))       # integrates slip, smoothly
@@ -111,8 +111,8 @@ which is an ordinary thing to do:
 a controller differentiating the map frame sees 1.2 m/s of phantom velocity
 ```
 
-On a robot travelling at 1.0 m/s, reading the globally-accurate frame produces
-a **120 per cent velocity error** at every localisation update, out of nowhere,
+On a robot traveling at 1.0 m/s, reading the globally-accurate frame produces
+a **120 percent velocity error** at every localization update, out of nowhere,
 with every component behaving correctly. Read `odom` instead and the velocity is
 smooth and the position slowly wrong, which for a controller is the right
 trade.
@@ -143,8 +143,8 @@ a measured consequence behind it.
 
 | Transform | Published by | Continuous | Drifts |
 |---|---|---|---|
-| `earth` → `map` | Static, or localisation | n/a | No |
-| `map` → `odom` | Localisation | No, jumps | No |
+| `earth` → `map` | Static, or localization | n/a | No |
+| `map` → `odom` | Localization | No, jumps | No |
 | `odom` → `base_link` | Odometry source | Yes | Yes, unbounded |
 
 Reading a pose in `map` composes a jumping transform with a smooth one, which
@@ -158,21 +158,21 @@ it drifts.
 | Velocity, by differentiation | `odom` | Continuity; see step 2 |
 | Local obstacle avoidance | `odom` | Short horizon, needs smoothness |
 | Navigation to a goal | `map` | Global accuracy |
-| Logging a trajectory | Both, labelled | They answer different questions |
-| Anything spanning a localisation update | `odom`, then transform once | Mixing invents motion |
+| Logging a trajectory | Both, labeled | They answer different questions |
+| Anything spanning a localization update | `odom`, then transform once | Mixing invents motion |
 
-### Terms worth recognising
+### Terms worth recognizing
 
 | Term | Means |
 |---|---|
 | TF, tf2 | The transform library and its tree |
 | Odometry | Pose estimated by integrating motion |
-| SLAM | Building a map while localising in it |
+| SLAM | Building a map while localizing in it |
 | URDF, SDF | Robot description formats; USD in Isaac Sim |
 | Joint state | Positions and velocities of the articulated parts |
 | Twist | A linear and angular velocity command |
 | Node, topic, service, action | The ROS communication primitives |
-| Sim-to-real gap | Behaviour that holds in simulation and not on hardware |
+| Sim-to-real gap | Behavior that holds in simulation and not on hardware |
 | Domain randomisation | Varying simulation parameters to close that gap |
 
 ### Where the sim-to-real gap comes from
@@ -184,7 +184,7 @@ it drifts.
 | Latency | Zero, or constant, rather than variable |
 | Timing | Simulation time, which can pause |
 | Actuator dynamics | Instantaneous, rather than ramped |
-| Localisation quality | Can be made perfect, hiding the step 2 problem |
+| Localization quality | Can be made perfect, hiding the step 2 problem |
 
 The bottom row is the one that interacts with documentation: a tutorial written
 and tested entirely in simulation can be correct, reproducible, CI-verified and
@@ -219,21 +219,21 @@ is and they disagree on purpose."
 **Then the specification, precisely.** ROS's REP 105 defines a single-parent
 tree, `earth` to `map` to `odom` to `base_link`, and gives two of those frames
 opposite guarantees: `odom` is guaranteed continuous and drifts without bound,
-`map` is explicitly not continuous and can jump at any time. Localisation
+`map` is explicitly not continuous and can jump at any time. Localization
 publishes `map` → `odom` rather than `map` → `base_link`, specifically so the
 correction is applied in one place.
 
-**Then why that matters, with the number.** I simulated twenty metres with two
-per cent slip and periodic fixes. The `odom` frame's error never moved more than
+**Then why that matters, with the number.** I simulated twenty meters with two
+percent slip and periodic fixes. The `odom` frame's error never moved more than
 6.5 mm in a step; the `map` frame's jumped 120 mm when a fix landed. A
 controller differentiating position to get velocity sees 1.2 m/s of phantom
-velocity on a robot doing 1.0, so a 120 per cent error, with every component
+velocity on a robot doing 1.0, so a 120 percent error, with every component
 behaving correctly. The rule is to differentiate `odom`, navigate in `map`, and
 never mix them in one calculation, and that sentence is what most API
 documentation leaves the reader to infer.
 
 **The documentation point I would raise in a planning meeting.** A simulator can
-be configured with perfect localisation, which makes the distinction above
+be configured with perfect localization, which makes the distinction above
 invisible. So a tutorial that is correct, reproducible and verified in CI can
 teach a model that fails on hardware, and nothing in the pipeline notices. That
 is the sim-to-real gap as a documentation problem rather than a physics one, and

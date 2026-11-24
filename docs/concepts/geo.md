@@ -326,7 +326,7 @@ form "default is N", and `before.md` phrases its correction as "the default
 changed from 3 to 5", so the two claims were never compared.
 
 The pattern is worth sitting with, because it recurs: **a checker that
-recognises only the canonical phrasing misses exactly the pages that are phrased
+recognizes only the canonical phrasing misses exactly the pages that are phrased
 loosely, which are the pages most likely to be wrong.** The fix adds the
 "changed from X to Y" form. Other phrasings will still evade it, and that is a
 real limitation of lexical checking rather than something to regex away
@@ -412,7 +412,7 @@ everyone else.
 ## Explaining it to your team
 
 **How to explain it.** Define it by the unit, then give the
-failure. "SEO optimises a page to be clicked; GEO optimises a passage to be
+failure. "SEO optimizes a page to be clicked; GEO optimizes a passage to be
 quoted correctly. The failure that taught me the difference was a page whose
 first sentence said the retry default is 3 and whose last section said it
 changed to 5 in 2.5. The page was accurate, reading order fixed it for a human,
@@ -432,7 +432,7 @@ mattering.
 to read. Repeating "as of 2.5" in three consecutive sections is redundant for a
 human and necessary for a machine, and replacing a tidy "what changed" section
 with inline qualifiers scatters information a human would rather have in one
-place. It is a genuine conflict between audiences, it resolves in favour of the
+place. It is a genuine conflict between audiences, it resolves in favor of the
 machine only where a wrong answer is expensive, and anyone claiming the two
 audiences always want the same thing has not tried it.
 
@@ -440,7 +440,7 @@ audiences always want the same thing has not tried it.
 rediscovery of standalone writing.** "Do not open a section with a pronoun" and
 "state the condition with the claim" are decades-old technical-writing advice
 that got skipped because a human reader could recover from violating them.
-Retrieval removed that slack. So the work is less a new optimisation discipline
+Retrieval removed that slack. So the work is less a new optimization discipline
 than an old quality bar that finally has a failure mode visible enough to fund,
 which is the same pattern as [RAG](rag.md) surfacing content gaps and
 [coding agents](coding-agents.md) surfacing unmarked fragments. Noticing that

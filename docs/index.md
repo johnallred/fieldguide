@@ -89,9 +89,9 @@ Three of those four checks caught real mistakes in this repository within
 minutes of being written, which is the honest argument for all of it. See
 [why a registry](explanation/why-a-registry.md).
 
-## Where to be sceptical
+## Where to be skeptical
 
-**The scope is one person's judgement.** Each concept's line names the work
+**The scope is one person's judgment.** Each concept's line names the work
 that needs it, and some concepts are here because that work is impossible
 without them rather than because anyone asked for them by name. The
 [provenance page](explanation/provenance.md) explains how the list was built

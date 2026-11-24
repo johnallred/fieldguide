@@ -222,7 +222,7 @@ That third sentence is the signal. It shows you expect your own mechanism to be
 worked around and designed for it.
 
 **The follow-up is "when have you over-engineered this",** and a manager who
-asks it is checking for judgement rather than enthusiasm. Have a real answer.
+asks it is checking for judgment rather than enthusiasm. Have a real answer.
 The most common honest one in this field is a linter rule too aggressive for its
 corpus, producing dozens of warnings everyone learned to ignore, which left the
 corpus worse than before because now there was a check that meant nothing.
@@ -258,7 +258,7 @@ class. In the same history, visible as two commits.
    almost nobody does it and the next maintainer will rely on it.
 3. **Find one gate to remove.** A check that has never caught anything, or
    whose warnings everyone ignores. Removing it is the same skill pointed the
-   other way, and it is the harder half to practise. If you cannot find a
+   other way, and it is the harder half to practice. If you cannot find a
    check that has never caught anything, you have either a young pipeline or
    no record of what your gates catch, and the second is the more common
    answer.
@@ -298,7 +298,7 @@ is to find out what keeps breaking them.
 | A deliberate decision not to automate | Judgment rather than reflex |
 
 **What this guide can point at instead.** The closest thing to evidence here is
-the pattern in its own history. A prerequisite label was standardised and
+the pattern in its own history. A prerequisite label was standardized and
 asserted in a test rather than corrected on one page. A word-count gate was
 re-derived after a generator was added. A fence parser was written after three
 naive versions returned plausible wrong numbers. A `Related` section was

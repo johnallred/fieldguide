@@ -117,7 +117,7 @@ pages whose longest sentence exceeds 45 words:  59/106
 pages whose longest sentence exceeds 60 words:   6/106
 ```
 
-**One and a third per cent of the sentences, and more than half the pages.**
+**One and a third percent of the sentences, and more than half the pages.**
 Those two rows describe the same data, and only the second one describes the
 reader's experience, because a reader does not meet a corpus average. They meet
 one page, and on 59 of 106 pages they meet a sentence they have to read twice.
@@ -215,7 +215,7 @@ links pointing at material the reader has not read: 77%
 
 Twelve paths, where this measurement first ran over seven and then nine. The
 per-path rows moved each time, because paths were added and pages gained
-cross-references, and the ratio moved by one point, from 76 to 77 per cent.
+cross-references, and the ratio moved by one point, from 76 to 77 percent.
 That is the useful thing about a ratio: it is the shape of the corpus rather
 than its size, and it is why that figure is the one quoted elsewhere.
 
@@ -243,7 +243,7 @@ which is the finding.
 
 **What you built.** A load measurement that uses the corpus's own fence parser,
 a per-page maximum that replaced a useless mean, and a cross-reference census
-showing 77 per cent of links point at unread material.
+showing 77 percent of links point at unread material.
 
 ## Reference
 
@@ -296,7 +296,7 @@ That is why golden paths in this guide are numbered and named.
 The limit is that chunking only helps when the chunks are independent. Steps
 that require holding state from three steps back are not chunked, they are
 merely numbered, and the numbering disguises the problem by making the page
-look organised.
+look organized.
 
 ### What load is not an argument for
 
@@ -327,7 +327,7 @@ improvement as the editing did, because it had never treated a sentence ending
 in bold as a sentence ending.
 
 **The stronger half, if there is time for one more thing.** I classified every
-cross-reference by whether the reader had reached it yet, and 77 per cent of
+cross-reference by whether the reader had reached it yet, and 77 percent of
 links point at material they have not read. On the first-week path, nine links
 of 80 point backwards. Each of the other 71 is a decision about whether
 something is a missing prerequisite or an aside, which is invisible to every

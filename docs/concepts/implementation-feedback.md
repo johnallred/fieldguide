@@ -38,7 +38,7 @@ grounded in implementation.
 leads own the content model; you apply it to thousands of pages and find out
 where it does not hold. That split is deliberate, and it means the job has a
 built-in feedback obligation. You are not expected to accept a standard you have
-discovered is wrong, and you are not authorised to change it unilaterally
+discovered is wrong, and you are not authorized to change it unilaterally
 either.
 
 On a Tuesday this is a specific recurring moment. The content model requires an
@@ -190,7 +190,7 @@ question into a decision with a deadline.
 
 | Part | Purpose |
 |---|---|
-| What I did | Scope, so they know how much the finding generalises |
+| What I did | Scope, so they know how much the finding generalizes |
 | What happened | Counts and examples. No interpretation yet |
 | What I think is happening | Your diagnosis, clearly marked as yours |
 | Options, costed | Shows you understand the design space, not just your preference |
@@ -313,7 +313,7 @@ the setup steps            step 3 exists for a bug        proposed removal
 
 Then count the third column. Most people find they wrote around nearly all of
 it, which is the finding: documentation work is the most reliable source of
-design feedback in an organisation and the least likely to be delivered as
+design feedback in an organization and the least likely to be delivered as
 feedback, because writing around a problem is faster and feels like the job.
 
 **What competence looks like.**

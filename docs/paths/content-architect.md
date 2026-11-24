@@ -1,6 +1,6 @@
 ---
 title: The content architect
-summary: From a folder of Markdown to a modelled, governed, machine-readable corpus.
+summary: From a folder of Markdown to a modeled, governed, machine-readable corpus.
 diataxis: placeholder
 audience: new-user
 generated: true
@@ -11,7 +11,7 @@ generated: true
 
 **Who this is for.** A writer or engineer who owns structure across a growing corpus.
 
-From a folder of Markdown to a modelled, governed, machine-readable corpus.
+From a folder of Markdown to a modeled, governed, machine-readable corpus.
 
 **17 concepts, roughly 60 hours.** The order matters:
 each step assumes the ones above it.
@@ -22,9 +22,9 @@ each step assumes the ones above it.
 
 ## 1. [Information architecture](../concepts/information-architecture.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
-Deciding how content is modelled, classified and tagged so people can navigate it and machines can retrieve it.
+Deciding how content is modeled, classified and tagged so people can navigate it and machines can retrieve it.
 
 ## 2. [Diátaxis](../concepts/diataxis.md)
 
@@ -38,7 +38,7 @@ Also in: [The first week](first-week.md), [A working result in a weekend](prove-
 
 ## 3. [Content models](../concepts/content-model.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Defining the types of content your team writes and the fields each one must carry.
 
@@ -48,7 +48,7 @@ Also in: [A working result in a weekend](prove-it.md), [The KnowledgeOps path](k
 
 ## 4. [Taxonomy and controlled vocabularies](../concepts/taxonomy.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Agreeing the terms content is classified by, and keeping that vocabulary closed and consistent.
 
@@ -56,7 +56,7 @@ Builds on, earlier in this path: Content models.
 
 ## 5. [Metadata for navigation and retrieval](../concepts/metadata.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Tagging content so navigation, search and AI retrieval can all find the right page.
 
@@ -74,7 +74,7 @@ Builds on, earlier in this path: Taxonomy and controlled vocabularies.
 
 ## 7. [Detecting terminology drift](../concepts/terminology-drift.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Detecting when the words in your docs drift away from the words in the product.
 
@@ -84,7 +84,7 @@ Assumes, from outside this path: [Prose linting with Vale](../concepts/prose-lin
 
 ## 8. [Security guidance as encoded standard](../concepts/security-documentation.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Encoding security guidance into templates, validators and workflows rather than static pages.
 
@@ -92,7 +92,7 @@ Builds on, earlier in this path: Style guides and terminology management.
 
 ## 9. [Single-sourcing and content reuse](../concepts/single-sourcing.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Writing a fact once and reusing it wherever it appears, so documentation scales across products.
 
@@ -120,7 +120,7 @@ Also in: [The lab engineer](lab-engineer.md).
 
 ## 12. [Content lifecycle and governance](../concepts/content-lifecycle.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Running content from draft to update to audit to retirement, increasingly with LLM help at each stage.
 
@@ -128,7 +128,7 @@ Builds on, earlier in this path: Content models.
 
 ## 13. [Retiring content](../concepts/content-retirement.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Deciding what to retire, and removing it without breaking what links to it.
 
@@ -146,7 +146,7 @@ Assumes, from outside this path: [Docs-as-code](../concepts/docs-as-code.md).
 
 ## 15. [Findability and search design](../concepts/findability.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Making sure developers and AI assistants can both find and use the page they need.
 
@@ -156,7 +156,7 @@ Also in: [Found by search and answer engines](answer-engines.md).
 
 ## 16. [Playbooks and decision guides](../concepts/playbooks.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Turning tribal knowledge from engineering, product and operations into playbooks and decision guides.
 
@@ -166,6 +166,6 @@ Assumes, from outside this path: [Extracting tribal knowledge](../concepts/sme-i
 
 `core` · build something · 6h
 
-Working with documentation leads on how knowledge is organised across products, teams and sources.
+Working with documentation leads on how knowledge is organized across products, teams and sources.
 
 Builds on, earlier in this path: Information architecture.

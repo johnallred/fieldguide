@@ -29,7 +29,7 @@ cannot ask whether one was meant to be complete.**
 ## How this applies to your role
 
 Coding agents are an audience of their own, separate from AI assistants, and
-documentation increasingly has to be optimised for both. The separation is
+documentation increasingly has to be optimized for both. The separation is
 correct and worth preserving, because the two want different
 things from the same page.
 
@@ -378,7 +378,7 @@ because the green result is taken as evidence.
 self-contained; a how-to in the middle of a sequence should be a marked
 fragment. The defect is the *unmarked* fragment, not the fragment.
 
-### Markers worth standardising on
+### Markers worth standardizing on
 
 | Marker | Meaning |
 |---|---|
@@ -526,4 +526,4 @@ measuring the model and has to be re-run with that held fixed.
 - [Agent-ready content](agent-ready-content.md), the framing above this
 - [Code-sample validation](code-sample-validation.md), what keeps the canonical example true
 - [Crawlability and the agent-ready front door](crawlability.md), being reachable
-- [Generative engine optimization](geo.md), the other half of optimising for machines
+- [Generative engine optimization](geo.md), the other half of optimizing for machines

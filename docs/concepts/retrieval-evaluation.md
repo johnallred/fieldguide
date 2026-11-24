@@ -532,7 +532,7 @@ twelve-case set has told you they do not understand the instrument.
 
 **The tradeoff to volunteer, and it is the real one.** A golden set becomes a
 target. Once the number is visible, every change gets evaluated against those
-questions, and the corpus starts getting optimised for them rather than for
+questions, and the corpus starts getting optimized for them rather than for
 readers. The symptom is a rising score and flat support load. Two mitigations,
 both partial: never tune parameters by sweeping them against the eval set, which
 turns it into training data; and refresh the cases from real logs regularly so

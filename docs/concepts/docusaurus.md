@@ -20,7 +20,7 @@ tags: [dac, supporting]
 A React-based static site generator aimed specifically at documentation,
 originally from Meta. Pages are [MDX](mdx.md), so prose can contain components,
 and the things that are plugins or conventions elsewhere are first-class here:
-[versioned docs](versioning.md), internationalisation, a blog, search
+[versioned docs](versioning.md), internationalization, a blog, search
 integration and a sidebar model.
 
 It produces a React application that is pre-rendered to static HTML, and that
@@ -33,7 +33,7 @@ Docusaurus is what you find on product-facing
 developer sites, especially where the documentation needs interactive pieces or
 where the front-end team already lives in React.
 
-The judgement that matters is weighing it honestly. It is the
+The judgment that matters is weighing it honestly. It is the
 strongest of the four on versioning and translation, which are the two features
 teams most often discover they need after choosing a generator that makes them
 hard. It is also the heaviest, and its content is the least portable.
@@ -221,14 +221,14 @@ four.
 
 The first three are a stronger default posture than MkDocs. Set
 `onBrokenLinks: 'throw'` and `onBrokenAnchors: 'throw'` explicitly anyway, so
-the behaviour is recorded rather than inherited.
+the behavior is recorded rather than inherited.
 
 ### What is built in that is a project elsewhere
 
 | Feature | Docusaurus | MkDocs | Sphinx |
 |---|---|---|---|
 | Versioned docs | Built in, a command | `mike` plugin | Build-per-version convention |
-| Internationalisation | Built in, per-locale builds | Plugin, limited | `gettext` workflow |
+| Internationalization | Built in, per-locale builds | Plugin, limited | `gettext` workflow |
 | Blog | Built in | Plugin | Extension |
 | Client-side search | Plugin, or Algolia | Built in | Built in |
 | Interactive components | Native, [MDX](mdx.md) | No | No |
@@ -259,7 +259,7 @@ this is the generator that makes them ordinary rather than a project.
 ## Explaining it to your team
 
 **Lead with what it makes ordinary.** "Docusaurus is the one where versioned
-docs and internationalisation are features rather than projects, and where
+docs and internationalization are features rather than projects, and where
 pages can contain components. The price is a React toolchain: 771 packages in a
 default install, and the slowest per-page build of the common generators."
 

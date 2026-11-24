@@ -27,7 +27,7 @@ them is why most documentation-analytics work goes nowhere.
 reachable, what is findable, what is stale, which claims have no evidence. They
 need no audience and work on day zero.
 
-**Reader-side analytics** measure behaviour: page views, search queries, scroll
+**Reader-side analytics** measure behavior: page views, search queries, scroll
 depth, exit rates, the path through a funnel. They need an audience, a
 pipeline, and usually a privacy review.
 
@@ -254,7 +254,7 @@ edit is often a finding about the tooling.
 **Lead with the split, because it is the useful idea.** "Documentation
 analytics is two jobs. Corpus-side measures the artifact and needs no audience:
 reachability, click depth, findability, staleness, which claims have no
-evidence. Reader-side measures behaviour and needs traffic, a pipeline and
+evidence. Reader-side measures behavior and needs traffic, a pipeline and
 usually a privacy review. Teams who want the second and cannot have it conclude
 they can measure nothing, and they are wrong by a wide margin."
 

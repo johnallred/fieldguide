@@ -125,7 +125,7 @@ Two tests assert that those rules fire rather than merely pass today.
 |---|---|---|
 | `planned` | 0 | Empty. Was four; items 6, 7, 9 and 10 cleared it. Note item 8's `vector-stores` was triaged `blocked`, not `planned` |
 | `declined` | 7 | Would mean adopting a second generator, markup language, release train or translation pipeline in a twelve-page project |
-| `needs-organisation` | 13 | The evidence is a process, a conversation, or a decision in someone else's repository |
+| `needs-organization` | 13 | The evidence is a process, a conversation, or a decision in someone else's repository |
 | `blocked` | 9 | Needs a model, weights or hardware this environment does not have. Was ten; item 8 showed `vector-stores` was only half blocked |
 
 The `scratch` row is gone because item 5 emptied it. All eight of its concepts
@@ -142,7 +142,7 @@ Two other things came out of it. The `demonstrated` page's explanation of the
 gaps was hardcoded prose claiming four categories were at zero when one is, so
 it is now derived from the triage, and the test that had pinned the old
 heading was pinning a measured count inside a sentence. And the seven
-`needs-organisation` concepts that lacked the "demonstrated elsewhere"
+`needs-organization` concepts that lacked the "demonstrated elsewhere"
 subsection now have it, bringing that total to 23 pages, enforced by a check
 driven off the register rather than off a hand-kept list.
 

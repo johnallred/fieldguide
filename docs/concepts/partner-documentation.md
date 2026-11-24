@@ -34,7 +34,7 @@ This is tagged `context` rather than `core` because you will not design the
 access model, and most of it is someone else's policy. But being unaware of it
 is how an audience field becomes a security boundary by accident. On a Tuesday
 this shows up as a question with a non-obvious answer: this page explains a
-scheduling behaviour using an example from a named studio's production. Which
+scheduling behavior using an example from a named studio's production. Which
 outputs can it appear in?
 
 The reason it belongs in the guide at all is the fourth audience. **An agent
@@ -345,7 +345,7 @@ well as a gate.
 
 **Why it does not commit.** The gate commits and the stakes do not. The
 demonstration that matters is a year of publishing without a leak, and that is
-an absence of incidents in someone else's organisation.
+an absence of incidents in someone else's organization.
 
 ## Related
 

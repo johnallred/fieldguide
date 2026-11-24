@@ -178,7 +178,7 @@ Better answer: name the actual mitigations and be honest that they are partial.
 Web-based editing in GitHub or GitLab handles a typo without a local clone.
 Preview deployments let a reviewer read the rendered page rather than a diff.
 A CMS that commits to the repository behind the scenes is a real option for
-large writing teams. And some organisations genuinely should not do this: if
+large writing teams. And some organizations genuinely should not do this: if
 most of your content is authored by people whose job is not software, the
 workflow tax is real and a content management system may win.
 
@@ -187,7 +187,7 @@ from publishing time to authoring time. Publishing becomes free and automatic;
 authoring now requires a toolchain, a review cycle, and a green build. That
 trade is overwhelmingly worth it for developer documentation, where the
 audience and the authors both live in repositories. It is much less obviously
-right for marketing content or end-user help centres, and saying so to the
+right for marketing content or end-user help centers, and saying so to the
 teams who own those builds trust.
 
 **One sharper point.** Docs-as-code is often sold as

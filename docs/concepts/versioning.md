@@ -32,7 +32,7 @@ Nobody may ask for it by name. But most platforms you will
 document ship releases, and documentation for a platform that ships releases needs
 versioning the moment a reader can be on an older one.
 
-The judgement that matters, when it comes up, is when *not* to version. Versioning
+The judgment that matters, when it comes up, is when *not* to version. Versioning
 multiplies the corpus you maintain, and a team that versions everything from
 day one ends up with five copies of a conceptual explanation that was never
 version-specific, four of which are now wrong and none of which anybody is
@@ -124,7 +124,7 @@ Two megabytes per version for a **one-page site**. Split it by kind:
   theme assets:     1981667 bytes (99%)
 ```
 
-Ninety-nine per cent of each version is the theme: webfonts, CSS, JavaScript,
+Ninety-nine percent of each version is the theme: webfonts, CSS, JavaScript,
 the search index runtime. The content is eleven kilobytes.
 
 So versioning does not duplicate your documentation. **It duplicates your
@@ -215,7 +215,7 @@ means four stale ones carrying a version number that implies somebody checked."
 
 **The follow-up is often about cost**, and the measured answer is more
 interesting than the guess. The duplication is almost entirely the theme, not
-the content: I measured 99 per cent of each version as webfonts, CSS and
+the content: I measured 99 percent of each version as webfonts, CSS and
 JavaScript, with eleven kilobytes of HTML. It matters for clone and deploy
 times rather than for storage.
 
@@ -238,7 +238,7 @@ policy, canonical tags on old versions and a version banner.
 
 **Three things to do, in order:**
 
-1. Run the golden path and the measurement in step 3. The 99 per cent figure is
+1. Run the golden path and the measurement in step 3. The 99 percent figure is
    the thing to quote.
 2. On any versioned docs site you can reach, check whether old versions carry a
    canonical tag or a banner. Usually neither.
@@ -247,7 +247,7 @@ policy, canonical tags on old versions and a version banner.
 
 **How to tell it is working.** Neither of this guide's
 repositories is versioned, which the [demonstrated](../demonstrated.md) page
-records, and for a single-version project versioning would be theatre. What
+records, and for a single-version project versioning would be theater. What
 travels is the measurement and the judgment table: knowing that the cost is
 theme duplication and that the hard part is deciding what not to version.
 

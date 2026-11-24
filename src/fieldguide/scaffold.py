@@ -72,7 +72,7 @@ next, and how you would tell the result is working.
 Be specific enough to act on today. "Build a RAG pipeline" is not a task; "add
 an eval set of twenty questions and publish the recall figure" is.
 """,
-    "Related": """Four or five neighbouring concepts, each with a clause saying
+    "Related": """Four or five neighboring concepts, each with a clause saying
 why a reader would follow it from here. The prerequisites and dependents are
 already computed above, so this section is for the lateral links the graph does
 not know about.

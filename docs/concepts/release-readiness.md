@@ -221,7 +221,7 @@ the author knows about.
 
 The `since` cross-check is the part that earns its keep over time. It catches
 the case where someone points the changelog at a page that exists but documents
-the *old* behaviour, which is the failure a simple existence check misses.
+the *old* behavior, which is the failure a simple existence check misses.
 
 ## Reference
 
@@ -237,7 +237,7 @@ the *old* behaviour, which is the failure a simple existence check misses.
 
 The right column is not worthless. It belongs in [review](docs-review.md),
 performed by a person. The mistake is putting it in a gate, where it either
-blocks on judgement or passes on nothing.
+blocks on judgment or passes on nothing.
 
 ### The three annotation values, and why all three are needed
 
@@ -272,7 +272,7 @@ months is much easier to promote, because by then everyone has seen the number.
 |---|---|
 | It checks existence, not quality | A one-line stub passes |
 | It depends on the changelog being accurate | An unlisted feature is invisible to it |
-| It cannot see undocumented behaviour changes | A default changing is not a changelog `feat:` |
+| It cannot see undocumented behavior changes | A default changing is not a changelog `feat:` |
 | It needs someone to accept the constraint | The only concept here you cannot build alone |
 
 The third row is the real residual risk, and it is why
@@ -327,7 +327,7 @@ one commit where it failed.
    retroactively to the last release tells you immediately what the gap rate is,
    and that number is the argument for the gate.
 2. **Write the definition of documented for one project**, with the
-   deliberately-excluded list. The exclusions are what show judgement; anyone
+   deliberately-excluded list. The exclusions are what show judgment; anyone
    can write a wish list. If the excluded list is empty, the definition is not
    finished. Every real one excludes something, and a definition that excludes
    nothing will be overridden the first time it is inconvenient.

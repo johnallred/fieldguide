@@ -1,6 +1,6 @@
 ---
 title: Real-time and graphics systems
-summary: "The median completion time barely moved while the deadline miss rate went from zero to thirty per cent, and then the system fell off a cliff."
+summary: "The median completion time barely moved while the deadline miss rate went from zero to thirty percent, and then the system fell off a cliff."
 diataxis: explanation
 audience: developer
 concept: realtime-systems
@@ -32,8 +32,8 @@ this property.
 
 In a web service, a slow request is a degraded request and the mean is a
 reasonable summary. In a real-time system, the mean is close to irrelevant: a
-system that meets its deadline 99 per cent of the time and misses one per cent
-has a one per cent failure rate, and the mean will look excellent either way.
+system that meets its deadline 99 percent of the time and misses one percent
+has a one percent failure rate, and the mean will look excellent either way.
 Writing "average frame time 8 ms" about a 60 Hz target is technically true and
 tells the reader nothing about whether their frames land.
 
@@ -120,14 +120,14 @@ Wherever the transition falls, it is not gradual:
   1.5 ms period:  250/250 missed,  p50 42.7 ms
 ```
 
-Completion time goes from 1.5 ms to 42.7 ms, a factor of 28, for a 25 per cent
+Completion time goes from 1.5 ms to 42.7 ms, a factor of 28, for a 25 percent
 tightening of the deadline. Once the work cannot fit in the period, each cycle
 starts late, so the next starts later, and lag compounds without limit. There is
 no gentle region: the system is fine, then it is unrecoverable.
 
 That is the characteristic failure shape of this whole domain, and it is why
-headroom is discussed differently here. A web service at 80 per cent
-utilisation is busy. A real-time system at 80 per cent utilisation is one
+headroom is discussed differently here. A web service at 80 percent
+utilization is busy. A real-time system at 80 percent utilization is one
 scheduling hiccup from the cliff.
 
 **Step 5: what this means for the writing**
@@ -208,12 +208,12 @@ cost without saying what the budget is leaves the reader unable to add up.
 | Frequency and thermal management | Milliseconds, and invisible |
 
 Measured here: the same sweep gave between 67 and 205 deadline misses out of
-250 across six runs, a factor of three from nothing but neighbouring load. A
+250 across six runs, a factor of three from nothing but neighboring load. A
 page claiming a sub-millisecond guarantee on a stock kernel is claiming
 something the kernel does not offer, and this is why real-time work reaches for
 `PREEMPT_RT`, core pinning, locked memory and allocation-free hot paths.
 
-### Terms worth recognising
+### Terms worth recognizing
 
 | Term | Means |
 |---|---|
@@ -252,16 +252,16 @@ healthy or improving.
 
 **The second finding, which I would not have had without repeating it.** The
 miss count at that period ranged from 67 to 205 across six runs, a factor of
-three from neighbouring load alone. So the counts are not a property of the
+three from neighboring load alone. So the counts are not a property of the
 code, and the transferable claim is the shape: the median never tracked the miss
 rate in any run. The variance is itself the argument for why this domain uses
 dedicated kernels and pinned cores rather than better averages.
 
-**The third, which is about headroom.** Tightening the deadline by 25 per cent,
+**The third, which is about headroom.** Tightening the deadline by 25 percent,
 from 2 ms to 1.5, took it from sixty-seven misses to all 250 and the median from
 1.5 ms to 42.7. Once the work does not fit, every cycle starts later than the
-last and lag compounds, so there is no gentle region. That is why utilisation
-reads differently here: 80 per cent in a web service is busy, and in a real-time
+last and lag compounds, so there is no gentle region. That is why utilization
+reads differently here: 80 percent in a web service is busy, and in a real-time
 system it is one hiccup from the cliff.
 
 **Be honest about the depth.** This is Python on a general-purpose kernel,

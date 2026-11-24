@@ -25,7 +25,7 @@ a sequence of live steps chosen to make one result land. A
 own pace; a demo is something a presenter does in front of people, once, in
 real time.
 
-That changes what it optimises for. A sample has to be complete and correct. A
+That changes what it optimizes for. A sample has to be complete and correct. A
 demo has to be short, ordered around the moment that matters to this
 audience, and recoverable when a live step fails, because in front of a room
 there is no second attempt.
@@ -167,7 +167,7 @@ someone who did not write it.
 | | Sample app | Demo |
 |---|---|---|
 | Used by | A reader, alone, at their own pace | A presenter, live, in front of an audience |
-| Optimises for | Completeness and correctness | One result landing in a fixed slot |
+| Optimizes for | Completeness and correctness | One result landing in a fixed slot |
 | Order | The order the code is built | The result first, detail on request |
 | Fails by | Not running when cloned | Running over, burying the result, breaking live |
 | Tested by | Running it in CI | Rehearsal by someone else, timed |

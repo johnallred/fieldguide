@@ -241,13 +241,13 @@ their output catches everything else, which is most of it.
 
 ## Reference
 
-### What each level of rigour catches
+### What each level of rigor catches
 
 | Level | Catches | Misses |
 |---|---|---|
-| Syntax check or lint | Typos, syntax errors | Anything about behaviour |
+| Syntax check or lint | Typos, syntax errors | Anything about behavior |
 | Execute, check exit code | Removed functions, renamed parameters, import errors | Every changed value, every changed shape |
-| Execute, assert output | Changed defaults, counts, formats, error messages | Behaviour you did not print |
+| Execute, assert output | Changed defaults, counts, formats, error messages | Behavior you did not print |
 | Execute in a fresh environment | Missing install steps, undeclared dependencies | Nothing much, and it is slow |
 
 Most teams stop at level two and describe themselves as validating samples.
@@ -260,7 +260,7 @@ Level three is where the defects actually are.
 | Namespace | Per block, per page, per corpus | Per page: a tutorial is a sequence, a corpus is not |
 | Non-runnable samples | Skip marker, separate tag, exclude by path | A marker in the code, carrying a reason |
 | Expected output | Comment, adjacent fence, separate fixture | Adjacent fence, so the reader sees it too |
-| Non-determinism | Normalise, redact, or skip | Normalise timestamps and ids; skip only when you cannot |
+| Non-determinism | Normalize, redact, or skip | Normalize timestamps and ids; skip only when you cannot |
 | Where it runs | Unit test suite, separate CI job | Separate job: it is slower than unit tests |
 
 Declaring expected output in a fence the reader can see is the choice worth
@@ -279,7 +279,7 @@ mitigations, both cheap:
 | Cap the skip ratio | The suite fails if too much of the corpus is exempt |
 
 A budget has one honest limitation, visible in step 5: on three blocks, the
-ratio can only be 0, 33, 67 or 100 per cent, so the cap fired on a corpus with
+ratio can only be 0, 33, 67 or 100 percent, so the cap fired on a corpus with
 nothing wrong with it. Budgets mean something at a hundred blocks and nothing
 at ten. Until then, require the reason and read it in review.
 
@@ -296,7 +296,7 @@ marker that carries a reason plus a cap on the skip ratio, with the honest
 admission that the cap is meaningless on a small corpus.
 
 **The tradeoff to name.** Output assertions make the harness brittle
-against legitimate change. Every intentional behaviour change now requires a
+against legitimate change. Every intentional behavior change now requires a
 documentation update in the same pull request, which is the point and is also
 real friction. On a fast-moving product you will spend time updating expected
 output for changes you intended. That is the cost of a corpus that cannot
@@ -327,7 +327,7 @@ it caught a real change.
 **How to tell it is working.** `docpack` extracts every
 Python block from its documentation and executes it, with `# docpack: skip`
 making exceptions visible and a test asserting the skip ratio stays under 25
-per cent. The part worth explaining to your team is the skip ratio
+percent. The part worth explaining to your team is the skip ratio
 assertion, because it treats the escape hatch as the threat.
 
 ## Related

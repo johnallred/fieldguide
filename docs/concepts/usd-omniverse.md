@@ -35,7 +35,7 @@ This matters because USD underpins a growing share of simulation and graphics to
 because the documentation failure around it is unusually clear-cut.
 
 USD's reference material describes composition as a set of **arcs**:
-sublayers, references, payloads, inherits, variant sets, specialises. Each is
+sublayers, references, payloads, inherits, variant sets, specializes. Each is
 documented accurately. A reader finishes knowing six mechanisms and still
 cannot answer the only question they came with, which is why their override is
 being ignored.
@@ -161,7 +161,7 @@ most newcomers get backwards.
 | Variant sets | Switchable alternatives | V |
 | References | Pulling in another asset | R |
 | Payloads | References you can defer loading | P |
-| Specialises | Fallbacks that stay weaker | S, weakest |
+| Specializes | Fallbacks that stay weaker | S, weakest |
 
 Within the local layer stack, earlier sublayers are stronger. Both orderings
 have to be known; neither is guessable.
@@ -177,7 +177,7 @@ have to be known; neither is guessable.
 A scene that opens slowly is usually references where payloads belong, and that
 is the commonest performance question in USD documentation.
 
-### Terms worth recognising
+### Terms worth recognizing
 
 | Term | Means |
 |---|---|
@@ -277,4 +277,4 @@ is the honest claim.
 - [Robotics simulation, Isaac Sim and ROS](robotics-sim.md), the platform built on this
 - [Golden paths](golden-paths.md), the shape the USD documentation is missing
 - [Diátaxis](diataxis.md), why a reference set alone left the reader stuck
-- [Real-time and graphics systems](realtime-systems.md), the neighbouring domain
+- [Real-time and graphics systems](realtime-systems.md), the neighboring domain

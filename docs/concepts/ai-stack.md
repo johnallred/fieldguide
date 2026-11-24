@@ -108,7 +108,7 @@ different layer with a different error class when the node is bound.
 
 So the same category of problem, a version mismatch, surfaces as a load error
 in one direction and a runtime error in the other, which means a troubleshooting
-page organised by error message will put them in different sections.
+page organized by error message will put them in different sections.
 
 **Step 4: write the table nobody wrote**
 

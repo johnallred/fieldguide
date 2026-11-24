@@ -28,7 +28,7 @@ Measurement exists to feed one decision. You measure outcomes such as
 time-to-first-success, support deflection, repeat questions and AI answer
 quality, and you use the data to decide what to build, fix or retire.
 
-The three verbs are the content. Most documentation prioritisation has two
+The three verbs are the content. Most documentation prioritization has two
 options, build and fix, and a backlog that therefore only grows. **Retire is the
 one that makes the other two sustainable**, and it belongs on the list
 explicitly.
@@ -42,7 +42,7 @@ request attached, which is a reasonable heuristic and an expensive one.
 
 The reason it is `core`: the backlog in this field is unbounded. The product
 ships continuously, every release creates potential gaps, and the corpus ages
-whether you touch it or not. Prioritisation is not an occasional planning
+whether you touch it or not. Prioritization is not an occasional planning
 activity, it is the mechanism that converts an infinite queue into a finite week.
 
 ## The golden path
@@ -203,11 +203,11 @@ ago.
 | Affected-per-month is usually a guess | The ranking is precise about imprecise inputs |
 | It cannot see avoided future cost | Retirement and tooling always score badly |
 | It cannot see strategic commitments | A launch has value a ticket count does not capture |
-| It optimises for the readers you have | Not the readers a new capability might attract |
+| It optimizes for the readers you have | Not the readers a new capability might attract |
 | Effort estimates are wrong | And wrong in the optimistic direction |
 
 A scoring function that is treated as a decision is worse than no scoring
-function, because it launders judgement as arithmetic. Treated as a prompt for
+function, because it launders judgment as arithmetic. Treated as a prompt for
 disagreement, it is useful.
 
 ## Explaining it to your team
@@ -224,10 +224,10 @@ question. The answer that works is to make the comparison explicit rather than
 the refusal. You do not say no; you show the two items and what each is based
 on, and ask which they want. "This is 20 hours for 8 people, and this is 6 hours
 for 300 based on search data. I can do the first if it matters more for a reason
-the data cannot see." That reframes it from your judgement against theirs to a
+the data cannot see." That reframes it from your judgment against theirs to a
 choice they are making with information.
 
-**The tradeoff to name.** Evidence-based prioritisation systematically
+**The tradeoff to name.** Evidence-based prioritization systematically
 underweights new things. Every input you can cheaply measure is about the
 readers you already have and the content that already exists, so a strict
 reading of the data never builds documentation for a capability that has not
@@ -237,12 +237,12 @@ before demand exists. The resolution is to carve out capacity for launch work
 *outside* the scored backlog, rather than trying to score a forecast, because a
 forecast dressed as a measurement corrupts the whole exercise.
 
-**One sharper point.** The most valuable prioritisation move in this field is
+**One sharper point.** The most valuable prioritization move in this field is
 usually not choosing between backlog items at all, it is noticing that several
 items share a cause and that the cause is fixable once. Four tickets about four
 pages being out of date is not four fix items; it is one
 [freshness monitoring](freshness-monitoring.md) item. That is
-[the systems mindset](systems-mindset.md) as a prioritisation technique, and it
+[the systems mindset](systems-mindset.md) as a prioritization technique, and it
 is how a backlog starts shrinking instead of being triaged forever.
 
 ## Putting it into practice
@@ -268,7 +268,7 @@ zero and said why, means evidence is being used without being hidden behind.
 
 ### How this would be demonstrated elsewhere
 
-Prioritisation needs a backlog with competing claims on it and someone who can
+Prioritization needs a backlog with competing claims on it and someone who can
 be overruled. A repository with one author has neither, so what is here is the
 reasoning and not the decisions.
 
@@ -285,7 +285,7 @@ chosen anyway.
 | Observation | Typical | What it tells you |
 |---|---|---|
 | Tasks with a measurable basis | Fewer than half | The honest starting point |
-| Tasks whose basis is "someone asked" | The largest group | Not illegitimate, but it should be labelled |
+| Tasks whose basis is "someone asked" | The largest group | Not illegitimate, but it should be labeled |
 | Agreement between the data order and your instinct | Partial | Where it disagrees is the interesting part |
 | Tasks you did anyway, against the data | Some, and that is fine | Say why, in the column |
 

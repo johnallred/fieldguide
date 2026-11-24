@@ -40,7 +40,7 @@ without. That is a relationship problem before it is a process problem.
 On a Tuesday it is an asymmetry you have to design around. You need forty
 minutes of a staff engineer's attention; she is on call, mid-migration, and has
 three reviews waiting. Documentation is somewhere below all of it on her list,
-and reasonably so. **Any process that depends on her prioritising your work
+and reasonably so. **Any process that depends on her prioritizing your work
 above hers will fail**, so the design constraint is to need less from her, not
 to persuade her to care more.
 
@@ -307,7 +307,7 @@ engineers answer your review requests the same day.
 ### How this would be demonstrated elsewhere
 
 This is the concept most thoroughly removed by a single-author repository.
-Everything about it is the behaviour of two parties, and here there is one.
+Everything about it is the behavior of two parties, and here there is one.
 
 **What you need.** Engineers who own code you document, and enough standing
 that a request of yours costs them something they will still pay.

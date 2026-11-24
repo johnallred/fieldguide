@@ -39,7 +39,7 @@ most tempted to overstate.
 State the goal carefully, as measurable reductions in support load. Not
 "fewer tickets", which any release can produce by shipping fewer features, and
 not "a self-service portal", which is an artifact rather than an outcome. The
-word doing the work is *measurable*, and the honest answer in most organisations
+word doing the work is *measurable*, and the honest answer in most organizations
 is that nobody has the baseline to measure against.
 
 So the professional skill here is less about raising the number than knowing
@@ -94,7 +94,7 @@ row is the interesting one, and it is the only row that calls for writing.
 
 **Step 3: notice what the number is not**
 
-Thirty-five per cent avoidable load is a statement about twenty questions chosen
+Thirty-five percent avoidable load is a statement about twenty questions chosen
 by the author of the corpus. It is not a prediction about ticket volume, for
 three reasons worth saying out loud:
 
@@ -127,7 +127,7 @@ Each of those moves ticket volume by more than a documentation page does. A
 before-and-after chart with none of them controlled is the standard artifact in
 this area, and it supports no causal claim at all.
 
-What does work, in rough order of rigour:
+What does work, in rough order of rigor:
 
 - A staged rollout, where the page is reachable for some locales or plans
   before others. This is the only option that gives you a control group.
@@ -190,7 +190,7 @@ conversation rather than during it.
 |---|---|
 | "How much did docs reduce support?" | The capability figure, and that achieved needs a baseline |
 | "Can we get that baseline?" | Yes: tag tickets, or stage the rollout |
-| "Just give me a percentage" | The capability figure, labelled as capability |
+| "Just give me a percentage" | The capability figure, labeled as capability |
 | "Our competitor claims 40%" | Ask what they controlled for |
 
 ## Explaining it to your team
@@ -246,8 +246,8 @@ the answerable and findable columns kept separate.
 
 **How to tell it is working.** The measurement above runs
 against `docpack`'s twenty-case golden set and its twelve pages and is
-reproducible from the repository: a ceiling of 100 per cent, a findable-first figure
-of 70 per cent, and a gap of six named cases. What does not exist is a ticket
+reproducible from the repository: a ceiling of 100 percent, a findable-first figure
+of 70 percent, and a gap of six named cases. What does not exist is a ticket
 queue, an audience, or any baseline, so nothing here is a claim about support
 volume, and the [demonstrated](../demonstrated.md) page records the achieved
 half as having no demonstration in either repository.

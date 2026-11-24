@@ -38,7 +38,7 @@ multiplied by the number of languages. Teams routinely discover their content
 model is broken only when the localization bill arrives.
 
 So it belongs in this category as the stress test. If your corpus localizes
-cleanly, it is well modelled.
+cleanly, it is well modeled.
 
 ## The golden path
 
@@ -117,7 +117,7 @@ extracted 5 segment(s); 2 protected span(s)
 
 Look at the fourth segment: `See [the configuration guide{LINK1}.` The opening
 bracket has no closing bracket. The placeholder swallowed it, because
-`\]\(([^)\s]+)\)` matches the `]` as well as the parenthesised URL.
+`\]\(([^)\s]+)\)` matches the `]` as well as the parenthesized URL.
 
 A translator receiving that has been handed malformed Markdown and no way to
 know where the link text ends. The fix is a lookbehind, so the `]` stays in the
@@ -188,7 +188,7 @@ Use the second figure. The masked one is inflated, because `{CODE1}` is shorter
 than the code it stands for and so understates the English. Measure expansion
 on the reinserted string.
 
-Thirty per cent is the usual working figure for German against English, and it
+Thirty percent is the usual working figure for German against English, and it
 is why layouts with fixed-width elements break on translation rather than
 merely looking different.
 

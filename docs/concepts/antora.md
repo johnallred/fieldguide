@@ -11,7 +11,7 @@ tags: [dac, context]
 
 `context` · difficulty 2 · 3h
 
-> Recognising and maintaining Antora and AsciiDoc sites you inherit; rarely the choice for a new one.
+> Recognizing and maintaining Antora and AsciiDoc sites you inherit; rarely the choice for a new one.
 
 **Prerequisites:** [Choosing a static site generator](static-site-generators.md)
 
@@ -32,7 +32,7 @@ Rarely directly, and the line at the top of this page says so. This page is
 
 The first is recognition. AsciiDoc shows up in enterprise and Java-adjacent
 documentation estates, and in the Red Hat ecosystem in particular, so you will
-meet it if you work across a large organisation's content.
+meet it if you work across a large organization's content.
 
 The second is more useful. Antora solves the one problem that genuinely has no
 good answer in MkDocs, Sphinx or Docusaurus: documentation that lives next to
@@ -208,7 +208,7 @@ remains a minority choice despite being the better language.
 |---|---|
 | Content lives in many repositories and must publish as one site | It is one repository |
 | Versions map to branches or tags already | A new project with no AsciiDoc |
-| The organisation already writes AsciiDoc | Contributors need to start today |
+| The organization already writes AsciiDoc | Contributors need to start today |
 | Java or Red Hat ecosystem conventions | You need interactive components |
 
 ### If you have one repository and want includes

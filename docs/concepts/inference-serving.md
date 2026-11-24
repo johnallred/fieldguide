@@ -136,7 +136,7 @@ state the result instead of one flattering one.
 | Time to first token | Streaming models | Total completion time |
 | Cold-start latency | The first request after a scale-up | Everything, on bursty traffic |
 
-A service characterised by one of these is characterised by none of them. The
+A service characterized by one of these is characterized by none of them. The
 pair worth documenting is a latency percentile at a stated arrival rate.
 
 ### Batching strategies
@@ -182,7 +182,7 @@ dashboard blames the network.
 
 | Stage | Typically |
 |---|---|
-| Network and serialisation | Small, until payloads are images |
+| Network and serialization | Small, until payloads are images |
 | Queue wait | Dominant under batching; see step 2 |
 | Preprocessing | Often on the critical path, often forgotten |
 | Model compute | The only part benchmarks measure |

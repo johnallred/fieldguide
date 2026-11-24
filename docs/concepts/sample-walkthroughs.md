@@ -261,7 +261,7 @@ is missing is part of explaining what is there.
 | Quoted blocks appear in the sample | Copy-paste drift |
 | Named anchors still exist | A deleted region, which transclusion fails loudly on |
 | The sample runs | See [sample validation](code-sample-validation.md) |
-| The stated output matches | The sample's behaviour changed |
+| The stated output matches | The sample's behavior changed |
 | Anchor count in the sample matches references | An orphaned anchor nobody removed |
 
 The last one is cheap and worth having. An anchor left in a sample after the

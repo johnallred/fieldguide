@@ -44,7 +44,7 @@ Release notes sit where [release readiness](release-readiness.md) and
 [technical writing](technical-writing.md) meet. Generating a draft from
 commits is automation, and worth doing. Deciding what a reader needs to know,
 and checking the draft against the commits so nothing is lost on the way, is
-the part that takes judgement and the part this page is about.
+the part that takes judgment and the part this page is about.
 
 ## The golden path
 
@@ -161,7 +161,7 @@ python3 release_notes.py commits.txt notes.md
 **What you built.** A release section with the right version for its changes,
 every user-facing change in reader terms, a breaking change that says how to
 upgrade, and a check that keeps the notes honest about the commits they
-summarise.
+summarize.
 
 ## Reference
 
@@ -170,7 +170,7 @@ summarise.
 | Category | For |
 |---|---|
 | Added | New features |
-| Changed | Changes to existing behaviour |
+| Changed | Changes to existing behavior |
 | Deprecated | Features that will be removed soon |
 | Removed | Features removed in this release |
 | Fixed | Bug fixes |

@@ -39,7 +39,7 @@ understand that these are different dialects with different capabilities."
 Nobody needs help writing a heading. What matters on a real
 corpus is knowing which constructs are safe to use, where the extension
 configuration lives, and that a dialect mismatch is silent. On a corpus with
-multiple contributors, somebody will write GitHub-flavoured syntax because
+multiple contributors, somebody will write GitHub-flavored syntax because
 GitHub rendered it in the pull request description, and your site will publish
 the raw characters.
 
@@ -117,7 +117,7 @@ markdown-it gfm-like      yes       -         yes       -         -
 **No two rows are the same.** Five implementations, five answers, one source
 file. CommonMark, the actual standard, supports none of the five features,
 because every one of them is an extension. And task lists render nowhere by
-default, including in the GitHub-flavoured configuration.
+default, including in the GitHub-flavored configuration.
 
 **Step 3: see what the failure looks like**
 
@@ -274,7 +274,7 @@ somebody writes outside it.
 
 **Three things to do, in order:**
 
-1. Run the golden path. The five-row table is the thing to internalise: no two
+1. Run the golden path. The five-row table is the thing to internalize: no two
    implementations agree.
 2. Run your own site's extension list over the sample file and write down the
    answer. Most teams cannot tell you whether their site supports footnotes.

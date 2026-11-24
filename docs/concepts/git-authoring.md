@@ -170,7 +170,7 @@ steps 2 and 3.
 | Squash on merge | The history that matters is the published change |
 | Change code and its page in one pull request | The atomicity that makes docs-as-code worth it |
 
-The last row is the one to defend. Splitting a behaviour change and its
+The last row is the one to defend. Splitting a behavior change and its
 documentation into two pull requests reintroduces exactly the drift the
 workflow exists to prevent.
 

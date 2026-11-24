@@ -259,7 +259,7 @@ unit test.
 start fails, the fix is in the document, not the harness. Every instinct pushes
 the other way, because pre-installing the dependency makes the build green in
 one line. That single decision is the difference between a cold-start test and
-a cold-start-shaped piece of theatre.
+a cold-start-shaped piece of theater.
 
 ## Putting it into practice
 

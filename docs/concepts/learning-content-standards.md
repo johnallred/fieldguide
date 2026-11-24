@@ -1,6 +1,6 @@
 ---
 title: Learning content standards
-summary: SCORM, xAPI, cmi5 and LTI, what each one actually standardises, and how to catch the defects an LMS or LRS will reject before you upload.
+summary: SCORM, xAPI, cmi5 and LTI, what each one actually standardizes, and how to catch the defects an LMS or LRS will reject before you upload.
 diataxis: explanation
 audience: developer
 concept: learning-content-standards
@@ -42,7 +42,7 @@ rule in a specific standard, and each one is checkable before upload.
 The second reason is choosing. Someone will ask whether the new labs should be
 SCORM, xAPI or LTI. The answer depends on what the content is and what data
 anyone needs, and it is a decision that is expensive to reverse once a
-catalogue is built around it.
+catalog is built around it.
 
 ## The golden path
 
@@ -178,7 +178,7 @@ defects before upload instead of after learners report them.
 
 ### What each standard does
 
-| Standard | Standardises | Tracking goes to | Best for |
+| Standard | Standardizes | Tracking goes to | Best for |
 |---|---|---|---|
 | SCORM 1.2 | A zipped package and a JavaScript API between content and LMS | The LMS, through a fixed data model | Self-paced courses in any LMS |
 | SCORM 2004 | The same, plus separate completion and success, and sequencing | The LMS | Courses needing branching or sequencing rules |

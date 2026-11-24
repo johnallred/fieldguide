@@ -115,7 +115,7 @@ grounded@3     90%    100%
 headroom      +15%    +10%
 ```
 
-Four of five scores moved, and the ceiling reached 100 per cent at three
+Four of five scores moved, and the ceiling reached 100 percent at three
 chunks. Two sentences.
 
 **Step 4: confirm the mechanism rather than the coincidence**
@@ -138,7 +138,7 @@ vocabulary coverage moved, and no others. Thirty-five new terms entered the
 corpus and two of them were the ones being tested, which is as close to a
 mechanism as a twenty-case sample can get.
 
-**Step 5: the generalisation, and its trap**
+**Step 5: the generalization, and its trap**
 
 A repeat question is usually a vocabulary gap, and the fix is usually one
 sentence putting the reader's word next to yours. That is the cheapest
@@ -235,7 +235,7 @@ assumption is that a repeat means a missing answer. On my corpus both residual
 failures had the answer present and correct: the words `smaller` and `hedge`
 were absent from 1,159 distinct terms. One sentence per page putting the
 reader's word beside the corpus's moved four of five retrieval scores, and took
-grounding to 100 per cent at three chunks.
+grounding to 100 percent at three chunks.
 
 **How you know it was the vocabulary and not luck.** I re-measured vocabulary
 coverage against the old and new corpus. Thirty-five new terms entered, and the
@@ -244,7 +244,7 @@ moved. On a twenty-case sample that is as close to a mechanism as you get, and
 I would say so rather than claim causation.
 
 **The diagnostic worth bringing.** The `grounded@k` plateau tells you when to
-stop reaching for ranking. Mine went 80 per cent at one chunk, 90 at three, and
+stop reaching for ranking. Mine went 80 percent at one chunk, 90 at three, and
 then flat out to ten. Once widening the window stops helping, the remaining
 failures are not ranking failures, and no reranker or embedding upgrade will
 touch them. That is a ten-point gap that looks like a business case for a
@@ -254,7 +254,7 @@ reranker, and half of it was a synonym.
 candidates and cannot rank them. My twenty cases are unweighted, so a question
 asked four hundred times counts the same as one asked twice, and the fix order
 I would derive is therefore arbitrary. Search logs or a ticket queue supply the
-weights, and until they exist this is a method rather than a prioritisation.
+weights, and until they exist this is a method rather than a prioritization.
 
 ## Putting it into practice
 
@@ -287,5 +287,5 @@ the method was validated against real repeat volume.
 - [Support deflection](support-deflection.md), the aggregate this breaks down
 - [Search and query log analysis](search-log-analysis.md), the frequency data this lacks
 - [AI answer quality](ai-answer-quality.md), where the grounded@k plateau is developed
-- [Prioritising documentation work](docs-prioritization.md), what to do with a list of candidates
+- [Prioritizing documentation work](docs-prioritization.md), what to do with a list of candidates
 - [Style guides and terminology management](style-guide.md), the discipline that creates the gap

@@ -35,7 +35,7 @@ by that assistant as well as by developers.
 
 What makes it `core` rather than a product-management concern is that the
 decisions are documentation decisions. **Refusal thresholds, citation display
-and scope boundaries are all editorial judgements**, and a team that treats them
+and scope boundaries are all editorial judgments**, and a team that treats them
 as engineering ships an assistant that answers questions about billing because
 nobody said it should not.
 
@@ -437,7 +437,7 @@ was answered confidently from the `batch_size` chunk, and four of five known
 gaps got answers. Calibration puts the answerable questions at 2.29 and above
 and the gaps at 1.59 and below, so the floor belongs at about 1.9. **A guessed
 threshold is the commonest way one of these fabricates**, and the fix costs ten
-labelled questions.
+labeled questions.
 
 **The tokenizer sent a reference question to a how-to page.** "What is the
 default batch size" returned the latency guide, because `batch_size` with an
@@ -544,13 +544,13 @@ refusals: out of scope, which points you elsewhere, and low confidence, which
 says we should cover this and do not and logs your exact wording. Conflating
 them throws away the best output of the whole product, which is a content
 backlog in readers' own words. After that, follow-up rewriting, because people
-converse immediately and 'what about for quantised models' is four words with no
+converse immediately and 'what about for quantized models' is four words with no
 subject."
 
 **The follow-up is "how do you set the confidence threshold",** and the answer
-has to be empirical or it is a guess. You need a labelled set: questions
+has to be empirical or it is a guess. You need a labeled set: questions
 you know the corpus answers and questions you know it does not, then pick the
-floor that minimises both fabrication and false refusal. That is
+floor that minimizes both fabrication and false refusal. That is
 [output evaluation](output-evaluation.md) applied to a product decision, and the
 threshold moves whenever the corpus or the retriever changes, which is why it
 belongs in CI rather than in a config file somebody tuned once.
@@ -584,7 +584,7 @@ weekly report that lists gap refusals with the reader's wording.
 
 1. **Run the golden path.** The weekly report is the demonstration: it turns a
    conversation into a content backlog, which is the thing nobody expects.
-2. **Calibrate the threshold on a labelled set.** Twenty questions you know are
+2. **Calibrate the threshold on a labeled set.** Twenty questions you know are
    answerable and ten you know are not. Report the refusal rate at three
    thresholds. That is a small experiment with a real number.
 3. **Instrument turns per conversation** on anything you ship. If it is near
@@ -592,7 +592,7 @@ weekly report that lists gap refusals with the reader's wording.
 
 **How to tell it is working.** A working chatbot over docs is a weekend project. The
 infrastructure version has a scope boundary, two semantically different
-refusals, a logged rewriting step, and a report that produces a prioritised
+refusals, a logged rewriting step, and a report that produces a prioritized
 content backlog. When that backlog is driving edits and usage holds past week
 two, it is working.
 
@@ -621,7 +621,7 @@ question -> retrieve(k) -> prompt -> answer -> grounded? cited? refused?
 | Observation | Rough magnitude | What it tells you |
 |---|---|---|
 | End-to-end correct answers | below your `grounded@k` | Retrieval sets a ceiling generation does not reach |
-| Correct answers from wrong chunks | a few per cent | The model knew it anyway; your corpus got no credit |
+| Correct answers from wrong chunks | a few percent | The model knew it anyway; your corpus got no credit |
 | Wrong answers from correct chunks | the interesting bucket | A generation or prompt problem, not a retrieval one |
 | Answers on questions with no corpus answer | mostly invented | The reason a refusal path is mandatory |
 | Effect of raising `k` from 3 to 10 | small, then negative | More context is not more accuracy |

@@ -20,7 +20,7 @@ tags: [dac, core]
 A Python static site generator that turns a directory of Markdown into a site,
 plus **Material for MkDocs**, a theme so dominant that in practice "MkDocs"
 usually means both. Material supplies navigation, search, admonitions, tabs,
-code annotations and the visual design most people recognise as a modern docs
+code annotations and the visual design most people recognize as a modern docs
 site.
 
 It is the easiest of the generators to adopt and the one whose build checks the

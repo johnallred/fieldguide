@@ -22,7 +22,7 @@ each step assumes the ones above it.
 
 ## 1. [Metadata for navigation and retrieval](../concepts/metadata.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Tagging content so navigation, search and AI retrieval can all find the right page.
 
@@ -32,7 +32,7 @@ Also in: [The content architect](content-architect.md), [The KnowledgeOps path](
 
 ## 2. [Findability and search design](../concepts/findability.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Making sure developers and AI assistants can both find and use the page they need.
 
@@ -42,7 +42,7 @@ Also in: [The content architect](content-architect.md).
 
 ## 3. [Structured data and JSON-LD](../concepts/structured-data.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Adding machine-readable markup so search engines and AI tools understand what a page is.
 
@@ -50,7 +50,7 @@ Builds on, earlier in this path: Metadata for navigation and retrieval.
 
 ## 4. [SEO for documentation](../concepts/seo-for-docs.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Making documentation rank for the searches developers actually run.
 
@@ -58,7 +58,7 @@ Builds on, earlier in this path: Metadata for navigation and retrieval.
 
 ## 5. [Agent-ready content](../concepts/agent-ready-content.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Structuring knowledge so AI assistants and agents can use it as reliably as people can.
 
@@ -80,7 +80,7 @@ Also in: [A working result in a weekend](prove-it.md), [The KnowledgeOps path](k
 
 ## 7. [Crawlability and the agent-ready front door](../concepts/crawlability.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Making sure crawlers and agents can reach and read every page, starting from the front door.
 
@@ -88,7 +88,7 @@ Builds on, earlier in this path: SEO for documentation.
 
 ## 8. [Generative engine optimization](../concepts/geo.md)
 
-`core` · practise it · 3h
+`core` · practice it · 3h
 
 Making documentation the source AI-generated answers draw on and cite.
 

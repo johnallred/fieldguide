@@ -24,7 +24,7 @@ to serve more than one serves none of them well. The four are **tutorials**
 (learning by doing), **how-to guides** (achieving a goal), **reference**
 (finding a fact), and **explanation** (understanding why).
 
-It is attributed to Daniele Procida and has been adopted as the organising
+It is attributed to Daniele Procida and has been adopted as the organizing
 framework by Canonical, Django, Gatsby, Cloudflare and a long list of others.
 It is the closest thing this field has to a standard.
 
@@ -306,7 +306,7 @@ the corpus. That is worth saying out loud.
 
 ## Putting it into practice
 
-**The work product.** A corpus organised by type, where the type is a declared
+**The work product.** A corpus organized by type, where the type is a declared
 field and not only a folder name, and something that uses the field.
 
 **Three things to do, in order:**

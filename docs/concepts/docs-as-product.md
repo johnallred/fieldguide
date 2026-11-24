@@ -348,7 +348,7 @@ quickstart, it is the conversation that happens when it blocks something.
 | A release that waited for documentation | Someone had the authority and used it |
 | A sample owned by the team that owns the feature | The authorship question, answered |
 | A definition of done naming documentation | It survives a deadline |
-| A quickstart in the same CI run as the code | The mechanisable half |
+| A quickstart in the same CI run as the code | The mechanizable half |
 | A feature shipped without docs, and the record of why | Honest exceptions beat a perfect claim |
 
 **What this guide and its companion can point at.** `docpack` builds its

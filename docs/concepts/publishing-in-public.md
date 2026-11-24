@@ -78,7 +78,7 @@ PLACEHOLDERS = {
   TODO or FIXME        7 hits in 5 files
 ```
 
-Twenty-two hits. The two useful results are the clean rows: no unfilled licence
+Twenty-two hits. The two useful results are the clean rows: no unfilled license
 fields, and no container paths, the second being the one that would have been
 genuinely embarrassing.
 
@@ -101,7 +101,7 @@ be.
 22 hits, 4 real: 82% noise
 ```
 
-An audit whose output is 82 per cent noise is an audit nobody runs twice,
+An audit whose output is 82 percent noise is an audit nobody runs twice,
 which is the same failure as a badly aimed [documentation
 gate](developer-advocacy.md) and for the same reason.
 
@@ -146,7 +146,7 @@ exit=1
 ```
 
 Two findings, both real: a published site whose canonical URL and whose "edit
-this page" links point at an organisation that does not exist.
+this page" links point at an organization that does not exist.
 
 **Step 5: the transfer test, which settles the argument**
 
@@ -163,7 +163,7 @@ not ready to publish, 9 finding(s):
   mkdocs.yml:4                  placeholder URL in this repository's own identity
 ```
 
-The role-scoped check travelled perfectly: two findings, both real, on a
+The role-scoped check traveled perfectly: two findings, both real, on a
 repository it had never seen. The allowlist-scoped check did not travel at all,
 producing seven false hits immediately, because the allowlist named
 `fieldguide`'s paths.
@@ -242,7 +242,7 @@ page's argument rather than a footnote to it.
 on a published page.** `demonstrations.yaml` carries each repository's own URL
 in its `projects` block, the generated [demonstrated](../demonstrated.md) page
 prints both as links, and that file was not in `OWN_CONFIG`. So the gate cleared
-a repository whose own index pointed twice at an organisation that does not
+a repository whose own index pointed twice at an organization that does not
 exist.
 
 Note the shape of that failure against the shape of the allowlist's. The
@@ -256,7 +256,7 @@ repository, and still missed two live defects.
 
 So the sharpened lesson is narrower than step 5's. A check scoped by what a file
 is for transfers, and it is only as complete as your list of what carries that
-purpose, which is a judgement the scoping cannot make for you. The roster is
+purpose, which is a judgment the scoping cannot make for you. The roster is
 now six files, and the reason `demonstrations.yaml` is on it is written beside
 it, because the next person to add a file that publishes an identity will not
 think to look here.
@@ -296,7 +296,7 @@ face of it, a page about what is missing.
 | Trust collapses at the first gap | Trust survives, because the gaps are the author's own list |
 
 A repository that states its limits is making a verifiable claim about its
-authors' judgement, and readers trust that more than any of the work itself.
+authors' judgment, and readers trust that more than any of the work itself.
 It is also the cheapest page to write and the hardest to write honestly.
 
 ### What counts as published work
@@ -323,9 +323,9 @@ what you chose to leave out, and whether you wrote down the limits.
 | One line at the top | What is this |
 | Quick start, copy-pasteable | Can I run it |
 | What it is for, honestly scoped | Should I |
-| How it is organised | Where do I look |
+| How it is organized | Where do I look |
 | What it does not do | Can I trust the rest |
-| Licence | May I |
+| License | May I |
 
 Every claim in the quick start is a claim a stranger will test within two
 minutes, which makes it the highest-risk prose in the repository. This guide's
@@ -337,7 +337,7 @@ life, until the [capability gate](developer-advocacy.md) read it.
 | Check | Why it bites |
 |---|---|
 | No container or local paths | Reveals the machine, breaks every copy-paste |
-| Licence has a real name and year | A repository without one is unusable, politely |
+| License has a real name and year | A repository without one is unusable, politely |
 | Own `repo_url` and `site_url` are real | Edit links and canonical URLs point at nothing |
 | The README's commands exist | The first thing anyone runs |
 | The README's numbers are current | They go stale silently |

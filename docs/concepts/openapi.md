@@ -241,7 +241,7 @@ to know about OpenAPI in a documentation role.
 | Generated from tests or traffic | Low for reality | Describes what happens, not what is intended |
 
 Generated-from-code is the common middle. Its weakness is worth naming: if the
-implementation is wrong, the spec documents the wrong behaviour with total
+implementation is wrong, the spec documents the wrong behavior with total
 confidence.
 
 ### What to put in CI

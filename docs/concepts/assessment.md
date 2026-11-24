@@ -80,7 +80,7 @@ classifier was corrected, then the corpus as it stands, at 120 pages.)
 ```
 
 On the finished corpus the split was 70, 35 and 1. The inconsistency outlived
-the discovery by some months, because standardising the label meant touching
+the discovery by some months, because standardizing the label meant touching
 every page and the defect was recorded rather than fixed.
 
 **It is fixed now, and fixing it found three more.** The lesson below says to
@@ -107,8 +107,8 @@ more pages. The hand sweep had filtered to labels used ten or more times, so a
 five-page variant was below the threshold that was supposed to find variants.
 **A frequency floor is a filter on what you are willing to find.**
 
-So the fix was not the standardisation. It is `STRUCTURAL_LABELS` in
-`registry.py`, which declares the wording of every labelled element, and the
+So the fix was not the standardization. It is `STRUCTURAL_LABELS` in
+`registry.py`, which declares the wording of every labeled element, and the
 part of `fieldguide audit` that reports every repeated bolded opener *not* in
 that list. Counting declared labels confirms what you already know; counting
 the undeclared ones is what finds the next one.
@@ -132,7 +132,7 @@ tasks: 246 across 82 pages, exactly 3 each
 begin with an imperative action: 133/246 (54%)
 ```
 
-Fifty-four per cent would be a real finding, if true. The unmatched items:
+Fifty-four percent would be a real finding, if true. The unmatched items:
 
 ```
 [('**Run', 30), ('**Write', 11), ('**Add', 8), ('**Find', 8), ('**Generate', 7), ...]
@@ -149,7 +149,7 @@ unmatched: If 3, On 2, For 1, When 1, Redo 1, Use 1, Publish 1, Track 1
 
 Four of the fourteen remaining, `Redo`, `Use`, `Publish` and `Track`, are
 imperatives the verb list omitted, which is the word-list bug from the duration
-audit in miniature. The real figure is about 96 per cent, and the honest
+audit in miniature. The real figure is about 96 percent, and the honest
 summary is that the corpus is good at telling a reader what to do.
 
 **Step 4: the number that matters**
@@ -164,20 +164,20 @@ tasks naming an inspectable artifact:          203/318 (64%)
 tasks stating how the learner knows it worked:  53/318 (17%)
 ```
 
-**Seventeen per cent**, and that number was wrong. It stood on this page for
+**Seventeen percent**, and that number was wrong. It stood on this page for
 months as the guide's weakest figure, and it was the classifier that was weak.
 
 The keyword list behind it included `against`. Sixteen of its 53 matches were
 the preposition in "run it against a corpus you own", which states no criterion
-at all. Meanwhile it recognised none of the forms the corpus actually uses. Not the
+at all. Meanwhile it recognized none of the forms the corpus actually uses. Not the
 conditionals, "if the answer is two, you have the drift". Not the predicted
 values, "on a client-rendered site the number is near zero". Not the
 comparisons to the author's own result, "mine said 72 tests and there were
 119". It was wrong in both directions at once, and the net error ran against
 the guide rather than for it.
 
-Sixty tasks hand-labelled against a written definition, in two samples with one
-held out, put the real rate at **about forty per cent** of a sample where the
+Sixty tasks hand-labeled against a written definition, in two samples with one
+held out, put the real rate at **about forty percent** of a sample where the
 old classifier saw seventeen. The rewritten classifier, scored against those
 labels, reports a third of the corpus.
 
@@ -188,7 +188,7 @@ tasks naming an inspectable artifact:          204/318 (64%)
 tasks stating how the learner knows it worked: 128/318 (40%)
 ```
 
-That last figure is 40 per cent after a pass that added one clause to the
+That last figure is 40 percent after a pass that added one clause to the
 best-suited task on every `core` page that had none, which was 22 of them. The
 pass moved the measured rate from 33 to 40; the correction moved it from 17 to
 33. **The instrument was worth more than the work**, which is not the lesson
@@ -213,7 +213,7 @@ both are now patterns, and both arrived as misses. A classifier for a quantity
 this open-ended is permanently incomplete, which is the argument for scoring it
 against labels rather than trusting it.
 
-The labelled set is frozen at `tests/fixtures/criterion_labels.json` with its
+The labeled set is frozen at `tests/fixtures/criterion_labels.json` with its
 definition and method beside it, and `tests/test_criterion.py` scores the
 classifier against it on every run. Recall against the labels must be perfect
 and precision is allowed to be imperfect, because a missed criterion
@@ -235,7 +235,7 @@ Here there is a number, the reader produces it before being told it, and a
 wrong answer is visible to the reader themselves. That is the entire
 difference, and it costs one clause.
 
-**Step 5: what a thirty-nine per cent calls for**
+**Step 5: what a thirty-nine percent calls for**
 
 Not quizzes. A quiz over this corpus would test recall of its wording, which is
 the thing nobody needs.
@@ -325,8 +325,8 @@ first and treats page views and the absence of complaints as the second, which
 is the weakest evidence available and the most commonly cited."
 
 **The follow-up is what you measured.** My corpus ends every page with three
-things to do, 360 tasks in all, and 94 per cent begin with an imperative while
-39 per cent state how the reader would know it worked. More practice than
+things to do, 360 tasks in all, and 94 percent begin with an imperative while
+39 percent state how the reader would know it worked. More practice than
 assessment, and that figure followed a deliberate pass. The honest part of that
 story is that the first measurement said seventeen and was wrong: the
 classifier matched the word "against" and missed every conditional, so the
@@ -344,7 +344,7 @@ would rather say I have one and not the other.
 
 **One sharper point.** My own measurement was wrong twice inside ten minutes:
 it found 47 of 82 proof sections because the corpus used three labels for one
-element, and it put the imperative rate at 54 per cent because it was matching
+element, and it put the imperative rate at 54 percent because it was matching
 Markdown emphasis rather than verbs. Both produced numbers I would have
 published. The label one matters more, because it was the second independent
 discovery of that defect here: the earlier fix had been applied to the label
@@ -371,7 +371,7 @@ state a success criterion, and one task rewritten into predict-then-check.
 **How to tell it is working.** The measurement above runs
 against this guide's 120 pages and is reproducible from the repository;
 what it establishes is that 360 tasks are well formed and that 141 of them are
-assessable, against a classifier scored on sixty hand-labelled tasks rather
+assessable, against a classifier scored on sixty hand-labeled tasks rather
 than trusted. What it cannot establish is that any of them teach
 anybody anything, because no reader has been observed, and the
 [demonstrated](../demonstrated.md) page records assessment as partial for that

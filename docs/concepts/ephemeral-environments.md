@@ -14,7 +14,7 @@ tags: [gp, supporting]
 > Standing up a real cloud environment for every lab run, checking the lab against it, and proving the teardown left nothing running.
 
 !!! warning "One lab, one account, a young record"
-    The lifecycle on this page was demonstrated by [coldlab](https://github.com/johnallred/coldlab), which runs one lab against one personal AWS account. Its record is `health/health.jsonl`, which grows with every run, and its summary is generated into `health/HEALTH.md`; every figure below names the run it was read at. Cost per run was measured once, on 2026-11-23, from usage times published prices rather than from a bill, and carries the caveats given with it. Account vending, a catalogue of labs, multiple regions and the rest of what coldlab's README lists under "What it deliberately does not prove" are described here and were not built. The drill runs offline on a dated copy of the record; it does not touch AWS.
+    The lifecycle on this page was demonstrated by [coldlab](https://github.com/johnallred/coldlab), which runs one lab against one personal AWS account. Its record is `health/health.jsonl`, which grows with every run, and its summary is generated into `health/HEALTH.md`; every figure below names the run it was read at. Cost per run was measured once, on 2026-11-23, from usage times published prices rather than from a bill, and carries the caveats given with it. Account vending, a catalog of labs, multiple regions and the rest of what coldlab's README lists under "What it deliberately does not prove" are described here and were not built. The drill runs offline on a dated copy of the record; it does not touch AWS.
 
 **Prerequisites:** [Reproducible environments](reproducible-environments.md), [Cold-start testing](coldstart-testing.md)
 
@@ -36,7 +36,7 @@ that passed every lab check and left a resource behind has failed.
 
 This matters because hands-on labs are only as good as the account they run in, and labs
 against cloud services rot without anyone editing them. A service changes a
-default, a quota tightens, an organisation adds a policy, and the lab that
+default, a quota tightens, an organization adds a policy, and the lab that
 worked at launch fails on step four for every learner who tries it.
 
 On a Tuesday it looks like this. A workshop is on Thursday. The lab passed
@@ -53,14 +53,14 @@ tells you how often it works, how long it takes, and which check is unreliable.
 
 ## The golden path
 
-Read a lab's health record, size what a nightly catalogue would cost,
+Read a lab's health record, size what a nightly catalog would cost,
 and verify a teardown against the services rather than against a tag index.
 About thirty minutes.
 
 The analysis is committed as `drills/lab_lifecycle.py`, which holds the three
 files below and a test that keeps them identical to this page. The runs and
 checks are coldlab's `health/health.jsonl` as of 2026-11-24T00:01Z, reshaped
-into two tables, with durations rounded and errors summarised. The teardown
+into two tables, with durations rounded and errors summarized. The teardown
 rows are illustrative except the event source mapping, which is the case
 coldlab met on its first real teardown.
 
@@ -153,7 +153,7 @@ It exits 1, because two of the three teardown checks failed.
 
 In this snapshot, two of five runs failed, and neither failure was the lab
 being wrong. The
-first stopped at deploy, nineteen seconds in, because an organisation policy
+first stopped at deploy, nineteen seconds in, because an organization policy
 refused a check the deploy tool makes, so every teardown check is green and
 nothing else ran. A run that fails before the lab starts is a fact about the
 account, and it belongs in the record as much as a lab failure does.
@@ -169,18 +169,18 @@ pointing at an assumption someone got wrong.
 `dlq.receive_count_exact` failed the only time it ran, and the run still
 passed, because it was advisory. That is the mechanism working: the receive
 count was 5 on the hand run and 4 on the automated ones, so an exact value was
-never a real expectation. It was retired in favour of a floor, which gates,
+never a real expectation. It was retired in favor of a floor, which gates,
 and the values ever seen, `[5, 4]`, became a drift detector that flags a new
 one without failing the run.
 
-**Step 5: size a catalogue, in time and then in money**
+**Step 5: size a catalog, in time and then in money**
 
 In this snapshot the median over all runs is 453 seconds, the figure
 coldlab's generated summary showed after the run of 2026-11-23T23:53Z; the
 median over runs that went the whole way is 478. Use the second for planning,
 because failed runs are short, and recompute both from the record rather than
 copying either. Two hundred labs is 26.6 hours
-run one after another, so the first decision a catalogue forces is concurrency,
+run one after another, so the first decision a catalog forces is concurrency,
 not cost: seven at once to fit a four-hour window, and seven at once means
 seven stacks, seven sets of quotas and seven teardowns in flight.
 
@@ -227,7 +227,7 @@ reported as unresolved rather than as clean, because "I could not check" is
 not "it is gone".
 
 **What you built.** A reading of a lab's record that separates account
-failures from lab failures, a flaky check traced to its cause, a catalogue sized
+failures from lab failures, a flaky check traced to its cause, a catalog sized
 in hours, and a teardown verdict that a tag index cannot fool.
 
 ## Reference
@@ -283,19 +283,19 @@ its records, because a hand-maintained claim about an automated system rots at
 the speed the system runs. This page follows the same rule: its figures name
 the run they were read at.
 
-### What a catalogue in production adds
+### What a catalog in production adds
 
 | Here | In production |
 |---|---|
-| One personal account, isolated by stack name and tag | A throwaway account per learner or per run, provisioned through the organisation and closed afterwards |
-| One lab | A catalogue, run concurrently in a window |
+| One personal account, isolated by stack name and tag | A throwaway account per learner or per run, provisioned through the organization and closed afterwards |
+| One lab | A catalog, run concurrently in a window |
 | One region | The regions learners use |
 | Cost from usage times published prices | Cost attributed per lab by cost allocation tags, activated in the management account |
 
 ### Why the bill could not answer
 
 Two reasons, and the second is the one that carries over. Free tier absorbs a
-run at this volume, so a personal account bills a catalogue at nothing. And
+run at this volume, so a personal account bills a catalog at nothing. And
 coldlab's account is a linked account in an AWS Organization, where
 `aws ce update-cost-allocation-tags-status` is refused: activating a cost
 allocation tag needs the management account. coldlab tags every resource it
@@ -306,7 +306,7 @@ which is attributable by resource name and needs no billing access, multiplied
 by published prices, is what works.
 
 AWS calls its account-provisioning service Account Factory, part of Control
-Tower: it provisions member accounts in an organisation and can close or
+Tower: it provisions member accounts in an organization and can close or
 repurpose them. coldlab does not use it, and nothing on this page shows it
 working.
 
@@ -314,7 +314,7 @@ working.
 
 Opened and checked on 2026-11-23, all in the coldlab repository:
 
-- [`README.md`](https://github.com/johnallred/coldlab/blob/main/README.md): the `finally` teardown, the five measured behaviours, gating and advisory checks, and "What a run costs": the per-run figures, the method and why the bill could not be used. Its section "What it deliberately does not prove" covers account vending, one lab rather than a catalogue, and a single region and account.
+- [`README.md`](https://github.com/johnallred/coldlab/blob/main/README.md): the `finally` teardown, the five measured behaviors, gating and advisory checks, and "What a run costs": the per-run figures, the method and why the bill could not be used. Its section "What it deliberately does not prove" covers account vending, one lab rather than a catalog, and a single region and account.
 - [`health/HEALTH.md`](https://github.com/johnallred/coldlab/blob/main/health/HEALTH.md): the generated summary (runs, pass rate, median duration, flaky checks), current as of its last run.
 - [`lab/sqs-retry/expected.yaml`](https://github.com/johnallred/coldlab/blob/main/lab/sqs-retry/expected.yaml): the stale tag index, the two required teardown checks and 8 of 15 resources tagged. It keeps `receive_count_observed` as an expectation and leaves redrive observations to the record.
 - [`harness/arns.py`](https://github.com/johnallred/coldlab/blob/main/harness/arns.py) and [`harness/checks.py`](https://github.com/johnallred/coldlab/blob/main/harness/checks.py): resolution of each ARN against its service, and the three teardown checks.
@@ -348,7 +348,7 @@ so the obvious saving is a warm stack, reset between runs. It would cut the
 dominant cost, runner time, and it would delete the check that found the stale
 tag index, because a stack that is never destroyed has no teardown to verify.
 coldlab keeps deploy and destroy per run, deliberately. Present it as a
-decision with a cost on both sides rather than as an optimisation, because
+decision with a cost on both sides rather than as an optimization, because
 asking for teardown as an assertion and for a low cost per run is exactly where
 the two pull apart. Separately: a handful of runs proves the loop closes and
 says nothing yet about reliability, so do not promise a flake rate until the
@@ -367,7 +367,7 @@ that says how often the lab passes and how long it takes.
 
 **Three things to do, in order:**
 
-1. Run the golden path, then pick the one lab in your catalogue that runs
+1. Run the golden path, then pick the one lab in your catalog that runs
    against a cloud service and write down every assumption its steps make
    about timing, exit codes and defaults.
 2. Make teardown run in a `finally` block and add the three teardown checks,

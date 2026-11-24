@@ -1,6 +1,6 @@
 ---
 title: LLMs in the content lifecycle
-summary: Drafting, updating and auditing a corpus with models, with the human placed where judgement is actually required.
+summary: Drafting, updating and auditing a corpus with models, with the human placed where judgment is actually required.
 diataxis: explanation
 audience: operator
 concept: llm-content-lifecycle
@@ -11,7 +11,7 @@ tags: [ai, core]
 
 `core` · difficulty 3 · 6h
 
-> Using LLMs to draft, update and audit content, with human review where judgement matters.
+> Using LLMs to draft, update and audit content, with human review where judgment matters.
 
 
 **Prerequisites:** [Prompting for content work](prompting.md), [Content lifecycle and governance](content-lifecycle.md)
@@ -28,7 +28,7 @@ The work is deciding where that is.
 
 The work has three activities
 (drafting, updating, auditing), three checks (freshness, code accuracy,
-terminology drift), and one constraint (human review where judgement matters).
+terminology drift), and one constraint (human review where judgment matters).
 Every other page in this category is a piece of it.
 
 What makes it `core` and difficulty 3 is that **the lifecycle is where the
@@ -361,7 +361,7 @@ deterministic check already located.
 ### What the audit found, and how routing changed its shape
 
 Seven findings on four pages: three stale, one terminology, one unsupported
-version, one hedge, one wrong default. Split 4 judgement and 3 mechanical.
+version, one hedge, one wrong default. Split 4 judgment and 3 mechanical.
 
 Routing turns that into:
 
@@ -413,7 +413,7 @@ a diff a reviewer might approve.**
 | **Drafting a replacement for a located finding** | Prompt plus validation | **Yes** |
 | **Ranking a review queue** | Classification | **Yes** |
 | Summarising a changelog into release notes | Prompt plus review | Yes |
-| Deciding what to retire | Judgement | **Never** |
+| Deciding what to retire | Judgment | **Never** |
 | Confirming a page is accurate | Needs the implementation | **Never** |
 
 Three of the four checks involve no model at all. That is the most
@@ -437,8 +437,8 @@ Three mechanisms make a queue reviewable:
 | Mechanism | Effect |
 |---|---|
 | **Batch identical mechanical findings** | One approval covers "2.2 to 2.6" on nine pages |
-| **Separate mechanical from judgement** | Mechanical needs a glance; judgement needs thought |
-| **Ration judgement items to real capacity** | The remainder is deferred visibly, not hidden |
+| **Separate mechanical from judgment** | Mechanical needs a glance; judgment needs thought |
+| **Ration judgment items to real capacity** | The remainder is deferred visibly, not hidden |
 
 Batching is the big one. Nine pages with the same wrong version is one decision,
 not nine, and presenting it as nine is what makes a queue look impossible.
@@ -465,7 +465,7 @@ why the golden path tags staleness `needs-judgement` rather than `mechanical`.
 | A deterministic check located the finding first | An open "improve this page" instruction has no failure bound |
 | The proposed change is a diff | Reviewable; an applied change is not |
 | Validate the draft before a human sees it | [Grounding](grounding.md) and [vocabulary](hallucination-guardrails.md) checks |
-| Never draft for a judgement finding | "This is 1030 days old" has no mechanical fix |
+| Never draft for a judgment finding | "This is 1030 days old" has no mechanical fix |
 | Never widen a constraint to pass | See [agent skills](agent-skills.md) |
 
 The last two are the ones that go wrong. A model asked to refresh a stale page
@@ -476,7 +476,7 @@ improvement.
 
 | Metric | Healthy |
 |---|---|
-| Review queue depth | Flat or falling. Growing means it is theatre |
+| Review queue depth | Flat or falling. Growing means it is theater |
 | Proposals accepted | 80% or more. Below that the precision is wrong |
 | Median page age | Falling |
 | Findings per page per quarter | Falling, as classes of defect get fixed at the source |
@@ -497,7 +497,7 @@ substitution list. The model does two things, drafting a replacement for a
 finding something else already located, and ranking the queue. And the thing
 that decides whether any of it works is review capacity: our first audit
 produced 180 findings on 400 pages and nobody reviewed any of them, so I batched
-identical mechanical findings into single approvals and rationed judgement items
+identical mechanical findings into single approvals and rationed judgment items
 to what one person actually reads in a week."
 
 **The follow-up is "how do you stop a model rewriting things it should not",**

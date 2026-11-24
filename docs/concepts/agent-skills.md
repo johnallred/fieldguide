@@ -361,7 +361,7 @@ that has nothing to do with release notes.
 | Include | Why |
 |---|---|
 | The closed vocabularies, listed in full | Otherwise it invents a value |
-| Where files go, as a rule not examples | A rule generalises; examples get pattern-matched |
+| Where files go, as a rule not examples | A rule generalizes; examples get pattern-matched |
 | The commands CI runs | So it can check its own work before opening a pull request |
 | Terminology the linter enforces | Cheapest possible review-comment elimination |
 | Explicit prohibitions | The highest-value section. See below |
@@ -415,7 +415,7 @@ continuously.
 | "More context is better" | No. Always-on context is a recurring cost |
 
 Present this internally as a cheap, high-return convention rather than as
-settled practice, because it is moving fast and a claim of standardisation will
+settled practice, because it is moving fast and a claim of standardization will
 be challenged by someone who read a different blog post last week.
 
 ## Explaining it to your team
@@ -490,7 +490,7 @@ packages, which this environment cannot provide.
 **What you need.** An agent runtime that supports loading instruction bundles
 from a directory, plus a repetitive task with a checkable result. The task
 matters more than the runtime: the claim being tested is that a written-down
-procedure makes an agent's behaviour repeatable, so you need something whose
+procedure makes an agent's behavior repeatable, so you need something whose
 output you can compare run to run.
 
 **What you would run.** Choose a task your team does by hand, such as adding a
@@ -507,7 +507,7 @@ each.
 | Same, with prose instructions | better, still variable | Instructions help and do not bind |
 | Same, with the validator named in the package | high and stable | The gain is the *check*, not the prose |
 | Variance across runs | falls sharply with the package | Repeatability is the actual product |
-| Behaviour on a case the package does not cover | reverts to baseline | The edges are where packages end |
+| Behavior on a case the package does not cover | reverts to baseline | The edges are where packages end |
 
 The third row is the finding. Most of the improvement comes from telling the
 agent what will be checked rather than from telling it what to do, which is the

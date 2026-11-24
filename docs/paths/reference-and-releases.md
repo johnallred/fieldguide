@@ -23,7 +23,7 @@ each step assumes the ones above it.
 
 ## 1. [reStructuredText](../concepts/restructuredtext.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Maintaining docs written in reStructuredText, usually alongside a Sphinx build.
 
@@ -41,7 +41,7 @@ Assumes, from outside this path: [Choosing a static site generator](../concepts/
 
 ## 3. [Generated API reference](../concepts/api-reference-generation.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Producing reference documentation from the code itself, so it assumes no prior context and stays current.
 
@@ -49,7 +49,7 @@ Assumes, from outside this path: [Docs-as-code](../concepts/docs-as-code.md).
 
 ## 4. [OpenAPI and REST reference](../concepts/openapi.md)
 
-`supporting` · practise it · 4h
+`supporting` · practice it · 4h
 
 Documenting any HTTP API from its contract, and keeping that contract and the reference in step.
 
@@ -57,7 +57,7 @@ Builds on, earlier in this path: Generated API reference.
 
 ## 5. [Doctests and executable docstrings](../concepts/doctests.md)
 
-`supporting` · practise it · 2h
+`supporting` · practice it · 2h
 
 Keeping examples in docstrings executable, so they fail when the code changes.
 
@@ -65,7 +65,7 @@ Assumes, from outside this path: [Code-sample validation](../concepts/code-sampl
 
 ## 6. [Versioned documentation](../concepts/versioning.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Publishing documentation for more than one release at once, and keeping readers on the right version.
 
@@ -73,7 +73,7 @@ Assumes, from outside this path: [Choosing a static site generator](../concepts/
 
 ## 7. [Release readiness for documentation](../concepts/release-readiness.md)
 
-`core` · practise it · 4h
+`core` · practice it · 4h
 
 Making documentation part of what "ready to release" means, enforced rather than remembered.
 
@@ -83,7 +83,7 @@ Also in: [The writer who builds](writer-who-builds.md).
 
 ## 8. [Release notes and changelogs](../concepts/release-notes.md)
 
-`supporting` · practise it · 3h
+`supporting` · practice it · 3h
 
 Writing what changed in each release for the people who have to act on it, and making sure the version number tells them how much.
 

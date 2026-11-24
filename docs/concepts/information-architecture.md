@@ -11,7 +11,7 @@ tags: [ia, core]
 
 `core` · difficulty 2 · 4h
 
-> Deciding how content is modelled, classified and tagged so people can navigate it and machines can retrieve it.
+> Deciding how content is modeled, classified and tagged so people can navigate it and machines can retrieve it.
 
 **Leads to:** [Content models](content-model.md), [Diátaxis](diataxis.md), [Knowledge architecture](knowledge-architecture.md)
 
@@ -27,7 +27,7 @@ not knowing to the right page?**
 
 ## How this applies to your role
 
-Information architecture now has two purposes at once: content modelling,
+Information architecture now has two purposes at once: content modeling,
 taxonomy and metadata "for both navigation and machine retrieval". That second
 half is the whole reason this concept is `core` rather than historical.
 
@@ -36,7 +36,7 @@ breadcrumbs, sitemaps, card sorting, where things go so humans can click to
 them. That work still exists. But a documentation corpus in 2026 has a second
 audience that does not navigate at all. A retrieval system never sees your menu.
 An assistant answering a developer's question does not traverse your hierarchy;
-it matches a fragment of text and returns it with whatever context travelled
+it matches a fragment of text and returns it with whatever context traveled
 alongside. **Structure that only exists in the navigation is invisible to that
 reader.**
 
@@ -95,7 +95,7 @@ read filenames and guess.
 
 **Step 2: decide what a page declares about itself**
 
-This is the actual architecture work, and it takes judgement rather than
+This is the actual architecture work, and it takes judgment rather than
 typing. For this corpus, three facts are worth declaring: what kind of page it
 is, who it is for, and what it is about.
 
@@ -284,7 +284,7 @@ queries it. The query is what makes it real: anyone can add front matter.
 2. **Take a real corpus you did not design** and write a one-page audit: what
    the units are, what facets are implicit in the folder names, what is
    mixed that should be split. Your own team's docs, another team's, or an
-   open-source project's. The skill being practised is seeing the structure
+   open-source project's. The skill being practiced is seeing the structure
    that is already there and unstated.
 3. **Add a validator** that rejects a page violating the model, and wire it
    into [documentation CI](documentation-ci.md). The step from "we have a

@@ -201,7 +201,7 @@ only one you cannot schedule.
 | "I expected Y" | A real design disagreement | Product, with a decision record |
 
 Taking any of these at face value produces a documentation edit that does not
-help, which is the most common way feedback is formally honoured and
+help, which is the most common way feedback is formally honored and
 practically wasted.
 
 ### Why the first reader is worth protecting
@@ -258,7 +258,7 @@ failure a person finds and an instrument never will. The difference is supply:
 instruments run on every commit, the first reader happens once.
 
 **The tradeoff to name.** Acting on a single report risks building for one
-person, and one report cannot tell you whether the confusion generalises. What
+person, and one report cannot tell you whether the confusion generalizes. What
 made this one safe to act on is that the fix was additive and the diagnosis was
 checkable without him: the command ordering and the absent capability are facts
 about the repository rather than opinions about his experience. When a report

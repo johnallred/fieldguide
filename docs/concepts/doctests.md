@@ -32,7 +32,7 @@ Doctests are the version of a doc test harness that costs nothing to adopt: one 
 example is executed on every run.
 
 The specific decay they prevent is the worst kind, because it is invisible. A
-function's behaviour changes, the docstring example still *looks* plausible,
+function's behavior changes, the docstring example still *looks* plausible,
 and the generated reference publishes a wrong answer with the authority of
 auto-generated documentation. Readers trust generated reference material more
 than hand-written prose, which makes a stale example in it more damaging.
@@ -105,7 +105,7 @@ found it immediately.
 
 Note the `split(10, 3)` example passed. The uneven split genuinely returns
 `[3.33, 3.33, 3.34]`, which is worth knowing and is exactly the kind of
-behaviour a reader wants documented.
+behavior a reader wants documented.
 
 **Step 3: fix it the right way**
 
@@ -146,7 +146,7 @@ pytest --doctest-modules, same module:     exit=5
 ```
 
 `python -m doctest` is silent and successful on a module with no examples,
-which is correct behaviour and a trap: if a docstring is reformatted and the
+which is correct behavior and a trap: if a docstring is reformatted and the
 `>>>` lines are lost, nothing fails. Pytest's exit 5 means "no tests were
 collected", which CI reads as a failure and which you will hit the first time
 you point `--doctest-modules` at a single file.
@@ -231,7 +231,7 @@ unit test written in an awkward syntax. Move it.
 
 | Approach | Sample lives | Catches drift when |
 |---|---|---|
-| Doctests | In the docstring | The function's behaviour changes |
+| Doctests | In the docstring | The function's behavior changes |
 | [Sample validation](code-sample-validation.md) | In Markdown pages | A tutorial or how-to goes stale |
 | [Doc test harness](doc-test-harness.md) | Either, with infrastructure | You need skip budgets, output fixtures, reporting |
 | [Cold-start testing](coldstart-testing.md) | In the quickstart | The install path breaks |

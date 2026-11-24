@@ -21,7 +21,7 @@ tags: [gp, core]
 
 A lesson. The reader follows it to learn, and the working thing at the end is
 evidence that they learned rather than the point of the exercise. That is what
-separates it from a [quickstart](quickstarts.md), which optimises for the
+separates it from a [quickstart](quickstarts.md), which optimizes for the
 working thing and teaches as little as it can get away with.
 
 A tutorial has to "assume no prior context", which is the hard constraint. The
@@ -202,7 +202,7 @@ predicts.
 
 ## Reference
 
-### Tutorial against its neighbours
+### Tutorial against its neighbors
 
 | | Tutorial | [Quickstart](quickstarts.md) | How-to | [Walkthrough](sample-walkthroughs.md) |
 |---|---|---|---|---|
@@ -263,8 +263,8 @@ eight-step tutorial written that way it was seven, and three independent
 defects were hiding in it with silence as the only symptom."
 
 **The follow-up is the difference from a quickstart**, and the answer is the
-goal: a tutorial optimises for learning and may take a longer route if the
-detour teaches; a quickstart optimises for working and teaches as little as it
+goal: a tutorial optimizes for learning and may take a longer route if the
+detour teaches; a quickstart optimizes for working and teaches as little as it
 can. Merging them produces a page too long to be one and too thin to be the
 other.
 

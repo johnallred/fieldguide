@@ -65,10 +65,10 @@ cent, so it is close to a concatenation. `llms.txt` keeps five, because it is a
 map rather than a copy: titles, summaries and links, grouped by type. Neither is
 surprising.
 
-`chunks.jsonl` keeping 89 per cent is the one to look at, because it is the
+`chunks.jsonl` keeping 89 percent is the one to look at, because it is the
 artifact a retriever actually uses.
 
-**Step 2: find out where the eleven per cent went**
+**Step 2: find out where the eleven percent went**
 
 Reconstruct each page by concatenating its own chunks and compare with the
 source:
@@ -88,7 +88,7 @@ explanation/why-heading-aware-chunking.md       2909    2702    93%
 mean kept: 93%
 ```
 
-Seven per cent, evenly spread, no page catastrophically worse than another.
+Seven percent, evenly spread, no page catastrophically worse than another.
 Even distribution is a clue: a parsing bug would concentrate. Account for it
 directly:
 
@@ -98,7 +98,7 @@ source body characters:      43285
   blank lines:                 322
 ```
 
-Five per cent is heading lines, and the rest is the blank lines between
+Five percent is heading lines, and the rest is the blank lines between
 sections. The transformation is doing exactly what it was designed to do.
 
 **Step 3: the drop that is not a drop**
@@ -160,7 +160,7 @@ relocation changes. The third is what stops this from recurring the next time
 the chunker is improved.
 
 **What you built.** A character-level account of a three-stage pipeline, a
-seven per cent loss resolved into headings and blank lines, and a measurement of
+seven percent loss resolved into headings and blank lines, and a measurement of
 what one unstated contract costs the consumer who follows the obvious path.
 
 ## Reference
@@ -176,8 +176,8 @@ what one unstated contract costs the consumer who follows the obvious path.
 | An offline bundle | 100% | Air-gapped reading | Links assume a server |
 
 Keeping less is not worse. Each figure should match the job, and a number that
-does not match its job is the actual finding: a map at 89 per cent is a copy, and
-a chunk set at 5 per cent has lost the content.
+does not match its job is the actual finding: a map at 89 percent is a copy, and
+a chunk set at 5 percent has lost the content.
 
 ### How a transformation loses something
 
@@ -223,8 +223,8 @@ The third is usually right, and the fourth is a real mistake people make once.
 
 You will rarely need to reconstruct the source, and attempting it is still the
 cheapest audit available: concatenate the chunks of each page, compare lengths,
-and look at the distribution. An even seven per cent is a design decision. One
-page at forty per cent is a bug, and nothing else in the pipeline would have
+and look at the distribution. An even seven percent is a design decision. One
+page at forty percent is a bug, and nothing else in the pipeline would have
 told you.
 
 ## Explaining it to your team
@@ -234,15 +234,15 @@ question that matters at each stage is what it dropped and who finds out. The
 dangerous answer is that it did not drop the thing, it moved it, because then
 the pipeline is correct and the consumer is wrong, and nothing errors."
 
-**The worked example, which is short.** My chunk records keep 89 per cent of
+**The worked example, which is short.** My chunk records keep 89 percent of
 the source. Reconstructing each page from its own chunks put the loss at seven
-per cent, evenly spread, and even distribution rules out a parsing bug. It
-resolved into five per cent heading lines and the blank lines between sections.
+percent, evenly spread, and even distribution rules out a parsing bug. It
+resolved into five percent heading lines and the blank lines between sections.
 Eighty-two of eighty-five chunks have their heading stripped from the body and
 promoted to a `breadcrumb` field, which is the right design and means any
 consumer reading `text` alone loses every heading in the corpus.
 
-**Then the cost, measured.** Grounding at rank one is 90 per cent when the
+**Then the cost, measured.** Grounding at rank one is 90 percent when the
 breadcrumb is rejoined and 85 when it is not. One case in twenty, from
 forgetting a field sitting in the same record. Small, and the shape is the
 point: correct pipeline, complete artifact, documented schema, and a reasonable
@@ -258,8 +258,8 @@ because from the inside the artifact looks complete.
 
 **One sharper point.** Round-tripping is worth doing even when you never need
 the source back. Concatenating each page's chunks and comparing lengths took ten
-minutes and converted "89 per cent, presumably fine" into an itemised account. If
-one page had come back at forty per cent I would have had a bug, and no other
+minutes and converted "89 percent, presumably fine" into an itemized account. If
+one page had come back at forty percent I would have had a bug, and no other
 check in the pipeline would have mentioned it.
 
 ## Putting it into practice
@@ -279,7 +279,7 @@ each stage, and a stated contract for any field it relocates.
    this page that nobody notices at all, and one assertion closes it.
 
 **How to tell it is working.** `docpack`'s pipeline is real and every figure above is reproducible from it.
-Three outputs at 89, 99 and 5 per cent of source. A seven per cent round-trip
+Three outputs at 89, 99 and 5 percent of source. A seven percent round-trip
 gap resolved into headings and blank lines. 82 of 85 chunks with relocated
 headings, and the five-point grounding difference between rejoining the
 breadcrumb and not. What is absent is

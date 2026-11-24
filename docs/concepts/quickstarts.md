@@ -239,7 +239,7 @@ their machine already has everything, so the verification has to come from a
 clean environment in CI rather than from a careful reviewer.
 
 **The tradeoff to name.** Asserting output makes the quickstart brittle
-against intentional change: every deliberate behaviour change now requires a
+against intentional change: every deliberate behavior change now requires a
 documentation update in the same pull request. That is the point and it is real
 friction, and on a fast-moving product you will spend time updating expected
 output for changes you meant to make.

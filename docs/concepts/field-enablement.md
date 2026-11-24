@@ -25,7 +25,7 @@ the material.
 
 So the goal is a different one. Enabling a learner ends when they can do the
 task. Enabling a deliverer ends when they can make someone else able to do it,
-which is a performance skill and has to be practised and checked as one.
+which is a performance skill and has to be practiced and checked as one.
 
 ## How this applies to your role
 
@@ -142,7 +142,7 @@ step 3: what the field is telling product
 **Step 4: read it as three decisions**
 
 Everyone attended and a third can deliver. Practice with feedback, not
-attendance, is where the drop happens: half the roster never practised, and
+attendance, is where the drop happens: half the roster never practiced, and
 none of the people who skipped practice reached the teach-back. Partners are
 at zero, so the next session goes to them, not to another round for everyone.
 
@@ -174,7 +174,7 @@ product gap with evidence from the people closest to customers.
 | | Learner | Deliverer |
 |---|---|---|
 | Done when | They can do the task | They can make someone else able to do it |
-| Practised by | Doing the task | Presenting, demoing and answering questions |
+| Practiced by | Doing the task | Presenting, demoing and answering questions |
 | Checked by | An exercise or a quiz | A teach-back, delivered to someone who checks it |
 | Feedback on | The content | The delivery: order, timing, explanation, recovery |
 | Measured by | Completion and success | How many can deliver without you, by role |

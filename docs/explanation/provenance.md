@@ -1,6 +1,6 @@
 ---
 title: Provenance
-summary: Every concept names the day-to-day work that needs it, and the limits of that judgement are stated rather than implied.
+summary: Every concept names the day-to-day work that needs it, and the limits of that judgment are stated rather than implied.
 diataxis: explanation
 audience: new-user
 ---
@@ -31,7 +31,7 @@ KnowledgeOps. The titles differed and the work overlapped heavily, which is the
 premise of the whole guide.
 
 Some concepts are named directly in that work: docs-as-code pipelines, Git
-authoring, documentation CI, content modelling, `llms.txt`, evaluation sets.
+authoring, documentation CI, content modeling, `llms.txt`, evaluation sets.
 Others are here because the named work is impossible without them, and their
 lines say so in those terms. Diátaxis is one of those, and so is every
 embedding concept underneath RAG.
@@ -43,7 +43,7 @@ source descriptions, and it is worth recording what happened when the sources
 were read again in full, because it is the best available argument for
 tracking where a concept came from at all.
 
-**Fifty-one concepts were mislabelled.** Most were understated: docs-as-code
+**Fifty-one concepts were mislabeled.** Most were understated: docs-as-code
 pipelines, Git authoring, Markdown and RST, Sphinx, MkDocs, Docusaurus,
 knowledge architecture, Vale, `llms.txt`, documentation analytics, the
 sample-app gallery and the AI software stack are all named directly in the
@@ -59,7 +59,7 @@ needs them, and their lines now say so.
 `core`: technical writing as a craft, which everything else rests on; reading
 code to verify accuracy; and judging where AI can be trusted.
 
-The curriculum did not get more rigorous, it got more honestly labelled, and
+The curriculum did not get more rigorous, it got more honestly labeled, and
 the eight demotions are the part worth dwelling on. An unchecked registry
 drifts toward whatever the author already believed.
 

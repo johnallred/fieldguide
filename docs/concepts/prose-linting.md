@@ -237,12 +237,12 @@ styles/
   write-good/         # third-party packages, installed by `vale sync`
 ```
 
-Keep your own rules in a directory named after your organisation rather than
+Keep your own rules in a directory named after your organization rather than
 scattering them into a vendored style, so `vale sync` cannot overwrite them.
 
 ## Explaining it to your team
 
-**Lead with the division of labour.** "A prose linter handles the mechanical
+**Lead with the division of labor.** "A prose linter handles the mechanical
 half of the style guide so human review can be about whether the procedure is
 correct. Terminology, acronym expansion and deprecated names block the build.
 Passive voice and sentence length are warnings."
@@ -272,7 +272,7 @@ deliberately, and at least one rule that caught something real.
 
 **Three things to do, in order:**
 
-1. Run the golden path, especially step 4. The exit-code behaviour is not what
+1. Run the golden path, especially step 4. The exit-code behavior is not what
    most people assume.
 2. Write one `substitution` rule for a term your own project gets wrong, and
    run it over your existing docs. The first real finding is your evidence.

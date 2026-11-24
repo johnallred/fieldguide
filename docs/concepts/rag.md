@@ -402,7 +402,7 @@ citation labels that make [grounding](grounding.md) unenforceable.
 | 1 | Content does not exist | Confident wrong answer, or a refusal | Write the page. Nothing else |
 | 2 | Chunked badly | Retrieval finds the page, answer is incomplete | [Heading-aware chunking](chunking.md) |
 | 3 | Vocabulary mismatch | Nothing relevant retrieved | [Hybrid search](vector-stores.md), or write the reader's words |
-| 4 | Outranked | Plausible neighbour returned instead | Fusion, reranking, [metadata filters](metadata.md) |
+| 4 | Outranked | Plausible neighbor returned instead | Fusion, reranking, [metadata filters](metadata.md) |
 | 5 | Model ignored the context | Answer contradicts a retrieved chunk | Prompting, then [output evaluation](output-evaluation.md) |
 
 **Four of the five are not prompt problems.** The instinct when a RAG answer is

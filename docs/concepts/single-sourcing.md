@@ -32,7 +32,7 @@ broken include can make a page disappear, and the build may not mention it.
 ## How this applies to your role
 
 Rarely by name. It is here because so many goals in this work depend on it: a
-small team of educators operating with the reach of an organisation ten times
+small team of educators operating with the reach of an organization ten times
 larger, or documentation, standards and tribal knowledge turned into tooling,
 templates and self-service paths. Both are statements about leverage, and leverage in a documentation
 corpus means not writing the same thing N times.
@@ -48,7 +48,7 @@ thirty minutes.
 
 **Step 1: measure what is actually duplicated**
 
-Before adopting a mechanism, find out whether you have the problem. Normalise
+Before adopting a mechanism, find out whether you have the problem. Normalize
 prose sentences outside code fences and count the ones that appear on more than
 one page:
 
@@ -157,7 +157,7 @@ with nothing in its body, and the build said nothing at all.
 
 That is the failure mode reuse introduces. A copied paragraph can go stale; a
 broken include can delete a page's content, and by default nobody is told.
-`check_paths: true` is not an optimisation, it is the thing that makes the
+`check_paths: true` is not an optimization, it is the thing that makes the
 mechanism safe.
 
 **What you built.** A duplication measurement and an include, broken twice to
@@ -191,7 +191,7 @@ committed view is stale.
 
 The first row is the one that bites. An include is a commitment that these
 passages are the same thing forever, and when one page needs a variation you
-get a parameterised include, then a conditional, and eventually a templating
+get a parameterized include, then a conditional, and eventually a templating
 language inside your documentation.
 
 ### What reuse does to the rest of the pipeline
@@ -237,7 +237,7 @@ an empty body at exit zero. So the integrity check goes in with the mechanism,
 in the same commit.
 
 **The tradeoff to name.** An include is a commitment that two passages are
-the same thing permanently, and the pressure is always toward parameterising it
+the same thing permanently, and the pressure is always toward parameterizing it
 when one page needs a variation. That road ends in a templating language inside
 your prose, which is worse than the duplication you started with. Reuse facts
 and procedures; do not reuse explanations, which legitimately differ by

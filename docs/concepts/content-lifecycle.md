@@ -24,7 +24,7 @@ each state, and what has to be true before it moves. Governance is the part
 that says who decides.
 
 The work breaks into four activities: drafting, updating, auditing, and human
-review where judgement matters. That last clause is the governance
+review where judgment matters. That last clause is the governance
 question, and it is the one that determines whether the first three are worth
 automating.
 
@@ -162,7 +162,7 @@ The four activities, with the honest division:
 | Retiring | The mechanics | The decision |
 
 The pattern across every row: **measurement automates, judgment does not.**
-That is what "human review where judgement matters" means in practice, and this
+That is what "human review where judgment matters" means in practice, and this
 division is the clearest way to explain it to a stakeholder.
 
 ### Making a state real
@@ -230,7 +230,7 @@ per claim, and an owner table.
 **How to tell it is working.** Neither of this guide's
 repositories implements a governance process, which the
 [demonstrated](../demonstrated.md) page records, because process needs an
-organisation. What does exist is the falsifiable half: three states, a written
+organization. What does exist is the falsifiable half: three states, a written
 claim each, and twelve defect classes that fail a build, plus an explicit note
 about the one part of the `complete` claim that no check covers.
 
@@ -241,7 +241,7 @@ lifecycle states, a written claim behind each, and a validator that checks
 them, which is the falsifiable half. What it cannot have is a year of the
 states actually being applied by people with other priorities.
 
-**What you need.** An organisation, a corpus with more than one owner, and
+**What you need.** An organization, a corpus with more than one owner, and
 twelve months. Nothing technical.
 
 **What a learner would do.** Pick the state transition your team already gets

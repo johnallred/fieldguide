@@ -19,7 +19,7 @@ tags: [qa, supporting]
 
 ## What it is
 
-The path a lab takes from a curriculum developer's draft to the catalogue
+The path a lab takes from a curriculum developer's draft to the catalog
 learners and instructors use. It does three things a documentation pipeline
 does not have to.
 
@@ -201,7 +201,7 @@ opposite responses. `s3-events` began failing when v2 was published, and v1
 still passes, so the previous version is the fix: roll back, then fix v2.
 `ec2-basics` passed for weeks and then failed with no change to its content.
 The lab did not change; the service, a default or a quota did. There is
-nothing to roll back to, so the lab is pulled from the catalogue, instructors
+nothing to roll back to, so the lab is pulled from the catalog, instructors
 are told, and the fix goes forward as a new version.
 
 **What you built.** A publishing gate that encodes what the health harness
@@ -316,7 +316,7 @@ written rule for pull, roll back and fix forward.
 
 **How to tell it is working.** The drill above runs in this guide's test suite
 and its output is the output quoted here. The labs and runs are invented, and
-no lab catalogue is published through such a pipeline here, so the
+no lab catalog is published through such a pipeline here, so the
 [demonstrated](../demonstrated.md) page records the concept as partial. In
 your own work, the sign is that an instructor's report of a broken lab can be
 answered with a version number and a decision, the same day.

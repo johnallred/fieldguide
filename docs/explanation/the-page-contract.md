@@ -128,7 +128,7 @@ on the weakest of them it is the least valuable section on the page.
 
 The alternative was a second contract for context-tier concepts, which means
 two shapes for a reader to learn and a conditional in the validator. That
-seemed worse than a handful of thin sections, but it is a judgement call rather
+seemed worse than a handful of thin sections, but it is a judgment call rather
 than an obvious win, and a reader who finds those sections padded is not
 wrong.
 

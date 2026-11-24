@@ -280,7 +280,7 @@ list is a correct answer. Every other mode returns something on every page.
 And the broader lesson: **three of the four failures were caught by validating
 the output, not by improving the prompt.** The prompt reduces them; the
 validator is what makes a 400-page batch safe. That is the same division of
-labour as [judging where AI can be trusted](ai-trust-judgment.md).
+labor as [judging where AI can be trusted](ai-trust-judgment.md).
 
 ## Reference
 
@@ -313,7 +313,7 @@ findings list. An empty list is a correct and expected answer."*
 | Few-shot with a null example | When the empty case keeps getting missed; show it |
 | Chain of custody | Ask for the source line, then validate it mechanically |
 | Two-pass propose-then-filter | High-volume audits; cheap model proposes, you filter |
-| Rubric in the prompt | Review tasks, so judgements are comparable across runs |
+| Rubric in the prompt | Review tasks, so judgments are comparable across runs |
 | Refuse-if-unsure | "If you cannot determine this from the text, say unknown" |
 
 ### What not to ask a model to do
@@ -335,7 +335,7 @@ procedure behind that table.
 |---|---|
 | Pin the model version | A model update silently changes the output distribution |
 | Set temperature to 0 for classification | Reproducibility; you will rerun this |
-| Store the prompt in version control, not in a notebook | It is code, and it changes behaviour |
+| Store the prompt in version control, not in a notebook | It is code, and it changes behavior |
 | Log the prompt version with every output | You will need to know which prompt produced a finding |
 | Sample and review after you start trusting it | Quality drifts, and nothing tells you |
 
@@ -351,7 +351,7 @@ then check mechanically: if the quoted text is not in the page, the finding is
 dropped before a human ever sees it."
 
 **The follow-up is "how do you know the prompt is good",** and the answer is that
-you do not know from reading it. You need a small labelled set: twenty pages you
+you do not know from reading it. You need a small labeled set: twenty pages you
 have reviewed yourself, with the defects you expect, scored for precision and
 recall. That is [output evaluation](output-evaluation.md) and it is the only way
 to tell a prompt improvement from a coincidence. Anyone who answers this
@@ -378,7 +378,7 @@ which is the right way to frame the whole of this work.
 
 ## Putting it into practice
 
-**The work product.** A prompt in version control, with the labelled set you scored
+**The work product.** A prompt in version control, with the labeled set you scored
 it against, and the validator that drops ungrounded findings.
 
 **Three things to do, in order:**
@@ -386,7 +386,7 @@ it against, and the validator that drops ungrounded findings.
 1. **Run the golden path.** The four-mode mock shows which clause closes which
    failure, and the quote-check dropping a fabricated finding is the convincing
    moment.
-2. **Build a twenty-page labelled set** for one real audit task and score
+2. **Build a twenty-page labeled set** for one real audit task and score
    precision and recall. Twenty is enough to catch a prompt that finds
    something on everything. Predict both numbers before you score. Precision
    is the one that surprises people, because a prompt that finds everything
@@ -394,10 +394,10 @@ it against, and the validator that drops ungrounded findings.
 3. **Write the validator before the prompt is good.** The quote-must-appear
    check is ten lines and it catches fabrication regardless of which model or
    prompt you end up with. Shipping the validator first is the move that shows
-   judgement.
+   judgment.
 
 **How to tell it is working.** Everyone has prompts. The working version is a prompt
-plus a labelled set plus a mechanical grounding check plus a precision number,
+plus a labeled set plus a mechanical grounding check plus a precision number,
 with the history including the version where precision was bad. That is
 treating it as engineering.
 
@@ -410,7 +410,7 @@ with, which is why the failure signatures below matter more than the procedure.
 **What you need.** Any model you can call repeatedly, and a task with a
 checkable answer. That second requirement is the whole difficulty: prompting
 demonstrations are usually run on tasks whose output can only be judged by
-reading it, which is how everyone concludes their favourite prompt is best.
+reading it, which is how everyone concludes their favorite prompt is best.
 
 **What you would run.** Pick a content task with a mechanical check, such as
 "rewrite this page's front matter to the content model" where a validator can

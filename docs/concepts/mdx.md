@@ -34,7 +34,7 @@ documentation estate includes a React-based generator, almost certainly
 [Docusaurus](docusaurus.md), and you are maintaining pages that are partly
 code.
 
-The judgement that matters is understanding the costs. MDX is
+The judgment that matters is understanding the costs. MDX is
 genuinely better for a developer-facing site that needs interactive examples,
 and it moves a class of error from your build into your reader's browser. An
 engineer who has only read about it tends to describe the first half.
@@ -261,7 +261,7 @@ tested the pipeline rather than the format.
 **One sharper point.** An MDX corpus is harder to make machine-readable. Source
 consumers see JSX instead of prose, HTML consumers see whatever rendered, and
 both are worse inputs to [chunking](chunking.md) than plain Markdown. If the
-same organisation is asking for both MDX and agent-ready content, that tension
+same organization is asking for both MDX and agent-ready content, that tension
 is worth naming out loud, because it is real and most people miss it.
 
 ## Putting it into practice

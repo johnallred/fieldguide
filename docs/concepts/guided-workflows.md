@@ -199,7 +199,7 @@ the reader is stuck and motivated.
 
 ### Sequence against dependency
 
-| Situation | Behaviour |
+| Situation | Behavior |
 |---|---|
 | Later steps read what this one creates | A real gate; stop |
 | Later steps need this one's credentials or state | A real gate; stop |
