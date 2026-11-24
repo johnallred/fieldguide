@@ -17,7 +17,7 @@ Write the programs that measure a corpus, then measure the four outcomes that ma
 **11 concepts, roughly 40 hours.** The order matters:
 each step assumes the ones above it.
 
-**Assumed before step 1.** This path does not teach [Content models](../concepts/content-model.md), [Documentation CI](../concepts/documentation-ci.md), [Golden paths](../concepts/golden-paths.md), [Findability and search design](../concepts/findability.md), [Output evaluation](../concepts/output-evaluation.md), [A systems mindset](../concepts/systems-mindset.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Content models](../concepts/content-model.md), [Documentation CI](../concepts/documentation-ci.md), [Findability and search design](../concepts/findability.md), [Golden paths](../concepts/golden-paths.md), [Output evaluation](../concepts/output-evaluation.md), [A systems mindset](../concepts/systems-mindset.md). Each step below repeats what it assumes.
 
 **Shared with other paths.** 1 of these steps, roughly 5 hours, also appears in another path. Each is marked below; if you have done it there, skip it here.
 
@@ -53,7 +53,17 @@ Instrumenting documentation and turning what the data shows into fixes to docs, 
 
 Assumes, from outside this path: [Documentation CI](../concepts/documentation-ci.md).
 
-## 5. [Time to first success](../concepts/time-to-first-success.md)
+## 5. [Search and query log analysis](../concepts/search-log-analysis.md)
+
+`supporting` · practise it · 3h
+
+Reading what people search for, so evaluation sets and fixes reflect real questions.
+
+Builds on, earlier in this path: Documentation analytics.
+
+Assumes, from outside this path: [Findability and search design](../concepts/findability.md).
+
+## 6. [Time to first success](../concepts/time-to-first-success.md)
 
 `core` · practise it · 3h
 
@@ -63,7 +73,7 @@ Builds on, earlier in this path: Documentation analytics.
 
 Assumes, from outside this path: [Golden paths](../concepts/golden-paths.md).
 
-## 6. [Support deflection](../concepts/support-deflection.md)
+## 7. [Support deflection](../concepts/support-deflection.md)
 
 `core` · practise it · 3h
 
@@ -71,23 +81,13 @@ Measuring how much support load and onboarding time self-service content removes
 
 Builds on, earlier in this path: Documentation analytics.
 
-## 7. [Repeat-question analysis](../concepts/repeat-questions.md)
+## 8. [Repeat-question analysis](../concepts/repeat-questions.md)
 
 `core` · practise it · 3h
 
 Finding the questions people keep asking, and fixing the content that keeps causing them.
 
 Builds on, earlier in this path: Support deflection.
-
-## 8. [Search and query log analysis](../concepts/search-log-analysis.md)
-
-`supporting` · practise it · 3h
-
-Reading what people search for, so evaluation sets and fixes reflect real questions.
-
-Builds on, earlier in this path: Documentation analytics.
-
-Assumes, from outside this path: [Findability and search design](../concepts/findability.md).
 
 ## 9. [Measuring AI answer quality](../concepts/ai-answer-quality.md)
 

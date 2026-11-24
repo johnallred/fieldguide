@@ -48,6 +48,9 @@ an `Added` heading.
 - Docs review moves after the automated gates on the documentation engineer
   path, and llms.txt before crawlability on the answer-engines path, so each
   page comes after the ones it points at most.
+- Sphinx now comes before API reference generation, search log analysis right
+  after docs analytics, and AI assistants after output evaluation, because each
+  earlier page relied on the later one.
 - Each learning path marks the steps it shares with other paths and names
   them, and says up front how many steps and hours are shared, so a reader on
   a second path can skip what they have done.

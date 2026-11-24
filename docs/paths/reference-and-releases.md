@@ -17,27 +17,11 @@ Reference generated from the source, checked against it, and versioned with each
 **8 concepts, roughly 29 hours.** The order matters:
 each step assumes the ones above it.
 
-**Assumed before step 1.** This path does not teach [Docs-as-code](../concepts/docs-as-code.md), [Markdown and its dialects](../concepts/markdown.md), [Choosing a static site generator](../concepts/static-site-generators.md), [Code-sample validation](../concepts/code-sample-validation.md), [Documentation CI](../concepts/documentation-ci.md), [Technical writing as a craft](../concepts/technical-writing.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Markdown and its dialects](../concepts/markdown.md), [Choosing a static site generator](../concepts/static-site-generators.md), [Docs-as-code](../concepts/docs-as-code.md), [Code-sample validation](../concepts/code-sample-validation.md), [Documentation CI](../concepts/documentation-ci.md), [Technical writing as a craft](../concepts/technical-writing.md). Each step below repeats what it assumes.
 
 **Shared with other paths.** 1 of these steps, roughly 4 hours, also appears in another path. Each is marked below; if you have done it there, skip it here.
 
-## 1. [Generated API reference](../concepts/api-reference-generation.md)
-
-`core` · practise it · 4h
-
-Producing reference documentation from the code itself, so it assumes no prior context and stays current.
-
-Assumes, from outside this path: [Docs-as-code](../concepts/docs-as-code.md).
-
-## 2. [OpenAPI and REST reference](../concepts/openapi.md)
-
-`supporting` · practise it · 4h
-
-Documenting any HTTP API from its contract, and keeping that contract and the reference in step.
-
-Builds on, earlier in this path: Generated API reference.
-
-## 3. [reStructuredText](../concepts/restructuredtext.md)
+## 1. [reStructuredText](../concepts/restructuredtext.md)
 
 `supporting` · practise it · 3h
 
@@ -45,7 +29,7 @@ Maintaining docs written in reStructuredText, usually alongside a Sphinx build.
 
 Assumes, from outside this path: [Markdown and its dialects](../concepts/markdown.md).
 
-## 4. [Sphinx](../concepts/sphinx.md)
+## 2. [Sphinx](../concepts/sphinx.md)
 
 `core` · build something · 6h
 
@@ -54,6 +38,22 @@ Building and maintaining documentation with Sphinx, especially for Python projec
 Builds on, earlier in this path: reStructuredText.
 
 Assumes, from outside this path: [Choosing a static site generator](../concepts/static-site-generators.md).
+
+## 3. [Generated API reference](../concepts/api-reference-generation.md)
+
+`core` · practise it · 4h
+
+Producing reference documentation from the code itself, so it assumes no prior context and stays current.
+
+Assumes, from outside this path: [Docs-as-code](../concepts/docs-as-code.md).
+
+## 4. [OpenAPI and REST reference](../concepts/openapi.md)
+
+`supporting` · practise it · 4h
+
+Documenting any HTTP API from its contract, and keeping that contract and the reference in step.
+
+Builds on, earlier in this path: Generated API reference.
 
 ## 5. [Doctests and executable docstrings](../concepts/doctests.md)
 

@@ -1519,10 +1519,10 @@ paths:
     audience: Someone who owns the API reference and the versioned docs for a product that ships releases.
     summary: Reference generated from the source, checked against it, and versioned with each release.
     concepts:
-      - api-reference-generation
-      - openapi
       - restructuredtext
       - sphinx
+      - api-reference-generation
+      - openapi
       - doctests
       - versioning
       - release-readiness
@@ -1544,9 +1544,9 @@ paths:
       - vector-stores
       - rag
       - grounding
-      - ai-assistants
       - retrieval-evaluation
       - output-evaluation
+      - ai-assistants
       - hallucination-guardrails
       - mcp
       - agent-skills
@@ -1644,10 +1644,10 @@ paths:
       - content-data-transformation
       - api-integration
       - docs-analytics
+      - search-log-analysis
       - time-to-first-success
       - support-deflection
       - repeat-questions
-      - search-log-analysis
       - ai-answer-quality
       - developer-feedback-loops
       - docs-prioritization

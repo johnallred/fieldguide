@@ -110,15 +110,7 @@ Making AI answers cite and stay within the documentation they draw on.
 
 Builds on, earlier in this path: RAG pipelines.
 
-## 11. [Documentation-backed AI assistants](../concepts/ai-assistants.md)
-
-`core` · build something · 8h
-
-Building and feeding assistants that answer questions from your documentation.
-
-Builds on, earlier in this path: RAG pipelines, Grounding and citation.
-
-## 12. [Evaluating retrieval](../concepts/retrieval-evaluation.md)
+## 11. [Evaluating retrieval](../concepts/retrieval-evaluation.md)
 
 `core` · build something · 6h
 
@@ -128,13 +120,21 @@ Builds on, earlier in this path: RAG pipelines.
 
 Also in: [A working result in a weekend](prove-it.md).
 
-## 13. [Output evaluation](../concepts/output-evaluation.md)
+## 12. [Output evaluation](../concepts/output-evaluation.md)
 
 `core` · build something · 6h
 
 Measuring whether LLM output in your content workflows is accurate and usable.
 
 Builds on, earlier in this path: Grounding and citation, Evaluating retrieval.
+
+## 13. [Documentation-backed AI assistants](../concepts/ai-assistants.md)
+
+`core` · build something · 8h
+
+Building and feeding assistants that answer questions from your documentation.
+
+Builds on, earlier in this path: RAG pipelines, Grounding and citation.
 
 ## 14. [Hallucination and guardrails](../concepts/hallucination-guardrails.md)
 
