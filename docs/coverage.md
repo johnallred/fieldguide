@@ -10,13 +10,13 @@ generated: true
 
 # Coverage
 
-**116 of 116 concepts written.** 0 drafted, 0 planned.
+**117 of 117 concepts written.** 0 drafted, 0 planned.
 
 Each row names the concept and the day-to-day work that needs it.
 
 ## Where this list comes from
 
-- **116 of 116** concepts name the work that needs them.
+- **117 of 117** concepts name the work that needs them.
 
 That line is printed next to each concept, so a reader can judge whether it
 earns their time rather than taking the list on trust.
@@ -89,6 +89,7 @@ earns their time rather than taking the list on trust.
 | [Quickstarts that survive contact](concepts/quickstarts.md) | core | practise it | 3h | :material-check: complete | Writing quickstarts that still work when a new developer follows them cold. |
 | [Sample walkthroughs](concepts/sample-walkthroughs.md) | core | practise it | 3h | :material-check: complete | Writing walkthroughs that explain a sample line by line, without drifting from the sample. |
 | [Templates and scaffolding](concepts/templates-scaffolding.md) | core | practise it | 3h | :material-check: complete | Encoding team standards into templates and scaffolds, so the right shape is the default. |
+| [Ephemeral lab environments](concepts/ephemeral-environments.md) | supporting | build something | 6h | :material-check: complete | Standing up a real cloud environment for every lab run, checking the lab against it, and proving the teardown left no... |
 | [Reproducible environments](concepts/reproducible-environments.md) | supporting | build something | 4h | :material-check: complete | Making sure every exercise starts from an environment a reader can recreate exactly. |
 | [Sample applications and galleries](concepts/sample-apps.md) | supporting | build something | 6h | :material-check: complete | Building and maintaining the sample applications, and the gallery developers browse them from. |
 

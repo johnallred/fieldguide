@@ -15,7 +15,7 @@ tags: [gp, supporting]
 
 **Prerequisites:** [Golden paths](golden-paths.md)
 
-**Leads to:** [Cold-start testing](coldstart-testing.md)
+**Leads to:** [Cold-start testing](coldstart-testing.md), [Ephemeral lab environments](ephemeral-environments.md)
 
 ## What it is
 

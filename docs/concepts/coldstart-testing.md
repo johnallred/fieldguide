@@ -15,6 +15,8 @@ tags: [qa, core]
 
 **Prerequisites:** [Code-sample validation](code-sample-validation.md), [Reproducible environments](reproducible-environments.md)
 
+**Leads to:** [Ephemeral lab environments](ephemeral-environments.md)
+
 ## What it is
 
 Running the quickstart from an environment that has nothing: a fresh virtual

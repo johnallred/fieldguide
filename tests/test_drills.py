@@ -90,6 +90,11 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         "<<'DATA'\n",
         ("ROSTER", "QUESTIONS", "RESOURCES"),
     ),
+    "lab_lifecycle.py": (
+        "docs/concepts/ephemeral-environments.md",
+        "<<'DATA'\n",
+        ("RUNS", "CHECKS", "TEARDOWN"),
+    ),
     "demo_check.py": (
         "docs/concepts/demo-design.md",
         "<<'DATA'\n",
@@ -209,6 +214,19 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             '  batch on cloud-b: 4 questions, from SE, AE, partner',
         ),
     ),
+    "lab_lifecycle.py": (
+        "docs/concepts/ephemeral-environments.md",
+        1,
+        (
+            "  runs 5, passed 3 (60%)",
+            "  flaky: run.completed (1 of 4 runs failed)",
+            "  median duration: 453s over all runs, 478s over full lifecycles",
+            "  200 labs x 478s = 26.6 hours, one after another",
+            "  tag query alone would report: 4 leftover resource(s)",
+            "  FAIL  teardown.no_leaks  (log-group:/aws/lambda/ColdlabWorker)",
+            "  FAIL  teardown.all_tagged_resolved  (stateMachine:ColdlabRetry)",
+        ),
+    ),
     "demo_check.py": (
         "docs/concepts/demo-design.md",
         0,
@@ -321,7 +339,7 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         (
             "two hours against the 34-hour first-week path: 6%",
             "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
-            "concepts in this corpus of 3h or less: 51/116",
+            "concepts in this corpus of 3h or less: 51/117",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",
         ),

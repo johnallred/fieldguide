@@ -540,6 +540,17 @@ concepts:
       - "Making sure every exercise starts from an environment a reader can recreate exactly."
     status: complete
 
+  - id: ephemeral-environments
+    name: Ephemeral lab environments
+    category: gp
+    tier: supporting
+    difficulty: 3
+    time: 6h
+    prerequisites: [reproducible-environments, coldstart-testing]
+    in_practice:
+      - "Standing up a real cloud environment for every lab run, checking the lab against it, and proving the teardown left nothing running."
+    status: complete
+
   # =========================================================================
   # AI-ready content and agents
   # =========================================================================
@@ -1484,6 +1495,7 @@ paths:
       - sample-walkthroughs
       - reproducible-environments
       - coldstart-testing
+      - ephemeral-environments
       - learning-paths
       - lms-administration
       - learning-content-standards

@@ -142,7 +142,7 @@ hands-on time.
 ```
 two hours against the 34-hour first-week path: 6%
 shortest path in the guide: domain-context, 6 concepts, 24h (8%)
-concepts in this corpus of 3h or less: 51/116
+concepts in this corpus of 3h or less: 51/117
 ```
 
 That second line is here because of a mistake. This page used to call

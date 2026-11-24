@@ -77,4 +77,4 @@ tells you.
 ## Related
 
 - [Why the curriculum is a data file](why-a-registry.md)
-- [Coverage](../coverage.md), where the line behind all 116 is printed
+- [Coverage](../coverage.md), where the line behind all 117 is printed

@@ -14,7 +14,7 @@ This guide is prose about how to do the work, and prose is cheap. This page
 records which concepts are also *implemented* somewhere you can open, down to
 the file that does the work.
 
-**87 of 116 concepts have a demonstration**, 37 of them in full.
+**88 of 117 concepts have a demonstration**, 37 of them in full.
 The rest of this page is the other side of that number, which is the half worth
 reading.
 
@@ -32,7 +32,7 @@ A Python library and the documentation site that documents it, where the site is
 
 The repository you are reading. It earns entries here only where it does the work rather than describing it: a two-part fence gate that compares fenced source against the rendered code blocks of the built HTML, and an accessibility property test over generated pages. The fence gate found 127 defects across seven pages that every other check had passed.
 
-[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 45 concepts
+[https://johnallred.github.io/fieldguide/](https://johnallred.github.io/fieldguide/) · demonstrates 46 concepts
 
 ## What is demonstrated
 
@@ -97,7 +97,7 @@ embeds them.
 
 ### Golden paths and developer onboarding
 
-8 of 8.
+9 of 9.
 
 | Concept | Extent | Artifact | What it does |
 |---|---|---|---|
@@ -107,6 +107,7 @@ embeds them.
 | [Quickstarts that survive contact](concepts/quickstarts.md) | :material-check-circle: full | `scripts/coldstart.sh` | The quickstart is tested rather than hoped about, including the promise that an invalid content model is rejected. |
 | [Sample walkthroughs](concepts/sample-walkthroughs.md) | :material-circle-half-full: partial | `drills/walkthrough_transclusion.py` | Five states with a real MkDocs build behind three of them: a copied block caught drifting, the same block transcluded by line range, the sample edited and the page following it, two lines inserted so the transclusion renders the wrong line while the build exits zero, and a named anchor surviving the same insertion. The silent failure is the finding; a string check cannot catch it, because nothing is quoted any more. |
 | [Templates and scaffolding](concepts/templates-scaffolding.md) | :material-check-circle: full | `src/docpack/scaffold.py` | `docpack new how-to --title ...` writes a conforming page; CI generates one of each type and validates it, so the generator cannot drift from the validator. |
+| [Ephemeral lab environments](concepts/ephemeral-environments.md) | :material-circle-half-full: partial | `drills/lab_lifecycle.py` | The full lifecycle (provision, run the lab's own steps, assert, tear down in a finally block, resolve every tagged ARN against its owning service, record) runs in the companion repository coldlab against a real AWS account; this drill reads a dated copy of its five-run record offline, traces the one flaky check to a misread exit code, sizes a 200-lab catalog at 26.6 serial hours, and verifies a teardown three ways. It stops at one lab, one personal account and one region: account vending was deliberately not built, no catalog exists, the nightly schedule had not fired, and no cost per run has been measured. |
 | [Reproducible environments](concepts/reproducible-environments.md) | :material-circle-half-full: partial | `scripts/coldstart.sh` | A fresh virtual environment installed the way a reader would, which is level 2 of the five in the page's own table and the right level for a pure-Python project. It would not catch a system library or a platform difference. |
 | [Sample applications and galleries](concepts/sample-apps.md) | :material-circle-half-full: partial | `drills/gallery_audit.py` | A four-entry gallery verified against its manifest, two entries failing in two different ways, plus a coverage table crossing what the samples teach against what readers ask. Committing it found the page's golden path was unreachable: it quoted a checker's output without printing the checker or the samples it ran. The ticket distribution is invented and the page says so; the arithmetic over it is real. |
 
@@ -207,7 +208,7 @@ Coverage by category, including the categories at zero.
 | Information and knowledge architecture | 12/14 | 0 |
 | Docs-as-code toolchain | 8/15 | 0 |
 | Quality automation and documentation CI | 13/14 | 0 |
-| Golden paths and developer onboarding | 8/8 | 0 |
+| Golden paths and developer onboarding | 9/9 | 0 |
 | AI-ready content and agents | 13/21 | 8 |
 | Measurement and feedback | 7/7 | 0 |
 | Developer education and curriculum | 14/14 | 0 |
