@@ -15,7 +15,7 @@ tags: [meas, core]
 
 **Prerequisites:** [Documentation analytics](docs-analytics.md)
 
-**Leads to:** [Repeat questions](repeat-questions.md)
+**Leads to:** [Repeat-question analysis](repeat-questions.md)
 
 ## What it is
 

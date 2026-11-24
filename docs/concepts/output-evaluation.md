@@ -13,10 +13,9 @@ tags: [ai, core]
 
 > Measuring whether LLM output in your content workflows is accurate and usable.
 
-
 **Prerequisites:** [Grounding and citation](grounding.md), [Retrieval evaluation](retrieval-evaluation.md)
 
-**Leads to:** [Measuring AI answer quality](ai-answer-quality.md), [Hallucination and guardrails](hallucination-guardrails.md)
+**Leads to:** [Hallucination and guardrails](hallucination-guardrails.md), [Measuring AI answer quality](ai-answer-quality.md)
 
 ## What it is
 

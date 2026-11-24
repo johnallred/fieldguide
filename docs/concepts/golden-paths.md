@@ -15,7 +15,7 @@ tags: [gp, core]
 
 **Prerequisites:** [Diátaxis](diataxis.md)
 
-**Leads to:** [Quickstarts that survive contact](quickstarts.md), [Reproducible environments](reproducible-environments.md)
+**Leads to:** [Quickstarts that survive contact](quickstarts.md), [Reproducible environments](reproducible-environments.md), [Time to first success](time-to-first-success.md)
 
 ## What it is
 

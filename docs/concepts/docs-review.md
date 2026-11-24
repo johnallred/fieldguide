@@ -15,6 +15,8 @@ tags: [qa, supporting]
 
 **Prerequisites:** [Git authoring workflows for writers](git-authoring.md), [Style guides](style-guide.md)
 
+**Leads to:** [Working with engineers as sources](working-with-engineers.md)
+
 ## What it is
 
 Pull request review for documentation, and more usefully, the decision about

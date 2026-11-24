@@ -15,6 +15,8 @@ tags: [qa, core]
 
 **Prerequisites:** [Docs-as-code](docs-as-code.md), [Git authoring workflows for writers](git-authoring.md)
 
+**Leads to:** [Accessibility checks](accessibility.md), [Documentation analytics](docs-analytics.md), [Freshness monitoring](freshness-monitoring.md), [GitHub Actions for docs](github-actions.md), [Lab publishing pipelines](lab-publishing.md), [Release readiness for documentation](release-readiness.md)
+
 ## What it is
 
 The set of automated checks that run on every documentation pull request, and

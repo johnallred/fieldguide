@@ -13,10 +13,9 @@ tags: [ai, core]
 
 > Structuring knowledge so AI assistants and agents can use it as reliably as people can.
 
-
 **Prerequisites:** [Content models](content-model.md), [Metadata for navigation and retrieval](metadata.md)
 
-**Leads to:** [Agentic workflows](agentic-workflows.md), [Chunking strategies](chunking.md), [Documentation for coding agents](coding-agents.md), [Generative engine optimization](geo.md), [Model Context Protocol](mcp.md), [llms.txt and llms-full.txt](llms-txt.md)
+**Leads to:** [Chunking strategies](chunking.md), [Documentation for coding agents](coding-agents.md), [Generative engine optimization](geo.md), [Model Context Protocol](mcp.md), [llms.txt and llms-full.txt](llms-txt.md)
 
 ## What it is
 

@@ -15,7 +15,7 @@ tags: [ia, core]
 
 **Prerequisites:** [Information architecture](information-architecture.md)
 
-**Leads to:** [Taxonomy and controlled vocabularies](taxonomy.md), [Metadata for navigation and retrieval](metadata.md), [Content lifecycle and governance](content-lifecycle.md), [Single-sourcing and content reuse](single-sourcing.md)
+**Leads to:** [Agent-ready content](agent-ready-content.md), [Content lifecycle and governance](content-lifecycle.md), [Localization and translation pipelines](localization.md), [Metadata for navigation and retrieval](metadata.md), [Single-sourcing and content reuse](single-sourcing.md), [Taxonomy and controlled vocabularies](taxonomy.md), [Templates and scaffolding](templates-scaffolding.md), [Transforming content as data](content-data-transformation.md)
 
 ## What it is
 

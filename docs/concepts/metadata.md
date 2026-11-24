@@ -15,7 +15,7 @@ tags: [ia, core]
 
 **Prerequisites:** [Content models](content-model.md)
 
-**Leads to:** [Findability and search design](findability.md), [Agent-ready content](agent-ready-content.md)
+**Leads to:** [Agent-ready content](agent-ready-content.md), [Documentation for partners and internal teams](partner-documentation.md), [Findability and search design](findability.md), [SEO for documentation](seo-for-docs.md), [Structured data and JSON-LD](structured-data.md)
 
 ## What it is
 

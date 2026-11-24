@@ -15,7 +15,7 @@ tags: [ia, supporting]
 
 **Prerequisites:** [Content models](content-model.md)
 
-**Leads to:** [Multi-platform parity](multi-platform-parity.md)
+**Leads to:** [Localization and translation pipelines](localization.md), [Multi-platform parity](multi-platform-parity.md)
 
 ## What it is
 

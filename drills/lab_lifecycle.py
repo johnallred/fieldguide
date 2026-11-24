@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read an ephemeral lab's health record, size a nightly catalog, verify teardown.
+"""Read an ephemeral lab's health record, size a nightly catalogue, verify teardown.
 
     python3 drills/lab_lifecycle.py                                  # embedded samples
     python3 drills/lab_lifecycle.py runs.csv checks.csv teardown.csv # your files
@@ -65,7 +65,7 @@ arn:aws:logs:us-east-2:111122223333:log-group:/aws/lambda/ColdlabWorker,0
 arn:aws:states:us-east-2:111122223333:stateMachine:ColdlabRetry,-
 """
 
-CATALOG = 200       # labs in a nightly catalog
+CATALOG = 200       # labs in a nightly catalogue
 WINDOW_HOURS = 4    # the overnight window they must all finish in
 
 
@@ -116,7 +116,7 @@ def health(runs_text: str, checks_text: str) -> float:
 def catalog(seconds: float) -> None:
     hours = CATALOG * seconds / 3600
     lanes = math.ceil(hours / WINDOW_HOURS)
-    print("step 2: what a nightly catalog costs in time")
+    print("step 2: what a nightly catalogue costs in time")
     print(f"  {CATALOG} labs x {seconds:.0f}s = {hours:.1f} hours, one after another")
     print(f"  to finish in {WINDOW_HOURS} hours: {lanes} labs running at once")
     print()

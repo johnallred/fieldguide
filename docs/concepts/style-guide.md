@@ -15,7 +15,7 @@ tags: [ia, supporting]
 
 **Prerequisites:** [Taxonomy and controlled vocabularies](taxonomy.md)
 
-**Leads to:** [Prose linting with Vale](prose-linting.md), [Security guidance as encoded standard](security-documentation.md)
+**Leads to:** [Prose linting with Vale](prose-linting.md), [Reviewing documentation](docs-review.md), [Security guidance as encoded standard](security-documentation.md)
 
 ## What it is
 

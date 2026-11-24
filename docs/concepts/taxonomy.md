@@ -15,7 +15,7 @@ tags: [ia, core]
 
 **Prerequisites:** [Content models](content-model.md)
 
-**Leads to:** [Style guides and terminology management](style-guide.md), [Detecting terminology drift](terminology-drift.md)
+**Leads to:** [Detecting terminology drift](terminology-drift.md), [Style guides and terminology management](style-guide.md)
 
 ## What it is
 

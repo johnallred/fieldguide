@@ -15,7 +15,7 @@ tags: [gp, core]
 
 **Prerequisites:** [Content models](content-model.md)
 
-**Leads to:** [Guided workflows](guided-workflows.md)
+**Leads to:** [Agent skills and context kits](agent-skills.md), [Guided workflows](guided-workflows.md)
 
 ## What it is
 
@@ -76,7 +76,6 @@ tags: [meas, core]
 
 **Prerequisites:** [Documentation CI](documentation-ci.md)
 
-**Leads to:** [Measuring AI answer quality](ai-answer-quality.md), [Search and
 query log analysis](search-log-analysis.md), [Support deflection](support-deflection.md),
 [Time to first success](time-to-first-success.md), ...
 ```

@@ -15,6 +15,8 @@ tags: [qa, core]
 
 **Prerequisites:** [Style guides](style-guide.md)
 
+**Leads to:** [Detecting terminology drift](terminology-drift.md), [Writing custom linters](custom-linters.md)
+
 ## What it is
 
 A linter for prose. Vale reads Markdown, reStructuredText and a dozen other
@@ -235,7 +237,7 @@ styles/
   write-good/         # third-party packages, installed by `vale sync`
 ```
 
-Keep your own rules in a directory named after your organization rather than
+Keep your own rules in a directory named after your organisation rather than
 scattering them into a vendored style, so `vale sync` cannot overwrite them.
 
 ## Explaining it to your team

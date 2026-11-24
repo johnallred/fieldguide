@@ -13,8 +13,7 @@ tags: [ia, core]
 
 > Deciding how content is modelled, classified and tagged so people can navigate it and machines can retrieve it.
 
-
-**Leads to:** [Content models](content-model.md), [Diátaxis](diataxis.md), [Knowledge architecture](knowledge-architecture.md), [Metadata for navigation and retrieval](metadata.md)
+**Leads to:** [Content models](content-model.md), [Diátaxis](diataxis.md), [Knowledge architecture](knowledge-architecture.md)
 
 ## What it is
 

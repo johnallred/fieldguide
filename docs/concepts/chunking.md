@@ -13,10 +13,9 @@ tags: [ai, core]
 
 > Splitting content into pieces a RAG system, internal assistant or agent can retrieve on their own.
 
-
 **Prerequisites:** [Agent-ready content](agent-ready-content.md)
 
-**Leads to:** [Embeddings](embeddings.md)
+**Leads to:** [Embeddings](embeddings.md), [RAG pipelines](rag.md)
 
 ## What it is
 

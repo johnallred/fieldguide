@@ -15,7 +15,7 @@ tags: [dac, core]
 
 **Prerequisites:** [Markdown and its dialects](markdown.md)
 
-**Leads to:** [MkDocs and Material](mkdocs.md), [Sphinx](sphinx.md), [Docusaurus](docusaurus.md), [Antora and AsciiDoc](antora.md), [Versioned documentation](versioning.md)
+**Leads to:** [Antora and AsciiDoc](antora.md), [Docusaurus](docusaurus.md), [MkDocs and Material](mkdocs.md), [Sphinx](sphinx.md), [Versioned documentation](versioning.md)
 
 ## What it is
 

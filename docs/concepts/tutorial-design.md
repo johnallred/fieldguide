@@ -15,7 +15,7 @@ tags: [gp, core]
 
 **Prerequisites:** [Diátaxis](diataxis.md)
 
-**Leads to:** [Sample walkthroughs](sample-walkthroughs.md)
+**Leads to:** [Sample walkthroughs](sample-walkthroughs.md), [Screencasts and video](screencasts.md)
 
 ## What it is
 

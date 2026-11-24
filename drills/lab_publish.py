@@ -211,7 +211,7 @@ def step2_and_3(versions_text: str, runs_text: str) -> int:
         if True in results:
             print(f"  {lab:<11} v{prod} passed in prod, then failed {failing} times with unchanged content")
             print(f"  {'':<11} the environment changed, not the lab: rolling back cannot help;")
-            print(f"  {'':<11} pull it from the catalog, tell instructors, fix forward")
+            print(f"  {'':<11} pull it from the catalogue, tell instructors, fix forward")
         else:
             earlier = [v for v in mine if int(v) < int(prod)]
             previous = earlier[-1]

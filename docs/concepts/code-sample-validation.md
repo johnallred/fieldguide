@@ -15,7 +15,7 @@ tags: [qa, core]
 
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 
-**Leads to:** [Multi-platform parity](multi-platform-parity.md)
+**Leads to:** [Building a doc test harness](doc-test-harness.md), [Cold-start testing](coldstart-testing.md), [Doctests and executable docstrings](doctests.md), [Multi-platform parity](multi-platform-parity.md), [Sample applications and galleries](sample-apps.md)
 
 ## What it is
 

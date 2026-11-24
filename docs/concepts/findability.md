@@ -15,6 +15,8 @@ tags: [ia, supporting]
 
 **Prerequisites:** [Metadata for navigation and retrieval](metadata.md)
 
+**Leads to:** [Search and query log analysis](search-log-analysis.md)
+
 ## What it is
 
 Whether a reader who knows what they want can get to it. On a documentation

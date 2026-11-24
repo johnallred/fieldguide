@@ -13,10 +13,9 @@ tags: [ai, core]
 
 > Building and maintaining pipelines that answer questions from your documentation.
 
-
 **Prerequisites:** [Chunking strategies](chunking.md), [Vector stores and hybrid search](vector-stores.md)
 
-**Leads to:** [Documentation-backed AI assistants](ai-assistants.md), [Grounding and citation](grounding.md), [Retrieval evaluation](retrieval-evaluation.md)
+**Leads to:** [Documentation-backed AI assistants](ai-assistants.md), [Evaluating retrieval](retrieval-evaluation.md), [Grounding and citation](grounding.md)
 
 ## What it is
 

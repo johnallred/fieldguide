@@ -15,7 +15,7 @@ tags: [dac, core]
 
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 
-**Leads to:** [Reviewing documentation](docs-review.md)
+**Leads to:** [Documentation CI](documentation-ci.md), [Reviewing documentation](docs-review.md)
 
 ## What it is
 

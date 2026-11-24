@@ -15,7 +15,7 @@ tags: [dac, core]
 
 **Prerequisites:** [Docs-as-code](docs-as-code.md)
 
-**Leads to:** [MDX](mdx.md), [reStructuredText](restructuredtext.md), [Choosing a static site generator](static-site-generators.md)
+**Leads to:** [Choosing a static site generator](static-site-generators.md), [MDX](mdx.md), [reStructuredText](restructuredtext.md)
 
 ## What it is
 

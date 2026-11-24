@@ -1444,7 +1444,7 @@ paths:
   - id: content-architect
     name: The content architect
     audience: A writer or engineer who owns structure across a growing corpus.
-    summary: From a folder of Markdown to a modeled, governed, machine-readable corpus.
+    summary: From a folder of Markdown to a modelled, governed, machine-readable corpus.
     concepts:
       - information-architecture
       - diataxis

@@ -15,6 +15,8 @@ tags: [qa, core]
 
 **Prerequisites:** [Documentation CI](documentation-ci.md)
 
+**Leads to:** [Preview deployments and publishing](preview-deployments.md)
+
 ## What it is
 
 The YAML that runs your documentation gates on every pull request, publishes

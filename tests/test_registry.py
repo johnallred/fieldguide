@@ -1063,7 +1063,7 @@ _NUMBER_WORDS = {
 #: which count each states. Precise rather than broad on purpose: the first
 #: version scanned for "<number> <noun>" anywhere and reported six findings,
 #: four of which were "Two learning paths taught a prerequisite too late" and
-#: "Write twenty questions with their expected source pages" — prose that
+#: "Write twenty questions with their expected source pages", prose that
 #: contains a number and a noun and makes no claim about either collection. A
 #: check that cries wolf gets switched off the first time it annoys somebody,
 #: which is the lesson the `crawlability` page draws about its own false
@@ -1192,3 +1192,31 @@ def test_every_demonstration_names_a_file_that_exists():
         f"only {len(local)} local entries, so this check has stopped covering "
         "the register it is supposed to cover"
     )
+
+
+def test_every_page_header_links_match_the_registry():
+    """The Prerequisites and Leads to lines are the registry, printed.
+
+    Both were written by hand and drifted: a recheck found thirty-one pages
+    whose Leads to line disagreed with the registry in content or order,
+    some listing concepts that no longer depended on them and five with
+    dependents and no line at all. Prerequisites follow the registry's order; Leads to lists
+    every dependent, sorted by name, as `fieldguide scaffold` writes it.
+    """
+    import re
+
+    registry = load_registry(REAL_REGISTRY)
+    wrong = []
+    for concept in registry.concepts:
+        text = (REAL_DOCS / "concepts" / f"{concept.id}.md").read_text(encoding="utf-8")
+        for label, want in (
+            ("Prerequisites", list(concept.prerequisites)),
+            ("Leads to", [c.id for c in sorted(
+                (c for c in registry.concepts if concept.id in c.prerequisites),
+                key=lambda c: c.name)]),
+        ):
+            line = re.search(rf"^\*\*{label}:\*\* (.*)$", text, re.MULTILINE)
+            got = re.findall(r"\(([\w-]+)\.md\)", line.group(1)) if line else []
+            if got != want:
+                wrong.append(f"{concept.id} {label}: page {got}, registry {want}")
+    assert not wrong, "header links disagree with concepts.yaml:\n  " + "\n  ".join(wrong)

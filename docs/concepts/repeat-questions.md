@@ -15,7 +15,7 @@ tags: [meas, core]
 
 **Prerequisites:** [Support deflection](support-deflection.md)
 
-**Leads to:** [Prioritising documentation work](docs-prioritization.md)
+**Leads to:** [Prioritizing documentation work](docs-prioritization.md)
 
 ## What it is
 

@@ -15,7 +15,7 @@ tags: [ia, supporting]
 
 **Prerequisites:** [Content models](content-model.md)
 
-**Leads to:** [Freshness monitoring](freshness-monitoring.md), [Retiring content](content-retirement.md)
+**Leads to:** [Freshness monitoring](freshness-monitoring.md), [LLMs in the content lifecycle](llm-content-lifecycle.md), [Retiring content](content-retirement.md)
 
 ## What it is
 

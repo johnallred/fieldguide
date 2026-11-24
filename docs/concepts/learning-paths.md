@@ -13,7 +13,7 @@ tags: [edu, core]
 
 > Sequencing content into structured learning paths a reader can follow start to finish.
 
-**Prerequisites:** [Diátaxis](diataxis.md), [Instructional design for developers](instructional-design.md)
+**Prerequisites:** [Instructional design for developers](instructional-design.md), [Diátaxis](diataxis.md)
 
 **Leads to:** [LMS administration](lms-administration.md), [Workshops and hands-on labs](workshops.md)
 

@@ -13,10 +13,9 @@ tags: [ai, core]
 
 > Building question sets that measure whether retrieval finds the right content.
 
-
 **Prerequisites:** [RAG pipelines](rag.md)
 
-**Leads to:** [Measuring AI answer quality](ai-answer-quality.md), [Output evaluation](output-evaluation.md)
+**Leads to:** [Output evaluation](output-evaluation.md)
 
 ## What it is
 

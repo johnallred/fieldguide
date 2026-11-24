@@ -15,7 +15,7 @@ tags: [edu, core]
 
 **Prerequisites:** [Learning science for developer education](learning-science.md), [Learner and task analysis](learner-task-analysis.md)
 
-**Leads to:** [Learning paths and curriculum](learning-paths.md), [Cognitive load in technical content](cognitive-load.md), [Assessment and checks for understanding](assessment.md)
+**Leads to:** [Assessment and checks for understanding](assessment.md), [Cognitive load in technical content](cognitive-load.md), [Learning paths and curriculum](learning-paths.md)
 
 ## What it is
 

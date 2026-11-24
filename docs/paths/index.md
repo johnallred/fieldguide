@@ -29,7 +29,7 @@ The shortest route to shipping a documentation change with confidence.
 
 *A writer or engineer who owns structure across a growing corpus.*
 
-From a folder of Markdown to a modeled, governed, machine-readable corpus.
+From a folder of Markdown to a modelled, governed, machine-readable corpus.
 
 15 concepts, roughly 53 hours.
 

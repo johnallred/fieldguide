@@ -13,7 +13,7 @@ tags: [auto, core]
 
 > Using Python to automate content tasks, transform data and call APIs.
 
-**Leads to:** [Content and data transformation](content-data-transformation.md), [API integration](api-integration.md)
+**Leads to:** [Integrating with APIs](api-integration.md), [Transforming content as data](content-data-transformation.md)
 
 ## What it is
 
