@@ -85,6 +85,11 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "which layer caught each failure, and which layers alone would miss it",
         ),
     ),
+    "field_enablement.py": (
+        "docs/concepts/field-enablement.md",
+        "<<'DATA'\n",
+        ("ROSTER", "QUESTIONS", "RESOURCES"),
+    ),
     "demo_check.py": (
         "docs/concepts/demo-design.md",
         "<<'DATA'\n",
@@ -191,6 +196,17 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "widget                    3      3   100%",
             "ok: 0 deprecated usage(s)",
             "docs/b.md: ...'e\\nPoint the Widget CLI at your'...",
+        ),
+    ),
+    "field_enablement.py": (
+        "docs/concepts/field-enablement.md",
+        0,
+        (
+            '  passed a teach-back         4/12',
+            '  by role: SE 3/5, AE 1/4, partner 0/3',
+            '  pricing                  5        0/5    write a resource',
+            '  unused resource: retry-faq (0 views, answered nothing): merge or retire',
+            '  batch on cloud-b: 4 questions, from SE, AE, partner',
         ),
     ),
     "demo_check.py": (
@@ -305,7 +321,7 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         (
             "two hours against the 34-hour first-week path: 6%",
             "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
-            "concepts in this corpus of 3h or less: 51/115",
+            "concepts in this corpus of 3h or less: 51/116",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",
         ),

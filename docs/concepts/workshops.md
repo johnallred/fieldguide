@@ -15,6 +15,8 @@ tags: [edu, supporting]
 
 **Prerequisites:** [Learning paths and curriculum](learning-paths.md), [Reproducible environments](reproducible-environments.md)
 
+**Leads to:** [Field enablement](field-enablement.md)
+
 ## What it is
 
 A fixed block of time in which a group works through material together, with
@@ -140,7 +142,7 @@ hands-on time.
 ```
 two hours against the 34-hour first-week path: 6%
 shortest path in the guide: domain-context, 6 concepts, 24h (8%)
-concepts in this corpus of 3h or less: 51/115
+concepts in this corpus of 3h or less: 51/116
 ```
 
 That second line is here because of a mistake. This page used to call

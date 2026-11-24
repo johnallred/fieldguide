@@ -56,6 +56,7 @@ one machine. A test pins the constant columns.
 | `migration_audit.py` | nothing | Content migration |
 | `parity_check.py` | nothing | Multi-platform parity |
 | `demo_check.py` | nothing | Demo design |
+| `field_enablement.py` | nothing | Field enablement |
 | `sphinx_autodoc.py` | `pip install sphinx myst-parser` | Sphinx |
 
 These ten are different in kind. Their pages are golden paths: a reader can

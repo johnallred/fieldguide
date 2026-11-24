@@ -15,6 +15,8 @@ tags: [edu, supporting]
 
 **Prerequisites:** [Sample applications and galleries](sample-apps.md)
 
+**Leads to:** [Field enablement](field-enablement.md)
+
 ## What it is
 
 A demo is a performance of a product: a fixed slot, a particular audience, and

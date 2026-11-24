@@ -904,6 +904,17 @@ concepts:
       - "Running hands-on workshops and labs, a standard developer-relations deliverable."
     status: complete
 
+  - id: field-enablement
+    name: Field enablement
+    category: edu
+    tier: supporting
+    difficulty: 2
+    time: 4h
+    prerequisites: [workshops, demo-design]
+    in_practice:
+      - "Teaching the people who demo, sell and support the product until they can deliver without you, and turning what they hear into changes."
+    status: complete
+
   - id: developer-advocacy
     name: Developer advocacy
     category: edu
@@ -1480,6 +1491,7 @@ paths:
       - sample-apps
       - demo-design
       - workshops
+      - field-enablement
       - guided-workflows
 
   - id: writer-who-builds
