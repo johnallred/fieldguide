@@ -31,7 +31,7 @@ yourself which earn your time.
 
 -   :material-map-marker-path: **Follow a route**
 
-    Nine [learning paths](paths/index.md), each an ordered sequence with the
+    Ten [learning paths](paths/index.md), each an ordered sequence with the
     prerequisites worked out. Start with [the first week](paths/first-week.md)
     if you have just started in this work, or
     [a working result in a weekend](paths/prove-it.md) if you need to ship

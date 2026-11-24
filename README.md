@@ -111,7 +111,7 @@ verifies generated pages are current without rewriting them; CI runs that check.
 ## How it is organised
 
 ```
-concepts.yaml            the curriculum: 120 concepts, 9 paths, the checklist
+concepts.yaml            the curriculum: 120 concepts, 10 paths, the checklist
 src/fieldguide/
   registry.py              the model and every validator
   generate.py              coverage, paths, study plan, placeholders
@@ -121,7 +121,7 @@ docs/
   index.md                 three ways in
   coverage.md              GENERATED: every concept and the line behind it
   study-plan.md            GENERATED: topological sort of all 120
-  paths/                   GENERATED: nine learning paths
+  paths/                   GENERATED: ten learning paths
   concepts/                120 pages, all written
   explanation/             why a registry, the page contract, provenance
 drills/                  nineteen runnable scripts behind figures the pages quote

@@ -1526,12 +1526,6 @@ paths:
       - golden-paths
       - quickstarts
       - sample-walkthroughs
-      - reproducible-environments
-      - coldstart-testing
-      - ephemeral-environments
-      - lab-publishing
-      - isolated-region-labs
-      - learner-sandbox-guardrails
       - learning-paths
       - lms-administration
       - learning-content-standards
@@ -1540,7 +1534,21 @@ paths:
       - demo-design
       - workshops
       - field-enablement
-      - guided-workflows
+
+  - id: lab-engineer
+    name: The lab engineer
+    audience: Someone who builds, tests and publishes hands-on labs that run in real cloud accounts.
+    summary: Taking a lab from a working draft to one that is tested nightly, published on evidence, safe for learners and portable.
+    concepts:
+      - code-sample-validation
+      - documentation-ci
+      - reproducible-environments
+      - coldstart-testing
+      - ephemeral-environments
+      - lab-publishing
+      - learner-sandbox-guardrails
+      - multi-platform-parity
+      - isolated-region-labs
 
   - id: writer-who-builds
     name: The writer who builds

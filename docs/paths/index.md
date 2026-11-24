@@ -55,7 +55,15 @@ Making a corpus answerable by machines, and knowing whether it worked.
 
 Taking a developer from a clean environment to a working result, repeatably.
 
-25 concepts, roughly 108 hours.
+18 concepts, roughly 73 hours.
+
+## [The lab engineer](lab-engineer.md)
+
+*Someone who builds, tests and publishes hands-on labs that run in real cloud accounts.*
+
+Taking a lab from a working draft to one that is tested nightly, published on evidence, safe for learners and portable.
+
+9 concepts, roughly 43 hours.
 
 ## [The writer who builds](writer-who-builds.md)
 
@@ -96,10 +104,11 @@ this is the list.
 
 | Concept | Paths |
 |---|---|
+| [Documentation CI](../concepts/documentation-ci.md) | 4 |
 | [Diátaxis](../concepts/diataxis.md) | 4 |
 | [Treating docs, setup and samples as one product](../concepts/docs-as-product.md) | 3 |
 | [Link checking](../concepts/link-checking.md) | 3 |
-| [Documentation CI](../concepts/documentation-ci.md) | 3 |
 | [Docs-as-code](../concepts/docs-as-code.md) | 3 |
 | [Content models](../concepts/content-model.md) | 3 |
 | [Cold-start testing](../concepts/coldstart-testing.md) | 3 |
+| [Code-sample validation](../concepts/code-sample-validation.md) | 3 |

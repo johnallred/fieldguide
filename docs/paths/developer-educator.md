@@ -13,10 +13,10 @@ generated: true
 
 Taking a developer from a clean environment to a working result, repeatably.
 
-**25 concepts, roughly 108 hours.** The order matters:
+**18 concepts, roughly 73 hours.** The order matters:
 each step assumes the ones above it.
 
-**Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Code-sample validation](../concepts/code-sample-validation.md), [Documentation CI](../concepts/documentation-ci.md), [Multi-platform parity](../concepts/multi-platform-parity.md), [Security guidance as encoded standard](../concepts/security-documentation.md), [Templates and scaffolding](../concepts/templates-scaffolding.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Code-sample validation](../concepts/code-sample-validation.md), [Reproducible environments](../concepts/reproducible-environments.md). Each step below repeats what it assumes.
 
 ## 1. [Treating docs, setup and samples as one product](../concepts/docs-as-product.md)
 
@@ -94,63 +94,7 @@ Writing walkthroughs that explain a sample line by line, without drifting from t
 
 Builds on, earlier in this path: Designing tutorials.
 
-## 11. [Reproducible environments](../concepts/reproducible-environments.md)
-
-`supporting` · build something · 4h
-
-Making sure every exercise starts from an environment a reader can recreate exactly.
-
-Builds on, earlier in this path: Golden paths.
-
-## 12. [Cold-start testing](../concepts/coldstart-testing.md)
-
-`core` · build something · 5h
-
-Testing quickstarts from a clean environment, the way a new developer meets them.
-
-Builds on, earlier in this path: Reproducible environments.
-
-Assumes, from outside this path: [Code-sample validation](../concepts/code-sample-validation.md).
-
-## 13. [Ephemeral lab environments](../concepts/ephemeral-environments.md)
-
-`supporting` · build something · 6h
-
-Standing up a real cloud environment for every lab run, checking the lab against it, and proving the teardown left nothing running.
-
-Builds on, earlier in this path: Reproducible environments, Cold-start testing.
-
-## 14. [Lab publishing pipelines](../concepts/lab-publishing.md)
-
-`supporting` · build something · 5h
-
-Shipping hands-on labs through gates, versions and channels, so a broken lab is stopped before learners meet it and a published one can be pulled or rolled back.
-
-Builds on, earlier in this path: Ephemeral lab environments.
-
-Assumes, from outside this path: [Documentation CI](../concepts/documentation-ci.md).
-
-## 15. [Labs for isolated regions](../concepts/isolated-region-labs.md)
-
-`supporting` · build something · 5h
-
-Making a lab that runs in one AWS partition run in another, including isolated regions with no route to the public internet.
-
-Builds on, earlier in this path: Lab publishing pipelines.
-
-Assumes, from outside this path: [Multi-platform parity](../concepts/multi-platform-parity.md).
-
-## 16. [Learner sandbox guardrails](../concepts/learner-sandbox-guardrails.md)
-
-`supporting` · build something · 5h
-
-Letting a learner do everything the lab needs in a real cloud account, and nothing that breaks the account, the bill or the lab.
-
-Builds on, earlier in this path: Ephemeral lab environments.
-
-Assumes, from outside this path: [Security guidance as encoded standard](../concepts/security-documentation.md).
-
-## 17. [Learning paths and curriculum](../concepts/learning-paths.md)
+## 11. [Learning paths and curriculum](../concepts/learning-paths.md)
 
 `core` · build something · 5h
 
@@ -158,7 +102,7 @@ Sequencing content into structured learning paths a reader can follow start to f
 
 Builds on, earlier in this path: Instructional design for developers, Diátaxis.
 
-## 18. [LMS administration](../concepts/lms-administration.md)
+## 12. [LMS administration](../concepts/lms-administration.md)
 
 `supporting` · practise it · 4h
 
@@ -166,7 +110,7 @@ Keeping the courses in a learning management system true to their source, enroll
 
 Builds on, earlier in this path: Learning paths and curriculum.
 
-## 19. [Learning content standards](../concepts/learning-content-standards.md)
+## 13. [Learning content standards](../concepts/learning-content-standards.md)
 
 `supporting` · practise it · 5h
 
@@ -174,7 +118,7 @@ Packaging courses and labs so any learning platform can launch them, and getting
 
 Builds on, earlier in this path: LMS administration.
 
-## 20. [Assessment and checks for understanding](../concepts/assessment.md)
+## 14. [Assessment and checks for understanding](../concepts/assessment.md)
 
 `supporting` · practise it · 3h
 
@@ -182,7 +126,7 @@ Checking that a learner actually learned: how you know the curriculum worked.
 
 Builds on, earlier in this path: Instructional design for developers.
 
-## 21. [Sample applications and galleries](../concepts/sample-apps.md)
+## 15. [Sample applications and galleries](../concepts/sample-apps.md)
 
 `supporting` · build something · 6h
 
@@ -192,7 +136,7 @@ Builds on, earlier in this path: Sample walkthroughs.
 
 Assumes, from outside this path: [Code-sample validation](../concepts/code-sample-validation.md).
 
-## 22. [Demo design](../concepts/demo-design.md)
+## 16. [Demo design](../concepts/demo-design.md)
 
 `supporting` · practise it · 3h
 
@@ -200,26 +144,20 @@ Building demos that show the result first, fit their slot, adapt to the audience
 
 Builds on, earlier in this path: Sample applications and galleries.
 
-## 23. [Workshops and hands-on labs](../concepts/workshops.md)
+## 17. [Workshops and hands-on labs](../concepts/workshops.md)
 
 `supporting` · practise it · 4h
 
 Running hands-on workshops and labs, a standard developer-relations deliverable.
 
-Builds on, earlier in this path: Learning paths and curriculum, Reproducible environments.
+Builds on, earlier in this path: Learning paths and curriculum.
 
-## 24. [Field enablement](../concepts/field-enablement.md)
+Assumes, from outside this path: [Reproducible environments](../concepts/reproducible-environments.md).
+
+## 18. [Field enablement](../concepts/field-enablement.md)
 
 `supporting` · practise it · 4h
 
 Teaching the people who demo, sell and support the product until they can deliver without you, and turning what they hear into changes.
 
 Builds on, earlier in this path: Workshops and hands-on labs, Demo design.
-
-## 25. [Guided workflows](../concepts/guided-workflows.md)
-
-`core` · build something · 5h
-
-Replacing static instructions with workflows that guide a person through a standard.
-
-Assumes, from outside this path: [Templates and scaffolding](../concepts/templates-scaffolding.md).

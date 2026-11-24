@@ -270,9 +270,11 @@ authoring order is a valid order. It is just never the right one.
 | Over 18 steps | A syllabus | Abandoned partway, invisibly |
 | Over 60 hours | A qualification | Needs checkpoints and a reason |
 
-This guide's longest is 18 steps and 83 hours, which is over the line, and the
-mitigation is that every step is independently useful. That is a weaker answer
-than splitting it.
+This guide's longest paths are 20 steps (the documentation engineer) and 83
+hours (KnowledgeOps), both over the line, and the mitigation is that every step
+is independently useful. That is a weaker answer than splitting, which is what
+happened when the developer educator path reached 25 steps and 108 hours: its
+lab concepts became the lab engineer path, and both are now under 20 steps.
 
 ### Keeping it honest
 
@@ -335,7 +337,7 @@ check and a coverage report in CI, and an entry state computed per path.
 3. Count how many paths each item appears in. Anything appearing once is
    navigation, not curriculum, and should probably be solved by search instead.
 
-**How to tell it is working.** This guide holds nine paths over 120 concepts in `concepts.yaml`, generates every path page from them, and
+**How to tell it is working.** This guide holds ten paths over 120 concepts in `concepts.yaml`, generates every path page from them, and
 fails CI on an ordering violation; the entry-state paragraph and its test were
 added by the exercise above. The honest limits: no reader has completed any of
 these paths, so there is no evidence the orders are *good*, only that they are
