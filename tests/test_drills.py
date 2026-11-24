@@ -100,6 +100,11 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         "<<'DATA'\n",
         ("CANDIDATE", "VERSIONS", "RUNS"),
     ),
+    "partition_audit.py": (
+        "docs/concepts/isolated-region-labs.md",
+        "<<'DATA'\n",
+        ("TEMPLATE", "LAB", "TARGET"),
+    ),
     "demo_check.py": (
         "docs/concepts/demo-design.md",
         "<<'DATA'\n",
@@ -245,6 +250,17 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
             "              the environment changed, not the lab: rolling back cannot help;",
         ),
     ),
+    "partition_audit.py": (
+        "docs/concepts/isolated-region-labs.md",
+        1,
+        (
+            "  template.yaml:8  literal partition 'arn:aws:'; use ${AWS::Partition} or read it from the ARN you were given",
+            "  template.yaml:14  literal DNS suffix; use ${AWS::URLSuffix} or let the SDK resolve the endpoint",
+            "  lab.md:6  fetches at run time: pip install boto3",
+            "  MISSING  stepfunctions: redesign the step or do not publish there",
+            "7 thing(s) to fix before this lab runs in another partition or an isolated region",
+        ),
+    ),
     "demo_check.py": (
         "docs/concepts/demo-design.md",
         0,
@@ -357,7 +373,7 @@ EXPECTED: dict[str, tuple[str, int, tuple[str, ...]]] = {
         (
             "two hours against the 34-hour first-week path: 6%",
             "shortest path in the guide: domain-context, 6 concepts, 24h (8%)",
-            "concepts in this corpus of 3h or less: 51/118",
+            "concepts in this corpus of 3h or less: 51/119",
             "  Technical writing as a craft                     8h",
             "                                            total 34h",
         ),

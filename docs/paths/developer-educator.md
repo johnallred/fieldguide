@@ -13,10 +13,10 @@ generated: true
 
 Taking a developer from a clean environment to a working result, repeatably.
 
-**23 concepts, roughly 98 hours.** The order matters:
+**24 concepts, roughly 103 hours.** The order matters:
 each step assumes the ones above it.
 
-**Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Code-sample validation](../concepts/code-sample-validation.md), [Documentation CI](../concepts/documentation-ci.md), [Templates and scaffolding](../concepts/templates-scaffolding.md). Each step below repeats what it assumes.
+**Assumed before step 1.** This path does not teach [Information architecture](../concepts/information-architecture.md), [Code-sample validation](../concepts/code-sample-validation.md), [Documentation CI](../concepts/documentation-ci.md), [Multi-platform parity](../concepts/multi-platform-parity.md), [Templates and scaffolding](../concepts/templates-scaffolding.md). Each step below repeats what it assumes.
 
 ## 1. [Treating docs, setup and samples as one product](../concepts/docs-as-product.md)
 
@@ -130,7 +130,17 @@ Builds on, earlier in this path: Ephemeral lab environments.
 
 Assumes, from outside this path: [Documentation CI](../concepts/documentation-ci.md).
 
-## 15. [Learning paths and curriculum](../concepts/learning-paths.md)
+## 15. [Labs for isolated regions](../concepts/isolated-region-labs.md)
+
+`supporting` · build something · 5h
+
+Making a lab that runs in one AWS partition run in another, including isolated regions with no route to the public internet.
+
+Builds on, earlier in this path: Lab publishing pipelines.
+
+Assumes, from outside this path: [Multi-platform parity](../concepts/multi-platform-parity.md).
+
+## 16. [Learning paths and curriculum](../concepts/learning-paths.md)
 
 `core` · build something · 5h
 
@@ -138,7 +148,7 @@ Sequencing content into structured learning paths a reader can follow start to f
 
 Builds on, earlier in this path: Instructional design for developers, Diátaxis.
 
-## 16. [LMS administration](../concepts/lms-administration.md)
+## 17. [LMS administration](../concepts/lms-administration.md)
 
 `supporting` · practise it · 4h
 
@@ -146,7 +156,7 @@ Keeping the courses in a learning management system true to their source, enroll
 
 Builds on, earlier in this path: Learning paths and curriculum.
 
-## 17. [Learning content standards](../concepts/learning-content-standards.md)
+## 18. [Learning content standards](../concepts/learning-content-standards.md)
 
 `supporting` · practise it · 5h
 
@@ -154,7 +164,7 @@ Packaging courses and labs so any learning platform can launch them, and getting
 
 Builds on, earlier in this path: LMS administration.
 
-## 18. [Assessment and checks for understanding](../concepts/assessment.md)
+## 19. [Assessment and checks for understanding](../concepts/assessment.md)
 
 `supporting` · practise it · 3h
 
@@ -162,7 +172,7 @@ Checking that a learner actually learned: how you know the curriculum worked.
 
 Builds on, earlier in this path: Instructional design for developers.
 
-## 19. [Sample applications and galleries](../concepts/sample-apps.md)
+## 20. [Sample applications and galleries](../concepts/sample-apps.md)
 
 `supporting` · build something · 6h
 
@@ -172,7 +182,7 @@ Builds on, earlier in this path: Sample walkthroughs.
 
 Assumes, from outside this path: [Code-sample validation](../concepts/code-sample-validation.md).
 
-## 20. [Demo design](../concepts/demo-design.md)
+## 21. [Demo design](../concepts/demo-design.md)
 
 `supporting` · practise it · 3h
 
@@ -180,7 +190,7 @@ Building demos that show the result first, fit their slot, adapt to the audience
 
 Builds on, earlier in this path: Sample applications and galleries.
 
-## 21. [Workshops and hands-on labs](../concepts/workshops.md)
+## 22. [Workshops and hands-on labs](../concepts/workshops.md)
 
 `supporting` · practise it · 4h
 
@@ -188,7 +198,7 @@ Running hands-on workshops and labs, a standard developer-relations deliverable.
 
 Builds on, earlier in this path: Learning paths and curriculum, Reproducible environments.
 
-## 22. [Field enablement](../concepts/field-enablement.md)
+## 23. [Field enablement](../concepts/field-enablement.md)
 
 `supporting` · practise it · 4h
 
@@ -196,7 +206,7 @@ Teaching the people who demo, sell and support the product until they can delive
 
 Builds on, earlier in this path: Workshops and hands-on labs, Demo design.
 
-## 23. [Guided workflows](../concepts/guided-workflows.md)
+## 24. [Guided workflows](../concepts/guided-workflows.md)
 
 `core` · build something · 5h
 

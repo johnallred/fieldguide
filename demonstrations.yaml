@@ -1,6 +1,6 @@
 # Which concepts have a working demonstration, and in which file.
 #
-# This guide is 118 concepts of prose about how to do a job. Prose is cheap.
+# This guide is 119 concepts of prose about how to do a job. Prose is cheap.
 # `docpack` is a companion repository that actually does a chunk of the work,
 # and this file records exactly which chunk, down to the file that does it.
 #
@@ -516,6 +516,12 @@ demonstrates:
     artifact: drills/lab_publish.py
     extent: partial
     note: "A gate over a lab document using coldlab's directive syntax (five blocking problems: an unnamed step, a bare sleep, a reasonless exit exception, a download at lab time, a hardcoded partition and account), promotion counted per immutable version rather than per lab, and rollback separated from fix-forward by whether the content changed. The labs, versions and runs are invented; the real gates behind it are coldlab's extract.py and this guide's own deploy, which needs five gate jobs. No lab catalog is published through such a pipeline here."
+
+  - concept: isolated-region-labs
+    project: fieldguide
+    artifact: drills/partition_audit.py
+    extent: partial
+    note: "A portability audit for partition, endpoint, region and account literals, downloads at lab time, and services a target region does not offer, with partition facts checked against AWS documentation and the SDK's partition data. Run over coldlab at d38115f it found the lab and its CDK infrastructure close to portable and the test tooling (hosted runners, a public OIDC provider, per-run installs) not. The target service list is invented, and nothing was deployed outside a commercial region."
 
   - concept: demo-design
     project: fieldguide

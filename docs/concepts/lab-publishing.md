@@ -15,6 +15,8 @@ tags: [qa, supporting]
 
 **Prerequisites:** [Ephemeral lab environments](ephemeral-environments.md), [Documentation CI](documentation-ci.md)
 
+**Leads to:** [Labs for isolated regions](isolated-region-labs.md)
+
 ## What it is
 
 The path a lab takes from a curriculum developer's draft to the catalog

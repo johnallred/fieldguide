@@ -459,6 +459,17 @@ concepts:
       - "Shipping hands-on labs through gates, versions and channels, so a broken lab is stopped before learners meet it and a published one can be pulled or rolled back."
     status: complete
 
+  - id: isolated-region-labs
+    name: Labs for isolated regions
+    category: qa
+    tier: supporting
+    difficulty: 3
+    time: 5h
+    prerequisites: [lab-publishing, multi-platform-parity]
+    in_practice:
+      - "Making a lab that runs in one AWS partition run in another, including isolated regions with no route to the public internet."
+    status: complete
+
   # =========================================================================
   # Golden paths and developer onboarding
   # =========================================================================
@@ -1508,6 +1519,7 @@ paths:
       - coldstart-testing
       - ephemeral-environments
       - lab-publishing
+      - isolated-region-labs
       - learning-paths
       - lms-administration
       - learning-content-standards

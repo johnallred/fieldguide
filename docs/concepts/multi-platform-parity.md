@@ -15,6 +15,8 @@ tags: [craft, supporting]
 
 **Prerequisites:** [Single-sourcing and content reuse](single-sourcing.md), [Code-sample validation](code-sample-validation.md)
 
+**Leads to:** [Labs for isolated regions](isolated-region-labs.md)
+
 ## What it is
 
 Keeping documentation true for a product that is reached several ways: its

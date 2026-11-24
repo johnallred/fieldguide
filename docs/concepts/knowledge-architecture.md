@@ -53,7 +53,7 @@ minutes. Every number below comes from this guide's registry.
 
 **Step 1: make the relationships data**
 
-This guide's knowledge architecture is 118 concepts with a prerequisite edge
+This guide's knowledge architecture is 119 concepts with a prerequisite edge
 wherever one concept assumes another, a tier recording how much of the
 reader's time each may claim, and a category for grouping. The prerequisites
 are the graph:
@@ -70,12 +70,12 @@ for c in reg.concepts:
 ```
 
 ```
-nodes: 118   edges: 134
+nodes: 119   edges: 136
 roots (no prerequisite):   17
-leaves (nothing needs it): 59
+leaves (nothing needs it): 58
 ```
 
-Fifty-nine of 118 concepts are terminal: nothing in the curriculum builds on
+Fifty-eight of 119 concepts are terminal: nothing in the curriculum builds on
 them. That is not necessarily wrong, but it is worth knowing, because a graph
 that is mostly leaves is closer to a list than to an architecture.
 
@@ -283,7 +283,7 @@ the audit from steps 2 through 5.
 
 **How to tell it is working.** Neither of this guide's
 repositories was recorded as demonstrating this, and the honest position is
-that the registry itself is the demonstration: 118 concepts, 134 edges,
+that the registry itself is the demonstration: 119 concepts, 136 edges,
 acyclic and enforced, with prerequisite resolution failing the build and a
 topological order driving the writing sequence. Every number on this page came
 from running the audit against it, including the one that corrected my own
