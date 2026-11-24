@@ -282,6 +282,17 @@ now is better evidence than a tool in a workflow file: a check that found seven
 real defects in generated output, a one-character fix in the generator, two
 unit tests that correctly failed, and a property test so it cannot come back.
 
+The gate this page describes now runs on the whole site. `scripts/a11y_check.py`
+reads every built page, theme included, for a declared language, a title, one
+h1, no skipped heading levels, alt attributes, links with a meaningful name,
+table headers and labelled form controls. Its first run found 11,102 problems
+and they were one problem: a syntax-highlighting setting, `anchor_linenums`,
+wrapped every line of every code sample in an empty link. Each was a tab stop
+with nothing to announce, so a keyboard user crossing a forty-line sample
+pressed Tab forty times. Nothing linked to the anchors, and turning the setting
+off cleared every finding. A source-level check could not have seen it,
+because the links exist only in the built HTML.
+
 ## Related
 
 - [Documentation CI](documentation-ci.md), where this gate runs

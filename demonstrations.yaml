@@ -213,10 +213,9 @@ demonstrates:
 
   - concept: accessibility
     project: fieldguide
-    artifact: tests/test_generate.py
-    extent: partial
-    note: An audit of the built site found all seven path pages skipping h1 to h3; the generator was fixed and a property test now asserts no generated page skips a level. Five checks, not a compliance claim.
-    reviewed: 2026-11-24
+    artifact: scripts/a11y_check.py
+    extent: full
+    note: "A gate over every page of the built site, theme included: language, title, one h1, no skipped heading levels, image alt attributes, named and meaningful links, table headers and labelled form controls. Its first run found 11,102 empty, focusable links, one on every line of every code sample, put there by a highlighter setting; turning it off cleared them. An earlier audit had found seven path pages skipping h1 to h3, fixed in the generator and held by a property test. The mechanical floor, not a conformance claim."
 
   - concept: markdown
     project: fieldguide

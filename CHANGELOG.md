@@ -21,16 +21,20 @@ an `Added` heading.
   demonstration note with the file it describes, keeping one GitHub issue
   current, and the GitHub API client it uses (`scripts/github_api.py`).
 - An optional `reviewed:` date on demonstration entries.
+- An accessibility gate over every page of the built site (`scripts/a11y_check.py`).
 
 ### Changed
 
-- Freshness monitoring and API integration are recorded as fully demonstrated.
+- Freshness monitoring, API integration and accessibility are recorded as fully
+  demonstrated.
 - The lab publishing and learner sandbox guardrails pages describe what
   `coldlab` now does: versioned promotion to learners on evidence, and a
   learner role tested against what a learner must and must never be able to do.
 
 ### Fixed
 
+- 11,102 empty, focusable links, one on every line of every code sample, put
+  there by the `anchor_linenums` highlighting setting.
 - Seven demonstration notes the monitor found stale on its first run, including
   two that still described 106 concepts and one that counted seven paths.
 

@@ -66,6 +66,11 @@ jobs:
       - name: The built site passes the crawl audit
         run: python scripts/crawl_site.py site
 
+      # Over the built HTML, theme included, because that is what a browser and
+      # a screen reader receive. The floor, not a claim of conformance.
+      - name: The built site passes the accessibility checks
+        run: python scripts/a11y_check.py site
+
   release:
     name: Release
     runs-on: ubuntu-latest

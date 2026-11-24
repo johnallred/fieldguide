@@ -42,7 +42,11 @@ markdown_extensions:
   - footnotes
   - def_list
   - toc: {permalink: true}
-  - pymdownx.highlight: {anchor_linenums: true}
+  # anchor_linenums was on, and wrapped every line of every code sample in an
+  # empty, focusable link: 11,102 of them across the site, each a tab stop with
+  # no name for a keyboard or screen-reader user. scripts/a11y_check.py found
+  # them on its first run. Nothing linked to the anchors.
+  - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.tabbed: {alternate_style: true}
