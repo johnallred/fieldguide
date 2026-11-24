@@ -14,3 +14,6 @@ venv/
 
 # macOS
 .DS_Store
+
+# Local working notes and issue files (see CLAUDE.md). Kept on disk, not published.
+.scratch/
