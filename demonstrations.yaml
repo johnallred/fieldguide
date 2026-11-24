@@ -61,7 +61,7 @@ projects:
     tagline: Turns a documentation tree into retrieval-ready, agent-readable artifacts.
     summary: >-
       A Python library and the documentation site that documents it, where the
-      site is also the test corpus. Ten CI gates, 142 tests, a 20-case
+      site is also the test corpus. Ten CI gates, 153 tests, a 20-case
       retrieval evaluation, an MCP server, and a cold-start harness that
       follows the quickstart from an empty virtual environment.
     url: https://johnallred.github.io/docpack/
@@ -409,7 +409,7 @@ demonstrates:
     project: fieldguide
     artifact: src/fieldguide/generate.py
     extent: partial
-    note: "Ten paths generated from the registry in four groups, ordering and grouping enforced in CI, the site menu tested against them, entry state computed; no reader has walked one."
+    note: "Twelve paths generated from the registry in four groups, ordering and grouping enforced in CI, the site menu tested against them, entry state computed; no reader has walked one."
     reviewed: 2026-11-24
 
   - concept: developer-advocacy
@@ -649,7 +649,7 @@ demonstrates:
     project: fieldguide
     artifact: drills/alignment_audit.py
     extent: partial
-    note: "A tutorial audited against four learning-science principles (task first, constructive alignment, faded practice) before and after a redesign, 0/3 objectives aligned to 3/3, with both tutorials held identical to the page by a test. It measures structure only: no reader has been observed, so nothing shows the redesign teaches better."
+    note: "A tutorial audited against three learning-science principles (task first, constructive alignment, faded practice) before and after a redesign, 0/3 objectives aligned to 3/3, with both tutorials held identical to the page by a test. It measures structure only: no reader has been observed, so nothing shows the redesign teaches better."
 
   - concept: workshops
     project: fieldguide
@@ -713,7 +713,7 @@ demonstrates:
     project: fieldguide
     artifact: concepts.yaml
     extent: full
-    note: "All three decisions made and enforced: units with a closed vocabulary for category, tier and Diataxis type (120 concepts at version 0.2.0), a prerequisite DAG with a cycle check, and generated routes (ten paths in four groups, coverage, a topological study plan). No audience, so findability itself is unevidenced."
+    note: "All three decisions made and enforced: units with a closed vocabulary for category, tier and Diataxis type (120 concepts at version 0.2.0), a prerequisite DAG with a cycle check, and generated routes (twelve paths in four groups, coverage, a topological study plan). No audience, so findability itself is unevidenced."
 
   - concept: instructional-design
     project: fieldguide

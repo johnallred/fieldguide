@@ -245,8 +245,9 @@ actually run, and a symptom-keyed compatibility matrix.
 here on CPU with numpy and is reproducible, and the compatibility figures were
 verified by opening NVIDIA's documentation, which is cited as reading. No GPU,
 no CUDA, no kernel, no profiler: the [demonstrated](../demonstrated.md) page
-records this concept as having no demonstration in either repository, which is
-the accurate statement, and `context` tier is the claim being made.
+records this concept as a partial demonstration, `drills/arithmetic_intensity.py`,
+with the ratio argument transferring to a GPU and none of the numbers, and
+`context` tier is the claim being made.
 
 ## Related
 

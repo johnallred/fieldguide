@@ -307,8 +307,9 @@ that no quoted block has drifted for anything still copied.
    deliberately omits.
 
 **How to tell it is working.** Neither of this guide's
-repositories contains a sample walkthrough, which the
-[demonstrated](../demonstrated.md) page records. What travels is the measured
+repositories contains a real sample walkthrough. The progression above is
+committed as `drills/walkthrough_transclusion.py`, which the
+[demonstrated](../demonstrated.md) page records as partial. What travels is the measured
 progression: a drift check that caught a stale constant, a transclusion that
 made drift impossible, and the insertion test showing that the obvious
 transclusion fails more quietly than the problem it solved.

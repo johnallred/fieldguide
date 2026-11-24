@@ -309,7 +309,7 @@ written down and a fixture that pins the answer.
    in this project would have been caught by that one file.
 
 **How to tell it is working.** `docpack` is seven modules
-and 134 tests operating on a documentation tree as data, and this guide's own
+and 153 tests operating on a documentation tree as data, and this guide's own
 `src/fieldguide/fences.py` exists because three successive naive versions
 returned plausible wrong answers; every figure above is reproducible from the
 two repositories. What is not demonstrated is scale: the largest corpus here is

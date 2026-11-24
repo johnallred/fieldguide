@@ -30,7 +30,7 @@ passages.** Everything that differs follows from that.
 It almost always arrives paired with SEO, and that pairing is the instruction: the same work
 serves both, and the parts that differ are worth knowing.
 
-What makes it `core` despite being the newest idea here is that the mechanism
+What makes it `core` despite being one of the newest ideas here is that the mechanism
 is concrete even though the branding is not. An assistant answering a developer
 question retrieves a passage, not a page, and whether your passage is usable
 depends on properties you control: whether it stands alone, whether the claim
@@ -388,7 +388,7 @@ and saying so plainly is better than pretending there is no tension.
 
 | Claim | Reality |
 |---|---|
-| "GEO is an established discipline" | The term is about two years old and contested |
+| "GEO is an established discipline" | The term is about three years old and contested |
 | "There are GEO best practices" | There are retrieval properties, which are measurable |
 | "You can rank in an assistant" | There is no ranking to see. You can measure citation |
 | "It replaces SEO" | No. Most documentation traffic is still search |
@@ -422,7 +422,7 @@ qualifier in the same chunk, and that no two chunks answer one question
 differently."
 
 **The follow-up is "is GEO a real thing or marketing",** and the answer should
-concede the branding and keep the mechanism. The term is contested and about two
+concede the branding and keep the mechanism. The term is contested and about three
 years old. What is not contested is that assistants retrieve passages, that a
 passage can be wrong while its page is right, and that this is measurable with a
 retrieval eval and a grounding check. Lead with the mechanism and the word stops

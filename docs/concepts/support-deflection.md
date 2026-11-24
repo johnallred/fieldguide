@@ -73,17 +73,17 @@ for case in cases:
 
 ```
   the answer exists somewhere in the corpus:   20/20
-  the right page is returned first:            13/20
-  answerable but not findable:                  7/20
+  the right page is returned first:            14/20
+  answerable but not findable:                  6/20
 ```
 
 ```
   deflection ceiling      100%   every question is answered by the corpus
-  deflection achieved      65%   the reader is handed the right page
-  avoidable support load   35%   of these questions
+  findable first           70%   the reader is handed the right page
+  avoidable support load   30%   of these questions
 ```
 
-**Seven of twenty questions have an answer in the documentation that the
+**Six of twenty questions have an answer in the documentation that the
 documentation will not give you.** Those are the tickets worth caring about,
 because each one is a reader who would have been deflected by better ranking or
 better wording rather than by more writing.
@@ -137,7 +137,7 @@ What does work, in rough order of rigour:
   volume moved. Cheapest and most honest, as long as you call it what it is: a
   deflection *proxy*, not a deflection.
 
-**What you built.** A deflection ceiling and an achieved figure from a corpus
+**What you built.** A deflection ceiling and a findable-first figure from a corpus
 with no audience, a content gap separated from a retrieval gap, and an explicit
 list of the confounds that make the other half unclaimable.
 
@@ -151,7 +151,7 @@ list of the confounds that make the other half unclaimable.
 | Needs | A golden set | A controlled comparison |
 | Measurable today | Yes | Almost never |
 | Moves when | You write or rank better | Anything at all happens |
-| Honest claim | "35% of these questions are avoidable" | "We do not have the baseline" |
+| Honest claim | "30% of these questions are avoidable" | "We do not have the baseline" |
 
 Reporting the left column in the right column's language is the overstatement to
 avoid, and it is close to universal.
@@ -204,8 +204,8 @@ say plainly that I do not have the second."
 
 **The follow-up is how you measure the first.** Against a golden set, separate
 answerable from findable. On mine every question is answered somewhere in the
-corpus and the right page comes back first for thirteen of twenty, so seven
-questions have an answer the documentation will not hand over. Those seven are
+corpus and the right page comes back first for fourteen of twenty, so six
+questions have an answer the documentation will not hand over. Those six are
 the deflectable load, and they need better ranking or better wording rather than
 more writing, which is a different backlog from the one people expect.
 
@@ -236,7 +236,7 @@ the answerable and findable columns kept separate.
 **Three things to do, in order:**
 
 1. Predict the ratio between answerable and findable for your corpus, write the
-   two numbers down, then compute them. Mine were 20 of 20 against 13 of 20, and
+   two numbers down, then compute them. Mine were 20 of 20 against 14 of 20, and
    the second is the one that funds work.
 2. Take your last ten support tickets and label each as content gap, retrieval
    gap, or not a documentation problem. Ten is enough to discover which of the
@@ -246,8 +246,8 @@ the answerable and findable columns kept separate.
 
 **How to tell it is working.** The measurement above runs
 against `docpack`'s twenty-case golden set and its twelve pages and is
-reproducible from the repository: a ceiling of 100 per cent, an achieved figure
-of 65 per cent, and a gap of seven named cases. What does not exist is a ticket
+reproducible from the repository: a ceiling of 100 per cent, a findable-first figure
+of 70 per cent, and a gap of six named cases. What does not exist is a ticket
 queue, an audience, or any baseline, so nothing here is a claim about support
 volume, and the [demonstrated](../demonstrated.md) page records the achieved
 half as having no demonstration in either repository.

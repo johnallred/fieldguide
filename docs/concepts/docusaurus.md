@@ -297,8 +297,9 @@ reason you chose it.
    usually handled; anchors usually are not.
 
 **How to tell it is working.** Neither of this guide's
-repositories uses Docusaurus, which the [demonstrated](../demonstrated.md) page
-records. What travels is the measured comparison: fails on a broken link by
+repositories uses Docusaurus, and the [demonstrated](../demonstrated.md) page
+counts it among the concepts declined, because adopting it here would be for
+show. What travels is the measured comparison: fails on a broken link by
 default where MkDocs needs `--strict`, catches a missing component where the
 compiler alone cannot, and costs 771 packages and a fixed build cost of about
 45 seconds cold and 6 warm to do it.

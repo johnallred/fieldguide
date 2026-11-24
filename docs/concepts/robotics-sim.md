@@ -263,8 +263,8 @@ ordering, continuity guarantees and transform ownership were verified by opening
 the specification, and the drift-against-jump measurement is a short script that
 ran here. What is absent is the entire stack: no ROS installation, no Isaac Sim,
 no USD robot description driven through a simulator, and no hardware. The
-[demonstrated](../demonstrated.md) page records this concept as having no
-demonstration in either repository.
+[demonstrated](../demonstrated.md) page records this concept as a partial
+demonstration, `drills/frames.py`, for exactly that reason.
 
 ## Related
 

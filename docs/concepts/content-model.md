@@ -199,9 +199,9 @@ mattered most for machine readability.
 |---|---|---|
 | Page types | `diataxis: tutorial / how-to / reference / explanation` | Closed vocabulary |
 | Required fields | `title`, `summary`, `diataxis`, `audience` | Parse-time check |
-| Closed vocabularies | `tier`, `status`, `provenance` | Membership test |
+| Closed vocabularies | `category`, `tier`, `status` | Membership test |
 | Relationships | `prerequisites`, acyclic | Graph check |
-| Structural contract | Six required sections, 450 words | File check |
+| Structural contract | Seven required sections, 450 words | File check |
 | Both-directions coverage | No page without a concept, no concept without a page | File check |
 | Serialisation validity | Front matter parses as YAML | The check added in step 5 |
 

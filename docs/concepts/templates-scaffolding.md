@@ -111,7 +111,7 @@ valid page. If they drift, your tooling tells contributors to run a command
 whose output your own CI rejects. So test every one:
 
 ```python
-for c in [x for x in reg.concepts if x.status == "planned"]:
+for c in reg.concepts:
     text = render_concept_page(reg, c.id)
     heads = _headings_outside_fences(text)
     missing = [s for s in REQUIRED_SECTIONS if s not in heads]
@@ -120,11 +120,13 @@ for c in [x for x in reg.concepts if x.status == "planned"]:
 ```
 
 ```
-planned concepts: 27
+concepts scaffolded: 120
 scaffolded pages failing the section contract: 0
 ```
 
-Twenty-seven for twenty-seven. This check belongs in CI, not in a one-off
+All 120 pass. When this first ran it scaffolded only the 27 concepts still
+planned; every concept is written now, so it scaffolds all of them, which is
+the stronger test. This check belongs in CI, not in a one-off
 script, because the two modules are edited independently.
 
 **Step 4: now measure what the scaffold did to your word gate**
@@ -199,7 +201,7 @@ measures prose rather than instructions.
 | Title | The registry entry |
 | Required sections | The page contract |
 | Prerequisites and dependents | The [knowledge graph](knowledge-architecture.md) |
-| A source quotation | The registry's `demanded_by` |
+| A source quotation | The registry's `in_practice` line |
 | Date fields | The clock |
 | Summary, body | The author; these are the actual work |
 
@@ -297,7 +299,7 @@ own text.
 `docpack new <type> --title`, which serialises front matter with
 `yaml.safe_dump` after an f-string version broke on its own default
 placeholder, and this guide's `fieldguide new` is checked against the
-validator in CI for every planned concept. The story to tell is step 4: the
+validator in CI. The story to tell is step 4: the
 scaffold was quietly supplying 84 per cent of a gate meant to hold authors to
 a standard, and nothing was wrong with either piece on its own.
 

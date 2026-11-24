@@ -361,8 +361,9 @@ what it establishes is that 318 tasks are well formed and that 128 of them are
 assessable, against a classifier scored on sixty hand-labelled tasks rather
 than trusted. What it cannot establish is that any of them teach
 anybody anything, because no reader has been observed, and the
-[demonstrated](../demonstrated.md) page records assessment as having no
-demonstration in either repository rather than claiming this analysis as one.
+[demonstrated](../demonstrated.md) page records assessment as partial for that
+reason: the corpus-side analysis is built, and the reader-side half needs
+readers.
 
 ## Related
 

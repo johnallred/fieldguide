@@ -36,8 +36,8 @@ Agent skills and context kits sit alongside `llms.txt` and MCP in the set of
 AI-ready outputs, and the most useful of them are libraries backed by your
 documentation rather than written from memory.
 
-This is the newest concept in the guide and the one with the least settled
-practice, which is exactly why it is worth having an opinion about. The
+This is one of the newest ideas in the guide and the one with the least
+settled practice, which is exactly why it is worth having an opinion about. The
 underlying need is old and the tooling is three years old at most.
 
 What makes it `core`: it is the only AI-ready artifact aimed at an agent that

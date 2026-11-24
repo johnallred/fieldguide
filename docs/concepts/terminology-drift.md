@@ -303,9 +303,10 @@ per term and a ranked list of pages, and a before-and-after number.
 
 **How to tell it is working.** A rate measured twice, with
 work in between. One measurement is a complaint; two measurements and a
-glossary commit are a managed quantity. Nothing in this guide's own
-repositories demonstrates this yet, which is recorded honestly on the
-[demonstrated](../demonstrated.md) page rather than implied.
+glossary commit are a managed quantity. This guide demonstrates the measurement, not the
+management: `drills/terminology_drift.py` runs it on three pages, with no team
+or review process involved, and the [demonstrated](../demonstrated.md) page
+records it as partial for that reason.
 
 ## Related
 

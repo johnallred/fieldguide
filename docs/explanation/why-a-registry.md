@@ -7,7 +7,7 @@ audience: contributor
 
 # Why the curriculum is a data file
 
-The obvious way to build this guide is a Markdown page with 106
+The obvious way to build this guide is a Markdown page with 120
 checkboxes on it. Someone ticks one when they write a page.
 
 That version is worse than having no checklist, and it is worth being precise
@@ -89,8 +89,8 @@ values and `difficulty` has three levels, which is a forced simplification of
 something continuous. A concept that is genuinely between `core` and
 `supporting` gets rounded, and the rounding is invisible to a reader.
 
-**Eighty-three concepts in one flat namespace is near the limit of what this
-model carries well.** There is no sub-categorisation and no notion of a concept
+**A hundred and twenty concepts in one flat namespace is near the limit of
+what this model carries well.** There is no sub-categorisation and no notion of a concept
 that is a special case of another. At two hundred concepts this file would need
 to become a directory, and the generator would need to grow a notion of
 hierarchy it currently does not have.

@@ -69,7 +69,7 @@ down what a reader is entitled to assume:
 |---|---|---|
 | `planned` | A placeholder exists, carrying its registry metadata | A generated page exists |
 | `drafted` | Prose exists; nothing is promised about it | A file exists |
-| `complete` | Six required sections, 450+ words, every golden path executed | Section and length check |
+| `complete` | Seven required sections, 450+ words, every golden path executed | Section and length check |
 
 A state whose claim you cannot write down is a state that does nothing.
 

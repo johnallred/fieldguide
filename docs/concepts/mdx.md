@@ -279,8 +279,8 @@ component-reference check.
    compiles them. If it only compiles, undefined components reach readers.
 
 **How to tell it is working.** Neither of this guide's
-repositories uses MDX, which the [demonstrated](../demonstrated.md) page
-records. What travels is the pair of measurements and the correction between them. The
+repositories uses MDX, and the [demonstrated](../demonstrated.md) page counts it
+among the concepts declined, because adopting it here would be for show. What travels is the pair of measurements and the correction between them. The
 compiler emits `if (!Note) _missingMdxReference("Note", true)`, a runtime
 guard, so compiling proves nothing. A Docusaurus build of the same page exits
 1 with `Expected component 'NoSuchComponent' to be defined`, because static

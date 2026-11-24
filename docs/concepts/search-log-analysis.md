@@ -282,11 +282,12 @@ zero-result list somebody actually reads.
 **How to tell it is working.** The structural measurements
 run against this guide's built search index and are reproducible; the failed
 proxy and its disproof are both recorded above rather than tidied away. What
-does not exist is a single query log: no site has been published, so there are
-no queries, no zero-result list and no click-through data, and the one real
+does not exist is a single query log. The site is published on GitHub Pages,
+whose built-in search runs in the reader's browser and logs nothing. So there
+are no queries, no zero-result list and no click-through data, and the one real
 reader question in step 4 arrived in conversation rather than through a search
-box. The [demonstrated](../demonstrated.md) page records the concept as having
-no demonstration on the log side.
+box. The [demonstrated](../demonstrated.md) page records the concept as partial:
+the retrieval side is demonstrated in `docpack`, and the log side is not.
 
 ## Related
 

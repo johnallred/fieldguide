@@ -268,8 +268,7 @@ steps, details on success, specific failures, and an explicit `GATES` list.
 2. Take your most-used checklist and convert the two items most often
    self-reported as done. Those are the two that are least true.
 3. Audit any multi-step script you own for the sequence-versus-dependency
-   distinction. Most `break`-on-failure loops are not gating anything. Expect
-   most of them to be gating nothing. In this guide's own release workflow
+   distinction. Expect most `break`-on-failure loops to be gating nothing. In this guide's own release workflow
    exactly one step of seven genuinely gates the rest, and the other six were
    sequential by accident.
 
@@ -281,11 +280,11 @@ failure, with an explicit `GATES` set in `src/fieldguide/release.py`.
 
 ```
   [1/7] ok       the registry parses
-           106 concepts and 9 paths loaded from concepts.yaml
+           120 concepts and 12 paths loaded from concepts.yaml
   [4/7] ok       every generated page is up to date
-           13 generated pages match the registry
+           16 generated pages match the registry
   [7/7] ok       every committed drill still prints what its page quotes
-           26 page-and-drill contract(s) hold
+           62 page-and-drill contract(s) hold
 
 all 7 steps passed; ready to release
 ```

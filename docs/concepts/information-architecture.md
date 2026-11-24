@@ -177,7 +177,7 @@ PY
 **What you built.** The same five files answer three questions they could not
 answer before, and the third one is the payoff: **the structure found gaps in
 the content.** It reports that `installation` has no reference or explanation
-page, that `keys` has no tutorial, and five more besides. Nobody had to notice
+page, that `keys` has no tutorial, and eight more besides. Nobody had to notice
 any of that by reading.
 
 Two caveats worth holding onto, because this is where a naive coverage check
@@ -299,7 +299,7 @@ over time, means the structure is being worked on content nobody designed,
 which is the actual job.
 
 This guide's own `concepts.yaml` is the worked example, recorded on the
-[demonstrated](../demonstrated.md) page: 106 units, a closed vocabulary for
+[demonstrated](../demonstrated.md) page: 120 units, a closed vocabulary for
 category, tier and Diátaxis type, a prerequisite graph with a cycle check, and
 every route generated from it rather than hand-maintained. The honest limit is
 the third decision. Whether a reader actually gets from not knowing to the

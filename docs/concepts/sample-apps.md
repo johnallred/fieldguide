@@ -312,8 +312,9 @@ volume.
    information.
 
 **How to tell it is working.** Neither of this guide's
-repositories ships a sample gallery, which the
-[demonstrated](../demonstrated.md) page records; `docpack` validates samples
+repositories ships a real sample gallery. The four-entry gallery above is
+committed as `drills/gallery_audit.py`, which the
+[demonstrated](../demonstrated.md) page records as partial; `docpack` validates samples
 embedded in its own documentation, which is the in-page case rather than this
 one. What travels is one real measurement and one method: half the gallery was
 unverifiable, which the entrypoint and output checks found, and the coverage

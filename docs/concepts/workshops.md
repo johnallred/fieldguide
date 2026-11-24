@@ -269,8 +269,9 @@ mediocre, and the fifth is why the handout matters more than the slides.
 ## Explaining it to your team
 
 **Lead with the arithmetic, because it is the thing nobody has done.** "A
-three-hour workshop has about two hours of hands-on time, and the shortest path
-through my curriculum is thirty-four hours. So a workshop is one step of a
+three-hour workshop has about two hours of hands-on time, and the first-week
+path through my curriculum is thirty-four hours; even the shortest is
+twenty-four. So a workshop is one step of a
 ten-step path rather than a compressed version of it, and the design question
 becomes which step needs a room, not how fast I can go."
 
@@ -319,7 +320,8 @@ executed: 34 packages and 94,697,572 bytes from four requested, a wheelhouse of
 arithmetic comes from this guide's own registry. What has not happened is a
 workshop, so the claims about what needs a room are reasoning from the design
 rather than observation, and the [demonstrated](../demonstrated.md) page
-records workshops as having no demonstration in either repository.
+records workshops as a partial demonstration: the arithmetic in
+`drills/workshop_arithmetic.py`, with no room and no attendees.
 
 ## Related
 

@@ -330,10 +330,9 @@ four structural checks and a rendered page from the same source.
 3. Give it to someone who does not know the answer and watch where they stop.
    That is the diagnostic-question defect, and it is the only way to find it.
 
-**How to tell it is working.** Neither of this guide's
-repositories contains a playbook, which the
-[demonstrated](../demonstrated.md) page records. The validator above is real
-and runs, and the honest limit is that it checks structure only: it proves
+**How to tell it is working.** The validator above is
+committed as `drills/playbook.py`, which the [demonstrated](../demonstrated.md)
+page records as a full demonstration, and it runs, and the honest limit is that it checks structure only: it proves
 every path ends somewhere, and it cannot tell you whether the questions are
 answerable. Being clear about which half a tool covers is the point.
 

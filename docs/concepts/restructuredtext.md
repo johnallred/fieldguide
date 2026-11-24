@@ -247,8 +247,9 @@ migration question concretely, with the two-column table above.
    language or tool. That classification *is* the migration estimate.
 
 **How to tell it is working.** Neither of this guide's
-repositories uses reStructuredText, which is recorded on the
-[demonstrated](../demonstrated.md) page. What travels instead is the boundary
+repositories uses reStructuredText, and the [demonstrated](../demonstrated.md)
+page counts it among the concepts declined, because adopting it here would be
+for show. What travels instead is the boundary
 itself: knowing that `code-block` is Sphinx rather than reStructuredText is a
 small thing that saves a migration from a wrong estimate.
 

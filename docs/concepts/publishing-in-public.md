@@ -47,8 +47,8 @@ absent consequences.
 
 Audit a repository for publication, discover the audit is mostly noise, and
 fix the audit rather than the repository. About twenty-five minutes. This runs
-against the two repositories behind this guide, which have not been published
-yet, so every finding is real.
+against the two repositories behind this guide, as they stood before they were
+published, so every finding was real.
 
 **Step 1: the obvious checks**
 

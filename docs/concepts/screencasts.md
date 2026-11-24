@@ -289,8 +289,8 @@ implemented, and caught the upstream output change by timestamp; the corpus
 figures of 727 blocks and 9,982 lines come from this guide's own pages. What
 does not exist is a screencast: no video has been recorded, so the production
 guidance is conventional practice rather than measured, and the
-[demonstrated](../demonstrated.md) page records screencasts as having no
-demonstration in either repository.
+[demonstrated](../demonstrated.md) page records screencasts as a partial
+demonstration: the script is tested, and no video exists.
 
 ## Related
 

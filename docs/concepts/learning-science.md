@@ -54,7 +54,7 @@ audience.
 
 ## The golden path
 
-Audit a tutorial against four principles, redesign it, audit it again, then
+Audit a tutorial against three principles, redesign it, audit it again, then
 find out what the improved score cannot tell you. About thirty-five minutes.
 
 The audit is committed as `drills/alignment_audit.py`, which also holds both

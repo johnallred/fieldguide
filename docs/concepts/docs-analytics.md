@@ -302,8 +302,9 @@ index, and the 134-of-121 bug is recorded rather than tidied away. That page
 count is deliberately not quoted here: it changes whenever a learning path is
 added, and a figure that moves for reasons unrelated to the claim is a figure
 that will be wrong before anyone notices. What does
-not exist is any reader-side analytics at all: no site has been published, so
-there are no views, no queries and no funnel, and every reader-side figure in
+not exist is any reader-side analytics at all. The site is published on GitHub
+Pages, which records no page views or searches, and no analytics script has
+been added. So there are no views, no queries and no funnel, and every reader-side figure in
 the tables is drawn from general practice rather than from this project. The
 [demonstrated](../demonstrated.md) page records the category on that basis.
 

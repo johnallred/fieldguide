@@ -325,7 +325,7 @@ in bold as a sentence ending.
 
 **The stronger half, if there is time for one more thing.** I classified every
 cross-reference by whether the reader had reached it yet, and 76 per cent of
-links point at material they have not read. On the shortest path, nine links
+links point at material they have not read. On the first-week path, nine links
 of 75 point backwards. Each of the other 66 is a decision about whether
 something is a missing prerequisite or an aside, which is invisible to every
 readability score. The fix is not fewer links, it is making the kind of link
