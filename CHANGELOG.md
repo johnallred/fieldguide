@@ -22,11 +22,13 @@ an `Added` heading.
   current, and the GitHub API client it uses (`scripts/github_api.py`).
 - An optional `reviewed:` date on demonstration entries.
 - An accessibility gate over every page of the built site (`scripts/a11y_check.py`).
+- How this guide ships: the pipeline as a diagram, generated from the workflow
+  file by `fieldguide build`.
 
 ### Changed
 
-- Freshness monitoring, API integration and accessibility are recorded as fully
-  demonstrated.
+- Freshness monitoring, API integration, accessibility and diagrams as code are
+  recorded as fully demonstrated.
 - The lab publishing and learner sandbox guardrails pages describe what
   `coldlab` now does: versioned promotion to learners on evidence, and a
   learner role tested against what a learner must and must never be able to do.

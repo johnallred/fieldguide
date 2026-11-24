@@ -261,11 +261,15 @@ against it in CI.
    `accDescr`.
 
 **How to tell it is working.** The drill above runs in this guide's test suite
-and its output is the output quoted here. It checks a subset of Mermaid's
-flowchart syntax against a workflow file and does not render anything, so the
-[demonstrated](../demonstrated.md) page records the concept as partial. In your
-own docs, the sign is that a change to a pipeline or a service fails a pull
-request until its diagram changes too.
+and its output is the output quoted here. This guide also does the end state
+for real: [How this guide ships](../explanation/pipeline.md) is its own
+pipeline, drawn as a Mermaid flowchart that `fieldguide build` generates from
+`.github/workflows/gates.yml`, rendered on the published site, with an
+accessible title, a description and a table carrying the same information. CI
+runs `fieldguide build --check`, so adding a job to the workflow fails the
+change until the diagram is regenerated. In your own docs, the sign is that a
+change to a pipeline or a service fails a pull request until its diagram
+changes too.
 
 ## Related
 

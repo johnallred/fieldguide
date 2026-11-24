@@ -33,6 +33,7 @@ from .generate import (
     demonstrated_page,
     path_page,
     paths_index_page,
+    pipeline_page,
     placeholder_page,
     study_plan_page,
 )
@@ -165,6 +166,11 @@ def cmd_build(args: argparse.Namespace) -> int:
             registry, load_demonstrations(args.demos, registry)
         ),
     }
+    workflow = args.registry.parent / ".github" / "workflows" / "gates.yml"
+    if workflow.exists():
+        targets[args.docs / "explanation" / "pipeline.md"] = pipeline_page(
+            workflow.read_text(encoding="utf-8")
+        )
     for learning_path in registry.paths:
         targets[args.docs / "paths" / f"{learning_path.id}.md"] = path_page(
             registry, learning_path.id

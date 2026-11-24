@@ -47,7 +47,12 @@ markdown_extensions:
   # no name for a keyboard or screen-reader user. scripts/a11y_check.py found
   # them on its first run. Nothing linked to the anchors.
   - pymdownx.highlight
-  - pymdownx.superfences
+  # Mermaid fences render as diagrams in the browser; see explanation/pipeline.md.
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.details
   - pymdownx.tabbed: {alternate_style: true}
   - pymdownx.emoji:
@@ -83,6 +88,7 @@ nav:
       - explanation/why-a-registry.md
       - explanation/the-page-contract.md
       - explanation/provenance.md
+      - explanation/pipeline.md
 
 not_in_nav: |
   concepts/*.md
