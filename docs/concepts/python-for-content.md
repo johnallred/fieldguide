@@ -45,7 +45,7 @@ is not, and a wrong parse produces a plausible number rather than an error.
 ## The golden path
 
 One task, five implementations, each correcting the last. Count the words a
-reader would actually read across every page (106 when this ran). About
+reader would actually read across every concept page (120 when this ran). About
 twenty-five minutes,
 and the interesting part is which corrections turn out to matter.
 
@@ -56,13 +56,13 @@ words = sum(len(p.read_text().split()) for p in pages)
 ```
 
 ```
-corpus: 106 written pages
+corpus: 120 written pages
 
 approach                        words      error
-1  split() on the file         224929        27%
+1  split() on the file         273648        25%
 ```
 
-Twenty-nine percent high, and nothing about the program suggests so. It would
+Twenty-five percent high, and nothing about the program suggests so. It would
 be reported, used to set a page-length policy, and never questioned.
 
 **Step 2: front matter is not prose**
@@ -75,7 +75,7 @@ FM = re.compile(r"^---\n.*?\n---\n", re.S)
 ```
 
 ```
-2  minus front matter          221166        25%
+2  minus front matter          269298        23%
 ```
 
 Two points. Worth fixing and not the problem.
@@ -87,10 +87,10 @@ COMMENT = re.compile(r"<!--.*?-->", re.S)
 ```
 
 ```
-3  minus HTML comments         221101        25%
+3  minus HTML comments         269099        23%
 ```
 
-**Sixty-six words across the whole corpus.** Three hundredths of one percent,
+**199 words across the whole corpus.** Seven hundredths of one percent,
 which looks like a correction not worth writing.
 
 Hold that thought until step 6, because it is the most misleading number on
@@ -99,11 +99,11 @@ this page.
 **Step 4: code is not prose, and this is where the error lives**
 
 ```
-4  minus fences, toggled       191137         0%
-5  minus fences, parsed        190748    (truth)
+4  minus fences, toggled       219271         0%
+5  minus fences, parsed        218770    (truth)
 ```
 
-Forty-five thousand words, **nineteen percent of everything outside the front
+Fifty thousand words, **nineteen percent of everything outside the front
 matter**, are inside code fences. That single distinction is worth ten times the other corrections
 combined, and it is the one a line-oriented program cannot make without
 tracking state.
@@ -115,22 +115,22 @@ uses a parser that tracks marker length and skips heredoc bodies. The
 difference across the corpus:
 
 ```
-corpus-level error of the toggle:  +389 words  (0.2%)
+corpus-level error of the toggle:  +501 words  (0.2%)
 ```
 
 Two tenths of one percent. By that number the parser was a waste of an
 afternoon. Now count pages instead of words:
 
 ```
-pages where the two agree:      86/106
-pages where they disagree:      20/106
+pages where the two agree:      97/120
+pages where they disagree:      23/120
 
 page                           parsed    delta    error
-coding-agents                    2139      +85       4%
-security-documentation           1546      +58       4%
-tutorial-design                  1554      +57       4%
-agent-skills                     2274      +23       1%
-chunking                         1753      +20       1%
+security-documentation           1526      +61       4%
+coding-agents                    2150      +85       4%
+tutorial-design                  1540      +57       4%
+diagrams-as-code                 1431      +52       4%
+lab-publishing                   1954      +35       2%
 ```
 
 **A fifth of the pages are wrong, the worst by four percent, and the corpus
@@ -149,25 +149,25 @@ error.
 
 **Step 6: the correction from step 3, measured on a different sample**
 
-HTML comments were a few dozen words, three hundredths of one percent. At the
+HTML comments were a couple of hundred words, seven hundredths of one percent. At the
 time the corpus still held nine pages the [scaffold](templates-scaffolding.md) had generated and nobody had
 written, so the identical measurement had a second sample to run over:
 
 ```
-written pages (106):
-  words outside front matter: 235983
-  of those, inside comments:       79   (0.03%)
+written pages (120):
+  words outside front matter: 269298
+  of those, inside comments:      199   (0.07%)
 
 freshly scaffolded pages (9):
   words outside front matter:   3160
   of those, inside comments:    2601   (82%)
 ```
 
-The first block is the corpus at 106 pages and moves whenever a page is
+The first block is the corpus at 120 pages and moves whenever a page is
 edited. The second cannot be re-run: every page is written now, so that sample no longer
 exists, and it is kept because it is the whole point of the step.
 
-**The same term in the same measurement: 0.03 percent on one sample and 82 per
+**The same term in the same measurement: 0.07 percent on one sample and 82 per
 cent on another.** Scaffolded pages are mostly authoring prompts inside
 comments, which is their job, and the prompts are deleted as pages get written.
 
@@ -222,10 +222,10 @@ Before optimizing a measurement, find out which term dominates:
 
 | Correction | Worth, on written pages |
 |---|---|
-| Excluding code fences | 25% |
+| Excluding code fences | 23% |
 | Excluding front matter | 2% |
 | A correct fence parser over a toggle | 0.2% |
-| Excluding HTML comments | 0.04% |
+| Excluding HTML comments | 0.09% |
 
 Then check the same table on the sample you will actually run against, because
 two of those four rows change by more than an order of magnitude between
@@ -264,16 +264,16 @@ invites you to use. Every real bug I have had in this area came from that, and
 none of them raised an exception. They returned numbers."
 
 **The follow-up is a worked example, and this one is short.** Counting the prose
-in a 106-page corpus: the naive `split()` is 27 percent high. Front matter
-accounts for two points, HTML comments for four hundredths of one, and code
-fences for twenty-five. So the single distinction worth making is that code is
+in a 120-page corpus: the naive `split()` is 25 percent high. Front matter
+accounts for two points, HTML comments for nine hundredths of one, and code
+fences for twenty-three. So the single distinction worth making is that code is
 not prose, and it is exactly the one a line-oriented program cannot make
 without tracking state.
 
 **Then the part that generalizes.** Replacing a naive fence toggle with a real
 parser moved the corpus total by 0.2 percent, which says the parser was not
 worth writing. Counting pages instead, a fifth of them were wrong and the worst
-by five percent. Parsing errors are sparse and one-directional, so a sum is
+by four percent. Parsing errors are sparse and one-directional, so a sum is
 robust to exactly the defect you are looking for. A sum is the worst available
 instrument for finding a parsing bug.
 

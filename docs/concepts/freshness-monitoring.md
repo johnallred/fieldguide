@@ -47,6 +47,11 @@ and watch them disagree. About thirty-five minutes.
 
 **Step 1: a repository where the code moved ahead of the docs**
 
+Three pages: two document a client whose default changes, one documents a
+constant that never does. Then the code moves, and then a bulk commit adds a
+metadata field to the two client pages, which is what happens when a team
+adopts a new front-matter field.
+
 ````bash
 mkdir -p fresh-demo/docs fresh-demo/src && cd fresh-demo
 git init -q && git config user.email d@e.f && git config user.name dev
@@ -54,6 +59,9 @@ git init -q && git config user.email d@e.f && git config user.name dev
 cat > src/client.py <<'EOF'
 def retry(times=3):
     return times
+EOF
+cat > src/units.py <<'EOF'
+SECONDS_PER_MINUTE = 60
 EOF
 cat > docs/retries.md <<'EOF'
 ---
@@ -63,6 +71,24 @@ reviewed: 2026-01-10
 # Retries
 
 The default is 3.
+EOF
+cat > docs/overview.md <<'EOF'
+---
+documents: src/client.py
+reviewed: 2026-01-10
+---
+# Overview
+
+The client retries failed calls three times before giving up.
+EOF
+cat > docs/stable.md <<'EOF'
+---
+documents: src/units.py
+reviewed: 2026-01-10
+---
+# Units
+
+A minute is 60 seconds.
 EOF
 
 git add -A
@@ -77,14 +103,18 @@ EOF
 git add -A
 GIT_AUTHOR_DATE="2026-09-01T10:00:00" GIT_COMMITTER_DATE="2026-09-01T10:00:00" \
   git commit -q -m "default retries 3 -> 5"
+
+# A team adds a metadata field to two pages. Nobody rereads them.
+for f in docs/retries.md docs/overview.md; do
+  perl -pi -e 's/^reviewed:/owner: platform-docs\nreviewed:/' "$f"
+done
+git add -A
+GIT_AUTHOR_DATE="2026-10-20T10:00:00" GIT_COMMITTER_DATE="2026-10-20T10:00:00" \
+  git commit -q -m "add owner field"
 ````
 
-`docs/retries.md` now says the default is 3 and the software says 5. Add two
-more pages, one of them documenting something genuinely unchanged, then a bulk
-commit that touches the front matter of the other two, which is the kind of
-thing that happens when a team adds a metadata field. Those pages, the commit
-and `freshness.py` are not printed here, so this step is a worked example
-rather than one to paste.
+`docs/retries.md` now says the default is 3 and the software says 5, and its
+newest commit is the October one that nobody reread it for.
 
 **Step 2: three ways to ask the question**
 
@@ -97,15 +127,56 @@ by_edit   = subject > edited                         # did the subject move sinc
 by_review = subject > reviewed                       # ... since the last actual review?
 ```
 
-`edited` comes from `git log -1 --format=%ad`, `subject` from the same query
+`edited` comes from `git log -1 --format=%ad --date=short`, `subject` from the same query
 against the file named in `documents:`, and `reviewed` from a front-matter
 field that a human sets only when they have actually checked the content.
 
 **Step 3: run all three**
 
-```bash
+The whole script, with the three lines from step 2 in its loop:
+
+````bash
+cat > freshness.py <<'EOF'
+import subprocess
+from datetime import date
+from pathlib import Path
+
+TODAY = date(2026, 10, 27)
+AGE_LIMIT_DAYS = 180
+
+def last_commit(path):
+    out = subprocess.run(["git", "log", "-1", "--format=%ad", "--date=short", "--", path],
+                         capture_output=True, text=True, check=True).stdout.strip()
+    return date.fromisoformat(out)
+
+def front_matter(path):
+    lines = Path(path).read_text().split("\n")
+    end = lines.index("---", 1)
+    return dict(line.split(": ", 1) for line in lines[1:end] if ": " in line)
+
+flags = {"clock": [], "vs-edit": [], "vs-review": []}
+print(f"{'page':<18} {'edited':<11} {'reviewed':<11} {'subject':<12} {'clock':<6} {'vs-edit':<8} vs-review")
+print("-" * 81)
+for page in sorted(Path("docs").glob("*.md")):
+    meta = front_matter(page)
+    edited = last_commit(str(page))
+    reviewed = date.fromisoformat(meta["reviewed"])
+    subject = last_commit(meta["documents"])
+    by_clock  = (TODAY - edited).days > AGE_LIMIT_DAYS   # how old is the page?
+    by_edit   = subject > edited                         # did the subject move since the last edit?
+    by_review = subject > reviewed                       # ... since the last actual review?
+    cells = []
+    for name, stale in (("clock", by_clock), ("vs-edit", by_edit), ("vs-review", by_review)):
+        cells.append("STALE" if stale else "ok")
+        if stale:
+            flags[name].append(page.name)
+    print(f"{page.name:<18} {edited}  {reviewed}  {subject}   {cells[0]:<6} {cells[1]:<8} {cells[2]}")
+print()
+for name, pages in flags.items():
+    print(f"  {name:<10} flags: {pages if pages else '(none)'}")
+EOF
 python3 freshness.py
-```
+````
 
 ```
 page               edited      reviewed    subject      clock  vs-edit  vs-review
