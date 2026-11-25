@@ -53,7 +53,7 @@ Every automated gate that stops documentation rotting, in the order worth adding
 
 18 concepts, roughly 69 hours.
 
-### [Reference and releases](reference-and-releases.md)
+### [The API writer](reference-and-releases.md)
 
 *Someone who owns the API reference and the versioned docs for a product that ships releases.*
 
@@ -61,7 +61,7 @@ Reference generated from the source, checked against it, and versioned with each
 
 8 concepts, roughly 29 hours.
 
-### [The KnowledgeOps path](knowledgeops.md)
+### [The knowledge engineer](knowledgeops.md)
 
 *Someone responsible for making a knowledge base usable by AI assistants and agents.*
 
@@ -69,7 +69,7 @@ Making a corpus answerable by machines, and knowing whether it worked.
 
 18 concepts, roughly 87 hours.
 
-### [Found by search and answer engines](answer-engines.md)
+### [The discoverability lead](answer-engines.md)
 
 *Someone responsible for whether people, search engines and AI answer engines can find the documentation at all.*
 
@@ -103,7 +103,7 @@ The craft and the working relationships, which no pipeline substitutes for.
 
 ## Once the work is real
 
-### [Prove the outcomes](prove-the-outcomes.md)
+### [The documentation lead](prove-the-outcomes.md)
 
 *Someone whose documentation work is real and who has been asked, probably in a review, to show what it achieved.*
 
@@ -113,7 +113,7 @@ Write the programs that measure a corpus, then measure the four outcomes that ma
 
 ## Background, at any time
 
-### [Enough domain to not be lost](domain-context.md)
+### [The domain newcomer](domain-context.md)
 
 *Someone doing documentation work at a company whose product is graphics, simulation, robotics or AI infrastructure.*
 

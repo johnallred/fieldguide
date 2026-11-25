@@ -1,5 +1,5 @@
 ---
-title: Reference and releases
+title: The API writer
 summary: Reference generated from the source, checked against it, and versioned with
   each release.
 diataxis: placeholder
@@ -8,7 +8,7 @@ generated: true
 ---
 
 
-# Reference and releases
+# The API writer
 
 **Who this is for.** Someone who owns the API reference and the versioned docs for a product that ships releases.
 

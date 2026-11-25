@@ -100,7 +100,7 @@ Making documentation part of what "ready to release" means, enforced rather than
 
 Assumes, from outside this path: [Documentation CI](../concepts/documentation-ci.md).
 
-Also in: [Reference and releases](reference-and-releases.md).
+Also in: [The API writer](reference-and-releases.md).
 
 ## 12. [Prompting for content work](../concepts/prompting.md)
 

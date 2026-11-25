@@ -46,7 +46,7 @@ Defining the types of content your team writes and the fields each one must carr
 
 Assumes, from outside this path: [Information architecture](../concepts/information-architecture.md).
 
-Also in: [The content architect](content-architect.md) and [The KnowledgeOps path](knowledgeops.md).
+Also in: [The content architect](content-architect.md) and [The knowledge engineer](knowledgeops.md).
 
 ## 4. [MkDocs and Material](../concepts/mkdocs.md)
 
@@ -130,7 +130,7 @@ Publishing machine-readable entry points to your docs, such as llms.txt, for AI 
 
 Assumes, from outside this path: [Agent-ready content](../concepts/agent-ready-content.md).
 
-Also in: [The KnowledgeOps path](knowledgeops.md) and [Found by search and answer engines](answer-engines.md).
+Also in: [The knowledge engineer](knowledgeops.md) and [The discoverability lead](answer-engines.md).
 
 ## 12. [Chunking strategies](../concepts/chunking.md)
 
@@ -140,7 +140,7 @@ Splitting content into pieces a RAG system, internal assistant or agent can retr
 
 Assumes, from outside this path: [Agent-ready content](../concepts/agent-ready-content.md).
 
-Also in: [The KnowledgeOps path](knowledgeops.md).
+Also in: [The knowledge engineer](knowledgeops.md).
 
 ## 13. [Model Context Protocol](../concepts/mcp.md)
 
@@ -150,7 +150,7 @@ Exposing documentation and tools to AI assistants through Model Context Protocol
 
 Assumes, from outside this path: [Agent-ready content](../concepts/agent-ready-content.md).
 
-Also in: [The KnowledgeOps path](knowledgeops.md).
+Also in: [The knowledge engineer](knowledgeops.md).
 
 ## 14. [Evaluating retrieval](../concepts/retrieval-evaluation.md)
 
@@ -160,7 +160,7 @@ Building question sets that measure whether retrieval finds the right content.
 
 Assumes, from outside this path: [RAG pipelines](../concepts/rag.md).
 
-Also in: [The KnowledgeOps path](knowledgeops.md).
+Also in: [The knowledge engineer](knowledgeops.md).
 
 ## 15. [Publishing in public](../concepts/publishing-in-public.md)
 

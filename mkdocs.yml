@@ -78,14 +78,14 @@ nav:
       - A working result in a weekend: paths/prove-it.md
       - The content architect: paths/content-architect.md
       - The documentation engineer: paths/docs-engineer.md
-      - Reference and releases: paths/reference-and-releases.md
-      - The KnowledgeOps path: paths/knowledgeops.md
-      - Found by search and answer engines: paths/answer-engines.md
+      - The API writer: paths/reference-and-releases.md
+      - The knowledge engineer: paths/knowledgeops.md
+      - The discoverability lead: paths/answer-engines.md
       - The developer educator: paths/developer-educator.md
       - The lab engineer: paths/lab-engineer.md
       - The writer who builds: paths/writer-who-builds.md
-      - Prove the outcomes: paths/prove-the-outcomes.md
-      - Enough domain to not be lost: paths/domain-context.md
+      - The documentation lead: paths/prove-the-outcomes.md
+      - The domain newcomer: paths/domain-context.md
   - About this guide:
       - explanation/why-a-registry.md
       - explanation/the-page-contract.md

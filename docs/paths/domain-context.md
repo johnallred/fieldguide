@@ -1,5 +1,5 @@
 ---
-title: Enough domain to not be lost
+title: The domain newcomer
 summary: Six technical domains, at the depth where you can follow an engineer and
   know which questions are not yours to answer.
 diataxis: placeholder
@@ -8,7 +8,7 @@ generated: true
 ---
 
 
-# Enough domain to not be lost
+# The domain newcomer
 
 **Who this is for.** Someone doing documentation work at a company whose product is graphics, simulation, robotics or AI infrastructure.
 

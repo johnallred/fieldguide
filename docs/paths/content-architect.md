@@ -44,7 +44,7 @@ Defining the types of content your team writes and the fields each one must carr
 
 Builds on, earlier in this path: Information architecture.
 
-Also in: [A working result in a weekend](prove-it.md) and [The KnowledgeOps path](knowledgeops.md).
+Also in: [A working result in a weekend](prove-it.md) and [The knowledge engineer](knowledgeops.md).
 
 ## 4. [Taxonomy and controlled vocabularies](../concepts/taxonomy.md)
 
@@ -62,7 +62,7 @@ Tagging content so navigation, search and AI retrieval can all find the right pa
 
 Builds on, earlier in this path: Content models.
 
-Also in: [The KnowledgeOps path](knowledgeops.md) and [Found by search and answer engines](answer-engines.md).
+Also in: [The knowledge engineer](knowledgeops.md) and [The discoverability lead](answer-engines.md).
 
 ## 6. [Style guides and terminology management](../concepts/style-guide.md)
 
@@ -152,7 +152,7 @@ Making sure developers and AI assistants can both find and use the page they nee
 
 Builds on, earlier in this path: Metadata for navigation and retrieval.
 
-Also in: [Found by search and answer engines](answer-engines.md).
+Also in: [The discoverability lead](answer-engines.md).
 
 ## 16. [Playbooks and decision guides](../concepts/playbooks.md)
 

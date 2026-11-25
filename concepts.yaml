@@ -1515,7 +1515,7 @@ paths:
 
   - id: reference-and-releases
     group: role
-    name: Reference and releases
+    name: The API writer
     audience: Someone who owns the API reference and the versioned docs for a product that ships releases.
     summary: Reference generated from the source, checked against it, and versioned with each release.
     concepts:
@@ -1530,7 +1530,7 @@ paths:
 
   - id: knowledgeops
     group: role
-    name: The KnowledgeOps path
+    name: The knowledge engineer
     audience: Someone responsible for making a knowledge base usable by AI assistants and agents.
     summary: Making a corpus answerable by machines, and knowing whether it worked.
     concepts:
@@ -1555,7 +1555,7 @@ paths:
 
   - id: answer-engines
     group: role
-    name: Found by search and answer engines
+    name: The discoverability lead
     audience: Someone responsible for whether people, search engines and AI answer engines can find the documentation at all.
     summary: From metadata to being cited, making a public corpus discoverable and quotable.
     concepts:
@@ -1636,7 +1636,7 @@ paths:
 
   - id: prove-the-outcomes
     group: later
-    name: Prove the outcomes
+    name: The documentation lead
     audience: Someone whose documentation work is real and who has been asked, probably in a review, to show what it achieved.
     summary: Write the programs that measure a corpus, then measure the four outcomes that matter most.
     concepts:
@@ -1654,7 +1654,7 @@ paths:
 
   - id: domain-context
     group: context
-    name: Enough domain to not be lost
+    name: The domain newcomer
     audience: Someone doing documentation work at a company whose product is graphics, simulation, robotics or AI infrastructure.
     summary: Six technical domains, at the depth where you can follow an engineer and know which questions are not yours to answer.
     concepts:

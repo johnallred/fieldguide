@@ -1,5 +1,5 @@
 ---
-title: The KnowledgeOps path
+title: The knowledge engineer
 summary: Making a corpus answerable by machines, and knowing whether it worked.
 diataxis: placeholder
 audience: new-user
@@ -7,7 +7,7 @@ generated: true
 ---
 
 
-# The KnowledgeOps path
+# The knowledge engineer
 
 **Who this is for.** Someone responsible for making a knowledge base usable by AI assistants and agents.
 
@@ -38,7 +38,7 @@ Tagging content so navigation, search and AI retrieval can all find the right pa
 
 Builds on, earlier in this path: Content models.
 
-Also in: [The content architect](content-architect.md) and [Found by search and answer engines](answer-engines.md).
+Also in: [The content architect](content-architect.md) and [The discoverability lead](answer-engines.md).
 
 ## 3. [Agent-ready content](../concepts/agent-ready-content.md)
 
@@ -48,7 +48,7 @@ Structuring knowledge so AI assistants and agents can use it as reliably as peop
 
 Builds on, earlier in this path: Content models and Metadata for navigation and retrieval.
 
-Also in: [Found by search and answer engines](answer-engines.md).
+Also in: [The discoverability lead](answer-engines.md).
 
 ## 4. [llms.txt and llms-full.txt](../concepts/llms-txt.md)
 
@@ -58,7 +58,7 @@ Publishing machine-readable entry points to your docs, such as llms.txt, for AI 
 
 Builds on, earlier in this path: Agent-ready content.
 
-Also in: [A working result in a weekend](prove-it.md) and [Found by search and answer engines](answer-engines.md).
+Also in: [A working result in a weekend](prove-it.md) and [The discoverability lead](answer-engines.md).
 
 ## 5. [Documentation for coding agents](../concepts/coding-agents.md)
 
@@ -182,4 +182,4 @@ Builds on, earlier in this path: Output evaluation.
 
 Assumes, from outside this path: [Documentation analytics](../concepts/docs-analytics.md).
 
-Also in: [Prove the outcomes](prove-the-outcomes.md).
+Also in: [The documentation lead](prove-the-outcomes.md).

@@ -1,5 +1,5 @@
 ---
-title: Found by search and answer engines
+title: The discoverability lead
 summary: From metadata to being cited, making a public corpus discoverable and quotable.
 diataxis: placeholder
 audience: new-user
@@ -7,7 +7,7 @@ generated: true
 ---
 
 
-# Found by search and answer engines
+# The discoverability lead
 
 **Who this is for.** Someone responsible for whether people, search engines and AI answer engines can find the documentation at all.
 
@@ -28,7 +28,7 @@ Tagging content so navigation, search and AI retrieval can all find the right pa
 
 Assumes, from outside this path: [Content models](../concepts/content-model.md).
 
-Also in: [The content architect](content-architect.md) and [The KnowledgeOps path](knowledgeops.md).
+Also in: [The content architect](content-architect.md) and [The knowledge engineer](knowledgeops.md).
 
 ## 2. [Findability and search design](../concepts/findability.md)
 
@@ -66,7 +66,7 @@ Builds on, earlier in this path: Metadata for navigation and retrieval.
 
 Assumes, from outside this path: [Content models](../concepts/content-model.md).
 
-Also in: [The KnowledgeOps path](knowledgeops.md).
+Also in: [The knowledge engineer](knowledgeops.md).
 
 ## 6. [llms.txt and llms-full.txt](../concepts/llms-txt.md)
 
@@ -76,7 +76,7 @@ Publishing machine-readable entry points to your docs, such as llms.txt, for AI 
 
 Builds on, earlier in this path: Agent-ready content.
 
-Also in: [A working result in a weekend](prove-it.md) and [The KnowledgeOps path](knowledgeops.md).
+Also in: [A working result in a weekend](prove-it.md) and [The knowledge engineer](knowledgeops.md).
 
 ## 7. [Crawlability and the agent-ready front door](../concepts/crawlability.md)
 

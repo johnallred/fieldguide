@@ -1,5 +1,5 @@
 ---
-title: Prove the outcomes
+title: The documentation lead
 summary: Write the programs that measure a corpus, then measure the four outcomes
   that matter most.
 diataxis: placeholder
@@ -8,7 +8,7 @@ generated: true
 ---
 
 
-# Prove the outcomes
+# The documentation lead
 
 **Who this is for.** Someone whose documentation work is real and who has been asked, probably in a review, to show what it achieved.
 
@@ -99,7 +99,7 @@ Builds on, earlier in this path: Documentation analytics.
 
 Assumes, from outside this path: [Output evaluation](../concepts/output-evaluation.md).
 
-Also in: [The KnowledgeOps path](knowledgeops.md).
+Also in: [The knowledge engineer](knowledgeops.md).
 
 ## 10. [Turning developer feedback into changes](../concepts/developer-feedback-loops.md)
 
