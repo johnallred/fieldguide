@@ -21,6 +21,7 @@ tags: [craft, supporting]
 Choosing which documentation work to do from evidence rather than from whoever
 asked most recently. The output is a ranked list with a stated basis, and
 crucially a **retire** column, which most documentation backlogs do not have.
+Where an assistant answers from the corpus, [AI answer quality](ai-answer-quality.md) is one more input to the ranking.
 
 ## How this applies to your role
 

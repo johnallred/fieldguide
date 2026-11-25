@@ -22,6 +22,7 @@ Getting what an expert knows out of their head and into a form other people can
 use without them. Tribal knowledge is the subset of what a team knows that has
 never been written down, usually because the people who have it do not
 experience it as knowledge. It feels like common sense.
+It is one input to [learner and task analysis](learner-task-analysis.md), and what comes out of it still has to be sorted into [Diátaxis](diataxis.md) types before it is a page.
 
 The work is an interview technique plus a judgment about what shape the result
 should take, and the second part is where most of the value is.

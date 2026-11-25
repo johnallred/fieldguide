@@ -23,6 +23,7 @@ work those services are the ones holding
 content and process, a CMS, a ticket tracker, a translation vendor, a
 repository host, a search index, and increasingly the documentation platform is
 itself the server, answering an agent.
+The [transformation](content-data-transformation.md) half decides what crosses the boundary; this half decides how it gets there.
 
 The work divides unevenly. Calling an endpoint that behaves is twenty minutes.
 Everything after that is deciding what the client does when the service

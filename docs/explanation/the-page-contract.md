@@ -51,6 +51,8 @@ admit they were lost. No history, no motivation, no benefits.
 complete that it conveys nothing. "Diátaxis is a systematic framework for
 technical documentation authoring" is correct and useless. Prefer the sentence
 you would say out loud to a colleague.
+It is also the part a retriever is most likely to return for a "what is" question,
+so a vague opening shows up in [retrieval evaluation](../concepts/retrieval-evaluation.md) too.
 
 ### How this applies to your role
 

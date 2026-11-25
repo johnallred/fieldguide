@@ -24,6 +24,7 @@ know what kind of answer it supports, and cite it. The phrase is used
 loosely across the industry and should not be vague in your head: **"AI-ready" is
 three consumers with incompatible needs**, and serving one of them is the usual
 way to fail the other two.
+Whether the packaging worked is measured downstream, by [AI answer quality](ai-answer-quality.md).
 
 ## How this applies to your role
 

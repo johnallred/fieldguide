@@ -21,6 +21,7 @@ tags: [ai, core]
 Using models as one stage in the machinery that keeps a corpus current:
 proposing drafts, flagging what has gone stale, auditing for drift. The work has a
 built-in constraint, and it is the most important part: **human review where judgment matters.**
+A model drafting for the corpus needs the [style guide](style-guide.md) in its prompt, or it drifts toward its own house style.
 
 The work is deciding where that is.
 
@@ -412,7 +413,7 @@ a diff a reviewer might approve.**
 | Finding hedges and style issues | A [linter](prose-linting.md) | **No** |
 | **Drafting a replacement for a located finding** | Prompt plus validation | **Yes** |
 | **Ranking a review queue** | Classification | **Yes** |
-| Summarising a changelog into [release notes](release-notes.md) | Prompt plus review | Yes |
+| Summarizing a changelog into [release notes](release-notes.md) | Prompt plus review | Yes |
 | Deciding what to [retire](content-retirement.md) | Judgment | **Never** |
 | Confirming a page is accurate | Needs the implementation | **Never** |
 
@@ -551,7 +552,7 @@ approval, and queue depth is a tracked metric that stays flat or falls.
 
 No model ran here, so the drafting, review and migration uses this page
 describes were reasoned about rather than measured. The demonstration is
-organisational as much as technical: the interesting figures are about review
+organizational as much as technical: the interesting figures are about review
 cost, not model quality.
 
 **What you need.** A model you can call, a corpus with a validator, and,

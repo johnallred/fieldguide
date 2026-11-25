@@ -23,6 +23,7 @@ A question that documentation answered, so nobody had to answer it again. The
 claim is a counterfactual: this ticket would have been filed and was not, which
 is a statement about an event that did not happen, and that is why the metric is
 so often reported badly.
+It is one of the outputs of [turning developer feedback into changes](developer-feedback-loops.md).
 
 The useful move is to split it in two. **Deflection capability** is whether the
 corpus contains the answer and hands it over when asked, which is a property of

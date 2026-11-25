@@ -21,6 +21,7 @@ The pipeline that gets documentation translated and keeps the translations in
 sync as the source changes. Mechanically: segment the source into translatable
 units, protect the parts that must not be translated, send the units out, get
 them back, verify them, and rebuild.
+A [style guide](style-guide.md) with a controlled terminology list is what makes translation consistent, because translators work from it.
 
 The reason it is difficulty 3 is that almost all of the difficulty is in
 segmentation and protection, both of which are decisions about your content

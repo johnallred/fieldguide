@@ -21,6 +21,7 @@ OpenUSD is a scene description format and, more importantly, a **composition
 engine**: several files each state opinions about the same objects, and USD
 resolves them into one scene at read time. Omniverse is NVIDIA's platform built
 on it, where the composition happens live across applications.
+For documentation, the composition model is the part that needs an explanation page in the [Diátaxis](diataxis.md) sense; the reference alone leaves readers stuck.
 
 The format is the easy half. Everything that confuses people, and everything a
 documentation role has to explain, is the resolution: when two files disagree,

@@ -23,6 +23,7 @@ The "clean environment" half of taking a developer from a clean environment to a
 working result. Making it true requires three
 decisions: what level of isolation a reader is asked to create, whether
 dependencies are pinned, and what your [CI](documentation-ci.md) reproduces.
+[Ephemeral environments](ephemeral-environments.md) extend the idea to cloud labs, and [workshops](workshops.md) are where an unreproducible environment hurts most.
 
 They look like infrastructure decisions and they are documentation decisions,
 because each one changes what your [quickstart](quickstarts.md) can honestly promise.

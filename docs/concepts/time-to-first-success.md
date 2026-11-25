@@ -21,6 +21,7 @@ The elapsed time between a developer deciding to try something and that
 developer having it work. Developer-education teams state it as a design
 goal, "from a [clean environment](coldstart-testing.md) to a working result", and KnowledgeOps teams
 state it as a metric. It is the same quantity from two sides.
+When it is long, the [repeat questions](repeat-questions.md) usually say where the time went.
 
 It is the best single number in developer documentation, because it is the only
 one that cannot be satisfied by a well-written page. Prose quality, link

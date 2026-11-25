@@ -21,6 +21,7 @@ A page that branches. A [tutorial](tutorial-design.md) takes one reader down one
 asks what situation you are in and routes you accordingly. It is the right
 shape for troubleshooting, for incident response, and for any question whose
 honest answer is "it depends", because it makes the *depends* explicit.
+In [Diátaxis](diataxis.md) terms it is a how-to guide with branches.
 
 The move that turns it from a document into infrastructure is writing the
 branches as **data** rather than as prose. Then you can render the page and

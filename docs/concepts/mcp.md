@@ -23,6 +23,7 @@ tags: [ai, core]
 A protocol for exposing data and capabilities to a language model as callable
 tools. An MCP server declares what it can do, a client connects, and the model
 decides when to call which tool with which arguments.
+What the tools expose, and what they are called, is an [information architecture](information-architecture.md) decision.
 
 For documentation, it means an agent can *query* your corpus mid-task instead of
 being given a pre-selected chunk of it. The difference matters: the agent gets

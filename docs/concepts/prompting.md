@@ -22,6 +22,7 @@ Writing the instruction that produces a usable output on a content task:
 drafting, auditing, classifying, rewriting. For documentation work the prompt is
 usually part of a script rather than a conversation, which changes what good
 looks like: it has to work on the four hundredth input as well as the first.
+When the prompt includes retrieved text, it is the generation stage of a [RAG pipeline](rag.md).
 
 ## How this applies to your role
 

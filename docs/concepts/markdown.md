@@ -24,6 +24,7 @@ emphasis and lists, and disagree about almost everything else. "Markdown" names
 the family. What your build actually accepts is decided by the specific parser
 your [static site generator](static-site-generators.md) uses and the set of
 extensions you enabled.
+Which constructs your team uses, out of everything the parser allows, is a [style guide](style-guide.md) decision.
 
 The practical consequence, and the reason this page exists at difficulty 1, is
 the failure mode. A parser that does not understand a construct does not raise

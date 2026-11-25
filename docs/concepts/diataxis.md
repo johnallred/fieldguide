@@ -23,6 +23,7 @@ A claim that documentation serves four separate needs, and that a page trying
 to serve more than one serves none of them well. The four are **tutorials**
 (learning by doing), **how-to guides** (achieving a goal), **reference**
 (finding a fact), and **explanation** (understanding why).
+The type label is also useful to machines, which is part of what makes content [agent-ready](agent-ready-content.md).
 
 It is attributed to Daniele Procida and has been adopted as the organizing
 framework by Canonical, Django, Gatsby, Cloudflare and a long list of others.

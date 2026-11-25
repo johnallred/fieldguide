@@ -21,6 +21,7 @@ Publishing more than one copy of the documentation, one per release, so a
 reader on version 2.3 is not told how 2.4 behaves. In practice: a URL per
 version, a switcher in the page, an alias such as `latest` or `stable`, and a
 default that the bare domain redirects to.
+It also creates near-duplicate pages, which is an [SEO](seo-for-docs.md) problem that canonical URLs exist to solve.
 
 The mechanism is simple. The consequences, which are what this page is about,
 are a per-version duplication cost that is almost always larger than people

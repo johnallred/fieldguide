@@ -25,6 +25,7 @@ prefix, an account belongs to exactly one, and some partitions use their own
 DNS suffix for service endpoints. The commercial partition is `aws`; GovCloud
 is `aws-us-gov`; China is `aws-cn`; and AWS's SDKs also list isolated
 partitions whose endpoints are not under `amazonaws.com` at all.
+A lab that hard-codes the commercial partition fails there, which an [ephemeral environment](ephemeral-environments.md) run inside that partition would catch.
 
 A lab written in a commercial region carries assumptions that only hold there:
 an ARN that begins `arn:aws:`, an endpoint that ends `amazonaws.com`, a region

@@ -19,6 +19,7 @@ The part of this job that happens in other people's meetings. Advocacy in the
 sense this page means is not conference talks and not evangelism: it is
 arranging that documentation is produced as part of shipping, by the people who
 built the thing, rather than reconstructed afterwards by someone who did not.
+The cheapest win is usually [API reference generated from source](api-reference-generation.md), because it ships with the code without anyone having to remember it.
 
 The operative phrase is **ships with**. Everything else in the sentence
 describes who you have to work with to make that true.
@@ -32,7 +33,7 @@ A documentation team that writes everything is a queue. Features ship, the
 queue lengthens, the docs describe the product of six months ago, and the team
 is measured on throughput against an inflow it does not control. The structural
 fix is to move authorship to the point where the knowledge already exists, and
-that is an organisational change rather than a writing one, which is why it
+that is an organizational change rather than a writing one, which is why it
 is described as partnering with [engineering](working-with-engineers.md), product and developer advocates.
 
 The reason it needs a mechanism rather than goodwill is that goodwill does not
@@ -304,7 +305,7 @@ from a list, and its first run produced two fixes in the README. What is not
 demonstrated is the partnership: this is a one-person repository, so no
 engineering team has been persuaded of anything, and the claims about how a
 proposal lands are reasoning from the gate's three wrong versions rather than
-from organisational experience. The [demonstrated](../demonstrated.md) page
+from organizational experience. The [demonstrated](../demonstrated.md) page
 records that split.
 
 ## Related

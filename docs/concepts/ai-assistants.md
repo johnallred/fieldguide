@@ -21,6 +21,7 @@ tags: [ai, core]
 A product built on [retrieval](rag.md): a developer asks a question in prose and
 gets an answer with citations. The common case is an internal assistant, since an internal assistant has a known audience and a
 forgiving failure mode.
+The corpus it answers from has to be [agent-ready](agent-ready-content.md), and whether it answers correctly is [measured separately](ai-answer-quality.md).
 
 The retrieval is the easy half. The hard half is everything around it: when to
 refuse, what to do with a follow-up question, and how a wrong answer gets

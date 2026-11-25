@@ -22,6 +22,7 @@ tags: [ai, core]
 Splitting documents into the units a retrieval system stores and returns. The
 unit is what gets embedded, ranked, and handed to a model, so the chunk boundary
 decides what an assistant can possibly know in one answer.
+It is also what a [citation](grounding.md) can point at, so a chunk that mixes two topics produces citations that support neither cleanly.
 
 The entire difficulty is that **splitting destroys context**, and the context it
 destroys is usually the thing that made the text findable.

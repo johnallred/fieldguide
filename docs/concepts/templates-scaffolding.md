@@ -23,6 +23,7 @@ A command that produces a new page already shaped correctly: the required
 front matter present, the required sections in the required order, the
 cross-references computed, and a prompt in each section saying what belongs
 there.
+A scaffolded page arrives at [review](docs-review.md) with its structure already settled, so review can be about content.
 
 The difference between a template and scaffolding is that a template is a file
 you copy and scaffolding is a program that generates one. The program can fill

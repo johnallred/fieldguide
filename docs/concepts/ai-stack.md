@@ -22,6 +22,7 @@ exchange format, a runtime, a kernel library, a driver. What the work needs is
 enough Python literacy to run and validate AI samples, which is a precise and
 modest requirement: not building models, but being able to run a sample and
 tell whether its output is right.
+Running it is the AI case of [code-sample validation](code-sample-validation.md), and it only stays possible if the stack is pinned the way [reproducible environments](reproducible-environments.md) describes.
 
 The reason it needs a page is that the layers have independent version numbers
 and the compatibility rules between them are the single largest source of

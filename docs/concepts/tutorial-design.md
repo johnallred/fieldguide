@@ -23,6 +23,7 @@ tags: [gp, core]
 evidence that they learned rather than the point of the exercise. That is what
 separates it from a [quickstart](quickstarts.md), which optimizes for the
 working thing and teaches as little as it can get away with.
+It is the format where [learning science](learning-science.md) applies most directly, and it should end with an [assessment](assessment.md) rather than only a working result.
 
 A tutorial has to "assume no prior context", which is the hard constraint. The
 design question this page is built on is narrower and measurable: **how long

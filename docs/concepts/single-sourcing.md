@@ -24,6 +24,7 @@ copying it. Three mechanisms, in increasing order of power: **includes**, which
 pull a block of text into several pages; **variables**, which substitute a
 value such as a version number; and **generation**, which renders many pages
 from one template and one data source.
+Includes change what a retriever sees as well as what a reader sees, so a reuse change should be followed by a [retrieval evaluation](retrieval-evaluation.md) run.
 
 The reason it is worth a page of its own is that reuse introduces a failure
 mode that copied prose does not have. A duplicated paragraph goes stale. A

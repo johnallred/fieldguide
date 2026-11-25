@@ -23,6 +23,7 @@ A schema for your content: what kinds of page exist, what fields each kind
 carries, which of those fields are required, and which draw from a
 [closed vocabulary](taxonomy.md). In a [docs-as-code](docs-as-code.md) project it usually lives in
 front matter plus a validator.
+When a rule spans fields or pages, a schema alone cannot express it, and it becomes a [custom linter](custom-linters.md).
 
 The way to judge one is not by how elegant the schema is. It is by asking **what
 specific lies it makes impossible**, and then checking that each of those lies

@@ -22,6 +22,7 @@ tags: [ai, core]
 map of what is there: a name, a one-line description, and sections of annotated
 links. `/llms-full.txt` is the other artifact, the whole corpus concatenated
 into one document for a model that would rather make one request than thirty.
+Because it is generated from the corpus, it is only as current as the pages it lists, which is why it sits downstream of [freshness monitoring](freshness-monitoring.md).
 
 They are a community convention proposed by Jeremy Howard of Answer.AI in
 September 2024. **Not a standard**, and that distinction matters when you

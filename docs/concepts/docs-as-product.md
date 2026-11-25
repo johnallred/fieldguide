@@ -27,7 +27,7 @@ The principle fits in one sentence, and most of developer-education work
 follows from it: treat setup, runnable samples and docs as one product, so a
 developer reaches first success in minutes with zero help.
 
-The failure this prevents is organisational rather than editorial. The page is
+The failure this prevents is organizational rather than editorial. The page is
 correct. The sample repository is correct. The install script is correct. The
 developer still fails, because the sample assumes a driver version the install
 page does not mention, and no single owner is responsible for the seam. Each
@@ -322,7 +322,7 @@ of eight artifacts, five owners, and a measured twenty minutes off-path is not.
 ### How this would be demonstrated elsewhere
 
 A repository can show that setup, samples and documentation are built and
-tested together, and this one does. What it cannot show is the organisational
+tested together, and this one does. What it cannot show is the organizational
 half: that they are *owned* together, planned together and released together,
 which is what the concept actually asserts.
 

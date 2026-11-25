@@ -22,6 +22,7 @@ Making sure a machine can fetch your pages, follow your links, and find the
 content in the response. The dull precondition underneath
 [SEO](seo-for-docs.md), [GEO](geo.md), [llms.txt](llms-txt.md) and every
 retrieval system: **none of them work on a page nobody can fetch.**
+Once a page can be fetched, its [metadata](metadata.md) is what tells the machine what kind of page it is.
 
 The phrase "front door" is the useful part. It means there is an entry
 point a machine arriving with no context can start from.

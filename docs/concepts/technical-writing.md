@@ -18,8 +18,9 @@ tags: [craft, core]
 ## What it is
 
 Writing that a competent stranger can act on without asking you a question. The
-test is behavioural rather than aesthetic: not whether the prose reads well, but
+test is behavioral rather than aesthetic: not whether the prose reads well, but
 whether the reader does the right thing next.
+The best evidence that it failed is [repeat questions](repeat-questions.md), and the best source of what to say is [working with engineers](working-with-engineers.md).
 
 It is a craft in the specific sense that it improves with deliberate practice on
 feedback, and that people who are good at it can say *why* a sentence is wrong.

@@ -23,6 +23,7 @@ A set of real questions paired with the page that should answer each, scored
 automatically so a change to the corpus or the retriever moves a number. The
 metrics are hit@k, mean reciprocal rank, and whatever else your failure modes
 demand.
+A useful breakdown of the scores is by [Diátaxis](diataxis.md) type, because reference and how-to questions fail in different ways.
 
 It is the only check in a documentation pipeline that asks whether the corpus
 is **useful** rather than whether it is **correct**.

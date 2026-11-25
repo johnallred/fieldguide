@@ -21,6 +21,7 @@ The page that takes a reader from nothing to one working thing as fast as
 possible. It implements the [golden path](golden-paths.md) and it is the single
 most consequential page in a developer documentation set, because it is where
 people decide whether to continue.
+That is why it is the first page to put under [code-sample validation](code-sample-validation.md), run by a [doc test harness](doc-test-harness.md) on every change.
 
 It is also the page with the shortest half-life, for a reason worth stating
 plainly: it is the only page whose author cannot test it, because their

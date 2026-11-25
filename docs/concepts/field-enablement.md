@@ -22,6 +22,7 @@ engineers, account teams, partners and support. They do not need to use the
 product the way a developer does. They need to explain it, demo it and answer
 questions about it, in front of someone else, without the person who built
 the material.
+The questions they field are also the best source of [repeat questions](repeat-questions.md) and of [implementation feedback](implementation-feedback.md) for the people who own the material.
 
 So the goal is a different one. Enabling a learner ends when they can do the
 task. Enabling a deliverer ends when they can make someone else able to do it,

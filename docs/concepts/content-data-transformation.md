@@ -22,6 +22,7 @@ consume: Markdown into [chunk](chunking.md) records, front matter into a search 
 of pages into one flat file for a context window. The
 [content model](content-model.md) is what makes it possible, because a
 transformation can only carry fields that reliably exist.
+Handing the result to another system is [API integration](api-integration.md).
 
 The whole discipline reduces to one question asked at every stage: **what did
 this drop, and who finds out?**

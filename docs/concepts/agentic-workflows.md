@@ -21,6 +21,7 @@ tags: [ai, core]
 Documentation work carried out by an agent across several steps, where each step
 depends on what the previous one found: audit the corpus, pick the stale pages,
 check each against the code, propose edits, open a pull request.
+The first step usually comes from [freshness monitoring](freshness-monitoring.md), which is what decides which pages count as stale.
 
 The distinguishing feature is **the agent chooses what to do next**. That is
 what separates it from a script, and it is the entire source of both the value

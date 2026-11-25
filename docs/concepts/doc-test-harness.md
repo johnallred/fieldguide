@@ -22,6 +22,7 @@ team can rely on. [Code-sample validation](code-sample-validation.md) is the
 idea: run the examples. A harness is what you need once the corpus has more
 than one language in it, samples that depend on each other, and contributors
 who will be reading its failure output at 5pm on a Friday.
+It runs as a job in [documentation CI](documentation-ci.md), and because it executes samples with real credentials, how it isolates them is a [security](security-documentation.md) question as well as a reliability one.
 
 Three problems make it real work: shell samples carry state a subprocess does
 not inherit, concatenating them destroys failure attribution, and any harness

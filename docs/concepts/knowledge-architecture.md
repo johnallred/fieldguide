@@ -21,6 +21,7 @@ tags: [ia, core]
 where they live, how they are labeled, how a reader navigates between them.
 Knowledge architecture organizes **what is known**: the concepts, their
 relationships, which depend on which, and which are load-bearing.
+It is the layer that lets setup, samples and docs be treated as [one product](docs-as-product.md), because it says which concepts each of them depends on.
 
 The distinction matters because the two can disagree. A page can sit in the
 obvious place in a navigation tree while the thing it explains depends on four

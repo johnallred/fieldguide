@@ -21,6 +21,7 @@ tags: [ai, core]
 
 Scoring generated text against examples you labeled yourself, so that a change
 to a [prompt](prompting.md) or a model produces a number instead of an impression.
+It is the content-task cousin of [AI answer quality](ai-answer-quality.md), which scores answers rather than generated drafts.
 
 [Retrieval evaluation](retrieval-evaluation.md) asks whether the right page came
 back. This asks whether the text produced from it was any good, which is a

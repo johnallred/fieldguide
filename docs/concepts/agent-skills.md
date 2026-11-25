@@ -25,6 +25,7 @@ the commands, the things it must not do, loaded before it starts work. A
 **context kit** is the bundle of files an agent reads to orient itself in a
 repository. An **agent skill** is a narrower thing: instructions for one kind of
 task, loaded when that task comes up.
+They are the main way to make a repository usable by [coding agents](coding-agents.md), and a rule that matters should live in a [prose linter](prose-linting.md) or a test as well, because an agent can skip an instruction it was given.
 
 The distinction that matters is not the naming. It is that **this content is
 read by something that will act on it immediately and cannot ask a follow-up

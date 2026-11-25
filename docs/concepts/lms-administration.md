@@ -23,6 +23,7 @@ The work of running courses inside a learning management system (LMS) such as
 Canvas, Moodle or a corporate platform: course shells and templates,
 enrollments and sections, publishing and availability, integrations, and the
 completion data everyone eventually asks for.
+Courses copied into several shells go stale at different rates, so the same [single-sourcing](single-sourcing.md) and [freshness](freshness-monitoring.md) problems as a documentation site apply, with fewer tools.
 
 For a documentation engineer the useful framing is that an LMS is another
 publishing target. The course has a source, ideally a repository, and the LMS

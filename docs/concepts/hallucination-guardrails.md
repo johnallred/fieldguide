@@ -20,6 +20,7 @@ tags: [ai, supporting]
 
 A hallucination is a fluent, confident claim with nothing behind it. A guardrail
 is a mechanism that catches one before a reader acts on it.
+Guardrails reduce the rate; [AI answer quality](ai-answer-quality.md) measures it, and [retrieval evaluation](retrieval-evaluation.md) tells you whether the model was handed the right page in the first place.
 
 The useful framing is not "stop hallucination", which is not available. It is
 **bound the damage and make the failures visible**, which is.

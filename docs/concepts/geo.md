@@ -21,6 +21,7 @@ tags: [ai, core]
 Making your documentation the source an assistant retrieves, cites and quotes
 correctly, rather than the result a human clicks. The acronym is new and
 contested; the underlying question is not.
+Whether it worked is measured as [AI answer quality](ai-answer-quality.md), not as traffic.
 
 **The useful framing: a search engine ranks pages, an assistant extracts
 passages.** Everything that differs follows from that.

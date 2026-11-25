@@ -22,6 +22,7 @@ originally from Meta. Pages are [MDX](mdx.md), so prose can contain components,
 and the things that are plugins or conventions elsewhere are first-class here:
 [versioned docs](versioning.md), [internationalization](localization.md), a blog, search
 integration and a sidebar model.
+It checks internal links at build time, which covers part of what [link checking](link-checking.md) means; external URLs still need a separate check.
 
 It produces a React application that is pre-rendered to static HTML, and that
 pre-rendering turns out to matter more than it sounds.

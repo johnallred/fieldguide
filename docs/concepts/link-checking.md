@@ -20,6 +20,7 @@ tags: [qa, core]
 A build-time check that every cross-reference in the corpus resolves: internal
 page links, heading anchors, and, separately and more awkwardly, external URLs.
 A dead link becomes a failed pull request rather than a reader's dead end.
+Most dead internal links come from moved or [retired](content-retirement.md) pages, so the check belongs next to the redirects.
 
 The reason it gets its own page rather than one line in
 [documentation CI](documentation-ci.md) is that almost everyone implements the

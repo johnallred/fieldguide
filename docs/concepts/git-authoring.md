@@ -23,6 +23,7 @@ The practices that make Git work for prose rather than merely tolerate it.
 Branch and review conventions, commit granularity, and, most consequentially,
 **how you wrap lines**, because Git's unit is the line and a paragraph is not
 one.
+The source is usually Markdown or [reStructuredText](restructuredtext.md), built by a [static site generator](static-site-generators.md), and the conventions that matter most end up enforced by [custom linters](custom-linters.md).
 
 Everyone in this work uses Git. The thing worth knowing is not `git rebase`. It is that
 a formatting decision almost nobody makes deliberately determines whether your

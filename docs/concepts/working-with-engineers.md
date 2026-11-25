@@ -21,6 +21,7 @@ tags: [craft, supporting]
 Getting accurate information from people whose job is not documentation,
 repeatedly, over years, without becoming the person they avoid. It is the
 ongoing relationship rather than the one-off conversation.
+Part of the relationship runs the other way: [implementation feedback](implementation-feedback.md) to the people who own the standards.
 
 The mechanics matter more than the rapport. A process that asks engineers for
 the cheapest thing they can give is worth more than being well liked.

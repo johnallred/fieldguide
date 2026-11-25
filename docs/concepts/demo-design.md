@@ -24,6 +24,7 @@ a sequence of live steps chosen to make one result land. A
 [sample app](sample-apps.md) is something a reader clones and studies at their
 own pace; a demo is something a presenter does in front of people, once, in
 real time.
+A demo also needs the setup [cold-start tested](coldstart-testing.md), because the presenter's laptop is the least clean environment in the room.
 
 That changes what it optimizes for. A sample has to be complete and correct. A
 demo has to be short, ordered around the moment that matters to this
@@ -265,4 +266,4 @@ calling the author first.
 - [Workshops and hands-on labs](workshops.md), the longer, hands-on form of the same live risk
 - [Reproducible environments](reproducible-environments.md), the setup every presenter gets
 - [Screencasts and video](screencasts.md), where fallback recordings come from
-- [Learning science for developer education](learning-science.md), the problem-centred principle behind showing the result first
+- [Learning science for developer education](learning-science.md), the problem-centered principle behind showing the result first

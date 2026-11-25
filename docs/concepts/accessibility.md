@@ -21,6 +21,7 @@ A CI gate over the **built HTML** that catches the mechanically detectable
 accessibility defects: images without alternative text, heading levels that
 skip, link text that means nothing out of context, tables with no header cells,
 a page with no declared language.
+The checks that need judgment about content, such as whether alt text is meaningful, are written as [custom linters](custom-linters.md) or left to review.
 
 The emphasis on built HTML matters. Accessibility is a property of what the
 browser receives, and a Markdown source file cannot tell you whether your

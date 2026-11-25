@@ -21,6 +21,7 @@ A recurring check that identifies pages likely to have stopped being true. The
 naive implementation flags pages older than some number of days. The useful one
 compares a page against **the thing it documents**, because age is not
 staleness and the two are only loosely correlated.
+For pages with code in them, the strongest freshness check is [running the samples](code-sample-validation.md).
 
 ## How this applies to your role
 

@@ -22,6 +22,7 @@ tags: [ia, core]
 The structured data attached to each page, usually in front matter. It is worth
 stating precisely: metadata **for both navigation and machine retrieval**. Those are two audiences with different
 needs, and a single field set rarely serves both well.
+Typical fields include the [Diátaxis](diataxis.md) type, an owner, and a date that [freshness monitoring](freshness-monitoring.md) reads, and the retrieval fields end up as filters in a [vector store](vector-stores.md).
 
 Navigation metadata answers "where does this page belong and what do I call
 it in a sidebar". Retrieval metadata answers "which subset of the corpus

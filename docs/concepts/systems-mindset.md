@@ -21,6 +21,7 @@ tags: [craft, core]
 Treating a defect as evidence about the process that produced it. You fix the
 broken link, and then you ask what allowed a broken link to reach a reader, and
 you change that.
+[Freshness monitoring](freshness-monitoring.md) is the same habit applied to pages that have stopped being true.
 
 The second half is what makes it a mindset rather than a slogan: it includes
 knowing when the answer is "nothing, this was genuinely a one-off", because

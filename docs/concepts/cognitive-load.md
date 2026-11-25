@@ -22,6 +22,7 @@ subject, which you cannot reduce without teaching something easier. The
 **extraneous** cost added by the presentation, which is the only part a writer
 controls. And the **germane** effort the reader spends actually building a
 model, which is the part you want them to have capacity left for.
+It is one of the results [learning science](learning-science.md) reduces to practice.
 
 Nearly every documentation complaint that gets reported as "too complicated"
 is extraneous load, and nearly every attempt to fix it by adding explanation

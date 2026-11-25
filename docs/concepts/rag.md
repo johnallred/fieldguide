@@ -22,6 +22,7 @@ tags: [ai, core]
 Retrieval-augmented generation: look up relevant text, put it in the prompt,
 and have a model answer from it. Three stages, and the whole discipline is in
 knowing which one is broken when the answer is wrong.
+The lookup usually runs over [embeddings](embeddings.md), sometimes alongside keyword search.
 
 The name oversells the novelty. It is search, with the results handed to a model
 instead of to a person.

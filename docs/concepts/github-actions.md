@@ -22,6 +22,7 @@ tags: [qa, core]
 The YAML that runs your documentation gates on every pull request, publishes
 the site on merge, and caches enough of the environment that the whole thing
 finishes before the author has switched tasks.
+[Link checking](link-checking.md) is one of the jobs it usually runs.
 
 The interesting problem is not the syntax. It is that the workflow file is a
 *second* definition of what the checks are, and a second definition drifts from

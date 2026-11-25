@@ -22,6 +22,7 @@ distinction is between a **practice task**, which gives the reader something to
 do, and an **assessment**, which also states what counts as having done it.
 Almost everything published as assessment in developer documentation is
 practice with a quiz attached.
+A check should cost the reader effort on the skill itself, not on decoding the question, which is [cognitive load](cognitive-load.md) applied to the check.
 
 [Cold-start testing](coldstart-testing.md) is the mirror image. It runs the
 documentation in a clean environment and tells you whether the *content* works.
@@ -383,5 +384,5 @@ readers.
 - [Cold-start testing](coldstart-testing.md), the same question asked of the content
 - [Instructional design for developers](instructional-design.md), where the structural commitments come from
 - [Learning paths and curriculum](learning-paths.md), the unit an assessment usually spans
-- [Time to first success](time-to-first-success.md), the behavioural proxy used instead
+- [Time to first success](time-to-first-success.md), the behavioral proxy used instead
 - [Workshops and hands-on labs](workshops.md), the one setting where watching a reader is free

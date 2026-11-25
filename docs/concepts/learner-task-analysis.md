@@ -24,6 +24,7 @@ what decisions those tasks involve, what readers already know, and which of
 their problems are not knowledge problems at all. Its output is the list of
 objectives; everything in [instructional design](instructional-design.md)
 assumes that list is right.
+Most of the evidence comes from [working with engineers](working-with-engineers.md) and support staff, checked against what readers actually do.
 
 It has two halves. **Task analysis** breaks the work into steps and decisions.
 **Learner analysis** describes the people doing it: their prior experience,
@@ -198,7 +199,7 @@ Five families, from the standard handbook on the subject:
 
 | Family | Breaks the work into | Use it when |
 |---|---|---|
-| Job or behavioural analysis | Observable steps | The task is a procedure |
+| Job or behavioral analysis | Observable steps | The task is a procedure |
 | Learning analysis | Prerequisite skills in order | You need to sequence a path |
 | Cognitive task analysis | Decisions, cues and judgments | Experts disagree with novices about what is hard |
 | Activity-based analysis | The task in its real setting | Tools, people and constraints shape the work |

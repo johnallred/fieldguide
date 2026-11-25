@@ -22,6 +22,7 @@ Documentation teams are increasingly asked to own it as a metric, which makes
 documentation partly responsible for a system it does not control: the model is someone else's, the
 prompt is often someone else's, and the only input the documentation team owns
 is the corpus.
+Two of its most common failures have their own pages: [hallucination](hallucination-guardrails.md), and the [repeat questions](repeat-questions.md) an assistant keeps getting wrong.
 
 That constraint is clarifying rather than limiting, because the corpus sets a
 ceiling. If the retrieved context does not contain the fact, a correct answer

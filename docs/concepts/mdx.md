@@ -22,6 +22,7 @@ tags: [dac, supporting]
 Markdown with JSX in it. You can import a component and use it as a tag inside
 prose, which makes interactive examples, tabbed code blocks and live API
 playgrounds possible in a documentation page.
+Which [static site generator](static-site-generators.md) you use decides whether it is available at all.
 
 The fact that matters more than the syntax: **MDX does not compile to HTML. It
 compiles to a JavaScript module.** Everything else on this page follows from

@@ -23,6 +23,7 @@ The practice of treating a question asked many times as a defect report about
 the documentation rather than as a support workload. One person asking is a
 person; forty people asking the same thing is a measurement, and the thing it
 measures is a specific, locatable failure in the corpus.
+When an assistant answers from the corpus, the questions it gets wrong are the same signal, measured as [AI answer quality](ai-answer-quality.md).
 
 The reason it earns a concept of its own, next to
 [deflection](support-deflection.md), is that the repeat is diagnostic in a way
@@ -36,7 +37,7 @@ field, and almost nobody acts on it.
 
 It belongs among the things to measure, alongside deflection and answer
 quality, and it is the one that most directly converts into an edit. The
-failure mode is organisational rather than technical: repeats are visible to
+failure mode is organizational rather than technical: repeats are visible to
 support, the fix belongs to documentation, and the two have separate queues. So
 the same question is answered individually four hundred times by people who are
 measured on response time, and nobody is measured on making it stop.

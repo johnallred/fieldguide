@@ -22,6 +22,7 @@ tags: [qa, supporting]
 The path a lab takes from a curriculum developer's draft to the catalog
 learners and instructors use. It does three things a documentation pipeline
 does not have to.
+Its gates run in CI, often [GitHub Actions](github-actions.md), and the most important one is a [cold-start test](coldstart-testing.md) of the lab itself.
 
 It gates the lab document itself, because the document is not only prose: its
 commands are what the learner types and what the health harness runs. It

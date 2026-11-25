@@ -33,7 +33,7 @@ which is a claim about the *reader* rather than about the page.
 ## How this applies to your role
 
 A good objective for this work fits in one line: take a developer "from a
-clean environment to a working result". That is an instructional objective written in behavioural
+clean environment to a working result". That is an instructional objective written in behavioral
 terms, with its starting state named. It describes design, not writing.
 
 It matters on an ordinary Tuesday because most developer documentation is
@@ -198,9 +198,9 @@ number.
 
 ## Reference
 
-### Objectives in behavioural terms
+### Objectives in behavioral terms
 
-| Weak | Behavioural |
+| Weak | Behavioral |
 |---|---|
 | "Understand authentication" | "Obtain a token and make an authenticated call" |
 | "Learn about retries" | "Configure a retry policy and observe a backoff" |
@@ -290,7 +290,7 @@ plus the audit and the fixtures that make the audit trustworthy.
 1. Pick one commitment, audit a corpus you own for it, then verify the
    measurement by hand against three pages. The hand-check is the step people
    skip and the only one that catches a wrong number.
-2. Rewrite your three weakest learning objectives in behavioural terms. "Could
+2. Rewrite your three weakest learning objectives in behavioral terms. "Could
    I watch someone and tell?" is the entire test. The test is falsifiable or
    the objective is not rewritten: if you cannot name the observation that
    would show a reader had failed, the words changed and the objective did

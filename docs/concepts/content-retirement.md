@@ -23,6 +23,7 @@ Removing a page from the corpus on purpose: deciding it should go, redirecting
 its URL, and dealing with everything that pointed at it. Retire belongs
 alongside build and fix as one of three outcomes of measurement, which is more
 than most teams manage, because most teams have no third option.
+The decision to retire comes from [prioritization](docs-prioritization.md); this page is about carrying it out.
 
 The mechanics are easy. The reason corpora only ever grow is not technical.
 

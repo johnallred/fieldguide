@@ -20,6 +20,7 @@ tags: [ia, core]
 Deciding what the units of your content are, what each unit is called, and how
 someone looking for one of them finds it. It is the structural layer underneath
 writing: not what a page says, but what the set of pages *is*.
+The same structure is what makes content [agent-ready](agent-ready-content.md), because a machine relies on the labels even more than a person does.
 
 Three decisions make up almost all of it. **What is a page?** **What is a page
 about, formally, in a way a machine can read?** **How does a reader get from

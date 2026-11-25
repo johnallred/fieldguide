@@ -21,6 +21,7 @@ The research on how people acquire skills, reduced to the few results that
 change how you build a [tutorial](tutorial-design.md). Most of it fits in five ideas: start from a
 whole task, show before asking, fade the support, align what you teach with
 what you check, and make the reader retrieve rather than reread.
+None of it helps until [learner and task analysis](learner-task-analysis.md) has said what the whole task is.
 
 It is the theory under [instructional design](instructional-design.md). That
 page turns learning into structural commitments a script can check; this page
@@ -116,7 +117,7 @@ faded from worked to independent: no
 ```
 
 Three findings, each a principle the page violates. The task never appears,
-so nothing is problem-centred. No objective is demonstrated, practiced and
+so nothing is problem-centered. No objective is demonstrated, practiced and
 checked, so nothing is aligned, and the third objective is not taught at all
 even though it is the reason retries exist. The only practice is an
 unsupported problem, with no worked example before it.
@@ -178,7 +179,7 @@ MDEOF
 
 | Change | Principle |
 |---|---|
-| "What you will build" comes first | Problem-centred: show the whole task before its parts |
+| "What you will build" comes first | Problem-centered: show the whole task before its parts |
 | "What you already know" | Activation: connect to experience the reader has |
 | A complete worked example before any exercise | Worked-example effect |
 | A blank to fill, then an unsupported problem | Fading from worked example to independent practice |

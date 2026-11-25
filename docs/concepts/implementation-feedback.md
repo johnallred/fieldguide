@@ -21,6 +21,7 @@ tags: [craft, core]
 Telling the person who designed a standard what happened when you applied it at
 scale, specifically enough that they can change the design. Not escalating a
 complaint, and not quietly working around it.
+The standards it concerns are things like content models, [taxonomies](taxonomy.md) and AI-readiness patterns.
 
 The useful unit is an instance with a count: this rule, this many pages, this
 failure, this proposal.
